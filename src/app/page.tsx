@@ -31,17 +31,17 @@ export default function Home() {
 
   return (
     <div className="min-h-[calc(100svh-3.5rem)] bg-white flex flex-col items-center justify-center px-4">
-      <main className="max-w-lg w-full text-center space-y-8">
-        <h1 className="text-4xl font-bold text-gray-900 tracking-tight">
-          What Does Your Community Care About?
+      <main className="max-w-md w-full space-y-6">
+        <h1 className="text-4xl font-bold text-gray-900 tracking-tight text-balance">
+          What does your community care about?
         </h1>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-gray-500 leading-relaxed">
           Rank the issues that matter most to you. See how your priorities
           compare to your neighbors.
         </p>
 
-        <form onSubmit={handleSubmit} className="flex flex-col items-center gap-3 max-w-sm mx-auto">
-          <div className="flex gap-3 w-full">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3 pt-2">
+          <div className="flex gap-3">
             <input
               type="text"
               value={zipCode}
@@ -49,9 +49,10 @@ export default function Home() {
                 setZipCode(e.target.value);
                 setError('');
               }}
-              placeholder="Enter your zip code"
+              placeholder="Your zip code"
               className="flex-1 px-4 py-3 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               maxLength={10}
+              inputMode="numeric"
             />
             <button
               type="submit"
@@ -66,7 +67,7 @@ export default function Home() {
           )}
         </form>
 
-        <p className="text-sm text-gray-400 pt-4">
+        <p className="text-sm text-gray-400">
           Anonymous. No account needed.
         </p>
       </main>
