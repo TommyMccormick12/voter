@@ -16,20 +16,16 @@ function RacesContent() {
         Select a race to compare candidates side-by-side.
       </p>
 
-      <div className="space-y-4">
-        <div className="border border-gray-200 rounded-lg p-6 hover:border-blue-300 transition-colors cursor-pointer">
-          <div className="flex justify-between items-start">
-            <div>
-              <h2 className="text-lg font-semibold text-gray-900">
-                U.S. Senate
-              </h2>
-              <p className="text-gray-500 text-sm mt-1">
-                Sample State &middot; 2026
-              </p>
-            </div>
-            <span className="text-sm text-gray-400">3 candidates</span>
-          </div>
-        </div>
+      <div className="rounded-xl border border-dashed border-gray-300 bg-gray-50 p-8 text-center">
+        <p className="text-gray-500 text-lg mb-2">No races available yet</p>
+        <p className="text-gray-400 text-sm">
+          Race data for 2026 elections is coming soon. Enter your zip code on
+          the{' '}
+          <a href="/" className="text-blue-600 hover:text-blue-700 underline">
+            homepage
+          </a>{' '}
+          to rank your priorities in the meantime.
+        </p>
       </div>
     </div>
   );
