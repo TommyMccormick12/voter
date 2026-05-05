@@ -49,7 +49,7 @@ export default async function SharePage({ searchParams }: SharePageProps) {
   // No rankings — just show CTA
   if (rankings.length === 0) {
     return (
-      <main className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+      <main className="min-h-screen flex items-center justify-center bg-white px-4">
         <div className="max-w-lg w-full text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">
             Rank your priorities
@@ -61,7 +61,7 @@ export default async function SharePage({ searchParams }: SharePageProps) {
             href="/"
             className="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-blue-700 transition-colors"
           >
-            Rank YOUR priorities &rarr;
+            Rank your priorities &rarr;
           </a>
         </div>
       </main>
@@ -69,7 +69,7 @@ export default async function SharePage({ searchParams }: SharePageProps) {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-12">
+    <main className="min-h-screen flex items-center justify-center bg-white px-4 py-12">
       <div className="max-w-lg w-full">
         {/* Header */}
         <div className="text-center mb-8">
@@ -111,7 +111,7 @@ export default async function SharePage({ searchParams }: SharePageProps) {
             href="/"
             className="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-blue-700 transition-colors"
           >
-            Rank YOUR priorities &rarr;
+            Rank your priorities &rarr;
           </a>
           <p className="mt-4 text-sm text-gray-500">
             See how your community&apos;s priorities are shifting
