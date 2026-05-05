@@ -30,7 +30,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4">
+    <div className="min-h-[calc(100svh-3.5rem)] bg-white flex flex-col items-center justify-center px-4">
       <main className="max-w-lg w-full text-center space-y-8">
         <h1 className="text-4xl font-bold text-gray-900 tracking-tight">
           What Does Your Community Care About?
@@ -66,15 +66,9 @@ export default function Home() {
           )}
         </form>
 
-        <div className="pt-8 border-t border-gray-100">
-          <p className="text-sm text-gray-500 mb-4">Or explore</p>
-          <a
-            href="/races"
-            className="text-blue-600 hover:text-blue-800 font-medium"
-          >
-            All Races
-          </a>
-        </div>
+        <p className="text-sm text-gray-400 pt-4">
+          Anonymous. No account needed.
+        </p>
       </main>
     </div>
   );
