@@ -143,7 +143,8 @@ export function RankingInterface({ issues, zip, communityData }: Props) {
                 </span>
                 <button
                   onClick={() => removeFromRanking(issue)}
-                  className="text-gray-400 hover:text-red-500 text-sm"
+                  aria-label={`Remove ${issue.name} from ranking`}
+                  className="text-gray-400 hover:text-red-500 text-sm px-2 py-1 rounded"
                 >
                   Remove
                 </button>
@@ -158,11 +159,12 @@ export function RankingInterface({ issues, zip, communityData }: Props) {
           <h2 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-3">
             {ranked.length > 0 ? 'Remaining issues' : 'Tap to rank'}
           </h2>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {unranked.map((issue) => (
               <button
                 key={issue.id}
                 onClick={() => addToRanking(issue)}
+                aria-label={`Add ${issue.name} to your ranking`}
                 className="p-3 border border-gray-200 rounded-lg text-left hover:border-blue-300 hover:bg-blue-50 transition-colors"
               >
                 <span className="text-gray-900 font-medium text-sm">

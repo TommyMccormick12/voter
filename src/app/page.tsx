@@ -41,8 +41,12 @@ export default function Home() {
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-3 pt-2">
+          <label htmlFor="zip-input" className="sr-only">
+            Zip code
+          </label>
           <div className="flex gap-3">
             <input
+              id="zip-input"
               type="text"
               value={zipCode}
               onChange={(e) => {
@@ -50,6 +54,7 @@ export default function Home() {
                 setError('');
               }}
               placeholder="Your zip code"
+              aria-describedby={error ? 'zip-error' : undefined}
               className="flex-1 px-4 py-3 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               maxLength={10}
               inputMode="numeric"
@@ -63,7 +68,7 @@ export default function Home() {
             </button>
           </div>
           {error && (
-            <p className="text-red-500 text-sm">{error}</p>
+            <p id="zip-error" role="alert" className="text-red-500 text-sm">{error}</p>
           )}
         </form>
 
