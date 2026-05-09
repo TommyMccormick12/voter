@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { getOrCreateSession, setSessionLocation } from '@/lib/session';
 
@@ -26,18 +27,18 @@ export default function Home() {
 
     const token = await getOrCreateSession();
     await setSessionLocation(token, zip);
-    router.push(`/priorities?zip=${zip}`);
+    router.push(`/race-picker?zip=${zip}`);
   }
 
   return (
     <div className="min-h-[calc(100svh-3.5rem)] bg-white flex flex-col items-center justify-center px-4">
       <main className="max-w-md w-full space-y-6">
         <h1 className="text-4xl font-bold text-gray-900 tracking-tight text-balance">
-          What does your community care about?
+          Find your candidates for the 2026 federal midterm primaries.
         </h1>
         <p className="text-lg text-gray-500 leading-relaxed">
-          Rank the issues that matter most to you. See how your priorities
-          compare to your neighbors.
+          Browse who&apos;s running for House, Senate, and Governor. See where
+          their money comes from and how they vote.
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-3 pt-2">
@@ -74,6 +75,17 @@ export default function Home() {
 
         <p className="text-sm text-gray-400">
           Anonymous. No account needed.
+        </p>
+
+        {/* Fallback link to legacy /priorities flow until full pivot ships */}
+        <p className="text-xs text-gray-300 pt-4 border-t border-gray-100">
+          Want to rank issues instead?{' '}
+          <Link
+            href={`/priorities${zipCode ? `?zip=${zipCode}` : ''}`}
+            className="text-gray-400 hover:text-gray-600 underline"
+          >
+            Use the old flow
+          </Link>
         </p>
       </main>
     </div>

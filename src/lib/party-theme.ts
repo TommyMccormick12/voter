@@ -41,7 +41,7 @@ const themes: Record<PartyKey, PartyTheme> = {
     avatarGradient: 'bg-gradient-to-br from-red-400 to-red-600',
     tabBorder: 'border-red-600 text-red-800',
     stanceBorder: 'border-red-500',
-    industryFill: 'rgb(220 38 38)',
+    industryFill: '#dc2626',
     label: 'Republican',
   },
   D: {
@@ -53,7 +53,7 @@ const themes: Record<PartyKey, PartyTheme> = {
     avatarGradient: 'bg-gradient-to-br from-blue-400 to-blue-600',
     tabBorder: 'border-blue-600 text-blue-800',
     stanceBorder: 'border-blue-500',
-    industryFill: 'rgb(37 99 235)',
+    industryFill: '#2563eb',
     label: 'Democrat',
   },
   I: {
@@ -65,7 +65,7 @@ const themes: Record<PartyKey, PartyTheme> = {
     avatarGradient: 'bg-gradient-to-br from-violet-400 to-violet-600',
     tabBorder: 'border-violet-600 text-violet-800',
     stanceBorder: 'border-violet-500',
-    industryFill: 'rgb(124 58 237)',
+    industryFill: '#7c3aed',
     label: 'Independent',
   },
 };

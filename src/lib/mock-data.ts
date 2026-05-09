@@ -556,13 +556,29 @@ interface BuildCandidateInput {
   }>;
 }
 
+// Cycle through plausible sources so the mock UX shows varied source pills
+// (Ballotpedia, Campaign site, ProPublica, etc.). Real data from the Chunk 6
+// pipeline will have proper per-stance source URLs.
+function mockSourceUrl(idx: number, slug: string, website: string): string {
+  switch (idx % 5) {
+    case 0:
+      return `https://ballotpedia.org/${slug}`;
+    case 2:
+      return `https://www.opensecrets.org/${slug}`;
+    case 4:
+      return `https://www.propublica.org/congress/${slug}`;
+    default:
+      return website;
+  }
+}
+
 function buildCandidate(input: BuildCandidateInput): CandidateWithFullData {
-  const top_stances = input.stances.map((s) => ({
+  const top_stances = input.stances.map((s, idx) => ({
     stance_id: `${input.slug}-${s.issue_slug}`,
     issue_slug: s.issue_slug,
     stance: s.stance,
     summary: s.summary,
-    source_url: input.website,
+    source_url: mockSourceUrl(idx, input.slug, input.website),
     confidence: s.confidence,
     track_record_note: s.track_record_note,
   }));
