@@ -243,44 +243,75 @@ const STANCE_VALUES: Record<Stance, number> = {
 };
 
 /**
- * Heuristic scoring without an LLM. Matches the user's quick-poll weights and
- * a simple keyword scan of their free text against each candidate's stances.
+ * Heuristic scoring without an LLM. Score = how well the candidate covers
+ * the user's stated priorities (quick-poll weights + free-text mentions).
+ *
+ * Key design constraint discovered during QA: candidates must NOT score
+ * highly just because they have strong stances on irrelevant issues.
+ * A user who weights climate=5 should not see Romano (no climate stance,
+ * strong stances on guns/immigration) at 88%.
+ *
+ * Algorithm:
+ *   1. Build user-priority weights from quick_poll + free-text mentions
+ *   2. For each candidate, score only on stances matching user-priority issues
+ *   3. Stances on un-prioritized issues contribute 0 (ignored, not penalized)
+ *   4. Score = sum(matched contributions) / sum(possible contributions if every
+ *      user-priority issue had a strongly-held stance)
+ *   5. If user provided no priorities, all candidates get 50% (neutral)
+ *
  * Deterministic given the same input.
  */
 function mockRank(input: MatchInput): MatchResult[] {
-  const weights = new Map<string, number>();
+  // Build effective user weights: explicit poll + implicit from free-text.
+  const userWeights = new Map<string, number>();
   for (const q of input.quick_poll ?? []) {
-    weights.set(q.issue_slug, q.weight);
+    userWeights.set(q.issue_slug, q.weight);
+  }
+  const text = input.free_text.toLowerCase();
+  for (const c of input.candidates) {
+    for (const s of c.top_stances) {
+      if (userWeights.has(s.issue_slug)) continue;
+      // If user mentioned the issue in free text, give it default weight 3
+      const mentioned =
+        text.includes(s.issue_slug.replace('_', ' ')) || text.includes(s.issue_slug);
+      if (mentioned) userWeights.set(s.issue_slug, 3);
+    }
   }
 
-  const text = input.free_text.toLowerCase();
-  const sentimentBoost = (slug: string): number => {
-    // Simple keyword-based sentiment: if user mentions issue keywords with
-    // supportive language, candidates with supportive stances score higher.
-    if (text.includes(slug.replace('_', ' ')) || text.includes(slug)) {
-      return 1;
-    }
-    return 0;
-  };
+  // No signal at all → return all candidates at 50% with skip rationale.
+  if (userWeights.size === 0) {
+    return input.candidates
+      .map((c) => ({
+        candidate_id: c.id,
+        score: 50,
+        matched_stances: [],
+        rationale: 'Rate your priority issues to see how candidates align.',
+      }));
+  }
+
+  // Maximum possible score: every user-priority issue with a strongly-held stance.
+  const maxPossibleScore = Array.from(userWeights.values()).reduce(
+    (sum, w) => sum + w * 1.0, // 1.0 = strongly_support or strongly_oppose
+    0
+  );
 
   const ranked = input.candidates.map((c) => {
-    let totalScore = 0;
-    let totalWeight = 0;
-    // Track every stance with its contribution, then surface the top
-    // contributors as matched_stances regardless of an arbitrary threshold.
+    let alignmentScore = 0;
     const contributions: Array<{ stance_id: string; issue_slug: string; contribution: number }> = [];
 
     for (const stance of c.top_stances) {
-      const weight = (weights.get(stance.issue_slug) ?? 3) + sentimentBoost(stance.issue_slug);
-      const stanceValue = STANCE_VALUES[stance.stance];
-      // Higher absolute stance value with higher user weight = more impact.
-      const contribution = weight * Math.abs(stanceValue);
-      totalScore += contribution;
-      totalWeight += weight;
+      const userWeight = userWeights.get(stance.issue_slug);
+      if (userWeight === undefined) continue; // user doesn't care about this issue
 
+      const stanceValue = STANCE_VALUES[stance.stance];
+      // Strong stance on user-priority issue = high contribution.
+      const contribution = userWeight * Math.abs(stanceValue);
+      alignmentScore += contribution;
+
+      // Track-record contradiction penalty (e.g., stated support but voted against)
       const note = stance.track_record_note ?? '';
       const isContradiction = /contradict|⚠/i.test(note) || /top donor/i.test(note);
-      if (isContradiction) totalScore -= weight * 0.3;
+      if (isContradiction) alignmentScore -= userWeight * 0.3;
 
       contributions.push({
         stance_id: stance.stance_id,
@@ -289,22 +320,23 @@ function mockRank(input: MatchInput): MatchResult[] {
       });
     }
 
-    const normalizedScore = totalWeight > 0
-      ? Math.max(0, Math.min(100, Math.round((totalScore / totalWeight) * 100)))
-      : 50;
+    // Score = coverage of user priorities. Candidate with no stances on any
+    // user-priority issue gets 0% (honest: we don't know if they align).
+    const score = Math.max(
+      0,
+      Math.min(100, Math.round((alignmentScore / maxPossibleScore) * 100))
+    );
 
-    // Top 3 contributors form the matched_stances + rationale.
     contributions.sort((a, b) => b.contribution - a.contribution);
     const top = contributions.slice(0, 3);
-    const matchedStances = top.map((t) => t.stance_id);
     const rationale = top.length > 0 && top[0].contribution > 0
       ? `Closest alignment on ${top.map((t) => t.issue_slug).join(', ')}.`
-      : 'Limited overlap with your priorities.';
+      : 'No public stances on your priority issues.';
 
     return {
       candidate_id: c.id,
-      score: normalizedScore,
-      matched_stances: matchedStances,
+      score,
+      matched_stances: top.map((t) => t.stance_id),
       rationale,
     };
   });
