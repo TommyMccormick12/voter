@@ -30,28 +30,34 @@ const InteractionSchema = z.object({
  * before the database layer is wired up.
  */
 export async function POST(request: NextRequest) {
+  // JSON parse is a separate concern from validation: bad JSON is a client
+  // error (400), not a server error (500). Without this split, malformed
+  // POSTs from buggy clients pollute the 5xx error budget.
+  let body: unknown;
   try {
-    const body = await request.json();
-    const parsed = InteractionSchema.safeParse(body);
-
-    if (!parsed.success) {
-      return NextResponse.json(
-        { ok: false, error: 'invalid_payload', issues: parsed.error.flatten() },
-        { status: 400 }
-      );
-    }
-
-    // TODO (Chunk 5/6): insert into candidate_interactions, gated on consent_analytics
-    // For now, log so we can verify the client is dispatching correctly.
-    if (process.env.NODE_ENV !== 'production') {
-      console.log(
-        `[interaction] candidate=${parsed.data.candidate_id} race=${parsed.data.race_id} action=${parsed.data.action} dwell=${parsed.data.dwell_ms ?? 'n/a'}ms`
-      );
-    }
-
-    return NextResponse.json({ ok: true });
-  } catch (err) {
-    console.error('[interaction] error', err);
-    return NextResponse.json({ ok: false, error: 'server_error' }, { status: 500 });
+    body = await request.json();
+  } catch {
+    return NextResponse.json(
+      { ok: false, error: 'invalid_json' },
+      { status: 400 }
+    );
   }
+
+  const parsed = InteractionSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json(
+      { ok: false, error: 'invalid_payload', issues: parsed.error.flatten() },
+      { status: 400 }
+    );
+  }
+
+  // TODO (Chunk 5/6): insert into candidate_interactions, gated on consent_analytics
+  // For now, log so we can verify the client is dispatching correctly.
+  if (process.env.NODE_ENV !== 'production') {
+    console.log(
+      `[interaction] candidate=${parsed.data.candidate_id} race=${parsed.data.race_id} action=${parsed.data.action} dwell=${parsed.data.dwell_ms ?? 'n/a'}ms`
+    );
+  }
+
+  return NextResponse.json({ ok: true });
 }
