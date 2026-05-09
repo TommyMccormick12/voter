@@ -1,6 +1,7 @@
 'use client';
 
 import { Suspense } from 'react';
+import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
 function RacesContent() {
@@ -21,9 +22,9 @@ function RacesContent() {
         <p className="text-gray-400 text-sm">
           Race data for 2026 elections is coming soon. Enter your zip code on
           the{' '}
-          <a href="/" className="text-blue-600 hover:text-blue-700 underline">
+          <Link href="/" className="text-blue-600 hover:text-blue-700 underline">
             homepage
-          </a>{' '}
+          </Link>{' '}
           to rank your priorities in the meantime.
         </p>
       </div>

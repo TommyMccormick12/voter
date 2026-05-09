@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { getIssueName } from '@/lib/issues';
 
 interface SharePageProps {
@@ -57,12 +58,12 @@ export default async function SharePage({ searchParams }: SharePageProps) {
           <p className="text-gray-600 mb-8">
             See how your community&apos;s priorities are shifting.
           </p>
-          <a
+          <Link
             href="/"
             className="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-blue-700 transition-colors"
           >
             Rank your priorities &rarr;
-          </a>
+          </Link>
         </div>
       </main>
     );
@@ -107,12 +108,12 @@ export default async function SharePage({ searchParams }: SharePageProps) {
 
         {/* CTA */}
         <div className="text-center">
-          <a
+          <Link
             href="/"
             className="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-blue-700 transition-colors"
           >
             Rank your priorities &rarr;
-          </a>
+          </Link>
           <p className="mt-4 text-sm text-gray-500">
             See how your community&apos;s priorities are shifting
           </p>
