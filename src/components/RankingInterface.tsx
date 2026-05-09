@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { saveRankings, getPercentile } from '@/lib/rankings';
-import type { Issue, AggregatedPriority, PercentileResult } from '@/types/database';
+import type { AggregatedPriority, PercentileResult } from '@/types/database';
 
 interface RankingIssue {
   id: string;
