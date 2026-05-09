@@ -4,7 +4,20 @@ export type Stance = 'strongly_support' | 'support' | 'neutral' | 'oppose' | 'st
 
 export type ElectionType = 'primary' | 'general' | 'runoff';
 
-export type SwipeDirection = 'right' | 'left' | 'save' | 'detail';
+export type InteractionAction =
+  | 'viewed'
+  | 'saved'
+  | 'unsaved'
+  | 'viewed_detail'
+  | 'viewed_donors'
+  | 'viewed_votes'
+  | 'viewed_statements'
+  | 'source_clicked'
+  | 'no_action';
+
+export type ConsentType = 'analytics' | 'data_sale' | 'marketing' | 'functional';
+
+export type DeviceType = 'mobile' | 'desktop' | 'tablet';
 
 export type Vote = 'yea' | 'nay' | 'present' | 'absent' | 'no_vote';
 
@@ -47,14 +60,15 @@ export type EventType =
   | 'card_shared'
   | 'share'
   | 'return_visit'
-  | 'swipe_right'
-  | 'swipe_left'
-  | 'swipe_save'
-  | 'swipe_detail'
+  | 'card_viewed'
+  | 'card_saved'
+  | 'card_unsaved'
   | 'match_completed'
   | 'view_donors'
   | 'view_voting_record'
-  | 'view_statements';
+  | 'view_statements'
+  | 'consent_granted'
+  | 'consent_revoked';
 
 // ============================================================
 // Core entities
@@ -187,6 +201,47 @@ export interface Session {
   district: string | null;
   created_at: string;
   last_active: string;
+  consent_analytics: boolean;
+  consent_data_sale: boolean;
+  consent_recorded_at: string | null;
+  utm_source: string | null;
+  utm_medium: string | null;
+  utm_campaign: string | null;
+  referrer_domain: string | null;
+  device_type: DeviceType | null;
+  browser_family: string | null;
+  return_visit_count: number;
+  first_visit_at: string | null;
+}
+
+export interface SessionVisit {
+  id: string;
+  session_id: string;
+  visit_started_at: string;
+  visit_ended_at: string | null;
+  pages_viewed: number;
+  ip_country: string | null;
+  ip_region: string | null;
+  user_agent_hash: string | null;
+}
+
+export interface ConsentEvent {
+  id: string;
+  session_id: string;
+  consent_type: ConsentType;
+  granted: boolean;
+  granted_at: string;
+  ip_hash: string | null;
+  user_agent_hash: string | null;
+}
+
+export interface ConsentState {
+  analytics: boolean;
+  data_sale: boolean;
+  marketing: boolean;
+  functional: boolean; // always true (strictly necessary)
+  version: number;
+  recorded_at: string;
 }
 
 export interface IssueRanking {
@@ -197,13 +252,14 @@ export interface IssueRanking {
   created_at: string;
 }
 
-export interface CandidateSwipe {
+export interface CandidateInteraction {
   id: string;
   session_id: string;
   candidate_id: string;
   race_id: string;
-  direction: SwipeDirection;
-  swipe_order: number | null;
+  action: InteractionAction;
+  view_order: number | null;
+  dwell_ms: number | null;
   created_at: string;
 }
 

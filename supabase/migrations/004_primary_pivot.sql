@@ -37,19 +37,62 @@ ALTER TABLE candidate_positions ADD COLUMN IF NOT EXISTS source_excerpt text;
 ALTER TABLE candidate_positions ADD COLUMN IF NOT EXISTS sourced_at timestamptz;
 
 -- ============================================================
--- Swipes: candidate_swipes (left/right/save/detail)
+-- Carousel browsing is navigation, not rejection. We capture interactions
+-- (saves, detail views, scrolls past, dwell time) — commercially valuable
+-- without imposing a like/reject judgment on users.
 -- ============================================================
-CREATE TABLE IF NOT EXISTS candidate_swipes (
+CREATE TABLE IF NOT EXISTS candidate_interactions (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   session_id uuid REFERENCES sessions(id) ON DELETE CASCADE,
   candidate_id uuid REFERENCES candidates(id) ON DELETE CASCADE,
   race_id uuid REFERENCES races(id) ON DELETE CASCADE,
-  direction varchar(10) NOT NULL CHECK (direction IN ('right','left','save','detail')),
-  swipe_order smallint,
+  action varchar(20) NOT NULL CHECK (action IN ('viewed','saved','unsaved','viewed_detail','viewed_donors','viewed_votes','viewed_statements','source_clicked','no_action')),
+  view_order smallint,
+  dwell_ms int,
   created_at timestamptz DEFAULT now()
 );
-CREATE INDEX IF NOT EXISTS idx_swipes_session ON candidate_swipes(session_id, race_id);
-CREATE INDEX IF NOT EXISTS idx_swipes_candidate ON candidate_swipes(candidate_id, direction, created_at);
+CREATE INDEX IF NOT EXISTS idx_interactions_session ON candidate_interactions(session_id, race_id);
+CREATE INDEX IF NOT EXISTS idx_interactions_candidate ON candidate_interactions(candidate_id, action, created_at);
+
+-- ============================================================
+-- Cookie-based session enrichment for the B2B data product.
+-- ============================================================
+ALTER TABLE sessions ADD COLUMN IF NOT EXISTS consent_analytics boolean DEFAULT false;
+ALTER TABLE sessions ADD COLUMN IF NOT EXISTS consent_data_sale boolean DEFAULT false;
+ALTER TABLE sessions ADD COLUMN IF NOT EXISTS consent_recorded_at timestamptz;
+ALTER TABLE sessions ADD COLUMN IF NOT EXISTS utm_source varchar(100);
+ALTER TABLE sessions ADD COLUMN IF NOT EXISTS utm_medium varchar(100);
+ALTER TABLE sessions ADD COLUMN IF NOT EXISTS utm_campaign varchar(100);
+ALTER TABLE sessions ADD COLUMN IF NOT EXISTS referrer_domain varchar(120);
+ALTER TABLE sessions ADD COLUMN IF NOT EXISTS device_type varchar(20);
+ALTER TABLE sessions ADD COLUMN IF NOT EXISTS browser_family varchar(30);
+ALTER TABLE sessions ADD COLUMN IF NOT EXISTS return_visit_count int DEFAULT 0;
+ALTER TABLE sessions ADD COLUMN IF NOT EXISTS first_visit_at timestamptz;
+
+-- Per-visit session log (multi-session journey tracking)
+CREATE TABLE IF NOT EXISTS session_visits (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  session_id uuid REFERENCES sessions(id) ON DELETE CASCADE,
+  visit_started_at timestamptz DEFAULT now(),
+  visit_ended_at timestamptz,
+  pages_viewed int DEFAULT 0,
+  ip_country varchar(2),
+  ip_region varchar(100),
+  user_agent_hash text
+);
+CREATE INDEX IF NOT EXISTS idx_visits_session ON session_visits(session_id, visit_started_at DESC);
+
+-- Immutable consent audit trail (regulatory requirement)
+CREATE TABLE IF NOT EXISTS consent_audit (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  session_id uuid REFERENCES sessions(id),
+  consent_type varchar(40) NOT NULL CHECK (consent_type IN ('analytics','data_sale','marketing','functional')),
+  granted boolean NOT NULL,
+  granted_at timestamptz DEFAULT now(),
+  ip_hash text,
+  user_agent_hash text
+);
+CREATE INDEX IF NOT EXISTS idx_consent_session ON consent_audit(session_id, granted_at DESC);
 
 -- ============================================================
 -- LLM matches: cache + telemetry for free-text matcher

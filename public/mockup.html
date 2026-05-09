@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voter Pivot — UI Mockup</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    body { background: #f3f4f6; }
+
+    /* Phone frame */
+    .phone {
+      width: 390px;
+      height: 780px;
+      border-radius: 36px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+      background: white;
+      overflow: hidden;
+      border: 8px solid #1f2937;
+      position: relative;
+    }
+    .phone-screen {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .phone-screen::-webkit-scrollbar { width: 0; }
+
+    /* Header */
+    .nav-bar {
+      position: sticky; top: 0;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #f3f4f6;
+      z-index: 50;
+      padding: 14px 16px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+
+    /* Party-color schemes */
+    .party-r-bg { background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%); }
+    .party-r-accent { background: #dc2626; color: white; }
+    .party-r-border { border-color: #fca5a5; }
+    .party-r-text { color: #991b1b; }
+    .party-r-soft-bg { background: #fef2f2; }
+
+    .party-d-bg { background: linear-gradient(135deg, #eff6ff 0%, #bfdbfe 100%); }
+    .party-d-accent { background: #2563eb; color: white; }
+    .party-d-border { border-color: #93c5fd; }
+    .party-d-text { color: #1e40af; }
+    .party-d-soft-bg { background: #eff6ff; }
+
+    .party-i-bg { background: linear-gradient(135deg, #f5f3ff 0%, #ddd6fe 100%); }
+    .party-i-accent { background: #7c3aed; color: white; }
+    .party-i-border { border-color: #c4b5fd; }
+    .party-i-text { color: #5b21b6; }
+
+    /* Carousel — horizontal scroll snap */
+    .carousel-track {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 12px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .carousel-track::-webkit-scrollbar { display: none; }
+    .carousel-card {
+      flex-shrink: 0;
+      width: calc(100% - 48px);
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+    }
+
+    /* Pills + badges */
+    .badge-track { background: #ecfdf5; color: #065f46; }
+    .badge-warn { background: #fef3c7; color: #92400e; }
+    .pill { padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 500; }
+    .source-pill { background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 500; }
+
+    /* Industry bar fill */
+    .industry-bar { background: linear-gradient(90deg, currentColor, color-mix(in srgb, currentColor 40%, transparent)); }
+
+    /* Stars */
+    .star { color: #d1d5db; font-size: 18px; cursor: pointer; }
+    .star.filled { color: #f59e0b; }
+
+    /* Layout */
+    .screen-title {
+      max-width: 1100px;
+      margin: 0 auto 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .screen-subtitle {
+      max-width: 1100px;
+      margin: -8px auto 16px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+    .screen-row {
+      max-width: 1280px;
+      margin: 0 auto 60px;
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* Pagination dots */
+    .pagination-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d1d5db;
+      transition: width 0.3s;
+    }
+    .pagination-dot.active {
+      width: 24px;
+      background: #1f2937;
+    }
+
+    @media (max-width: 900px) {
+      .phone { width: 340px; height: 720px; }
+    }
+  </style>
+</head>
+<body class="py-12">
+
+  <header class="max-w-5xl mx-auto px-6 mb-12">
+    <h1 class="text-4xl font-bold text-gray-900 tracking-tight mb-2">Voter — Federal Midterm Primary Mockup</h1>
+    <p class="text-lg text-gray-600">Horizontal-scroll candidate scorecards, party-colored, plus LLM match.</p>
+    <p class="text-sm text-gray-500 mt-2">Federal midterms only (House, Senate, Governor). Static mockup — mock data: NJ-07 Republican Primary, June 2, 2026.</p>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- 1. Zip entry → Race picker -->
+  <!-- ============================================================ -->
+  <p class="screen-title">1. Zip entry → Race picker</p>
+  <p class="screen-subtitle">Federal midterm primaries only. Race picker shows races filtered to the user's district.</p>
+  <div class="screen-row">
+
+    <!-- Homepage -->
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="nav-bar">
+          <span class="font-bold text-gray-900">voter</span>
+          <span class="text-sm text-gray-400">Find your primary</span>
+        </div>
+        <div class="px-6 pt-12 pb-8">
+          <h1 class="text-3xl font-bold text-gray-900 leading-tight tracking-tight">
+            Find your candidates for the 2026 federal midterm primaries.
+          </h1>
+          <p class="text-base text-gray-500 mt-4 leading-relaxed">
+            Browse who's running for House, Senate, and Governor. See where their money comes from and how they vote.
+          </p>
+          <div class="mt-8">
+            <label class="sr-only" for="zip">Zip code</label>
+            <div class="flex gap-3">
+              <input id="zip" type="text" placeholder="Your zip code" value="07059"
+                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <button class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700">Go</button>
+            </div>
+          </div>
+          <p class="text-xs text-gray-400 mt-4">Anonymous. No account needed.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Race Picker -->
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="nav-bar">
+          <span class="font-bold text-gray-900">voter</span>
+          <span class="text-xs text-gray-400">07059</span>
+        </div>
+        <div class="px-6 pt-8">
+          <p class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">Somerset, NJ</p>
+          <h1 class="text-2xl font-bold text-gray-900 mb-1">1 federal primary near you</h1>
+          <p class="text-sm text-gray-500 mb-6">House, Senate, and Governor races · May–September 2026</p>
+
+          <div class="border party-r-border bg-white rounded-xl p-5 hover:shadow-md transition cursor-pointer">
+            <div class="flex justify-between items-start mb-2">
+              <span class="pill party-r-accent">Republican</span>
+              <span class="text-xs text-gray-400 font-medium">Jun 2</span>
+            </div>
+            <h2 class="text-lg font-bold text-gray-900 mb-1">U.S. House — NJ-07</h2>
+            <p class="text-sm text-gray-500 mb-4">25 days until primary</p>
+            <div class="flex items-center gap-2">
+              <div class="flex -space-x-2">
+                <div class="w-7 h-7 rounded-full bg-red-200 border-2 border-white"></div>
+                <div class="w-7 h-7 rounded-full bg-red-300 border-2 border-white"></div>
+                <div class="w-7 h-7 rounded-full bg-red-400 border-2 border-white"></div>
+                <div class="w-7 h-7 rounded-full bg-red-500 border-2 border-white"></div>
+              </div>
+              <span class="text-sm font-medium text-gray-700 ml-1">4 candidates</span>
+              <span class="ml-auto party-r-text font-medium text-sm">Browse →</span>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-400 mt-8 text-center">
+            Don't see your race? <a href="#" class="text-blue-600">More coming soon</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 2. Scorecard carousel — the new core UX -->
+  <!-- ============================================================ -->
+  <p class="screen-title">2. Candidate scorecard carousel — horizontal scroll, party-colored</p>
+  <p class="screen-subtitle">Swipe horizontally between candidates. Each card party-themed. No left/right rejection swipe — this is browsing, not sorting.</p>
+  <div class="screen-row">
+
+    <!-- Carousel — Card 1 (Kean, R) showing -->
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="nav-bar">
+          <a href="#" class="text-gray-500 text-sm">← Race</a>
+          <div class="text-center">
+            <p class="text-xs font-medium text-gray-700">NJ-07 · Republican Primary</p>
+            <p class="text-[10px] text-gray-400">Jun 2, 2026</p>
+          </div>
+          <span class="text-xs font-medium text-gray-500">1/4</span>
+        </div>
+
+        <!-- Carousel container -->
+        <div class="carousel-track" style="height: 580px;">
+
+          <!-- Peek of previous (none — we're first) -->
+
+          <!-- Active card: Tom Kean Jr., R, Incumbent -->
+          <div class="carousel-card">
+            <div class="bg-white rounded-2xl shadow-md border party-r-border overflow-hidden h-full flex flex-col">
+              <!-- Party-colored hero -->
+              <div class="party-r-bg p-5 flex items-center gap-4 relative">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center text-white text-2xl font-bold shadow-md flex-shrink-0">TK</div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="pill party-r-accent text-[10px]">R</span>
+                    <span class="pill bg-white/80 text-gray-700 text-[10px]">Incumbent</span>
+                  </div>
+                  <h2 class="text-lg font-bold text-gray-900 leading-tight">Thomas Kean Jr.</h2>
+                  <p class="text-xs text-gray-600 mt-0.5">Two-term · $4.25M raised</p>
+                </div>
+              </div>
+
+              <!-- Stances scrollable area -->
+              <div class="p-4 flex-1 overflow-y-auto">
+                <p class="text-[10px] font-bold text-gray-500 uppercase tracking-wide mb-2">Top Stances</p>
+
+                <div class="space-y-2.5">
+                  <div class="border-l-2 border-red-500 pl-2.5">
+                    <div class="flex items-center gap-2 mb-0.5">
+                      <span class="text-xs font-bold text-gray-500 uppercase">Economy</span>
+                      <span class="source-pill">Ballotpedia</span>
+                    </div>
+                    <p class="text-sm text-gray-900 leading-snug">Tax cuts for small businesses and middle-class families.</p>
+                    <span class="badge-track pill mt-1.5 inline-block">✓ Voted YES on H.R.1 (2024)</span>
+                  </div>
+
+                  <div class="border-l-2 border-red-500 pl-2.5">
+                    <div class="flex items-center gap-2 mb-0.5">
+                      <span class="text-xs font-bold text-gray-500 uppercase">Climate</span>
+                      <span class="source-pill">Campaign site</span>
+                    </div>
+                    <p class="text-sm text-gray-900 leading-snug">Supports clean energy investment but opposes mandates.</p>
+                    <span class="badge-warn pill mt-1.5 inline-block">⚠ Top donor: oil &amp; gas</span>
+                  </div>
+
+                  <div class="border-l-2 border-red-500 pl-2.5">
+                    <div class="flex items-center gap-2 mb-0.5">
+                      <span class="text-xs font-bold text-gray-500 uppercase">Immigration</span>
+                      <span class="source-pill">Ballotpedia</span>
+                    </div>
+                    <p class="text-sm text-gray-900 leading-snug">Stricter border enforcement, expanded deportations.</p>
+                    <span class="badge-track pill mt-1.5 inline-block">✓ Co-sponsored Border Act (2024)</span>
+                  </div>
+                </div>
+
+                <div class="mt-4 party-r-soft-bg rounded-lg p-2.5">
+                  <p class="text-[10px] font-bold text-gray-500 uppercase mb-0.5">Top funded by</p>
+                  <p class="text-xs text-gray-800">Real Estate · Securities · Oil &amp; Gas</p>
+                </div>
+              </div>
+
+              <!-- CTAs -->
+              <div class="p-3 border-t border-gray-100 flex gap-2">
+                <button class="flex-1 text-gray-600 text-sm font-medium py-2.5 hover:bg-gray-50 rounded-lg transition">
+                  ★ Save
+                </button>
+                <button class="flex-1 party-r-accent text-sm font-medium py-2.5 rounded-lg">
+                  Full record →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Peek of next: Priya Mehta -->
+          <div class="carousel-card" style="opacity: 0.55;">
+            <div class="bg-white rounded-2xl shadow-md border party-r-border overflow-hidden h-full">
+              <div class="party-r-bg p-5 flex items-center gap-4">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center text-white text-2xl font-bold shadow-md flex-shrink-0">PM</div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="pill party-r-accent text-[10px]">R</span>
+                    <span class="pill bg-white/80 text-gray-700 text-[10px]">Challenger</span>
+                  </div>
+                  <h2 class="text-lg font-bold text-gray-900 leading-tight">Priya Mehta</h2>
+                  <p class="text-xs text-gray-600 mt-0.5">Tech entrepreneur · $875K</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination dots -->
+        <div class="flex justify-center items-center gap-1.5 py-2 bg-white border-t border-gray-100">
+          <span class="pagination-dot active"></span>
+          <span class="pagination-dot"></span>
+          <span class="pagination-dot"></span>
+          <span class="pagination-dot"></span>
+        </div>
+
+        <!-- Bottom hint + match CTA -->
+        <div class="px-4 py-3 bg-gray-50 border-t border-gray-100 text-center">
+          <p class="text-xs text-gray-500 mb-2">Swipe to see more · 4 candidates</p>
+          <button class="w-full party-r-accent text-sm font-semibold py-2.5 rounded-lg">
+            Find my best match →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel — Card 2 (Mehta) showing center -->
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="nav-bar">
+          <a href="#" class="text-gray-500 text-sm">← Race</a>
+          <div class="text-center">
+            <p class="text-xs font-medium text-gray-700">NJ-07 · Republican Primary</p>
+            <p class="text-[10px] text-gray-400">Jun 2, 2026</p>
+          </div>
+          <span class="text-xs font-medium text-gray-500">2/4</span>
+        </div>
+
+        <div class="carousel-track" style="height: 580px;">
+
+          <!-- Peek of prev: Kean -->
+          <div class="carousel-card" style="opacity: 0.55; margin-left: -150px;">
+            <div class="bg-white rounded-2xl shadow-md border party-r-border overflow-hidden h-full">
+              <div class="party-r-bg p-5 flex items-center gap-4">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center text-white text-2xl font-bold shadow-md flex-shrink-0">TK</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active card: Mehta -->
+          <div class="carousel-card">
+            <div class="bg-white rounded-2xl shadow-md border party-r-border overflow-hidden h-full flex flex-col">
+              <div class="party-r-bg p-5 flex items-center gap-4">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center text-white text-2xl font-bold shadow-md flex-shrink-0">PM</div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="pill party-r-accent text-[10px]">R</span>
+                    <span class="pill bg-white/80 text-gray-700 text-[10px]">Challenger</span>
+                  </div>
+                  <h2 class="text-lg font-bold text-gray-900 leading-tight">Priya Mehta</h2>
+                  <p class="text-xs text-gray-600 mt-0.5">Tech entrepreneur · $875K</p>
+                </div>
+              </div>
+
+              <div class="p-4 flex-1 overflow-y-auto">
+                <p class="text-[10px] font-bold text-gray-500 uppercase tracking-wide mb-2">Top Stances</p>
+
+                <div class="space-y-2.5">
+                  <div class="border-l-2 border-red-500 pl-2.5">
+                    <div class="flex items-center gap-2 mb-0.5">
+                      <span class="text-xs font-bold text-gray-500 uppercase">Economy</span>
+                      <span class="source-pill">Campaign site</span>
+                    </div>
+                    <p class="text-sm text-gray-900 leading-snug">Pro-business, lower regulation, R&amp;D tax credits.</p>
+                  </div>
+
+                  <div class="border-l-2 border-red-500 pl-2.5">
+                    <div class="flex items-center gap-2 mb-0.5">
+                      <span class="text-xs font-bold text-gray-500 uppercase">Immigration</span>
+                      <span class="source-pill">Ballotpedia</span>
+                    </div>
+                    <p class="text-sm text-gray-900 leading-snug">Border security plus expanded H-1B and merit-based legal immigration.</p>
+                  </div>
+
+                  <div class="border-l-2 border-red-500 pl-2.5">
+                    <div class="flex items-center gap-2 mb-0.5">
+                      <span class="text-xs font-bold text-gray-500 uppercase">Climate</span>
+                      <span class="source-pill">Campaign site</span>
+                    </div>
+                    <p class="text-sm text-gray-900 leading-snug">Skeptical of mandates. Supports market-driven innovation.</p>
+                  </div>
+                </div>
+
+                <div class="mt-4 party-r-soft-bg rounded-lg p-2.5">
+                  <p class="text-[10px] font-bold text-gray-500 uppercase mb-0.5">Top funded by</p>
+                  <p class="text-xs text-gray-800">Technology · Venture Capital · Securities</p>
+                </div>
+              </div>
+
+              <div class="p-3 border-t border-gray-100 flex gap-2">
+                <button class="flex-1 text-gray-600 text-sm font-medium py-2.5 hover:bg-gray-50 rounded-lg transition">
+                  ★ Save
+                </button>
+                <button class="flex-1 party-r-accent text-sm font-medium py-2.5 rounded-lg">
+                  Full record →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center gap-1.5 py-2 bg-white border-t border-gray-100">
+          <span class="pagination-dot"></span>
+          <span class="pagination-dot active"></span>
+          <span class="pagination-dot"></span>
+          <span class="pagination-dot"></span>
+        </div>
+
+        <div class="px-4 py-3 bg-gray-50 border-t border-gray-100 text-center">
+          <p class="text-xs text-gray-500 mb-2">Swipe to see more · 4 candidates</p>
+          <button class="w-full party-r-accent text-sm font-semibold py-2.5 rounded-lg">
+            Find my best match →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel — Democratic primary example (party color contrast) -->
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="nav-bar">
+          <a href="#" class="text-gray-500 text-sm">← Race</a>
+          <div class="text-center">
+            <p class="text-xs font-medium text-gray-700">VA · Senate Democratic Primary</p>
+            <p class="text-[10px] text-gray-400">Jun 16, 2026</p>
+          </div>
+          <span class="text-xs font-medium text-gray-500">1/2</span>
+        </div>
+
+        <div class="carousel-track" style="height: 580px;">
+
+          <div class="carousel-card">
+            <div class="bg-white rounded-2xl shadow-md border party-d-border overflow-hidden h-full flex flex-col">
+              <div class="party-d-bg p-5 flex items-center gap-4">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-2xl font-bold shadow-md flex-shrink-0">MW</div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="pill party-d-accent text-[10px]">D</span>
+                    <span class="pill bg-white/80 text-gray-700 text-[10px]">Incumbent</span>
+                  </div>
+                  <h2 class="text-lg font-bold text-gray-900 leading-tight">Mark Warner</h2>
+                  <p class="text-xs text-gray-600 mt-0.5">Three-term · $12.4M raised</p>
+                </div>
+              </div>
+
+              <div class="p-4 flex-1 overflow-y-auto">
+                <p class="text-[10px] font-bold text-gray-500 uppercase tracking-wide mb-2">Top Stances</p>
+
+                <div class="space-y-2.5">
+                  <div class="border-l-2 border-blue-500 pl-2.5">
+                    <div class="flex items-center gap-2 mb-0.5">
+                      <span class="text-xs font-bold text-gray-500 uppercase">Foreign Policy</span>
+                      <span class="source-pill">Senate floor</span>
+                    </div>
+                    <p class="text-sm text-gray-900 leading-snug">Strong on Ukraine aid, NATO, China policy.</p>
+                    <span class="badge-track pill mt-1.5 inline-block">✓ Voted YES on Ukraine supplemental</span>
+                  </div>
+
+                  <div class="border-l-2 border-blue-500 pl-2.5">
+                    <div class="flex items-center gap-2 mb-0.5">
+                      <span class="text-xs font-bold text-gray-500 uppercase">Economy</span>
+                      <span class="source-pill">Campaign site</span>
+                    </div>
+                    <p class="text-sm text-gray-900 leading-snug">Pro-business Democrat. Backs CHIPS Act, infrastructure.</p>
+                  </div>
+
+                  <div class="border-l-2 border-blue-500 pl-2.5">
+                    <div class="flex items-center gap-2 mb-0.5">
+                      <span class="text-xs font-bold text-gray-500 uppercase">Healthcare</span>
+                      <span class="source-pill">Ballotpedia</span>
+                    </div>
+                    <p class="text-sm text-gray-900 leading-snug">Expand ACA subsidies, allow Medicare drug negotiation. Opposes Medicare for All.</p>
+                  </div>
+                </div>
+
+                <div class="mt-4 party-d-soft-bg rounded-lg p-2.5">
+                  <p class="text-[10px] font-bold text-gray-500 uppercase mb-0.5">Top funded by</p>
+                  <p class="text-xs text-gray-800">Securities · Tech · Lawyers</p>
+                </div>
+              </div>
+
+              <div class="p-3 border-t border-gray-100 flex gap-2">
+                <button class="flex-1 text-gray-600 text-sm font-medium py-2.5 hover:bg-gray-50 rounded-lg transition">
+                  ★ Save
+                </button>
+                <button class="flex-1 party-d-accent text-sm font-medium py-2.5 rounded-lg">
+                  Full record →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center gap-1.5 py-2 bg-white border-t border-gray-100">
+          <span class="pagination-dot active"></span>
+          <span class="pagination-dot"></span>
+        </div>
+
+        <div class="px-4 py-3 bg-gray-50 border-t border-gray-100 text-center">
+          <p class="text-xs text-gray-500 mb-2">Swipe to see more · 2 candidates</p>
+          <button class="w-full party-d-accent text-sm font-semibold py-2.5 rounded-lg">
+            Find my best match →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 3. Candidate detail — full record (unchanged from previous) -->
+  <!-- ============================================================ -->
+  <p class="screen-title">3. Candidate detail — the full record</p>
+  <p class="screen-subtitle">Tap "Full record" on any scorecard to see stances, donors, voting record, and statements.</p>
+  <div class="screen-row">
+
+    <!-- Stances tab -->
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="nav-bar">
+          <a href="#" class="text-gray-500 text-sm">← Back</a>
+          <span></span>
+          <button class="text-gray-400 text-sm">Share</button>
+        </div>
+
+        <div class="party-r-bg px-6 py-8 flex items-center gap-4">
+          <div class="w-20 h-20 rounded-full bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">TK</div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-900">Thomas Kean Jr.</h1>
+            <p class="text-sm text-gray-700">Republican · Incumbent · NJ-07</p>
+            <p class="text-sm font-semibold party-r-text mt-1">$4.25M raised</p>
+          </div>
+        </div>
+
+        <div class="flex border-b border-gray-200 px-6 overflow-x-auto">
+          <button class="px-3 py-3 border-b-2 border-red-600 party-r-text text-sm font-medium whitespace-nowrap">Stances</button>
+          <button class="px-3 py-3 text-gray-500 text-sm font-medium whitespace-nowrap">Donors</button>
+          <button class="px-3 py-3 text-gray-500 text-sm font-medium whitespace-nowrap">Voting</button>
+          <button class="px-3 py-3 text-gray-500 text-sm font-medium whitespace-nowrap">Statements</button>
+        </div>
+
+        <div class="px-6 py-4 space-y-4">
+          <div class="border border-gray-200 rounded-xl p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-gray-500 uppercase">Economy & Jobs</span>
+              <span class="pill party-r-accent">Support</span>
+            </div>
+            <p class="text-sm text-gray-900 mb-2">Tax cuts for small businesses and middle-class families. Opposes 2026 corporate tax hike.</p>
+            <div class="bg-emerald-50 rounded-lg p-2.5 mb-2">
+              <p class="text-xs font-bold text-emerald-800 mb-0.5">✓ TRACK RECORD</p>
+              <p class="text-xs text-emerald-900">Voted YES on H.R.1 (Tax Cuts and Jobs Act Extension), Nov 2024</p>
+            </div>
+            <a href="#" class="text-xs text-blue-600 font-medium">Source: Ballotpedia →</a>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-gray-500 uppercase">Climate & Energy</span>
+              <span class="pill bg-gray-100 text-gray-700 font-semibold">Neutral</span>
+            </div>
+            <p class="text-sm text-gray-900 mb-2">Supports clean energy investment but opposes mandates. Backs nuclear and natural gas expansion.</p>
+            <div class="bg-amber-50 rounded-lg p-2.5 mb-2">
+              <p class="text-xs font-bold text-amber-800 mb-0.5">⚠ INCONSISTENCY FLAGGED</p>
+              <p class="text-xs text-amber-900">Voted NAY on Clean Energy Standard (Feb 2025). Top donor industry: Oil &amp; Gas ($290K).</p>
+            </div>
+            <a href="#" class="text-xs text-blue-600 font-medium">Source: Campaign site →</a>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-gray-500 uppercase">Immigration</span>
+              <span class="pill bg-orange-100 text-orange-700 font-semibold">Oppose</span>
+            </div>
+            <p class="text-sm text-gray-900 mb-2">Stricter border enforcement, end of catch-and-release, expanded deportations.</p>
+            <div class="bg-emerald-50 rounded-lg p-2.5 mb-2">
+              <p class="text-xs font-bold text-emerald-800 mb-0.5">✓ TRACK RECORD</p>
+              <p class="text-xs text-emerald-900">Co-sponsored H.R.2 Secure the Border Act, Sep 2024</p>
+            </div>
+            <a href="#" class="text-xs text-blue-600 font-medium">Source: Ballotpedia →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Donors tab -->
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="nav-bar">
+          <a href="#" class="text-gray-500 text-sm">← Back</a>
+          <span class="text-sm font-medium">Thomas Kean Jr.</span>
+          <button class="text-gray-400 text-sm">Share</button>
+        </div>
+
+        <div class="flex border-b border-gray-200 px-6 overflow-x-auto">
+          <button class="px-3 py-3 text-gray-500 text-sm font-medium whitespace-nowrap">Stances</button>
+          <button class="px-3 py-3 border-b-2 border-red-600 party-r-text text-sm font-medium whitespace-nowrap">Donors</button>
+          <button class="px-3 py-3 text-gray-500 text-sm font-medium whitespace-nowrap">Voting</button>
+          <button class="px-3 py-3 text-gray-500 text-sm font-medium whitespace-nowrap">Statements</button>
+        </div>
+
+        <div class="px-6 py-4">
+          <div class="party-r-bg border border-red-100 rounded-xl p-4 mb-6">
+            <p class="text-xs font-bold party-r-text uppercase mb-1">2026 Cycle Total</p>
+            <p class="text-3xl font-bold text-gray-900">$4.25M</p>
+            <p class="text-xs text-gray-600 mt-1">Source: OpenSecrets · FEC filings</p>
+          </div>
+
+          <h3 class="text-sm font-bold text-gray-700 mb-3">TOP 5 INDUSTRIES</h3>
+          <div class="space-y-3 mb-6 text-red-600">
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="font-medium text-gray-900">Real Estate</span>
+                <span class="font-semibold text-gray-700">$425K</span>
+              </div>
+              <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div class="industry-bar h-full" style="width: 100%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="font-medium text-gray-900">Securities &amp; Investment</span>
+                <span class="font-semibold text-gray-700">$380K</span>
+              </div>
+              <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div class="industry-bar h-full" style="width: 89%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="font-medium text-gray-900">Oil &amp; Gas</span>
+                <span class="font-semibold text-gray-700">$290K</span>
+              </div>
+              <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div class="industry-bar h-full" style="width: 68%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="font-medium text-gray-900">Insurance</span>
+                <span class="font-semibold text-gray-700">$245K</span>
+              </div>
+              <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div class="industry-bar h-full" style="width: 58%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="font-medium text-gray-900">Health Professionals</span>
+                <span class="font-semibold text-gray-700">$198K</span>
+              </div>
+              <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div class="industry-bar h-full" style="width: 47%"></div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="text-sm font-bold text-gray-700 mb-3">TOP DONORS</h3>
+          <div class="space-y-2">
+            <div class="flex justify-between p-2.5 bg-gray-50 rounded-lg">
+              <div>
+                <p class="text-sm font-medium text-gray-900">Goldman Sachs</p>
+                <p class="text-xs text-gray-500">Securities</p>
+              </div>
+              <span class="text-sm font-semibold text-gray-700">$45K</span>
+            </div>
+            <div class="flex justify-between p-2.5 bg-gray-50 rounded-lg">
+              <div>
+                <p class="text-sm font-medium text-gray-900">Blackstone</p>
+                <p class="text-xs text-gray-500">Real Estate</p>
+              </div>
+              <span class="text-sm font-semibold text-gray-700">$38K</span>
+            </div>
+            <div class="flex justify-between p-2.5 bg-gray-50 rounded-lg">
+              <div>
+                <p class="text-sm font-medium text-gray-900">ExxonMobil PAC</p>
+                <p class="text-xs text-gray-500">Oil &amp; Gas</p>
+              </div>
+              <span class="text-sm font-semibold text-gray-700">$35K</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Voting record tab -->
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="nav-bar">
+          <a href="#" class="text-gray-500 text-sm">← Back</a>
+          <span class="text-sm font-medium">Thomas Kean Jr.</span>
+          <button class="text-gray-400 text-sm">Share</button>
+        </div>
+
+        <div class="flex border-b border-gray-200 px-6 overflow-x-auto">
+          <button class="px-3 py-3 text-gray-500 text-sm font-medium whitespace-nowrap">Stances</button>
+          <button class="px-3 py-3 text-gray-500 text-sm font-medium whitespace-nowrap">Donors</button>
+          <button class="px-3 py-3 border-b-2 border-red-600 party-r-text text-sm font-medium whitespace-nowrap">Voting</button>
+          <button class="px-3 py-3 text-gray-500 text-sm font-medium whitespace-nowrap">Statements</button>
+        </div>
+
+        <div class="px-6 py-4">
+          <div class="flex gap-2 mb-4 overflow-x-auto pb-2">
+            <button class="pill party-r-accent whitespace-nowrap">All</button>
+            <button class="pill bg-gray-100 text-gray-700 whitespace-nowrap">Economy</button>
+            <button class="pill bg-gray-100 text-gray-700 whitespace-nowrap">Climate</button>
+            <button class="pill bg-gray-100 text-gray-700 whitespace-nowrap">Immigration</button>
+            <button class="pill bg-gray-100 text-gray-700 whitespace-nowrap">Healthcare</button>
+          </div>
+
+          <div class="space-y-3">
+            <div class="border border-gray-200 rounded-xl p-4">
+              <div class="flex items-start justify-between mb-2">
+                <div class="flex-1">
+                  <p class="text-xs font-mono text-gray-500">H.R. 1 · Nov 15, 2024</p>
+                  <h4 class="text-sm font-semibold text-gray-900 mt-1">Tax Cuts and Jobs Act Extension</h4>
+                </div>
+                <span class="pill bg-emerald-100 text-emerald-800 font-bold">YEA</span>
+              </div>
+              <div class="flex gap-2 mt-2">
+                <span class="pill bg-gray-100 text-gray-700">economy</span>
+                <span class="pill bg-gray-100 text-gray-700">taxes</span>
+              </div>
+            </div>
+
+            <div class="border border-gray-200 rounded-xl p-4">
+              <div class="flex items-start justify-between mb-2">
+                <div class="flex-1">
+                  <p class="text-xs font-mono text-gray-500">H.R. 2 · Sep 20, 2024</p>
+                  <h4 class="text-sm font-semibold text-gray-900 mt-1">Secure the Border Act</h4>
+                </div>
+                <span class="pill bg-emerald-100 text-emerald-800 font-bold">YEA</span>
+              </div>
+              <div class="flex gap-2 mt-2">
+                <span class="pill bg-gray-100 text-gray-700">immigration</span>
+              </div>
+            </div>
+
+            <div class="border border-gray-200 rounded-xl p-4">
+              <div class="flex items-start justify-between mb-2">
+                <div class="flex-1">
+                  <p class="text-xs font-mono text-gray-500">H.R. 845 · Feb 10, 2025</p>
+                  <h4 class="text-sm font-semibold text-gray-900 mt-1">Clean Energy Standard Act</h4>
+                </div>
+                <span class="pill bg-red-100 text-red-800 font-bold">NAY</span>
+              </div>
+              <div class="flex gap-2 mt-2">
+                <span class="pill bg-gray-100 text-gray-700">climate</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-400 mt-4 text-center">Source: ProPublica Congress API</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 4. Match flow — Quick poll + free text + ranked results  -->
+  <!-- ============================================================ -->
+  <p class="screen-title">4. Match flow — quick poll + free text + ranked results</p>
+  <p class="screen-subtitle">After browsing scorecards, voters can opt into a personalized match. Quick poll + free-text → LLM-ranked candidates.</p>
+  <div class="screen-row">
+
+    <!-- Quick poll -->
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="nav-bar">
+          <a href="#" class="text-gray-500 text-sm">← Back</a>
+          <span class="text-xs font-medium text-gray-700">Step 1 of 2</span>
+          <span></span>
+        </div>
+        <div class="px-6 py-6">
+          <h1 class="text-2xl font-bold text-gray-900 leading-tight mb-2">What matters most to you?</h1>
+          <p class="text-sm text-gray-500 mb-6">Tap stars for each issue. Skip any that don't apply.</p>
+
+          <div class="space-y-3 mb-6">
+            <div class="border border-gray-200 rounded-xl p-3.5 flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-900">Economy &amp; Jobs</span>
+              <div class="flex gap-1">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+              </div>
+            </div>
+            <div class="border border-blue-300 bg-blue-50 rounded-xl p-3.5 flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-900">Healthcare</span>
+              <div class="flex gap-1">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span>
+              </div>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-3.5 flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-900">Immigration</span>
+              <div class="flex gap-1">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-3.5 flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-900">Climate</span>
+              <div class="flex gap-1">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span><span class="star">★</span>
+              </div>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-3.5 flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-900">Housing</span>
+              <div class="flex gap-1">
+                <span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="w-full bg-blue-600 text-white font-medium py-3 rounded-lg">Continue →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Free-text matcher -->
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="nav-bar">
+          <a href="#" class="text-gray-500 text-sm">← Back</a>
+          <span class="text-xs font-medium text-gray-700">Step 2 of 2</span>
+          <span></span>
+        </div>
+        <div class="px-6 py-6">
+          <h1 class="text-2xl font-bold text-gray-900 leading-tight mb-2">Tell us in your own words.</h1>
+          <p class="text-sm text-gray-500 mb-6">What do you actually care about? We'll match it to candidate positions, voting records, and donor profiles.</p>
+
+          <textarea class="w-full border border-gray-300 rounded-xl p-4 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3" rows="6" placeholder="e.g. I want lower taxes for working families and someone who's serious about the border, but who isn't going to gut Social Security or Medicare for older folks like my mom.">I want lower taxes for working families and someone who's serious about the border, but who isn't going to gut Social Security or Medicare for older folks like my mom.</textarea>
+
+          <p class="text-xs text-gray-400 mb-6">No personal info. Stays anonymous. Used only to find your match.</p>
+
+          <button class="w-full bg-blue-600 text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2">
+            <span>Find my match</span>
+            <span class="text-blue-200 text-xs">·  takes ~2s</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Match results -->
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="nav-bar">
+          <a href="#" class="text-gray-500 text-sm">← Match</a>
+          <span class="text-sm font-medium text-gray-900">Your matches</span>
+          <button class="text-gray-400 text-sm">Share</button>
+        </div>
+        <div class="px-6 py-4">
+          <p class="text-xs text-gray-500 mb-1">For NJ-07 Republican Primary</p>
+          <p class="text-base font-medium text-gray-900 mb-5">Based on your priorities and what you wrote</p>
+
+          <div class="party-r-bg border-2 party-r-border rounded-2xl p-4 mb-4">
+            <div class="flex items-start gap-3 mb-3">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center text-white font-bold flex-shrink-0">TK</div>
+              <div class="flex-1">
+                <p class="text-xs font-bold party-r-text uppercase tracking-wide">Top match</p>
+                <h3 class="text-lg font-bold text-gray-900 leading-tight">Thomas Kean Jr.</h3>
+                <p class="text-xs text-gray-600">Republican · Incumbent</p>
+              </div>
+              <div class="text-right">
+                <div class="text-3xl font-bold party-r-text">82<span class="text-lg">%</span></div>
+                <p class="text-xs text-gray-600">match</p>
+              </div>
+            </div>
+            <p class="text-sm text-gray-700 italic mb-3">"Strong on border security and pro-business taxes, with explicit support for Medicare and Social Security."</p>
+            <div class="space-y-1.5">
+              <div class="text-xs flex items-start gap-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span class="text-gray-700">Tax cuts for working families</span>
+              </div>
+              <div class="text-xs flex items-start gap-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span class="text-gray-700">Border enforcement (co-sponsored H.R.2)</span>
+              </div>
+              <div class="text-xs flex items-start gap-2">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span class="text-gray-700">Voted to protect Medicare funding</span>
+              </div>
+            </div>
+            <button class="w-full mt-3 party-r-accent text-sm font-medium py-2.5 rounded-lg">See full record →</button>
+          </div>
+
+          <div class="bg-white border party-r-border rounded-xl p-3.5 mb-2 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-400 to-red-500 flex items-center justify-center text-white font-bold text-sm">JP</div>
+            <div class="flex-1">
+              <h4 class="font-semibold text-gray-900 text-sm">Janet Park</h4>
+              <p class="text-xs text-gray-500">Republican · Moderate lane</p>
+            </div>
+            <div class="text-right">
+              <div class="text-lg font-bold text-gray-700">61%</div>
+            </div>
+          </div>
+
+          <div class="bg-white border party-r-border rounded-xl p-3.5 mb-2 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-400 to-red-500 flex items-center justify-center text-white font-bold text-sm">PM</div>
+            <div class="flex-1">
+              <h4 class="font-semibold text-gray-900 text-sm">Priya Mehta</h4>
+              <p class="text-xs text-gray-500">Republican · Tech entrepreneur</p>
+            </div>
+            <div class="text-right">
+              <div class="text-lg font-bold text-gray-700">48%</div>
+            </div>
+          </div>
+
+          <div class="bg-white border party-r-border rounded-xl p-3.5 mb-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-400 to-red-500 flex items-center justify-center text-white font-bold text-sm">DR</div>
+            <div class="flex-1">
+              <h4 class="font-semibold text-gray-900 text-sm">David Romano</h4>
+              <p class="text-xs text-gray-500">Republican · Hardline</p>
+            </div>
+            <div class="text-right">
+              <div class="text-lg font-bold text-gray-500">34%</div>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-400 text-center">
+            Match scores based on Ballotpedia, ProPublica, and OpenSecrets data.<br />
+            <a href="#" class="text-blue-600">How matching works →</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer notes -->
+  <footer class="max-w-3xl mx-auto px-6 py-12 text-sm text-gray-500 border-t border-gray-200">
+    <h3 class="font-bold text-gray-700 mb-2">Notes on this mockup</h3>
+    <ul class="space-y-1.5 list-disc pl-5">
+      <li><strong>Carousel scorecards, not Tinder swipe.</strong> Horizontal scroll between candidates, snap-to-card. No left/right rejection mechanic — this is browsing, not sorting.</li>
+      <li><strong>Party-colored cards.</strong> Republican = red theme, Democrat = blue, Independent = purple. The hero strip and accent buttons take the party color so the card identity is obvious at a glance.</li>
+      <li><strong>Federal midterms only.</strong> House, Senate, and Governor. No state legislature, no municipal, no general elections in this iteration.</li>
+      <li><strong>Track-record annotations</strong> are the wedge vs. ISideWith. We surface "Voted YES on H.R.X" or "Top donor: Industry Y contradicts stance" — the gap between what they say and what they do.</li>
+      <li><strong>Free-text matcher</strong> uses Anthropic Haiku to interpret the user's prose and rank candidates.</li>
+      <li><strong>All names and data are illustrative.</strong> Real data comes from Ballotpedia, OpenSecrets, ProPublica, and FEC.</li>
+    </ul>
+  </footer>
+
+</body>
+</html>
