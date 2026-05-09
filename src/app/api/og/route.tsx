@@ -133,13 +133,14 @@ export async function GET(request: NextRequest) {
             >
               <div
                 style={{
+                  display: 'flex',
                   fontSize: 36,
                   fontWeight: 700,
                   color: '#2563eb',
                   width: '50px',
                 }}
               >
-                {index + 1}.
+                {`${index + 1}.`}
               </div>
               <div
                 style={{
