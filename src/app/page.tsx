@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { getOrCreateSession, setSessionLocation } from '@/lib/session';
 
@@ -75,17 +74,6 @@ export default function Home() {
 
         <p className="text-sm text-gray-400">
           Anonymous. No account needed.
-        </p>
-
-        {/* Fallback link to legacy /priorities flow until full pivot ships */}
-        <p className="text-xs text-gray-300 pt-4 border-t border-gray-100">
-          Want to rank issues instead?{' '}
-          <Link
-            href={`/priorities${zipCode ? `?zip=${zipCode}` : ''}`}
-            className="text-gray-400 hover:text-gray-600 underline"
-          >
-            Use the old flow
-          </Link>
         </p>
       </main>
     </div>

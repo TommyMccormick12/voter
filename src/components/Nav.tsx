@@ -11,10 +11,10 @@ export function Nav() {
           voter
         </Link>
         <Link
-          href="/races"
+          href="/race-picker"
           className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
         >
-          All Races
+          Find your primary
         </Link>
       </div>
     </nav>

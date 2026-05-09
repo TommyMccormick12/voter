@@ -41,6 +41,7 @@ export function MatchResults({ race, candidates }: Props) {
     hydrated: false,
     match: null,
   });
+  const [shareLabel, setShareLabel] = useState<'idle' | 'copied' | 'error'>('idle');
 
   useEffect(() => {
     // Sync from a non-React source (sessionStorage). Single setState call
@@ -145,9 +146,39 @@ export function MatchResults({ race, candidates }: Props) {
         </button>
         <button
           type="button"
+          onClick={async () => {
+            const url = new URL('/share', window.location.origin);
+            url.searchParams.set('race', race.id);
+            url.searchParams.set('c', top.candidate.slug);
+            url.searchParams.set('s', String(Math.round(top.result.score)));
+            const shareUrl = url.toString();
+
+            // Prefer native share sheet on mobile, fall back to clipboard.
+            const nav = navigator as Navigator & { share?: (data: { url: string; title?: string }) => Promise<void> };
+            if (typeof nav.share === 'function') {
+              try {
+                await nav.share({ url: shareUrl, title: `My top match: ${top.candidate.name}` });
+                return;
+              } catch {
+                // user cancelled — fall through to clipboard
+              }
+            }
+            try {
+              await navigator.clipboard.writeText(shareUrl);
+              setShareLabel('copied');
+              setTimeout(() => setShareLabel('idle'), 2000);
+            } catch {
+              setShareLabel('error');
+              setTimeout(() => setShareLabel('idle'), 2000);
+            }
+          }}
           className="text-sm text-gray-600 px-4 py-2 hover:bg-gray-100 rounded-lg"
         >
-          Share results
+          {shareLabel === 'copied'
+            ? 'Link copied ✓'
+            : shareLabel === 'error'
+              ? 'Copy failed'
+              : 'Share results'}
         </button>
       </div>
 

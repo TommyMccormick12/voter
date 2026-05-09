@@ -10,7 +10,3 @@ export const ISSUE_NAMES: Record<string, string> = {
   taxes: 'Taxes',
   housing: 'Housing',
 };
-
-export function getIssueName(slug: string): string {
-  return ISSUE_NAMES[slug] || slug;
-}
