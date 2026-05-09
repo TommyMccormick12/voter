@@ -8,7 +8,19 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "ingest:ballotpedia": "tsx scripts/ingest/fetch_ballotpedia.ts",
+    "ingest:opensecrets": "tsx scripts/ingest/fetch_opensecrets.ts",
+    "ingest:propublica": "tsx scripts/ingest/fetch_propublica_votes.ts",
+    "ingest:fec": "tsx scripts/ingest/fetch_fec.ts",
+    "ingest:statements": "tsx scripts/ingest/fetch_statements.ts",
+    "ingest:zips": "tsx scripts/ingest/fetch_zip_districts.ts",
+    "synth:stances": "tsx scripts/synthesize/synthesize_stances.ts",
+    "synth:flag": "tsx scripts/synthesize/flag_inconsistencies.ts",
+    "review:doc": "tsx scripts/review/generate_review_doc.ts",
+    "review:activate": "tsx scripts/review/activate_candidate.ts",
+    "seed:race": "tsx scripts/seed/seed_races.ts",
+    "seed:candidates": "tsx scripts/seed/seed_candidates.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.95.1",
@@ -33,6 +45,7 @@
     "eslint-config-next": "16.2.4",
     "jsdom": "^29.1.1",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5",
     "vitest": "^4.1.5"
   }
