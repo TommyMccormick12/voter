@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import type { CandidateVote } from '@/types/database';
+import { formatLocalDate } from '@/lib/dates';
 
 interface Props {
   votes: CandidateVote[];
@@ -158,10 +159,5 @@ function formatBillId(billId: string): string {
 }
 
 function formatDate(d: string): string {
-  const date = new Date(d);
-  return date.toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-  });
+  return formatLocalDate(d);
 }

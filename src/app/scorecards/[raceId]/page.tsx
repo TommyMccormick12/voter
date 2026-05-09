@@ -6,6 +6,7 @@ import {
 } from '@/lib/mock-data';
 import { ScorecardCarousel } from '@/components/ScorecardCarousel';
 import { getPartyTheme } from '@/lib/party-theme';
+import { formatLocalDate } from '@/lib/dates';
 
 interface PageProps {
   params: Promise<{ raceId: string }>;
@@ -34,12 +35,7 @@ export default async function ScorecardsPage({ params }: PageProps) {
         ? 'Democratic Primary'
         : 'Primary';
 
-  const electionDate = new Date(race.election_date);
-  const dateLabel = electionDate.toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-  });
+  const dateLabel = formatLocalDate(race.election_date);
 
   const officeLabel = `${race.office}${
     race.district ? ` — ${race.state}-${race.district}` : ` — ${race.state}`

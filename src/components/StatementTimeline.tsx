@@ -1,4 +1,5 @@
 import type { CandidateStatement } from '@/types/database';
+import { formatLocalDate } from '@/lib/dates';
 
 interface Props {
   statements: CandidateStatement[];
@@ -83,9 +84,5 @@ function contextLabel(ctx: string): string {
 }
 
 function formatDate(d: string): string {
-  return new Date(d).toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-  });
+  return formatLocalDate(d);
 }

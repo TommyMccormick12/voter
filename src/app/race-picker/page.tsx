@@ -4,6 +4,7 @@ import {
   getMockCandidatesForRace,
 } from '@/lib/mock-data';
 import { getPartyTheme } from '@/lib/party-theme';
+import { formatLocalDate, daysUntilLocalDate } from '@/lib/dates';
 import type { Race } from '@/types/database';
 
 interface PageProps {
@@ -88,12 +89,8 @@ function RaceCard({ race, nowMs }: { race: Race; nowMs: number }) {
         ? 'Democratic Primary'
         : 'Primary';
 
-  const electionDate = new Date(race.election_date);
-  const daysUntil = Math.max(
-    0,
-    Math.ceil((electionDate.getTime() - nowMs) / (1000 * 60 * 60 * 24))
-  );
-  const dateLabel = electionDate.toLocaleDateString('en-US', {
+  const daysUntil = daysUntilLocalDate(race.election_date, nowMs);
+  const dateLabel = formatLocalDate(race.election_date, {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
