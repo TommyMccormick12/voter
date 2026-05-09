@@ -42,6 +42,32 @@ export async function GET() {
   const visits = getVisitsForSession(sessionId);
   const consent_history = getConsentHistory(sessionId);
 
+  // Strip raw session_id (and ip_hash) from nested rows. The user owns this
+  // session and is looking at their own data, so leakage isn't a confidentiality
+  // risk — but keeping the response free of the raw token is defense-in-depth
+  // (downloaded JSON exports won't contain the live session token; logged
+  // response bodies never expose it).
+  const pseudonym = hash6(sessionId);
+  const sanitizedVisits = visits.map((v) => ({
+    id: v.id,
+    session_id: pseudonym,
+    visit_started_at: v.visit_started_at,
+    visit_ended_at: v.visit_ended_at,
+    pages_viewed: v.pages_viewed,
+    ip_country: v.ip_country,
+    ip_region: v.ip_region,
+    user_agent_hash: v.user_agent_hash,
+  }));
+  const sanitizedConsent = consent_history.map((c) => ({
+    id: c.id,
+    session_id: pseudonym,
+    consent_type: c.consent_type,
+    granted: c.granted,
+    granted_at: c.granted_at,
+    user_agent_hash: c.user_agent_hash,
+    // ip_hash intentionally omitted — even hashed, no need to surface
+  }));
+
   // TODO (Chunk 6): also fetch
   //  - candidate_interactions WHERE session_id = ...
   //  - quick_poll_responses WHERE session_id = ...
@@ -49,10 +75,10 @@ export async function GET() {
 
   return NextResponse.json({
     ok: true,
-    session_id_pseudonym: hash6(sessionId), // surface a short ID, not the raw token
+    session_id_pseudonym: pseudonym,
     current_consent: consent,
-    visits,
-    consent_history,
+    visits: sanitizedVisits,
+    consent_history: sanitizedConsent,
     note: 'This is everything linked to your session token. We do not collect email, name, phone, or precise location.',
   });
 }
