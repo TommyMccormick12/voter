@@ -1,5 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
+import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
+import { parseConsent } from '@/lib/consent';
 
 const RequestSchema = z.object({
   race_id: z.string().min(1),
@@ -43,10 +45,19 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // TODO (Chunk 5/6): insert into quick_poll_responses with session_id from cookie
+  // Consent gate. Quick poll feeds the B2B sentiment data product, so it
+  // requires consent_data_sale (Tier C) to actually persist. consent_analytics
+  // (Tier B) lets us record it for funnel analytics only without selling it.
+  const consent = parseConsent(await readCookie(COOKIE_NAMES.consent));
+  if (consent && !consent.analytics) {
+    return NextResponse.json({ ok: true, dropped: 'consent' });
+  }
+
+  // TODO (Chunk 6): insert into quick_poll_responses with session_id from cookie.
+  // If consent.data_sale is true, mark rows as eligible for B2B aggregation.
   if (process.env.NODE_ENV !== 'production') {
     console.log(
-      `[quick-poll] race=${parsed.data.race_id} responses=${parsed.data.responses.length}`
+      `[quick-poll] race=${parsed.data.race_id} responses=${parsed.data.responses.length} sellable=${consent?.data_sale ?? 'unknown'}`
     );
   }
 

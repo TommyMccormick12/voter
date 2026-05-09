@@ -1,5 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
+import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
+import { parseConsent } from '@/lib/consent';
 
 const InteractionSchema = z.object({
   candidate_id: z.string().min(1),
@@ -51,8 +53,13 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // TODO (Chunk 5/6): insert into candidate_interactions, gated on consent_analytics
-  // For now, log so we can verify the client is dispatching correctly.
+  // Consent gate: explicit opt-out drops the row silently with 200.
+  const consent = parseConsent(await readCookie(COOKIE_NAMES.consent));
+  if (consent && !consent.analytics) {
+    return NextResponse.json({ ok: true, dropped: 'consent' });
+  }
+
+  // TODO (Chunk 6): insert into candidate_interactions table
   if (process.env.NODE_ENV !== 'production') {
     console.log(
       `[interaction] candidate=${parsed.data.candidate_id} race=${parsed.data.race_id} action=${parsed.data.action} dwell=${parsed.data.dwell_ms ?? 'n/a'}ms`

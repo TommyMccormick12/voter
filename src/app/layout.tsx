@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Inter } from "next/font/google";
 import { Nav } from "@/components/Nav";
+import { ConsentBanner } from "@/components/ConsentBanner";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,6 +23,18 @@ export default function RootLayout({
       <body className={inter.className}>
         <Nav />
         {children}
+        <footer className="max-w-5xl mx-auto px-4 py-8 mt-12 border-t border-gray-100 text-xs text-gray-500 flex flex-wrap gap-4 justify-center">
+          <Link href="/privacy" className="hover:text-gray-900">
+            Privacy
+          </Link>
+          <Link href="/terms" className="hover:text-gray-900">
+            Terms
+          </Link>
+          <Link href="/data-rights" className="hover:text-gray-900">
+            Your data choices
+          </Link>
+        </footer>
+        <ConsentBanner />
       </body>
     </html>
   );
