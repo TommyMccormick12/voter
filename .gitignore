@@ -47,3 +47,4 @@ next-env.d.ts
 # Data pipeline cache (per-machine; regenerable from source APIs)
 supabase/seed/raw/
 supabase/seed/review/
+.gstack/
