@@ -143,7 +143,7 @@ export function CandidateScorecard({
       <div className="p-3 border-t border-gray-100 flex gap-2">
         <button
           onClick={handleSave}
-          className={`flex-1 text-sm font-medium py-2.5 rounded-lg transition ${
+          className={`flex-1 text-sm font-medium min-h-[44px] py-2.5 rounded-lg transition ${
             saved
               ? `${theme.softBg} ${theme.text}`
               : 'text-gray-600 hover:bg-gray-50'
@@ -154,7 +154,7 @@ export function CandidateScorecard({
         </button>
         <Link
           href={`/candidate/${candidate.slug}`}
-          className={`flex-1 text-sm font-medium py-2.5 rounded-lg text-center ${theme.accent}`}
+          className={`flex-1 text-sm font-medium min-h-[44px] py-2.5 rounded-lg text-center ${theme.accent}`}
           onClick={() =>
             void trackInteraction({
               candidate_id: candidate.id,

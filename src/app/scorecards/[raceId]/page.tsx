@@ -48,7 +48,7 @@ export default async function ScorecardsPage({ params }: PageProps) {
         <div className="flex items-center gap-3 lg:gap-4">
           <Link
             href="/race-picker"
-            className="text-gray-500 text-sm font-medium hover:text-gray-900"
+            className="text-gray-500 text-sm font-medium hover:text-gray-900 inline-flex items-center min-h-[44px] px-2 -mx-2"
           >
             ← All races
           </Link>
@@ -70,7 +70,7 @@ export default async function ScorecardsPage({ params }: PageProps) {
         </div>
         <Link
           href={`/match?race=${race.id}`}
-          className={`text-sm font-semibold px-5 py-2.5 rounded-lg text-center ${theme.accent}`}
+          className={`inline-flex items-center justify-center min-h-[44px] text-sm font-semibold px-5 rounded-lg text-center ${theme.accent}`}
         >
           Find my best match →
         </Link>

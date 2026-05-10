@@ -66,7 +66,7 @@ export function ConsentBanner() {
       aria-labelledby="consent-banner-title"
       className="fixed inset-x-0 bottom-0 z-[100] border-t border-gray-200 bg-white shadow-2xl"
     >
-      <div className="max-w-5xl mx-auto px-4 py-4 lg:py-5">
+      <div className="max-w-5xl mx-auto px-4 py-3 lg:py-5">
         {mode === 'compact' ? (
           <CompactView
             onAcceptAll={() => submit({ analytics: true, data_sale: true, marketing: true })}
@@ -104,12 +104,17 @@ function CompactView({
   submitting: boolean;
 }) {
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6">
-      <div className="flex-1">
-        <p id="consent-banner-title" className="text-sm font-semibold text-gray-900 mb-1">
+    <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-6">
+      <div className="flex-1 min-w-0">
+        <p
+          id="consent-banner-title"
+          className="text-xs lg:text-sm font-semibold text-gray-900 lg:mb-1"
+        >
           Your data choices
         </p>
-        <p className="text-xs lg:text-sm text-gray-600 leading-relaxed">
+        {/* Mobile: one-line summary that doesn't dominate the viewport.
+            Desktop: full regulatory copy. */}
+        <p className="hidden lg:block text-sm text-gray-600 leading-relaxed">
           We collect anonymous engagement data (no email, no name, no precise
           location) to improve the site and to sell aggregated district-level
           insights to researchers. You can opt out of either or both.{' '}
@@ -118,13 +123,19 @@ function CompactView({
           </Link>
           .
         </p>
+        <p className="lg:hidden text-xs text-gray-600 leading-snug">
+          Anonymous engagement data + opt-in district aggregates for research.{' '}
+          <Link href="/privacy" className="text-blue-600 underline">
+            Details
+          </Link>
+        </p>
       </div>
-      <div className="flex flex-col sm:flex-row gap-2 flex-shrink-0">
+      <div className="flex flex-row gap-2 flex-shrink-0">
         <button
           type="button"
           onClick={onCustomize}
           disabled={submitting}
-          className="text-sm font-medium text-gray-700 px-4 py-2 hover:bg-gray-100 rounded-lg disabled:opacity-50"
+          className="min-h-[44px] text-sm font-medium text-gray-700 px-3 lg:px-4 hover:bg-gray-100 rounded-lg disabled:opacity-50"
         >
           Customize
         </button>
@@ -132,7 +143,7 @@ function CompactView({
           type="button"
           onClick={onFunctionalOnly}
           disabled={submitting}
-          className="text-sm font-medium text-gray-700 border border-gray-300 px-4 py-2 hover:bg-gray-50 rounded-lg disabled:opacity-50"
+          className="hidden sm:inline-flex items-center min-h-[44px] text-sm font-medium text-gray-700 border border-gray-300 px-4 hover:bg-gray-50 rounded-lg disabled:opacity-50"
         >
           Functional only
         </button>
@@ -140,7 +151,7 @@ function CompactView({
           type="button"
           onClick={onAcceptAll}
           disabled={submitting}
-          className="text-sm font-semibold text-white bg-blue-600 px-5 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50"
+          className="flex-1 sm:flex-none min-h-[44px] text-sm font-semibold text-white bg-blue-600 px-4 lg:px-5 rounded-lg hover:bg-blue-700 disabled:opacity-50"
         >
           Accept all
         </button>

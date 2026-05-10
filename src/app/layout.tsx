@@ -23,14 +23,23 @@ export default function RootLayout({
       <body className={inter.className}>
         <Nav />
         {children}
-        <footer className="max-w-5xl mx-auto px-4 py-8 mt-12 border-t border-gray-100 text-xs text-gray-500 flex flex-wrap gap-4 justify-center">
-          <Link href="/privacy" className="hover:text-gray-900">
+        <footer className="max-w-5xl mx-auto px-4 py-6 mt-12 border-t border-gray-100 text-xs text-gray-500 flex flex-wrap gap-2 justify-center">
+          <Link
+            href="/privacy"
+            className="hover:text-gray-900 inline-flex items-center min-h-[44px] px-3"
+          >
             Privacy
           </Link>
-          <Link href="/terms" className="hover:text-gray-900">
+          <Link
+            href="/terms"
+            className="hover:text-gray-900 inline-flex items-center min-h-[44px] px-3"
+          >
             Terms
           </Link>
-          <Link href="/data-rights" className="hover:text-gray-900">
+          <Link
+            href="/data-rights"
+            className="hover:text-gray-900 inline-flex items-center min-h-[44px] px-3"
+          >
             Your data choices
           </Link>
         </footer>
