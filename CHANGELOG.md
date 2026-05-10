@@ -2,6 +2,61 @@
 
 All notable changes to the voter project. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.3.1] - 2026-05-10
+
+Voting-record data source swapped from ProPublica Congress (sunset 2023)
+to GovTrack (keyless, actively maintained). Documents the OpenSecrets
+retirement and points the donor-industries env slot at FollowTheMoney
+as the replacement.
+
+Verified end-to-end against Maxwell Frost (FL-10): 5 most recent votes
+captured with real bill IDs (FISA reauthorization, Farm Bill), correct
+positions, correct dates. No API key required.
+
+### Added
+
+- **`src/lib/api-clients/govtrack.ts`** — keyless GovTrack client with
+  `findMember(name, state, chamber)`, `getMemberVotes(id, limit)`,
+  `getVoteDetail(voteId)`. Caches the current-Congress roster (~538
+  records) for the duration of a script run.
+- **`scripts/ingest/fetch_votes.ts`** — replaces `fetch_propublica_votes.ts`.
+  Drives the GovTrack client + retains the same partial-fixture shape so
+  downstream synthesis and seed steps work unchanged.
+- **`FOLLOWTHEMONEY_API_KEY`** slot in `.env.example` / `.env.local` —
+  closest free replacement for OpenSecrets' retired industry-classification
+  API. Sign up at https://www.followthemoney.org/our-data/apis/.
+
+### Changed
+
+- **npm script** `ingest:propublica` → `ingest:votes`. Source-agnostic name.
+- **Default `source` string** for voting record rows (`scripts/seed/seed_candidates.ts`)
+  changed from `'propublica'` to `'govtrack'`.
+- **Per-candidate review docs** (`scripts/review/generate_review_doc.ts`)
+  now surface Bioguide ID + GovTrack ID instead of the ProPublica member ID.
+  Legacy `propublica_member_id` field is preserved in the output for any
+  pre-swap fixtures still on disk.
+- **UI source-label mappers** (`CandidateScorecard.tsx`, `CandidateDetail.tsx`)
+  now recognize GovTrack URLs (the scorecard already did; detail page added).
+  ProPublica mapping kept for backwards compat with existing mock data.
+- **scripts/README.md** + **CLAUDE.md** updated to reflect the new data
+  sources, cost guardrails, and keyless services.
+
+### Removed
+
+- `src/lib/api-clients/propublica.ts` — superseded by `govtrack.ts`.
+- `scripts/ingest/fetch_propublica_votes.ts` — superseded by `fetch_votes.ts`.
+- `PROPUBLICA_API_KEY` env slot — no longer needed.
+- `OPENSECRETS_API_KEY` env slot — OpenSecrets retired their API.
+
+### Known limitations
+
+- **Industry-level donor profiles** unavailable until FollowTheMoney key
+  lands. Without it, donor card falls back to raw FEC contributor names
+  with no industry buckets (no "Top funded by oil & gas" pill).
+- GovTrack's `/role` endpoint doesn't expose useful filter fields beyond
+  `current=true`; we bulk-fetch and match client-side. One ~120KB call
+  per script run, cached.
+
 ## [0.3.0] - 2026-05-10
 
 Phase 2C scope-narrowing: **Florida-only** routing wired end-to-end. Any FL zip

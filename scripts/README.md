@@ -12,13 +12,10 @@ Add to `.env.local` (gitignored). All keys are free.
 # Anthropic — for stance synthesis (cheapest tier: Haiku 4.5)
 ANTHROPIC_API_KEY=sk-ant-...
 
-# OpenSecrets — top contributors + industries
-# https://www.opensecrets.org/api/admin/index.php
-OPENSECRETS_API_KEY=...
-
-# ProPublica Congress — voting records
-# https://www.propublica.org/datastore/api/propublica-congress-api
-PROPUBLICA_API_KEY=...
+# FollowTheMoney — donor industries (federal + state coverage).
+# OpenSecrets retired their API; FollowTheMoney is the closest free replacement.
+# https://www.followthemoney.org/our-data/apis/
+FOLLOWTHEMONEY_API_KEY=...
 
 # FEC.gov — raw filings, source-of-truth fundraising totals
 # https://api.data.gov/signup/
@@ -28,7 +25,10 @@ FEC_API_KEY=...
 SUPABASE_SERVICE_ROLE_KEY=eyJ...
 ```
 
-The Census Geocoding API and Ballotpedia scraping require no key.
+**Keyless services used by the pipeline:**
+- **GovTrack** — congressional voting records (replaced ProPublica, sunset 2023)
+- **Census Geocoding API** — ZIP → Congressional District
+- **Ballotpedia** — candidate bios + key messages (scraped)
 
 ## End-to-end pipeline
 
@@ -51,9 +51,9 @@ npx tsx scripts/ingest/fetch_opensecrets.ts \
 npx tsx scripts/ingest/fetch_fec.ts \
   --race-id "$RACE_ID" --state NJ --district 07 --cycle 2026 --office H
 
-# 4. Pull ProPublica voting record (incumbents only — challengers skipped)
-npx tsx scripts/ingest/fetch_propublica_votes.ts \
-  --race-id "$RACE_ID" --state NJ --chamber house --congress 119
+# 4. Pull GovTrack voting record (incumbents only — challengers skipped)
+npx tsx scripts/ingest/fetch_votes.ts \
+  --race-id "$RACE_ID" --state NJ --chamber house
 
 # 5. Scrape recent statements from each candidate's campaign site
 npx tsx scripts/ingest/fetch_statements.ts --race-id "$RACE_ID"
@@ -85,8 +85,8 @@ supabase/seed/
 │   └── race-nj-07-r-2026.partial.json    # Merged fixture (built up step by step)
 ├── raw/                                   # API response cache (gitignored)
 │   ├── ballotpedia.org/
-│   ├── api.opensecrets.org/
-│   ├── api.propublica.org/
+│   ├── api.followthemoney.org/
+│   ├── www.govtrack.us/
 │   ├── api.open.fec.gov/
 │   └── geocoding.geo.census.gov/
 ├── review/
@@ -110,8 +110,8 @@ If any of these fail, switch to a backup race (NY-17, MD-06, VA-07).
 
 ## Cost guardrails
 
-- **OpenSecrets**: 200 calls/day on the free tier. Each candidate uses ~3 calls (summary + industries + contributors). Plan for ~60 candidates/day before throttling.
-- **ProPublica**: 5000/day. Each member uses ~3-5 calls (members list + votes pages + bill detail per vote). Plan for ~50 members/day comfortably.
+- **FollowTheMoney**: ~500 calls/hour free. ~3 calls per candidate (summary + sectors + contributors).
+- **GovTrack**: no documented hard rate limit (keyless). ~2 calls per vote captured (vote_voter list + vote detail). Be polite — `fetchCached` throttles automatically.
 - **FEC**: 1000/hour. ~2-3 calls per candidate.
 - **Anthropic Haiku**: ~$0.001 per synthesis. Even 100 candidates = ~$0.10.
 

@@ -60,7 +60,10 @@ function main() {
     lines.push(`- Campaign site: ${c.campaign_website ?? '(none)'}`);
     if (c.opensecrets_cid) lines.push(`- OpenSecrets CID: ${c.opensecrets_cid}`);
     if (c.fec_candidate_id) lines.push(`- FEC ID: ${c.fec_candidate_id}`);
-    if (c.propublica_member_id) lines.push(`- ProPublica member ID: ${c.propublica_member_id}`);
+    if (c.bioguide_id) lines.push(`- Bioguide ID: ${c.bioguide_id}`);
+    if (c.govtrack_id) lines.push(`- GovTrack ID: ${c.govtrack_id}`);
+    // Legacy field — preserved for fixtures created before the GovTrack swap.
+    if (c.propublica_member_id) lines.push(`- ProPublica member ID (legacy): ${c.propublica_member_id}`);
     lines.push('');
 
     if (c.bio) {

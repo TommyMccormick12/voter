@@ -48,3 +48,7 @@ next-env.d.ts
 supabase/seed/raw/
 supabase/seed/review/
 .gstack/
+
+# Auto-generated bootstrap (concatenation of supabase/migrations/*.sql).
+# Regenerate locally if needed: cat supabase/migrations/*.sql > supabase/seed/init.sql
+supabase/seed/init.sql

@@ -150,7 +150,7 @@ async function main() {
           vote: v.vote,
           issue_slugs: v.issue_slugs ?? [],
           vote_date: v.vote_date,
-          source: v.source ?? 'propublica',
+          source: v.source ?? 'govtrack',
           source_url: v.source_url ?? null,
           significance: v.significance ?? 'major',
         })

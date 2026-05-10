@@ -128,8 +128,10 @@ App runtime: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`,
 `ANTHROPIC_API_KEY` (optional — mock fallback otherwise),
 `MATCH_API_DISABLED` (kill switch).
 
-Data pipeline only: `OPENSECRETS_API_KEY`, `PROPUBLICA_API_KEY`,
-`FEC_API_KEY`, `SUPABASE_SERVICE_ROLE_KEY`. See `.env.example`.
+Data pipeline only: `FOLLOWTHEMONEY_API_KEY` (donor industries — replaces
+the retired OpenSecrets API), `FEC_API_KEY` (fundraising totals),
+`SUPABASE_SERVICE_ROLE_KEY` (seed writes). Voting records use GovTrack
+which is keyless (replaced ProPublica Congress, sunset 2023). See `.env.example`.
 
 ## Skill routing
 

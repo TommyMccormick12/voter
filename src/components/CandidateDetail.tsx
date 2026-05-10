@@ -314,6 +314,7 @@ function sourceLabelFromUrl(url: string): string {
   if (u.includes('ballotpedia')) return 'Ballotpedia';
   if (u.includes('opensecrets')) return 'OpenSecrets';
   if (u.includes('propublica')) return 'ProPublica';
+  if (u.includes('govtrack')) return 'GovTrack';
   if (u.includes('congress.gov')) return 'Congress.gov';
   if (u.includes('fec.gov')) return 'FEC';
   return 'Campaign site';

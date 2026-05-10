@@ -1,6 +1,6 @@
 {
   "name": "voter",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,7 +11,7 @@
     "test:watch": "vitest",
     "ingest:ballotpedia": "tsx scripts/ingest/fetch_ballotpedia.ts",
     "ingest:opensecrets": "tsx scripts/ingest/fetch_opensecrets.ts",
-    "ingest:propublica": "tsx scripts/ingest/fetch_propublica_votes.ts",
+    "ingest:votes": "tsx scripts/ingest/fetch_votes.ts",
     "ingest:fec": "tsx scripts/ingest/fetch_fec.ts",
     "ingest:statements": "tsx scripts/ingest/fetch_statements.ts",
     "ingest:zips": "tsx scripts/ingest/fetch_zip_districts.ts",
