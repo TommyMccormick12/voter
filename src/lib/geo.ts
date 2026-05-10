@@ -5,7 +5,7 @@
 // Vercel sets x-vercel-ip-country and x-vercel-ip-country-region on every
 // request. In dev / non-Vercel hosts these are absent — we degrade gracefully.
 
-import { createHash } from 'node:crypto';
+import { createHmac } from 'node:crypto';
 
 export interface CoarseGeo {
   country: string | null; // ISO 3166-1 alpha-2 (e.g. 'US')
@@ -36,24 +36,83 @@ function normalize(value: string | null): string | null {
 }
 
 /**
- * Hash the user-agent string with a daily salt. Stored hashes can be
- * compared within a day (de-dupe) but not across days (privacy ratchet).
+ * Privacy-preserving identifier hashing.
+ *
+ * Uses HMAC-SHA-256 keyed on a server-side secret (IP_HASH_SECRET) so the
+ * hashes are NOT brute-forceable from a leaked database. A plain SHA-256
+ * with a daily date salt is reversible — IPv4 has 2^32 keys, computable in
+ * minutes on commodity GPUs, and the daily salt is public-derivable.
+ *
+ * The daily date is still mixed in so the same IP/UA hashes differently
+ * across days (forward privacy ratchet — yesterday's hash can't be matched
+ * against today's even with the secret), but irreversibility comes from
+ * the HMAC key, not the date.
+ *
+ * Set IP_HASH_SECRET in production to a 32+ byte random value. Rotate
+ * monthly. Never log it. Never return it in responses.
  */
-export function hashUserAgent(ua: string | null | undefined): string | null {
-  if (!ua) return null;
+
+let warnedMissingSecret = false;
+
+function getHashSecret(): string | null {
+  const secret = process.env.IP_HASH_SECRET;
+  if (secret && secret.length >= 32) return secret;
+
+  // Production: refuse to hash with a weak/missing secret. Returning null
+  // means audit rows get null ip_hash — acceptable, since we'd rather have
+  // missing data than reversible data. Caller treats null as "not hashed".
+  if (process.env.NODE_ENV === 'production') {
+    if (!warnedMissingSecret) {
+      console.error(
+        '[geo] IP_HASH_SECRET missing or too short (need >=32 chars). ' +
+          'IP/UA hashes will be null until configured. ' +
+          'NEVER use plain SHA-256 with public salts here — the hashes are reversible.',
+      );
+      warnedMissingSecret = true;
+    }
+    return null;
+  }
+
+  // Dev/test: fall back to a fixed dev secret + warn loudly. This is
+  // acceptable in dev because dev databases shouldn't contain real user
+  // IPs, but we still want consistent hashing for tests and dev tooling.
+  if (!warnedMissingSecret) {
+    console.warn(
+      '[geo] IP_HASH_SECRET not set — using dev-only fallback. ' +
+        'Set IP_HASH_SECRET in .env.local for production-equivalent behavior.',
+    );
+    warnedMissingSecret = true;
+  }
+  return 'dev-only-not-for-production-' + 'dev-only-not-for-production-';
+}
+
+function hmacWithDailyRotation(input: string): string | null {
+  const secret = getHashSecret();
+  if (!secret) return null;
   const dailySalt = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
-  return createHash('sha256').update(`${dailySalt}::${ua}`).digest('hex');
+  return createHmac('sha256', secret).update(`${dailySalt}::${input}`).digest('hex');
 }
 
 /**
- * Hash the client IP with a daily salt. Same privacy properties as UA hash.
- * Used only for audit log entries; never stored alongside other PII.
+ * Hash the user-agent string. HMAC-SHA-256 keyed on IP_HASH_SECRET, with
+ * a daily date mixed in for forward rotation. Hashes are de-dup-comparable
+ * within a single day but not across days, and not reversible without the
+ * secret.
+ */
+export function hashUserAgent(ua: string | null | undefined): string | null {
+  if (!ua) return null;
+  return hmacWithDailyRotation(ua);
+}
+
+/**
+ * Hash the client IP. Same scheme as hashUserAgent. Stored only in audit
+ * log entries; the raw IP is never persisted.
  */
 export function hashIp(ip: string | null | undefined): string | null {
   if (!ip) return null;
-  const dailySalt = new Date().toISOString().slice(0, 10);
-  return createHash('sha256').update(`${dailySalt}::${ip}`).digest('hex');
+  return hmacWithDailyRotation(ip);
 }
+
 
 /**
  * Best-effort client IP extraction. Returns null when no proxy header is present.

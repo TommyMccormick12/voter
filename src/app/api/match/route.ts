@@ -2,6 +2,9 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
 import { matchCandidates } from '@/lib/llm/match';
 import { getMockCandidatesForRace, getMockRace } from '@/lib/mock-data';
+import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
+import { clientIpFromHeaders } from '@/lib/geo';
+import { checkRateLimits, MATCH_LIMITS } from '@/lib/rate-limit';
 
 const RequestSchema = z.object({
   free_text: z.string().min(1).max(2000),
@@ -23,16 +26,44 @@ const RequestSchema = z.object({
  * candidates for the race. Uses Anthropic Haiku 4.5 if ANTHROPIC_API_KEY
  * is set, otherwise a deterministic local mock ranking.
  *
- * TODO (Chunk 5/6):
+ * TODO (Chunk 6):
  *  - Persist response to llm_matches table for cache + analytics
- *  - Rate-limit by session_id (10/hr) and IP (30/hr) via cookie + middleware
  *  - Gate on consent_analytics for free_text storage
  *
- * Cost control:
+ * Cost control (per /cso Finding 2):
+ *  - In-memory rate limit: 10/hr/session, 30/hr/IP (token bucket)
  *  - In-memory cache by (free_text + race_id) hash
  *  - MATCH_API_DISABLED=true env var as kill switch
+ *
+ * Rate-limit caveat: counters are per Lambda instance. Swap @/lib/rate-limit
+ * for Vercel KV / Upstash Redis when traffic warrants distributed counters.
  */
 export async function POST(request: NextRequest) {
+  // Rate-limit FIRST, before parsing JSON. A spammer should never get to
+  // touch the LLM regardless of payload validity.
+  const sessionId = (await readCookie(COOKIE_NAMES.session)) ?? null;
+  const ip = clientIpFromHeaders(request.headers);
+  const rate = checkRateLimits({
+    sessionId,
+    ip,
+    sessionLimit: MATCH_LIMITS.session,
+    ipLimit: MATCH_LIMITS.ip,
+  });
+  if (!rate.allowed) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: 'rate_limited',
+        scope: rate.exceeded,
+        retry_after_seconds: rate.retryAfterSeconds,
+      },
+      {
+        status: 429,
+        headers: { 'Retry-After': String(rate.retryAfterSeconds) },
+      },
+    );
+  }
+
   let body: unknown;
   try {
     body = await request.json();
