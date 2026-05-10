@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
-import { getMockRace, getMockCandidateBySlug } from '@/lib/mock-data';
+import { getMockRace, getMockCandidatesForRace } from '@/lib/mock-data';
 
 export const runtime = 'edge';
 
@@ -80,7 +80,11 @@ export async function GET(request: NextRequest) {
   const score = clampScore(searchParams.get('s'));
 
   const race = raceId ? getMockRace(raceId) : null;
-  const candidate = slug ? getMockCandidateBySlug(slug) : null;
+  // Cross-validate candidate belongs to the named race (mirrors /share/page.tsx).
+  const candidate =
+    raceId && slug
+      ? getMockCandidatesForRace(raceId).find((c) => c.slug === slug) ?? null
+      : null;
 
   // Generic invite — no params, or unknown race/candidate
   if (!race || !candidate) {

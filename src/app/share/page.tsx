@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getMockRace, getMockCandidateBySlug } from '@/lib/mock-data';
+import { getMockRace, getMockCandidatesForRace } from '@/lib/mock-data';
 import { getPartyTheme, getPartyInitials } from '@/lib/party-theme';
 
 interface SharePageProps {
@@ -25,7 +25,13 @@ export async function generateMetadata({
   const score = clampScore(params.s);
 
   const race = raceId ? getMockRace(raceId) : null;
-  const candidate = slug ? getMockCandidateBySlug(slug) : null;
+  // Cross-validate: candidate must belong to the named race.
+  // A bare global lookup would let /share?race=race-nj-07&c=mark-warner render
+  // a Democrat inside an NJ-07 (R) header. Filter to the race's roster instead.
+  const candidate =
+    raceId && slug
+      ? getMockCandidatesForRace(raceId).find((c) => c.slug === slug) ?? null
+      : null;
 
   const ogParams = new URLSearchParams();
   if (raceId) ogParams.set('race', raceId);
@@ -67,7 +73,13 @@ export default async function SharePage({ searchParams }: SharePageProps) {
   const score = clampScore(params.s);
 
   const race = raceId ? getMockRace(raceId) : null;
-  const candidate = slug ? getMockCandidateBySlug(slug) : null;
+  // Cross-validate: candidate must belong to the named race.
+  // A bare global lookup would let /share?race=race-nj-07&c=mark-warner render
+  // a Democrat inside an NJ-07 (R) header. Filter to the race's roster instead.
+  const candidate =
+    raceId && slug
+      ? getMockCandidatesForRace(raceId).find((c) => c.slug === slug) ?? null
+      : null;
 
   // No match in URL — show the generic invite.
   if (!race || !candidate) {
