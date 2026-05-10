@@ -33,11 +33,11 @@ export default function Home() {
     <div className="min-h-[calc(100svh-3.5rem)] bg-white flex flex-col items-center justify-center px-4">
       <main className="max-w-md w-full space-y-6">
         <h1 className="text-4xl font-bold text-gray-900 tracking-tight text-balance">
-          Find your candidates for the 2026 federal midterm primaries.
+          Find your candidates for the 2026 Florida primary.
         </h1>
         <p className="text-lg text-gray-500 leading-relaxed">
-          Browse who&apos;s running for House, Senate, and Governor. See where
-          their money comes from and how they vote.
+          House, Senate, and Governor — voting August 18. See where each
+          candidate&apos;s money comes from and how they actually vote.
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-3 pt-2">

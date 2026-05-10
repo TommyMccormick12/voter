@@ -1,0 +1,87 @@
+{
+  "_note": "Hand-mapped sample of FL zips → districts from public 2022 redistricting maps. Replace with full Census Geocoding output once src/lib/api-clients/census.ts is fixed to handle bare zips (see Phase 2C plan §15.5 follow-up). Schema: { state, district } per zip; null for zips we haven't mapped yet (the lookup treats null/missing the same).",
+
+  "32501": { "state": "FL", "district": "01" },
+  "32502": { "state": "FL", "district": "01" },
+  "32504": { "state": "FL", "district": "01" },
+  "32506": { "state": "FL", "district": "01" },
+
+  "32301": { "state": "FL", "district": "02" },
+  "32303": { "state": "FL", "district": "02" },
+
+  "32601": { "state": "FL", "district": "03" },
+  "32608": { "state": "FL", "district": "03" },
+
+  "32202": { "state": "FL", "district": "04" },
+  "32204": { "state": "FL", "district": "04" },
+
+  "32257": { "state": "FL", "district": "05" },
+  "32084": { "state": "FL", "district": "05" },
+
+  "32114": { "state": "FL", "district": "06" },
+  "32174": { "state": "FL", "district": "06" },
+
+  "32708": { "state": "FL", "district": "07" },
+  "32779": { "state": "FL", "district": "07" },
+
+  "32901": { "state": "FL", "district": "08" },
+  "32935": { "state": "FL", "district": "08" },
+
+  "34741": { "state": "FL", "district": "09" },
+  "34744": { "state": "FL", "district": "09" },
+
+  "32801": { "state": "FL", "district": "10" },
+  "32803": { "state": "FL", "district": "10" },
+  "32804": { "state": "FL", "district": "10" },
+
+  "34785": { "state": "FL", "district": "11" },
+  "32159": { "state": "FL", "district": "11" },
+
+  "34689": { "state": "FL", "district": "12" },
+
+  "33701": { "state": "FL", "district": "13" },
+  "33704": { "state": "FL", "district": "13" },
+
+  "33602": { "state": "FL", "district": "14" },
+  "33606": { "state": "FL", "district": "14" },
+
+  "33510": { "state": "FL", "district": "15" },
+  "33611": { "state": "FL", "district": "15" },
+
+  "34205": { "state": "FL", "district": "16" },
+  "34232": { "state": "FL", "district": "16" },
+
+  "33825": { "state": "FL", "district": "17" },
+
+  "33952": { "state": "FL", "district": "18" },
+
+  "34103": { "state": "FL", "district": "19" },
+  "34134": { "state": "FL", "district": "19" },
+
+  "33311": { "state": "FL", "district": "20" },
+  "33409": { "state": "FL", "district": "20" },
+
+  "33401": { "state": "FL", "district": "21" },
+  "33480": { "state": "FL", "district": "21" },
+
+  "33301": { "state": "FL", "district": "22" },
+  "33304": { "state": "FL", "district": "22" },
+
+  "33020": { "state": "FL", "district": "23" },
+  "33024": { "state": "FL", "district": "23" },
+
+  "33161": { "state": "FL", "district": "24" },
+  "33181": { "state": "FL", "district": "24" },
+
+  "33012": { "state": "FL", "district": "25" },
+  "33126": { "state": "FL", "district": "25" },
+
+  "33178": { "state": "FL", "district": "26" },
+
+  "33101": { "state": "FL", "district": "27" },
+  "33125": { "state": "FL", "district": "27" },
+  "33135": { "state": "FL", "district": "27" },
+
+  "33032": { "state": "FL", "district": "28" },
+  "33034": { "state": "FL", "district": "28" }
+}

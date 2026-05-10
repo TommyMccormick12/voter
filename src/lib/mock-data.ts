@@ -65,6 +65,32 @@ export const MOCK_RACES: Race[] = [
     election_type: 'primary',
     primary_party: 'R',
   },
+
+  // ============================================================
+  // Phase 2C — Florida Tier 1 race definitions (Aug 18, 2026)
+  // Race entries exist so the zip lookup routes to them; candidate
+  // data is populated by the offline pipeline once API keys land.
+  // race-picker page renders "Candidate data being curated" until then.
+  // ============================================================
+  // Statewide
+  { id: 'race-fl-sen-r-2026', state: 'FL', district: null, office: 'U.S. Senate', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'R' },
+  { id: 'race-fl-sen-d-2026', state: 'FL', district: null, office: 'U.S. Senate', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'D' },
+  { id: 'race-fl-gov-r-2026', state: 'FL', district: null, office: 'Governor', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'R' },
+  { id: 'race-fl-gov-d-2026', state: 'FL', district: null, office: 'Governor', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'D' },
+
+  // House — Tier 1 contested (Orlando + Miami + Tampa Bay + Cook competitive list)
+  { id: 'race-fl-10-r-2026', state: 'FL', district: '10', office: 'U.S. House', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'R' },
+  { id: 'race-fl-10-d-2026', state: 'FL', district: '10', office: 'U.S. House', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'D' },
+  { id: 'race-fl-13-r-2026', state: 'FL', district: '13', office: 'U.S. House', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'R' },
+  { id: 'race-fl-13-d-2026', state: 'FL', district: '13', office: 'U.S. House', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'D' },
+  { id: 'race-fl-15-r-2026', state: 'FL', district: '15', office: 'U.S. House', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'R' },
+  { id: 'race-fl-15-d-2026', state: 'FL', district: '15', office: 'U.S. House', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'D' },
+  { id: 'race-fl-23-r-2026', state: 'FL', district: '23', office: 'U.S. House', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'R' },
+  { id: 'race-fl-23-d-2026', state: 'FL', district: '23', office: 'U.S. House', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'D' },
+  { id: 'race-fl-27-r-2026', state: 'FL', district: '27', office: 'U.S. House', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'R' },
+  { id: 'race-fl-27-d-2026', state: 'FL', district: '27', office: 'U.S. House', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'D' },
+  { id: 'race-fl-28-r-2026', state: 'FL', district: '28', office: 'U.S. House', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'R' },
+  { id: 'race-fl-28-d-2026', state: 'FL', district: '28', office: 'U.S. House', election_date: '2026-08-18', cycle: 2026, election_type: 'primary', primary_party: 'D' },
 ];
 
 // ============================================================
@@ -674,21 +700,55 @@ export function getMockCandidateBySlug(slug: string): CandidateWithFullData | nu
   return null;
 }
 
-// Simple zip → primary races lookup (federal-only)
-// Real implementation will use US Census Geocoding API.
-const ZIP_TO_RACE_IDS: Record<string, string[]> = {
-  '07059': ['race-nj-07'], // Somerset, NJ
-  '07924': ['race-nj-07'], // Bernardsville, NJ
-  '08807': ['race-nj-07'], // Bridgewater, NJ
-  '22030': ['race-va-sen'], // Fairfax, VA
-  '23230': ['race-va-sen'], // Richmond, VA
-  '10502': ['race-ny-17'], // Ardsley, NY
-  '10591': ['race-ny-17'], // Tarrytown, NY
-  '21401': ['race-md-gov'], // Annapolis, MD
-  '80016': ['race-co-08'], // Aurora, CO
-};
+// Phase 2C — ZIP → races lookup, scoped to Florida.
+// Data source: supabase/seed/zip-districts.json (hand-mapped from 2022
+// FL redistricting maps; will be regenerated from US Census once
+// src/lib/api-clients/census.ts is fixed to accept bare zips — see
+// plan §15.5 follow-up).
+//
+// Non-FL zips return [] → race-picker shows the "Florida only" empty state.
+// Legacy demo races (race-nj-07 etc.) remain accessible by direct URL
+// for testing but no longer route from zip lookup.
 
+import zipDistricts from '../../supabase/seed/zip-districts.json';
+
+interface ZipDistrictEntry {
+  state: string;
+  district: string;
+}
+
+const ZIP_LOOKUP = zipDistricts as Record<string, ZipDistrictEntry | null | { _note?: string }>;
+
+function lookupZip(zip: string): ZipDistrictEntry | null {
+  const raw = ZIP_LOOKUP[zip];
+  if (!raw || !('state' in raw) || !('district' in raw)) return null;
+  return raw as ZipDistrictEntry;
+}
+
+/**
+ * Race IDs a zip should resolve to. Statewide races (Senate, Governor)
+ * are returned for every FL zip; the matching House district adds two
+ * more (R + D primaries). Filtered to races that actually exist in
+ * MOCK_RACES so the race-picker never tries to render an undefined race.
+ *
+ * For non-FL zips, returns []. UI surfaces a "Florida only for now"
+ * empty state.
+ */
 export function getMockRacesForZip(zip: string): Race[] {
-  const raceIds = ZIP_TO_RACE_IDS[zip] ?? [];
-  return raceIds.map((id) => getMockRace(id)).filter((r): r is Race => r !== null);
+  const lookup = lookupZip(zip);
+  if (!lookup || lookup.state !== 'FL') return [];
+
+  const districtId = lookup.district.padStart(2, '0');
+  const candidateRaceIds = [
+    `race-fl-${districtId}-r-2026`,
+    `race-fl-${districtId}-d-2026`,
+    'race-fl-sen-r-2026',
+    'race-fl-sen-d-2026',
+    'race-fl-gov-r-2026',
+    'race-fl-gov-d-2026',
+  ];
+
+  return candidateRaceIds
+    .map((id) => getMockRace(id))
+    .filter((r): r is Race => r !== null);
 }

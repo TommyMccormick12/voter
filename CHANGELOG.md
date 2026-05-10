@@ -2,6 +2,55 @@
 
 All notable changes to the voter project. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.3.0] - 2026-05-10
+
+Phase 2C scope-narrowing: **Florida-only** routing wired end-to-end. Any FL zip
+now resolves to its district's House primary (R + D) plus statewide Senate and
+Governor primaries. Non-FL zips get an explicit "Florida only — for now" empty
+state instead of a silent zero result.
+
+Races render with "Candidate data being curated" until the offline pipeline
+runs with real API keys (OpenSecrets / ProPublica / FEC / Anthropic). The
+code-side unblock is the prerequisite — the moment keys arrive, candidates
+appear automatically.
+
+### Added
+
+- **`supabase/seed/zip-districts.json`** — hand-mapped FL zip → district lookup
+  for ~50 zips across all 28 districts. Sourced from public 2022 FL redistricting
+  maps. Will be regenerated from the HUD ZIP-to-CD crosswalk (or fixed Census
+  client) before Tier 2/3 ingest — see plan §15.5b.
+- **FL Tier 1 race entries** in `src/lib/mock-data.ts` — statewide Senate R/D,
+  Governor R/D (open seat post-DeSantis), and 6 contested House primaries
+  (FL-10, FL-13, FL-15, FL-23, FL-27, FL-28 — each R + D). Election date
+  `2026-08-18`. Race objects only; candidate data populated by the pipeline.
+
+### Changed
+
+- **`getMockRacesForZip()`** — replaced the 9-entry hardcoded `ZIP_TO_RACE_IDS`
+  with a function that reads `zip-districts.json`, filters to `state === 'FL'`,
+  and constructs the 6 race IDs (district House R + D + statewide Sen R/D +
+  Gov R/D) using the canonical `race-fl-{seat}-{party}-2026` convention.
+  Non-FL zips return `[]`.
+- **`/race-picker` empty state** — "No primaries in your district yet" →
+  "Florida only — for now" with August 18, 2026 deadline and a "Try a Florida
+  zip →" CTA.
+- **Homepage hero copy** — "Find your candidates for the 2026 federal midterm
+  primaries" → "Find your candidates for the 2026 Florida primary." Signals
+  scope honestly to non-FL visitors before they enter a zip.
+- **`/race-picker` page subtitle** — "House, Senate, and Governor races ·
+  May–September 2026" → "House, Senate, and Governor · Florida primary
+  August 18, 2026".
+
+### Known follow-ups
+
+- **Census client bug** (plan §15.5b): `src/lib/api-clients/census.ts:30`
+  passes bare zips to the one-line-address endpoint, which expects full street
+  addresses and returns null. Fix before national rollout. Recommended path:
+  swap to HUD ZIP-to-CD crosswalk.
+- **ProPublica API health check** (plan §15.5): Congress API was sunset in
+  2023. Smoke test before Tier 1 ingest; swap to congress.gov (LOC) if needed.
+
 ## [0.2.0] - 2026-05-10
 
 Major pivot from Phase 1 (issue-ranking + community comparison) to a 2026

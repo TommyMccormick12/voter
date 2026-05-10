@@ -56,7 +56,7 @@ export default async function RacePickerPage({ searchParams }: PageProps) {
             : `${races.length} federal primaries near you`}
       </h1>
       <p className="text-base lg:text-lg text-gray-500 mb-8">
-        House, Senate, and Governor races · May–September 2026
+        House, Senate, and Governor · Florida primary August 18, 2026
       </p>
 
       {races.length === 0 ? (
@@ -153,16 +153,16 @@ function RaceCard({ race, nowMs }: { race: Race; nowMs: number }) {
 function EmptyState() {
   return (
     <div className="rounded-2xl border-2 border-dashed border-gray-300 bg-gray-50 p-10 text-center">
-      <p className="text-lg text-gray-700 font-medium mb-2">No primaries in your district yet</p>
+      <p className="text-lg text-gray-700 font-medium mb-2">Florida only — for now</p>
       <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">
-        We&apos;re curating candidate data for federal midterm primaries May–September
-        2026. Check back, or try a different zip.
+        We&apos;re starting with the Florida primary on August 18, 2026 — House,
+        Senate, and Governor. More states will follow based on demand.
       </p>
       <Link
         href="/"
         className="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700"
       >
-        Try a different zip →
+        Try a Florida zip →
       </Link>
     </div>
   );
