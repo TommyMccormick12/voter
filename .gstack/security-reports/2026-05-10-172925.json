@@ -1,0 +1,121 @@
+{
+  "version": "2.0.0",
+  "date": "2026-05-10T17:29:25Z",
+  "mode": "daily",
+  "scope": "full",
+  "diff_mode": false,
+  "phases_run": [0, 1, 2, 3, 6, 7, 9, 10, 11, 12, 13, 14],
+  "attack_surface": {
+    "code": {
+      "public_endpoints": 7,
+      "authenticated": 0,
+      "admin": 0,
+      "api": 7,
+      "uploads": 0,
+      "integrations": 1,
+      "background_jobs": 0,
+      "websockets": 0
+    },
+    "infrastructure": {
+      "ci_workflows": 0,
+      "webhook_receivers": 0,
+      "container_configs": 0,
+      "iac_configs": 0,
+      "deploy_targets": 1,
+      "secret_management": "env-vars"
+    }
+  },
+  "findings": [
+    {
+      "id": 1,
+      "severity": "HIGH",
+      "confidence": 9,
+      "status": "VERIFIED",
+      "phase": 11,
+      "phase_name": "Data Classification",
+      "category": "Cryptographic Failure / Privacy",
+      "fingerprint": "crypto-public-salt-ip-hash-geo-ts-42",
+      "title": "Daily-salt for IP/UA hashing is public-derivable",
+      "file": "src/lib/geo.ts",
+      "line": 42,
+      "commit": "b5d42f6",
+      "description": "hashIp and hashUserAgent use YYYY-MM-DD as the salt. SHA-256 over IPv4 keyspace (2^32) brute-forces in ~5 min on commodity GPUs. Daily salt is public so doesn't slow this down.",
+      "exploit_scenario": "Attacker gains read access to consent_audit.ip_hash (DB compromise / RLS misconfig / subpoena), brute-forces IPv4 keyspace per row using the row's date as salt, reverses ip_hash to IP, cross-references geo-IP/ISP records, re-identifies users to political opinions.",
+      "impact": "Defeats stated PII-minimization. Re-identification of users to political-views consent records, classified as sensitive under CO/CT/VA/UT privacy laws.",
+      "recommendation": "Move salt to a server-side secret (IP_HASH_SECRET env var, HMAC-SHA-256). Or truncate hash to 8-12 hex chars + store coarse geo separately. Never use a deterministic public-derivable salt.",
+      "playbook": "1. Add IP_HASH_SECRET to env (32+ random bytes). 2. Change geo.ts:hashIp/hashUserAgent to HMAC-SHA-256(secret, ip). 3. Document rotation cadence (monthly). 4. Verify secret never appears in logs or response bodies.",
+      "verification": "self-verified"
+    },
+    {
+      "id": 2,
+      "severity": "HIGH",
+      "confidence": 9,
+      "status": "VERIFIED",
+      "phase": 7,
+      "phase_name": "LLM Security",
+      "category": "LLM Cost / Resource Exhaustion (financial)",
+      "fingerprint": "llm-no-rate-limit-api-match",
+      "title": "/api/match has no rate limiting; LLM cost amplification attack",
+      "file": "src/app/api/match/route.ts",
+      "line": 27,
+      "commit": "b5d42f6",
+      "description": "TODO comment acknowledges plan-specified rate limits (10/hr session, 30/hr IP) are not implemented. In-memory cache keyed on (race_id, free_text) so unique suffixes bypass it. MATCH_API_DISABLED is a reactive kill switch, not preventive.",
+      "exploit_scenario": "Attacker scripts POST /api/match with random suffix per request. Cache misses every time. Each call triggers Haiku (~$0.001). 60 req/min for 1 hr = ~$3.60/hr per IP. Distributed across 10 IPs = ~$864/day.",
+      "impact": "Financial — direct Anthropic spend amplification once API key is set in production. Plan §6 called out a $50/day spend cap as a required safeguard; not implemented.",
+      "recommendation": "Before enabling Anthropic in prod, ship at least one of: (a) Vercel KV / Upstash Redis token-bucket middleware keyed on session+IP, (b) persist llm_matches to Supabase as planned for cross-session cache hits, (c) Anthropic dashboard hard daily spend cap as defense in depth.",
+      "playbook": "1. Add @upstash/ratelimit + edge middleware. 2. Configure 10 req/hr per session_id, 30 req/hr per IP. 3. Return 429 with Retry-After header. 4. Set Anthropic dashboard daily limit at 2x expected usage as backstop.",
+      "verification": "self-verified"
+    },
+    {
+      "id": 3,
+      "severity": "MEDIUM",
+      "confidence": 7,
+      "status": "UNVERIFIED",
+      "phase": 3,
+      "phase_name": "Dependency Supply Chain",
+      "category": "OWASP A06",
+      "fingerprint": "cve-postcss-style-xss-transitive-next",
+      "title": "postcss <8.5.10 XSS via transitive Next 16 dep",
+      "file": "package.json",
+      "line": 0,
+      "commit": "b5d42f6",
+      "description": "GHSA-qx2v-qp2m-jg93 (CVSS 6.1): postcss <8.5.10 has XSS via unescaped </style> in CSS stringify. Pulled in transitively via Next 16. App uses Tailwind 4 with author-only CSS — no user-controlled CSS path to postcss stringify.",
+      "exploit_scenario": "Theoretical only — requires user-controlled CSS reaching postcss stringify, which doesn't exist in this app's architecture.",
+      "impact": "Practical exploit surface ~0 in current state. Track for upstream patch.",
+      "recommendation": "Wait for Next 16.x patch. Re-audit when patch lands.",
+      "playbook": "Watch Next.js release notes for postcss bump. No action required immediately.",
+      "verification": "self-verified"
+    }
+  ],
+  "supply_chain_summary": {
+    "direct_deps": 11,
+    "transitive_deps": 597,
+    "critical_cves": 0,
+    "high_cves": 0,
+    "medium_cves": 1,
+    "install_scripts": 0,
+    "lockfile_present": true,
+    "lockfile_tracked": true,
+    "tools_skipped": []
+  },
+  "filter_stats": {
+    "candidates_scanned": 20,
+    "hard_exclusion_filtered": 2,
+    "confidence_gate_filtered": 2,
+    "verification_filtered": 0,
+    "reported": 3
+  },
+  "totals": {
+    "critical": 0,
+    "high": 2,
+    "medium": 1,
+    "tentative": 0
+  },
+  "trend": {
+    "prior_report_date": null,
+    "resolved": 0,
+    "persistent": 0,
+    "new": 3,
+    "direction": "first_run"
+  }
+}
