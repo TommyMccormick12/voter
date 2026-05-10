@@ -58,6 +58,81 @@ export async function searchCandidates(params: {
   return data.results ?? [];
 }
 
+/**
+ * Principal campaign committee(s) linked to a candidate. Most federal
+ * candidates have one principal committee per cycle; some have additional
+ * authorized committees (rare for House/Senate, more common for President).
+ */
+export interface FecCommitteeLink {
+  committee_id: string;
+  name: string;
+  designation: string;          // 'P' principal, 'A' authorized, 'J' joint fundraising
+  designation_full: string;
+  committee_type: string;
+  cycles: number[];
+}
+
+export async function getCommitteesForCandidate(
+  candidateId: string,
+  cycle: number,
+): Promise<FecCommitteeLink[]> {
+  const key = requireEnv('FEC_API_KEY');
+  const url = `${BASE}/candidate/${candidateId}/committees/?api_key=${key}&cycle=${cycle}&per_page=20`;
+  const data = await fetchCached<{ results?: FecCommitteeLink[] }>(url, {
+    cacheTag: `committees:${candidateId}:${cycle}`,
+  });
+  return data.results ?? [];
+}
+
+/**
+ * Itemized individual contribution row from FEC Schedule A.
+ * Only contributions >$200 are itemized by law; smaller donations are
+ * aggregated in committee totals (see getCandidateTotals).
+ */
+export interface FecContribution {
+  contributor_name: string;
+  contributor_employer: string | null;
+  contributor_occupation: string | null;
+  contributor_state: string | null;
+  contributor_city: string | null;
+  contribution_receipt_amount: number;
+  contribution_receipt_date: string;
+  committee: { committee_id?: string; name?: string };
+  entity_type: string;           // 'IND' individual, 'PAC' political action committee, 'ORG' organization
+  entity_type_desc: string;
+}
+
+/**
+ * Fetch itemized contributions for a committee, sorted by amount desc.
+ * Used to build the top-contributor list for industry classification.
+ *
+ * Notes:
+ *   - `two_year_transaction_period` is FEC's preferred filter (cycle end year).
+ *   - Default page size 100; bump higher only if you want deeper coverage.
+ *   - Each call is one API request — for Tier 1 FL with ~50 candidates,
+ *     this is ~50 calls, well within the 1000/hour limit.
+ */
+export async function getItemizedContributions(
+  committeeId: string,
+  cycle: number,
+  limit = 100,
+): Promise<FecContribution[]> {
+  const key = requireEnv('FEC_API_KEY');
+  const qs = new URLSearchParams({
+    api_key: key,
+    committee_id: committeeId,
+    two_year_transaction_period: String(cycle),
+    per_page: String(Math.min(limit, 100)),
+    sort: '-contribution_receipt_amount',
+    is_individual: 'true',
+  });
+  const url = `${BASE}/schedules/schedule_a/?${qs.toString()}`;
+  const data = await fetchCached<{ results?: FecContribution[] }>(url, {
+    cacheTag: `sched_a:${committeeId}:${cycle}:${limit}`,
+  });
+  return data.results ?? [];
+}
+
 export async function getCandidateTotals(
   candidateId: string,
   cycle: number

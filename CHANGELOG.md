@@ -2,6 +2,63 @@
 
 All notable changes to the voter project. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.4.0] - 2026-05-10
+
+Donor industry classification via Haiku — restores the "Top funded by
+[industry]" angle without OpenSecrets or FollowTheMoney (both retired).
+Replaces the dead ingest:opensecrets step with ingest:industries.
+
+**How it works:** FEC publishes itemized individual contributions over $200
+with `contributor_employer` + `contributor_occupation` strings. We pull the
+top 100 contributions per candidate, aggregate by employer, hand the unique
+employer list to Haiku in one batched call, and validate the response against
+a fixed 19-bucket taxonomy via Zod. Aggregate amounts by bucket → ranked
+industries.
+
+**Verified against Maxwell Frost (FL-10):** 25 contributions → 9 unique
+employers → 5 industry buckets in 535/243 input/output tokens (~$0.0017).
+Real correct classifications: "Losey PLLC" → Legal, "Bodeen Music and Sound
+Design" → Media & Entertainment, "Bethesda Terrace Management" → Real Estate.
+
+### Added
+
+- **`src/lib/llm/classify-industries.ts`** — pure classification function.
+  Fixed 19-bucket taxonomy, Zod-validated Haiku response, disk-cached by
+  content hash so re-runs are free. Throws clear error if `ANTHROPIC_API_KEY`
+  is missing.
+- **`scripts/ingest/classify_industries.ts`** — driver. For each candidate:
+  finds principal FEC committee, pulls top 100 itemized contributions,
+  aggregates by employer, classifies via Haiku, writes `top_industries`
+  and `top_donors` to the partial fixture.
+- **FEC client additions** in `src/lib/api-clients/fec.ts`:
+  - `getCommitteesForCandidate(candidateId, cycle)` — lists committees for a candidate
+  - `getItemizedContributions(committeeId, cycle, limit)` — Schedule A pull, sorted by amount desc
+- **npm script** `ingest:industries` wired into `package.json` between
+  `ingest:fec` and `ingest:votes` in the pipeline.
+
+### Changed
+
+- **`scripts/README.md`** — pipeline walkthrough now uses ingest:industries
+  in place of the dead ingest:opensecrets step. Cost guardrails updated
+  (Haiku is now ~$0.008/candidate when industry classification is included).
+- **`.env.example` / `.env.local`** — removed `FOLLOWTHEMONEY_API_KEY`
+  (also retired). Industry data needs no env var beyond `ANTHROPIC_API_KEY`
+  and `FEC_API_KEY`, both already in place.
+
+### Removed
+
+- `scripts/ingest/fetch_opensecrets.ts` — OpenSecrets API was retired.
+- `src/lib/api-clients/opensecrets.ts` — dead client.
+- `ingest:opensecrets` npm script.
+- `FOLLOWTHEMONEY_API_KEY` env slot — service also retired.
+
+### Cost picture
+
+Per candidate: ~$0.007-0.008 Haiku cost for industry classification + ~$0.001
+for stance synthesis = **~$0.008 total**. Tier 1 FL (~50 candidates): ~$0.40.
+All cached on disk under `supabase/seed/raw/anthropic-classify/` — re-runs
+are free.
+
 ## [0.3.1] - 2026-05-10
 
 Voting-record data source swapped from ProPublica Congress (sunset 2023)

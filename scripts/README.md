@@ -12,12 +12,9 @@ Add to `.env.local` (gitignored). All keys are free.
 # Anthropic — for stance synthesis (cheapest tier: Haiku 4.5)
 ANTHROPIC_API_KEY=sk-ant-...
 
-# FollowTheMoney — donor industries (federal + state coverage).
-# OpenSecrets retired their API; FollowTheMoney is the closest free replacement.
-# https://www.followthemoney.org/our-data/apis/
-FOLLOWTHEMONEY_API_KEY=...
-
-# FEC.gov — raw filings, source-of-truth fundraising totals
+# FEC.gov — raw filings, source-of-truth fundraising totals + itemized donors.
+# Industry classification is done downstream by Haiku (OpenSecrets and
+# FollowTheMoney both retired their public APIs).
 # https://api.data.gov/signup/
 FEC_API_KEY=...
 
@@ -43,13 +40,14 @@ npx tsx scripts/ingest/fetch_ballotpedia.ts \
   --race-slug "U.S._House_New_Jersey_District_7_election,_2026_(Republican_primary)" \
   --race-id "$RACE_ID"
 
-# 2. Pull OpenSecrets: top industries + contributors (federal candidates only)
-npx tsx scripts/ingest/fetch_opensecrets.ts \
-  --race-id "$RACE_ID" --state NJ --cycle 2026
-
-# 3. Cross-check totals against FEC (source of truth)
+# 2. Pull FEC: fundraising totals + FEC IDs (source of truth)
 npx tsx scripts/ingest/fetch_fec.ts \
   --race-id "$RACE_ID" --state NJ --district 07 --cycle 2026 --office H
+
+# 3. Classify donor industries via Haiku (FEC's itemized contributions → buckets).
+#    Replaces what OpenSecrets used to do. ~$0.007 per candidate.
+npx tsx scripts/ingest/classify_industries.ts \
+  --race-id "$RACE_ID" --cycle 2026
 
 # 4. Pull GovTrack voting record (incumbents only — challengers skipped)
 npx tsx scripts/ingest/fetch_votes.ts \
@@ -110,10 +108,9 @@ If any of these fail, switch to a backup race (NY-17, MD-06, VA-07).
 
 ## Cost guardrails
 
-- **FollowTheMoney**: ~500 calls/hour free. ~3 calls per candidate (summary + sectors + contributors).
-- **GovTrack**: no documented hard rate limit (keyless). ~2 calls per vote captured (vote_voter list + vote detail). Be polite — `fetchCached` throttles automatically.
-- **FEC**: 1000/hour. ~2-3 calls per candidate.
-- **Anthropic Haiku**: ~$0.001 per synthesis. Even 100 candidates = ~$0.10.
+- **FEC**: 1000/hour. ~3-4 calls per candidate (search + committees + itemized contributions + totals).
+- **GovTrack**: no documented hard rate limit (keyless). ~2 calls per vote captured. Be polite — `fetchCached` throttles automatically.
+- **Anthropic Haiku**: ~$0.001 per stance synthesis + ~$0.007 per industry classification. ~50 candidates ≈ $0.40 total.
 
 The `fetchCached` helper in `src/lib/api-clients/base.ts` writes every response to `supabase/seed/raw/`, so re-running the pipeline is free.
 
