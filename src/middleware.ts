@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server';
+import { timingSafeEqual } from 'node:crypto';
 import { COOKIE_NAMES, COOKIE_OPTIONS, generateSessionToken } from '@/lib/cookies';
 
 /**
@@ -27,7 +28,10 @@ export function middleware(request: NextRequest) {
     const expected = process.env.ADMIN_PASSWORD;
     if (!expected) {
       // Misconfigured: don't 200 the admin page in production without auth.
-      return new NextResponse('Admin not configured', { status: 503 });
+      return new NextResponse('Admin not configured', {
+        status: 503,
+        headers: { 'X-Robots-Tag': 'noindex, nofollow', 'Cache-Control': 'no-store' },
+      });
     }
     const header = request.headers.get('authorization') ?? '';
     const [scheme, encoded] = header.split(' ');
@@ -35,8 +39,18 @@ export function middleware(request: NextRequest) {
     if (scheme === 'Basic' && encoded) {
       try {
         const decoded = atob(encoded);
-        const [, password] = decoded.split(':', 2);
-        ok = password === expected;
+        const [username, password] = decoded.split(':', 2);
+        // Require username === 'admin' for log attribution clarity (so a
+        // future access-log entry never shows arbitrary attacker-chosen
+        // names like "root" or empty-string). Cheap defense-in-depth.
+        if (username === 'admin' && typeof password === 'string') {
+          // Constant-time password compare. Plain `===` short-circuits on
+          // first-byte mismatch and leaks bytes via timing. timingSafeEqual
+          // requires equal-length buffers — pre-check length, then compare.
+          const a = Buffer.from(password);
+          const b = Buffer.from(expected);
+          ok = a.length === b.length && timingSafeEqual(a, b);
+        }
       } catch {
         ok = false;
       }
@@ -44,10 +58,19 @@ export function middleware(request: NextRequest) {
     if (!ok) {
       return new NextResponse('Authentication required', {
         status: 401,
-        headers: { 'WWW-Authenticate': 'Basic realm="voter admin"' },
+        headers: {
+          'WWW-Authenticate': 'Basic realm="voter admin"',
+          'X-Robots-Tag': 'noindex, nofollow',
+          'Cache-Control': 'no-store',
+        },
       });
     }
-    // Auth passes — fall through to the normal response below.
+    // Auth passes — set no-store on the downstream response too so admin
+    // content never lands in a shared cache.
+    const adminResponse = NextResponse.next();
+    adminResponse.headers.set('X-Robots-Tag', 'noindex, nofollow');
+    adminResponse.headers.set('Cache-Control', 'private, no-store');
+    return adminResponse;
   }
 
   const response = NextResponse.next();

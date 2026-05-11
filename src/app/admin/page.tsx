@@ -258,7 +258,7 @@ export default async function AdminPage() {
               {counts.matchTokensIn30d.toLocaleString()} in / {counts.matchTokensOut30d.toLocaleString()} out
             </p>
             <p className="text-[11px] text-gray-400 mt-3">
-              vs. $50/day cap ≈ $1,500/30d. Spend cap configured at Anthropic dashboard.
+              vs. $100/day cap ≈ $3,000/30d. Spend cap configured at Anthropic dashboard.
             </p>
           </div>
         </section>
