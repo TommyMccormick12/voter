@@ -1,6 +1,6 @@
 {
   "name": "voter",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,6 +11,7 @@
     "test:watch": "vitest",
     "ingest:ballotpedia": "tsx scripts/ingest/fetch_ballotpedia.ts",
     "ingest:fec": "tsx scripts/ingest/fetch_fec.ts",
+    "ingest:platform": "tsx scripts/ingest/fetch_platform.ts",
     "ingest:industries": "tsx scripts/ingest/classify_industries.ts",
     "ingest:votes": "tsx scripts/ingest/fetch_votes.ts",
     "ingest:statements": "tsx scripts/ingest/fetch_statements.ts",

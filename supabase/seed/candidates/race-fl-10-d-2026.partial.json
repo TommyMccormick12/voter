@@ -760,31 +760,152 @@
       ],
       "top_stances": [
         {
-          "stance_id": "maxwell-alejandro-frost-foreign_policy",
-          "issue_slug": "foreign_policy",
-          "stance": "oppose",
-          "summary": "Opposes FISA surveillance authority extensions that lack robust privacy safeguards.",
-          "source_url": "",
-          "source_excerpt": "NAY on S. 4465: A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII",
-          "confidence": 65,
-          "track_record_note": "Voted NAY on s4465-119 (2026-04-30), indicating concern about surveillance overreach.",
-          "track_record_citations": [
-            "s4465-119"
-          ]
+          "stance_id": "maxwell-alejandro-frost-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Strong advocate for gun control; address mass shootings through law enforcement coordination.",
+          "source_url": "http://frost.house.gov",
+          "confidence": 95,
+          "track_record_note": "No voting record provided on gun legislation to verify alignment."
         },
         {
           "stance_id": "maxwell-alejandro-frost-climate",
           "issue_slug": "climate",
+          "stance": "strongly_support",
+          "summary": "Support Green New Deal and environmental justice as campaign priority.",
+          "source_url": "http://frost.house.gov",
+          "confidence": 90,
+          "track_record_note": "Voted NAY on H.Res. 1224 (2026-04-29) opposing consideration of H.R. 7567 agricultural bill despite climate platform; voted NAY on H.Res. 1189 (2026-04-22) opposing energy efficiency standards repeal consideration, aligning with environmental stance."
+        },
+        {
+          "stance_id": "maxwell-alejandro-frost-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "strongly_support",
+          "summary": "Build toward future without prison; support decriminalization of sex work and cannabis.",
+          "source_url": "http://frost.house.gov",
+          "confidence": 85,
+          "track_record_note": "No voting record provided on criminal justice or drug policy legislation to verify alignment."
+        },
+        {
+          "stance_id": "maxwell-alejandro-frost-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Support single-payer healthcare; introduced legislation capping epinephrine autoinjector costs at $60.",
+          "source_url": "http://frost.house.gov",
+          "confidence": 90,
+          "track_record_note": "No voting record provided on healthcare legislation to verify alignment."
+        },
+        {
+          "stance_id": "maxwell-alejandro-frost-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Promote affordable housing; co-sponsored legislation eliminating landlord fees and increasing transparency.",
+          "source_url": "http://frost.house.gov",
+          "confidence": 85,
+          "track_record_note": "Voted NAY on S.Con.Res. 33 (2026-04-29) congressional budget resolution; insufficient detail to determine if NAY reflects housing policy opposition."
+        },
+        {
+          "stance_id": "maxwell-alejandro-frost-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Oppose southern border wall; protect immigrant rights and oppose deportations without due process.",
+          "source_url": "http://frost.house.gov",
+          "confidence": 90,
+          "track_record_note": "No voting record provided on immigration legislation to verify alignment."
+        },
+        {
+          "stance_id": "maxwell-alejandro-frost-foreign_policy",
+          "issue_slug": "foreign_policy",
           "stance": "oppose",
-          "summary": "Opposes procedural measures advancing energy deregulation and reduced efficiency standards.",
-          "source_url": "",
-          "source_excerpt": "NAY on H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards",
-          "confidence": 60,
-          "track_record_note": "Voted NAY on hres1189-119 (2026-04-22) twice, opposing consideration of H.R. 4690 which repeals energy efficiency standards.",
-          "track_record_citations": [
-            "hres1189-119",
-            "hr4690-119"
-          ]
+          "summary": "Support two-state solution; opposed further Israel aid; accused Israel of violating international law; call for Gaza bombing halt.",
+          "source_url": "http://frost.house.gov",
+          "confidence": 85,
+          "track_record_note": "Voted NAY on S. 4465 (2026-04-30) FISA Amendments Act extension, aligning with skeptical foreign policy stance on surveillance authorities."
+        }
+      ],
+      "bio": "Maxwell Alejandro Frost (born January 17, 1997) is an American politician and activist serving as the U.S. representative for Florida's 10th congressional district since 2023. A member of the Democratic Party, he was previously the national organizing director for March for Our Lives. Elected at age 25, Frost currently is the youngest member of the United States Congress.",
+      "campaign_website": "http://frost.house.gov",
+      "key_messages": [
+        "Frost supports a Green New Deal and has identified environmental justice as a priority of his campaign.",
+        "Frost is a strong advocate for gun control and has called for addressing mass shootings through law enforcement meetings.",
+        "Frost supports single-payer healthcare and has introduced legislation to cap out-of-pocket costs for epinephrine autoinjectors at $60 per two-pack.",
+        "Frost wants to build toward a future without prison and supports the decriminalization of sex work and cannabis use.",
+        "Frost is a proponent of affordable housing and co-sponsored legislation to eliminate extra fees imposed by landlords and increase transparency in rental agreements.",
+        "Frost supports a two-state solution to the Israeli-Palestinian conflict. As of April 2024, he has voted against providing Israel with further aid, accused Israel of violating international law, and called for stopping the bombing campaign in Gaza.",
+        "Frost is opposed to building a southern border wall and has advocated for protecting immigrant rights and opposing deportations without due process."
+      ],
+      "campaign_themes": [
+        {
+          "heading": "climate",
+          "text": "Frost supports a Green New Deal and has identified environmental justice as a priority of his campaign."
+        },
+        {
+          "heading": "guns",
+          "text": "Frost is a strong advocate for gun control and has called for addressing mass shootings through law enforcement meetings."
+        },
+        {
+          "heading": "healthcare",
+          "text": "Frost supports single-payer healthcare and has introduced legislation to cap out-of-pocket costs for epinephrine autoinjectors at $60 per two-pack."
+        },
+        {
+          "heading": "criminal_justice",
+          "text": "Frost wants to build toward a future without prison and supports the decriminalization of sex work and cannabis use."
+        },
+        {
+          "heading": "housing",
+          "text": "Frost is a proponent of affordable housing and co-sponsored legislation to eliminate extra fees imposed by landlords and increase transparency in rental agreements."
+        },
+        {
+          "heading": "foreign_policy",
+          "text": "Frost supports a two-state solution to the Israeli-Palestinian conflict. As of April 2024, he has voted against providing Israel with further aid, accused Israel of violating international law, and called for stopping the bombing campaign in Gaza."
+        },
+        {
+          "heading": "immigration",
+          "text": "Frost is opposed to building a southern border wall and has advocated for protecting immigrant rights and opposing deportations without due process."
+        }
+      ],
+      "platform_excerpts": [
+        {
+          "issue_slug": "climate",
+          "excerpt": "Frost supports a Green New Deal. He has identified environmental justice as a priority of his campaign.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
+        },
+        {
+          "issue_slug": "guns",
+          "excerpt": "Frost is a strong advocate for gun control.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
+        },
+        {
+          "issue_slug": "healthcare",
+          "excerpt": "Frost supports single-payer healthcare and investing in pandemic prevention. He introduced with Representative Doris Matsui in 2024 the EPIPEN Act, which seeks to cap out-of-pocket costs for epinephrine autoinjectors used for severe allergic reactions at $60 per two-pack for individuals with health insurance.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
+        },
+        {
+          "issue_slug": "criminal_justice",
+          "excerpt": "Frost wants to \"build toward a future without prison\". He supports the decriminalization of sex work and the decriminalization of cannabis use.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
+        },
+        {
+          "issue_slug": "housing",
+          "excerpt": "Frost is a proponent of affordable housing. He co-sponsored the End Junk Fees for Renters Act in 2023, which aims to eliminate extra fees imposed by landlords, ban application fees, and increase transparency in rental agreements.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
+        },
+        {
+          "issue_slug": "foreign_policy",
+          "excerpt": "Following the Gaza war, Frost has shown a shift in his views on Israel–Palestine issues. While Frost voted to provide Israel with initial support following the October 7 attacks, as of April 2024 he has voted against providing Israel with further aid, has accused Israel of violating international law during the war, and has stated that \"the bombing campaign in Gaza must stop\".",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
+        },
+        {
+          "issue_slug": "immigration",
+          "excerpt": "Frost is opposed to building a southern border wall. In April 2025, Frost traveled to El Salvador with three other members of Congress to advocate for the release of Kilmar Abrego Garcia and others who had been deported without due process by the Trump administration.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
         }
       ]
     }

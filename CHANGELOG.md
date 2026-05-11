@@ -2,6 +2,57 @@
 
 All notable changes to the voter project. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.5.0] - 2026-05-10
+
+Phase C: Wikipedia-sourced policy positions, restoring the "stated platform"
+data leg after Ballotpedia 2026 federal coverage proved too thin to use.
+
+### Added
+
+- **`src/lib/api-clients/wikipedia.ts`** — keyless Wikipedia client.
+  Extracts bio (lead paragraph), campaign / official website from
+  infobox, and the full "Political positions" section text + subsection
+  labels. Handles Wikipedia's modern 2023+ HTML where section headings
+  are wrapped in `<div class="mw-heading">` containers.
+- **`src/lib/llm/extract-platform.ts`** — Haiku-based extraction of
+  structured `{issue_slug, summary, source_excerpt}` positions from
+  long-form Wikipedia text. Same 10-issue taxonomy as synth:stances.
+  Zod-validated, disk-cached by content hash. ~$0.003-0.008/candidate.
+- **`scripts/ingest/fetch_platform.ts`** — driver. For each candidate:
+  looks up Wikipedia by name (tries `First Last` then full name), pulls
+  bio + website + political positions, hands to Haiku for extraction,
+  writes to fixture as `key_messages`, `campaign_themes`, and
+  `platform_excerpts` (preserves the source quote for review docs).
+- **npm script** `ingest:platform` wired between `ingest:fec` and
+  `ingest:industries`.
+
+### Verified
+
+End-to-end against Maxwell Frost (FL-10 D):
+- Wikipedia: 5.4 KB "Political positions" section, 9 subsections
+- Haiku extracted 7 positions (climate, guns, healthcare, criminal_justice,
+  housing, foreign_policy, immigration) for 1530/766 tokens (~$0.005)
+- synth:stances output went from 2 stances → **7 stances** with rich
+  per-issue track-record annotations
+- synth:flag correctly caught a track_record_note that referenced a bill
+  not in the citations field — prevents activation until corrected
+
+### Files
+
+- ADD src/lib/api-clients/wikipedia.ts
+- ADD src/lib/llm/extract-platform.ts
+- ADD scripts/ingest/fetch_platform.ts
+- MOD package.json (ingest:platform)
+- CACHE supabase/seed/raw/anthropic-platform/, supabase/seed/raw/en.wikipedia.org/
+
+### Cost picture (updated)
+
+Tier 1 FL (~50 candidates) total Haiku cost:
+- Platform extraction: ~$0.30
+- Industry classification: ~$0.40
+- Stance synthesis: ~$0.05
+- **Total: ~$0.75**
+
 ## [0.4.0] - 2026-05-10
 
 Donor industry classification via Haiku — restores the "Top funded by
