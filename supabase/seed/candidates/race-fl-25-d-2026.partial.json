@@ -1,0 +1,37 @@
+{
+  "race_id": "race-fl-25-d-2026",
+  "candidates": [
+    {
+      "name": "Debbie Wasserman Schultz",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "debbie-wasserman-schultz",
+      "incumbent": true,
+      "state": "FL",
+      "district": "25",
+      "office": "U.S. House",
+      "race_id": "race-fl-25-d-2026",
+      "fec_candidate_id": "H4FL20023",
+      "total_raised": 2502688.61,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 2502688.61,
+        "disbursements": 1052517.34,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 1938353.11,
+        "other_political_committee_contributions": 534750
+      }
+    }
+  ],
+  "race": {
+    "id": "race-fl-25-d-2026",
+    "state": "FL",
+    "district": "25",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}

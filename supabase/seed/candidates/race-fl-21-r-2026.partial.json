@@ -1,0 +1,37 @@
+{
+  "race_id": "race-fl-21-r-2026",
+  "candidates": [
+    {
+      "name": "Brian Mast",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "brian-mast",
+      "incumbent": true,
+      "state": "FL",
+      "district": "21",
+      "office": "U.S. House",
+      "race_id": "race-fl-21-r-2026",
+      "fec_candidate_id": "H6FL18097",
+      "total_raised": 3104405.43,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 3104405.43,
+        "disbursements": 2322221.17,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 2348617.76,
+        "other_political_committee_contributions": 267700
+      }
+    }
+  ],
+  "race": {
+    "id": "race-fl-21-r-2026",
+    "state": "FL",
+    "district": "21",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R"
+  }
+}

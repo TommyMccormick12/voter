@@ -1,0 +1,59 @@
+{
+  "race_id": "race-fl-24-d-2026",
+  "candidates": [
+    {
+      "name": "Christine Alexandria Sanon-Jules",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "christine-alexandria-sanon-jules",
+      "incumbent": false,
+      "state": "FL",
+      "district": "24",
+      "office": "U.S. House",
+      "race_id": "race-fl-24-d-2026",
+      "fec_candidate_id": "H2FL24037",
+      "total_raised": 0,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 0,
+        "disbursements": 0,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 0,
+        "other_political_committee_contributions": 0
+      }
+    },
+    {
+      "name": "Frederica S. Wilson",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "frederica-s-wilson",
+      "incumbent": true,
+      "state": "FL",
+      "district": "24",
+      "office": "U.S. House",
+      "race_id": "race-fl-24-d-2026",
+      "fec_candidate_id": "H0FL17068",
+      "total_raised": 153141.76,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 153141.76,
+        "disbursements": 260134.72,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 44868.12,
+        "other_political_committee_contributions": 108273.64
+      }
+    }
+  ],
+  "race": {
+    "id": "race-fl-24-d-2026",
+    "state": "FL",
+    "district": "24",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}

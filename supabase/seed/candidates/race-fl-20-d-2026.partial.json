@@ -1,0 +1,690 @@
+{
+  "race_id": "race-fl-20-d-2026",
+  "candidates": [
+    {
+      "name": "Luther Mr. Campbell",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "luther-mr-campbell",
+      "incumbent": false,
+      "state": "FL",
+      "district": "20",
+      "office": "U.S. House",
+      "race_id": "race-fl-20-d-2026",
+      "fec_candidate_id": "H4FL20098",
+      "total_raised": 37128.18,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 37128.18,
+        "disbursements": 11067.85,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 29278.18,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "Luther Roderick \"Luke\" Campbell (born December 22, 1960), also known by his stage name Uncle Luke (also known as Luke Skyywalker), is an American rapper, music promoter, record executive, actor, and former leader of the rap group 2 Live Crew. He is a pioneer in Florida hip hop and the creator of the Miami bass genre, known for his sexually crude call and response lyrics. He also starred in a short-lived show on VH1, Luke's Parental Advisory.",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Sheila Cherfilus-Mccormick",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "sheila-cherfilus-mccormick",
+      "incumbent": false,
+      "state": "FL",
+      "district": "20",
+      "office": "U.S. House",
+      "race_id": "race-fl-20-d-2026",
+      "fec_candidate_id": "H8FL20032",
+      "total_raised": 356386.81,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 356386.81,
+        "disbursements": 352822.17,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 267879.68,
+        "other_political_committee_contributions": 86000
+      },
+      "top_industries": [
+        {
+          "industry_name": "Other",
+          "amount": 45600,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 33000,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 26000,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 24300,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 17550,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 16900,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Transportation",
+          "amount": 9500,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 6300,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Agriculture",
+          "amount": 5500,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Labor Unions",
+          "amount": 3000,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "NEBU, CHACKO",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 4000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00677492",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SIMON, BRIAN",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00677492",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SIMON, BRIAN",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00677492",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "GASSANT, PEDRO",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00677492",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CHRAIBI, SALIM",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00677492",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CHRAIBI, SALIM",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00677492",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WEINSTEIN, JOSHUA",
+          "donor_type": "individual",
+          "industry": "Transportation",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00677492",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "OTTINOT, HANS",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00677492",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "NEBU, CHACKO",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00677492",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FRIEDMAN, AVI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00677492",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Mark A Mr Douglas",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "mark-a-mr-douglas",
+      "incumbent": false,
+      "state": "FL",
+      "district": "20",
+      "office": "U.S. House",
+      "race_id": "race-fl-20-d-2026",
+      "fec_candidate_id": "H6FL20085",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Dale V.c. Mr. Holness",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "dale-vc-mr-holness",
+      "incumbent": false,
+      "state": "FL",
+      "district": "20",
+      "office": "U.S. House",
+      "race_id": "race-fl-20-d-2026",
+      "fec_candidate_id": "H2FL20159",
+      "total_raised": 306515.89,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 306515.89,
+        "disbursements": 12925.78,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 234729.44,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "Sheila Cherfilus-McCormick\nDemocratic",
+      "top_industries": [
+        {
+          "industry_name": "Real Estate",
+          "amount": 51000,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 44250,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 22000,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 16000,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 14500,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 12000,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 6500,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Oil & Gas",
+          "amount": 5500,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 5500,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Transportation",
+          "amount": 4000,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "SEGRERA, CARLOS",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00776831",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "REDDY, ARVIND",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00776831",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LEVY, JOSH",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00776831",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "IZHAK, YORAM",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00776831",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "IZHAK, YORAM",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00776831",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ARGUELLO, ODETTE",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00776831",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TAHIR, JAMILA",
+          "donor_type": "individual",
+          "industry": "Oil & Gas",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00776831",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "POLIAKOFF, KEITH",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00776831",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "JACQUES, LOUSDER",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00776831",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ISMAIL, MOHAMMAD T",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00776831",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Elijah Manley",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "elijah-manley",
+      "incumbent": false,
+      "state": "FL",
+      "district": "20",
+      "office": "U.S. House",
+      "race_id": "race-fl-20-d-2026",
+      "fec_candidate_id": "H6FL20077",
+      "total_raised": 779838.52,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 779838.52,
+        "disbursements": 756970.81,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 769504.35,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "The 2016 Green Party presidential primaries were a series of primaries, caucuses and state conventions in which voters elected delegates to represent a candidate for the Green Party's nominee for President of the United States at the 2016 Green National Convention. The primaries, held in numerous states on various dates from January to July 2016, featured elections publicly funded and held as an alternative ballot, concurrent with the Democratic and Republican primaries, and elections privately funded by the Green Party, held non-concurrently with the major party primaries. Over 400 delegates ",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 47252.5,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 9250,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 5000,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 5000,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 3600,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 2500,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 1750,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 1250,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 1000,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 750,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "DAVOODI, MOHAMMED",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00895896",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STIEFEL, BARBARA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 5000,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00895896",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SHRIKUMAR, ADITI",
+          "donor_type": "individual",
+          "industry": "Media & Entertainment",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00895896",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CRESKE, KATE",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00895896",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "GOWEN, HERBERT",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2300,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00895896",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FISHMAN, JUDITH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00895896",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "VULOV, GEORGE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1200,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00895896",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCRIBNER, CURTIS",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00895896",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HUSSEIN, MAEN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00895896",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "GOWEN, HERBERT",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00895896",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Rudolph Dr. Moise",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "rudolph-dr-moise",
+      "incumbent": false,
+      "state": "FL",
+      "district": "20",
+      "office": "U.S. House",
+      "race_id": "race-fl-20-d-2026",
+      "fec_candidate_id": "H0FL17118",
+      "total_raised": 300000,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 300000,
+        "disbursements": 184530.57,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 0,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "Rudolph Moise (born September 22, 1954) is the owner and medical director of Comprehensive Medical Aesthetics in Miami. Prior to becoming a physician, he served as a flight surgeon in the United States Air Force for more than 21 years, earning the rank of colonel, the highest position awarded to an American of Haitian descent at that time. Moise is running in 2026 to represent Florida's 20th congressional district.",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Maisha Williams",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "maisha-williams",
+      "incumbent": false,
+      "state": "FL",
+      "district": "20",
+      "office": "U.S. House",
+      "race_id": "race-fl-20-d-2026",
+      "fec_candidate_id": "H6FL20135",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-20-d-2026",
+    "state": "FL",
+    "district": "20",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}

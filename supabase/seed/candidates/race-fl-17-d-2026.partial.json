@@ -1,0 +1,59 @@
+{
+  "race_id": "race-fl-17-d-2026",
+  "candidates": [
+    {
+      "name": "Matthew Montavon",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "matthew-montavon",
+      "incumbent": false,
+      "state": "FL",
+      "district": "17",
+      "office": "U.S. House",
+      "race_id": "race-fl-17-d-2026",
+      "fec_candidate_id": "H4FL17060",
+      "total_raised": 75408.83,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 75408.83,
+        "disbursements": 35060.83,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 42179.82,
+        "other_political_committee_contributions": 0
+      }
+    },
+    {
+      "name": "Allen L Jr Spence",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "allen-l-jr-spence",
+      "incumbent": false,
+      "state": "FL",
+      "district": "17",
+      "office": "U.S. House",
+      "race_id": "race-fl-17-d-2026",
+      "fec_candidate_id": "H6FL17065",
+      "total_raised": 37660.91,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 37660.91,
+        "disbursements": 26986.16,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 20260.72,
+        "other_political_committee_contributions": 0
+      }
+    }
+  ],
+  "race": {
+    "id": "race-fl-17-d-2026",
+    "state": "FL",
+    "district": "17",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}

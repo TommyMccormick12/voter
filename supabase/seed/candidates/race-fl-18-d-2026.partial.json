@@ -1,0 +1,39 @@
+{
+  "race_id": "race-fl-18-d-2026",
+  "candidates": [
+    {
+      "name": "Curtis Gibson",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "curtis-gibson",
+      "incumbent": false,
+      "state": "FL",
+      "district": "18",
+      "office": "U.S. House",
+      "race_id": "race-fl-18-d-2026",
+      "fec_candidate_id": "H6FL18212"
+    },
+    {
+      "name": "Tiffanie Shavon Luong",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "tiffanie-shavon-luong",
+      "incumbent": false,
+      "state": "FL",
+      "district": "18",
+      "office": "U.S. House",
+      "race_id": "race-fl-18-d-2026",
+      "fec_candidate_id": "H6FL18220"
+    }
+  ],
+  "race": {
+    "id": "race-fl-18-d-2026",
+    "state": "FL",
+    "district": "18",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}

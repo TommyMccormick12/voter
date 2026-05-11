@@ -1,0 +1,59 @@
+{
+  "race_id": "race-fl-20-r-2026",
+  "candidates": [
+    {
+      "name": "Sendra Dorce",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "sendra-dorce",
+      "incumbent": false,
+      "state": "FL",
+      "district": "20",
+      "office": "U.S. House",
+      "race_id": "race-fl-20-r-2026",
+      "fec_candidate_id": "H6FL23170",
+      "total_raised": 9313.98,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 9313.98,
+        "disbursements": 4833.41,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 7306.56,
+        "other_political_committee_contributions": 0
+      }
+    },
+    {
+      "name": "Rodenay Mr. Joseph",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "rodenay-mr-joseph",
+      "incumbent": false,
+      "state": "FL",
+      "district": "20",
+      "office": "U.S. House",
+      "race_id": "race-fl-20-r-2026",
+      "fec_candidate_id": "H6FL20069",
+      "total_raised": 58157.58,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 58157.58,
+        "disbursements": 60432.86,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 58157.58,
+        "other_political_committee_contributions": 0
+      }
+    }
+  ],
+  "race": {
+    "id": "race-fl-20-r-2026",
+    "state": "FL",
+    "district": "20",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R"
+  }
+}

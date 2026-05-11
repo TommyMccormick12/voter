@@ -1,0 +1,37 @@
+{
+  "race_id": "race-fl-17-r-2026",
+  "candidates": [
+    {
+      "name": "Greg Steube",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "greg-steube",
+      "incumbent": true,
+      "state": "FL",
+      "district": "17",
+      "office": "U.S. House",
+      "race_id": "race-fl-17-r-2026",
+      "fec_candidate_id": "H8FL17053",
+      "total_raised": 959819.1,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 959819.1,
+        "disbursements": 546827.97,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 336431.85,
+        "other_political_committee_contributions": 424000
+      }
+    }
+  ],
+  "race": {
+    "id": "race-fl-17-r-2026",
+    "state": "FL",
+    "district": "17",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R"
+  }
+}

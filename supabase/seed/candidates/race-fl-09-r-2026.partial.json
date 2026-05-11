@@ -1,0 +1,652 @@
+{
+  "race_id": "race-fl-09-r-2026",
+  "candidates": [
+    {
+      "name": "Gregory Marcus Mr Carter",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "gregory-marcus-mr-carter",
+      "incumbent": false,
+      "state": "FL",
+      "district": "09",
+      "office": "U.S. House",
+      "race_id": "race-fl-09-r-2026",
+      "fec_candidate_id": "H4FL09190",
+      "total_raised": 14949.98,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 14949.98,
+        "disbursements": 14234.07,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 13370.13,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 6149.13,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 400,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "LAPORTE, BOLIVAR",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00898312",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LAPORTE, BOLIVAR",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00898312",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TURNER, THOMAS MARK",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 543.49,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00898312",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "IRISH, DEBORAH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00898312",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WALLING, ANNETTE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 400,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00898312",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KLINE, JEANNE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 334,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00898312",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PEREZ, ILEANA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 219.84,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00898312",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "IRISH, DEBORAH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 219.84,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00898312",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BAKER, AARON",
+          "donor_type": "individual",
+          "industry": "Construction",
+          "amount_total": 200,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00898312",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WALLING, ANNETTE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 200,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00898312",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Thomas E. Colonel Jr. Chalifoux",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "thomas-e-colonel-jr-chalifoux",
+      "incumbent": false,
+      "state": "FL",
+      "district": "09",
+      "office": "U.S. House",
+      "race_id": "race-fl-09-r-2026",
+      "fec_candidate_id": "H4FL09182",
+      "total_raised": 2299375.99,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 2299375.99,
+        "disbursements": 760544.08,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 11675,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Construction",
+          "amount": 7800,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 3500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "CHALIFOUX, NILES",
+          "donor_type": "individual",
+          "industry": "Construction",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00869727",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CHALIFOUX, JENNIFER",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00869727",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HOWSE, RON",
+          "donor_type": "individual",
+          "industry": "Construction",
+          "amount_total": 3300,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00869727",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PARSONS, RAY",
+          "donor_type": "individual",
+          "industry": "Construction",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00869727",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CHALIFOUX, NILES",
+          "donor_type": "individual",
+          "industry": "Construction",
+          "amount_total": -3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00869727",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Jorge Antonio Malavet",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "jorge-antonio-malavet",
+      "incumbent": false,
+      "state": "FL",
+      "district": "09",
+      "office": "U.S. House",
+      "race_id": "race-fl-09-r-2026",
+      "fec_candidate_id": "H6FL09260",
+      "total_raised": 23687.33,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 23687.33,
+        "disbursements": 17695.13,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 7929.09,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Howard Steven Rance",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "howard-steven-rance",
+      "incumbent": false,
+      "state": "FL",
+      "district": "09",
+      "office": "U.S. House",
+      "race_id": "race-fl-09-r-2026",
+      "fec_candidate_id": "H6FL10185",
+      "total_raised": 93551.76,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 93551.76,
+        "disbursements": 55881.89,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 28902.18,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 17050,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 2500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 1874,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 1000,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 1000,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Oil & Gas",
+          "amount": 1000,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 850,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Nonprofit / Civic",
+          "amount": 600,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 500,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 346,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "KORPMAN, RALPH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00917955",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "COVINGTON, GARY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00917955",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ERBACHER, HAROLD",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 1500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00917955",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TEMPLETON, STEVEN",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00917955",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MISITANO, ANTHONY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00917955",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MERRITT, MICHAEL",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00917955",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MCNEELY, LEE",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00917955",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MARCUS, BILLI WILMA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00917955",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LYFORD, LAURIE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00917955",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "JOHNSON, DENNIS",
+          "donor_type": "individual",
+          "industry": "Oil & Gas",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00917955",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Justin Story",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "justin-story",
+      "incumbent": false,
+      "state": "FL",
+      "district": "09",
+      "office": "U.S. House",
+      "race_id": "race-fl-09-r-2026",
+      "fec_candidate_id": "H6FL09252",
+      "total_raised": 42170.25,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 42170.25,
+        "disbursements": 37052.96,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 20984.83,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 10536.44,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 2834.1,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Agriculture",
+          "amount": 1000,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 500,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 500,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 458.2,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Transportation",
+          "amount": 308.2,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 30,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "PARTIN, BEN",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 2500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00906735",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DELOACH, DAVID",
+          "donor_type": "individual",
+          "industry": "Agriculture",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00906735",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MICHAEL, STEPHEN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00906735",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WARLICK, MILES",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00906735",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ROCKER, WILLIAM",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00906735",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LYFORD, LAURIE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00906735",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KORCHMAR, MICHAEL",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00906735",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SOUSA, CHRIS",
+          "donor_type": "individual",
+          "industry": "Construction",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00906735",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MULLINS, ERNEST",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00906735",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TYNER, LINDA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00906735",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-09-r-2026",
+    "state": "FL",
+    "district": "09",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R"
+  }
+}

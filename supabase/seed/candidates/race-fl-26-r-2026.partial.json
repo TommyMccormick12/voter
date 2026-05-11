@@ -1,0 +1,37 @@
+{
+  "race_id": "race-fl-26-r-2026",
+  "candidates": [
+    {
+      "name": "Mario Diaz-Balart",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "mario-diaz-balart",
+      "incumbent": true,
+      "state": "FL",
+      "district": "26",
+      "office": "U.S. House",
+      "race_id": "race-fl-26-r-2026",
+      "fec_candidate_id": "H2FL25018",
+      "total_raised": 1517554.6,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1517554.6,
+        "disbursements": 1099963.76,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 878605.69,
+        "other_political_committee_contributions": 629650
+      }
+    }
+  ],
+  "race": {
+    "id": "race-fl-26-r-2026",
+    "state": "FL",
+    "district": "26",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R"
+  }
+}

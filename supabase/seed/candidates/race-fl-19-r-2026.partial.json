@@ -1,0 +1,2250 @@
+{
+  "race_id": "race-fl-19-r-2026",
+  "candidates": [
+    {
+      "name": "Madison Cawthorn",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "madison-cawthorn",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19178",
+      "total_raised": 519541.69,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 519541.69,
+        "disbursements": 286763.58,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 19541.69,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "David Madison Cawthorn (born August 1, 1995) is an American politician who served as the U.S. representative for North Carolina's 11th congressional district from 2021 to 2023. A member of the Republican Party, Cawthorn describes himself as a constitutional conservative.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 5104.1,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 3500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 3500,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 1549.06,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 1285,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Nonprofit / Civic",
+          "amount": 1260.25,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 208.2,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "STARBUCK, ROBBY",
+          "donor_type": "individual",
+          "industry": "Media & Entertainment",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00921486",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "RUDDY, MARK",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00921486",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "J, KYLE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00921486",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "J, KYLE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00921486",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DIGAN, JAMES",
+          "donor_type": "individual",
+          "industry": "Nonprofit / Civic",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00921486",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DIGAN, JAMES",
+          "donor_type": "individual",
+          "industry": "Nonprofit / Civic",
+          "amount_total": 260.25,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00921486",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WRIGHT, ANTHONY",
+          "donor_type": "individual",
+          "industry": "Education",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00921486",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WRIGHT, ANTHONY",
+          "donor_type": "individual",
+          "industry": "Education",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00921486",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WINRED",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 143.56,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00921486",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WINRED",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 104.1,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00921486",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Chris Collins",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "chris-collins",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19228",
+      "total_raised": 910000,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 910000,
+        "disbursements": 604436.5,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 0,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Byron Donalds",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "byron-donalds",
+      "incumbent": true,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H2FL14186",
+      "total_raised": 735588.89,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 735588.89,
+        "disbursements": 2057060.69,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 531015.08,
+        "other_political_committee_contributions": 56800
+      },
+      "bio": "Byron Lowell Donalds (born October 28, 1978) is an American politician serving as the U.S. representative for Florida's 19th congressional district since 2021. A member of the Republican Party, he served in the Florida House of Representatives from 2016 to 2020. His congressional district includes much of Southwest Florida.",
+      "campaign_website": "http://donalds.house.gov",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 90673,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 35700,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 30151,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 11900,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 7600,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 5800,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 5500,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 3300,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Agriculture",
+          "amount": 1000,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "WHITE, MICHAEL",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00733329",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHNATTER, JOHN H",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00733329",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HOROWITZ, BEN",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00733329",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HAY, JOSHUA",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00733329",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DIXON, CHRISTOPHER",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00733329",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CORRENTE, WILLIAM",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00733329",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CORCORAN, JESSICA R",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00733329",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BLAIR, TRACEY L",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00733329",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ANDREESSEN, MARC L",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00733329",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ALFARO, JOSE",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00733329",
+          "data_source": "fec"
+        }
+      ],
+      "govtrack_id": 456808,
+      "bioguide_id": "D000032",
+      "voting_record": [
+        {
+          "bill_id": "s4465-119",
+          "bill_title": "S. 4465: A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
+          "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
+          "vote": "absent",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h155",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h154",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h153",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h152",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h151",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h150",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h149",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h148",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h147",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h146",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h145",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h144",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h143",
+          "significance": "major"
+        },
+        {
+          "bill_id": "s1318-119",
+          "bill_title": "S. 1318: Fallen Servicemembers Religious Heritage Restoration Act",
+          "bill_summary": "This bill was passed by Congress on April 29, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h142",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1224-119",
+          "bill_title": "H.Res. 1224: Providing for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes; providing for consideration ",
+          "bill_summary": "This simple resolution was agreed to on April 29, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [
+            "climate"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h141",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1224-119",
+          "bill_title": "H.Res. 1224: Providing for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes; providing for consideration ",
+          "bill_summary": "This simple resolution was agreed to on April 29, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [
+            "climate"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h140",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr227-119",
+          "bill_title": "H.R. 227: Clergy Act",
+          "bill_summary": "This bill passed in the House on April 27, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h139",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7959-119",
+          "bill_title": "H.R. 7959: IRS Whistleblower Program Improvement Act",
+          "bill_summary": "This bill passed in the House on April 27, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h138",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5587-119",
+          "bill_title": "H.R. 5587: HEATS Act",
+          "bill_summary": "This bill passed in the House on April 23, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h137",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6387-119",
+          "bill_title": "H.R. 6387: FIRE Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h136",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6387-119",
+          "bill_title": "H.R. 6387: FIRE Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h135",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr4690-119",
+          "bill_title": "H.R. 4690: Reliable Federal Infrastructure Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h134",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr4690-119",
+          "bill_title": "H.R. 4690: Reliable Federal Infrastructure Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h133",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1182-119",
+          "bill_title": "H.Res. 1182: Expressing support for rural communities across the United States as stewards of the environment, major suppliers of United States energy resources, critical providers of food production and manufacturing capacity, and drivers of national ec",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h132",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1189-119",
+          "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h131",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1189-119",
+          "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h130",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "s1020-119",
+          "bill_title": "S. 1020: A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+          "bill_summary": "This bill was passed by Congress on April 21, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h129",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr2493-119",
+          "bill_title": "H.R. 2493: Improving Care in Rural America Reauthorization Act of 2025",
+          "bill_summary": "This bill passed in the House on April 21, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h128",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5201-119",
+          "bill_title": "H.R. 5201: Kari’s Law Reporting Act",
+          "bill_summary": "This bill passed in the House on April 21, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h127",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5200-119",
+          "bill_title": "H.R. 5200: Emergency Reporting Act",
+          "bill_summary": "This bill passed in the House on April 20, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-20",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h126",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1681-119",
+          "bill_title": "H.R. 1681: Expediting Federal Broadband Deployment Reviews Act",
+          "bill_summary": "This bill passed in the House on April 20, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-20",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h125",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1175-119",
+          "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+          "bill_summary": "This resolution failed in the House on April 17, 2026.",
+          "vote": "yea",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-17",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h124",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1175-119",
+          "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+          "bill_summary": "This resolution failed in the House on April 17, 2026.",
+          "vote": "yea",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-17",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h123",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1175-119",
+          "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+          "bill_summary": "This resolution failed in the House on April 17, 2026.",
+          "vote": "yea",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-17",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h122",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1156-119",
+          "bill_title": "H.Res. 1156: Expressing support for tax policies that support working families.",
+          "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [
+            "economy"
+          ],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h121",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1689-119",
+          "bill_title": "H.R. 1689: To require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h120",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres965-119",
+          "bill_title": "H.Res. 965: Providing for consideration of the bill (H.R. 1689) to require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+          "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h119",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6398-119",
+          "bill_title": "H.R. 6398: RED Tape Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h118",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6398-119",
+          "bill_title": "H.R. 6398: RED Tape Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h117",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr6409-119",
+          "bill_title": "H.R. 6409: FENCES Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h116",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6409-119",
+          "bill_title": "H.R. 6409: FENCES Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h115",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hconres40-119",
+          "bill_title": "H.Con.Res. 40: Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+          "bill_summary": "This resolution failed in the House on April 16, 2026.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h114",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres965-119",
+          "bill_title": "H.Res. 965: Providing for consideration of the bill (H.R. 1689) to require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+          "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h113",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1174-119",
+          "bill_title": "H.Res. 1174: Providing for consideration of the bill (H.R. 6387) to amend the Clean Air Act to require revisions to regulations governing the review and handling of air quality monitoring data influenced by exceptional events or actions to mitigate wildf",
+          "bill_summary": "This simple resolution was agreed to on April 15, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h112",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1174-119",
+          "bill_title": "H.Res. 1174: Providing for consideration of the bill (H.R. 6387) to amend the Clean Air Act to require revisions to regulations governing the review and handling of air quality monitoring data influenced by exceptional events or actions to mitigate wildf",
+          "bill_summary": "This simple resolution was agreed to on April 15, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h111",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr7613-119",
+          "bill_title": "H.R. 7613: ALERT Act",
+          "bill_summary": "This bill passed in the House on April 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h110",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1011-119",
+          "bill_title": "H.R. 1011: Emergency Conservation Program Improvement Act of 2025",
+          "bill_summary": "This bill passed in the House on April 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h109",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1142-119",
+          "bill_title": "H.Res. 1142: Providing for disposition of the Senate amendment to the bill (H.R. 7147) making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
+          "bill_summary": "This simple resolution was agreed to on March 27, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h108",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1142-119",
+          "bill_title": "H.Res. 1142: Providing for disposition of the Senate amendment to the bill (H.R. 7147) making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
+          "bill_summary": "This simple resolution was agreed to on March 27, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h107",
+          "significance": "procedural"
+        }
+      ],
+      "top_stances": [
+        {
+          "stance_id": "byron-donalds-climate",
+          "issue_slug": "climate",
+          "stance": "oppose",
+          "summary": "Opposes federal building energy efficiency mandates; supports repealing performance standards.",
+          "source_url": "http://donalds.house.gov",
+          "confidence": 75,
+          "track_record_note": "Voted YEA on hres1189-119 for consideration of H.R. 4690 to repeal Federal building energy efficiency standards, and voted YEA on hres1182-119 supporting rural energy resource development.",
+          "track_record_citations": [
+            "hres1189-119",
+            "hres1182-119"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stephen W Elliott",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "stephen-w-elliott",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19210",
+      "total_raised": 25,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 25,
+        "disbursements": 25,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 25,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "John Robert Fratto",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "john-robert-fratto",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H4FL26095",
+      "total_raised": 630.51,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 630.51,
+        "disbursements": 1168.9,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 520.51,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Other",
+          "amount": 520.51,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "SCHNEIDER, JOHN",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 520.51,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00870873",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Ola Nesheswat Hawatmeh",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "ola-nesheswat-hawatmeh",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19160",
+      "total_raised": 379189.65,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 379189.65,
+        "disbursements": 138652.34,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 137314.66,
+        "other_political_committee_contributions": 4000
+      },
+      "bio": "The 2020 United States House of Representatives elections in New York were held on November 3, 2020, to elect the 27 U.S. representatives from the State of New York, one from each of the state's 27 congressional districts. The elections coincided with the 2020 U.S. presidential election, as well as other elections to the House of Representatives, elections to the United States Senate and various state and local elections. The primary election was held on June 23, 2020.",
+      "top_industries": [
+        {
+          "industry_name": "Other",
+          "amount": 62321.89,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 41041.02,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 30761.929999999997,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 21511.53,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 18664.48,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 17950,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 9360.25,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 7500,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 3500,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 3300,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "KHALIL, ANTOINE",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 12000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00917419",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DAHER, ESTEPHAN",
+          "donor_type": "individual",
+          "industry": "Construction",
+          "amount_total": 12000,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00917419",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "NEWLIN, DANIEL",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 10000,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00917419",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MARTINELLI, DAVE",
+          "donor_type": "individual",
+          "industry": "Construction",
+          "amount_total": 6870.71,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00917419",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KIDD, JK",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 6870.71,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00917419",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "E, EDWARD",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 6870.71,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00917419",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TRIPLETT, DANNY",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 6766.6,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00917419",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SAYEGH, MERVAT",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 6600,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00917419",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KHALIL, SAYDE",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 6000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00917419",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "NESHEIWAT, DR. OGLEH",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00917419",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Catalina Lauf",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "catalina-lauf",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19186",
+      "total_raised": 974858.77,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 974858.77,
+        "disbursements": 584741.16,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 927288.59,
+        "other_political_committee_contributions": 4000
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 57343.3,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 8033.0599999999995,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 6862.5,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 5750,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Oil & Gas",
+          "amount": 3750,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 2250,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Defense & Aerospace",
+          "amount": 2000,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 600,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 475,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "KIRKPATRICK, CARROLL",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 6650,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00921783",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HOWELL, LARRY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 6650,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00921783",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "RUTH, CHARLES",
+          "donor_type": "individual",
+          "industry": "Construction",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00921783",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PORTET, RICHARD",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00921783",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "NOVAKOVSKI, VLADIMIR",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00921783",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MCCABE, EOGHAN",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00921783",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DESHPANDE, AMOL",
+          "donor_type": "individual",
+          "industry": "Oil & Gas",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00921783",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BOSZHARDT, ANDREW",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00921783",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TYPER, DONALD",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3325,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00921783",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BROCKMAN, JENNIFER",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3325,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00921783",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Dylan Modarelli",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "dylan-modarelli",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19152",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "James Mr. Oberweis",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "james-mr-oberweis",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19129",
+      "total_raised": 4360995.58,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 4360995.58,
+        "disbursements": 1396396.85,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 277186.2,
+        "other_political_committee_contributions": 4750
+      },
+      "bio": "James D. Oberweis (born June 10, 1946) is an American businessman, investment manager, and politician from the state of Illinois. The former owner of Oberweis Dairy in North Aurora near Chicago, he served as a member of the Illinois Senate, representing the 25th district from 2013 to 2021.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 116964.07999999999,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 17500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 10000,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 10000,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 5500,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 4470.51,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 3500,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 3300,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 2041.02,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 1500,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "MURTLOW, JIM",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00898973",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHWARTZWALD, SUSAN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00898973",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHWARTZWALD, KEITH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00898973",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PRODMOS, MARILYN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00898973",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PRODMOS, CHADWICK",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00898973",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "OBERWEIS, TRISH",
+          "donor_type": "individual",
+          "industry": "Education",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00898973",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "OBERWEIS, JOE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00898973",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "OBERWEIS, JAMES MR.",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00898973",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "OBERWEIS, ASHLEIGH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00898973",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MCLENNAN, BOB",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00898973",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Mike Pedersen",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "mike-pedersen",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19145",
+      "total_raised": 56071,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 56071,
+        "disbursements": 33367.14,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 46071,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 25712,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 7150,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Transportation",
+          "amount": 2000,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 1000,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 1000,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 500,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 500,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "VAN HOECKE, MATTHEW",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00904490",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WRIGHT, COLEMAN",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00904490",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHLITTEN, PAMELA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3000,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00904490",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WRIGHT, BRIAN",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 2900,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00904490",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WILKINSON, SPUD",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00904490",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WILKINSON, SPUD",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00904490",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WHITTED, MICHAEL",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1112,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00904490",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "RICE, JOE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00904490",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BRENNAN, STEVE",
+          "donor_type": "individual",
+          "industry": "Transportation",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00904490",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "VADYAK, ANDY",
+          "donor_type": "individual",
+          "industry": "Transportation",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00904490",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Linda J Sawyer",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "linda-j-sawyer",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19301",
+      "bio": "DNY, formerly Deutsch NY. is an American ad agency headquartered in New York City. The agency was founded by David Deutsch in 1969 as David Deutsch Associates, Inc. In 1989, the company name changed to Deutsch Inc. when Deutsch's son, Donny Deutsch, took over the agency.",
+      "campaign_website": "https://wearedny.com",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Jim Schwartzel",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "jim-schwartzel",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19137",
+      "total_raised": 1733843.46,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1733843.46,
+        "disbursements": 258443.82,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 719896.12,
+        "other_political_committee_contributions": 9500
+      },
+      "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 154000,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 42000,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 36646.15,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 21000,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Transportation",
+          "amount": 14000,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 14000,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 14000,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 14000,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Agriculture",
+          "amount": 14000,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 7000,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "SCHWARTZEL, JIM",
+          "donor_type": "individual",
+          "industry": "Media & Entertainment",
+          "amount_total": 5000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00901967",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHWARTZEL, JIM",
+          "donor_type": "individual",
+          "industry": "Media & Entertainment",
+          "amount_total": 3646.15,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00901967",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SWANSON, MARK",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00901967",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SHIRLEY, CHARLOTTE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00901967",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SHIRLEY, CHARLOTTE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00901967",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHWARTZEL, MIRIAM",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00901967",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHWARTZEL, MIRIAM",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00901967",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHWARTZEL, JOSEPH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00901967",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHWARTZEL, JOSEPH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00901967",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PLUM, LAUREN",
+          "donor_type": "individual",
+          "industry": "Education",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00901967",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Louis Shenker",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "louis-shenker",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19236",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "John Strand",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "john-strand",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19194",
+      "total_raised": 82893.31,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 82893.31,
+        "disbursements": 64978.81,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 59913.46,
+        "other_political_committee_contributions": 3500
+      },
+      "bio": "John Gregory Strand is a contemporary American playwright. At times he has published under the name \"J.G. Strand\". Among his plays are Lincolnesque, Three Nights in Tehran, The Diaries, Otabenga, and The Originalist.\n Tom Walker is an adaption of The Devil and Tom Walker by Washington Irving. He has also written a number of English-language adaptions of plays written in French: among these are Lovers and Executioners (Antoine Jacob de Montfleury's La Femme Juge et Partie), for which he won the 1999 Charles MacArthur Award; The Miser (Molière); Lorenzaccio (Alfred de Musset); Hat! (Eugène Labic",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 37861.04,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 6000,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Defense & Aerospace",
+          "amount": 3500,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 2500,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 2000,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Transportation",
+          "amount": 1000,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 708.65,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "STRANDQUIST, CLAIRE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00925024",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PREDEY, MD, THOMAS",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00925024",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MELLOR, MAGDALENA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00925024",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LINDSAY, STEPHANIE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00925024",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LINDSAY, BERT",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00925024",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LANGEMAN, GARY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00925024",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STRANDQUIST, JACK",
+          "donor_type": "individual",
+          "industry": "Defense & Aerospace",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00925024",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "GIERSCH, RICHAELE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00925024",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "GIERSCH, PATRICK",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00925024",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BLAIR, HOWARD",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3125.31,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00925024",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Richard Stephen Iii Youschak",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "richard-stephen-iii-youschak",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-r-2026",
+      "fec_candidate_id": "H6FL19285",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-19-r-2026",
+    "state": "FL",
+    "district": "19",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R"
+  }
+}

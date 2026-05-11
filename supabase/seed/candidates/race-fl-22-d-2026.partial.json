@@ -1,0 +1,27 @@
+{
+  "race_id": "race-fl-22-d-2026",
+  "candidates": [
+    {
+      "name": "Ian Scott Blake",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "ian-scott-blake",
+      "incumbent": false,
+      "state": "FL",
+      "district": "22",
+      "office": "U.S. House",
+      "race_id": "race-fl-22-d-2026",
+      "fec_candidate_id": "H6FL22115"
+    }
+  ],
+  "race": {
+    "id": "race-fl-22-d-2026",
+    "state": "FL",
+    "district": "22",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}

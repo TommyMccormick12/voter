@@ -1,0 +1,37 @@
+{
+  "race_id": "race-fl-09-d-2026",
+  "candidates": [
+    {
+      "name": "Darren Soto",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "darren-soto",
+      "incumbent": true,
+      "state": "FL",
+      "district": "09",
+      "office": "U.S. House",
+      "race_id": "race-fl-09-d-2026",
+      "fec_candidate_id": "H6FL09179",
+      "total_raised": 1241415.11,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1241415.11,
+        "disbursements": 422928.05,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 353345.92,
+        "other_political_committee_contributions": 885500
+      }
+    }
+  ],
+  "race": {
+    "id": "race-fl-09-d-2026",
+    "state": "FL",
+    "district": "09",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}

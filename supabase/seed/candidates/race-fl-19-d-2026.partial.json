@@ -1,0 +1,288 @@
+{
+  "race_id": "race-fl-19-d-2026",
+  "candidates": [
+    {
+      "name": "Victor M. Arias",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "victor-m-arias",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-d-2026",
+      "fec_candidate_id": "H6FL19277",
+      "total_raised": 22813.19,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 22813.19,
+        "disbursements": 4241.97,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 2313.19,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "Below is a partial list of Minor League Baseball players in the Toronto Blue Jays and rosters of their minor league affiliates.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 900,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 250,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "ARIAS, ANGELETTE",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00934174",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "EDISON, KEITH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 300,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00934174",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SEATTER, JANE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00934174",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KOEPPEL, STEVE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00934174",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DAVIS, DENISE",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00934174",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "EDISON, KEITH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 100,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00934174",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Jared Martin Kane",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "jared-martin-kane",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-d-2026",
+      "fec_candidate_id": "H6FL19202",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Howard Sapp",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "howard-sapp",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-d-2026",
+      "fec_candidate_id": "H6FL19111",
+      "total_raised": 32473.39,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 32473.39,
+        "disbursements": 35205.17,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 32273.39,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 15174,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 1350,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 480,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "SAPP, HOWARD",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00898411",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SAPP, HOWARD",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2299,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00898411",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SAPP, HOWARD",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00898411",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SAPP, HOWARD",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00898411",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SAPP, HOWARD",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00898411",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SAPP, HOWARD",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00898411",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "NATHAN, KAREN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00898411",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "NATHAN, JAMES",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00898411",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WHITLEY, PAMELA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00898411",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "REDD, SOSA",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00898411",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-19-d-2026",
+    "state": "FL",
+    "district": "19",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}
