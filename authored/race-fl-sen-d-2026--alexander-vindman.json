@@ -1,0 +1,44 @@
+{
+  "slug": "alexander-vindman",
+  "website": "https://alexvindman.com",
+  "bio": "Alex Vindman is a former U.S. Army officer with over 21 years of service who was wounded in Iraq and awarded a Purple Heart. He previously served as a National Security professional on the National Security Council, where he became known for his testimony during the first Trump impeachment hearings. He is running for U.S. Senate in Florida as a Democrat on a 'Florida First Agenda'.",
+  "key_messages": [
+    "Lower everyday costs — groceries, energy, insurance — and ensure wages keep pace with inflation; deliver tax relief for middle-class families and close loopholes for tax cheats",
+    "Ban congressional stock trading with jail time for violators; oppose dark money in elections and support repealing Citizens United",
+    "Build more affordable housing, cut construction red tape, support first-time homebuyers, and confront corporate investors treating housing as a speculative asset",
+    "Address Florida's home insurance crisis through market competition, accountability for insurers, and investment in resilience and disaster mitigation",
+    "Defend and strengthen the Affordable Care Act, lower prescription drug prices, oppose Big Pharma influence, and add dental and eye coverage to Medicare",
+    "Invest in teachers, modern classrooms, and career and technical education; resist federal cuts and political interference in public schools",
+    "Oppose wasteful 'forever wars' while defending American interests with clear-eyed strategy; increase VA funding and support veteran transition programs"
+  ],
+  "campaign_themes": [
+    {
+      "heading": "economy",
+      "text": "Lower everyday costs — groceries, energy, insurance — while ensuring wages keep pace with inflation. Supports tax relief for middle-class families, making the tax system fair for everyone, and closing loopholes for tax cheats."
+    },
+    {
+      "heading": "criminal_justice",
+      "text": "Ban congressional stock trading with jail time for violators. Opposes dark money in elections and supports repealing Citizens United: 'if you want to clean up corruption, you don't start by cashing corporate checks.'"
+    },
+    {
+      "heading": "housing",
+      "text": "Build more affordable housing, cut red tape for construction, and support first-time homebuyers. Plans to confront corporate investors treating housing as 'purely a speculative asset.'"
+    },
+    {
+      "heading": "housing",
+      "text": "Address Florida's home insurance crisis by increasing market competition, holding insurers accountable, and investing in resilience and disaster mitigation to reduce underlying premium costs."
+    },
+    {
+      "heading": "healthcare",
+      "text": "Defend and strengthen the Affordable Care Act, lower drug prices, and expand access to quality care. Opposes Big Pharma's influence and supports adding dental and eye coverage to Medicare."
+    },
+    {
+      "heading": "education",
+      "text": "Invest in teachers, modern classrooms, and career and technical education while resisting federal cuts and politicization of public schools."
+    },
+    {
+      "heading": "foreign_policy",
+      "text": "Drawing on military experience, opposes wasteful 'forever wars' and advocates for clear-eyed strategy that defends American interests. Prioritizes increasing VA funding and supporting veteran transition programs."
+    }
+  ]
+}

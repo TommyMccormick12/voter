@@ -378,13 +378,13 @@
           "summary": "Make college accessible through federal aid with flexible repayment, state funding, scholarships, and grants.",
           "source_url": "http://congressmanwithguts.com",
           "source_excerpt": "Grayson supports making college accessible through multiple funding sources including federal aid with flexible repayment plans, state funding, university scholarships, and private grants to ensure no American skips college due to financial troubles.",
-          "confidence": 92
+          "confidence": 90
         },
         {
           "stance_id": "alan-mark-grayson-healthcare",
           "issue_slug": "healthcare",
           "stance": "support",
-          "summary": "Make healthcare affordable through insurance comparison, employer plans, and careful budgeting strategies.",
+          "summary": "Make healthcare more affordable through plan comparison, employer coverage, and careful budgeting.",
           "source_url": "http://congressmanwithguts.com",
           "source_excerpt": "Grayson advocates for making healthcare more affordable by comparing insurance plans, utilizing employer-provided plans, and budgeting carefully to reduce costs while maintaining adequate health coverage.",
           "confidence": 85
@@ -393,19 +393,19 @@
           "stance_id": "alan-mark-grayson-economy",
           "issue_slug": "economy",
           "stance": "support",
-          "summary": "Improve financial literacy through government education, institutions, media, and school-based programs.",
+          "summary": "Improve financial literacy through government education programs, institutions, media, and school-based instruction.",
           "source_url": "http://congressmanwithguts.com",
           "source_excerpt": "Grayson supports improving financial literacy among Americans through government education programs, financial institutions, media, and school-based financial education to help citizens manage money and understand economic matters.",
-          "confidence": 88
+          "confidence": 85
         },
         {
           "stance_id": "alan-mark-grayson-foreign_policy",
           "issue_slug": "foreign_policy",
-          "stance": "strongly_oppose",
+          "stance": "oppose",
           "summary": "Oppose endless war and war profiteering.",
           "source_url": "http://congressmanwithguts.com",
           "source_excerpt": "Grayson opposes endless war and war profiteering based on his public messaging.",
-          "confidence": 82
+          "confidence": 80
         }
       ],
       "active": true,
@@ -1085,25 +1085,25 @@
           "stance_id": "angela-nixon-economy",
           "issue_slug": "economy",
           "stance": "strongly_support",
-          "summary": "Crack down on corporate price-gouging through federal legislation and break up monopolies driving up costs.",
+          "summary": "Crack down on corporate price-gouging and monopolies through federal legislation to drive down costs.",
           "source_url": "https://angienixon.com/",
           "confidence": 95,
-          "track_record_note": "Healthcare & Pharma industry contributed $6,550 to campaign despite stated opposition to corporate consolidation and price-gouging in pharma sector."
+          "track_record_note": "Healthcare & Pharma donors ($6,550) conflict with stated opposition to corporate consolidation in pharma sector."
         },
         {
           "stance_id": "angela-nixon-healthcare",
           "issue_slug": "healthcare",
           "stance": "strongly_support",
-          "summary": "Support Medicare for All universal single-payer system and use federal power to cap and negotiate prescription drug costs.",
+          "summary": "Medicare for All universal single-payer system with federal power to cap and negotiate drug costs.",
           "source_url": "https://angienixon.com/",
           "confidence": 95,
-          "track_record_note": "Healthcare & Pharma industry contributed $6,550 to campaign despite stated support for aggressive prescription drug cost negotiation and single-payer model."
+          "track_record_note": "Healthcare & Pharma donors ($6,550) conflict with stated support for aggressive drug price negotiation and single-payer system."
         },
         {
           "stance_id": "angela-nixon-education",
           "issue_slug": "education",
           "stance": "strongly_support",
-          "summary": "Fully fund public education, end voucher schemes, invest in Title I funding, and raise educator salaries.",
+          "summary": "Fully fund public education, end voucher schemes, increase Title I funding, and raise educator salaries.",
           "source_url": "https://angienixon.com/",
           "confidence": 95
         },
@@ -1111,7 +1111,7 @@
           "stance_id": "angela-nixon-housing",
           "issue_slug": "housing",
           "stance": "strongly_support",
-          "summary": "Housing is a right; fund and build affordable housing at scale with down-payment assistance to prevent displacement.",
+          "summary": "Housing as a right; fund and build affordable housing at scale with down-payment assistance.",
           "source_url": "https://angienixon.com/",
           "confidence": 95
         },
@@ -1119,7 +1119,7 @@
           "stance_id": "angela-nixon-criminal_justice",
           "issue_slug": "criminal_justice",
           "stance": "strongly_support",
-          "summary": "Enact real police accountability legislation and protect the rights of Black communities without compromise.",
+          "summary": "Real police accountability legislation and uncompromising protection of Black communities' rights.",
           "source_url": "https://angienixon.com/",
           "confidence": 95
         },
@@ -1127,7 +1127,7 @@
           "stance_id": "angela-nixon-foreign_policy",
           "issue_slug": "foreign_policy",
           "stance": "oppose",
-          "summary": "Oppose AIPAC influence and special interest control of U.S. foreign policy; ensure foreign policy answers to American people.",
+          "summary": "Oppose AIPAC influence and special interest control; foreign policy must answer to American people.",
           "source_url": "https://angienixon.com/",
           "confidence": 90
         }
@@ -1188,7 +1188,7 @@
         "individual_contributions": 8021891.6,
         "other_political_committee_contributions": 166050
       },
-      "bio": "Alexander Semyon Vindman (born Aleksandr Semyonovich Vindman,[a] June 6, 1975) is a retired United States Army lieutenant colonel who was the Director of European Affairs for the United States National Security Council (NSC) until he was reassigned on February 7, 2020. He came to national attention in October 2019 as a key witness before the United States Congress regarding the Trump–Ukraine scandal. His testimony revealed that he, himself, had triggered the House inquiry, and provided evidence that resulted in a charge of abuse of power in the first impeachment of Donald Trump.",
+      "bio": "Alex Vindman is a former U.S. Army officer with over 21 years of service who was wounded in Iraq and awarded a Purple Heart. He previously served as a National Security professional on the National Security Council, where he became known for his testimony during the first Trump impeachment hearings. He is running for U.S. Senate in Florida as a Democrat on a 'Florida First Agenda'.",
       "campaign_website": "http://alexvindman.com",
       "top_industries": [
         {
@@ -1364,7 +1364,99 @@
           "data_source": "fec"
         }
       ],
-      "voting_record": []
+      "voting_record": [],
+      "website": "https://alexvindman.com",
+      "key_messages": [
+        "Lower everyday costs — groceries, energy, insurance — and ensure wages keep pace with inflation; deliver tax relief for middle-class families and close loopholes for tax cheats",
+        "Ban congressional stock trading with jail time for violators; oppose dark money in elections and support repealing Citizens United",
+        "Build more affordable housing, cut construction red tape, support first-time homebuyers, and confront corporate investors treating housing as a speculative asset",
+        "Address Florida's home insurance crisis through market competition, accountability for insurers, and investment in resilience and disaster mitigation",
+        "Defend and strengthen the Affordable Care Act, lower prescription drug prices, oppose Big Pharma influence, and add dental and eye coverage to Medicare",
+        "Invest in teachers, modern classrooms, and career and technical education; resist federal cuts and political interference in public schools",
+        "Oppose wasteful 'forever wars' while defending American interests with clear-eyed strategy; increase VA funding and support veteran transition programs"
+      ],
+      "campaign_themes": [
+        {
+          "heading": "economy",
+          "text": "Lower everyday costs — groceries, energy, insurance — while ensuring wages keep pace with inflation. Supports tax relief for middle-class families, making the tax system fair for everyone, and closing loopholes for tax cheats."
+        },
+        {
+          "heading": "criminal_justice",
+          "text": "Ban congressional stock trading with jail time for violators. Opposes dark money in elections and supports repealing Citizens United: 'if you want to clean up corruption, you don't start by cashing corporate checks.'"
+        },
+        {
+          "heading": "housing",
+          "text": "Address Florida's home insurance crisis by increasing market competition, holding insurers accountable, and investing in resilience and disaster mitigation to reduce underlying premium costs."
+        },
+        {
+          "heading": "healthcare",
+          "text": "Defend and strengthen the Affordable Care Act, lower drug prices, and expand access to quality care. Opposes Big Pharma's influence and supports adding dental and eye coverage to Medicare."
+        },
+        {
+          "heading": "education",
+          "text": "Invest in teachers, modern classrooms, and career and technical education while resisting federal cuts and politicization of public schools."
+        },
+        {
+          "heading": "foreign_policy",
+          "text": "Drawing on military experience, opposes wasteful 'forever wars' and advocates for clear-eyed strategy that defends American interests. Prioritizes increasing VA funding and supporting veteran transition programs."
+        }
+      ],
+      "platform_source": "hand_authored",
+      "platform_authored_at": "2026-05-11T22:53:05.195Z",
+      "top_stances": [
+        {
+          "stance_id": "alexander-vindman-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Lower everyday costs for groceries, energy, and insurance. Ensure wages keep pace with inflation. Provide middle-class tax relief and close tax loopholes.",
+          "source_url": "http://alexvindman.com",
+          "confidence": 95,
+          "track_record_note": "Top donor industries include Finance & Banking ($63,000), which may conflict with stated commitment to close tax loopholes and ensure fair taxation."
+        },
+        {
+          "stance_id": "alexander-vindman-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Build affordable housing, cut red tape, support first-time homebuyers. Confront corporate investors treating housing as speculative asset.",
+          "source_url": "http://alexvindman.com",
+          "confidence": 95
+        },
+        {
+          "stance_id": "alexander-vindman-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Defend and strengthen the Affordable Care Act. Lower prescription drug prices, oppose Big Pharma influence, add dental and eye coverage to Medicare.",
+          "source_url": "http://alexvindman.com",
+          "confidence": 95,
+          "track_record_note": "Top donor industry includes Healthcare & Pharma ($21,000), potentially conflicting with stated opposition to Big Pharma influence in healthcare policy."
+        },
+        {
+          "stance_id": "alexander-vindman-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Invest in teachers, modern classrooms, and career-technical education. Resist federal cuts and political interference in public schools.",
+          "source_url": "http://alexvindman.com",
+          "confidence": 90
+        },
+        {
+          "stance_id": "alexander-vindman-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "support",
+          "summary": "Oppose wasteful forever wars. Defend American interests with clear-eyed strategy. Increase VA funding and support veteran transition programs.",
+          "source_url": "http://alexvindman.com",
+          "confidence": 95
+        },
+        {
+          "stance_id": "alexander-vindman-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "strongly_support",
+          "summary": "Ban congressional stock trading with jail time for violators. Oppose dark money and support repealing Citizens United to fight corruption.",
+          "source_url": "http://alexvindman.com",
+          "confidence": 95
+        }
+      ],
+      "active": true,
+      "activated_at": "2026-05-11T22:53:29.091Z"
     },
     {
       "name": "Joshua Weil",
