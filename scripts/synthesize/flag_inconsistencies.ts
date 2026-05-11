@@ -99,8 +99,20 @@ function main() {
       }
 
       // Also flag contradiction-keyword notes with no citations at all
-      // (catches "voted NAY despite stance" without specific bill ref)
-      if (/contradict|despite\b|⚠/i.test(note) && citations.length === 0) {
+      // (catches "voted NAY despite stance" without specific bill ref).
+      //
+      // Exception: donor/industry-based contradictions cite top_industries
+      // data, not bill_ids — those legitimately have no track_record_citations.
+      // The donor data IS the source; the contradiction is between stated
+      // stance and the candidate's own funding profile, which renders inline
+      // in the scorecard's "Funded by" section so the user can verify.
+      const isDonorContradiction =
+        /donor|industry|contribut|pac|funding|funded|fundrais/i.test(note);
+      if (
+        /contradict|despite\b|⚠/i.test(note) &&
+        citations.length === 0 &&
+        !isDonorContradiction
+      ) {
         flags.push({
           candidate: c.name,
           issue_slug: s.issue_slug,

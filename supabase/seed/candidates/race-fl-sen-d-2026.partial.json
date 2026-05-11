@@ -319,7 +319,97 @@
           "data_source": "fec"
         }
       ],
-      "voting_record": []
+      "voting_record": [],
+      "key_messages": [
+        "Grayson supports improving financial literacy among Americans through government education programs, financial institutions, media, and school-based financial education to help citizens manage money and understand economic matters.",
+        "Grayson advocates for making healthcare more affordable by comparing insurance plans, utilizing employer-provided plans, and budgeting carefully to reduce costs while maintaining adequate health coverage.",
+        "Grayson supports making college accessible through multiple funding sources including federal aid with flexible repayment plans, state funding, university scholarships, and private grants to ensure no American skips college due to financial troubles.",
+        "Grayson opposes endless war and war profiteering based on his public messaging."
+      ],
+      "campaign_themes": [
+        {
+          "heading": "economy",
+          "text": "Grayson supports improving financial literacy among Americans through government education programs, financial institutions, media, and school-based financial education to help citizens manage money and understand economic matters."
+        },
+        {
+          "heading": "healthcare",
+          "text": "Grayson advocates for making healthcare more affordable by comparing insurance plans, utilizing employer-provided plans, and budgeting carefully to reduce costs while maintaining adequate health coverage."
+        },
+        {
+          "heading": "education",
+          "text": "Grayson supports making college accessible through multiple funding sources including federal aid with flexible repayment plans, state funding, university scholarships, and private grants to ensure no American skips college due to financial troubles."
+        },
+        {
+          "heading": "foreign_policy",
+          "text": "Grayson opposes endless war and war profiteering based on his public messaging."
+        }
+      ],
+      "platform_excerpts": [
+        {
+          "issue_slug": "economy",
+          "excerpt": "The government is involved in educating about the economy... We introduce financial education in schools and colleges. From an early age, our children learn about salaries, prices, and even taxes.",
+          "source": "campaign_site",
+          "source_url": "http://congressmanwithguts.com/issues"
+        },
+        {
+          "issue_slug": "healthcare",
+          "excerpt": "Look at insurance plans. Compare the options of bronze, silver, gold, and platinum insurance... Make sure you pay for the services you need... look at what your employer can provide you.",
+          "source": "campaign_site",
+          "source_url": "http://congressmanwithguts.com/issues"
+        },
+        {
+          "issue_slug": "education",
+          "excerpt": "The government encourages higher education. Therefore, it provides flexible repayment plans... there are plenty of options to get your child through college... No American should skip college because of financial troubles!",
+          "source": "campaign_site",
+          "source_url": "http://congressmanwithguts.com/issues"
+        },
+        {
+          "issue_slug": "foreign_policy",
+          "excerpt": "Grayson on Endless War and War Profiteering",
+          "source": "campaign_site",
+          "source_url": "http://congressmanwithguts.com/issues"
+        }
+      ],
+      "top_stances": [
+        {
+          "stance_id": "alan-mark-grayson-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Make college accessible through federal aid with flexible repayment, state funding, scholarships, and grants.",
+          "source_url": "http://congressmanwithguts.com",
+          "source_excerpt": "Grayson supports making college accessible through multiple funding sources including federal aid with flexible repayment plans, state funding, university scholarships, and private grants to ensure no American skips college due to financial troubles.",
+          "confidence": 92
+        },
+        {
+          "stance_id": "alan-mark-grayson-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Make healthcare affordable through insurance comparison, employer plans, and careful budgeting strategies.",
+          "source_url": "http://congressmanwithguts.com",
+          "source_excerpt": "Grayson advocates for making healthcare more affordable by comparing insurance plans, utilizing employer-provided plans, and budgeting carefully to reduce costs while maintaining adequate health coverage.",
+          "confidence": 85
+        },
+        {
+          "stance_id": "alan-mark-grayson-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Improve financial literacy through government education, institutions, media, and school-based programs.",
+          "source_url": "http://congressmanwithguts.com",
+          "source_excerpt": "Grayson supports improving financial literacy among Americans through government education programs, financial institutions, media, and school-based financial education to help citizens manage money and understand economic matters.",
+          "confidence": 88
+        },
+        {
+          "stance_id": "alan-mark-grayson-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_oppose",
+          "summary": "Oppose endless war and war profiteering.",
+          "source_url": "http://congressmanwithguts.com",
+          "source_excerpt": "Grayson opposes endless war and war profiteering based on his public messaging.",
+          "confidence": 82
+        }
+      ],
+      "active": true,
+      "activated_at": "2026-05-11T02:14:52.587Z"
     },
     {
       "name": "Jennifer Jenkins",
@@ -917,7 +1007,133 @@
           "data_source": "fec"
         }
       ],
-      "voting_record": []
+      "voting_record": [],
+      "key_messages": [
+        "Nixon supports cracking down on corporate price-gouging through federal legislation and breaking up corporate consolidation and monopolies driving up costs.",
+        "Nixon supports Medicare for All as a universal, single-payer system and will use federal power to cap and negotiate prescription drug costs.",
+        "Nixon supports fully funding public education, ending voucher schemes, investing in Title I funding, and raising educator salaries.",
+        "Nixon believes housing is a right and supports funding and building affordable housing at scale with down-payment assistance to prevent displacement.",
+        "Nixon supports real police accountability legislation and protecting the rights of Black communities without compromise.",
+        "Nixon opposes AIPAC influence and special interest control of U.S. foreign policy, asserting that foreign policy must answer to the American people."
+      ],
+      "campaign_themes": [
+        {
+          "heading": "economy",
+          "text": "Nixon supports cracking down on corporate price-gouging through federal legislation and breaking up corporate consolidation and monopolies driving up costs."
+        },
+        {
+          "heading": "healthcare",
+          "text": "Nixon supports Medicare for All as a universal, single-payer system and will use federal power to cap and negotiate prescription drug costs."
+        },
+        {
+          "heading": "education",
+          "text": "Nixon supports fully funding public education, ending voucher schemes, investing in Title I funding, and raising educator salaries."
+        },
+        {
+          "heading": "housing",
+          "text": "Nixon believes housing is a right and supports funding and building affordable housing at scale with down-payment assistance to prevent displacement."
+        },
+        {
+          "heading": "criminal_justice",
+          "text": "Nixon supports real police accountability legislation and protecting the rights of Black communities without compromise."
+        },
+        {
+          "heading": "foreign_policy",
+          "text": "Nixon opposes AIPAC influence and special interest control of U.S. foreign policy, asserting that foreign policy must answer to the American people."
+        }
+      ],
+      "platform_excerpts": [
+        {
+          "issue_slug": "economy",
+          "excerpt": "We will pass and enforce federal legislation to stop corporations from inflating prices on groceries, fuel, and essential goods to pad their bottom line... We will take on the corporate consolidation and monopolies that are driving up costs across every sector of daily life.",
+          "source": "campaign_site",
+          "source_url": "https://angienixon.com/priorities"
+        },
+        {
+          "issue_slug": "healthcare",
+          "excerpt": "Medicare for All: Healthcare is a right. Angie will fight for a universal, single-payer system. No more insurance companies standing between you and your doctor. Lower Drug Prices Now: Use federal power to cap and negotiate prescription drug costs.",
+          "source": "campaign_site",
+          "source_url": "https://angienixon.com/priorities"
+        },
+        {
+          "issue_slug": "education",
+          "excerpt": "Fully Fund Public Education: End the diversion of public dollars into private voucher schemes. We will increase Title I funding and invest where the need is greatest... Raise salaries, reduce burnout, and guarantee mental health resources in every school.",
+          "source": "campaign_site",
+          "source_url": "https://angienixon.com/priorities"
+        },
+        {
+          "issue_slug": "housing",
+          "excerpt": "Housing is a Right: We will fund and build affordable housing at scale, expand down-payment assistance, and stop the displacement of working families from the communities they built.",
+          "source": "campaign_site",
+          "source_url": "https://angienixon.com/priorities"
+        },
+        {
+          "issue_slug": "criminal_justice",
+          "excerpt": "Defend Civil Rights: Pass real police accountability legislation and protect the rights of our Black communities, immigrant and LGBTQ+ neighbors without compromise.",
+          "source": "campaign_site",
+          "source_url": "https://angienixon.com/priorities"
+        },
+        {
+          "issue_slug": "foreign_policy",
+          "excerpt": "No AIPAC or Special Interest Control: Angie will not take money from AIPAC or any organization that expects to shape U.S. policy without accountability to the people she represents. Foreign policy must answer to the American people—not to a lobbying machine.",
+          "source": "campaign_site",
+          "source_url": "https://angienixon.com/priorities"
+        }
+      ],
+      "top_stances": [
+        {
+          "stance_id": "angela-nixon-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Crack down on corporate price-gouging through federal legislation and break up monopolies driving up costs.",
+          "source_url": "https://angienixon.com/",
+          "confidence": 95,
+          "track_record_note": "Healthcare & Pharma industry contributed $6,550 to campaign despite stated opposition to corporate consolidation and price-gouging in pharma sector."
+        },
+        {
+          "stance_id": "angela-nixon-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Support Medicare for All universal single-payer system and use federal power to cap and negotiate prescription drug costs.",
+          "source_url": "https://angienixon.com/",
+          "confidence": 95,
+          "track_record_note": "Healthcare & Pharma industry contributed $6,550 to campaign despite stated support for aggressive prescription drug cost negotiation and single-payer model."
+        },
+        {
+          "stance_id": "angela-nixon-education",
+          "issue_slug": "education",
+          "stance": "strongly_support",
+          "summary": "Fully fund public education, end voucher schemes, invest in Title I funding, and raise educator salaries.",
+          "source_url": "https://angienixon.com/",
+          "confidence": 95
+        },
+        {
+          "stance_id": "angela-nixon-housing",
+          "issue_slug": "housing",
+          "stance": "strongly_support",
+          "summary": "Housing is a right; fund and build affordable housing at scale with down-payment assistance to prevent displacement.",
+          "source_url": "https://angienixon.com/",
+          "confidence": 95
+        },
+        {
+          "stance_id": "angela-nixon-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "strongly_support",
+          "summary": "Enact real police accountability legislation and protect the rights of Black communities without compromise.",
+          "source_url": "https://angienixon.com/",
+          "confidence": 95
+        },
+        {
+          "stance_id": "angela-nixon-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "oppose",
+          "summary": "Oppose AIPAC influence and special interest control of U.S. foreign policy; ensure foreign policy answers to American people.",
+          "source_url": "https://angienixon.com/",
+          "confidence": 90
+        }
+      ],
+      "active": true,
+      "activated_at": "2026-05-11T02:14:54.274Z"
     },
     {
       "name": "Dennis Gene Mr Stevens",
