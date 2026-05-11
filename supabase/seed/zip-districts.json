@@ -1,87 +1,5587 @@
 {
-  "_note": "Hand-mapped sample of FL zips → districts from public 2022 redistricting maps. Replace with full Census Geocoding output once src/lib/api-clients/census.ts is fixed to handle bare zips (see Phase 2C plan §15.5 follow-up). Schema: { state, district } per zip; null for zips we haven't mapped yet (the lookup treats null/missing the same).",
-
-  "32501": { "state": "FL", "district": "01" },
-  "32502": { "state": "FL", "district": "01" },
-  "32504": { "state": "FL", "district": "01" },
-  "32506": { "state": "FL", "district": "01" },
-
-  "32301": { "state": "FL", "district": "02" },
-  "32303": { "state": "FL", "district": "02" },
-
-  "32601": { "state": "FL", "district": "03" },
-  "32608": { "state": "FL", "district": "03" },
-
-  "32202": { "state": "FL", "district": "04" },
-  "32204": { "state": "FL", "district": "04" },
-
-  "32257": { "state": "FL", "district": "05" },
-  "32084": { "state": "FL", "district": "05" },
-
-  "32114": { "state": "FL", "district": "06" },
-  "32174": { "state": "FL", "district": "06" },
-
-  "32708": { "state": "FL", "district": "07" },
-  "32779": { "state": "FL", "district": "07" },
-
-  "32901": { "state": "FL", "district": "08" },
-  "32935": { "state": "FL", "district": "08" },
-
-  "34741": { "state": "FL", "district": "09" },
-  "34744": { "state": "FL", "district": "09" },
-
-  "32801": { "state": "FL", "district": "10" },
-  "32803": { "state": "FL", "district": "10" },
-  "32804": { "state": "FL", "district": "10" },
-
-  "34785": { "state": "FL", "district": "11" },
-  "32159": { "state": "FL", "district": "11" },
-
-  "34689": { "state": "FL", "district": "12" },
-
-  "33701": { "state": "FL", "district": "13" },
-  "33704": { "state": "FL", "district": "13" },
-
-  "33602": { "state": "FL", "district": "14" },
-  "33606": { "state": "FL", "district": "14" },
-
-  "33510": { "state": "FL", "district": "15" },
-  "33611": { "state": "FL", "district": "15" },
-
-  "34205": { "state": "FL", "district": "16" },
-  "34232": { "state": "FL", "district": "16" },
-
-  "33825": { "state": "FL", "district": "17" },
-
-  "33952": { "state": "FL", "district": "18" },
-
-  "34103": { "state": "FL", "district": "19" },
-  "34134": { "state": "FL", "district": "19" },
-
-  "33311": { "state": "FL", "district": "20" },
-  "33409": { "state": "FL", "district": "20" },
-
-  "33401": { "state": "FL", "district": "21" },
-  "33480": { "state": "FL", "district": "21" },
-
-  "33301": { "state": "FL", "district": "22" },
-  "33304": { "state": "FL", "district": "22" },
-
-  "33020": { "state": "FL", "district": "23" },
-  "33024": { "state": "FL", "district": "23" },
-
-  "33161": { "state": "FL", "district": "24" },
-  "33181": { "state": "FL", "district": "24" },
-
-  "33012": { "state": "FL", "district": "25" },
-  "33126": { "state": "FL", "district": "25" },
-
-  "33178": { "state": "FL", "district": "26" },
-
-  "33101": { "state": "FL", "district": "27" },
-  "33125": { "state": "FL", "district": "27" },
-  "33135": { "state": "FL", "district": "27" },
-
-  "33032": { "state": "FL", "district": "28" },
-  "33034": { "state": "FL", "district": "28" }
+  "32003": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32004": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32006": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32007": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32008": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32009": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32011": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32013": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32024": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32025": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32033": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32034": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32035": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32038": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32040": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32041": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32042": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32043": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32044": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32046": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32050": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32052": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32053": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32054": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32055": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32056": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32058": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32059": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32060": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32061": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32062": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32063": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32064": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32065": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32066": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32067": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32068": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32071": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32073": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32080": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32081": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32082": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32083": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32084": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32085": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32086": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32087": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32091": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32092": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32094": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32095": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32096": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32097": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32099": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32102": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32105": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32110": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32111": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32112": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32113": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32114": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32115": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32117": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32118": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32119": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32120": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32121": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32122": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32124": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32125": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32126": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32127": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32128": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32129": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32130": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32131": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32132": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32133": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32134": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32135": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32136": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32137": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32138": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32139": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32140": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32141": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32145": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32147": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32148": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32158": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32159": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32160": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32162": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32163": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32164": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32168": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32169": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32170": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32173": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32174": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32175": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32176": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32177": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32178": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32179": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32180": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32181": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32182": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32183": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32185": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32187": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32189": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32190": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32192": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32193": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32195": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32198": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32202": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32203": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32204": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32205": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32206": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32207": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32208": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32209": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32210": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32211": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32212": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32214": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32216": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32217": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32218": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32219": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32220": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32221": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32222": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32223": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32224": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32225": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32226": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32227": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32228": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32229": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32233": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32234": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32235": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32236": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32238": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32239": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32240": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32241": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32244": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32245": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32246": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32247": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32250": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32254": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32255": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32256": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32257": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32258": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32259": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32260": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32266": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32277": {
+    "state": "FL",
+    "district": "05"
+  },
+  "32301": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32302": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32303": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32304": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32305": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32306": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32307": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32308": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32309": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32310": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32311": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32312": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32313": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32314": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32315": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32316": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32317": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32318": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32320": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32321": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32322": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32324": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32326": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32327": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32328": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32330": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32331": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32332": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32333": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32334": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32336": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32340": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32343": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32344": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32345": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32346": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32347": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32348": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32350": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32351": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32352": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32355": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32356": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32357": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32358": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32359": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32360": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32361": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32362": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32399": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32401": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32402": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32403": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32404": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32405": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32406": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32407": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32408": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32409": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32410": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32411": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32413": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32417": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32420": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32421": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32422": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32423": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32424": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32425": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32426": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32427": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32428": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32430": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32431": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32432": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32433": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32435": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32437": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32438": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32439": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32440": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32442": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32443": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32444": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32445": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32446": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32447": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32448": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32449": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32455": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32456": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32459": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32460": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32461": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32462": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32463": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32464": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32465": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32466": {
+    "state": "FL",
+    "district": "02"
+  },
+  "32501": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32502": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32503": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32504": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32505": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32506": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32507": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32508": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32509": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32511": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32512": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32513": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32514": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32516": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32520": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32522": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32523": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32524": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32526": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32530": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32531": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32533": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32534": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32535": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32536": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32538": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32539": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32540": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32541": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32542": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32544": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32547": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32548": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32549": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32550": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32559": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32560": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32561": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32562": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32563": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32564": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32565": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32566": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32567": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32568": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32569": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32570": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32571": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32572": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32577": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32578": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32579": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32580": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32583": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32588": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32591": {
+    "state": "FL",
+    "district": "01"
+  },
+  "32601": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32603": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32604": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32605": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32606": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32607": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32608": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32609": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32610": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32611": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32612": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32614": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32615": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32616": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32617": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32618": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32619": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32621": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32622": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32625": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32626": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32627": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32628": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32631": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32633": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32634": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32635": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32639": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32640": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32641": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32643": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32644": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32648": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32653": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32654": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32655": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32656": {
+    "state": "FL",
+    "district": "04"
+  },
+  "32658": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32662": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32663": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32664": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32666": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32667": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32668": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32669": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32680": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32681": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32683": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32686": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32692": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32693": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32694": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32696": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32697": {
+    "state": "FL",
+    "district": "03"
+  },
+  "32701": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32702": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32703": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32704": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32706": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32707": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32708": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32709": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32710": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32712": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32713": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32714": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32715": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32716": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32718": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32719": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32720": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32721": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32723": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32724": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32725": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32726": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32727": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32728": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32730": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32732": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32733": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32735": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32736": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32738": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32739": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32744": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32746": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32747": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32750": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32751": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32752": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32753": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32754": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32756": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32757": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32759": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32762": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32763": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32764": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32765": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32766": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32767": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32768": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32771": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32772": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32773": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32774": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32775": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32776": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32777": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32778": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32779": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32780": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32781": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32783": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32784": {
+    "state": "FL",
+    "district": "06"
+  },
+  "32789": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32790": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32791": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32792": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32793": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32794": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32795": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32796": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32798": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32799": {
+    "state": "FL",
+    "district": "07"
+  },
+  "32801": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32802": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32803": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32804": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32805": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32806": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32807": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32808": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32809": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32810": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32811": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32812": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32814": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32815": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32816": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32817": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32818": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32819": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32820": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32821": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32822": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32824": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32825": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32826": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32827": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32828": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32829": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32830": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32831": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32832": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32833": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32835": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32836": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32837": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32839": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32853": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32854": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32855": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32856": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32857": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32858": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32859": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32860": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32861": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32862": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32867": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32868": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32869": {
+    "state": "FL",
+    "district": "11"
+  },
+  "32872": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32877": {
+    "state": "FL",
+    "district": "09"
+  },
+  "32878": {
+    "state": "FL",
+    "district": "10"
+  },
+  "32899": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32901": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32902": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32903": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32904": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32905": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32906": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32907": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32908": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32909": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32910": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32911": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32912": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32920": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32922": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32923": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32924": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32925": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32926": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32927": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32931": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32932": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32934": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32935": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32936": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32937": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32940": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32941": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32948": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32949": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32950": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32951": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32952": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32953": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32954": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32955": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32956": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32957": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32958": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32959": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32960": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32961": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32962": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32963": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32964": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32965": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32966": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32967": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32968": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32969": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32970": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32971": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32976": {
+    "state": "FL",
+    "district": "08"
+  },
+  "32978": {
+    "state": "FL",
+    "district": "08"
+  },
+  "33001": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33002": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33004": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33008": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33009": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33010": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33011": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33012": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33013": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33014": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33015": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33016": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33017": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33018": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33019": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33020": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33021": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33022": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33023": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33024": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33025": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33026": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33027": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33028": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33029": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33030": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33031": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33032": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33033": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33034": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33035": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33036": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33037": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33039": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33040": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33041": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33042": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33043": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33045": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33050": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33051": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33052": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33054": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33055": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33056": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33060": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33061": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33062": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33063": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33064": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33065": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33066": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33067": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33068": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33069": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33070": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33071": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33073": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33074": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33075": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33076": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33077": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33081": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33082": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33083": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33084": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33090": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33092": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33093": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33097": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33101": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33106": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33109": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33112": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33114": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33116": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33119": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33122": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33124": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33125": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33126": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33127": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33128": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33129": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33130": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33131": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33132": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33133": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33134": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33135": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33136": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33137": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33138": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33139": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33140": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33141": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33142": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33143": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33144": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33145": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33146": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33147": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33149": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33150": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33152": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33153": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33154": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33155": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33156": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33157": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33158": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33160": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33161": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33162": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33163": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33164": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33165": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33166": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33167": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33168": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33169": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33170": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33172": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33173": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33174": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33175": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33176": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33177": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33178": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33179": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33180": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33181": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33182": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33183": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33184": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33185": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33186": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33187": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33189": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33190": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33191": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33192": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33193": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33194": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33195": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33196": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33197": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33198": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33199": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33206": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33222": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33231": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33233": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33234": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33238": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33239": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33242": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33243": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33245": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33247": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33255": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33256": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33257": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33261": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33265": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33266": {
+    "state": "FL",
+    "district": "26"
+  },
+  "33269": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33280": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33283": {
+    "state": "FL",
+    "district": "27"
+  },
+  "33296": {
+    "state": "FL",
+    "district": "28"
+  },
+  "33301": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33302": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33303": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33304": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33305": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33306": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33307": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33308": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33309": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33310": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33311": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33312": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33313": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33314": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33315": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33316": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33317": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33318": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33319": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33320": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33321": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33322": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33323": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33324": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33325": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33326": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33327": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33328": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33329": {
+    "state": "FL",
+    "district": "24"
+  },
+  "33330": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33331": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33332": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33334": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33335": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33338": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33339": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33345": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33346": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33348": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33351": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33355": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33359": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33388": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33394": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33401": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33402": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33403": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33404": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33405": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33406": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33407": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33408": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33409": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33410": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33411": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33412": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33413": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33414": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33415": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33416": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33417": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33418": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33419": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33420": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33421": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33422": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33424": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33425": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33426": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33427": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33428": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33429": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33430": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33431": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33432": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33433": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33434": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33435": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33436": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33437": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33438": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33440": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33441": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33442": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33443": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33444": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33445": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33446": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33448": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33449": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33454": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33455": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33458": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33459": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33460": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33461": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33462": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33463": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33464": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33465": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33466": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33467": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33468": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33469": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33470": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33471": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33472": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33473": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33474": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33475": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33476": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33477": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33478": {
+    "state": "FL",
+    "district": "21"
+  },
+  "33480": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33481": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33482": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33483": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33484": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33486": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33487": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33488": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33493": {
+    "state": "FL",
+    "district": "20"
+  },
+  "33496": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33497": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33498": {
+    "state": "FL",
+    "district": "22"
+  },
+  "33499": {
+    "state": "FL",
+    "district": "23"
+  },
+  "33508": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33509": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33510": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33511": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33513": {
+    "state": "FL",
+    "district": "11"
+  },
+  "33514": {
+    "state": "FL",
+    "district": "11"
+  },
+  "33521": {
+    "state": "FL",
+    "district": "11"
+  },
+  "33523": {
+    "state": "FL",
+    "district": "12"
+  },
+  "33524": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33525": {
+    "state": "FL",
+    "district": "12"
+  },
+  "33526": {
+    "state": "FL",
+    "district": "12"
+  },
+  "33527": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33530": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33534": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33538": {
+    "state": "FL",
+    "district": "11"
+  },
+  "33539": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33540": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33541": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33542": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33543": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33544": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33545": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33547": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33548": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33549": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33550": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33556": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33558": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33559": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33563": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33564": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33565": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33566": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33567": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33568": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33569": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33570": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33571": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33572": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33573": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33574": {
+    "state": "FL",
+    "district": "12"
+  },
+  "33575": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33576": {
+    "state": "FL",
+    "district": "12"
+  },
+  "33578": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33579": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33583": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33584": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33585": {
+    "state": "FL",
+    "district": "11"
+  },
+  "33586": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33587": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33592": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33593": {
+    "state": "FL",
+    "district": "12"
+  },
+  "33594": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33595": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33596": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33597": {
+    "state": "FL",
+    "district": "11"
+  },
+  "33598": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33601": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33602": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33603": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33604": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33605": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33606": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33607": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33609": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33610": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33611": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33612": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33613": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33614": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33615": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33616": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33617": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33618": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33619": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33620": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33621": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33622": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33623": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33624": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33625": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33626": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33629": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33630": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33634": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33635": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33637": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33646": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33647": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33672": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33673": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33674": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33675": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33677": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33679": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33680": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33681": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33682": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33684": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33685": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33687": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33688": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33689": {
+    "state": "FL",
+    "district": "16"
+  },
+  "33694": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33701": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33702": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33703": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33704": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33705": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33706": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33707": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33708": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33709": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33710": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33711": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33712": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33713": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33714": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33715": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33716": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33729": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33730": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33731": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33732": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33733": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33734": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33736": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33738": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33741": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33742": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33743": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33744": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33747": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33755": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33756": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33757": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33758": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33759": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33760": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33761": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33762": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33763": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33764": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33765": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33766": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33767": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33770": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33771": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33772": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33773": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33774": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33775": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33776": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33777": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33778": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33779": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33780": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33781": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33782": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33784": {
+    "state": "FL",
+    "district": "14"
+  },
+  "33785": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33786": {
+    "state": "FL",
+    "district": "13"
+  },
+  "33801": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33802": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33803": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33804": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33805": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33806": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33807": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33809": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33810": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33811": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33812": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33813": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33815": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33823": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33825": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33826": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33827": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33830": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33831": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33834": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33836": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33837": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33838": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33839": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33840": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33841": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33843": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33844": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33845": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33846": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33847": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33848": {
+    "state": "FL",
+    "district": "09"
+  },
+  "33849": {
+    "state": "FL",
+    "district": "15"
+  },
+  "33850": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33851": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33852": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33853": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33854": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33855": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33856": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33857": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33858": {
+    "state": "FL",
+    "district": "09"
+  },
+  "33859": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33860": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33862": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33863": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33865": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33867": {
+    "state": "FL",
+    "district": "09"
+  },
+  "33868": {
+    "state": "FL",
+    "district": "11"
+  },
+  "33870": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33871": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33872": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33873": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33875": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33876": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33880": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33881": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33882": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33883": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33884": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33885": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33890": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33896": {
+    "state": "FL",
+    "district": "09"
+  },
+  "33897": {
+    "state": "FL",
+    "district": "11"
+  },
+  "33898": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33901": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33902": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33903": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33904": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33905": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33906": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33907": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33908": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33909": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33910": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33912": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33913": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33914": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33915": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33916": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33917": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33918": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33919": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33920": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33921": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33922": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33924": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33928": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33929": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33930": {
+    "state": "FL",
+    "district": "25"
+  },
+  "33931": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33932": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33935": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33936": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33938": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33944": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33945": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33946": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33947": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33948": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33949": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33950": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33951": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33952": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33953": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33954": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33955": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33956": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33957": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33960": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33965": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33966": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33967": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33970": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33971": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33972": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33973": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33974": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33975": {
+    "state": "FL",
+    "district": "18"
+  },
+  "33976": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33980": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33981": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33982": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33983": {
+    "state": "FL",
+    "district": "17"
+  },
+  "33990": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33991": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33993": {
+    "state": "FL",
+    "district": "19"
+  },
+  "33994": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34101": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34102": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34103": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34104": {
+    "state": "FL",
+    "district": "26"
+  },
+  "34105": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34106": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34107": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34108": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34109": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34110": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34112": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34113": {
+    "state": "FL",
+    "district": "26"
+  },
+  "34114": {
+    "state": "FL",
+    "district": "26"
+  },
+  "34116": {
+    "state": "FL",
+    "district": "26"
+  },
+  "34117": {
+    "state": "FL",
+    "district": "26"
+  },
+  "34119": {
+    "state": "FL",
+    "district": "26"
+  },
+  "34120": {
+    "state": "FL",
+    "district": "26"
+  },
+  "34133": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34134": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34135": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34136": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34139": {
+    "state": "FL",
+    "district": "25"
+  },
+  "34140": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34141": {
+    "state": "FL",
+    "district": "28"
+  },
+  "34142": {
+    "state": "FL",
+    "district": "26"
+  },
+  "34145": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34146": {
+    "state": "FL",
+    "district": "19"
+  },
+  "34201": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34202": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34203": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34204": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34205": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34206": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34207": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34208": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34209": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34210": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34211": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34212": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34215": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34216": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34217": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34219": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34220": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34221": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34222": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34223": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34224": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34228": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34229": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34230": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34231": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34232": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34233": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34234": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34235": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34236": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34237": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34238": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34239": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34240": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34241": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34242": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34243": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34249": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34250": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34251": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34260": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34264": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34266": {
+    "state": "FL",
+    "district": "18"
+  },
+  "34267": {
+    "state": "FL",
+    "district": "18"
+  },
+  "34268": {
+    "state": "FL",
+    "district": "18"
+  },
+  "34269": {
+    "state": "FL",
+    "district": "18"
+  },
+  "34270": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34272": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34274": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34275": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34276": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34277": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34280": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34282": {
+    "state": "FL",
+    "district": "16"
+  },
+  "34284": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34285": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34286": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34287": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34288": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34289": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34290": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34291": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34292": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34293": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34295": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34420": {
+    "state": "FL",
+    "district": "06"
+  },
+  "34421": {
+    "state": "FL",
+    "district": "06"
+  },
+  "34423": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34428": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34429": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34430": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34431": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34432": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34433": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34434": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34436": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34441": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34442": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34445": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34446": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34447": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34448": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34449": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34450": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34451": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34452": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34453": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34460": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34461": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34464": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34465": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34470": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34471": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34472": {
+    "state": "FL",
+    "district": "06"
+  },
+  "34473": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34474": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34475": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34476": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34477": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34478": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34479": {
+    "state": "FL",
+    "district": "06"
+  },
+  "34480": {
+    "state": "FL",
+    "district": "06"
+  },
+  "34481": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34482": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34483": {
+    "state": "FL",
+    "district": "06"
+  },
+  "34484": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34487": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34488": {
+    "state": "FL",
+    "district": "06"
+  },
+  "34489": {
+    "state": "FL",
+    "district": "06"
+  },
+  "34491": {
+    "state": "FL",
+    "district": "06"
+  },
+  "34492": {
+    "state": "FL",
+    "district": "06"
+  },
+  "34498": {
+    "state": "FL",
+    "district": "03"
+  },
+  "34601": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34602": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34603": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34604": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34605": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34606": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34607": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34608": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34609": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34610": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34611": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34613": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34614": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34636": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34637": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34638": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34639": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34652": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34653": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34654": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34655": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34656": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34660": {
+    "state": "FL",
+    "district": "13"
+  },
+  "34661": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34667": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34668": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34669": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34673": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34674": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34677": {
+    "state": "FL",
+    "district": "13"
+  },
+  "34679": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34680": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34681": {
+    "state": "FL",
+    "district": "13"
+  },
+  "34682": {
+    "state": "FL",
+    "district": "13"
+  },
+  "34683": {
+    "state": "FL",
+    "district": "13"
+  },
+  "34684": {
+    "state": "FL",
+    "district": "13"
+  },
+  "34685": {
+    "state": "FL",
+    "district": "13"
+  },
+  "34688": {
+    "state": "FL",
+    "district": "13"
+  },
+  "34689": {
+    "state": "FL",
+    "district": "13"
+  },
+  "34690": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34691": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34692": {
+    "state": "FL",
+    "district": "12"
+  },
+  "34695": {
+    "state": "FL",
+    "district": "13"
+  },
+  "34697": {
+    "state": "FL",
+    "district": "13"
+  },
+  "34698": {
+    "state": "FL",
+    "district": "13"
+  },
+  "34705": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34711": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34712": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34713": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34714": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34715": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34729": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34731": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34734": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34736": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34737": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34739": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34740": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34741": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34742": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34743": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34744": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34745": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34746": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34747": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34748": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34749": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34753": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34755": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34756": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34758": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34759": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34760": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34761": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34762": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34769": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34770": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34771": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34772": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34773": {
+    "state": "FL",
+    "district": "09"
+  },
+  "34777": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34778": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34785": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34786": {
+    "state": "FL",
+    "district": "10"
+  },
+  "34787": {
+    "state": "FL",
+    "district": "10"
+  },
+  "34788": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34789": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34797": {
+    "state": "FL",
+    "district": "11"
+  },
+  "34945": {
+    "state": "FL",
+    "district": "18"
+  },
+  "34946": {
+    "state": "FL",
+    "district": "18"
+  },
+  "34947": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34948": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34949": {
+    "state": "FL",
+    "district": "18"
+  },
+  "34950": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34951": {
+    "state": "FL",
+    "district": "18"
+  },
+  "34952": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34953": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34954": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34956": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34957": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34958": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34972": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34973": {
+    "state": "FL",
+    "district": "18"
+  },
+  "34974": {
+    "state": "FL",
+    "district": "17"
+  },
+  "34979": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34981": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34982": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34983": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34984": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34985": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34986": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34987": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34988": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34990": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34991": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34992": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34994": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34995": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34996": {
+    "state": "FL",
+    "district": "21"
+  },
+  "34997": {
+    "state": "FL",
+    "district": "21"
+  },
+  "_note": "Hand-mapped sample of FL zips → districts from public 2022 redistricting maps. Replace with full Census Geocoding output once src/lib/api-clients/census.ts is fixed to handle bare zips (see Phase 2C plan §15.5 follow-up). Schema: { state, district } per zip; null for zips we haven't mapped yet (the lookup treats null/missing the same)."
 }

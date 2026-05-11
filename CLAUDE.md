@@ -96,8 +96,9 @@ src/
     cookies.ts (server-only), consent.ts (server),
     consent-client.ts (client), consent-shared.ts (constants)
     session.ts, events.ts, supabase.ts, dates.ts, party-theme.ts,
-    mock-data.ts, geo.ts, analytics.ts, visit-tracker.ts,
+    geo.ts, analytics.ts, visit-tracker.ts,
     interactions-client.ts, issues.ts
+    data/races.ts, data/candidates.ts (server-side Supabase queries)
   middleware.ts               # Issues voter_session, captures utm_*
 scripts/                      # Offline data pipeline (not in production runtime)
   ingest/                     # Ballotpedia, OpenSecrets, FEC, ProPublica, statements, zips
