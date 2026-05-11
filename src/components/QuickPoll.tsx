@@ -103,7 +103,7 @@ function StarRow({
           onClick={() => onSet(n)}
           aria-label={`${n} star${n === 1 ? '' : 's'}`}
           aria-pressed={weight >= n}
-          className={`text-2xl leading-none transition ${
+          className={`text-2xl leading-none transition min-w-[44px] min-h-[44px] flex items-center justify-center -mx-0.5 ${
             weight >= n ? 'text-amber-400' : 'text-gray-300 hover:text-amber-200'
           }`}
         >

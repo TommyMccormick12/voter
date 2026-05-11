@@ -61,11 +61,23 @@ export function ConsentBanner() {
   };
 
   return (
-    <div
-      role="dialog"
-      aria-labelledby="consent-banner-title"
-      className="fixed inset-x-0 bottom-0 z-[100] border-t border-gray-200 bg-white shadow-2xl"
-    >
+    <>
+      {/* In-flow spacer. Pushes page content up so the fixed banner below
+          doesn't overlay anything (P1 mobile QA fix). Height matches the
+          banner's worst-case visual height: ~150px mobile compact, ~80px
+          desktop. When the banner unmounts after consent is given, the
+          spacer goes with it and the page reclaims the space naturally. */}
+      <div
+        aria-hidden="true"
+        className={`w-full ${
+          mode === 'customize' ? 'h-[320px] lg:h-[240px]' : 'h-[150px] lg:h-[80px]'
+        }`}
+      />
+      <div
+        role="dialog"
+        aria-labelledby="consent-banner-title"
+        className="fixed inset-x-0 bottom-0 z-[100] border-t border-gray-200 bg-white shadow-2xl"
+      >
       <div className="max-w-5xl mx-auto px-4 py-3 lg:py-5">
         {mode === 'compact' ? (
           <CompactView
@@ -89,6 +101,7 @@ export function ConsentBanner() {
         )}
       </div>
     </div>
+    </>
   );
 }
 

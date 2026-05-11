@@ -43,7 +43,7 @@ export default async function ScorecardsPage({ params }: PageProps) {
         <div className="flex items-center gap-3 lg:gap-4">
           <Link
             href="/race-picker"
-            className="text-gray-500 text-sm font-medium hover:text-gray-900 inline-flex items-center min-h-[44px] px-2 -mx-2"
+            className="text-gray-500 text-sm font-medium hover:text-gray-900 inline-flex items-center min-h-[44px] px-2 -mx-2 whitespace-nowrap"
           >
             ← All races
           </Link>
