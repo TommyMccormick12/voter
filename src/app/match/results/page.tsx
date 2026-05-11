@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { MatchResults } from './MatchResults';
-import { getMockRace, getMockCandidatesForRace } from '@/lib/mock-data';
+import { getRace } from '@/lib/data/races';
+import { getCandidatesForRace } from '@/lib/data/candidates';
 
 interface PageProps {
   searchParams: Promise<{ race?: string }>;
@@ -32,7 +33,7 @@ export default async function MatchResultsPage({ searchParams }: PageProps) {
     );
   }
 
-  const race = getMockRace(raceId);
+  const race = await getRace(raceId);
   if (!race) {
     return (
       <main className="max-w-2xl mx-auto px-4 py-16 text-center">
@@ -47,7 +48,7 @@ export default async function MatchResultsPage({ searchParams }: PageProps) {
     );
   }
 
-  const candidates = getMockCandidatesForRace(raceId);
+  const candidates = await getCandidatesForRace(raceId);
 
   return <MatchResults race={race} candidates={candidates} />;
 }

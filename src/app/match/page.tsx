@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { MatchFlow } from './MatchFlow';
-import { getMockRace } from '@/lib/mock-data';
+import { getRace } from '@/lib/data/races';
 import { ISSUE_NAMES } from '@/lib/issues';
 
 interface PageProps {
@@ -38,7 +38,7 @@ export default async function MatchPage({ searchParams }: PageProps) {
     );
   }
 
-  const race = getMockRace(raceId);
+  const race = await getRace(raceId);
   if (!race) {
     return (
       <main className="max-w-2xl mx-auto px-4 py-16 text-center">

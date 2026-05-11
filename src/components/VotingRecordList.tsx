@@ -8,14 +8,47 @@ interface Props {
   votes: CandidateVote[];
   /** Issue slugs to offer as filter chips. Defaults to extracted from votes. */
   filterIssues?: string[];
+  /**
+   * Whether this candidate currently holds the seat. Used to pick the
+   * right empty-state copy when votes is empty: incumbent-with-no-votes
+   * means "left office mid-cycle" (e.g. Rubio → SecState), while
+   * non-incumbent-with-no-votes means "challenger, no congressional
+   * history". Defaults to false (challenger).
+   */
+  incumbent?: boolean;
 }
 
-export function VotingRecordList({ votes, filterIssues }: Props) {
+export function VotingRecordList({ votes, filterIssues, incumbent = false }: Props) {
   const allIssues =
     filterIssues ?? Array.from(new Set(votes.flatMap((v) => v.issue_slugs))).sort();
   const [activeIssue, setActiveIssue] = useState<string | null>(null);
 
   if (votes.length === 0) {
+    // Incumbent-with-zero-votes happens when a sitting member leaves the
+    // seat mid-cycle (resignation, appointment, death). The FEC ballot
+    // still lists them but GovTrack returns no current-Congress votes.
+    // The default "challenger has no history" copy would be misleading.
+    if (incumbent) {
+      return (
+        <div className="rounded-xl border border-dashed border-amber-300 bg-amber-50 p-6 text-center">
+          <p className="text-sm font-medium text-amber-900 mb-1">
+            No recent votes on file
+          </p>
+          <p className="text-xs text-amber-800 max-w-md mx-auto">
+            This candidate appears on the FEC ballot but does not have a current-cycle congressional voting record — typically because they left office mid-cycle. Their prior tenure is on{' '}
+            <a
+              href="https://www.govtrack.us/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-medium"
+            >
+              GovTrack
+            </a>
+            .
+          </p>
+        </div>
+      );
+    }
     return (
       <div className="rounded-xl border border-dashed border-gray-300 bg-gray-50 p-6 text-center">
         <p className="text-sm text-gray-500 mb-1">No voting record</p>

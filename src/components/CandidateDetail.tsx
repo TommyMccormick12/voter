@@ -145,7 +145,10 @@ export function CandidateDetail({ candidate }: Props) {
         />
       )}
       {tab === 'voting' && (
-        <VotingRecordList votes={candidate.voting_record ?? []} />
+        <VotingRecordList
+          votes={candidate.voting_record ?? []}
+          incumbent={candidate.incumbent}
+        />
       )}
       {tab === 'statements' && (
         <StatementTimeline statements={candidate.statements ?? []} />

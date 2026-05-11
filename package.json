@@ -1,6 +1,6 @@
 {
   "name": "voter",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,6 +16,9 @@
     "ingest:votes": "tsx scripts/ingest/fetch_votes.ts",
     "ingest:statements": "tsx scripts/ingest/fetch_statements.ts",
     "ingest:zips": "tsx scripts/ingest/fetch_zip_districts.ts",
+    "ingest:hud-zips": "tsx scripts/ingest/import_hud_zip_cd.ts",
+    "ingest:author": "tsx scripts/ingest/author_platform.ts",
+    "ingest:campaign-site": "tsx scripts/ingest/fetch_campaign_site.ts",
     "synth:stances": "tsx scripts/synthesize/synthesize_stances.ts",
     "synth:flag": "tsx scripts/synthesize/flag_inconsistencies.ts",
     "review:doc": "tsx scripts/review/generate_review_doc.ts",
@@ -49,6 +52,7 @@
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
     "typescript": "^5",
-    "vitest": "^4.1.5"
+    "vitest": "^4.1.5",
+    "xlsx": "^0.18.5"
   }
 }

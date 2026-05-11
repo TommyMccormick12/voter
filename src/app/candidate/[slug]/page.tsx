@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getMockCandidateBySlug, getMockRace } from '@/lib/mock-data';
+import { getCandidateBySlug } from '@/lib/data/candidates';
+import { getRace } from '@/lib/data/races';
 import { CandidateDetail } from '@/components/CandidateDetail';
 
 interface PageProps {
@@ -9,18 +10,17 @@ interface PageProps {
 
 /**
  * Candidate detail page — full record (stances, donors, voting, statements).
- *
- * TODO (Chunk 6): swap mock-data calls for Supabase queries that fetch
- * candidate + positions + donors + top_industries + voting_record + statements.
+ * One PostgREST round-trip via getCandidateBySlug pulls every child
+ * relation; voting_record is capped at 50 most-recent rows.
  */
 export default async function CandidatePage({ params }: PageProps) {
   const { slug } = await params;
-  const candidate = getMockCandidateBySlug(slug);
+  const candidate = await getCandidateBySlug(slug);
 
   if (!candidate) notFound();
 
   // Find the race so we can show a back link
-  const race = candidate.race_id ? getMockRace(candidate.race_id) : null;
+  const race = candidate.race_id ? await getRace(candidate.race_id) : null;
 
   return (
     <>

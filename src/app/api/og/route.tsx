@@ -1,8 +1,13 @@
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
-import { getMockRace, getMockCandidatesForRace } from '@/lib/mock-data';
+import { getRace } from '@/lib/data/races';
+import { getCandidatesForRace } from '@/lib/data/candidates';
 
-export const runtime = 'edge';
+// nodejs runtime: data/* helpers do a static JSON import of
+// zip-districts.json which Next handles fine on edge, but using nodejs
+// avoids any edge-bundle weirdness with @supabase/supabase-js and keeps
+// this consistent with /api/match (also nodejs).
+export const runtime = 'nodejs';
 
 // Satori (Next OG) renders these as inline-CSS HTML. Hard rules:
 //   - every element with children needs display:flex
@@ -79,11 +84,11 @@ export async function GET(request: NextRequest) {
   const slug = searchParams.get('c');
   const score = clampScore(searchParams.get('s'));
 
-  const race = raceId ? getMockRace(raceId) : null;
+  const race = raceId ? await getRace(raceId) : null;
   // Cross-validate candidate belongs to the named race (mirrors /share/page.tsx).
   const candidate =
     raceId && slug
-      ? getMockCandidatesForRace(raceId).find((c) => c.slug === slug) ?? null
+      ? (await getCandidatesForRace(raceId)).find((c) => c.slug === slug) ?? null
       : null;
 
   // Generic invite — no params, or unknown race/candidate

@@ -1,9 +1,9 @@
 import { NextResponse, type NextRequest } from 'next/server';
+import { getRacesForZip, getRace } from '@/lib/data/races';
 import {
-  getMockRacesForZip,
-  getMockRace,
-  getMockCandidatesForRace,
-} from '@/lib/mock-data';
+  getCandidatesForRace,
+  getCandidateSamplesForRaces,
+} from '@/lib/data/candidates';
 
 /**
  * GET /api/candidates?zip=NNNNN
@@ -11,13 +11,6 @@ import {
  *
  * Returns races with candidates + top_stances. Used by client components
  * that need to refresh data without a full page reload.
- *
- * TODO (Chunk 6): swap mock data calls for Supabase queries:
- *   SELECT r.*, c.* FROM races r
- *   JOIN candidates c ON c.race_id = r.id
- *   WHERE r.election_type = 'primary'
- *     AND r.election_date >= now()
- *     AND r.id IN (zip_to_district lookup)
  */
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
@@ -32,11 +25,11 @@ export async function GET(request: NextRequest) {
   }
 
   if (raceId) {
-    const race = getMockRace(raceId);
+    const race = await getRace(raceId);
     if (!race) {
       return NextResponse.json({ ok: false, error: 'race_not_found' }, { status: 404 });
     }
-    const candidates = getMockCandidatesForRace(raceId);
+    const candidates = await getCandidatesForRace(raceId);
     return NextResponse.json({ ok: true, race, candidates });
   }
 
@@ -47,10 +40,11 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const races = getMockRacesForZip(zip);
+  const races = await getRacesForZip(zip);
+  const samples = await getCandidateSamplesForRaces(races.map((r) => r.id));
   const racesWithCounts = races.map((r) => ({
     ...r,
-    candidate_count: getMockCandidatesForRace(r.id).length,
+    candidate_count: samples[r.id]?.count ?? 0,
   }));
 
   return NextResponse.json({ ok: true, zip, races: racesWithCounts });

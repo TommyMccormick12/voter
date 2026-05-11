@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import {
-  getMockRace,
-  getMockCandidatesForRace,
-} from '@/lib/mock-data';
+import { getRace } from '@/lib/data/races';
+import { getCandidatesForRace } from '@/lib/data/candidates';
 import { ScorecardCarousel } from '@/components/ScorecardCarousel';
 import { getPartyTheme } from '@/lib/party-theme';
 import { formatLocalDate } from '@/lib/dates';
@@ -14,18 +12,15 @@ interface PageProps {
 
 /**
  * Scorecards page — horizontal-scroll carousel of candidate scorecards
- * for one race.
- *
- * TODO (Chunk 6): swap mock-data calls for Supabase queries that join
- * candidates with their top_stances + top_industries.
+ * for one race. Reads candidates + cached top_stances from Supabase.
  */
 export default async function ScorecardsPage({ params }: PageProps) {
   const { raceId } = await params;
-  const race = getMockRace(raceId);
+  const race = await getRace(raceId);
 
   if (!race) notFound();
 
-  const candidates = getMockCandidatesForRace(raceId);
+  const candidates = await getCandidatesForRace(raceId);
   const theme = getPartyTheme(race.primary_party);
 
   const partyName =

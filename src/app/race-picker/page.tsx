@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import {
-  getMockRacesForZip,
-  getMockCandidatesForRace,
-} from '@/lib/mock-data';
+import { getRacesForZip } from '@/lib/data/races';
+import { getCandidateSamplesForRaces } from '@/lib/data/candidates';
 import { getPartyTheme } from '@/lib/party-theme';
 import { formatLocalDate, daysUntilLocalDate } from '@/lib/dates';
 import type { Race } from '@/types/database';
@@ -11,11 +9,14 @@ interface PageProps {
   searchParams: Promise<{ zip?: string }>;
 }
 
+interface CandidateSample {
+  count: number;
+  sample: Array<{ id: string; name: string }>;
+}
+
 /**
  * Race picker page — shows federal midterm primaries near the user's zip.
- *
- * TODO (Chunk 6): swap getMockRacesForZip for a Supabase query that joins
- * the zip-to-district lookup with the races table.
+ * Data reads come from Supabase via src/lib/data/{races,candidates}.
  */
 export default async function RacePickerPage({ searchParams }: PageProps) {
   const { zip } = await searchParams;
@@ -37,7 +38,10 @@ export default async function RacePickerPage({ searchParams }: PageProps) {
     );
   }
 
-  const races = getMockRacesForZip(zip);
+  const races = await getRacesForZip(zip);
+  // Single batch query for all race candidate samples — keeps RaceCard
+  // free of per-card fetches (the mock implementation hid an N+1 here).
+  const samples = await getCandidateSamplesForRaces(races.map((r) => r.id));
   // Server component runs per request; "days until" is computed once here
   // and threaded down to RaceCard so the inner component stays pure.
   // eslint-disable-next-line react-hooks/purity -- server component, intentional per-request value
@@ -64,7 +68,12 @@ export default async function RacePickerPage({ searchParams }: PageProps) {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {races.map((race) => (
-            <RaceCard key={race.id} race={race} nowMs={nowMs} />
+            <RaceCard
+              key={race.id}
+              race={race}
+              nowMs={nowMs}
+              candidates={samples[race.id] ?? { count: 0, sample: [] }}
+            />
           ))}
         </div>
       )}
@@ -79,8 +88,15 @@ export default async function RacePickerPage({ searchParams }: PageProps) {
   );
 }
 
-function RaceCard({ race, nowMs }: { race: Race; nowMs: number }) {
-  const candidates = getMockCandidatesForRace(race.id);
+function RaceCard({
+  race,
+  nowMs,
+  candidates,
+}: {
+  race: Race;
+  nowMs: number;
+  candidates: CandidateSample;
+}) {
   const theme = getPartyTheme(race.primary_party);
   const partyName =
     race.primary_party === 'R'
@@ -120,14 +136,14 @@ function RaceCard({ race, nowMs }: { race: Race; nowMs: number }) {
         {!race.district && ` — ${race.state}`}
       </h2>
       <p className="text-sm text-gray-500 mb-5">
-        {candidates.length === 0
+        {candidates.count === 0
           ? 'Candidate data being curated'
-          : `${candidates.length} candidate${candidates.length === 1 ? '' : 's'}`}
+          : `${candidates.count} candidate${candidates.count === 1 ? '' : 's'}`}
       </p>
       <div className="flex items-center gap-3">
-        {candidates.length > 0 && (
+        {candidates.count > 0 && (
           <div className="flex -space-x-2">
-            {candidates.slice(0, 4).map((c) => (
+            {candidates.sample.map((c) => (
               <div
                 key={c.id}
                 className={`w-8 h-8 rounded-full ${theme.avatarGradient} border-2 border-white flex items-center justify-center text-white text-[10px] font-bold`}

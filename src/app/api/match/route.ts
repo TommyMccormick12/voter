@@ -1,7 +1,8 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
 import { matchCandidates } from '@/lib/llm/match';
-import { getMockCandidatesForRace, getMockRace } from '@/lib/mock-data';
+import { getRace } from '@/lib/data/races';
+import { getCandidatesForRace } from '@/lib/data/candidates';
 import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
 import { clientIpFromHeaders } from '@/lib/geo';
 import { checkRateLimits, MATCH_LIMITS } from '@/lib/rate-limit';
@@ -84,8 +85,7 @@ export async function POST(request: NextRequest) {
 
   const { free_text, race_id, quick_poll } = parsed.data;
 
-  // TODO (Chunk 6): swap mock-data for Supabase race+candidates lookup.
-  const race = getMockRace(race_id);
+  const race = await getRace(race_id);
   if (!race) {
     return NextResponse.json(
       { ok: false, error: 'race_not_found' },
@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const candidates = getMockCandidatesForRace(race_id);
+  const candidates = await getCandidatesForRace(race_id);
   if (candidates.length === 0) {
     return NextResponse.json(
       { ok: false, error: 'no_candidates' },
