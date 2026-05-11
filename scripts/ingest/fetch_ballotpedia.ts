@@ -16,7 +16,7 @@ import {
   getCandidate,
   getCandidatesForRace,
 } from '../../src/lib/api-clients/ballotpedia';
-import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';
+import { CANDIDATE_FIXTURE_DIR, closeBrowser } from '../../src/lib/api-clients/base';
 
 interface Args {
   raceSlug: string;
@@ -105,7 +105,13 @@ async function main() {
   console.log(`[ballotpedia] wrote ${partialPath}`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+main()
+  .catch((err) => {
+    console.error(err);
+    process.exitCode = 1;
+  })
+  .finally(async () => {
+    // Release the headless Chromium so Node can exit. Without this the
+    // browser stays alive in the background until the OS reaps it.
+    await closeBrowser();
+  });

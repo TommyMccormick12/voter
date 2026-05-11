@@ -8,7 +8,13 @@
 // the most-used selectors. See plan §11 risk row "web scraping breaks".
 
 import * as cheerio from 'cheerio';
-import { fetchCachedText } from './base';
+import { fetchBrowserCachedText } from './base';
+
+// Ballotpedia sits behind Cloudflare; a plain HTTP fetch returns a 202
+// "Just a moment..." page. fetchBrowserCachedText renders via Playwright
+// and clears the JS challenge. Cache is shared with fetchCached on disk.
+// Use a bp-v2 cacheTag prefix so any prior 202-stub cache entries from the
+// older fetch path are bypassed (those had empty bodies).
 
 export interface BallotpediaCandidate {
   name: string;
@@ -30,7 +36,7 @@ export interface BallotpediaCandidate {
  */
 export async function getCandidate(slug: string): Promise<BallotpediaCandidate | null> {
   const url = `https://ballotpedia.org/${encodeURIComponent(slug)}`;
-  const html = await fetchCachedText(url, { cacheTag: `bp-candidate:${slug}` });
+  const html = await fetchBrowserCachedText(url, { cacheTag: `bp-v2-candidate:${slug}` });
   return parseCandidate(html, url);
 }
 
@@ -107,7 +113,7 @@ export function parseCandidate(html: string, url: string): BallotpediaCandidate 
  */
 export async function getCandidatesForRace(racePageSlug: string): Promise<string[]> {
   const url = `https://ballotpedia.org/${encodeURIComponent(racePageSlug)}`;
-  const html = await fetchCachedText(url, { cacheTag: `bp-race:${racePageSlug}` });
+  const html = await fetchBrowserCachedText(url, { cacheTag: `bp-v2-race:${racePageSlug}` });
   const $ = cheerio.load(html);
   const slugs = new Set<string>();
   // Candidates are usually linked from the "Candidates" section's table or list
