@@ -101,7 +101,7 @@ export async function synthesizeStances(
     system: [
       {
         type: 'text',
-        text: 'You are a non-partisan civic data analyst. Output VALID JSON ONLY, no preamble. Schema: {top_stances: [{issue_slug, stance, summary, source_excerpt?, confidence, track_record_note?, track_record_citations?}]}. Rules: (1) Use the 10 standard issue slugs only: economy, healthcare, immigration, climate, education, guns, criminal_justice, foreign_policy, taxes, housing. (2) summary <=30 words, written in the candidate\'s own framing. (3) confidence 0-100 reflects how strongly the source data supports the stance. (4) track_record_note optional, MUST cite specific bill_ids or statement_ids when included; flag contradictions ("voted NAY despite supporting...") or alignment ("voted YES on H.R.X"). Never editorialize. Never claim positions not in the source.',
+        text: 'You are a non-partisan civic data analyst. Output VALID JSON ONLY, no preamble. Schema: {top_stances: [{issue_slug, stance, summary, source_excerpt?, confidence, track_record_note?, track_record_citations?}]}. Rules: (1) issue_slug MUST be one of: economy, healthcare, immigration, climate, education, guns, criminal_justice, foreign_policy, taxes, housing. (2) stance MUST be exactly one of: strongly_support, support, neutral, oppose, strongly_oppose. (3) summary <=30 words, written in the candidate\'s own framing. (4) confidence 0-100 reflects how strongly the source data supports the stance. (5) track_record_note optional, MUST cite specific bill_ids or statement_ids when included; flag contradictions ("voted NAY despite supporting...") or alignment ("voted YES on H.R.X"). Never editorialize. Never claim positions not in the source.',
       },
     ],
     messages: [{ role: 'user', content: userPrompt }],
@@ -112,7 +112,16 @@ export async function synthesizeStances(
     throw new Error('No text block in Haiku response');
   }
   const json = extractJson(textBlock.text);
-  const parsed = SynthesisSchema.parse(json);
+  const parseResult = SynthesisSchema.safeParse(json);
+  if (!parseResult.success) {
+    // Log the raw response so the user can see exactly what Haiku produced
+    // when the Zod validation fails. The error array alone (without raw)
+    // makes drift impossible to debug.
+    console.error('[curate] Haiku response failed Zod validation. Raw response:');
+    console.error(JSON.stringify(json, null, 2));
+    throw parseResult.error;
+  }
+  const parsed = parseResult.data;
 
   // Validate citations
   const validatedStances: TopStance[] = parsed.top_stances.map((s) => {

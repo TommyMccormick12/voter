@@ -20,6 +20,8 @@ interface Args {
   district?: string;
   cycle: number;
   office: 'H' | 'S' | 'P';
+  /** If provided, seeds candidates from FEC filtered by party (D | R) when fixture is empty. */
+  primaryParty?: 'D' | 'R';
 }
 
 function parseArgs(): Args {
@@ -29,41 +31,98 @@ function parseArgs(): Args {
   let district: string | undefined;
   let cycle = 2026;
   let office: 'H' | 'S' | 'P' = 'H';
+  let primaryParty: 'D' | 'R' | undefined;
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--race-id') raceId = args[++i] ?? '';
     if (args[i] === '--state') state = args[++i] ?? '';
     if (args[i] === '--district') district = args[++i] ?? '';
     if (args[i] === '--cycle') cycle = parseInt(args[++i] ?? '', 10);
     if (args[i] === '--office') office = (args[++i] ?? 'H').toUpperCase() as 'H' | 'S' | 'P';
+    if (args[i] === '--primary-party') primaryParty = (args[++i] ?? '').toUpperCase() as 'D' | 'R';
   }
   if (!raceId || !state) {
-    console.error('Usage: --race-id "..." --state NJ [--district 07] [--cycle 2026] [--office H|S|P]');
+    console.error('Usage: --race-id "..." --state NJ [--district 07] [--cycle 2026] [--office H|S|P] [--primary-party D|R]');
     process.exit(1);
   }
-  return { raceId, state, district, cycle, office };
+  return { raceId, state, district, cycle, office, primaryParty };
+}
+
+/** Normalize FEC's "LAST, FIRST MIDDLE" format to "First Middle Last". */
+function normalizeFecName(name: string): string {
+  const trimmed = name.trim().replace(/\s+/g, ' ');
+  const m = trimmed.match(/^([^,]+),\s*(.+)$/);
+  if (!m) return trimmed;
+  const last = m[1].split(/\s+/).map(toTitleCase).join(' ');
+  const rest = m[2].split(/\s+/).map(toTitleCase).join(' ');
+  return `${rest} ${last}`;
+}
+
+function toTitleCase(word: string): string {
+  if (!word) return word;
+  // Quoted nicknames like 'VAL' or "Mike" → keep quotes, title-case inside
+  return word
+    .toLowerCase()
+    .replace(/(^|[\s'"-])([a-z])/g, (_, sep, ch) => sep + ch.toUpperCase());
 }
 
 async function main() {
-  const { raceId, state, district, cycle, office } = parseArgs();
+  const { raceId, state, district, cycle, office, primaryParty } = parseArgs();
   const partialPath = join(CANDIDATE_FIXTURE_DIR, `${raceId}.partial.json`);
-  if (!existsSync(partialPath)) {
-    console.error(`Partial fixture missing: ${partialPath}`);
-    process.exit(1);
+
+  // Load (or initialize) fixture. We allow fetch_fec.ts to be the
+  // first step in the pipeline when Ballotpedia coverage is thin —
+  // FEC has the authoritative candidate list for federal races.
+  let fixture: { race_id?: string; candidates?: Array<Record<string, unknown> & { name?: string }> };
+  if (existsSync(partialPath)) {
+    fixture = JSON.parse(readFileSync(partialPath, 'utf8'));
+  } else {
+    console.log(`[fec] no existing fixture; will create one at ${partialPath}`);
+    fixture = { race_id: raceId, candidates: [] };
   }
-  const fixture = JSON.parse(readFileSync(partialPath, 'utf8'));
-  const candidates: Array<Record<string, unknown> & { name?: string }> =
-    fixture.candidates ?? [];
+  let candidates = fixture.candidates ?? [];
 
   // Pull all FEC candidates registered for this race
   const fecCandidates = await searchCandidates({ state, district, cycle, office });
   console.log(`[fec] ${fecCandidates.length} candidates registered for ${state}-${district ?? 'sen'} ${cycle}`);
 
+  // Seed from FEC if the fixture has no candidates yet (Ballotpedia stub
+  // scenarios). Filter to primary party + active-through current cycle so
+  // we don't pull in stale prior-cycle filers.
+  if (candidates.length === 0) {
+    if (!primaryParty) {
+      console.error('[fec] fixture empty and no --primary-party flag; cannot infer who to seed. Aborting.');
+      process.exit(1);
+    }
+    const partyMap: Record<'D' | 'R', RegExp> = { D: /^DEM$|^DFL$/i, R: /^REP$/i };
+    const filtered = fecCandidates.filter(
+      (fc) =>
+        partyMap[primaryParty].test(fc.party) &&
+        fc.cycles.includes(cycle) &&
+        fc.active_through >= cycle,
+    );
+    candidates = filtered.map((fc) => ({
+      name: normalizeFecName(fc.name),
+      party: fc.party_full,
+      primary_party: primaryParty,
+      slug: normalizeFecName(fc.name).toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+      incumbent: fc.incumbent_challenge === 'I',
+      state,
+      district: district ?? null,
+      office: office === 'H' ? 'U.S. House' : office === 'S' ? 'U.S. Senate' : 'President',
+      race_id: raceId,
+    }));
+    fixture.candidates = candidates;
+    fixture.race_id = raceId;
+    console.log(`[fec] seeded ${candidates.length} ${primaryParty} candidates from FEC filings`);
+  }
+
   for (const c of candidates) {
     if (!c.name || typeof c.name !== 'string') continue;
     const lower = c.name.toLowerCase();
-    const match = fecCandidates.find((fc) =>
-      fc.name.toLowerCase().includes(lower) || lower.includes(fc.name.toLowerCase())
-    );
+    const match = fecCandidates.find((fc) => {
+      const normalized = normalizeFecName(fc.name).toLowerCase();
+      return normalized.includes(lower) || lower.includes(normalized);
+    });
     if (!match) {
       console.log(`[fec] no FEC match for ${c.name}`);
       continue;

@@ -109,22 +109,61 @@ export function parseCandidate(html: string, url: string): BallotpediaCandidate 
  * Find Ballotpedia candidate slugs for a race page. e.g.
  *   https://ballotpedia.org/U.S._House_New_Jersey_District_7_election,_2026_(Republican_primary)
  *
- * Returns the slug suffix used by getCandidate().
+ * Returns the slug suffix used by getCandidate(). Returns an empty array
+ * when the page is a MediaWiki "noarticletext" stub (the page URL is valid
+ * but Ballotpedia hasn't created article content yet, which is common for
+ * federal primary subpages early in the cycle).
  */
 export async function getCandidatesForRace(racePageSlug: string): Promise<string[]> {
   const url = `https://ballotpedia.org/${encodeURIComponent(racePageSlug)}`;
   const html = await fetchBrowserCachedText(url, { cacheTag: `bp-v2-race:${racePageSlug}` });
   const $ = cheerio.load(html);
+
+  // Stub detection. If the page is empty, the all-`<a>` scan below would
+  // pick up Ballotpedia's site nav (Main_Page, Federal_Politics, ...) and
+  // mis-classify those as candidates. Short-circuit cleanly.
+  const isStub =
+    $('.noarticletext').length > 0 ||
+    /This page does not have an article yet|noarticletext/i.test(html);
+  if (isStub) {
+    console.log(`[ballotpedia] page ${racePageSlug} is a stub — no candidates available`);
+    return [];
+  }
+
+  // Scope to the actual article body (#mw-content-text) and prefer links
+  // that appear inside the "Candidates" section. If the page structure
+  // shifts, fall back to scanning all article-body links with a stricter
+  // anti-nav filter.
   const slugs = new Set<string>();
-  // Candidates are usually linked from the "Candidates" section's table or list
-  $('a[href^="/"]').each((_, a) => {
+  const article = $('#mw-content-text');
+  const candidatesHeader = article
+    .find('h2 .mw-headline')
+    .filter((_, e) => /^Candidates/i.test($(e).text()))
+    .first();
+
+  let scope = article.find('a[href^="/"]');
+  if (candidatesHeader.length > 0) {
+    // Limit to elements between the Candidates h2 and the next h2.
+    const containers: ReturnType<typeof $> = $();
+    let node = candidatesHeader.closest('h2').next();
+    while (node.length > 0 && node.prop('tagName') !== 'H2') {
+      containers.add(node);
+      node = node.next();
+    }
+    scope = containers.find('a[href^="/"]');
+  }
+
+  scope.each((_, a) => {
     const href = $(a).attr('href') ?? '';
     if (!href.startsWith('/')) return;
-    if (/^\/(Special|File|Help|Category|Wikipedia|Talk):/i.test(href)) return;
+    if (/^\/(Special|File|Help|Category|Wikipedia|Talk|Ballotpedia|Survey):/i.test(href)) return;
     if (/wikipedia/i.test(href)) return;
-    // Heuristic: a link with at least "FirstLast" formatting is a candidate page
-    const slug = href.slice(1);
-    if (/^[A-Z][A-Za-z]+(_[A-Z][A-Za-z.]+)+$/.test(slug)) {
+    // Drop clearly-non-candidate Ballotpedia portal pages
+    const slug = href.slice(1).split('#')[0].split('?')[0];
+    if (/^(Main_Page|Sample_Ballot_Lookup|Election_Policy|Ballot_Access|Federal_Politics|Executive_Branch|Legislative_Branch|Municipal_Government|Administrative_State|Public_Policy|Ballotpedia_Email_Updates)$/i.test(slug)) return;
+    // Heuristic: candidate slug is FirstName_LastName, sometimes with a
+    // middle name or suffix. Tighter than before — must look like a person.
+    if (/^[A-Z][a-z]+(_[A-Z][a-z'.]+){1,4}$/.test(slug)) {
       slugs.add(slug);
     }
   });
