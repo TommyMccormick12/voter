@@ -13,6 +13,33 @@
 import '../_env';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
+
+// Minimal row-shape types used by the renderer below. The Supabase rows
+// have many more fields, but these are the only ones the HTML preview
+// references. Keeps the script free of the full `@/types/database` import
+// (no need to track schema drift here).
+type StanceRow = {
+  issue_slug: string;
+  stance: string;
+  summary: string;
+  confidence: number;
+  source_excerpt?: string;
+  track_record_note?: string;
+  track_record_citations?: string[];
+};
+type IndustryRow = {
+  industry_name: string;
+  amount: number;
+  rank: number;
+  cycle?: number;
+};
+type VoteRow = {
+  bill_id: string;
+  bill_title: string;
+  vote: string;
+  vote_date: string | null;
+  issue_slugs: string[] | null;
+};
 import { createClient } from '@supabase/supabase-js';
 
 interface Args {
@@ -65,8 +92,13 @@ async function main() {
   const theme = PARTY_THEMES[(c.primary_party as 'R'|'D'|'I') ?? 'I'] ?? PARTY_THEMES.I;
   const initials = c.name.split(/\s+/).slice(0, 2).map((p: string) => p[0]).join('').toUpperCase();
 
-  const industries = (c.candidate_top_industries ?? []).sort((a: any, b: any) => a.rank - b.rank);
-  const votes = (c.candidate_voting_record ?? []).sort((a: any, b: any) => (b.vote_date ?? '').localeCompare(a.vote_date ?? ''));
+  const industries = (c.candidate_top_industries ?? []).sort(
+    (a: { rank: number }, b: { rank: number }) => a.rank - b.rank,
+  );
+  const votes = (c.candidate_voting_record ?? []).sort(
+    (a: { vote_date: string | null }, b: { vote_date: string | null }) =>
+      (b.vote_date ?? '').localeCompare(a.vote_date ?? ''),
+  );
   const stances = c.top_stances ?? [];
   const stanceLabel: Record<string, string> = {
     strongly_support: 'Strongly supports',
@@ -127,7 +159,7 @@ async function main() {
       <!-- Top 3 stances (carousel view shows top 3) -->
       <div class="p-5 space-y-3">
         <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider">Top stances</h4>
-        ${stances.slice(0, 3).map((s: any) => `
+        ${stances.slice(0, 3).map((s: StanceRow) => `
           <div class="border-l-2 ${theme.border} pl-3">
             <p class="text-xs font-semibold text-gray-700 uppercase tracking-wide flex items-center gap-2">
               ${esc(s.issue_slug)}
@@ -147,7 +179,7 @@ async function main() {
           <div class="pt-3 border-t border-gray-100">
             <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Funded by — top 3 industries</p>
             <div class="flex flex-wrap gap-1.5">
-              ${industries.slice(0, 3).map((i: any) =>
+              ${industries.slice(0, 3).map((i: IndustryRow) =>
                 `<span class="text-[11px] bg-gray-100 text-gray-700 px-2 py-1 rounded-full">${esc(i.industry_name)}</span>`
               ).join('')}
             </div>
@@ -214,7 +246,7 @@ async function main() {
       <section>
         <h3 class="text-lg font-bold text-gray-900 mb-4">All stances · ${stances.length}</h3>
         <div class="space-y-4">
-          ${stances.map((s: any) => `
+          ${stances.map((s: StanceRow) => `
             <div class="border ${theme.border} rounded-xl p-4 bg-white">
               <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
                 <h4 class="font-semibold text-gray-900 capitalize">${esc(s.issue_slug.replace('_', ' '))}</h4>
@@ -247,7 +279,7 @@ async function main() {
         <h3 class="text-lg font-bold text-gray-900 mb-4">Top donor industries · ${industries.length}</h3>
         <p class="text-xs text-gray-500 mb-3">Source: FEC itemized contributions, cycle ${industries[0]?.cycle ?? 2026}. Haiku-classified into 19 buckets.</p>
         <div class="space-y-2">
-          ${industries.map((i: any) => {
+          ${industries.map((i: IndustryRow) => {
             const max = industries[0].amount;
             const pct = Math.round((i.amount / max) * 100);
             return `
@@ -269,7 +301,7 @@ async function main() {
         <h3 class="text-lg font-bold text-gray-900 mb-1">Recent voting record · top 8 of ${votes.length}</h3>
         <p class="text-xs text-gray-500 mb-3">Source: GovTrack (keyless, replaced sunset ProPublica Congress).</p>
         <div class="space-y-2">
-          ${votes.slice(0, 8).map((v: any) => {
+          ${votes.slice(0, 8).map((v: VoteRow) => {
             const voteColor = v.vote === 'yea' ? 'bg-emerald-100 text-emerald-800' : v.vote === 'nay' ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-700';
             return `
             <div class="flex items-start gap-3 py-2 border-b border-gray-100 last:border-0">

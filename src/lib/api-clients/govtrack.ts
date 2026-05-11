@@ -130,6 +130,74 @@ export interface MemberMatch {
  * Signature is intentionally compatible with the prior ProPublica client
  * so callers don't break — the only added field is bioguide_id.
  */
+/**
+ * Pure name-matching logic, exported so tests can hit it without mocking
+ * fetchAllCurrentRoles. Takes a pre-filtered list of GovTrack roles
+ * (already scoped to the right chamber + state) and returns the matching
+ * role, or null.
+ *
+ * Strategy:
+ *   1. Exact case-insensitive match on "firstname lastname".
+ *   2. Single-word query → legacy last-name-only fallback (caller accepts
+ *      the false-positive risk).
+ *   3. Multi-word query → require lastname-equal AND first-name prefix
+ *      match in either direction (>=3 char prefix on whichever side is
+ *      shorter). Blocks the Royal-Webster-vs-Daniel-Webster false-positive.
+ */
+export function matchRoleByName(
+  candidates: GovTrackRole[],
+  fullName: string,
+): GovTrackRole | null {
+  const queryLower = fullName.toLowerCase().trim();
+  if (!queryLower) return null;
+  const queryTokens = queryLower.split(/\s+/).filter(Boolean);
+  const queryLast = queryTokens[queryTokens.length - 1] ?? '';
+
+  // Exact match on "firstname lastname"
+  let hit = candidates.find((r) => {
+    const combined = `${r.person.firstname} ${r.person.lastname}`.toLowerCase();
+    return combined === queryLower;
+  });
+
+  if (!hit) {
+    if (queryTokens.length <= 1) {
+      // Single-word query → legacy last-name fallback.
+      hit = candidates.find(
+        (r) => r.person.lastname.toLowerCase() === queryLast,
+      );
+    } else {
+      // Multi-word query → require last-name AND first-name match by one of:
+      //   (a) GovTrack stored firstname is an initial-only ("C.", "J", "W.")
+      //       — no way to compare an initial to a full name reliably, so
+      //       fall back to last-name-only. Recovers cases like Scott
+      //       Franklin matching against "C. Franklin" (GovTrack-side data
+      //       quirk; legitimate match).
+      //   (b) Bi-directional prefix match on first name (>=3 chars).
+      //       Blocks Royal Webster vs Daniel Webster (no prefix overlap)
+      //       while allowing Maxwell ↔ Max nickname truncation.
+      const queryFirst = queryTokens[0];
+      hit = candidates.find((r) => {
+        if (r.person.lastname.toLowerCase() !== queryLast) return false;
+        const personFirst = r.person.firstname.toLowerCase();
+        if (!personFirst || !queryFirst) return false;
+
+        // (a) Initial-only stored firstname → last-name match is sufficient.
+        const isInitialOnly = personFirst.length <= 2 || personFirst.endsWith('.');
+        if (isInitialOnly) return true;
+
+        // (b) Bi-directional prefix match.
+        const minPrefixLen = Math.min(personFirst.length, queryFirst.length, 3);
+        return (
+          personFirst.startsWith(queryFirst.slice(0, minPrefixLen)) ||
+          queryFirst.startsWith(personFirst.slice(0, minPrefixLen))
+        );
+      });
+    }
+  }
+
+  return hit ?? null;
+}
+
 export async function findMember(
   fullName: string,
   state: string,
@@ -138,28 +206,13 @@ export async function findMember(
   const roles = await fetchAllCurrentRoles();
   const targetType = chamber === 'house' ? 'representative' : 'senator';
   const stateUpper = state.toUpperCase();
-  const queryLower = fullName.toLowerCase().trim();
-  const queryLast = queryLower.split(/\s+/).pop() ?? '';
 
   // Filter to the right chamber + state first, then match name
   const candidates = roles.filter(
     (r) => r.role_type === targetType && r.state === stateUpper,
   );
 
-  // Exact match on "firstname lastname"
-  let hit = candidates.find((r) => {
-    const combined = `${r.person.firstname} ${r.person.lastname}`.toLowerCase();
-    return combined === queryLower;
-  });
-
-  // Fall back to lastname-only match (one per state+chamber is uncommon
-  // enough that this rarely produces false positives; if two same-surname
-  // candidates exist in one state's House delegation, the exact match above
-  // resolves them).
-  if (!hit) {
-    hit = candidates.find((r) => r.person.lastname.toLowerCase() === queryLast);
-  }
-
+  const hit = matchRoleByName(candidates, fullName);
   if (!hit) return null;
   const govtrack_id = extractPersonId(hit.person.link);
   if (!govtrack_id) return null;

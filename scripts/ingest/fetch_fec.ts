@@ -14,6 +14,7 @@ import {
   getCandidateTotals,
 } from '../../src/lib/api-clients/fec';
 import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';
+import { normalizeFecName } from '../../src/lib/api-clients/names';
 
 interface Args {
   raceId: string;
@@ -46,24 +47,6 @@ function parseArgs(): Args {
     process.exit(1);
   }
   return { raceId, state, district, cycle, office, primaryParty };
-}
-
-/** Normalize FEC's "LAST, FIRST MIDDLE" format to "First Middle Last". */
-function normalizeFecName(name: string): string {
-  const trimmed = name.trim().replace(/\s+/g, ' ');
-  const m = trimmed.match(/^([^,]+),\s*(.+)$/);
-  if (!m) return trimmed;
-  const last = m[1].split(/\s+/).map(toTitleCase).join(' ');
-  const rest = m[2].split(/\s+/).map(toTitleCase).join(' ');
-  return `${rest} ${last}`;
-}
-
-function toTitleCase(word: string): string {
-  if (!word) return word;
-  // Quoted nicknames like 'VAL' or "Mike" → keep quotes, title-case inside
-  return word
-    .toLowerCase()
-    .replace(/(^|[\s'"-])([a-z])/g, (_, sep, ch) => sep + ch.toUpperCase());
 }
 
 async function main() {

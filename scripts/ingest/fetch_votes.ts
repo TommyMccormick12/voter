@@ -22,6 +22,7 @@ import {
   billIdFromRelated,
 } from '../../src/lib/api-clients/govtrack';
 import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';
+import { stripTitles } from '../../src/lib/api-clients/names';
 
 const VOTES_PER_CANDIDATE = 50;
 
@@ -85,7 +86,10 @@ async function main() {
 
   for (const c of candidates) {
     if (!c.name || typeof c.name !== 'string') continue;
-    const match = await findMember(c.name, state, chamber);
+    // Strip FEC-embedded titles before sending to GovTrack. The display
+    // name in the fixture keeps everything; this is lookup-only.
+    const lookupName = stripTitles(c.name);
+    const match = await findMember(lookupName, state, chamber);
     if (!match) {
       console.log(`[votes] no member match for ${c.name} (challenger or wrong chamber)`);
       c.incumbent = false;

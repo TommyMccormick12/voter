@@ -14,6 +14,7 @@ import '../_env';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { getWikipediaCandidate } from '../../src/lib/api-clients/wikipedia';
+import { stripTitles } from '../../src/lib/api-clients/names';
 import { extractPlatform } from '../../src/lib/llm/extract-platform';
 import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';
 
@@ -49,13 +50,17 @@ async function main() {
   for (const c of candidates) {
     if (!c.name || typeof c.name !== 'string') continue;
 
-    // Normalize name for Wikipedia lookup: "Maxwell Alejandro Frost" → try
-    // "Maxwell Frost" first (Wikipedia tends to use shorter common names).
-    // Fall back to the full name if the short version 404s.
-    const parts = c.name.trim().split(/\s+/);
+    // Normalize name for Wikipedia lookup. Two passes:
+    //   1. stripTitles: drop FEC-embedded titles (Mr., Dr., Colonel Jr.)
+    //      which break Wikipedia lookups. Display name in fixture is
+    //      unchanged; this is the lookup-boundary normalization.
+    //   2. Try "First Last" first (Wikipedia tends to use shorter common
+    //      names), then full stripped name.
+    const lookupName = stripTitles(c.name);
+    const parts = lookupName.trim().split(/\s+/);
     const candidates_to_try = parts.length >= 3
-      ? [`${parts[0]} ${parts[parts.length - 1]}`, c.name]
-      : [c.name];
+      ? [`${parts[0]} ${parts[parts.length - 1]}`, lookupName]
+      : [lookupName];
 
     let wiki = await getWikipediaCandidate(candidates_to_try[0]);
     if (!wiki.found && candidates_to_try.length > 1) {
