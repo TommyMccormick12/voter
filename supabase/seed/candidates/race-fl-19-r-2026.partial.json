@@ -966,7 +966,9 @@
             "hres1182-119"
           ]
         }
-      ]
+      ],
+      "active": true,
+      "activated_at": "2026-05-11T16:49:44.934Z"
     },
     {
       "name": "Stephen W Elliott",

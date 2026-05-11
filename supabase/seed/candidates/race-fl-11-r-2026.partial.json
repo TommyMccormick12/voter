@@ -175,7 +175,9 @@
           "confidence": 85,
           "track_record_note": "No voting record available; stance based on campaign platform statements."
         }
-      ]
+      ],
+      "active": true,
+      "activated_at": "2026-05-11T16:49:37.855Z"
     },
     {
       "name": "Daniel Webster",
@@ -946,7 +948,9 @@
             "s4465-119"
           ]
         }
-      ]
+      ],
+      "active": true,
+      "activated_at": "2026-05-11T16:49:39.984Z"
     },
     {
       "name": "Tim Wilkins",
