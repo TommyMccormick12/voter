@@ -22,58 +22,93 @@ FEC_API_KEY=...
 SUPABASE_SERVICE_ROLE_KEY=eyJ...
 ```
 
+**Optional env (specific ingesters):**
+
+```bash
+# NewsAPI.org — public statements ingester (npm run ingest:news).
+# Free 100 req/day, 1-month rolling archive. Skipped silently when unset.
+# https://newsapi.org/register
+NEWSAPI_KEY=
+```
+
 **Keyless services used by the pipeline:**
+- **Wikipedia** — bio + "Political positions" extraction (primary platform source)
 - **GovTrack** — congressional voting records (replaced ProPublica, sunset 2023)
-- **Census Geocoding API** — ZIP → Congressional District
-- **Ballotpedia** — candidate bios + key messages (scraped)
+- **HUD ZIP→CD crosswalk** — national ZIP coverage (quarterly XLSX, free signup)
+- **Ballotpedia** — kept as fallback, but 2026 federal coverage is too thin to rely on
 
 ## End-to-end pipeline
 
-For one race (NJ-07 Republican Primary, June 2 2026):
+For one race (FL-13 Republican Primary, Aug 18 2026):
 
 ```bash
 # 0. Set the race ID once for convenience
-export RACE_ID=race-nj-07-r-2026
+export RACE_ID=race-fl-13-r-2026
 
-# 1. Pull Ballotpedia: candidate list + bios + key messages
-npx tsx scripts/ingest/fetch_ballotpedia.ts \
-  --race-slug "U.S._House_New_Jersey_District_7_election,_2026_(Republican_primary)" \
-  --race-id "$RACE_ID"
+# 1. Seed candidates from FEC (Ballotpedia 2026 coverage is too thin to use).
+#    Use --primary-party to filter the FEC roster.
+npm run ingest:fec -- \
+  --race-id "$RACE_ID" --state FL --district 13 --cycle 2026 \
+  --office H --primary-party R
 
-# 2. Pull FEC: fundraising totals + FEC IDs (source of truth)
-npx tsx scripts/ingest/fetch_fec.ts \
-  --race-id "$RACE_ID" --state NJ --district 07 --cycle 2026 --office H
+# 2. Pull Wikipedia "Political positions" + Haiku extraction into the
+#    10-issue taxonomy. Skips candidates with no Wikipedia page.
+npm run ingest:platform -- --race-id "$RACE_ID"
 
-# 3. Classify donor industries via Haiku (FEC's itemized contributions → buckets).
-#    Replaces what OpenSecrets used to do. ~$0.007 per candidate.
-npx tsx scripts/ingest/classify_industries.ts \
-  --race-id "$RACE_ID" --cycle 2026
+# 2b. (optional) Playwright fallback for candidates with no Wikipedia.
+#     Tries /issues, /platform, /priorities on each candidate.website URL.
+npm run ingest:campaign-site -- --race-id "$RACE_ID"
 
-# 4. Pull GovTrack voting record (incumbents only — challengers skipped)
-npx tsx scripts/ingest/fetch_votes.ts \
-  --race-id "$RACE_ID" --state NJ --chamber house
+# 2c. (optional) Hand-author for the long tail (neither Wikipedia nor a
+#     usable campaign site). JSON shape:
+#       { slug, bio?, key_messages?: string[],
+#         campaign_themes?: [{heading, text}], website? }
+npm run ingest:author -- --race-id "$RACE_ID" \
+  --file authored/race-fl-13-r--name.json
 
-# 5. Scrape recent statements from each candidate's campaign site
-npx tsx scripts/ingest/fetch_statements.ts --race-id "$RACE_ID"
+# 3. Classify donor industries via Haiku (FEC's itemized contributions →
+#    19 buckets). ~$0.007 per candidate. Replaces OpenSecrets.
+npm run ingest:industries -- --race-id "$RACE_ID" --cycle 2026
 
-# 6. Synthesize top_stances with Haiku (combining all of the above)
-npx tsx scripts/synthesize/synthesize_stances.ts --race-id "$RACE_ID"
+# 4. Pull GovTrack voting record (incumbents only — challengers skipped).
+npm run ingest:votes -- --race-id "$RACE_ID" --state FL --chamber house
+
+# 5. (optional) NewsAPI-driven statement ingester. Requires NEWSAPI_KEY.
+npm run ingest:news -- --race-id "$RACE_ID"
+
+# 6. Synthesize top_stances with Haiku
+npm run synth:stances -- --race-id "$RACE_ID"
 
 # 7. Flag inconsistencies for human review
-npx tsx scripts/synthesize/flag_inconsistencies.ts --race-id "$RACE_ID"
+npm run synth:flag -- --race-id "$RACE_ID"
 
 # 8. Generate per-candidate review docs (Markdown)
-npx tsx scripts/review/generate_review_doc.ts --race-id "$RACE_ID"
+npm run review:doc -- --race-id "$RACE_ID"
 
-# 9. Manually review supabase/seed/review/$RACE_ID/*.md
-#    For each candidate that passes, activate them:
-npx tsx scripts/review/activate_candidate.ts \
-  --race-id "$RACE_ID" --slug thomas-kean-jr
+# 8b. (optional) Self-contained HTML preview of one scorecard for
+#     stakeholder review. Inline Tailwind CDN — opens offline.
+npm run review:preview -- --slug laurel-lee --output ~/Downloads/lee.html
+
+# 9. Manually review supabase/seed/review/$RACE_ID/*.md, then activate
+npm run review:activate -- --race-id "$RACE_ID" --slug laurel-lee
 
 # 10. Seed Supabase (idempotent — safe to re-run)
-npx tsx scripts/seed/seed_races.ts --race-id "$RACE_ID"
-npx tsx scripts/seed/seed_candidates.ts --race-id "$RACE_ID"
+npm run seed:race -- --race-id "$RACE_ID"
+npm run seed:candidates -- --race-id "$RACE_ID"
 ```
+
+## National ZIP→district coverage (one-time per quarter)
+
+```bash
+# Sign up free at https://www.huduser.gov/portal/datasets/usps_crosswalk.html
+# Download the latest ZIP_CD_<period>.xlsx. Then:
+npm run ingest:hud-zips -- --file path/to/ZIP_CD_122025.xlsx
+# Default --states FL. Pass --states FL,GA,NY to expand.
+```
+
+Writes to `supabase/seed/zip-districts.json` and is picked up by the runtime
+data layer (`src/lib/data/races.ts`) on the next request. ~1,400 ZIPs per
+state, all districts covered.
 
 ## Output structure
 

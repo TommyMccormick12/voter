@@ -89,10 +89,12 @@ src/
     QuickPoll.tsx, FreeTextMatcher.tsx, MatchScoreBadge.tsx
     ConsentBanner.tsx, InconsistencyBadge.tsx, Nav.tsx
   lib/
-    api-clients/              # Ballotpedia, OpenSecrets, ProPublica, FEC, Census
+    api-clients/              # FEC, GovTrack, Wikipedia, Ballotpedia (pipeline only)
     llm/
       match.ts                # Live Haiku matcher + mock fallback
       curate.ts               # Offline stance synthesizer with citation validation
+      extract-platform.ts     # Wikipedia/campaign-site → structured positions
+      classify-industries.ts  # FEC contributions → 19-bucket industry tags
     cookies.ts (server-only), consent.ts (server),
     consent-client.ts (client), consent-shared.ts (constants)
     session.ts, events.ts, supabase.ts, dates.ts, party-theme.ts,
@@ -101,12 +103,17 @@ src/
     data/races.ts, data/candidates.ts (server-side Supabase queries)
   middleware.ts               # Issues voter_session, captures utm_*
 scripts/                      # Offline data pipeline (not in production runtime)
-  ingest/                     # Ballotpedia, OpenSecrets, FEC, ProPublica, statements, zips
+  _env.ts                     # Dotenv loader that overrides inherited shell env
+  ingest/                     # fetch_fec, fetch_platform (Wikipedia), fetch_campaign_site
+                              # (Playwright), author_platform, classify_industries,
+                              # fetch_votes (GovTrack), fetch_statements,
+                              # fetch_news_statements (NewsAPI), import_hud_zip_cd
   synthesize/                 # Haiku stance synthesis + inconsistency flags
-  review/                     # Per-candidate review docs + activate
+  review/                     # Per-candidate review docs + activate + preview_scorecard
   seed/                       # Service-role Supabase upserts
 supabase/
-  migrations/                 # 001 base, 004 primary pivot, 005 RLS, 006 issues seed
+  migrations/                 # 001 base, 004 primary pivot, 005 RLS, 006 issues seed,
+                              # 007 text IDs, 008 races RLS
   seed/                       # candidates/*.partial.json fixtures, raw/ cache, review/ docs
 public/
   mockup-mobile.html, mockup-desktop.html  # Design source of truth
@@ -121,7 +128,7 @@ public/
 - `npm test` — Vitest run
 - `npm run test:watch` — Vitest watch mode
 - `npm run ingest:*`, `synth:*`, `review:*`, `seed:*` — data pipeline scripts
-  (see `scripts/README.md` for end-to-end NJ-07 walkthrough)
+  (see `scripts/README.md` for end-to-end FL-13 walkthrough)
 
 ## Environment variables
 

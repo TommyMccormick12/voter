@@ -2,6 +2,153 @@
 
 All notable changes to the voter project. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.6.0] - 2026-05-10
+
+The pivot's payoff: the seeded FL Tier 1 data is now visible to real users on
+a live production URL. Every page reads from Supabase (no more mock fixtures),
+the ZIP routing covers all 28 FL Congressional Districts, and the site is
+deployed to Vercel with auto-deploy on every push.
+
+### Added
+
+- **`src/lib/data/races.ts` + `src/lib/data/candidates.ts`** — server-side
+  Supabase query helpers. `getRace`, `getRacesByIds`, `getRacesForZip` for race
+  routing. `getCandidatesForRace` for scorecard rendering, `getCandidateBySlug`
+  with a single-round-trip PostgREST embed pulling all 5 child relations
+  (positions, donors, industries, voting record capped at 50 rows, statements),
+  and `getCandidateSamplesForRaces` for the race-picker count badges (no N+1).
+  Hard-errors when `NEXT_PUBLIC_SUPABASE_URL` is unset — no silent mock
+  fallback, which was the bug class that hid an empty DB during ingest.
+- **`supabase/migrations/008_races_rls.sql`** — enables RLS + public-read
+  policy on the `races` table. Idempotent DO block. Closes a defense-in-depth
+  gap from the original schema; the new `sb_publishable_*` anon-key format made
+  the previously-permissive default no longer work.
+- **`scripts/ingest/import_hud_zip_cd.ts`** + `npm run ingest:hud-zips` —
+  consumes HUD's quarterly USPS_ZIP_CROSSWALK XLSX (free, signup-only) and
+  writes `supabase/seed/zip-districts.json`. Got us from 56 hand-mapped FL ZIPs
+  to **1,396 ZIPs covering all 28 districts** in one run.
+- **`scripts/ingest/fetch_campaign_site.ts`** + `npm run ingest:campaign-site` —
+  Playwright-rendered fetch of each candidate's website at common platform URL
+  patterns (`/issues`, `/platform`, `/priorities`, ...), Haiku-extracts into
+  the same 10-issue taxonomy as `fetch_platform.ts`. Fallback when Wikipedia
+  has no "Political positions" section. Recovered FL Senate D (Grayson +
+  Nixon) which had no Wikipedia coverage.
+- **`scripts/ingest/author_platform.ts`** + `npm run ingest:author` — merges
+  a hand-authored `{bio, key_messages, campaign_themes, website}` JSON into a
+  candidate fixture. Synthesis then runs normally with the same Zod + citation
+  safety net. For the long tail of D-side challengers with neither Wikipedia
+  nor a usable campaign site.
+- **`scripts/ingest/fetch_news_statements.ts`** + `npm run ingest:news` —
+  NewsAPI.org-driven statement ingester. Quotes the candidate name + state for
+  disambiguation, batches up to 10 articles per candidate, Haiku-summarizes
+  into structured `candidate_statements` rows. Requires `NEWSAPI_KEY` (free
+  100 req/day, 1-month archive); silently no-ops when unset.
+- **`scripts/review/preview_scorecard.ts`** + `npm run review:preview` —
+  generates a self-contained HTML preview of a candidate's scorecard + detail
+  view from live Supabase data. Inline Tailwind CDN so the file opens in any
+  browser without the dev server. For stakeholder demos and the review pass
+  before activating new candidates.
+- **Ex-incumbent UI affordance** in `src/components/VotingRecordList.tsx`. When
+  `votes` is empty AND `incumbent: true`, renders an explanatory amber empty
+  state with a GovTrack link instead of the misleading "challenger has no
+  history" copy. Targets the Marco Rubio case (left Senate for SecState mid-
+  cycle, still on FEC ballot, no current-cycle votes).
+- **Vercel production deploy** at https://voter-k4ewj9iy9-tommymccormick12s-projects.vercel.app
+  with `IP_HASH_SECRET`, `ANTHROPIC_API_KEY`, both Supabase keys set in
+  Production scope. GitHub repo at https://github.com/TommyMccormick12/voter
+  connected for auto-deploy on every push to `main`.
+
+### Changed
+
+- **Every page and API route now reads from Supabase via `src/lib/data/*`.**
+  9 consumers swapped: `/race-picker`, `/scorecards/[raceId]`, `/candidate/[slug]`,
+  `/match`, `/match/results`, `/share`, `/api/og`, `/api/candidates`,
+  `/api/match`. `/api/og` runtime flipped from `edge` to `nodejs` to match
+  `/api/match` and avoid edge-bundle weirdness with `@supabase/supabase-js`.
+- **`flag_inconsistencies.ts`** Check 4: donor/industry-based contradictions
+  ("Healthcare & Pharma industry contributed $6,550 despite stated support
+  for...") no longer fire HIGH on missing `track_record_citations`. Donor data
+  IS the cited source (rendered in the scorecard's "Funded by" section), so
+  it legitimately has no `bill_id`. Bill-based contradictions still require a
+  citation.
+- **README.md** refreshed away from the deleted mock-data quickstart. Now
+  describes the real Supabase-backed first-run flow, lists actual FL ZIPs for
+  testing (32801 Orlando, 33101 Miami), adds a "Current coverage" section
+  (16 races, 14 active candidates), and adds an MIT license clause.
+- **`src/lib/api-clients/base.ts`** disk cache: the `fetchBrowserCachedText`
+  helper grew a Playwright-aware code path used by `fetch_campaign_site.ts`.
+  Module-scoped browser/context cache, polite throttling, and `closeBrowser()`
+  called in script finally blocks.
+
+### Removed
+
+- **`src/lib/mock-data.ts`** — 754 lines of fixture-style mock data plus the
+  `getMock*` function family. The hard-error contract in `src/lib/data/*` now
+  prevents a misconfigured prod from silently falling back to mock content.
+  Pipeline `supabase/seed/*.partial.json` fixtures remain.
+
+### Coverage at release
+
+- 16 FL Tier 1 race rows in Supabase (12 House × R+D, Senate × R+D, Gov × R+D).
+- 14 active candidates with synthesized `top_stances` across 9 races.
+- 1,396 FL ZIPs route to all 28 districts via HUD crosswalk.
+- 5 e2e production endpoints verified: race-picker, scorecards, candidate
+  detail, match flow, share + OG image.
+- `npm run lint && npm test` clean; 29 tests pass.
+
+### For contributors
+
+- The `_env.ts` shim (introduced in 0.5.1) now lives in every pipeline script
+  imported as `import '../_env';`. Solves the long-standing footgun where
+  Node's `--env-file` flag doesn't override an inherited empty
+  `ANTHROPIC_API_KEY` from the parent shell.
+- `gh` CLI installed + authed against `TommyMccormick12/voter`. Future ops can
+  use `gh pr create`, `gh issue list`, etc. without re-authing.
+- Deployment Protection (Vercel SSO wall) is disabled — the production URL is
+  publicly reachable. Re-enable in Vercel project settings if needed for
+  staging.
+
+## [0.5.1] - 2026-05-10
+
+FL Tier 1 ingest sweep: every Tier 1 race has a row in Supabase, 10 incumbent
+candidates with synthesized stances ready for the scorecard carousel. The
+pipeline-level fixes that fell out of the sweep land here too.
+
+### Added
+
+- **All 16 FL Tier 1 races seeded:** 12 House primaries (FL-13, 15, 23, 27, 28
+  × R+D), Senate R+D, Governor R+D. The 10 R-side incumbents (Luna, Lee,
+  Frankel, Moskowitz, Salazar, Gimenez, Moody, Rubio, Scott, plus FL-10 D
+  Frost from the earlier NJ-07 → FL-10 pilot) have synthesized `top_stances`
+  and are activated.
+- **`scripts/_env.ts`** — dotenv loader that OVERRIDES inherited shell env.
+  Node's `--env-file` flag does NOT clobber existing vars, so an empty
+  `ANTHROPIC_API_KEY` in the parent shell silently disabled Haiku for half a
+  sweep before this fix landed. Imported as `import '../_env';` at the top of
+  every pipeline script.
+- **`supabase/migrations/007_text_ids.sql`** — convert `races.id` and
+  `candidates.id` from `uuid` to `text` everywhere, plus every FK that
+  references them. The app uses human-readable string IDs throughout (mock
+  data, route params, ingest CLI args). Original UUID schema was incompatible
+  with the app's identifier convention. Idempotent DO block.
+- **`--primary-party D|R` flag** on `fetch_fec.ts` for seeding candidate
+  fixtures from FEC filings directly when Ballotpedia coverage is empty.
+
+### Changed
+
+- **`scripts/ingest/fetch_fec.ts`** now bootstraps the `fixture.race` object
+  on first seed (state, office, election_date, cycle, election_type,
+  primary_party). Previously `seed_races.ts` would choke with "null value in
+  column state" because no upstream step set the race-level metadata.
+- **`src/lib/llm/curate.ts`** auto-repair: extracts `bill_id` references from
+  `track_record_note` text via regex and rebuilds the
+  `track_record_citations` array. Haiku reliably writes bill IDs inline in the
+  note but inconsistently populates the citations field; we fix it server-
+  side. Fabricated explicit citations still throw — whitelist-only.
+- **`scripts/synthesize/flag_inconsistencies.ts`** negation guard: notes that
+  explicitly deny contradiction ("no contradictory votes found", "no relevant
+  record") no longer fire Check 2.
+
 ## [0.5.0] - 2026-05-10
 
 Phase C: Wikipedia-sourced policy positions, restoring the "stated platform"
