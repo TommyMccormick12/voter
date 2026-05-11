@@ -52,3 +52,5 @@ supabase/seed/review/
 # Auto-generated bootstrap (concatenation of supabase/migrations/*.sql).
 # Regenerate locally if needed: cat supabase/migrations/*.sql > supabase/seed/init.sql
 supabase/seed/init.sql
+
+.vercel

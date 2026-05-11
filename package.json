@@ -24,6 +24,7 @@
     "synth:flag": "tsx scripts/synthesize/flag_inconsistencies.ts",
     "review:doc": "tsx scripts/review/generate_review_doc.ts",
     "review:activate": "tsx scripts/review/activate_candidate.ts",
+    "review:preview": "tsx scripts/review/preview_scorecard.ts",
     "seed:race": "tsx scripts/seed/seed_races.ts",
     "seed:candidates": "tsx scripts/seed/seed_candidates.ts"
   },
