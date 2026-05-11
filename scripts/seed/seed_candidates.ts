@@ -11,6 +11,7 @@ import '../_env';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';
+import { stripTitles } from '../../src/lib/api-clients/names';
 import { getAdminClient } from './supabase-admin';
 
 interface Args {
@@ -63,11 +64,17 @@ async function main() {
       continue;
     }
 
-    // 1. Upsert candidate
+    // 1. Upsert candidate.
+    //
+    // stripTitles on `name` cleans FEC-embedded courtesy tokens
+    // ("Scott Mr. Franklin" → "Scott Franklin") for display-side use.
+    // Slug is preserved as-is — it's already in Supabase as the stable
+    // identifier and is used in /candidate/[slug] URLs; renaming it would
+    // break any saved links / shares.
     const candidateRow = {
       id: c.id ?? `cand-${slug}`,
       slug,
-      name: c.name as string,
+      name: stripTitles(c.name as string),
       party: (c.party as string) ?? null,
       primary_party: (c.party as string)?.charAt(0).toUpperCase() ?? null,
       state: fixture.race.state,
