@@ -16,6 +16,40 @@ import { COOKIE_NAMES, COOKIE_OPTIONS, generateSessionToken } from '@/lib/cookie
  * Skipped paths: Next.js internals, static assets, the public mockup HTML.
  */
 export function middleware(request: NextRequest) {
+  // /admin and /api/admin/* gate: HTTP Basic Auth using a single env var.
+  // No user table, no JWT — adequate for a one-admin dashboard. Returning
+  // a 401 with WWW-Authenticate prompts the browser's native credential UI.
+  if (
+    request.nextUrl.pathname === '/admin' ||
+    request.nextUrl.pathname.startsWith('/admin/') ||
+    request.nextUrl.pathname.startsWith('/api/admin/')
+  ) {
+    const expected = process.env.ADMIN_PASSWORD;
+    if (!expected) {
+      // Misconfigured: don't 200 the admin page in production without auth.
+      return new NextResponse('Admin not configured', { status: 503 });
+    }
+    const header = request.headers.get('authorization') ?? '';
+    const [scheme, encoded] = header.split(' ');
+    let ok = false;
+    if (scheme === 'Basic' && encoded) {
+      try {
+        const decoded = atob(encoded);
+        const [, password] = decoded.split(':', 2);
+        ok = password === expected;
+      } catch {
+        ok = false;
+      }
+    }
+    if (!ok) {
+      return new NextResponse('Authentication required', {
+        status: 401,
+        headers: { 'WWW-Authenticate': 'Basic realm="voter admin"' },
+      });
+    }
+    // Auth passes — fall through to the normal response below.
+  }
+
   const response = NextResponse.next();
 
   // 1. Issue session cookie if missing

@@ -2,6 +2,8 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
 import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
 import { parseConsent } from '@/lib/consent';
+import { clientIpFromHeaders } from '@/lib/geo';
+import { checkRateLimits, POLL_LIMITS } from '@/lib/rate-limit';
 
 const RequestSchema = z.object({
   race_id: z.string().min(1),
@@ -27,6 +29,23 @@ const RequestSchema = z.object({
  * issue-weight aggregation product.
  */
 export async function POST(request: NextRequest) {
+  // Rate limit first — quick-poll responses feed the B2B district-level
+  // issue-weight aggregations. Bot stuffing would poison the signal.
+  const sessionId = (await readCookie(COOKIE_NAMES.session)) ?? null;
+  const ip = clientIpFromHeaders(request.headers);
+  const rate = checkRateLimits({
+    sessionId,
+    ip,
+    sessionLimit: POLL_LIMITS.session,
+    ipLimit: POLL_LIMITS.ip,
+  });
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { ok: false, error: 'rate_limited', scope: rate.exceeded, retry_after_seconds: rate.retryAfterSeconds },
+      { status: 429, headers: { 'Retry-After': String(rate.retryAfterSeconds) } },
+    );
+  }
+
   let body: unknown;
   try {
     body = await request.json();

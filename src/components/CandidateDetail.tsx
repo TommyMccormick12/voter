@@ -11,6 +11,7 @@ import { DonorProfile } from './DonorProfile';
 import { VotingRecordList } from './VotingRecordList';
 import { StatementTimeline } from './StatementTimeline';
 import { InconsistencyBadge, classifyTrackRecord } from './InconsistencyBadge';
+import { ReportInaccurateButton } from './ReportInaccurateButton';
 import { trackInteraction } from '@/lib/interactions-client';
 
 interface Props {
@@ -153,6 +154,17 @@ export function CandidateDetail({ candidate }: Props) {
       {tab === 'statements' && (
         <StatementTimeline statements={candidate.statements ?? []} />
       )}
+
+      {/* Feedback footer — see something wrong? Tell us. */}
+      <div className="mt-12 pt-6 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+        <p>
+          Track-record annotations are AI-generated from public records. Errors are real and we want to fix them.
+        </p>
+        <ReportInaccurateButton
+          candidateId={candidate.id}
+          candidateName={candidate.name}
+        />
+      </div>
     </div>
   );
 }

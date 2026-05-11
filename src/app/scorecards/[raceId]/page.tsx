@@ -63,12 +63,14 @@ export default async function ScorecardsPage({ params }: PageProps) {
             </div>
           </div>
         </div>
-        <Link
-          href={`/match?race=${race.id}`}
-          className={`inline-flex items-center justify-center min-h-[44px] text-sm font-semibold px-5 rounded-lg text-center ${theme.accent}`}
-        >
-          Find my best match →
-        </Link>
+        {candidates.length >= 3 ? (
+          <Link
+            href={`/match?race=${race.id}`}
+            className={`inline-flex items-center justify-center min-h-[44px] text-sm font-semibold px-5 rounded-lg text-center ${theme.accent}`}
+          >
+            Find my best match →
+          </Link>
+        ) : null}
       </div>
 
       <p className="text-sm text-gray-500 mb-4 hidden lg:block">
@@ -81,7 +83,10 @@ export default async function ScorecardsPage({ params }: PageProps) {
         layout="auto"
       />
 
-      {candidates.length > 0 && (
+      {/* Match flow only delivers value at 3+ candidates — below that, ranking
+          is trivial and the result is "you match X" with no real signal.
+          Show soft copy instead. */}
+      {candidates.length >= 3 ? (
         <div className="mt-10 text-center">
           <p className="text-sm text-gray-500 mb-3">
             Want to know which one fits you best?
@@ -93,7 +98,13 @@ export default async function ScorecardsPage({ params }: PageProps) {
             Find my best match →
           </Link>
         </div>
-      )}
+      ) : candidates.length > 0 ? (
+        <p className="mt-10 text-center text-sm text-gray-500">
+          {candidates.length === 1
+            ? '1 candidate with policy data in this race. Explore the full record above; match comparison opens when we have 3+ candidates.'
+            : `${candidates.length} candidates with policy data in this race. Explore their records above; match comparison opens when we have 3+ candidates.`}
+        </p>
+      ) : null}
     </main>
   );
 }

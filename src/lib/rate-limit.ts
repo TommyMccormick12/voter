@@ -127,3 +127,39 @@ export const MATCH_LIMITS = {
   session: { capacity: 10, windowMs: 60 * 60 * 1000 }, // 10/hr/session
   ip: { capacity: 30, windowMs: 60 * 60 * 1000 }, // 30/hr/IP
 } as const;
+
+// Limits for the 4 write APIs that capture engagement signal (Phase 2D-quat
+// §19.2). Calibrated for legit traffic patterns; bot pollution of the
+// B2B sentiment-data tables is the threat model.
+//
+// Interaction: carousel views + saves + detail clicks. Highest volume.
+export const INTERACTION_LIMITS = {
+  session: { capacity: 300, windowMs: 60 * 60 * 1000 },
+  ip: { capacity: 1500, windowMs: 60 * 60 * 1000 },
+} as const;
+
+// Visit: page-nav start/end. One per page transition.
+export const VISIT_LIMITS = {
+  session: { capacity: 30, windowMs: 60 * 60 * 1000 },
+  ip: { capacity: 100, windowMs: 60 * 60 * 1000 },
+} as const;
+
+// Quick-poll: 1-2 submissions per match flow. Cap protects B2B aggregation
+// from bot-stuffed weight rows.
+export const POLL_LIMITS = {
+  session: { capacity: 30, windowMs: 60 * 60 * 1000 },
+  ip: { capacity: 100, windowMs: 60 * 60 * 1000 },
+} as const;
+
+// Consent: banner clicks. 1-3 per session lifetime is typical.
+export const CONSENT_LIMITS = {
+  session: { capacity: 10, windowMs: 60 * 60 * 1000 },
+  ip: { capacity: 30, windowMs: 60 * 60 * 1000 },
+} as const;
+
+// Report: user-submitted inaccuracy flags on candidate stances/votes.
+// Low-volume legit traffic; abuse would be spam.
+export const REPORT_LIMITS = {
+  session: { capacity: 10, windowMs: 60 * 60 * 1000 },
+  ip: { capacity: 30, windowMs: 60 * 60 * 1000 },
+} as const;

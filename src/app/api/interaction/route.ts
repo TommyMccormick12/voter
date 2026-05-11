@@ -2,6 +2,8 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
 import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
 import { parseConsent } from '@/lib/consent';
+import { clientIpFromHeaders } from '@/lib/geo';
+import { checkRateLimits, INTERACTION_LIMITS } from '@/lib/rate-limit';
 
 const InteractionSchema = z.object({
   candidate_id: z.string().min(1),
@@ -32,6 +34,23 @@ const InteractionSchema = z.object({
  * before the database layer is wired up.
  */
 export async function POST(request: NextRequest) {
+  // Rate limit FIRST. Bots scripting carousel events would otherwise
+  // pollute candidate_interactions and contaminate the B2B sentiment data.
+  const sessionId = (await readCookie(COOKIE_NAMES.session)) ?? null;
+  const ip = clientIpFromHeaders(request.headers);
+  const rate = checkRateLimits({
+    sessionId,
+    ip,
+    sessionLimit: INTERACTION_LIMITS.session,
+    ipLimit: INTERACTION_LIMITS.ip,
+  });
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { ok: false, error: 'rate_limited', scope: rate.exceeded, retry_after_seconds: rate.retryAfterSeconds },
+      { status: 429, headers: { 'Retry-After': String(rate.retryAfterSeconds) } },
+    );
+  }
+
   // JSON parse is a separate concern from validation: bad JSON is a client
   // error (400), not a server error (500). Without this split, malformed
   // POSTs from buggy clients pollute the 5xx error budget.

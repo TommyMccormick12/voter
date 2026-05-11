@@ -3,7 +3,8 @@ import { z } from 'zod';
 import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
 import { parseConsent } from '@/lib/consent';
 import { recordPageView, endVisit } from '@/lib/visit-tracker';
-import { geoFromHeaders, hashUserAgent } from '@/lib/geo';
+import { geoFromHeaders, hashUserAgent, clientIpFromHeaders } from '@/lib/geo';
+import { checkRateLimits, VISIT_LIMITS } from '@/lib/rate-limit';
 
 const StartSchema = z.object({
   type: z.literal('start').optional(),
@@ -29,6 +30,23 @@ const RequestSchema = z.union([StartSchema, EndSchema]);
  * TODO (Chunk 6): persist to Supabase session_visits.
  */
 export async function POST(request: NextRequest) {
+  // Rate limit first — bot-driven visit floods would skew the session_visits
+  // engagement signal.
+  const sessionId = (await readCookie(COOKIE_NAMES.session)) ?? null;
+  const ip = clientIpFromHeaders(request.headers);
+  const rate = checkRateLimits({
+    sessionId,
+    ip,
+    sessionLimit: VISIT_LIMITS.session,
+    ipLimit: VISIT_LIMITS.ip,
+  });
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { ok: false, error: 'rate_limited', scope: rate.exceeded, retry_after_seconds: rate.retryAfterSeconds },
+      { status: 429, headers: { 'Retry-After': String(rate.retryAfterSeconds) } },
+    );
+  }
+
   let body: unknown;
   try {
     body = await request.json();
@@ -47,7 +65,8 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const sessionId = await readCookie(COOKIE_NAMES.session);
+  // sessionId was read above for rate-limiting; here we just enforce
+  // the prior no-session 401 contract.
   if (!sessionId) {
     return NextResponse.json(
       { ok: false, error: 'no_session' },

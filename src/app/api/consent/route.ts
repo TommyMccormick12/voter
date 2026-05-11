@@ -8,6 +8,7 @@ import {
 } from '@/lib/consent';
 import { auditConsent } from '@/lib/visit-tracker';
 import { clientIpFromHeaders, hashIp, hashUserAgent } from '@/lib/geo';
+import { checkRateLimits, CONSENT_LIMITS } from '@/lib/rate-limit';
 import type { ConsentState, ConsentType } from '@/types/database';
 
 const ConsentRequestSchema = z.object({
@@ -31,6 +32,24 @@ const CONSENT_TYPES: ConsentType[] = ['analytics', 'data_sale', 'marketing'];
  * TODO (Chunk 6): persist audit entries to Supabase consent_audit table.
  */
 export async function POST(request: NextRequest) {
+  // Rate limit first — consent writes go into the regulator-audit log.
+  // A bot stuffing fake consent entries would create CCPA/CPRA noise that
+  // makes a real subpoena harder to answer.
+  const sessionForLimit = (await readCookie(COOKIE_NAMES.session)) ?? null;
+  const ipForLimit = clientIpFromHeaders(request.headers);
+  const rate = checkRateLimits({
+    sessionId: sessionForLimit,
+    ip: ipForLimit,
+    sessionLimit: CONSENT_LIMITS.session,
+    ipLimit: CONSENT_LIMITS.ip,
+  });
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { ok: false, error: 'rate_limited', scope: rate.exceeded, retry_after_seconds: rate.retryAfterSeconds },
+      { status: 429, headers: { 'Retry-After': String(rate.retryAfterSeconds) } },
+    );
+  }
+
   let body: unknown;
   try {
     body = await request.json();
