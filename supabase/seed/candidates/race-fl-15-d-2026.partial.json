@@ -1,0 +1,398 @@
+{
+  "race": {
+    "id": "race-fl-15-d-2026",
+    "state": "FL",
+    "district": "15",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D",
+    "ballotpedia_race_slug": "U.S._House_Florida_District_15_election,_2026_(Democratic_primary)"
+  },
+  "candidates": [
+    {
+      "name": "Jose Engell",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "jose-engell",
+      "incumbent": false,
+      "state": "FL",
+      "district": "15",
+      "office": "U.S. House",
+      "race_id": "race-fl-15-d-2026",
+      "fec_candidate_id": "H6FL15184",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Jose Engell",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "jose-engell",
+      "incumbent": false,
+      "state": "FL",
+      "district": "15",
+      "office": "U.S. House",
+      "race_id": "race-fl-15-d-2026",
+      "fec_candidate_id": "H6FL15184",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Darren Mcauley",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "darren-mcauley",
+      "incumbent": false,
+      "state": "FL",
+      "district": "15",
+      "office": "U.S. House",
+      "race_id": "race-fl-15-d-2026",
+      "fec_candidate_id": "H6FL15192",
+      "total_raised": 532060.24,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 532060.24,
+        "disbursements": 265534.39,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 457010.24,
+        "other_political_committee_contributions": 24050
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 75500,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 31500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 18043,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 9500,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 7500,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 4000,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Oil & Gas",
+          "amount": 3500,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 3500,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 2500,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 1500,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "SUMMERFIELD, DOUG",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SIMON, DEBORAH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SIMON, DEBORAH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "RISSER, PHARES",
+          "donor_type": "individual",
+          "industry": "Oil & Gas",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PETRY, JOHN",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MCNULTY, MOLLY",
+          "donor_type": "individual",
+          "industry": "Government / Public Sector",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MANDEL, SUE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MANDEL, SUE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MANDEL, STEVE",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MANDEL, STEVE",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Robert People",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "robert-people",
+      "incumbent": false,
+      "state": "FL",
+      "district": "15",
+      "office": "U.S. House",
+      "race_id": "race-fl-15-d-2026",
+      "fec_candidate_id": "H6FL15168",
+      "total_raised": 25458.9,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 25458.9,
+        "disbursements": 24890.25,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 15677.29,
+        "other_political_committee_contributions": 200
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 4430,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Telecom",
+          "amount": 1200,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 750,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 250,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "BECKLER, JUDITH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00897447",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ATKINS, WILL",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00897447",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PRALOW, ROB",
+          "donor_type": "individual",
+          "industry": "Telecom",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00897447",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ATKINS, WILL",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00897447",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SAFDAR, SYED",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00897447",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CHOICE, STEPHEN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00897447",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MAXIM, MELODY",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00897447",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BAREFIELD, SIMONE",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00897447",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MILLER, RUSSELL",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00897447",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PRALOW, ROB",
+          "donor_type": "individual",
+          "industry": "Telecom",
+          "amount_total": 200,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00897447",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    }
+  ],
+  "race_id": "race-fl-15-d-2026"
+}

@@ -6,6 +6,7 @@
 // Usage:
 //   npx tsx scripts/ingest/fetch_statements.ts --race-id race-nj-07-r-2026
 
+import '../_env';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import * as cheerio from 'cheerio';

@@ -1,0 +1,2076 @@
+{
+  "race": {
+    "id": "race-fl-23-d-2026",
+    "state": "FL",
+    "district": "23",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D",
+    "ballotpedia_race_slug": "U.S._House_Florida_District_23_election,_2026_(Democratic_primary)"
+  },
+  "candidates": [
+    {
+      "name": "Victoria Jane Boker Doyle",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "victoria-jane-boker-doyle",
+      "incumbent": false,
+      "state": "FL",
+      "district": "23",
+      "office": "U.S. House",
+      "race_id": "race-fl-23-d-2026",
+      "fec_candidate_id": "H6FL22107",
+      "total_raised": 168017.57,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 168017.57,
+        "disbursements": 163520.85,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 71790.66,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 14150,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 2500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 2500,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 2000,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 1300,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 1250,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Nonprofit / Civic",
+          "amount": 1250,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 1000,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 750,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 250,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "DINAPOLI, JULIA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00904953",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SMITH, MATTHEW",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00904953",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHWARZ, ERIC",
+          "donor_type": "individual",
+          "industry": "Education",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00904953",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SANZARI, LEAH",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00904953",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PROUTY, NICHOLAS",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00904953",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MELLK, WENDY",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00904953",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KELLOGG, JENNIFER",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00904953",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FONSECA, ISABEL",
+          "donor_type": "individual",
+          "industry": "Media & Entertainment",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00904953",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BYER, HEATHER RAE",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00904953",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "OSMAN, MARIAM",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00904953",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Lois J. Frankel",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "lois-j-frankel",
+      "incumbent": true,
+      "state": "FL",
+      "district": "23",
+      "office": "U.S. House",
+      "race_id": "race-fl-23-d-2026",
+      "fec_candidate_id": "H2FL14053",
+      "total_raised": 1855772.41,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1855772.41,
+        "disbursements": 678246.06,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 1365142.07,
+        "other_political_committee_contributions": 408750
+      },
+      "bio": "Lois Jane Frankel (/ˈfræŋkəl/ FRANG-kəl; born May 16, 1948) is an American politician and lawyer who has been the United States representative for Florida's 22nd congressional district since 2023, having previously served it from 2013 to 2017. As a member of the Democratic Party, she represented the 21st congressional district from 2017 to 2023, was a 7-term member of the Florida House of Representatives, and was mayor of West Palm Beach for two terms.",
+      "campaign_website": "http://frankel.house.gov",
+      "key_messages": [
+        "Frankel supported President Trump's 2017 decision to recognize Jerusalem as Israel's capital, stating it is consistent with U.S. law and affirms Jerusalem as the capital of Israel and the Jewish people.",
+        "Frankel supports gun control measures including high-capacity magazine bans, universal background checks, bump stock bans, and repealing the Dickey Amendment to allow CDC research on gun violence prevention."
+      ],
+      "campaign_themes": [
+        {
+          "heading": "foreign_policy",
+          "text": "Frankel supported President Trump's 2017 decision to recognize Jerusalem as Israel's capital, stating it is consistent with U.S. law and affirms Jerusalem as the capital of Israel and the Jewish people."
+        },
+        {
+          "heading": "guns",
+          "text": "Frankel supports gun control measures including high-capacity magazine bans, universal background checks, bump stock bans, and repealing the Dickey Amendment to allow CDC research on gun violence prevention."
+        }
+      ],
+      "platform_excerpts": [
+        {
+          "issue_slug": "foreign_policy",
+          "excerpt": "The President's announcement today is consistent with current U.S. law and reaffirms what we already know: Jerusalem is the eternal capital of the Jewish people and the State of Israel.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Lois_Frankel"
+        },
+        {
+          "issue_slug": "guns",
+          "excerpt": "Frankel supports gun control measures, which she calls 'common-sense legislation.' Specifically, she supports a high-capacity magazine ban, universal background checks, and a ban on bump stocks. Frankel supports repealing the 1996 Dickey Amendment, which discourages the CDC from researching gun violence prevention.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Lois_Frankel"
+        }
+      ],
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 161000,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 52500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Agriculture",
+          "amount": 35000,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 35000,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 17500,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 17500,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 10500,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 10500,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 7000,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 3500,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "CURTIS, ALAN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00494856",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STEINBAUM, ROBERT S.",
+          "donor_type": "individual",
+          "industry": "Education",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00494856",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STEINBAUM, ROBERT S.",
+          "donor_type": "individual",
+          "industry": "Education",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00494856",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SOSNOFF, TONI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00494856",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SOSNOFF, TONI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00494856",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SLOMIN, SANDRA C.",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00494856",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SLOMIN, SANDRA C.",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00494856",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ROSS, STEPHEN M",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00494856",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ROK, SERGIO",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00494856",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PESKIN, BIANCA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00494856",
+          "data_source": "fec"
+        }
+      ],
+      "govtrack_id": 412529,
+      "bioguide_id": "F000462",
+      "voting_record": [
+        {
+          "bill_id": "s4465-119",
+          "bill_title": "S. 4465: A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
+          "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
+          "vote": "absent",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h155",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h154",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h153",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h152",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h151",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h150",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h149",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h148",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h147",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h146",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h145",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h144",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h143",
+          "significance": "major"
+        },
+        {
+          "bill_id": "s1318-119",
+          "bill_title": "S. 1318: Fallen Servicemembers Religious Heritage Restoration Act",
+          "bill_summary": "This bill was passed by Congress on April 29, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h142",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1224-119",
+          "bill_title": "H.Res. 1224: Providing for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes; providing for consideration ",
+          "bill_summary": "This simple resolution was agreed to on April 29, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [
+            "climate"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h141",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1224-119",
+          "bill_title": "H.Res. 1224: Providing for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes; providing for consideration ",
+          "bill_summary": "This simple resolution was agreed to on April 29, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [
+            "climate"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h140",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr227-119",
+          "bill_title": "H.R. 227: Clergy Act",
+          "bill_summary": "This bill passed in the House on April 27, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h139",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7959-119",
+          "bill_title": "H.R. 7959: IRS Whistleblower Program Improvement Act",
+          "bill_summary": "This bill passed in the House on April 27, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h138",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5587-119",
+          "bill_title": "H.R. 5587: HEATS Act",
+          "bill_summary": "This bill passed in the House on April 23, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h137",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6387-119",
+          "bill_title": "H.R. 6387: FIRE Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h136",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6387-119",
+          "bill_title": "H.R. 6387: FIRE Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h135",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr4690-119",
+          "bill_title": "H.R. 4690: Reliable Federal Infrastructure Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h134",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr4690-119",
+          "bill_title": "H.R. 4690: Reliable Federal Infrastructure Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h133",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1182-119",
+          "bill_title": "H.Res. 1182: Expressing support for rural communities across the United States as stewards of the environment, major suppliers of United States energy resources, critical providers of food production and manufacturing capacity, and drivers of national ec",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h132",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1189-119",
+          "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h131",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1189-119",
+          "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h130",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "s1020-119",
+          "bill_title": "S. 1020: A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+          "bill_summary": "This bill was passed by Congress on April 21, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h129",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr2493-119",
+          "bill_title": "H.R. 2493: Improving Care in Rural America Reauthorization Act of 2025",
+          "bill_summary": "This bill passed in the House on April 21, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h128",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5201-119",
+          "bill_title": "H.R. 5201: Kari’s Law Reporting Act",
+          "bill_summary": "This bill passed in the House on April 21, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h127",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5200-119",
+          "bill_title": "H.R. 5200: Emergency Reporting Act",
+          "bill_summary": "This bill passed in the House on April 20, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-20",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h126",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1681-119",
+          "bill_title": "H.R. 1681: Expediting Federal Broadband Deployment Reviews Act",
+          "bill_summary": "This bill passed in the House on April 20, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-20",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h125",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1175-119",
+          "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+          "bill_summary": "This resolution failed in the House on April 17, 2026.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-17",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h124",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1175-119",
+          "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+          "bill_summary": "This resolution failed in the House on April 17, 2026.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-17",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h123",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1175-119",
+          "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+          "bill_summary": "This resolution failed in the House on April 17, 2026.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-17",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h122",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1156-119",
+          "bill_title": "H.Res. 1156: Expressing support for tax policies that support working families.",
+          "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [
+            "economy"
+          ],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h121",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1689-119",
+          "bill_title": "H.R. 1689: To require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h120",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres965-119",
+          "bill_title": "H.Res. 965: Providing for consideration of the bill (H.R. 1689) to require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+          "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h119",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6398-119",
+          "bill_title": "H.R. 6398: RED Tape Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h118",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6398-119",
+          "bill_title": "H.R. 6398: RED Tape Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h117",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr6409-119",
+          "bill_title": "H.R. 6409: FENCES Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h116",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6409-119",
+          "bill_title": "H.R. 6409: FENCES Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h115",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hconres40-119",
+          "bill_title": "H.Con.Res. 40: Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+          "bill_summary": "This resolution failed in the House on April 16, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h114",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres965-119",
+          "bill_title": "H.Res. 965: Providing for consideration of the bill (H.R. 1689) to require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+          "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h113",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1174-119",
+          "bill_title": "H.Res. 1174: Providing for consideration of the bill (H.R. 6387) to amend the Clean Air Act to require revisions to regulations governing the review and handling of air quality monitoring data influenced by exceptional events or actions to mitigate wildf",
+          "bill_summary": "This simple resolution was agreed to on April 15, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h112",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1174-119",
+          "bill_title": "H.Res. 1174: Providing for consideration of the bill (H.R. 6387) to amend the Clean Air Act to require revisions to regulations governing the review and handling of air quality monitoring data influenced by exceptional events or actions to mitigate wildf",
+          "bill_summary": "This simple resolution was agreed to on April 15, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h111",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr7613-119",
+          "bill_title": "H.R. 7613: ALERT Act",
+          "bill_summary": "This bill passed in the House on April 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h110",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1011-119",
+          "bill_title": "H.R. 1011: Emergency Conservation Program Improvement Act of 2025",
+          "bill_summary": "This bill passed in the House on April 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h109",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1142-119",
+          "bill_title": "H.Res. 1142: Providing for disposition of the Senate amendment to the bill (H.R. 7147) making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
+          "bill_summary": "This simple resolution was agreed to on March 27, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-03-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h108",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1142-119",
+          "bill_title": "H.Res. 1142: Providing for disposition of the Senate amendment to the bill (H.R. 7147) making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
+          "bill_summary": "This simple resolution was agreed to on March 27, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-03-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h107",
+          "significance": "procedural"
+        }
+      ],
+      "top_stances": [
+        {
+          "stance_id": "lois-j-frankel-guns",
+          "issue_slug": "guns",
+          "stance": "support",
+          "summary": "Support gun control measures including universal background checks, high-capacity magazine bans, bump stock bans, and CDC research on gun violence.",
+          "source_url": "http://frankel.house.gov",
+          "confidence": 95,
+          "track_record_note": "Voted YEA on hr5201-119 and hr5200-119 (emergency reporting measures aligned with gun safety priorities).",
+          "track_record_citations": [
+            "hr5201-119",
+            "hr5200-119"
+          ]
+        },
+        {
+          "stance_id": "lois-j-frankel-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "support",
+          "summary": "Support recognizing Jerusalem as Israel's capital, consistent with U.S. law affirming Jerusalem as capital of Israel and Jewish people.",
+          "source_url": "http://frankel.house.gov",
+          "confidence": 90
+        },
+        {
+          "stance_id": "lois-j-frankel-climate",
+          "issue_slug": "climate",
+          "stance": "oppose",
+          "summary": "Opposed consideration of H.R. 7567 agricultural reform bill, which lacks sufficient climate protections.",
+          "source_url": "http://frankel.house.gov",
+          "confidence": 75,
+          "track_record_note": "Voted NAY on hres1224-119 twice, blocking consideration of H.R. 7567 agricultural legislation.",
+          "track_record_citations": [
+            "hres1224-119"
+          ]
+        }
+      ],
+      "active": true,
+      "activated_at": "2026-05-11T00:56:33.523Z"
+    },
+    {
+      "name": "Oliver Adams Larkin",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "oliver-adams-larkin",
+      "incumbent": false,
+      "state": "FL",
+      "district": "23",
+      "office": "U.S. House",
+      "race_id": "race-fl-23-d-2026",
+      "fec_candidate_id": "H6FL23154",
+      "total_raised": 327736.48,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 327736.48,
+        "disbursements": 145012.77,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 323436.48,
+        "other_political_committee_contributions": 4100
+      },
+      "bio": "Oliver Waterman Larkin (August 17, 1896 – December 17, 1970) was an American art historian and educator.  He won the 1950 Pulitzer Prize for History for his book Art and Life in America.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 43536.11,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 8100,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 7343.69,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 7150,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 6640.91,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 3250,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 3050,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 3000,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 1066.67,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 650,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "ELIAS, GAIL",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 5000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ELIAS, EUGENE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 5000,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STEELE, WARREN",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MENASHA, BENJAMIN J",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MENASHA, BENJAMIN J",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LARKIN, PAUL A",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LARKIN, PAUL A",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LARKIN, MARGOT A",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LARKIN, MARGOT A",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HUIZENGA ALEXANDER, PAMELA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Jared Moskowitz",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "jared-moskowitz",
+      "incumbent": true,
+      "state": "FL",
+      "district": "23",
+      "office": "U.S. House",
+      "race_id": "race-fl-23-d-2026",
+      "fec_candidate_id": "H2FL22171",
+      "total_raised": 1710590.3,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1710590.3,
+        "disbursements": 842813.43,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 1258774.14,
+        "other_political_committee_contributions": 323779.16
+      },
+      "bio": "Jared Evan Moskowitz (/ˈmɒskəwɪts/ MOSS-kə-wits; born December 18, 1980) is an American politician serving as the U.S. representative for Florida's 23rd congressional district since 2023. A member of the Democratic Party, he previously served on the Broward County Commission from 2022 to 2023 and as director of the Florida Division of Emergency Management from 2019 to 2021. Moskowitz also represented the Coral Springs-Parkland area in the Florida House of Representatives from 2012 to 2019.",
+      "campaign_website": "http://moskowitz.house.gov",
+      "key_messages": [
+        "Moskowitz strongly supports Israel and opposes pro-Palestine activism, voting for aid to Israel and criticizing demonstrations he views as anti-Semitic while opposing the ICC arrest warrant for Netanyahu.",
+        "Moskowitz supports stricter immigration enforcement, joining Republicans and 45 other House Democrats in voting for the Laken Riley Act in 2025.",
+        "Moskowitz supports government efficiency and reorganizing federal agencies, being the only Democrat to join the Department of Government Efficiency (DOGE) caucus and proposing to reduce the size of the Department of Homeland Security.",
+        "Moskowitz voted to fund Israel aid by cutting the IRS budget rather than other means of funding."
+      ],
+      "campaign_themes": [
+        {
+          "heading": "foreign_policy",
+          "text": "Moskowitz strongly supports Israel and opposes pro-Palestine activism, voting for aid to Israel and criticizing demonstrations he views as anti-Semitic while opposing the ICC arrest warrant for Netanyahu."
+        },
+        {
+          "heading": "immigration",
+          "text": "Moskowitz supports stricter immigration enforcement, joining Republicans and 45 other House Democrats in voting for the Laken Riley Act in 2025."
+        },
+        {
+          "heading": "economy",
+          "text": "Moskowitz supports government efficiency and reorganizing federal agencies, being the only Democrat to join the Department of Government Efficiency (DOGE) caucus and proposing to reduce the size of the Department of Homeland Security."
+        },
+        {
+          "heading": "taxes",
+          "text": "Moskowitz voted to fund Israel aid by cutting the IRS budget rather than other means of funding."
+        }
+      ],
+      "platform_excerpts": [
+        {
+          "issue_slug": "foreign_policy",
+          "excerpt": "In November 2023, Moskowitz was one of 12 House Democrats to vote for a $14.3 billion aid package to Israel...He wrote on October 10 supporting strong retaliation by Israel after the October 7 attacks, 'This is the largest attack in Israel in 50 years, The response will be the largest response in 50 years.'",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Jared_Moskowitz"
+        },
+        {
+          "issue_slug": "immigration",
+          "excerpt": "In 2025, Moskowitz was one of 46 House Democrats who joined all Republicans to vote for the Laken Riley Act.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Jared_Moskowitz"
+        },
+        {
+          "issue_slug": "economy",
+          "excerpt": "Moskowitz was the only Democrat to join the Department of Government Efficiency (DOGE) caucus in Congress. He proposed reorganizing the Department of Homeland Security (DHS) by potentially removing agencies such as the Federal Emergency Management Agency (FEMA) and the Secret Service from its jurisdiction. This proposal aims to reduce the size of the DHS.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Jared_Moskowitz"
+        },
+        {
+          "issue_slug": "taxes",
+          "excerpt": "Moskowitz was one of 12 House Democrats to vote for a $14.3 billion aid package to Israel that was funded by cutting the Internal Revenue Service (IRS) budget",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Jared_Moskowitz"
+        }
+      ],
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 126000,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 49000,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 31500,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 31500,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 24500,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 21000,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 17500,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 17500,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 14000,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Agriculture",
+          "amount": 10500,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "CARRIER, ALYSSA",
+          "donor_type": "individual",
+          "industry": "Construction",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CARRIER, ALYSSA",
+          "donor_type": "individual",
+          "industry": "Construction",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STERLING, DAVID",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ROGOFF, LISA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "NEFF, BRIAN",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HIRSCHTICK, JON",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HIRSCHTICK, JON",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FRIEDMAN, BERNIE",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FREEDLAND, MICHAEL",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FREEDLAND, MICHAEL",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        }
+      ],
+      "govtrack_id": 456893,
+      "bioguide_id": "M001217",
+      "voting_record": [
+        {
+          "bill_id": "s4465-119",
+          "bill_title": "S. 4465: A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
+          "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
+          "vote": "absent",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h155",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h154",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h153",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h152",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h151",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h150",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h149",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h148",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h147",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h146",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h145",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h144",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h143",
+          "significance": "major"
+        },
+        {
+          "bill_id": "s1318-119",
+          "bill_title": "S. 1318: Fallen Servicemembers Religious Heritage Restoration Act",
+          "bill_summary": "This bill was passed by Congress on April 29, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h142",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1224-119",
+          "bill_title": "H.Res. 1224: Providing for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes; providing for consideration ",
+          "bill_summary": "This simple resolution was agreed to on April 29, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [
+            "climate"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h141",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1224-119",
+          "bill_title": "H.Res. 1224: Providing for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes; providing for consideration ",
+          "bill_summary": "This simple resolution was agreed to on April 29, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [
+            "climate"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h140",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr227-119",
+          "bill_title": "H.R. 227: Clergy Act",
+          "bill_summary": "This bill passed in the House on April 27, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h139",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7959-119",
+          "bill_title": "H.R. 7959: IRS Whistleblower Program Improvement Act",
+          "bill_summary": "This bill passed in the House on April 27, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h138",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5587-119",
+          "bill_title": "H.R. 5587: HEATS Act",
+          "bill_summary": "This bill passed in the House on April 23, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h137",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6387-119",
+          "bill_title": "H.R. 6387: FIRE Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h136",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6387-119",
+          "bill_title": "H.R. 6387: FIRE Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h135",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr4690-119",
+          "bill_title": "H.R. 4690: Reliable Federal Infrastructure Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h134",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr4690-119",
+          "bill_title": "H.R. 4690: Reliable Federal Infrastructure Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h133",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1182-119",
+          "bill_title": "H.Res. 1182: Expressing support for rural communities across the United States as stewards of the environment, major suppliers of United States energy resources, critical providers of food production and manufacturing capacity, and drivers of national ec",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h132",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1189-119",
+          "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h131",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1189-119",
+          "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h130",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "s1020-119",
+          "bill_title": "S. 1020: A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+          "bill_summary": "This bill was passed by Congress on April 21, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h129",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr2493-119",
+          "bill_title": "H.R. 2493: Improving Care in Rural America Reauthorization Act of 2025",
+          "bill_summary": "This bill passed in the House on April 21, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h128",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5201-119",
+          "bill_title": "H.R. 5201: Kari’s Law Reporting Act",
+          "bill_summary": "This bill passed in the House on April 21, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h127",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5200-119",
+          "bill_title": "H.R. 5200: Emergency Reporting Act",
+          "bill_summary": "This bill passed in the House on April 20, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-20",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h126",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1681-119",
+          "bill_title": "H.R. 1681: Expediting Federal Broadband Deployment Reviews Act",
+          "bill_summary": "This bill passed in the House on April 20, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-20",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h125",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1175-119",
+          "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+          "bill_summary": "This resolution failed in the House on April 17, 2026.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-17",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h124",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1175-119",
+          "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+          "bill_summary": "This resolution failed in the House on April 17, 2026.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-17",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h123",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1175-119",
+          "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+          "bill_summary": "This resolution failed in the House on April 17, 2026.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-17",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h122",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1156-119",
+          "bill_title": "H.Res. 1156: Expressing support for tax policies that support working families.",
+          "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [
+            "economy"
+          ],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h121",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1689-119",
+          "bill_title": "H.R. 1689: To require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h120",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres965-119",
+          "bill_title": "H.Res. 965: Providing for consideration of the bill (H.R. 1689) to require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+          "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h119",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6398-119",
+          "bill_title": "H.R. 6398: RED Tape Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h118",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6398-119",
+          "bill_title": "H.R. 6398: RED Tape Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h117",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr6409-119",
+          "bill_title": "H.R. 6409: FENCES Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h116",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6409-119",
+          "bill_title": "H.R. 6409: FENCES Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h115",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hconres40-119",
+          "bill_title": "H.Con.Res. 40: Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+          "bill_summary": "This resolution failed in the House on April 16, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h114",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres965-119",
+          "bill_title": "H.Res. 965: Providing for consideration of the bill (H.R. 1689) to require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+          "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h113",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1174-119",
+          "bill_title": "H.Res. 1174: Providing for consideration of the bill (H.R. 6387) to amend the Clean Air Act to require revisions to regulations governing the review and handling of air quality monitoring data influenced by exceptional events or actions to mitigate wildf",
+          "bill_summary": "This simple resolution was agreed to on April 15, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h112",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1174-119",
+          "bill_title": "H.Res. 1174: Providing for consideration of the bill (H.R. 6387) to amend the Clean Air Act to require revisions to regulations governing the review and handling of air quality monitoring data influenced by exceptional events or actions to mitigate wildf",
+          "bill_summary": "This simple resolution was agreed to on April 15, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h111",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr7613-119",
+          "bill_title": "H.R. 7613: ALERT Act",
+          "bill_summary": "This bill passed in the House on April 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h110",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1011-119",
+          "bill_title": "H.R. 1011: Emergency Conservation Program Improvement Act of 2025",
+          "bill_summary": "This bill passed in the House on April 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h109",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1142-119",
+          "bill_title": "H.Res. 1142: Providing for disposition of the Senate amendment to the bill (H.R. 7147) making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
+          "bill_summary": "This simple resolution was agreed to on March 27, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-03-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h108",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1142-119",
+          "bill_title": "H.Res. 1142: Providing for disposition of the Senate amendment to the bill (H.R. 7147) making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
+          "bill_summary": "This simple resolution was agreed to on March 27, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-03-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h107",
+          "significance": "procedural"
+        }
+      ],
+      "top_stances": [
+        {
+          "stance_id": "jared-moskowitz-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_support",
+          "summary": "Strongly supports Israel, votes for aid to Israel, opposes pro-Palestine activism and ICC warrant for Netanyahu.",
+          "source_url": "http://moskowitz.house.gov",
+          "confidence": 95
+        },
+        {
+          "stance_id": "jared-moskowitz-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Supports stricter immigration enforcement; voted for Laken Riley Act with Republican support.",
+          "source_url": "http://moskowitz.house.gov",
+          "confidence": 90
+        },
+        {
+          "stance_id": "jared-moskowitz-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports government efficiency and federal agency reorganization; only Democrat in DOGE caucus.",
+          "source_url": "http://moskowitz.house.gov",
+          "confidence": 85
+        },
+        {
+          "stance_id": "jared-moskowitz-taxes",
+          "issue_slug": "taxes",
+          "stance": "oppose",
+          "summary": "Opposed funding Israel aid by cutting IRS budget; prefers alternative funding mechanisms.",
+          "source_url": "http://moskowitz.house.gov",
+          "confidence": 80
+        }
+      ],
+      "active": true,
+      "activated_at": "2026-05-11T00:56:35.586Z"
+    }
+  ],
+  "race_id": "race-fl-23-d-2026"
+}

@@ -6,6 +6,7 @@
 //   FEC_API_KEY=... npx tsx scripts/ingest/fetch_fec.ts \
 //     --race-id race-nj-07-r-2026 --state NJ --district 07 --cycle 2026
 
+import '../_env';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import {
@@ -72,7 +73,11 @@ async function main() {
   // Load (or initialize) fixture. We allow fetch_fec.ts to be the
   // first step in the pipeline when Ballotpedia coverage is thin —
   // FEC has the authoritative candidate list for federal races.
-  let fixture: { race_id?: string; candidates?: Array<Record<string, unknown> & { name?: string }> };
+  let fixture: {
+    race_id?: string;
+    race?: Record<string, unknown>;
+    candidates?: Array<Record<string, unknown> & { name?: string }>;
+  };
   if (existsSync(partialPath)) {
     fixture = JSON.parse(readFileSync(partialPath, 'utf8'));
   } else {
@@ -80,6 +85,29 @@ async function main() {
     fixture = { race_id: raceId, candidates: [] };
   }
   let candidates = fixture.candidates ?? [];
+
+  // Construct or fill in the `race` object — seed_races.ts requires it.
+  // Election date hardcoded per state primary calendar (FL = Aug 18 2026
+  // for federal primaries; expand this map as more states ingest).
+  const PRIMARY_DATES: Record<string, string> = {
+    FL: '2026-08-18',
+  };
+  const officeLabel: Record<'H' | 'S' | 'P', string> = {
+    H: 'U.S. House',
+    S: 'U.S. Senate',
+    P: 'President',
+  };
+  fixture.race = {
+    id: raceId,
+    state,
+    district: district ?? null,
+    office: officeLabel[office] ?? 'U.S. House',
+    election_date: PRIMARY_DATES[state] ?? `${cycle}-08-18`,
+    cycle,
+    election_type: 'primary',
+    primary_party: primaryParty ?? null,
+    ...(fixture.race ?? {}), // preserve any prior overrides (e.g. from Ballotpedia)
+  };
 
   // Pull all FEC candidates registered for this race
   const fecCandidates = await searchCandidates({ state, district, cycle, office });

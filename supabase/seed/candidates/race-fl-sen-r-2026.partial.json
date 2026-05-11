@@ -1,0 +1,2188 @@
+{
+  "race_id": "race-fl-sen-r-2026",
+  "candidates": [
+    {
+      "name": "Ashley Jean Baptiste",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "ashley-jean-baptiste",
+      "incumbent": false,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S8FL00323",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Tyrone Dawayne Bishop Brown",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "tyrone-dawayne-bishop-brown",
+      "incumbent": false,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S8FL00307",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Christopher Gleason",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "christopher-gleason",
+      "incumbent": false,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S6FL00848",
+      "total_raised": 3429.73,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 3429.73,
+        "disbursements": 129.73,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 3429.73,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 2184.6,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 260.73,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "SHREERO, BETSY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 521.15,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00936534",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SANDERSON, ROSSCHELLE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 521.15,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00936534",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SANDERSON, JAMES",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 521.15,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00936534",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MIDDLETON, DIANA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 521.15,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00936534",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ZILLES, MAUREEN",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 260.73,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00936534",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "POTTER, ELIZABETH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 100,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00936534",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Michaelangelo Collins Hamilton",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "michaelangelo-collins-hamilton",
+      "incumbent": false,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S6FL00632",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Jake Lang",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "jake-lang",
+      "incumbent": false,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S6FL00657",
+      "total_raised": 32771.73,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 32771.73,
+        "disbursements": 27362.66,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 5834,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "Edward Jacob Lang (born 1995–96) is an American far-right activist and politician. He was a participant in the 2021 January 6 United States Capitol attack, for which he served four years in prison. Lang's charges were dismissed by President Donald Trump in his pardon of attack defendants on the first day of his second presidency in 2025.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 1260.25,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "VANDEBUNT, BARBARA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00897330",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FOUNTAINE, MICHAEL",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 260.25,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00897330",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Josue Economist Larose",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "josue-economist-larose",
+      "incumbent": false,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S6FL00624",
+      "total_raised": 0,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 0,
+        "disbursements": 0,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 0,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "The 2026 United States Senate special election in Florida is expected to be held on November 3, 2026, to elect a member of the United States Senate to represent the state of Florida, to finish the last two years of former Republican Senator Marco Rubio's term, who resigned his seat to become United States secretary of state in President Donald Trump's second administration. The primary election will be held August 18, 2026.",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Ashley Moody",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "ashley-moody",
+      "incumbent": true,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S6FL00640",
+      "total_raised": 8407063.8,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 8407063.8,
+        "disbursements": 1277671.65,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 2748661.48,
+        "other_political_committee_contributions": 1504500
+      },
+      "bio": "Ashley Brooke Moody (born March 28, 1975) is an American politician and attorney serving since 2025 as the junior United States senator from Florida. A member of the Republican Party, she served from 2019 to 2025 as the 38th attorney general of Florida.",
+      "campaign_website": "http://moody.senate.gov",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 217135.76,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 123992.2,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 66705.08,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 57287.119999999995,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 41000,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 26000,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 22848.640000000003,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Agriculture",
+          "amount": 14000,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 10410.16,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 7000,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "TRUMBULL, JAY N",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 12000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00895763",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TRUMBULL, JAY N",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 12000,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00895763",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HUTSON, NANCY A",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 12000,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00895763",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HUTSON, DAVID W",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 12000,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00895763",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "POPOLO, CHRIS",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00895763",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DUCHOSSOIS, JANET",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00895763",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DUCHOSSOIS, CRAIG",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00895763",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DESTEFANO, JOHN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00895763",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DENICOLA, CHRISTIE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00895763",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DE NICOLA, ANTHONY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00895763",
+          "data_source": "fec"
+        }
+      ],
+      "govtrack_id": 457033,
+      "bioguide_id": "M001244",
+      "voting_record": [
+        {
+          "bill_id": "sjres184-119",
+          "bill_title": "S.J.Res. 184: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on April 16, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s113",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sres690-119",
+          "bill_title": "S.Res. 690: An executive resolution authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on April 27, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s112",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sjres99-119",
+          "bill_title": "S.J.Res. 99: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by U.S. Citizenship and Immigration Services relating to “Removal of the Automatic Extension of Employment Autho",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on December 10, 2025. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [
+            "immigration"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s111",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sjres139-119",
+          "bill_title": "S.J.Res. 139: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to “Air Plan Disapproval; Colorado; Regional Haze Plan for the ",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 19, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s110",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "On the Nomination PN730-14: Robert Cekada, of Florida, to be Director, Bureau of Alcohol, Tobacco, Firearms, and Explosives",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [
+            "guns"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s109",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sjres124-119",
+          "bill_title": "S.J.Res. 124: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Republic of Cuba that have not been authorized by Congress.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 12, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-28",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s108",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sres690-119",
+          "bill_title": "S.Res. 690: An executive resolution authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on April 27, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-28",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s107",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "Motion to Invoke Cloture: Robert Cekada to be Director, Bureau of Alcohol, Tobacco, Firearms, and Explosives: Robert Cekada, of Florida, to be Director, Bureau of Alcohol, Tobacco, Firearms, and Explosives",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [
+            "guns"
+          ],
+          "vote_date": "2026-04-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s106",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s105",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s104",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s103",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s102",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s101",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s100",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s99",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s98",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s97",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s96",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s95",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s94",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s93",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s92",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s91",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s90",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s89",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sjres114-119",
+          "bill_title": "S.J.Res. 114: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 5, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s88",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s87",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "On the Nomination PN787-1: Andrew B. Davis, of Texas, to be United States District Judge for the Western District of Texas",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-20",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s86",
+          "significance": "major"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "Motion to Invoke Cloture: Andrew B. Davis to be U.S. District Judge for the Western District of Texas: Andrew B. Davis, of Texas, to be United States District Judge for the Western District of Texas",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s85",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hjres140-119",
+          "bill_title": "H.J.Res. 140: Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Lou",
+          "bill_summary": "This resolution was enacted after being signed by the President on April 27, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s84",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hjres140-119",
+          "bill_title": "H.J.Res. 140: Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Lou",
+          "bill_summary": "This resolution was enacted after being signed by the President on April 27, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s83",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hjres140-119",
+          "bill_title": "H.J.Res. 140: Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Lou",
+          "bill_summary": "This resolution was enacted after being signed by the President on April 27, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s82",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sjres138-119",
+          "bill_title": "S.J.Res. 138: A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Israel of certain defense articles and services.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 19, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s81",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sjres32-119",
+          "bill_title": "S.J.Res. 32: A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Israel of certain defense articles and services.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 10, 2025. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s80",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sjres123-119",
+          "bill_title": "S.J.Res. 123: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 10, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s79",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "On the Nomination PN787-5: Christopher R. Wolfe, of Texas, to be United States District Judge for the Western District of Texas",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s78",
+          "significance": "major"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "Motion to Invoke Cloture: Christopher R. Wolfe to be U.S. District Judge for the Western District of Texas: Christopher R. Wolfe, of Texas, to be United States District Judge for the Western District of Texas",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s77",
+          "significance": "major"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "On the Nomination PN787-3: John Thomas Shepherd, of Arkansas, to be United States District Judge for the Western District of Arkansas",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s76",
+          "significance": "major"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "Motion to Invoke Cloture: John Thomas Shepherd to be U.S. District Judge for the Western District of Arkansas: John Thomas Shepherd, of Arkansas, to be United States District Judge for the Western District of Arkansas",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s75",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7147-119",
+          "bill_title": "H.R. 7147: Homeland Security and Further Additional Continuing Appropriations Act, 2026.",
+          "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-26",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s74",
+          "significance": "major"
+        },
+        {
+          "bill_id": "s1383-119",
+          "bill_title": "S. 1383: Safeguard American Voter Eligibility Act / SAVE America Act",
+          "bill_summary": "This bill was passed by Congress on February 11, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-26",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s73",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sjres103-119",
+          "bill_title": "S.J.Res. 103: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Veterans Affairs relating to “Reproductive Health Services”.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on January 27, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [
+            "healthcare",
+            "climate"
+          ],
+          "vote_date": "2026-03-25",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s72",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr7147-119",
+          "bill_title": "H.R. 7147: Homeland Security and Further Additional Continuing Appropriations Act, 2026.",
+          "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-25",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s71",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sjres107-119",
+          "bill_title": "S.J.Res. 107: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to “Beginning of Construction Requirements for Purposes of the Termina",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on February 12, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-03-25",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s70",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sjres116-119",
+          "bill_title": "S.J.Res. 116: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 5, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-03-24",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s69",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "s1383-119",
+          "bill_title": "S. 1383: Safeguard American Voter Eligibility Act / SAVE America Act",
+          "bill_summary": "This bill was passed by Congress on February 11, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-24",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s68",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "s1383-119",
+          "bill_title": "S. 1383: Safeguard American Voter Eligibility Act / SAVE America Act",
+          "bill_summary": "This bill was passed by Congress on February 11, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-24",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s67",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "On the Nomination PN786-9: Colin McDonald, of California, to be an Assistant Attorney General",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-24",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s65",
+          "significance": "major"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "Motion to Invoke Cloture: Colin McDonald to be an Assistant Attorney General: Colin McDonald, of California, to be an Assistant Attorney General",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s64",
+          "significance": "major"
+        }
+      ],
+      "top_stances": [
+        {
+          "stance_id": "ashley-moody-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "oppose",
+          "summary": "Oppose congressional disapproval of military actions; support executive discretion in Iran operations.",
+          "source_url": "http://moody.senate.gov",
+          "confidence": 75,
+          "track_record_note": "voted NAY on sjres184-119 and sjres114-119 opposing removal of armed forces from Iran hostilities, but YEA on sjres124-119 supporting removal from Cuba hostilities",
+          "track_record_citations": [
+            "sjres184-119",
+            "sjres114-119",
+            "sjres124-119"
+          ]
+        },
+        {
+          "stance_id": "ashley-moody-immigration",
+          "issue_slug": "immigration",
+          "stance": "oppose",
+          "summary": "Oppose congressional disapproval of employment authorization rule changes.",
+          "source_url": "http://moody.senate.gov",
+          "confidence": 72,
+          "track_record_note": "voted NAY on sjres99-119 blocking disapproval of USCIS employment authorization removal rule",
+          "track_record_citations": [
+            "sjres99-119"
+          ]
+        },
+        {
+          "stance_id": "ashley-moody-guns",
+          "issue_slug": "guns",
+          "stance": "support",
+          "summary": "Support pro-gun law enforcement leadership and ATF director nominations.",
+          "source_url": "http://moody.senate.gov",
+          "confidence": 78,
+          "track_record_note": "voted YEA on confirmation and cloture for Robert Cekada as ATF Director",
+          "track_record_citations": [
+            "vote-undefined"
+          ]
+        }
+      ],
+      "active": true,
+      "activated_at": "2026-05-11T01:02:16.726Z"
+    },
+    {
+      "name": "Ernest Ernie John Rev. Dr. Rivera",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "ernest-ernie-john-rev-dr-rivera",
+      "incumbent": false,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S6FL00897",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Marco Rubio",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "marco-rubio",
+      "incumbent": false,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S0FL00338",
+      "total_raised": 1434868.67,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1434868.67,
+        "disbursements": 182757.89,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 11055.76,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "Marco Antonio Rubio (/ˈruː.bi.oʊ/, ROO-bee-oh; born May 28, 1971) is an American politician, attorney, and diplomat serving since 2025 as the 72nd United States secretary of state. He is also the acting national security advisor. A member of the Republican Party, Rubio represented Florida in the United States Senate from 2011 to 2025.",
+      "key_messages": [
+        "Rubio supports balancing the federal budget while prioritizing defense spending, and proposes setting corporate taxes at 25% with a reformed tax code and capped economic regulations.",
+        "Rubio opposes the Affordable Care Act and has voted to repeal it.",
+        "Rubio initially supported comprehensive immigration reform with a pathway to citizenship for undocumented immigrants, but later developed more hardline views on immigration and rejected bipartisan reform efforts.",
+        "Rubio initially rejected the scientific consensus on climate change but reversed this position by 2018, acknowledging that humans contribute to increased greenhouse gases and rising sea levels, and joined the bipartisan Climate Solutions Caucus in 2020.",
+        "Rubio supports expanding public charter schools, opposes Common Core State Standards, and advocates closing the federal Department of Education.",
+        "Rubio has said that gun control laws consistently fail to achieve their purpose and has defended accepting contributions from the National Rifle Association.",
+        "Rubio has expressed caution about criminal justice reform focused on drug crimes and would be open to legalizing non-psychoactive cannabis for medical use but otherwise opposes legalization and would enforce federal law against state-legalized cannabis.",
+        "Rubio's foreign policy approach is interventionist and hawkish, supporting military interventions, tough sanctions on Iran, opposition to Syrian refugees post-2015, support for Taiwan and Hong Kong democracy, and strong opposition to China and the Chinese Communist Party.",
+        "Rubio supports setting corporate taxes at 25% and reforming the tax code, while also proposing to increase the social security retirement age based on longer life expectancy."
+      ],
+      "campaign_themes": [
+        {
+          "heading": "economy",
+          "text": "Rubio supports balancing the federal budget while prioritizing defense spending, and proposes setting corporate taxes at 25% with a reformed tax code and capped economic regulations."
+        },
+        {
+          "heading": "healthcare",
+          "text": "Rubio opposes the Affordable Care Act and has voted to repeal it."
+        },
+        {
+          "heading": "immigration",
+          "text": "Rubio initially supported comprehensive immigration reform with a pathway to citizenship for undocumented immigrants, but later developed more hardline views on immigration and rejected bipartisan reform efforts."
+        },
+        {
+          "heading": "climate",
+          "text": "Rubio initially rejected the scientific consensus on climate change but reversed this position by 2018, acknowledging that humans contribute to increased greenhouse gases and rising sea levels, and joined the bipartisan Climate Solutions Caucus in 2020."
+        },
+        {
+          "heading": "education",
+          "text": "Rubio supports expanding public charter schools, opposes Common Core State Standards, and advocates closing the federal Department of Education."
+        },
+        {
+          "heading": "guns",
+          "text": "Rubio has said that gun control laws consistently fail to achieve their purpose and has defended accepting contributions from the National Rifle Association."
+        },
+        {
+          "heading": "criminal_justice",
+          "text": "Rubio has expressed caution about criminal justice reform focused on drug crimes and would be open to legalizing non-psychoactive cannabis for medical use but otherwise opposes legalization and would enforce federal law against state-legalized cannabis."
+        },
+        {
+          "heading": "foreign_policy",
+          "text": "Rubio's foreign policy approach is interventionist and hawkish, supporting military interventions, tough sanctions on Iran, opposition to Syrian refugees post-2015, support for Taiwan and Hong Kong democracy, and strong opposition to China and the Chinese Communist Party."
+        },
+        {
+          "heading": "taxes",
+          "text": "Rubio supports setting corporate taxes at 25% and reforming the tax code, while also proposing to increase the social security retirement age based on longer life expectancy."
+        }
+      ],
+      "platform_excerpts": [
+        {
+          "issue_slug": "economy",
+          "excerpt": "Rubio supports balancing the federal budget, while prioritizing defense spending.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Marco_Rubio"
+        },
+        {
+          "issue_slug": "healthcare",
+          "excerpt": "Rubio opposes the Affordable Care Act (Obamacare) and has voted to repeal it.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Marco_Rubio"
+        },
+        {
+          "issue_slug": "immigration",
+          "excerpt": "Over time, Rubio distanced himself from his previous efforts to reach a compromise on immigration, and developed more hardline views on immigration, rejecting bipartisan immigration reform efforts in 2018.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Marco_Rubio"
+        },
+        {
+          "issue_slug": "climate",
+          "excerpt": "He reversed this position by 2018, saying that humans contribute to an increase in greenhouse gases and sea levels are rising at a measurable rate. In 2020, he joined the bipartisan Climate Solutions Caucus.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Marco_Rubio"
+        },
+        {
+          "issue_slug": "education",
+          "excerpt": "He supports expanding public charter schools, opposes Common Core State Standards, and advocates closing the federal Department of Education.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Marco_Rubio"
+        },
+        {
+          "issue_slug": "guns",
+          "excerpt": "He has said that gun control laws consistently fail to achieve their purpose.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Marco_Rubio"
+        },
+        {
+          "issue_slug": "criminal_justice",
+          "excerpt": "He has said that he would be open to legalizing non-psychoactive forms of cannabis for medical use, but otherwise opposes its legalization for recreational and medical purposes.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Marco_Rubio"
+        },
+        {
+          "issue_slug": "foreign_policy",
+          "excerpt": "Rubio's foreign policy approach has been described as 'interventionist' and 'hawkish'. He supported the 2003 invasion of Iraq and military intervention in Libya.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Marco_Rubio"
+        },
+        {
+          "issue_slug": "taxes",
+          "excerpt": "Rubio supports setting corporate taxes at 25%, reforming the tax code, and capping economic regulations, and proposes to increase the social security retirement age based on longer life expectancy.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Marco_Rubio"
+        }
+      ],
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": [],
+      "top_stances": [
+        {
+          "stance_id": "marco-rubio-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_support",
+          "summary": "Interventionist approach: military action, Iran sanctions, Taiwan support, strong China opposition.",
+          "source_url": "",
+          "confidence": 95
+        },
+        {
+          "stance_id": "marco-rubio-immigration",
+          "issue_slug": "immigration",
+          "stance": "oppose",
+          "summary": "Hardline stance rejecting bipartisan reform; moved from earlier pathway-to-citizenship position.",
+          "source_url": "",
+          "confidence": 90
+        },
+        {
+          "stance_id": "marco-rubio-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Corporate tax rate at 25%, reformed tax code, raise Social Security retirement age.",
+          "source_url": "",
+          "confidence": 85
+        },
+        {
+          "stance_id": "marco-rubio-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Expand charter schools, oppose Common Core, close federal Department of Education.",
+          "source_url": "",
+          "confidence": 85
+        },
+        {
+          "stance_id": "marco-rubio-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "oppose",
+          "summary": "Oppose Affordable Care Act; has voted for repeal.",
+          "source_url": "",
+          "confidence": 90
+        },
+        {
+          "stance_id": "marco-rubio-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Gun control laws ineffective; defend NRA contributions; oppose new restrictions.",
+          "source_url": "",
+          "confidence": 85
+        },
+        {
+          "stance_id": "marco-rubio-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Humans contribute to climate change; acknowledge greenhouse gases and sea level rise.",
+          "source_url": "",
+          "confidence": 80
+        },
+        {
+          "stance_id": "marco-rubio-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Balance federal budget prioritizing defense; cap economic regulations; reform tax code.",
+          "source_url": "",
+          "confidence": 85
+        },
+        {
+          "stance_id": "marco-rubio-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "neutral",
+          "summary": "Cautious on drug crime reform; open to medical cannabis only; enforce federal law.",
+          "source_url": "",
+          "confidence": 75
+        }
+      ],
+      "active": true,
+      "activated_at": "2026-05-11T01:02:18.781Z"
+    },
+    {
+      "name": "Rick Sen Scott",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "rick-sen-scott",
+      "incumbent": true,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S8FL00273",
+      "total_raised": 1458779.64,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1458779.64,
+        "disbursements": 1457252.35,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 378364.62,
+        "other_political_committee_contributions": 68250
+      },
+      "bio": "Richard Lynn  Scott (né Myers; born December 1, 1952) is an American attorney, businessman, politician, and Navy veteran serving as the senior United States senator from Florida, a seat he has held since 2019.[a] A member of the Republican Party, he served from 2011 to 2019 as the 45th governor of Florida.",
+      "campaign_website": "http://rickscott.senate.gov",
+      "top_industries": [
+        {
+          "industry_name": "Other",
+          "amount": 133331.91999999998,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 110200,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 47400,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 29300,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 28100,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 25900,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 25600,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Agriculture",
+          "amount": 7000,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Nonprofit / Civic",
+          "amount": 6600,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Defense & Aerospace",
+          "amount": 6600,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "TEAM RICK SCOTT",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 26733,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00676965",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TEAM RICK SCOTT",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 24500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00676965",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TEAM RICK SCOTT",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 20732.25,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00676965",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ZECKMAN, JACKIE",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 12500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00676965",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHWIRIAN, SARAH",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 10416.67,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00676965",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ZENOZ, MARIA E. MRS.",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 10000,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00676965",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "GRAMMIG, ROBERT J. MR.",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00676965",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "GRAMMIG, LAUREL LENFESTEY MRS.",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00676965",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HOWE, DEBRA MRS.",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 5000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00676965",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "RAUNER, BRUCE HON.",
+          "donor_type": "individual",
+          "industry": "Government / Public Sector",
+          "amount_total": 5000,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00676965",
+          "data_source": "fec"
+        }
+      ],
+      "govtrack_id": 412838,
+      "bioguide_id": "S001217",
+      "voting_record": [
+        {
+          "bill_id": "sjres184-119",
+          "bill_title": "S.J.Res. 184: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on April 16, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s113",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sres690-119",
+          "bill_title": "S.Res. 690: An executive resolution authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on April 27, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s112",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sjres99-119",
+          "bill_title": "S.J.Res. 99: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by U.S. Citizenship and Immigration Services relating to “Removal of the Automatic Extension of Employment Autho",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on December 10, 2025. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [
+            "immigration"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s111",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sjres139-119",
+          "bill_title": "S.J.Res. 139: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to “Air Plan Disapproval; Colorado; Regional Haze Plan for the ",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 19, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s110",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "On the Nomination PN730-14: Robert Cekada, of Florida, to be Director, Bureau of Alcohol, Tobacco, Firearms, and Explosives",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [
+            "guns"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s109",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sjres124-119",
+          "bill_title": "S.J.Res. 124: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Republic of Cuba that have not been authorized by Congress.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 12, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-28",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s108",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sres690-119",
+          "bill_title": "S.Res. 690: An executive resolution authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on April 27, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-28",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s107",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "Motion to Invoke Cloture: Robert Cekada to be Director, Bureau of Alcohol, Tobacco, Firearms, and Explosives: Robert Cekada, of Florida, to be Director, Bureau of Alcohol, Tobacco, Firearms, and Explosives",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [
+            "guns"
+          ],
+          "vote_date": "2026-04-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s106",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s105",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s104",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s103",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s102",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s101",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s100",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s99",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s98",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s97",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s96",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s95",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s94",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s93",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s92",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s91",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s90",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s89",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sjres114-119",
+          "bill_title": "S.J.Res. 114: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 5, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s88",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s87",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "On the Nomination PN787-1: Andrew B. Davis, of Texas, to be United States District Judge for the Western District of Texas",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-20",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s86",
+          "significance": "major"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "Motion to Invoke Cloture: Andrew B. Davis to be U.S. District Judge for the Western District of Texas: Andrew B. Davis, of Texas, to be United States District Judge for the Western District of Texas",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s85",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hjres140-119",
+          "bill_title": "H.J.Res. 140: Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Lou",
+          "bill_summary": "This resolution was enacted after being signed by the President on April 27, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s84",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hjres140-119",
+          "bill_title": "H.J.Res. 140: Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Lou",
+          "bill_summary": "This resolution was enacted after being signed by the President on April 27, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s83",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hjres140-119",
+          "bill_title": "H.J.Res. 140: Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Lou",
+          "bill_summary": "This resolution was enacted after being signed by the President on April 27, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s82",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sjres138-119",
+          "bill_title": "S.J.Res. 138: A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Israel of certain defense articles and services.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 19, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s81",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sjres32-119",
+          "bill_title": "S.J.Res. 32: A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Israel of certain defense articles and services.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 10, 2025. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s80",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sjres123-119",
+          "bill_title": "S.J.Res. 123: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 10, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s79",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "On the Nomination PN787-5: Christopher R. Wolfe, of Texas, to be United States District Judge for the Western District of Texas",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s78",
+          "significance": "major"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "Motion to Invoke Cloture: Christopher R. Wolfe to be U.S. District Judge for the Western District of Texas: Christopher R. Wolfe, of Texas, to be United States District Judge for the Western District of Texas",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s77",
+          "significance": "major"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "On the Nomination PN787-3: John Thomas Shepherd, of Arkansas, to be United States District Judge for the Western District of Arkansas",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s76",
+          "significance": "major"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "Motion to Invoke Cloture: John Thomas Shepherd to be U.S. District Judge for the Western District of Arkansas: John Thomas Shepherd, of Arkansas, to be United States District Judge for the Western District of Arkansas",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s75",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7147-119",
+          "bill_title": "H.R. 7147: Homeland Security and Further Additional Continuing Appropriations Act, 2026.",
+          "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-26",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s74",
+          "significance": "major"
+        },
+        {
+          "bill_id": "s1383-119",
+          "bill_title": "S. 1383: Safeguard American Voter Eligibility Act / SAVE America Act",
+          "bill_summary": "This bill was passed by Congress on February 11, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-26",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s73",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sjres103-119",
+          "bill_title": "S.J.Res. 103: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Veterans Affairs relating to “Reproductive Health Services”.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on January 27, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [
+            "healthcare",
+            "climate"
+          ],
+          "vote_date": "2026-03-25",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s72",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr7147-119",
+          "bill_title": "H.R. 7147: Homeland Security and Further Additional Continuing Appropriations Act, 2026.",
+          "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-25",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s71",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sjres107-119",
+          "bill_title": "S.J.Res. 107: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to “Beginning of Construction Requirements for Purposes of the Termina",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on February 12, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-03-25",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s70",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "sjres116-119",
+          "bill_title": "S.J.Res. 116: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 5, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-03-24",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s69",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "s1383-119",
+          "bill_title": "S. 1383: Safeguard American Voter Eligibility Act / SAVE America Act",
+          "bill_summary": "This bill was passed by Congress on February 11, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-24",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s68",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "s1383-119",
+          "bill_title": "S. 1383: Safeguard American Voter Eligibility Act / SAVE America Act",
+          "bill_summary": "This bill was passed by Congress on February 11, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-24",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s67",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "On the Nomination PN786-9: Colin McDonald, of California, to be an Assistant Attorney General",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-24",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s65",
+          "significance": "major"
+        },
+        {
+          "bill_id": "vote-undefined",
+          "bill_title": "Motion to Invoke Cloture: Colin McDonald to be an Assistant Attorney General: Colin McDonald, of California, to be an Assistant Attorney General",
+          "bill_summary": null,
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-03-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s64",
+          "significance": "major"
+        }
+      ],
+      "top_stances": [
+        {
+          "stance_id": "rick-sen-scott-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "oppose",
+          "summary": "Oppose congressional disapproval resolutions directing removal of U.S. Armed Forces from Iran hostilities.",
+          "source_url": "http://rickscott.senate.gov",
+          "confidence": 85,
+          "track_record_note": "voted NAY on sjres184-119 and sjres114-119, both directing removal of U.S. Armed Forces from Iran hostilities",
+          "track_record_citations": [
+            "sjres184-119",
+            "sjres114-119"
+          ]
+        },
+        {
+          "stance_id": "rick-sen-scott-immigration",
+          "issue_slug": "immigration",
+          "stance": "oppose",
+          "summary": "Oppose congressional disapproval of USCIS employment authorization extension rule.",
+          "source_url": "http://rickscott.senate.gov",
+          "confidence": 80,
+          "track_record_note": "voted NAY on sjres99-119 which would have disapproved the USCIS employment authorization extension rule",
+          "track_record_citations": [
+            "sjres99-119"
+          ]
+        },
+        {
+          "stance_id": "rick-sen-scott-guns",
+          "issue_slug": "guns",
+          "stance": "support",
+          "summary": "Support confirmation of ATF director nominee.",
+          "source_url": "http://rickscott.senate.gov",
+          "confidence": 75,
+          "track_record_note": "voted YEA on cloture motion and confirmation of Robert Cekada as Director of Bureau of Alcohol, Tobacco, Firearms, and Explosives",
+          "track_record_citations": [
+            "vote-undefined"
+          ]
+        }
+      ],
+      "active": true,
+      "activated_at": "2026-05-11T01:02:21.121Z"
+    },
+    {
+      "name": "Neelam Dr Taneja Perry",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "neelam-dr-taneja-perry",
+      "incumbent": false,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S6FL00871",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Alix Christopher Mr. Jr. Toulme",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "alix-christopher-mr-jr-toulme",
+      "incumbent": false,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S4FL00769",
+      "bio": "The 2026 United States Senate special election in Florida is expected to be held on November 3, 2026, to elect a member of the United States Senate to represent the state of Florida, to finish the last two years of former Republican Senator Marco Rubio's term, who resigned his seat to become United States secretary of state in President Donald Trump's second administration. The primary election will be held August 18, 2026.",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Angela Marie Walls-Windhauser",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "angela-marie-walls-windhauser",
+      "incumbent": false,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S6FL00442",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Angie Windhauser",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "angie-windhauser",
+      "incumbent": false,
+      "state": "FL",
+      "district": null,
+      "office": "U.S. Senate",
+      "race_id": "race-fl-sen-r-2026",
+      "fec_candidate_id": "S6FL00814",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-sen-r-2026",
+    "state": "FL",
+    "district": null,
+    "office": "U.S. Senate",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R"
+  }
+}

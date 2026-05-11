@@ -1,104 +1,121 @@
 {
   "race": {
-    "id": "race-fl-10-d-2026",
+    "id": "race-fl-15-r-2026",
     "state": "FL",
-    "district": "10",
+    "district": "15",
     "office": "U.S. House",
     "election_date": "2026-08-18",
     "cycle": 2026,
     "election_type": "primary",
-    "primary_party": "D",
-    "ballotpedia_race_slug": "U.S._House_Florida_District_10_election,_2026_(Democratic_primary)"
+    "primary_party": "R",
+    "ballotpedia_race_slug": "U.S._House_Florida_District_15_election,_2026_(Republican_primary)"
   },
   "candidates": [
     {
-      "name": "Maxwell Alejandro Frost",
-      "party": "DEMOCRATIC PARTY",
-      "primary_party": "D",
-      "slug": "maxwell-alejandro-frost",
+      "name": "Steven Douglas Ii Champion",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "steven-douglas-ii-champion",
+      "incumbent": false,
+      "state": "FL",
+      "district": "15",
+      "office": "U.S. House",
+      "race_id": "race-fl-15-r-2026",
+      "fec_candidate_id": "H6FL15226",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Laurel Lee",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "laurel-lee",
       "incumbent": true,
       "state": "FL",
-      "district": "10",
+      "district": "15",
       "office": "U.S. House",
-      "race_id": "race-fl-10-d-2026",
-      "fec_candidate_id": "H2FL10259",
-      "total_raised": 2818459.77,
+      "race_id": "race-fl-15-r-2026",
+      "fec_candidate_id": "H2FL15241",
+      "total_raised": 1900839.02,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 2818459.77,
-        "disbursements": 2475654.79,
+        "receipts": 1900839.02,
+        "disbursements": 611953.88,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 2538708.78,
-        "other_political_committee_contributions": 234500
+        "individual_contributions": 367267.36,
+        "other_political_committee_contributions": 636500
       },
+      "bio": "Laurel Frances Lee (née Moore; born March 26, 1974) is an American attorney, former judge, and politician serving as the U.S. representative for Florida's 15th congressional district since 2023. A member of the Republican Party, she previously served as Florida's secretary of state from 2019 to 2022 and as a judge on Florida's Thirteenth Judicial Circuit from 2013 to 2019.",
+      "campaign_website": "http://laurellee.house.gov",
       "top_industries": [
         {
-          "industry_name": "Other",
-          "amount": 161800,
+          "industry_name": "Retired / Self-Employed",
+          "amount": 112000,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Retired / Self-Employed",
-          "amount": 45600,
+          "industry_name": "Other",
+          "amount": 104500,
           "rank": 2,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Legal",
-          "amount": 36500,
+          "industry_name": "Finance & Banking",
+          "amount": 54000,
           "rank": 3,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Media & Entertainment",
-          "amount": 19700,
+          "industry_name": "Legal",
+          "amount": 31500,
           "rank": 4,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Healthcare & Pharma",
-          "amount": 14000,
+          "amount": 26000,
           "rank": 5,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Real Estate",
-          "amount": 13000,
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 17500,
           "rank": 6,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Finance & Banking",
-          "amount": 12000,
+          "industry_name": "Defense & Aerospace",
+          "amount": 10500,
           "rank": 7,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Technology",
+          "industry_name": "Construction",
           "amount": 10500,
           "rank": 8,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Retail & Consumer Goods",
+          "industry_name": "Real Estate",
           "amount": 10000,
           "rank": 9,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Nonprofit / Civic",
-          "amount": 3500,
+          "industry_name": "Media & Entertainment",
+          "amount": 7000,
           "rank": 10,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -106,114 +123,114 @@
       ],
       "top_donors": [
         {
-          "donor_name": "WEITZ, BARBARA",
+          "donor_name": "NEAL, PATRICK K",
           "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 5000,
+          "industry": "Real Estate",
+          "amount_total": 10000,
           "cycle": 2026,
           "rank_in_candidate": 1,
-          "fec_committee_id": "C00786822",
+          "fec_committee_id": "C00815373",
           "data_source": "fec"
         },
         {
-          "donor_name": "ELLINGTON, RANDALL",
+          "donor_name": "RASHID, SAM",
           "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 3500,
+          "industry": "Defense & Aerospace",
+          "amount_total": 7000,
           "cycle": 2026,
           "rank_in_candidate": 2,
-          "fec_committee_id": "C00786822",
+          "fec_committee_id": "C00815373",
           "data_source": "fec"
         },
         {
-          "donor_name": "ELLINGTON, RANDALL",
+          "donor_name": "CORCORAN, JESSICA",
           "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 3500,
+          "industry": "Finance & Banking",
+          "amount_total": 7000,
           "cycle": 2026,
           "rank_in_candidate": 3,
-          "fec_committee_id": "C00786822",
+          "fec_committee_id": "C00815373",
           "data_source": "fec"
         },
         {
-          "donor_name": "WEITZ, BARBARA",
+          "donor_name": "SCHWARZMAN, STEPHEN",
           "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 3500,
+          "industry": "Finance & Banking",
+          "amount_total": 7000,
           "cycle": 2026,
           "rank_in_candidate": 4,
-          "fec_committee_id": "C00786822",
+          "fec_committee_id": "C00815373",
           "data_source": "fec"
         },
         {
-          "donor_name": "STEPHENS, SUSAN",
-          "donor_type": "individual",
-          "industry": "Healthcare & Pharma",
-          "amount_total": 3500,
-          "cycle": 2026,
-          "rank_in_candidate": 5,
-          "fec_committee_id": "C00786822",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "ROJAS, KRISLYN",
+          "donor_name": "SCHWARZMAN, CHRISTINE",
           "donor_type": "individual",
           "industry": "Retired / Self-Employed",
-          "amount_total": 3500,
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00815373",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PHILLIPS, KEVIN",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 7000,
           "cycle": 2026,
           "rank_in_candidate": 6,
-          "fec_committee_id": "C00786822",
+          "fec_committee_id": "C00815373",
           "data_source": "fec"
         },
         {
-          "donor_name": "ORTHWEIN, MEREDITH",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 3500,
-          "cycle": 2026,
-          "rank_in_candidate": 7,
-          "fec_committee_id": "C00786822",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "STEPHENS, SUSAN",
-          "donor_type": "individual",
-          "industry": "Healthcare & Pharma",
-          "amount_total": 3500,
-          "cycle": 2026,
-          "rank_in_candidate": 8,
-          "fec_committee_id": "C00786822",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "JACOBS, HARRY",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 3500,
-          "cycle": 2026,
-          "rank_in_candidate": 9,
-          "fec_committee_id": "C00786822",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "LOSEY, ADAM",
+          "donor_name": "STRASKE, STEPHEN B II",
           "donor_type": "individual",
           "industry": "Legal",
-          "amount_total": 3500,
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00815373",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STRASKE, JANICE F",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00815373",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FERMAN, JAMES L JR",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00815373",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FARRIOR, MARY LEE NUNNALLY",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 7000,
           "cycle": 2026,
           "rank_in_candidate": 10,
-          "fec_committee_id": "C00786822",
+          "fec_committee_id": "C00815373",
           "data_source": "fec"
         }
       ],
-      "govtrack_id": 456890,
-      "bioguide_id": "F000476",
+      "govtrack_id": 456892,
+      "bioguide_id": "L000597",
       "voting_record": [
         {
           "bill_id": "s4465-119",
           "bill_title": "S. 4465: A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
           "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [
             "foreign_policy"
           ],
@@ -226,7 +243,7 @@
           "bill_id": "hr7567-119",
           "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
           "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-30",
           "source": "govtrack",
@@ -237,7 +254,7 @@
           "bill_id": "hr7567-119",
           "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
           "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
+          "vote": "nay",
           "issue_slugs": [],
           "vote_date": "2026-04-30",
           "source": "govtrack",
@@ -248,7 +265,7 @@
           "bill_id": "hr7567-119",
           "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
           "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-30",
           "source": "govtrack",
@@ -259,7 +276,7 @@
           "bill_id": "hr7567-119",
           "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
           "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-30",
           "source": "govtrack",
@@ -270,7 +287,7 @@
           "bill_id": "hr7567-119",
           "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
           "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
+          "vote": "nay",
           "issue_slugs": [],
           "vote_date": "2026-04-30",
           "source": "govtrack",
@@ -292,7 +309,7 @@
           "bill_id": "hr7567-119",
           "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
           "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
+          "vote": "nay",
           "issue_slugs": [],
           "vote_date": "2026-04-30",
           "source": "govtrack",
@@ -336,7 +353,7 @@
           "bill_id": "hr7567-119",
           "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
           "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-30",
           "source": "govtrack",
@@ -347,7 +364,7 @@
           "bill_id": "sconres33-119",
           "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
           "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [
             "housing"
           ],
@@ -360,7 +377,7 @@
           "bill_id": "s1318-119",
           "bill_title": "S. 1318: Fallen Servicemembers Religious Heritage Restoration Act",
           "bill_summary": "This bill was passed by Congress on April 29, 2026 and goes to the President next.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-29",
           "source": "govtrack",
@@ -371,7 +388,7 @@
           "bill_id": "hres1224-119",
           "bill_title": "H.Res. 1224: Providing for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes; providing for consideration ",
           "bill_summary": "This simple resolution was agreed to on April 29, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [
             "climate"
           ],
@@ -384,7 +401,7 @@
           "bill_id": "hres1224-119",
           "bill_title": "H.Res. 1224: Providing for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes; providing for consideration ",
           "bill_summary": "This simple resolution was agreed to on April 29, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [
             "climate"
           ],
@@ -419,7 +436,7 @@
           "bill_id": "hr5587-119",
           "bill_title": "H.R. 5587: HEATS Act",
           "bill_summary": "This bill passed in the House on April 23, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-23",
           "source": "govtrack",
@@ -430,7 +447,7 @@
           "bill_id": "hr6387-119",
           "bill_title": "H.R. 6387: FIRE Act",
           "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-22",
           "source": "govtrack",
@@ -441,7 +458,7 @@
           "bill_id": "hr6387-119",
           "bill_title": "H.R. 6387: FIRE Act",
           "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
+          "vote": "nay",
           "issue_slugs": [],
           "vote_date": "2026-04-22",
           "source": "govtrack",
@@ -452,7 +469,7 @@
           "bill_id": "hr4690-119",
           "bill_title": "H.R. 4690: Reliable Federal Infrastructure Act",
           "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-22",
           "source": "govtrack",
@@ -463,7 +480,7 @@
           "bill_id": "hr4690-119",
           "bill_title": "H.R. 4690: Reliable Federal Infrastructure Act",
           "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
+          "vote": "nay",
           "issue_slugs": [],
           "vote_date": "2026-04-22",
           "source": "govtrack",
@@ -474,7 +491,7 @@
           "bill_id": "hres1182-119",
           "bill_title": "H.Res. 1182: Expressing support for rural communities across the United States as stewards of the environment, major suppliers of United States energy resources, critical providers of food production and manufacturing capacity, and drivers of national ec",
           "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-22",
           "source": "govtrack",
@@ -485,7 +502,7 @@
           "bill_id": "hres1189-119",
           "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
           "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-22",
           "source": "govtrack",
@@ -496,7 +513,7 @@
           "bill_id": "hres1189-119",
           "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
           "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-22",
           "source": "govtrack",
@@ -562,7 +579,7 @@
           "bill_id": "hres1175-119",
           "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
           "bill_summary": "This resolution failed in the House on April 17, 2026.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [
             "foreign_policy"
           ],
@@ -575,7 +592,7 @@
           "bill_id": "hres1175-119",
           "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
           "bill_summary": "This resolution failed in the House on April 17, 2026.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [
             "foreign_policy"
           ],
@@ -588,7 +605,7 @@
           "bill_id": "hres1175-119",
           "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
           "bill_summary": "This resolution failed in the House on April 17, 2026.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [
             "foreign_policy"
           ],
@@ -601,7 +618,7 @@
           "bill_id": "hres1156-119",
           "bill_title": "H.Res. 1156: Expressing support for tax policies that support working families.",
           "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [
             "economy"
           ],
@@ -614,7 +631,7 @@
           "bill_id": "hr1689-119",
           "bill_title": "H.R. 1689: To require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
           "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
+          "vote": "nay",
           "issue_slugs": [],
           "vote_date": "2026-04-16",
           "source": "govtrack",
@@ -625,7 +642,7 @@
           "bill_id": "hres965-119",
           "bill_title": "H.Res. 965: Providing for consideration of the bill (H.R. 1689) to require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
           "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "yea",
+          "vote": "nay",
           "issue_slugs": [],
           "vote_date": "2026-04-16",
           "source": "govtrack",
@@ -636,7 +653,7 @@
           "bill_id": "hr6398-119",
           "bill_title": "H.R. 6398: RED Tape Act",
           "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-16",
           "source": "govtrack",
@@ -647,7 +664,7 @@
           "bill_id": "hr6398-119",
           "bill_title": "H.R. 6398: RED Tape Act",
           "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
+          "vote": "nay",
           "issue_slugs": [],
           "vote_date": "2026-04-16",
           "source": "govtrack",
@@ -658,7 +675,7 @@
           "bill_id": "hr6409-119",
           "bill_title": "H.R. 6409: FENCES Act",
           "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-16",
           "source": "govtrack",
@@ -669,7 +686,7 @@
           "bill_id": "hr6409-119",
           "bill_title": "H.R. 6409: FENCES Act",
           "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
+          "vote": "nay",
           "issue_slugs": [],
           "vote_date": "2026-04-16",
           "source": "govtrack",
@@ -680,7 +697,7 @@
           "bill_id": "hconres40-119",
           "bill_title": "H.Con.Res. 40: Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
           "bill_summary": "This resolution failed in the House on April 16, 2026.",
-          "vote": "yea",
+          "vote": "nay",
           "issue_slugs": [],
           "vote_date": "2026-04-16",
           "source": "govtrack",
@@ -691,7 +708,7 @@
           "bill_id": "hres965-119",
           "bill_title": "H.Res. 965: Providing for consideration of the bill (H.R. 1689) to require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
           "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "yea",
+          "vote": "nay",
           "issue_slugs": [],
           "vote_date": "2026-04-15",
           "source": "govtrack",
@@ -702,7 +719,7 @@
           "bill_id": "hres1174-119",
           "bill_title": "H.Res. 1174: Providing for consideration of the bill (H.R. 6387) to amend the Clean Air Act to require revisions to regulations governing the review and handling of air quality monitoring data influenced by exceptional events or actions to mitigate wildf",
           "bill_summary": "This simple resolution was agreed to on April 15, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-15",
           "source": "govtrack",
@@ -713,7 +730,7 @@
           "bill_id": "hres1174-119",
           "bill_title": "H.Res. 1174: Providing for consideration of the bill (H.R. 6387) to amend the Clean Air Act to require revisions to regulations governing the review and handling of air quality monitoring data influenced by exceptional events or actions to mitigate wildf",
           "bill_summary": "This simple resolution was agreed to on April 15, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-15",
           "source": "govtrack",
@@ -724,7 +741,7 @@
           "bill_id": "hr7613-119",
           "bill_title": "H.R. 7613: ALERT Act",
           "bill_summary": "This bill passed in the House on April 14, 2026 and goes to the Senate next for consideration.",
-          "vote": "absent",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-14",
           "source": "govtrack",
@@ -746,7 +763,7 @@
           "bill_id": "hres1142-119",
           "bill_title": "H.Res. 1142: Providing for disposition of the Senate amendment to the bill (H.R. 7147) making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
           "bill_summary": "This simple resolution was agreed to on March 27, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-03-27",
           "source": "govtrack",
@@ -757,7 +774,7 @@
           "bill_id": "hres1142-119",
           "bill_title": "H.Res. 1142: Providing for disposition of the Senate amendment to the bill (H.R. 7147) making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
           "bill_summary": "This simple resolution was agreed to on March 27, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
+          "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-03-27",
           "source": "govtrack",
@@ -767,163 +784,33 @@
       ],
       "top_stances": [
         {
-          "stance_id": "maxwell-alejandro-frost-guns",
-          "issue_slug": "guns",
-          "stance": "strongly_support",
-          "summary": "Strong advocate for gun control; former national organizing director for March for Our Lives.",
-          "source_url": "http://frost.house.gov",
-          "confidence": 95
-        },
-        {
-          "stance_id": "maxwell-alejandro-frost-climate",
-          "issue_slug": "climate",
-          "stance": "strongly_support",
-          "summary": "Supports Green New Deal and environmental justice as campaign priority.",
-          "source_url": "http://frost.house.gov",
-          "confidence": 90,
-          "track_record_note": "Voted NAY on hres1224-119 and hres1189-119, procedural votes on bills containing energy and agricultural provisions, aligning with climate advocacy stance.",
-          "track_record_citations": [
-            "hres1224-119",
-            "hres1189-119"
-          ]
-        },
-        {
-          "stance_id": "maxwell-alejandro-frost-criminal_justice",
-          "issue_slug": "criminal_justice",
-          "stance": "strongly_support",
-          "summary": "Supports decriminalization of cannabis and sex work; advocates for future without prison.",
-          "source_url": "http://frost.house.gov",
-          "confidence": 90
-        },
-        {
-          "stance_id": "maxwell-alejandro-frost-healthcare",
-          "issue_slug": "healthcare",
-          "stance": "strongly_support",
-          "summary": "Supports single-payer healthcare; introduced legislation capping epinephrine autoinjector costs at $60 per two-pack.",
-          "source_url": "http://frost.house.gov",
-          "confidence": 90
-        },
-        {
-          "stance_id": "maxwell-alejandro-frost-housing",
-          "issue_slug": "housing",
-          "stance": "support",
-          "summary": "Supports affordable housing; co-sponsored legislation eliminating landlord fees and increasing rental transparency.",
-          "source_url": "http://frost.house.gov",
-          "confidence": 85,
-          "track_record_note": "Voted NAY on sconres33-119 (FY 2026 congressional budget), reflecting concerns about housing provisions or broader budgetary priorities.",
-          "track_record_citations": [
-            "sconres33-119"
-          ]
-        },
-        {
-          "stance_id": "maxwell-alejandro-frost-foreign_policy",
+          "stance_id": "laurel-lee-foreign_policy",
           "issue_slug": "foreign_policy",
-          "stance": "oppose",
-          "summary": "Supports two-state Israeli-Palestinian solution; opposes further Israel aid and calls for ending Gaza bombing campaign.",
-          "source_url": "http://frost.house.gov",
+          "stance": "support",
+          "summary": "Support extending FISA Title VII surveillance authorities for national security.",
+          "source_url": "http://laurellee.house.gov",
           "confidence": 85,
-          "track_record_note": "Voted NAY on s4465-119 (FISA Amendments Act extension), aligning with skepticism of expansive foreign surveillance authorities.",
+          "track_record_note": "voted YEA on s4465-119 extending FISA Amendments Act authorities",
           "track_record_citations": [
             "s4465-119"
           ]
         },
         {
-          "stance_id": "maxwell-alejandro-frost-immigration",
-          "issue_slug": "immigration",
-          "stance": "strongly_support",
-          "summary": "Opposes border wall; advocates protecting immigrant rights and opposing deportations without due process.",
-          "source_url": "http://frost.house.gov",
-          "confidence": 90
-        }
-      ],
-      "bio": "Maxwell Alejandro Frost (born January 17, 1997) is an American politician and activist serving as the U.S. representative for Florida's 10th congressional district since 2023. A member of the Democratic Party, he was previously the national organizing director for March for Our Lives. Elected at age 25, Frost currently is the youngest member of the United States Congress.",
-      "campaign_website": "http://frost.house.gov",
-      "key_messages": [
-        "Frost supports a Green New Deal and has identified environmental justice as a priority of his campaign.",
-        "Frost is a strong advocate for gun control and has called for addressing mass shootings through law enforcement meetings.",
-        "Frost supports single-payer healthcare and has introduced legislation to cap out-of-pocket costs for epinephrine autoinjectors at $60 per two-pack.",
-        "Frost wants to build toward a future without prison and supports the decriminalization of sex work and cannabis use.",
-        "Frost is a proponent of affordable housing and co-sponsored legislation to eliminate extra fees imposed by landlords and increase transparency in rental agreements.",
-        "Frost supports a two-state solution to the Israeli-Palestinian conflict. As of April 2024, he has voted against providing Israel with further aid, accused Israel of violating international law, and called for stopping the bombing campaign in Gaza.",
-        "Frost is opposed to building a southern border wall and has advocated for protecting immigrant rights and opposing deportations without due process."
-      ],
-      "campaign_themes": [
-        {
-          "heading": "climate",
-          "text": "Frost supports a Green New Deal and has identified environmental justice as a priority of his campaign."
-        },
-        {
-          "heading": "guns",
-          "text": "Frost is a strong advocate for gun control and has called for addressing mass shootings through law enforcement meetings."
-        },
-        {
-          "heading": "healthcare",
-          "text": "Frost supports single-payer healthcare and has introduced legislation to cap out-of-pocket costs for epinephrine autoinjectors at $60 per two-pack."
-        },
-        {
-          "heading": "criminal_justice",
-          "text": "Frost wants to build toward a future without prison and supports the decriminalization of sex work and cannabis use."
-        },
-        {
-          "heading": "housing",
-          "text": "Frost is a proponent of affordable housing and co-sponsored legislation to eliminate extra fees imposed by landlords and increase transparency in rental agreements."
-        },
-        {
-          "heading": "foreign_policy",
-          "text": "Frost supports a two-state solution to the Israeli-Palestinian conflict. As of April 2024, he has voted against providing Israel with further aid, accused Israel of violating international law, and called for stopping the bombing campaign in Gaza."
-        },
-        {
-          "heading": "immigration",
-          "text": "Frost is opposed to building a southern border wall and has advocated for protecting immigrant rights and opposing deportations without due process."
-        }
-      ],
-      "platform_excerpts": [
-        {
+          "stance_id": "laurel-lee-climate",
           "issue_slug": "climate",
-          "excerpt": "Frost supports a Green New Deal. He has identified environmental justice as a priority of his campaign.",
-          "source": "wikipedia",
-          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
-        },
-        {
-          "issue_slug": "guns",
-          "excerpt": "Frost is a strong advocate for gun control.",
-          "source": "wikipedia",
-          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
-        },
-        {
-          "issue_slug": "healthcare",
-          "excerpt": "Frost supports single-payer healthcare and investing in pandemic prevention. He introduced with Representative Doris Matsui in 2024 the EPIPEN Act, which seeks to cap out-of-pocket costs for epinephrine autoinjectors used for severe allergic reactions at $60 per two-pack for individuals with health insurance.",
-          "source": "wikipedia",
-          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
-        },
-        {
-          "issue_slug": "criminal_justice",
-          "excerpt": "Frost wants to \"build toward a future without prison\". He supports the decriminalization of sex work and the decriminalization of cannabis use.",
-          "source": "wikipedia",
-          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
-        },
-        {
-          "issue_slug": "housing",
-          "excerpt": "Frost is a proponent of affordable housing. He co-sponsored the End Junk Fees for Renters Act in 2023, which aims to eliminate extra fees imposed by landlords, ban application fees, and increase transparency in rental agreements.",
-          "source": "wikipedia",
-          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
-        },
-        {
-          "issue_slug": "foreign_policy",
-          "excerpt": "Following the Gaza war, Frost has shown a shift in his views on Israel–Palestine issues. While Frost voted to provide Israel with initial support following the October 7 attacks, as of April 2024 he has voted against providing Israel with further aid, has accused Israel of violating international law during the war, and has stated that \"the bombing campaign in Gaza must stop\".",
-          "source": "wikipedia",
-          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
-        },
-        {
-          "issue_slug": "immigration",
-          "excerpt": "Frost is opposed to building a southern border wall. In April 2025, Frost traveled to El Salvador with three other members of Congress to advocate for the release of Kilmar Abrego Garcia and others who had been deported without due process by the Trump administration.",
-          "source": "wikipedia",
-          "source_url": "https://en.wikipedia.org/wiki/Maxwell_Frost"
+          "stance": "oppose",
+          "summary": "Oppose federal building energy efficiency performance standards.",
+          "source_url": "http://laurellee.house.gov",
+          "confidence": 75,
+          "track_record_note": "voted YEA on hres1189-119 providing consideration for H.R. 4690 to repeal Federal building energy efficiency standards",
+          "track_record_citations": [
+            "hres1189-119"
+          ]
         }
       ],
       "active": true,
-      "activated_at": "2026-05-11T00:32:11.309Z"
+      "activated_at": "2026-05-11T00:56:31.246Z"
     }
   ],
-  "race_id": "race-fl-10-d-2026"
+  "race_id": "race-fl-15-r-2026"
 }

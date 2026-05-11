@@ -10,6 +10,7 @@
 //   ANTHROPIC_API_KEY=... npx tsx scripts/ingest/fetch_platform.ts \
 //     --race-id race-fl-10-d-2026
 
+import '../_env';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { getWikipediaCandidate } from '../../src/lib/api-clients/wikipedia';

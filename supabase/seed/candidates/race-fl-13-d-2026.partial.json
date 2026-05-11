@@ -1,0 +1,719 @@
+{
+  "race": {
+    "id": "race-fl-13-d-2026",
+    "state": "FL",
+    "district": "13",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D",
+    "ballotpedia_race_slug": "U.S._House_Florida_District_13_election,_2026_(Democratic_primary)"
+  },
+  "candidates": [
+    {
+      "name": "Fatima Ezahra Aguerjout",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "fatima-ezahra-aguerjout",
+      "incumbent": false,
+      "state": "FL",
+      "district": "13",
+      "office": "U.S. House",
+      "race_id": "race-fl-13-d-2026",
+      "fec_candidate_id": "H6FL13288",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Fatima Ezahra Aguerjout",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "fatima-ezahra-aguerjout",
+      "incumbent": false,
+      "state": "FL",
+      "district": "13",
+      "office": "U.S. House",
+      "race_id": "race-fl-13-d-2026",
+      "fec_candidate_id": "H6FL13288",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "John T Fay",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "john-t-fay",
+      "incumbent": false,
+      "state": "FL",
+      "district": "13",
+      "office": "U.S. House",
+      "race_id": "race-fl-13-d-2026",
+      "fec_candidate_id": "H6FL13296",
+      "total_raised": 2529.67,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 2529.67,
+        "disbursements": 631.35,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 54.13,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Earle Ford",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "earle-ford",
+      "incumbent": false,
+      "state": "FL",
+      "district": "13",
+      "office": "U.S. House",
+      "race_id": "race-fl-13-d-2026",
+      "fec_candidate_id": "H6FL13239",
+      "total_raised": 593045.76,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 593045.76,
+        "disbursements": 548690.21,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 577936.47,
+        "other_political_committee_contributions": 5000
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 55344,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 5000,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 3775,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Oil & Gas",
+          "amount": 3500,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 2750,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 2500,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 1600,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 1500,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 1300,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 1000,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "CHARLES, KINGSLEY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00922591",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHULER, STEPHEN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00922591",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FERGUSON, JANET",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00922591",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CHARLES, KINGSLEY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00922591",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "RISSER, BUD",
+          "donor_type": "individual",
+          "industry": "Oil & Gas",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00922591",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WOLF, STEPHEN M.",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3300,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00922591",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BAXTER, KAREN DEBORAH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00922591",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BAXTER, GEORGE J.",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00922591",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ANDREASSI, DILLON",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00922591",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KENNEDY, CATHERINE",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 1525,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00922591",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Leela J Gray",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "leela-j-gray",
+      "incumbent": false,
+      "state": "FL",
+      "district": "13",
+      "office": "U.S. House",
+      "race_id": "race-fl-13-d-2026",
+      "fec_candidate_id": "H6FL13312",
+      "total_raised": 564999.77,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 564999.77,
+        "disbursements": 64764.82,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 534999.77,
+        "other_political_committee_contributions": 23000
+      },
+      "bio": "Leela Gray is a retired United States Army brigadier general and nonprofit and corporate governance leader. Following her military career, she has served in leadership and board roles in nonprofit and corporate organizations and has remained engaged in public and civic affairs.",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Karla Kemp",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "karla-kemp",
+      "incumbent": false,
+      "state": "FL",
+      "district": "13",
+      "office": "U.S. House",
+      "race_id": "race-fl-13-d-2026",
+      "fec_candidate_id": "H6FL13262",
+      "total_raised": 7204.49,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 7204.49,
+        "disbursements": 6805.19,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 6255.96,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Susan Rochelle Leff",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "susan-rochelle-leff",
+      "incumbent": false,
+      "state": "FL",
+      "district": "13",
+      "office": "U.S. House",
+      "race_id": "race-fl-13-d-2026",
+      "fec_candidate_id": "H8FL13151",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "John William Liccione",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "john-william-liccione",
+      "incumbent": false,
+      "state": "FL",
+      "district": "13",
+      "office": "U.S. House",
+      "race_id": "race-fl-13-d-2026",
+      "fec_candidate_id": "H4FL13176",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Jeffrey Moore",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "jeffrey-moore",
+      "incumbent": false,
+      "state": "FL",
+      "district": "13",
+      "office": "U.S. House",
+      "race_id": "race-fl-13-d-2026",
+      "fec_candidate_id": "H6FL13221",
+      "bio": "Jeffrey Moore is a Canadian writer, translator and educator currently living in Val-Morin in the Quebec Laurentians. Moore was born in Montreal, and educated at the University of Toronto, BA, the Sorbonne and the University of Ottawa, MA.",
+      "campaign_website": "http://www.jeffreymoore.org/",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Reginald Paros",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "reginald-paros",
+      "incumbent": false,
+      "state": "FL",
+      "district": "13",
+      "office": "U.S. House",
+      "race_id": "race-fl-13-d-2026",
+      "fec_candidate_id": "H6FL13247",
+      "total_raised": 15863.96,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 15863.96,
+        "disbursements": 15863.96,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 11977,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Other",
+          "amount": 2250,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Nonprofit / Civic",
+          "amount": 2004,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 500,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 500,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 300,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 250,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 250,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "PATROLIA, EMILY",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00927137",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "JIMENEZ, ANDRES",
+          "donor_type": "individual",
+          "industry": "Nonprofit / Civic",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00927137",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ANDROFF, BLAKE",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00927137",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DRISCOLL-LOVEJOY, RUTH",
+          "donor_type": "individual",
+          "industry": "Nonprofit / Civic",
+          "amount_total": 504,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00927137",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PINKUS, NATHAN",
+          "donor_type": "individual",
+          "industry": "Government / Public Sector",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00927137",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MACEY, STACEY",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00927137",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PAROS, KELLYE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 300,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00927137",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TRUAX, HAWLEY",
+          "donor_type": "individual",
+          "industry": "Nonprofit / Civic",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00927137",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SLYFIELD, JEFFREY",
+          "donor_type": "individual",
+          "industry": "Nonprofit / Civic",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00927137",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "POPE, ANDREW",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00927137",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Timothy Brandt Mr Robinson",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "timothy-brandt-mr-robinson",
+      "incumbent": false,
+      "state": "FL",
+      "district": "13",
+      "office": "U.S. House",
+      "race_id": "race-fl-13-d-2026",
+      "fec_candidate_id": "H6FL13254",
+      "total_raised": 60546.36,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 60546.36,
+        "disbursements": 27834.63,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 59740.36,
+        "other_political_committee_contributions": 806
+      },
+      "bio": "Tim Robinson (born May 23, 1981) is an American comedian, actor, and screenwriter. He first became known as a writer and performer on Saturday Night Live (2012–2016) before gaining wider recognition as the co-creator, co-writer, and star of the comedy series Detroiters (2017–2018), I Think You Should Leave with Tim Robinson (2019–2023) and The Chair Company (2025). He also starred in the A24 comedy film Friendship (2024).",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 13560,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 7000,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 6020,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 3750,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Nonprofit / Civic",
+          "amount": 500,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 250,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 250,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "KINNEY, JULIE",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00928523",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KINNEY, JULIE",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00928523",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KINNEY, JEFFREY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00928523",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KINNEY, JEFFREY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00928523",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WILSON, JAMES",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00928523",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "COBB, ROBERT M.",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00928523",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TOLEDO, JASON",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1810,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00928523",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ROBINSON-ANDERSON, RANDA",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00928523",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LACHANCE, ANNE",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00928523",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ROBINSON-ANDERSON, RANDA",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00928523",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    }
+  ],
+  "race_id": "race-fl-13-d-2026"
+}

@@ -1,0 +1,868 @@
+{
+  "race": {
+    "id": "race-fl-27-d-2026",
+    "state": "FL",
+    "district": "27",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D",
+    "ballotpedia_race_slug": "U.S._House_Florida_District_27_election,_2026_(Democratic_primary)"
+  },
+  "candidates": [
+    {
+      "name": "Michael Davey",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "michael-davey",
+      "incumbent": false,
+      "state": "FL",
+      "district": "27",
+      "office": "U.S. House",
+      "race_id": "race-fl-27-d-2026",
+      "fec_candidate_id": "H4FL27036",
+      "total_raised": 45190.26,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 45190.26,
+        "disbursements": 28247.28,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 45190.26,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "Michael Davey, MA FRCO LRAM ARCM is an English organist.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 18250,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 11100,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 5000,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 1250,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 1250,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 1000,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 500,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 500,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 250,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "SHEAHAN, KATHLEEN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00870667",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SHEAHAN, KATHLEEN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00870667",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MCNAMARA, JAMES",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00870667",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HIGGINS, JENNIFER",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00870667",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FERNANDEZ, MIGUEL",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00870667",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FERNANDEZ, MIGUEL",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00870667",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WIGMORE, MARK",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00870667",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SILVA, ANTHONY",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00870667",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHWARTZ, STANLEY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00870667",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "NELSON, LYNNE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00870667",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Alexander Fornino",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "alexander-fornino",
+      "incumbent": false,
+      "state": "FL",
+      "district": "27",
+      "office": "U.S. House",
+      "race_id": "race-fl-27-d-2026",
+      "fec_candidate_id": "H6FL27064",
+      "total_raised": 25150.33,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 25150.33,
+        "disbursements": 24814.88,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 459.33,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Other",
+          "amount": 43.209999999999994,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "MY COMMITTEE",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 24.01,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00906321",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MY COMMITTEE",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 9.6,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00906321",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MY COMMITTEE",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 4.8,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00906321",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MY COMMITTEE",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 4.8,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00906321",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Richard Lamondin",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "richard-lamondin",
+      "incumbent": false,
+      "state": "FL",
+      "district": "27",
+      "office": "U.S. House",
+      "race_id": "race-fl-27-d-2026",
+      "fec_candidate_id": "H6FL27056",
+      "total_raised": 743318.29,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 743318.29,
+        "disbursements": 405774.53,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 591354.29,
+        "other_political_committee_contributions": 6500
+      },
+      "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 138000,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 38500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 35000,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 31750,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 25500,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Nonprofit / Civic",
+          "amount": 16500,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 13000,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 10500,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 9500,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 7000,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "SPOLINI, MARTINA",
+          "donor_type": "individual",
+          "industry": "Nonprofit / Civic",
+          "amount_total": 6500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00904722",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MISTRY, URMILA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00904722",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MISTRY, URMILA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00904722",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "GILLENWATER, CHLOE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00904722",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FOWLER, ESTEFANIA",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00904722",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DANDIYA, SONIA",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00904722",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DANDIYA, SONIA",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00904722",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DANDIYA, ROHIT",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00904722",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DANDIYA, ROHIT",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00904722",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DANDIYA, BHARATI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00904722",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Lev Parnas",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "lev-parnas",
+      "incumbent": false,
+      "state": "FL",
+      "district": "27",
+      "office": "U.S. House",
+      "race_id": "race-fl-27-d-2026",
+      "fec_candidate_id": "H6FL27106",
+      "total_raised": 27336,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 27336,
+        "disbursements": 0,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 27336,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "Lev Parnas[a] (born February 6, 1972) is a Soviet-born American businessman and former associate of Rudy Giuliani. Parnas, Giuliani, Igor Fruman, John Solomon, Yuriy Lutsenko, Dmytro Firtash and his allies, Victoria Toensing and Joe diGenova, were involved in creating the false Biden–Ukraine conspiracy theory, which was part of the Trump–Ukraine scandal's efforts to damage Joe Biden. As president, Donald Trump said he did not know Parnas nor what he was involved in; Parnas insisted Trump \"knew exactly what was going on\".",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 5750,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 3500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 500,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "LULLOVE, ERIC",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00942227",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BLAUVELT, MARGARET",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00942227",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WOLKOFF, STEPHANIE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00942227",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ZOBECK, VIRGINIA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00942227",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SCHNEIDER, JOAN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00942227",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PIZZATO, DEBRA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00942227",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KAIROS, KIRSTEN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00942227",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "JENNIS, DONNA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00942227",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DEWITT, DAVID",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00942227",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DERRIG, CAROLYN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00942227",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Robin Peguero",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "robin-peguero",
+      "incumbent": false,
+      "state": "FL",
+      "district": "27",
+      "office": "U.S. House",
+      "race_id": "race-fl-27-d-2026",
+      "fec_candidate_id": "H6FL27072",
+      "total_raised": 821895.71,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 821895.71,
+        "disbursements": 358623.6,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 802295.49,
+        "other_political_committee_contributions": 18600
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 151400,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 71800,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 33500,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Agriculture",
+          "amount": 10500,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 7000,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 6000,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 4524,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 3500,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Oil & Gas",
+          "amount": 3500,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 3500,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "WAHBA, SUZY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00911966",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "GARRETT, BARBARA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00911966",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "GARRETT, BARBARA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 5500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00911966",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "VOGELSTEIN, JOHN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 5000,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00911966",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MANFREY, BARBARA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 5000,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00911966",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HAGGARD, REBEKKA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 4500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00911966",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HAGGARD, MICHAEL",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 4500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00911966",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WAHBA, SUZY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00911966",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STEPHENS, FAYE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00911966",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STEPHENS, FAYE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00911966",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "Eliott Rodriguez",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "eliott-rodriguez",
+      "incumbent": false,
+      "state": "FL",
+      "district": "27",
+      "office": "U.S. House",
+      "race_id": "race-fl-27-d-2026",
+      "fec_candidate_id": "H6FL27098",
+      "total_raised": 312002.51,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 312002.51,
+        "disbursements": 12526.67,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 305002.51,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "Eliott J. Rodriguez (born June 6, 1956) is a Cuban-American television journalist who has received three Emmy Awards and four Edward R. Murrow Awards.",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Kristen Rosen Gonzalez",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "kristen-rosen-gonzalez",
+      "incumbent": false,
+      "state": "FL",
+      "district": "27",
+      "office": "U.S. House",
+      "race_id": "race-fl-27-d-2026",
+      "fec_candidate_id": "H8FL27029",
+      "bio": "Kristen Serene Gonzalez is an American politician serving as a member of the New York State Senate representing the 59th district, which contains parts of Queens, Manhattan, and Brooklyn.",
+      "campaign_website": "http://nysenate.gov/senators/kristen-gonzalez",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race_id": "race-fl-27-d-2026"
+}

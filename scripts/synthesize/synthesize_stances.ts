@@ -5,6 +5,7 @@
 //   ANTHROPIC_API_KEY=... npx tsx scripts/synthesize/synthesize_stances.ts \
 //     --race-id race-nj-07-r-2026
 
+import '../_env';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { synthesizeStances, type CandidateRawData } from '../../src/lib/llm/curate';

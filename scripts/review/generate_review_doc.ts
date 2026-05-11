@@ -6,6 +6,7 @@
 // Usage:
 //   npx tsx scripts/review/generate_review_doc.ts --race-id race-nj-07-r-2026
 
+import '../_env';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import {

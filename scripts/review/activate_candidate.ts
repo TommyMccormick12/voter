@@ -7,6 +7,7 @@
 //   npx tsx scripts/review/activate_candidate.ts \
 //     --race-id race-nj-07-r-2026 --slug thomas-kean-jr
 
+import '../_env';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';

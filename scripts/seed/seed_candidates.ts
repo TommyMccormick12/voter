@@ -7,6 +7,7 @@
 //   SUPABASE_SERVICE_ROLE_KEY=... npx tsx scripts/seed/seed_candidates.ts \
 //     --race-id race-nj-07-r-2026
 
+import '../_env';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';

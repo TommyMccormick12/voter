@@ -101,7 +101,7 @@ export async function synthesizeStances(
     system: [
       {
         type: 'text',
-        text: 'You are a non-partisan civic data analyst. Output VALID JSON ONLY, no preamble. Schema: {top_stances: [{issue_slug, stance, summary, source_excerpt?, confidence, track_record_note?, track_record_citations?}]}. Rules: (1) issue_slug MUST be one of: economy, healthcare, immigration, climate, education, guns, criminal_justice, foreign_policy, taxes, housing. (2) stance MUST be exactly one of: strongly_support, support, neutral, oppose, strongly_oppose. (3) summary <=30 words, written in the candidate\'s own framing. (4) confidence 0-100 reflects how strongly the source data supports the stance. (5) track_record_note optional, MUST cite specific bill_ids or statement_ids when included; flag contradictions ("voted NAY despite supporting...") or alignment ("voted YES on H.R.X"). Never editorialize. Never claim positions not in the source.',
+        text: 'You are a non-partisan civic data analyst. Output VALID JSON ONLY, no preamble. Schema: {top_stances: [{issue_slug, stance, summary, source_excerpt?, confidence, track_record_note?, track_record_citations?}]}. Rules: (1) issue_slug MUST be one of: economy, healthcare, immigration, climate, education, guns, criminal_justice, foreign_policy, taxes, housing. (2) stance MUST be exactly one of: strongly_support, support, neutral, oppose, strongly_oppose. (3) summary <=30 words, written in the candidate\'s own framing. (4) confidence 0-100 reflects how strongly the source data supports the stance. (5) track_record_note OPTIONAL and only included when there is a substantive observation tied to specific bills or statements (e.g. "voted YES on hr7567-119 aligning with stance" or "voted NAY on hres1189-119 despite supporting..."). NEVER include meta-comments like "no contradictions found", "no relevant voting record", "insufficient data to verify" — just omit the field entirely. If included, EVERY bill_id you reference in the note text (e.g. "H.Res. 1189", "S. 4465", "hr7567-119") MUST appear in track_record_citations as a valid input bill_id from the VOTING RECORD or input statement_id from STATEMENTS. Citations are a strict whitelist — fabricated citations will be rejected. (6) Use bill_id strings exactly as they appear in the input (e.g. "hres1189-119"), not freeform names. (7) Flag contradictions ("voted NAY despite supporting...") or alignment ("voted YES on H.R.X") in the note text. Never editorialize. Never claim positions not in the source.',
       },
     ],
     messages: [{ role: 'user', content: userPrompt }],
@@ -123,18 +123,39 @@ export async function synthesizeStances(
   }
   const parsed = parseResult.data;
 
-  // Validate citations
+  // Validate citations + auto-repair missing ones.
+  //
+  // Haiku reliably writes bill_ids INSIDE the note text but inconsistently
+  // populates track_record_citations even when the prompt requires it.
+  // We solve this server-side: extract bill-id-like strings from the note
+  // text, validate each against the input voting record, and rebuild the
+  // citations array. Fabricated citations still throw (whitelist-only).
   const validatedStances: TopStance[] = parsed.top_stances.map((s) => {
     const stanceId = `${candidate.slug}-${s.issue_slug}`;
-    if (s.track_record_citations) {
-      for (const cit of s.track_record_citations) {
-        if (!validBillIds.has(cit) && !validStatementIds.has(cit)) {
-          throw new Error(
-            `Haiku cited unknown source "${cit}" for ${candidate.name} ${s.issue_slug}. Refusing fabricated citation.`
-          );
-        }
+
+    // Collect citations from both fields: what Haiku explicitly listed,
+    // PLUS what it referenced inline in the note text.
+    const explicit = s.track_record_citations ?? [];
+    const inlineFromNote = extractBillIdsFromText(s.track_record_note ?? '');
+    const allCandidates = new Set<string>([...explicit, ...inlineFromNote]);
+
+    const validated: string[] = [];
+    for (const cit of allCandidates) {
+      if (validBillIds.has(cit) || validStatementIds.has(cit)) {
+        validated.push(cit);
+        continue;
+      }
+      // Treat unknown citations as fabrication only if Haiku put it in the
+      // explicit list. Inline-from-note extractions that don't match a real
+      // bill_id are silently dropped (likely a parsing false positive on
+      // freeform text like "H.R. 7567" which won't match "hr7567-119").
+      if (explicit.includes(cit)) {
+        throw new Error(
+          `Haiku cited unknown source "${cit}" for ${candidate.name} ${s.issue_slug}. Refusing fabricated citation.`,
+        );
       }
     }
+
     return {
       stance_id: stanceId,
       issue_slug: s.issue_slug,
@@ -144,7 +165,7 @@ export async function synthesizeStances(
       source_excerpt: s.source_excerpt,
       confidence: s.confidence,
       track_record_note: s.track_record_note,
-      track_record_citations: s.track_record_citations,
+      track_record_citations: validated.length > 0 ? validated : s.track_record_citations,
     };
   });
 
@@ -194,6 +215,30 @@ function buildPrompt(c: CandidateRawData): string {
     'TASK: Produce top_stances JSON. Cover the candidate\'s strongest stances on issues where the source data gives clear signal. Skip issues with no signal. If a voting record contradicts a stated message, set track_record_note flagging it and cite the bill_id. If a top donor industry conflicts with a stance, flag it in track_record_note (no citation needed for donor data). Output JSON only.',
   ];
   return parts.filter(Boolean).join('\n');
+}
+
+/**
+ * Pull out any bill_id-like strings from a free-form track_record_note.
+ * Returns the canonical lowercase form (e.g. "hres1189-119"). Used to
+ * auto-populate track_record_citations when Haiku references a bill in
+ * the note text but forgets to add it to the citations array.
+ *
+ * Matches both canonical forms ("hres1189-119") and freeform mentions
+ * ("H.Res. 1189", "S. 4465") — the latter get normalized to the canonical
+ * form so they can be checked against validBillIds.
+ */
+function extractBillIdsFromText(text: string): string[] {
+  if (!text) return [];
+  const found = new Set<string>();
+  // Canonical form: typeNNN-congress (e.g. hres1189-119, hr7567-119, s4465-119)
+  for (const m of text.matchAll(/\b(hr|hres|hjres|hconres|s|sres|sjres|sconres)\d+-\d+\b/gi)) {
+    found.add(m[0].toLowerCase());
+  }
+  // Freeform: "H.Res. 1189", "H.R. 7567", "S. 4465" — congress unknown
+  // (caller validates against bill_ids, so freeform mentions without
+  // -<congress> won't match anything in validBillIds; that's intentional
+  // — only canonical form survives the whitelist check).
+  return Array.from(found);
 }
 
 function extractJson(text: string): unknown {

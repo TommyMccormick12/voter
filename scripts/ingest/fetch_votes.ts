@@ -11,6 +11,7 @@
 // Caching: every API response is cached to supabase/seed/raw/www.govtrack.us/
 // via fetchCached, so re-runs are free.
 
+import '../_env';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import {

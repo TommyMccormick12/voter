@@ -10,6 +10,7 @@
 // Pre-flight check: ensures ≥4 candidates with ≥3 stances each, per the
 // plan §2.5 NJ-07 pre-flight criteria.
 
+import '../_env';
 import { writeFileSync, mkdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import {

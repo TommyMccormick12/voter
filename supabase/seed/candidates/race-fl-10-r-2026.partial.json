@@ -1,0 +1,86 @@
+{
+  "race": {
+    "id": "race-fl-10-r-2026",
+    "state": "FL",
+    "district": "10",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R",
+    "ballotpedia_race_slug": "U.S._House_Florida_District_10_election,_2026_(Republican_primary)"
+  },
+  "candidates": [
+    {
+      "name": "Stuart Ross Farber",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "stuart-ross-farber",
+      "incumbent": false,
+      "state": "FL",
+      "district": "10",
+      "office": "U.S. House",
+      "race_id": "race-fl-10-r-2026",
+      "fec_candidate_id": "H6FL10177",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Willie Montague",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "willie-montague",
+      "incumbent": false,
+      "state": "FL",
+      "district": "10",
+      "office": "U.S. House",
+      "race_id": "race-fl-10-r-2026",
+      "fec_candidate_id": "H0FL10113",
+      "total_raised": 28.2,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 28.2,
+        "disbursements": 0,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 28.2,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Angela Marie Walls-Windhauser",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "angela-marie-walls-windhauser",
+      "incumbent": false,
+      "state": "FL",
+      "district": "10",
+      "office": "U.S. House",
+      "race_id": "race-fl-10-r-2026",
+      "fec_candidate_id": "H6FL10193",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Vibert Dr White",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "vibert-dr-white",
+      "incumbent": false,
+      "state": "FL",
+      "district": "10",
+      "office": "U.S. House",
+      "race_id": "race-fl-10-r-2026",
+      "fec_candidate_id": "H4FL10123",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race_id": "race-fl-10-r-2026"
+}

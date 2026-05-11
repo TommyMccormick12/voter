@@ -5,6 +5,7 @@
 // Usage:
 //   npx tsx scripts/synthesize/flag_inconsistencies.ts --race-id race-nj-07-r-2026
 
+import '../_env';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';
@@ -61,17 +62,49 @@ function main() {
       }
     }
 
-    // Check 2: track-record note mentions contradiction without citation
+    // Check 2: track-record note mentions a specific bill or statement
+    // without listing it in citations. The note text should reference real
+    // bill_ids (e.g. "voted NAY on hres1189-119") — extract any plausible
+    // bill_id mentions and confirm each one is in track_record_citations.
+    //
+    // Notes that DENY contradiction ("no contradictory votes", "no record")
+    // shouldn't fire. The /contradict/i match alone wasn't discriminating
+    // enough — pair the contradiction-keyword check with a negation guard
+    // and require an explicit bill-like reference before flagging.
     for (const s of stances) {
       const note = s.track_record_note ?? '';
-      if (
-        /contradict|despite|⚠/i.test(note) &&
-        (!s.track_record_citations || s.track_record_citations.length === 0)
-      ) {
+      if (!note) continue;
+
+      // Negation guard: notes that explicitly deny contradiction are fine
+      if (/^\s*(no |none |0 )/i.test(note) || /no (contradictory|relevant|specific) (vote|bill|record)/i.test(note)) {
+        continue;
+      }
+
+      // Pull anything that looks like a bill ID from the note text:
+      //   hr7567-119, hres1224-119, s4465-119, sjres184-119, sconres33-119
+      //   H.R. 7567, H.Res. 1224, S. 4465
+      const billIdRefs = [
+        ...note.matchAll(/\b(h\.?r\.?\s*\d+|h\.?res\.?\s*\d+|s\.?\s*\d+|s\.?res\.?\s*\d+|sjres\s*\d+|hjres\s*\d+|s\.?con\.?res\.?\s*\d+|h\.?con\.?res\.?\s*\d+|hr\d+|hres\d+|s\d+|sres\d+|hjres\d+|sjres\d+|hconres\d+|sconres\d+)(-\d+)?/gi),
+      ].map((m) => m[0]);
+
+      const citations = s.track_record_citations ?? [];
+      if (billIdRefs.length > 0 && citations.length === 0) {
         flags.push({
           candidate: c.name,
           issue_slug: s.issue_slug,
-          flag: `Contradiction note "${note}" lacks citation.`,
+          flag: `Note references bills (${billIdRefs.slice(0, 3).join(', ')}) but track_record_citations is empty.`,
+          severity: 'high',
+        });
+        continue;
+      }
+
+      // Also flag contradiction-keyword notes with no citations at all
+      // (catches "voted NAY despite stance" without specific bill ref)
+      if (/contradict|despite\b|⚠/i.test(note) && citations.length === 0) {
+        flags.push({
+          candidate: c.name,
+          issue_slug: s.issue_slug,
+          flag: `Contradiction note "${note.slice(0, 100)}" lacks citation.`,
           severity: 'high',
         });
       }

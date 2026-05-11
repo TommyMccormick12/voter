@@ -1,0 +1,14 @@
+{
+  "race_id": "race-fl-gov-d-2026",
+  "race": {
+    "id": "race-fl-gov-d-2026",
+    "state": "FL",
+    "district": null,
+    "office": "Governor",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  },
+  "candidates": []
+}

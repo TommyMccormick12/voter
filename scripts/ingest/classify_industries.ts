@@ -16,6 +16,7 @@
 //   candidate.top_industries: [{industry_name, amount, rank, cycle, data_source: 'fec+haiku'}]
 //   candidate.top_donors:     [{donor_name, donor_type, industry, amount_total, ...}]
 
+import '../_env';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import {

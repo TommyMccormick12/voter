@@ -1,0 +1,258 @@
+{
+  "race": {
+    "id": "race-fl-28-d-2026",
+    "state": "FL",
+    "district": "28",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D",
+    "ballotpedia_race_slug": "U.S._House_Florida_District_28_election,_2026_(Democratic_primary)"
+  },
+  "candidates": [
+    {
+      "name": "Thomas Anthony Mr Jr Campione",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "thomas-anthony-mr-jr-campione",
+      "incumbent": false,
+      "state": "FL",
+      "district": "28",
+      "office": "U.S. House",
+      "race_id": "race-fl-28-d-2026",
+      "fec_candidate_id": "H6FL28039",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Phil Ehr",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "phil-ehr",
+      "incumbent": false,
+      "state": "FL",
+      "district": "28",
+      "office": "U.S. House",
+      "race_id": "race-fl-28-d-2026",
+      "fec_candidate_id": "H4FL28042",
+      "total_raised": 406606.36,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 406606.36,
+        "disbursements": 76322.34,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 63225.51,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Other",
+          "amount": 29675,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 7000,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Oil & Gas",
+          "amount": 7000,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Agriculture",
+          "amount": 2100,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 2000,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 1700,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 976,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Defense & Aerospace",
+          "amount": 500,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 450,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 150,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "LEVIN, DONALD",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00904128",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TILLMAN, BRIAN",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00904128",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TILLMAN, BRIAN",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00904128",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "RISSER, PHARES",
+          "donor_type": "individual",
+          "industry": "Oil & Gas",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00904128",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "RISSER, PHARES",
+          "donor_type": "individual",
+          "industry": "Oil & Gas",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00904128",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LEVIN, DONALD",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00904128",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KOHN, GERALD",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00904128",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KOHN, GERALD",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00904128",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SMILEY-KALIFF, BRUCE",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00904128",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "INDEST, GEORGE",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00904128",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
+    },
+    {
+      "name": "James F Mr. Henry",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "james-f-mr-henry",
+      "incumbent": false,
+      "state": "FL",
+      "district": "28",
+      "office": "U.S. House",
+      "race_id": "race-fl-28-d-2026",
+      "fec_candidate_id": "H6FL28013",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Hector Daniel Mujica",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "hector-daniel-mujica",
+      "incumbent": false,
+      "state": "FL",
+      "district": "28",
+      "office": "U.S. House",
+      "race_id": "race-fl-28-d-2026",
+      "fec_candidate_id": "H6FL28047",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race_id": "race-fl-28-d-2026"
+}

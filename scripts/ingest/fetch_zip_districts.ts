@@ -7,6 +7,7 @@
 // Or pass a path to a newline-delimited zip file:
 //   npx tsx scripts/ingest/fetch_zip_districts.ts --zips-file zips.txt
 
+import '../_env';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { zipToDistrict } from '../../src/lib/api-clients/census';
