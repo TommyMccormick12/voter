@@ -15,8 +15,11 @@ input matched against synthesized candidate stances.
   offline candidate-stance synthesis. Cheapest tier is sufficient with
   disciplined prompting + manual review. Mock fallback when no key set.
 - **Hosting:** Vercel
-- **Auth:** None. Anonymous sessions via the `voter_session` httpOnly cookie
-  (issued by middleware), with consent state in `voter_consent` (client-readable).
+- **Auth:** No user auth on the voter-facing surface. Anonymous sessions
+  via the `voter_session` httpOnly cookie (issued by middleware), with
+  consent state in `voter_consent` (client-readable). The `/admin`
+  dashboard is gated by HTTP Basic Auth (username `admin`, single
+  `ADMIN_PASSWORD` env var, constant-time compare in Edge runtime).
 
 ## Key design decisions
 
@@ -51,17 +54,27 @@ input matched against synthesized candidate stances.
 ## Data flow
 
 1. User lands on `/` → middleware issues `voter_session` cookie + captures utm_*.
-2. User enters zip → `/race-picker` lists matching primaries (currently mock
-   data; real lookup will use US Census Geocoding API).
+2. User enters zip → `/race-picker` lists matching FL primaries via the
+   HUD ZIP→CD crosswalk + Supabase race lookup. Non-FL ZIPs see an
+   honest "Florida only for now" empty state.
 3. User picks a race → `/scorecards/[raceId]` renders the carousel.
+   Single- and two-candidate races soft-disable the match CTA (match
+   flow only delivers signal at 3+ candidates).
 4. Carousel interactions (`viewed`, `saved`, `viewed_detail`, dwell_ms)
-   POST to `/api/interaction` (gated on consent).
+   POST to `/api/interaction` (gated on consent, rate-limited).
 5. CTA → `/match`: 5-issue QuickPoll (weighted 1–5) + free-text textarea.
-6. Submit → `/api/match` (Haiku + Zod-validated JSON, cached, rate-limited),
-   ranked results stored in sessionStorage and rendered at `/match/results`.
+6. Submit → `/api/match` (Haiku + Zod-validated JSON, cached, rate-limited
+   10/hr/session + 30/hr/IP), ranked results stored in sessionStorage and
+   rendered at `/match/results`.
 7. Share button → `/share?race=…&c=…&s=…` (party-themed share card +
    `/api/og` party-themed OG image).
-8. `/data-rights` → export-my-data, delete-my-data, opt-out.
+8. "Report inaccurate" button on `/candidate/[slug]` → `/api/report`
+   queues a row in `candidate_reports` (factual_error / wrong_attribution /
+   outdated / other; optional email; HMAC IP hash for de-dup).
+9. `/data-rights` → export-my-data, delete-my-data, opt-out.
+10. Operator views `/admin` (Basic Auth) → top-line counts, top races by
+    views, top saved candidates, open-report queue, Anthropic spend
+    estimate. Service-role Supabase queries; never exposed to the client.
 
 ## Project structure
 
@@ -78,9 +91,10 @@ src/
     share/                    # Shareable match-result card + OG metadata
     data-rights/              # Right-to-know / right-to-delete UI
     privacy/, terms/          # Legal
+    admin/                    # Read-only dashboard, gated by ADMIN_PASSWORD Basic Auth
     api/
       match/, candidates/, interaction/, quick-poll/,
-      consent/, visit/, data-rights/, og/
+      consent/, visit/, data-rights/, og/, report/
   components/
     ScorecardCarousel.tsx     # Horizontal-scroll on mobile, 4-col grid on desktop
     CandidateScorecard.tsx    # Single party-themed card
@@ -88,8 +102,9 @@ src/
     DonorProfile.tsx, VotingRecordList.tsx, StatementTimeline.tsx
     QuickPoll.tsx, FreeTextMatcher.tsx, MatchScoreBadge.tsx
     ConsentBanner.tsx, InconsistencyBadge.tsx, Nav.tsx
+    ReportInaccurateButton.tsx  # Modal form for /api/report
   lib/
-    api-clients/              # FEC, GovTrack, Wikipedia, Ballotpedia (pipeline only)
+    api-clients/              # FEC, GovTrack, Wikipedia, names (pipeline only)
     llm/
       match.ts                # Live Haiku matcher + mock fallback
       curate.ts               # Offline stance synthesizer with citation validation
@@ -99,9 +114,10 @@ src/
     consent-client.ts (client), consent-shared.ts (constants)
     session.ts, events.ts, supabase.ts, dates.ts, party-theme.ts,
     geo.ts, analytics.ts, visit-tracker.ts,
-    interactions-client.ts, issues.ts
+    interactions-client.ts, issues.ts,
+    rate-limit.ts            # Token-bucket limiter for write APIs
     data/races.ts, data/candidates.ts (server-side Supabase queries)
-  middleware.ts               # Issues voter_session, captures utm_*
+  middleware.ts               # Issues voter_session, captures utm_*, gates /admin
 scripts/                      # Offline data pipeline (not in production runtime)
   _env.ts                     # Dotenv loader that overrides inherited shell env
   ingest/                     # fetch_fec, fetch_platform (Wikipedia), fetch_campaign_site
@@ -113,7 +129,7 @@ scripts/                      # Offline data pipeline (not in production runtime
   seed/                       # Service-role Supabase upserts
 supabase/
   migrations/                 # 001 base, 004 primary pivot, 005 RLS, 006 issues seed,
-                              # 007 text IDs, 008 races RLS
+                              # 007 text IDs, 008 races RLS, 009 candidate_reports
   seed/                       # candidates/*.partial.json fixtures, raw/ cache, review/ docs
 public/
   mockup-mobile.html, mockup-desktop.html  # Design source of truth
@@ -132,14 +148,22 @@ public/
 
 ## Environment variables
 
-App runtime: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`,
-`ANTHROPIC_API_KEY` (optional — mock fallback otherwise),
-`MATCH_API_DISABLED` (kill switch).
+App runtime (required): `NEXT_PUBLIC_SUPABASE_URL`,
+`NEXT_PUBLIC_SUPABASE_ANON_KEY`, `IP_HASH_SECRET` (32+ random bytes for
+HMAC keying of IP/UA hashes).
+
+App runtime (admin / reports): `ADMIN_PASSWORD` (gates `/admin`;
+server-only, no `NEXT_PUBLIC_` prefix), `SUPABASE_SERVICE_ROLE_KEY`
+(required for `/api/report` INSERT and `/admin` reads — RLS-bypass,
+never exposed to client).
+
+App runtime (optional): `ANTHROPIC_API_KEY` (live Haiku match — mock
+heuristic fallback otherwise), `MATCH_API_DISABLED` (kill switch).
 
 Data pipeline only: `FOLLOWTHEMONEY_API_KEY` (donor industries — replaces
 the retired OpenSecrets API), `FEC_API_KEY` (fundraising totals),
-`SUPABASE_SERVICE_ROLE_KEY` (seed writes). Voting records use GovTrack
-which is keyless (replaced ProPublica Congress, sunset 2023). See `.env.example`.
+`NEWSAPI_KEY` (statement ingest). Voting records use GovTrack which is
+keyless (replaced ProPublica Congress, sunset 2023). See `.env.example`.
 
 ## Skill routing
 

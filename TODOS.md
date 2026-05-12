@@ -18,20 +18,32 @@
 
 ## Product polish
 
-### Backfill Preview-scope Vercel env vars
-- **Priority:** P3 (only matters when pushing non-`main` branches)
-- **What:** Set `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `IP_HASH_SECRET`, `ANTHROPIC_API_KEY` in Vercel's Preview scope.
-- **Why:** The CLI's `vercel env add KEY preview --value V --yes` hits an `action_required: git_branch_required` state even with `--yes` (Vercel CLI quirk for default branch). Production scope is fully set; Preview deploys will fail to read from Supabase until this lands.
-- **How:** Vercel dashboard → Project Settings → Environment Variables → Add each one, scope = "Preview", apply to "All preview branches". ~2 minutes.
-- **Acceptance:** Pushing a feature branch produces a Vercel preview URL that returns 200 on `/api/candidates?zip=32801` with real data.
-
 ### Custom domain
 - **Priority:** P4 (cosmetic; launch readiness)
-- **What:** Point a real domain at the Vercel project (currently on `voter-k4ewj9iy9-tommymccormick12s-projects.vercel.app`).
+- **What:** Point a real domain at the Vercel project (currently on the auto-assigned `voter-fawn.vercel.app`).
 - **Why:** Shareable URLs read better with a real domain. Easier to put in Twitter/email/SMS.
 - **How:** Buy/repurpose a domain, add it in Vercel Project Settings → Domains, follow DNS instructions.
 
+### Move rate limits to distributed store
+- **Priority:** P3 (latent — only bites under sustained load)
+- **What:** Swap `src/lib/rate-limit.ts` in-memory token buckets for Vercel KV or Upstash Redis.
+- **Why:** Documented in `src/lib/rate-limit.ts:1-9`. In-memory buckets are per-Lambda; with cold-start instance multiplication, an attacker hitting concurrent sessions across warm workers could 5-10× the effective limit. Acceptable at launch volume; revisit on first abuse incident or when traffic ramps.
+- **How:** The `checkBucket` / `checkRateLimits` interface stays identical — only the storage layer changes. ~1 hour with KV.
+- **Acceptance:** Same rate-limit behavior, but counters survive across Lambda instances.
+
+### Report-queue spam dedup
+- **Priority:** P3 (defense-in-depth, watch-and-react)
+- **What:** Add a `UNIQUE (ip_hash, candidate_id, description_hash)` constraint or app-layer hash check on `candidate_reports`, plus an `ip_hash` recent-count column on the admin dashboard.
+- **Why:** `/cso` MED-3. Rate limits prevent volume from a single session/IP, but an organized actor with proxy rotation could still flood the admin queue with duplicate-text reports. Currently no signal in the dashboard for clustered submissions.
+- **How:** Migration 010 adds the constraint; admin dashboard query joins on `ip_hash`-grouped counts. ~30 min.
+- **Acceptance:** Reports from the same IP hash on the same candidate with similar text either deduplicate or surface as a cluster in the admin queue.
+
 ## Completed
+
+### Backfill Preview-scope Vercel env vars
+- **Completed:** v0.7.0 (2026-05-11)
+- Set `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `IP_HASH_SECRET`, `ANTHROPIC_API_KEY`, `ADMIN_PASSWORD` in Vercel Preview scope via dashboard (CLI's `--git-branch main` flag was the workaround that didn't take; dashboard edit was cleaner).
+- Pushing a feature branch now produces a working Vercel preview URL with full Supabase + admin functionality.
 
 ### Phase 1 — Pre-launch (superseded by pivot)
 - **Superseded:** v0.2.0 (2026-05-09)

@@ -2,6 +2,138 @@
 
 All notable changes to the voter project. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.7.0] - 2026-05-11
+
+Tier 1 launch readiness. The match flow no longer degrades into nonsense
+on single-candidate races, every write endpoint now rejects bots, voters
+can flag inaccurate stances, and there's an admin dashboard so we can see
+what's working without flying blind. Tier 2 brings five FL incumbents
+online; mobile QA closed the consent-banner overlay bug; the security
+audit found and fixed four real issues before the first public invite.
+
+### Added
+
+- **`/admin` dashboard** (`src/app/admin/page.tsx`) — single-page, read-only
+  view of the engagement signal: 24h/7d session, visit, interaction, and
+  match counts; top races by views and top saved candidates over the last
+  7 days; estimated Anthropic Haiku spend (input + output tokens × current
+  pricing); and the open-reports queue with stance and category. Gated
+  behind HTTP Basic Auth via `src/middleware.ts` and a single
+  `ADMIN_PASSWORD` env var, with username `admin` required, constant-time
+  password compare, and `noindex` + `no-store` headers on every response.
+- **`/api/report`** + **`<ReportInaccurateButton />`** — voters can flag
+  wrong stance attributions, outdated quotes, or fabricated bill citations
+  from any candidate page. Optional email; rate-limited (10/hr/session,
+  30/hr/IP); rows queue in `candidate_reports` with status `open` for
+  admin review.
+- **`supabase/migrations/009_candidate_reports.sql`** — new table backing
+  `/api/report`: candidate FK, optional session FK, stance_id, cited_bill_id,
+  category (`factual_error` / `wrong_attribution` / `outdated` / `other`),
+  description, optional reporter_email, HMAC IP hash, status, and review
+  timestamps. RLS: public insert, no public select. Service role only for
+  admin reads. Idempotent DO block.
+- **`/api/report` + 4 other write endpoints now rate-limited.**
+  `INTERACTION_LIMITS`, `VISIT_LIMITS`, `POLL_LIMITS`, `CONSENT_LIMITS`,
+  `REPORT_LIMITS` added to `src/lib/rate-limit.ts`. Each endpoint checks
+  the session and IP buckets before the JSON parse and returns
+  `429 + Retry-After` on overflow. Bot-pollution defense for the B2B
+  engagement-signal tables.
+- **Hand-authored Alex Vindman platform (FL Sen D)** via the
+  campaign-site → JSON path. 7 key messages + 7 campaign themes across
+  economy, criminal justice, housing, healthcare, education, foreign
+  policy. Brings FL Sen D to 3 active candidates (Grayson, Nixon, Vindman).
+- **5 Tier 2 FL incumbents activated** — Sabatini, Webster, Buchanan,
+  Franklin, Donalds — bringing the Supabase active count to **18
+  candidates across 12 of 38 races**.
+
+### Changed
+
+- **Match CTA gated on `candidates.length >= 3`.** On single- or
+  two-candidate races, the "Find my best match" button is replaced with
+  honest soft copy ("N candidates with policy data in this race. Explore
+  their records above; match comparison opens when we have 3+ candidates.")
+  Match comparison only delivers signal at 3+; below that the result is
+  trivially "you match X."
+- **Mobile P1 fix: consent banner no longer traps the page footer.**
+  `ConsentBanner.tsx` now renders an in-flow spacer alongside the fixed
+  banner so footer content (Privacy / Terms / Data Rights links, bottom
+  CTAs) is reachable. Spacer height adapts to compact (150px mobile / 80px
+  desktop) vs customize (320px / 240px); unmounts with the banner
+  post-consent. Star tap-targets in `QuickPoll` now meet WCAG AA 44×44px;
+  back link in scorecards header gained `whitespace-nowrap` to prevent
+  the "All races" → "All\nraces" stack.
+- **FEC display names strip honorific titles at seed time.** Names like
+  `Scott Mr. Franklin` (an FEC formatting artifact) become `Scott Franklin`
+  before the Supabase upsert. Strip helper exported from
+  `src/lib/api-clients/names.ts`; called from `scripts/seed/seed_candidates.ts`.
+  Slug remains the stable ID.
+- **`/admin` Anthropic spend display** updated to reflect the actual
+  configured `$100/day` cap (was `$50/day` placeholder).
+
+### Fixed
+
+- **`/cso` HIGH-1 — constant-time password compare.** Plain `===` in
+  the `ADMIN_PASSWORD` check leaked the password byte-by-byte via
+  response timing. Replaced with a pure-JS XOR loop in
+  `src/middleware.ts` (Vercel Edge runtime has no `node:crypto`, so
+  `timingSafeEqual` isn't available).
+- **`/cso` MED-1 — `noindex` + `no-store` on `/admin`.** 401, 503, and
+  authenticated 200 responses all carry `X-Robots-Tag: noindex, nofollow`
+  and `Cache-Control: no-store`. Keeps the admin URL out of search and
+  out of any shared cache.
+- **`/cso` MED-2 — Basic Auth username gate.** The username portion of
+  the credential was previously ignored; now `admin` is required.
+- **`/cso` MED-4 — privacy policy disclosure.** Added a dedicated
+  "Report inaccurate" section to `/privacy` explicitly stating that the
+  Report form may collect an optional email, what it's used for, what
+  it's never used for (sale / marketing / cross-page tracking), and the
+  retention policy.
+- **`/review` P2 — Basic Auth password parser handles colons.** Per
+  RFC 7617 the password portion may contain colons; the previous
+  `.split(':', 2)` truncated everything after the second colon. Replaced
+  with `indexOf(':') + slice`. Latent bug today (current password has no
+  colons), but a landmine for any future rotation.
+- **GovTrack false-positive last-name match** (`§18.1`). The
+  `findMember` fallback in `src/lib/api-clients/govtrack.ts` previously
+  matched last-name only when full-name missed, causing Royal Webster
+  (FL-11 D challenger) to inherit Daniel Webster's voting record.
+  Fix: bi-directional first-name prefix check on multi-word queries,
+  with an initial-only exception so `Scott Franklin` still matches
+  GovTrack's `C. Franklin`.
+- **FEC name-mangling on Mc/Mac/O' surnames** (`§18.2`). The
+  `normalizeFecName` helper previously lowercased then re-title-cased,
+  producing `Cherfilus-Mccormick` instead of `Cherfilus-McCormick`,
+  which broke downstream Wikipedia and GovTrack lookups. Added a Mc/Mac/O'
+  post-pass that re-capitalizes the letter after the prefix. Mac rule
+  requires 3+ trailing lowercase chars to avoid false positives on
+  "Macy" / "Macedo".
+
+### Coverage at release
+
+- **18 active candidates** across **12 of 38 races** in FL Tier 1 + Tier 2.
+- 5 of 5 Tier 1 launch-readiness items shipped (§19 of plan):
+  match-CTA gate, rate limits, /api/report, /admin, mobile QA.
+- 5 of 5 `/cso` security findings shipped (HIGH-1, MED-1, MED-2, MED-4,
+  plus the `/review` P2 follow-up).
+- Production at `https://voter-fawn.vercel.app` (Vercel-assigned alias).
+  Both Production and Preview scopes carry the full env var set:
+  `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`,
+  `IP_HASH_SECRET`, `ANTHROPIC_API_KEY`, `ADMIN_PASSWORD`. Production
+  also has `SUPABASE_SERVICE_ROLE_KEY` for `/api/report` and `/admin`.
+- `npm run lint && npm test` clean; 67 tests pass.
+
+### For contributors
+
+- New env var **`ADMIN_PASSWORD`** required for `/admin` access.
+  Server-only (no `NEXT_PUBLIC_` prefix). Set via `vercel env add` in
+  both Production and Preview scopes.
+- The pure-JS `constantTimeEqual` helper in `src/middleware.ts` is the
+  pattern for any future Edge-runtime constant-time compare. `node:crypto`
+  is not available in Edge.
+- Mobile QA P0/P1/P2 baseline established at 95+ across console, links,
+  visual, functional, UX, performance, content, and accessibility on
+  iPhone SE / 13 mini (375×812).
+
 ## [0.6.0] - 2026-05-10
 
 The pivot's payoff: the seeded FL Tier 1 data is now visible to real users on

@@ -10,14 +10,18 @@ Stack: Next.js 16 (App Router, Turbopack) · React 19 · Tailwind 4 · Supabase
 
 ## Current coverage
 
-- **Scope:** Florida primaries on **August 18, 2026** (Tier 1).
-- **16 races** seeded: 12 House primaries (FL-10/13/15/23/27/28 × R+D),
-  Senate R+D, Governor R+D.
-- **14 active candidates** with synthesized stances + voting records +
-  donor industry classifications. The other races render a "Curating —
-  check back soon" empty state (honest, not broken).
+- **Scope:** Florida primaries on **August 18, 2026** (Tier 1 + Tier 2 in progress).
+- **38 race rows** seeded covering Tier 1 House (FL-10/13/15/23/27/28 × R+D),
+  Senate R+D, Governor R+D, plus Tier 2 House (FL-11/16/17/18/19 × R+D and
+  more).
+- **18 active candidates** across 12 races with synthesized stances +
+  voting records + donor industry classifications. Empty races render a
+  "Curating — check back soon" state (honest, not broken). Single- and
+  two-candidate races soft-disable the match flow with informative copy
+  (match comparison only delivers signal at 3+).
 - **1,396 FL ZIPs** map to all 28 Congressional Districts via the HUD
   USPS_ZIP_CROSSWALK quarterly file.
+- Live at <https://voter-fawn.vercel.app> with auto-deploy on push to main.
 
 Differentiator vs ISideWith / Vote Smart: every stance carries a
 *track-record note* that surfaces gaps (or alignment) between stated
@@ -58,6 +62,15 @@ hitting Haiku.
   `/api/og` image
 - `/data-rights` — anonymous export / delete / opt-out
 - `/privacy`, `/terms` — legal
+- `/admin` — read-only engagement dashboard (HTTP Basic Auth via
+  `ADMIN_PASSWORD`); top races by views, top saved candidates, open
+  report queue, Anthropic spend estimate
+
+Every write endpoint (`/api/interaction`, `/api/visit`, `/api/quick-poll`,
+`/api/consent`, `/api/report`, `/api/match`) is rate-limited per session
+and per IP. The Report Inaccurate path (`/api/report`) backs a "this
+stance is wrong" button on every candidate page; reports queue in the
+admin dashboard for manual review.
 
 ## Adding a race (offline pipeline)
 
@@ -101,14 +114,22 @@ the pipeline walkthrough.
 ## Deploy
 
 The app deploys to Vercel. `middleware.ts` issues anonymous session
-cookies and captures utm_*. Required env vars in Vercel project
-settings: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`,
-`IP_HASH_SECRET` (HMAC key for IP/UA hashing — generate via
-`openssl rand -hex 32`). Optional: `ANTHROPIC_API_KEY` (live Haiku
-match), `MATCH_API_DISABLED` (kill switch).
+cookies, captures utm_*, and gates `/admin` behind HTTP Basic Auth.
+Required env vars in Vercel project settings:
 
-Migration 008 (`races` table RLS) must be applied to the Supabase project
-before the runtime can read from `races`. See `supabase/migrations/`.
+- `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `IP_HASH_SECRET` — HMAC key for IP/UA hashing (32+ random bytes; in
+  PowerShell: `node -e "console.log(require('crypto').randomBytes(24).toString('hex'))"`)
+- `ADMIN_PASSWORD` — gates the `/admin` dashboard; username is always
+  `admin`. Server-only, no `NEXT_PUBLIC_` prefix.
+- `SUPABASE_SERVICE_ROLE_KEY` — required for `/api/report` insert + admin
+  reads (RLS-bypass; never exposed to the client).
+
+Optional: `ANTHROPIC_API_KEY` (live Haiku match — falls back to a local
+heuristic when unset), `MATCH_API_DISABLED` (kill switch).
+
+Migrations 008 (`races` RLS) and 009 (`candidate_reports`) must be applied
+to the Supabase project. See `supabase/migrations/`.
 
 ## License
 
