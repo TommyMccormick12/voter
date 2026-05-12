@@ -8,7 +8,7 @@ export default function PrivacyPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 lg:px-8 py-10 lg:py-14 prose-base">
       <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-        Last updated: 2026-05-09
+        Last updated: 2026-05-11
       </p>
       <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
         Privacy Policy
@@ -18,10 +18,20 @@ export default function PrivacyPage() {
         <Section title="The short version">
           <p>
             We collect anonymous engagement data tied only to a session token
-            in your browser cookies. We never collect your name, email, phone
+            in your browser cookies. We don&apos;t ask for your name, phone
             number, or precise location. We may sell aggregated, district-level
             insights to researchers, polling firms, and newsrooms — but only
             with your explicit consent, and only in cohorts of 100+ users.
+          </p>
+          <p>
+            One exception: if you submit a &ldquo;Report inaccurate&rdquo; form
+            on a candidate&apos;s page and choose to include your email, we
+            store it alongside the report so we can follow up. Email is
+            optional; the form works without it. See{' '}
+            <a href="#report-inaccurate" className="text-blue-600 underline">
+              Report inaccurate
+            </a>{' '}
+            below.
           </p>
           <p>
             Manage your data choices anytime at{' '}
@@ -61,7 +71,10 @@ export default function PrivacyPage() {
           <ul className="list-disc pl-5 space-y-1">
             <li>Your IP address (raw — we derive coarse geo and discard)</li>
             <li>Your user agent (we hash it and store the hash, never the raw string)</li>
-            <li>Email, phone, name, address (we don&apos;t ask)</li>
+            <li>
+              Phone, name, address (we don&apos;t ask). Email only via the
+              optional Report Inaccurate form — see below.
+            </li>
             <li>Browser fingerprinting signals (canvas, audio, font enumeration, plugin list)</li>
             <li>Cross-site browsing history (no third-party cookies, no pixel partners)</li>
             <li>Precise geolocation (no GPS, no Geolocation API)</li>
@@ -82,6 +95,55 @@ export default function PrivacyPage() {
             beacons, or fingerprinting trackers.
           </p>
         </Section>
+
+        <section id="report-inaccurate">
+          <h2 className="text-xl font-bold text-gray-900 mb-2">
+            Report inaccurate (the only path that may collect email)
+          </h2>
+          <div className="space-y-2">
+            <p>
+              Each candidate page has a &ldquo;Report inaccurate&rdquo; button.
+              If you spot a wrong stance attribution, an outdated quote, or a
+              fabricated bill citation, you can flag it for manual review.
+            </p>
+            <p>
+              The form asks for a category (factual error / wrong attribution /
+              outdated / other), a description of what&apos;s wrong (required,
+              20–2000 characters), and{' '}
+              <strong>optionally</strong> your email address.
+            </p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>
+                <strong>Email is optional.</strong> The form submits and the
+                report is recorded whether or not you provide one.
+              </li>
+              <li>
+                <strong>What we do with it:</strong> If you provided an email
+                and the report is actionable, we may reach out for follow-up
+                detail or to let you know the outcome.
+              </li>
+              <li>
+                <strong>What we don&apos;t do with it:</strong> Never sold,
+                never shared with third parties, never used for marketing or
+                added to any mailing list. Not joined to your
+                <code> voter_session</code> for cross-page tracking.
+              </li>
+              <li>
+                <strong>Retention:</strong> Stored as long as the report stays
+                in the review queue. Resolved/dismissed reports are kept for
+                audit per the consent-log retention policy (24 months) and
+                then purged with the report.
+              </li>
+              <li>
+                <strong>Right to delete:</strong> Use{' '}
+                <Link href="/data-rights" className="text-blue-600 underline">
+                  /data-rights
+                </Link>{' '}
+                or email the maintainer to remove a report you filed.
+              </li>
+            </ul>
+          </div>
+        </section>
 
         <Section title="Your rights">
           <ul className="list-disc pl-5 space-y-1">
