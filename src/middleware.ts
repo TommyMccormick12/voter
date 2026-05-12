@@ -54,15 +54,23 @@ export function middleware(request: NextRequest) {
     if (scheme === 'Basic' && encoded) {
       try {
         const decoded = atob(encoded);
-        const [username, password] = decoded.split(':', 2);
-        // Require username === 'admin' for log attribution clarity (so a
-        // future access-log entry never shows arbitrary attacker-chosen
-        // names like "root" or empty-string). Cheap defense-in-depth.
-        if (username === 'admin' && typeof password === 'string') {
-          // Constant-time password compare via the pure-JS helper above.
-          // Plain `===` short-circuits on first-byte mismatch and leaks
-          // bytes via response timing over many samples.
-          ok = constantTimeEqual(password, expected);
+        // Per RFC 7617, the password portion of Basic auth MAY contain
+        // colons. Split on the FIRST colon only — `.split(':', 2)` would
+        // truncate everything after the second colon, silently breaking
+        // any password that contains one.
+        const colonIdx = decoded.indexOf(':');
+        if (colonIdx !== -1) {
+          const username = decoded.slice(0, colonIdx);
+          const password = decoded.slice(colonIdx + 1);
+          // Require username === 'admin' for log attribution clarity (so a
+          // future access-log entry never shows arbitrary attacker-chosen
+          // names like "root" or empty-string). Cheap defense-in-depth.
+          if (username === 'admin') {
+            // Constant-time password compare via the pure-JS helper above.
+            // Plain `===` short-circuits on first-byte mismatch and leaks
+            // bytes via response timing over many samples.
+            ok = constantTimeEqual(password, expected);
+          }
         }
       } catch {
         ok = false;
