@@ -1,6 +1,21 @@
 import { NextResponse, type NextRequest } from 'next/server';
-import { timingSafeEqual } from 'node:crypto';
 import { COOKIE_NAMES, COOKIE_OPTIONS, generateSessionToken } from '@/lib/cookies';
+
+/**
+ * Constant-time string equality. Pure JS — Vercel middleware runs on Edge
+ * runtime which lacks `node:crypto` (no timingSafeEqual). We accept the
+ * length-short-circuit because password length isn't itself the secret.
+ * The XOR loop iterates over every byte regardless of mismatch position,
+ * so no first-byte timing leak.
+ */
+function constantTimeEqual(a: string, b: string): boolean {
+  if (a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) {
+    diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  }
+  return diff === 0;
+}
 
 /**
  * Middleware — runs on every request before any page or API route.
@@ -44,12 +59,10 @@ export function middleware(request: NextRequest) {
         // future access-log entry never shows arbitrary attacker-chosen
         // names like "root" or empty-string). Cheap defense-in-depth.
         if (username === 'admin' && typeof password === 'string') {
-          // Constant-time password compare. Plain `===` short-circuits on
-          // first-byte mismatch and leaks bytes via timing. timingSafeEqual
-          // requires equal-length buffers — pre-check length, then compare.
-          const a = Buffer.from(password);
-          const b = Buffer.from(expected);
-          ok = a.length === b.length && timingSafeEqual(a, b);
+          // Constant-time password compare via the pure-JS helper above.
+          // Plain `===` short-circuits on first-byte mismatch and leaks
+          // bytes via response timing over many samples.
+          ok = constantTimeEqual(password, expected);
         }
       } catch {
         ok = false;
