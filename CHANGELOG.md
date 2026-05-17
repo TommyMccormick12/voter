@@ -2,6 +2,39 @@
 
 All notable changes to the voter project. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.8.1] - 2026-05-17
+
+Tier 2 House race ingestion sweep. Ran the full ingest pipeline against
+all 22 Tier 2 FL House primary fixtures (FL-09, 11, 16, 17, 18, 19, 20,
+21, 22, 24, 25, 26 × R+D where contested). 90 candidates evaluated, ~$0.40
+in Haiku spend. Yielded 2 new activations and 88 review docs that
+document the data state for future ingest passes.
+
+### Added
+
+- **Debbie Wasserman Schultz** activated in **FL-25 D** (incumbent, 4
+  synthesized stances on guns / foreign_policy / criminal_justice /
+  economy, 50-vote record, $2.5M raised this cycle).
+- **Mario Díaz-Balart** activated in **FL-26 R** (incumbent, 9
+  synthesized stances spanning healthcare / economy / taxes /
+  foreign_policy / immigration / climate / guns / criminal_justice /
+  education, 50-vote record, $1.5M raised).
+- **22 generated review docs** under `supabase/seed/review/race-fl-*-2026/`
+  documenting bio, donors, voting records, and pending data gaps for
+  every Tier 2 candidate the FEC roster knows about. Reusable as
+  starting points when this batch is re-run closer to the August
+  primaries.
+
+### Changed
+
+- **TODOS.md** demotes "Tier 2 House race ingestion" P2 → P3. Root
+  cause discovered during the sweep: most non-incumbent FL House
+  challengers have no Wikipedia page and no usable campaign-site
+  issues page this early in the cycle. Re-running the same pipeline
+  won't yield more until Wikipedia + campaign coverage accumulates
+  closer to the August primary date. Same finding as the deferred
+  hand-authoring sweep (P4).
+
 ## [0.8.0] - 2026-05-17
 
 Anti-spam hardening + distributed rate limits. Reports flagged from a

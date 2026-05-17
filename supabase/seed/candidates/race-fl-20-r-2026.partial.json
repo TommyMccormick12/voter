@@ -21,7 +21,73 @@
         "cash_on_hand_end_period": 0,
         "individual_contributions": 7306.56,
         "other_political_committee_contributions": 0
-      }
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 6000,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 260.73,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 250,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "SCARIANO, GEORGE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 5000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00914739",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ROTH, RAYMOND",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00914739",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "VILLAIN, JEAN-MARC",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 260.73,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00914739",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WEISBERG, PERRY S.",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00914739",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
     },
     {
       "name": "Rodenay Mr. Joseph",
@@ -43,7 +109,182 @@
         "cash_on_hand_end_period": 0,
         "individual_contributions": 58157.58,
         "other_political_committee_contributions": 0
-      }
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 20449.89,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Transportation",
+          "amount": 7868.710000000001,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 7049.72,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 3383.3,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 2891.02,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 1811.53,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 1150.51,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 898.14,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 780.51,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 260.25,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "SYVERAIN, YVES RENEE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00892570",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SYVERAIN, MILLIARDAIRE JUNIOR",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00892570",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LICIN, MADAI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3300,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00892570",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BRUNO, RICARDO",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3123.05,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00892570",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SYVERAIN, MILLIARDAIRE",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3000,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00892570",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BAYARD, JONATHAN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2082.03,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00892570",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "JEAN MARIE, CLAUDE",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 1500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00892570",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SATRAM, RENATA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1300,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00892570",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MARC, NESTOR",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 1041.02,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00892570",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LICIN, HOGLAH",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 1041.02,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00892570",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
     }
   ],
   "race": {

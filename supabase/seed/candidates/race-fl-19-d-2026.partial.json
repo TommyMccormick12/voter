@@ -150,22 +150,29 @@
       "top_industries": [
         {
           "industry_name": "Retired / Self-Employed",
-          "amount": 15174,
+          "amount": 16140,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Government / Public Sector",
-          "amount": 1350,
+          "industry_name": "Other",
+          "amount": 2355,
           "rank": 2,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Other",
-          "amount": 480,
+          "industry_name": "Government / Public Sector",
+          "amount": 1050,
           "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 300,
+          "rank": 4,
           "cycle": 2026,
           "data_source": "fec+haiku"
         }
@@ -195,7 +202,7 @@
           "donor_name": "SAPP, HOWARD",
           "donor_type": "individual",
           "industry": "Retired / Self-Employed",
-          "amount_total": 2000,
+          "amount_total": 2236,
           "cycle": 2026,
           "rank_in_candidate": 3,
           "fec_committee_id": "C00898411",
@@ -232,40 +239,40 @@
           "data_source": "fec"
         },
         {
-          "donor_name": "NATHAN, KAREN",
+          "donor_name": "SAPP, HOWARD",
           "donor_type": "individual",
           "industry": "Retired / Self-Employed",
-          "amount_total": 500,
+          "amount_total": 2000,
           "cycle": 2026,
           "rank_in_candidate": 7,
           "fec_committee_id": "C00898411",
           "data_source": "fec"
         },
         {
-          "donor_name": "NATHAN, JAMES",
+          "donor_name": "SAPP, HOWARD",
           "donor_type": "individual",
           "industry": "Retired / Self-Employed",
-          "amount_total": 500,
+          "amount_total": 605,
           "cycle": 2026,
           "rank_in_candidate": 8,
           "fec_committee_id": "C00898411",
           "data_source": "fec"
         },
         {
-          "donor_name": "WHITLEY, PAMELA",
+          "donor_name": "NATHAN, KAREN",
           "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 250,
+          "industry": "Other",
+          "amount_total": 500,
           "cycle": 2026,
           "rank_in_candidate": 9,
           "fec_committee_id": "C00898411",
           "data_source": "fec"
         },
         {
-          "donor_name": "REDD, SOSA",
+          "donor_name": "NATHAN, JAMES",
           "donor_type": "individual",
           "industry": "Other",
-          "amount_total": 250,
+          "amount_total": 500,
           "cycle": 2026,
           "rank_in_candidate": 10,
           "fec_committee_id": "C00898411",

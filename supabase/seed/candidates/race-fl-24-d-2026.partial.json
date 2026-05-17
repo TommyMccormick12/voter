@@ -21,7 +21,10 @@
         "cash_on_hand_end_period": 0,
         "individual_contributions": 0,
         "other_political_committee_contributions": 0
-      }
+      },
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
     },
     {
       "name": "Frederica S. Wilson",
@@ -43,7 +46,724 @@
         "cash_on_hand_end_period": 0,
         "individual_contributions": 44868.12,
         "other_political_committee_contributions": 108273.64
-      }
+      },
+      "bio": "Frederica Smith Wilson (born Frederica Patricia Smith, November 5, 1942) is an American politician who has been a member of the United States House of Representatives since 2011, representing Florida's 24th congressional district. Located in South Florida, Wilson's congressional district, numbered 17th during her first term, covers a large swath of eastern Miami-Dade County. The district contains most of Miami's majority-black precincts. Wilson gained national attention in 2012 for her comments on the death of Trayvon Martin.",
+      "campaign_website": "http://wilson.house.gov",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 14027.18,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Transportation",
+          "amount": 3500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 1500,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 550,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 500,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 500,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "WEINSTEIN, JOSHUA",
+          "donor_type": "individual",
+          "industry": "Transportation",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00460055",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ARISON, MICKY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00460055",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ARISON, MADELEINE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00460055",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ARISON, MICKY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00460055",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PYLE, DAVID",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00460055",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "OCEAN PRIME",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1344,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00460055",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "OCEAN PRIME",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1078.38,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00460055",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "OCEAN PRIME",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 604.8,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00460055",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "THOMPSON, TOLA",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00460055",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SLADE, JONATHAN",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00460055",
+          "data_source": "fec"
+        }
+      ],
+      "govtrack_id": 412412,
+      "bioguide_id": "W000808",
+      "voting_record": [
+        {
+          "bill_id": "hr8469-119",
+          "bill_title": "H.R. 8469: Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+          "bill_summary": "This bill passed in the House on May 15, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [
+            "climate",
+            "foreign_policy"
+          ],
+          "vote_date": "2026-05-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h175",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr8469-119",
+          "bill_title": "H.R. 8469: Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+          "bill_summary": "This bill passed in the House on May 15, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [
+            "climate",
+            "foreign_policy"
+          ],
+          "vote_date": "2026-05-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h174",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr8365-119",
+          "bill_title": "H.R. 8365: Monitor Accountability Act",
+          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h173",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr8365-119",
+          "bill_title": "H.R. 8365: Monitor Accountability Act",
+          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h172",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr5625-119",
+          "bill_title": "H.R. 5625: Cashless Bail Reporting Act",
+          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h171",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hconres75-119",
+          "bill_title": "H.Con.Res. 75: Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove the United States Armed Forces from hostilities against the Islamic Republic of Iran.",
+          "bill_summary": "This resolution failed in the House on May 14, 2026.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h170",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6260-119",
+          "bill_title": "H.R. 6260: Keeping Violent Offenders Off Our Streets Act of 2025",
+          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h169",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6260-119",
+          "bill_title": "H.R. 6260: Keeping Violent Offenders Off Our Streets Act of 2025",
+          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h168",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1259-119",
+          "bill_title": "H.Res. 1259: Expressing the sense of the House of Representatives that the President should prioritize securing the release of Pastor Jin Mingri, Pastor Gao Quanfu and his wife Pang Yu, Dr. Gulshan Abbas, and Jimmy Lai detained by the People’s Republic o",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h167",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1251-119",
+          "bill_title": "H.Res. 1251: Calling on elected officials and civil society leaders to counter antisemitism and educate the public on the contributions of the Jewish-American community.",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h166",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hconres96-119",
+          "bill_title": "H.Con.Res. 96: Expressing support for law enforcement officers.",
+          "bill_summary": "This resolution passed in the House on May 13, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h165",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1346-119",
+          "bill_title": "H.R. 1346: Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+          "bill_summary": "This bill passed in the House on May 13, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h164",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1346-119",
+          "bill_title": "H.R. 1346: Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+          "bill_summary": "This bill passed in the House on May 13, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h163",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1252-119",
+          "bill_title": "H.Res. 1252: Resolution memorializing law enforcement officers killed in the line of duty.",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h162",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1274-119",
+          "bill_title": "H.Res. 1274: Providing that section 11 of House Resolution 1224 shall have no force or effect.",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h161",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1274-119",
+          "bill_title": "H.Res. 1274: Providing that section 11 of House Resolution 1224 shall have no force or effect.",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h160",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1275-119",
+          "bill_title": "H.Res. 1275: Providing for consideration of the bill (H.R. 5625) to direct the Attorney General to make publicly available a list of each State and unit of local government that permits cashless bail, and for other purposes; providing for consideration o",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h159",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1275-119",
+          "bill_title": "H.Res. 1275: Providing for consideration of the bill (H.R. 5625) to direct the Attorney General to make publicly available a list of each State and unit of local government that permits cashless bail, and for other purposes; providing for consideration o",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h158",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr2853-119",
+          "bill_title": "H.R. 2853: Combating Organized Retail Crime Act of 2025",
+          "bill_summary": "This bill passed in the House on May 12, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-12",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h157",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr2071-119",
+          "bill_title": "H.R. 2071: Save Our Shrimpers Act",
+          "bill_summary": "This bill passed in the House on May 12, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-05-12",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h156",
+          "significance": "major"
+        },
+        {
+          "bill_id": "s4465-119",
+          "bill_title": "S. 4465: A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
+          "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
+          "vote": "absent",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h155",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h154",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h153",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h152",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h151",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h150",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h149",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h148",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h147",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h146",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h145",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h144",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "absent",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h143",
+          "significance": "major"
+        },
+        {
+          "bill_id": "s1318-119",
+          "bill_title": "S. 1318: Fallen Servicemembers Religious Heritage Restoration Act",
+          "bill_summary": "This bill was passed by Congress on April 29, 2026 and goes to the President next.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h142",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1224-119",
+          "bill_title": "H.Res. 1224: Providing for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes; providing for consideration ",
+          "bill_summary": "This simple resolution was agreed to on April 29, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [
+            "climate"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h141",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1224-119",
+          "bill_title": "H.Res. 1224: Providing for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes; providing for consideration ",
+          "bill_summary": "This simple resolution was agreed to on April 29, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [
+            "climate"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h140",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr227-119",
+          "bill_title": "H.R. 227: Clergy Act",
+          "bill_summary": "This bill passed in the House on April 27, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h139",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7959-119",
+          "bill_title": "H.R. 7959: IRS Whistleblower Program Improvement Act",
+          "bill_summary": "This bill passed in the House on April 27, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h138",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5587-119",
+          "bill_title": "H.R. 5587: HEATS Act",
+          "bill_summary": "This bill passed in the House on April 23, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h137",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6387-119",
+          "bill_title": "H.R. 6387: FIRE Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h136",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6387-119",
+          "bill_title": "H.R. 6387: FIRE Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h135",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr4690-119",
+          "bill_title": "H.R. 4690: Reliable Federal Infrastructure Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h134",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr4690-119",
+          "bill_title": "H.R. 4690: Reliable Federal Infrastructure Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h133",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1182-119",
+          "bill_title": "H.Res. 1182: Expressing support for rural communities across the United States as stewards of the environment, major suppliers of United States energy resources, critical providers of food production and manufacturing capacity, and drivers of national ec",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h132",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1189-119",
+          "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h131",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1189-119",
+          "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h130",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "s1020-119",
+          "bill_title": "S. 1020: A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+          "bill_summary": "This bill was enacted after being signed by the President on May 11, 2026.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h129",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr2493-119",
+          "bill_title": "H.R. 2493: Improving Care in Rural America Reauthorization Act of 2025",
+          "bill_summary": "This bill passed in the House on April 21, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h128",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5201-119",
+          "bill_title": "H.R. 5201: Kari’s Law Reporting Act",
+          "bill_summary": "This bill passed in the House on April 21, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h127",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5200-119",
+          "bill_title": "H.R. 5200: Emergency Reporting Act",
+          "bill_summary": "This bill passed in the House on April 20, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-20",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h126",
+          "significance": "major"
+        }
+      ],
+      "top_stances": []
     }
   ],
   "race": {
