@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import type { CandidateWithFullData, TopStance } from '@/types/database';
 import { getPartyTheme, getPartyInitials } from '@/lib/party-theme';
@@ -89,12 +90,25 @@ export function CandidateScorecard({
     >
       {/* Hero strip — party-themed */}
       <div className={`${theme.heroBg} p-5 flex items-center gap-4`}>
-        <div
-          className={`w-20 h-20 rounded-full ${theme.avatarGradient} flex items-center justify-center text-white text-2xl font-bold shadow-md flex-shrink-0`}
-          aria-hidden="true"
-        >
-          {initials}
-        </div>
+        {candidate.photo_url ? (
+          <div className={`relative w-20 h-20 rounded-full overflow-hidden shadow-md flex-shrink-0 ring-2 ring-white ${theme.border}`}>
+            <Image
+              src={candidate.photo_url}
+              alt={`${candidate.name} portrait`}
+              fill
+              sizes="80px"
+              className="object-cover"
+              unoptimized
+            />
+          </div>
+        ) : (
+          <div
+            className={`w-20 h-20 rounded-full ${theme.avatarGradient} flex items-center justify-center text-white text-2xl font-bold shadow-md flex-shrink-0`}
+            aria-hidden="true"
+          >
+            {initials}
+          </div>
+        )}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
             <span className={`text-[10px] font-semibold px-2.5 py-1 rounded-full ${theme.accent}`}>

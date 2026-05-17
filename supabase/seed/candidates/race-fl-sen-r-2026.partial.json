@@ -1058,7 +1058,8 @@
         }
       ],
       "active": true,
-      "activated_at": "2026-05-11T01:02:16.726Z"
+      "activated_at": "2026-05-11T01:02:16.726Z",
+      "photo_url": "https://bioguide.congress.gov/photo/M001244.jpg"
     },
     {
       "name": "Ernest Ernie John Rev. Dr. Rivera",
@@ -2111,7 +2112,8 @@
         }
       ],
       "active": true,
-      "activated_at": "2026-05-11T01:02:21.121Z"
+      "activated_at": "2026-05-11T01:02:21.121Z",
+      "photo_url": "https://bioguide.congress.gov/photo/S001217.jpg"
     },
     {
       "name": "Neelam Dr Taneja Perry",
