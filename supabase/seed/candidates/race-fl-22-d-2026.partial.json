@@ -11,7 +11,10 @@
       "district": "22",
       "office": "U.S. House",
       "race_id": "race-fl-22-d-2026",
-      "fec_candidate_id": "H6FL22115"
+      "fec_candidate_id": "H6FL22115",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
     }
   ],
   "race": {

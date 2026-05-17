@@ -142,28 +142,28 @@
         },
         {
           "industry_name": "Retired / Self-Employed",
-          "amount": 1450,
+          "amount": 1350,
           "rank": 2,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Healthcare & Pharma",
-          "amount": 550,
-          "rank": 3,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Retail & Consumer Goods",
           "amount": 500,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 450,
           "rank": 4,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Education",
-          "amount": 300,
+          "amount": 400,
           "rank": 5,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -176,15 +176,15 @@
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Real Estate",
-          "amount": 200,
+          "industry_name": "Legal",
+          "amount": 250,
           "rank": 7,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Legal",
-          "amount": 150,
+          "industry_name": "Real Estate",
+          "amount": 200,
           "rank": 8,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -487,7 +487,7 @@
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Other",
+          "industry_name": "Retired / Self-Employed",
           "amount": 3850,
           "rank": 3,
           "cycle": 2026,
@@ -518,7 +518,7 @@
         {
           "donor_name": "KALISH, LYNN MS",
           "donor_type": "individual",
-          "industry": "Other",
+          "industry": "Retired / Self-Employed",
           "amount_total": 3500,
           "cycle": 2026,
           "rank_in_candidate": 3,
@@ -528,7 +528,7 @@
         {
           "donor_name": "JENKINS, THEODORE MR.",
           "donor_type": "individual",
-          "industry": "Other",
+          "industry": "Retired / Self-Employed",
           "amount_total": 350,
           "cycle": 2026,
           "rank_in_candidate": 4,

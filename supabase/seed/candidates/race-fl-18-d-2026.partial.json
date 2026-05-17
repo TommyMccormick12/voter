@@ -11,7 +11,10 @@
       "district": "18",
       "office": "U.S. House",
       "race_id": "race-fl-18-d-2026",
-      "fec_candidate_id": "H6FL18212"
+      "fec_candidate_id": "H6FL18212",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
     },
     {
       "name": "Tiffanie Shavon Luong",
@@ -23,7 +26,10 @@
       "district": "18",
       "office": "U.S. House",
       "race_id": "race-fl-18-d-2026",
-      "fec_candidate_id": "H6FL18220"
+      "fec_candidate_id": "H6FL18220",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
     }
   ],
   "race": {

@@ -21,7 +21,133 @@
         "cash_on_hand_end_period": 0,
         "individual_contributions": 42179.82,
         "other_political_committee_contributions": 0
-      }
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 11550,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 3300,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 250,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "ROSENZWEIG, EILEEN",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 3300,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00924787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MCKILLIP, JOHN A",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3000,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00924787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FEYERICK, DEBORAH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00924787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MONTAVON, STEPHANIE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00924787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MCCONNELL, MICHAEL",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00924787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KNEELAND, DOUGLAS",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00924787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HOOVER, MARTHA B.",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00924787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HAVLIK, HUGH A.",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00924787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DOWNIE, BOB",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00924787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HENDRICKS, MICHAEL G.",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 300,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00924787",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
     },
     {
       "name": "Allen L Jr Spence",
@@ -43,7 +169,133 @@
         "cash_on_hand_end_period": 0,
         "individual_contributions": 20260.72,
         "other_political_committee_contributions": 0
-      }
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 5708.65,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 550,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 250,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "GEER, DREN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TORRIERO, LORI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TORRIERO, LORI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TORRIERO, LORI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TORRIERO, LORI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STOREY, FRANCES",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STOREY, FRANCES",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LONDONO, JORGE",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "COLUMBUS, MATTHEW",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ANARUMO, PAUL",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": []
     }
   ],
   "race": {

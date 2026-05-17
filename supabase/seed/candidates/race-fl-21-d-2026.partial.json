@@ -40,7 +40,7 @@
         },
         {
           "industry_name": "Healthcare & Pharma",
-          "amount": 63000,
+          "amount": 70000,
           "rank": 3,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -54,7 +54,7 @@
         },
         {
           "industry_name": "Technology",
-          "amount": 21000,
+          "amount": 14000,
           "rank": 5,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -216,7 +216,7 @@
       "top_industries": [
         {
           "industry_name": "Retired / Self-Employed",
-          "amount": 65280,
+          "amount": 64230,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -278,8 +278,8 @@
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Healthcare & Pharma",
-          "amount": 1500,
+          "industry_name": "Real Estate",
+          "amount": 1800,
           "rank": 10,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -428,7 +428,7 @@
       "top_industries": [
         {
           "industry_name": "Retired / Self-Employed",
-          "amount": 44400,
+          "amount": 43900,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -442,7 +442,7 @@
         },
         {
           "industry_name": "Healthcare & Pharma",
-          "amount": 1850,
+          "amount": 2100,
           "rank": 3,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -490,8 +490,8 @@
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Technology",
-          "amount": 200,
+          "industry_name": "Agriculture",
+          "amount": 250,
           "rank": 10,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -632,7 +632,7 @@
         },
         {
           "industry_name": "Retired / Self-Employed",
-          "amount": 4379,
+          "amount": 4129,
           "rank": 2,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -659,9 +659,16 @@
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Technology",
+          "industry_name": "Construction",
           "amount": 250,
           "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 250,
+          "rank": 7,
           "cycle": 2026,
           "data_source": "fec+haiku"
         }

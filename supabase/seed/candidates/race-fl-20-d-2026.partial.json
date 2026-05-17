@@ -51,7 +51,7 @@
       "top_industries": [
         {
           "industry_name": "Other",
-          "amount": 45600,
+          "amount": 43900,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -86,21 +86,21 @@
         },
         {
           "industry_name": "Finance & Banking",
-          "amount": 16900,
+          "amount": 15900,
           "rank": 6,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Transportation",
-          "amount": 9500,
+          "industry_name": "Technology",
+          "amount": 11300,
           "rank": 7,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Technology",
-          "amount": 6300,
+          "industry_name": "Transportation",
+          "amount": 8500,
           "rank": 8,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -113,7 +113,7 @@
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Labor Unions",
+          "industry_name": "Nonprofit / Civic",
           "amount": 3000,
           "rank": 10,
           "cycle": 2026,
@@ -265,14 +265,14 @@
       "top_industries": [
         {
           "industry_name": "Real Estate",
-          "amount": 51000,
+          "amount": 50000,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Other",
-          "amount": 44250,
+          "amount": 42500,
           "rank": 2,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -306,22 +306,22 @@
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Finance & Banking",
-          "amount": 6500,
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 7250,
           "rank": 7,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Oil & Gas",
-          "amount": 5500,
+          "amount": 6500,
           "rank": 8,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Retail & Consumer Goods",
-          "amount": 5500,
+          "industry_name": "Finance & Banking",
+          "amount": 6500,
           "rank": 9,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -463,7 +463,7 @@
       "top_industries": [
         {
           "industry_name": "Retired / Self-Employed",
-          "amount": 47252.5,
+          "amount": 46002.5,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -476,14 +476,14 @@
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Media & Entertainment",
-          "amount": 5000,
+          "industry_name": "Healthcare & Pharma",
+          "amount": 6000,
           "rank": 3,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Healthcare & Pharma",
+          "industry_name": "Media & Entertainment",
           "amount": 5000,
           "rank": 4,
           "cycle": 2026,
@@ -606,7 +606,7 @@
         {
           "donor_name": "SCRIBNER, CURTIS",
           "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
+          "industry": "Healthcare & Pharma",
           "amount_total": 1000,
           "cycle": 2026,
           "rank_in_candidate": 8,

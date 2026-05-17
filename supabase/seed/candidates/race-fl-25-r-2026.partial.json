@@ -217,49 +217,49 @@
       "top_industries": [
         {
           "industry_name": "Retired / Self-Employed",
-          "amount": 14114.800000000005,
+          "amount": 21222.86,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Other",
-          "amount": 3224.7,
+          "industry_name": "Real Estate",
+          "amount": 6500,
           "rank": 2,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Healthcare & Pharma",
-          "amount": 1500,
+          "industry_name": "Other",
+          "amount": 6250,
           "rank": 3,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Government / Public Sector",
-          "amount": 1000,
+          "industry_name": "Healthcare & Pharma",
+          "amount": 2400,
           "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Transportation",
+          "amount": 2000,
+          "rank": 5,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Finance & Banking",
           "amount": 750,
-          "rank": 5,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Transportation",
-          "amount": 500,
           "rank": 6,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Real Estate",
-          "amount": 500,
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 250,
           "rank": 7,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -272,8 +272,8 @@
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Agriculture",
-          "amount": 28.5,
+          "industry_name": "Government / Public Sector",
+          "amount": 200,
           "rank": 9,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -281,12 +281,22 @@
       ],
       "top_donors": [
         {
+          "donor_name": "MARCLEY, MIKE",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3300,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00896787",
+          "data_source": "fec"
+        },
+        {
           "donor_name": "ZEBELEAN, JOHN",
           "donor_type": "individual",
           "industry": "Retired / Self-Employed",
           "amount_total": 2000,
           "cycle": 2026,
-          "rank_in_candidate": 1,
+          "rank_in_candidate": 2,
           "fec_committee_id": "C00896787",
           "data_source": "fec"
         },
@@ -296,17 +306,27 @@
           "industry": "Other",
           "amount_total": 2000,
           "cycle": 2026,
-          "rank_in_candidate": 2,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00896787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ZEBELEAN, JOHN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
           "fec_committee_id": "C00896787",
           "data_source": "fec"
         },
         {
           "donor_name": "HALLAWAY, RASHID",
           "donor_type": "individual",
-          "industry": "Government / Public Sector",
+          "industry": "Other",
           "amount_total": 1000,
           "cycle": 2026,
-          "rank_in_candidate": 3,
+          "rank_in_candidate": 5,
           "fec_committee_id": "C00896787",
           "data_source": "fec"
         },
@@ -316,65 +336,45 @@
           "industry": "Retired / Self-Employed",
           "amount_total": 1000,
           "cycle": 2026,
-          "rank_in_candidate": 4,
+          "rank_in_candidate": 6,
           "fec_committee_id": "C00896787",
           "data_source": "fec"
         },
         {
           "donor_name": "GIBSON, RACHEL",
           "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
+          "industry": "Other",
           "amount_total": 1000,
-          "cycle": 2026,
-          "rank_in_candidate": 5,
-          "fec_committee_id": "C00896787",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "MILO, VINCENT MR JR",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 1000,
-          "cycle": 2026,
-          "rank_in_candidate": 6,
-          "fec_committee_id": "C00896787",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "MACKAIG, RICHARD A MR",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 520,
           "cycle": 2026,
           "rank_in_candidate": 7,
           "fec_committee_id": "C00896787",
           "data_source": "fec"
         },
         {
-          "donor_name": "MILLS, BRUCE",
+          "donor_name": "HUFF, EDE",
           "donor_type": "individual",
           "industry": "Retired / Self-Employed",
-          "amount_total": 500,
+          "amount_total": 1000,
           "cycle": 2026,
           "rank_in_candidate": 8,
           "fec_committee_id": "C00896787",
           "data_source": "fec"
         },
         {
-          "donor_name": "MILLS, BRUCE",
+          "donor_name": "ROEHL, RICHARD L",
           "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 500,
+          "industry": "Transportation",
+          "amount_total": 1000,
           "cycle": 2026,
           "rank_in_candidate": 9,
           "fec_committee_id": "C00896787",
           "data_source": "fec"
         },
         {
-          "donor_name": "LUBERT, JON",
+          "donor_name": "MARCLEY, MIKE",
           "donor_type": "individual",
-          "industry": "Finance & Banking",
-          "amount_total": 500,
+          "industry": "Real Estate",
+          "amount_total": 1000,
           "cycle": 2026,
           "rank_in_candidate": 10,
           "fec_committee_id": "C00896787",
@@ -422,7 +422,7 @@
         },
         {
           "industry_name": "Real Estate",
-          "amount": 27000,
+          "amount": 31500,
           "rank": 3,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -435,36 +435,36 @@
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Retail & Consumer Goods",
-          "amount": 21000,
-          "rank": 5,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
           "industry_name": "Healthcare & Pharma",
           "amount": 19500,
-          "rank": 6,
+          "rank": 5,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Transportation",
           "amount": 18170,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 16500,
           "rank": 7,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Education",
-          "amount": 9500,
+          "amount": 10500,
           "rank": 8,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Other",
-          "amount": 8000,
+          "amount": 7000,
           "rank": 9,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -605,21 +605,21 @@
       "top_industries": [
         {
           "industry_name": "Retired / Self-Employed",
-          "amount": 181705.53999999998,
+          "amount": 160705.53999999998,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Finance & Banking",
-          "amount": 134500,
+          "amount": 141500,
           "rank": 2,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Other",
-          "amount": 98759.26,
+          "amount": 119759.26,
           "rank": 3,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -632,36 +632,36 @@
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Technology",
-          "amount": 19000,
-          "rank": 5,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
           "industry_name": "Real Estate",
           "amount": 18247.93,
-          "rank": 6,
+          "rank": 5,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Education",
           "amount": 17615.7,
-          "rank": 7,
+          "rank": 6,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Construction",
           "amount": 14231.400000000001,
-          "rank": 8,
+          "rank": 7,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Healthcare & Pharma",
           "amount": 13665.29,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 12000,
           "rank": 9,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -758,7 +758,7 @@
         {
           "donor_name": "DEPRIEST, JENNINGS",
           "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
+          "industry": "Other",
           "amount_total": 7000,
           "cycle": 2026,
           "rank_in_candidate": 9,

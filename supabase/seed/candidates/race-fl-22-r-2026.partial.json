@@ -24,30 +24,72 @@
       },
       "top_industries": [
         {
-          "industry_name": "Finance & Banking",
-          "amount": 9869.15,
+          "industry_name": "Retired / Self-Employed",
+          "amount": 21670.979999999996,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Retired / Self-Employed",
-          "amount": 6744.120000000001,
+          "industry_name": "Finance & Banking",
+          "amount": 11170.17,
           "rank": 2,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Media & Entertainment",
-          "amount": 2390,
+          "amount": 6770.66,
           "rank": 3,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Other",
-          "amount": 2280.76,
+          "amount": 6587.13,
           "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 2041.02,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 1330,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 1260.25,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 1000,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 312.3,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 270.66,
+          "rank": 10,
           "cycle": 2026,
           "data_source": "fec+haiku"
         }
@@ -64,12 +106,62 @@
           "data_source": "fec"
         },
         {
+          "donor_name": "JERKOVICH, PAUL",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00791541",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "COOLEY, WILLIAM O.",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00791541",
+          "data_source": "fec"
+        },
+        {
           "donor_name": "SCHLAEPFER, WALTER",
           "donor_type": "individual",
           "industry": "Finance & Banking",
           "amount_total": 3500,
           "cycle": 2026,
-          "rank_in_candidate": 2,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00791541",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LOMANGINO, LYNDA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3125,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00791541",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LOMANGINO, ANTHONY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3000,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00791541",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CASTELLANO, CARMINE",
+          "donor_type": "individual",
+          "industry": "Media & Entertainment",
+          "amount_total": 3000,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
           "fec_committee_id": "C00791541",
           "data_source": "fec"
         },
@@ -79,7 +171,7 @@
           "industry": "Media & Entertainment",
           "amount_total": 2390,
           "cycle": 2026,
-          "rank_in_candidate": 3,
+          "rank_in_candidate": 8,
           "fec_committee_id": "C00791541",
           "data_source": "fec"
         },
@@ -89,7 +181,7 @@
           "industry": "Retired / Self-Employed",
           "amount_total": 2026,
           "cycle": 2026,
-          "rank_in_candidate": 4,
+          "rank_in_candidate": 9,
           "fec_committee_id": "C00791541",
           "data_source": "fec"
         },
@@ -98,56 +190,6 @@
           "donor_type": "individual",
           "industry": "Finance & Banking",
           "amount_total": 1705.08,
-          "cycle": 2026,
-          "rank_in_candidate": 5,
-          "fec_committee_id": "C00791541",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "SMITH, WILLIAM",
-          "donor_type": "individual",
-          "industry": "Finance & Banking",
-          "amount_total": 520.51,
-          "cycle": 2026,
-          "rank_in_candidate": 6,
-          "fec_committee_id": "C00791541",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "MATTHEWS, GEORGE",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 520.51,
-          "cycle": 2026,
-          "rank_in_candidate": 7,
-          "fec_committee_id": "C00791541",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "FULLER, GILLIAN",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 520.51,
-          "cycle": 2026,
-          "rank_in_candidate": 8,
-          "fec_committee_id": "C00791541",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "ERICKSON, MICHAEL",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 520.51,
-          "cycle": 2026,
-          "rank_in_candidate": 9,
-          "fec_committee_id": "C00791541",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "KRONE, MARILYN AND",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 520.51,
           "cycle": 2026,
           "rank_in_candidate": 10,
           "fec_committee_id": "C00791541",
@@ -417,22 +459,22 @@
       "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
       "top_industries": [
         {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 8230,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
           "industry_name": "Legal",
           "amount": 7750,
-          "rank": 1,
+          "rank": 2,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Other",
           "amount": 7000,
-          "rank": 2,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Retired / Self-Employed",
-          "amount": 6980,
           "rank": 3,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -816,14 +858,14 @@
       "top_industries": [
         {
           "industry_name": "Retired / Self-Employed",
-          "amount": 5636.040000000001,
+          "amount": 7957.81,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Other",
-          "amount": 3807.17,
+          "amount": 3760.25,
           "rank": 2,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -867,6 +909,13 @@
           "industry_name": "Real Estate",
           "amount": 260.25,
           "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 46.920000000000016,
+          "rank": 9,
           "cycle": 2026,
           "data_source": "fec+haiku"
         }
@@ -913,12 +962,22 @@
           "data_source": "fec"
         },
         {
+          "donor_name": "CARR, SCOTT",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1041.02,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00900589",
+          "data_source": "fec"
+        },
+        {
           "donor_name": "WALLACE, SCOTT",
           "donor_type": "individual",
           "industry": "Media & Entertainment",
           "amount_total": 1041.02,
           "cycle": 2026,
-          "rank_in_candidate": 5,
+          "rank_in_candidate": 6,
           "fec_committee_id": "C00900589",
           "data_source": "fec"
         },
@@ -928,7 +987,7 @@
           "industry": "Finance & Banking",
           "amount_total": 1000,
           "cycle": 2026,
-          "rank_in_candidate": 6,
+          "rank_in_candidate": 7,
           "fec_committee_id": "C00900589",
           "data_source": "fec"
         },
@@ -938,7 +997,7 @@
           "industry": "Government / Public Sector",
           "amount_total": 832.81,
           "cycle": 2026,
-          "rank_in_candidate": 7,
+          "rank_in_candidate": 8,
           "fec_committee_id": "C00900589",
           "data_source": "fec"
         },
@@ -948,7 +1007,7 @@
           "industry": "Retired / Self-Employed",
           "amount_total": 832.81,
           "cycle": 2026,
-          "rank_in_candidate": 8,
+          "rank_in_candidate": 9,
           "fec_committee_id": "C00900589",
           "data_source": "fec"
         },
@@ -956,16 +1015,6 @@
           "donor_name": "OUGAROV, ANDREI",
           "donor_type": "individual",
           "industry": "Technology",
-          "amount_total": 520.51,
-          "cycle": 2026,
-          "rank_in_candidate": 9,
-          "fec_committee_id": "C00900589",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "BINGHAM, THOMAS",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
           "amount_total": 520.51,
           "cycle": 2026,
           "rank_in_candidate": 10,

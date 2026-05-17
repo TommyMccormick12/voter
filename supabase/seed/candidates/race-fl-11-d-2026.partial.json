@@ -40,7 +40,7 @@
       "top_industries": [
         {
           "industry_name": "Other",
-          "amount": 6642.300000000001,
+          "amount": 6392.300000000001,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -49,6 +49,13 @@
           "industry_name": "Retired / Self-Employed",
           "amount": 600,
           "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Nonprofit / Civic",
+          "amount": 250,
+          "rank": 3,
           "cycle": 2026,
           "data_source": "fec+haiku"
         }
@@ -137,7 +144,7 @@
         {
           "donor_name": "PARKS, VALERIE",
           "donor_type": "individual",
-          "industry": "Other",
+          "industry": "Nonprofit / Civic",
           "amount_total": 250,
           "cycle": 2026,
           "rank_in_candidate": 9,

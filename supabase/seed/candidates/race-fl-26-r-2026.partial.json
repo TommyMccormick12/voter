@@ -21,7 +21,945 @@
         "cash_on_hand_end_period": 0,
         "individual_contributions": 878605.69,
         "other_political_committee_contributions": 629650
-      }
+      },
+      "bio": "Mario Rafael Díaz-Balart y Caballero (/bəˈlɑːrt/ bə-LART; born September 25, 1961) is an American politician serving as the U.S. representative for Florida's 26th congressional district. A member of the Republican Party, he was elected in 2002, and his district includes much of northwestern Miami-Dade County, including Hialeah, and much of the northern portion of the Everglades.",
+      "campaign_website": "http://mariodiazbalart.house.gov",
+      "key_messages": [
+        "Díaz-Balart supports free trade agreements and was rated 75% by the National Foreign Trade Council for support of trade engagement. He voted for trade agreements with Peru, Chile, Singapore, Australia, and Central America.",
+        "Díaz-Balart supports repealing the Affordable Care Act and voted for the American Health Care Act in 2017.",
+        "Díaz-Balart has sought bipartisan immigration solutions and supported Trump's travel ban. In 2026, he cosponsored the DIGNIDAD Act proposing a pathway to legal status for up to 12 million illegal immigrants paired with stricter border enforcement.",
+        "Díaz-Balart opposes federal regulation of greenhouse gas emissions and is skeptical of global warming as a basis for Congressional action, fearing economic harm.",
+        "Díaz-Balart opposes requiring states to adopt federal education standards.",
+        "Díaz-Balart opposes gun-control legislation, stating after the Parkland shooting that gun control would not be effective at stopping mass shootings.",
+        "Díaz-Balart opposes mandatory minimum sentences for nonviolent drug offenders.",
+        "Díaz-Balart maintains a strong stance on Cuban policy, supporting the embargo and opposing what he views as appeasement of the Castro regime. He also supported a 2025 appropriations bill banning UN funding as part of an 'America First foreign policy.'",
+        "Díaz-Balart opposes income tax increases and supports lowering taxes as a means of promoting economic growth. He voted for the Tax Cuts and Jobs Act of 2017."
+      ],
+      "campaign_themes": [
+        {
+          "heading": "economy",
+          "text": "Díaz-Balart supports free trade agreements and was rated 75% by the National Foreign Trade Council for support of trade engagement. He voted for trade agreements with Peru, Chile, Singapore, Australia, and Central America."
+        },
+        {
+          "heading": "healthcare",
+          "text": "Díaz-Balart supports repealing the Affordable Care Act and voted for the American Health Care Act in 2017."
+        },
+        {
+          "heading": "immigration",
+          "text": "Díaz-Balart has sought bipartisan immigration solutions and supported Trump's travel ban. In 2026, he cosponsored the DIGNIDAD Act proposing a pathway to legal status for up to 12 million illegal immigrants paired with stricter border enforcement."
+        },
+        {
+          "heading": "climate",
+          "text": "Díaz-Balart opposes federal regulation of greenhouse gas emissions and is skeptical of global warming as a basis for Congressional action, fearing economic harm."
+        },
+        {
+          "heading": "education",
+          "text": "Díaz-Balart opposes requiring states to adopt federal education standards."
+        },
+        {
+          "heading": "guns",
+          "text": "Díaz-Balart opposes gun-control legislation, stating after the Parkland shooting that gun control would not be effective at stopping mass shootings."
+        },
+        {
+          "heading": "criminal_justice",
+          "text": "Díaz-Balart opposes mandatory minimum sentences for nonviolent drug offenders."
+        },
+        {
+          "heading": "foreign_policy",
+          "text": "Díaz-Balart maintains a strong stance on Cuban policy, supporting the embargo and opposing what he views as appeasement of the Castro regime. He also supported a 2025 appropriations bill banning UN funding as part of an 'America First foreign policy.'"
+        },
+        {
+          "heading": "taxes",
+          "text": "Díaz-Balart opposes income tax increases and supports lowering taxes as a means of promoting economic growth. He voted for the Tax Cuts and Jobs Act of 2017."
+        }
+      ],
+      "platform_excerpts": [
+        {
+          "issue_slug": "economy",
+          "excerpt": "Díaz-Balart voted to promote free trade with Peru, against assisting workers who lose jobs due to globalization, for the Central America Free Trade Agreement, for the US-Australia Free Trade Agreement, for the US-Singapore free trade agreement, and for free trade with Chile.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Mario_Diaz-Balart"
+        },
+        {
+          "issue_slug": "healthcare",
+          "excerpt": "On May 4, 2017, Díaz-Balart voted to repeal the Patient Protection and Affordable Care Act (Obamacare) and pass the American Health Care Act.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Mario_Diaz-Balart"
+        },
+        {
+          "issue_slug": "immigration",
+          "excerpt": "In 2026, Díaz-Balart was a cosponsor of the DIGNIDAD Act, which proposes a pathway to legal status for up to 12 million illegal immigrants, paired with stricter border enforcement and mandatory work and restitution requirements.",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Mario_Diaz-Balart"
+        },
+        {
+          "issue_slug": "climate",
+          "excerpt": "In 2007, Díaz-Balart said, 'My fear is using the bandwagon of global warming to have Congress act on some knee-jerk reaction which will please some editorialists, will hurt our economy, will not do anything to help us in the future.'",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Mario_Diaz-Balart"
+        },
+        {
+          "issue_slug": "education",
+          "excerpt": "opposes requiring states to adopt federal education standards",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Mario_Diaz-Balart"
+        },
+        {
+          "issue_slug": "guns",
+          "excerpt": "Díaz-Balart said gun control legislation would not be effective at stopping mass shootings, saying, 'I want to make sure we look at things that could make a difference.'",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Mario_Diaz-Balart"
+        },
+        {
+          "issue_slug": "criminal_justice",
+          "excerpt": "opposes mandatory minimum sentences for nonviolent drug offenders",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Mario_Diaz-Balart"
+        },
+        {
+          "issue_slug": "foreign_policy",
+          "excerpt": "Díaz-Balart supported a July 2025 appropriations bill that would ban funding for the United Nations secretariat and UNRWA, saying that the bill 'strengthens national security and supports an America First foreign policy.'",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Mario_Diaz-Balart"
+        },
+        {
+          "issue_slug": "taxes",
+          "excerpt": "opposes an income tax increase, opposes mandatory minimum sentences for nonviolent drug offenders, opposes federal spending as a means of promoting economic growth, supports lowering taxes as a means of promoting economic growth",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Mario_Diaz-Balart"
+        }
+      ],
+      "top_industries": [
+        {
+          "industry_name": "Other",
+          "amount": 99200,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 37980,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Defense & Aerospace",
+          "amount": 37100,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 26000,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 23799,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 17000,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 16800,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 12800,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 12000,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Oil & Gas",
+          "amount": 9500,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "NAMOFF, ROBERT",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00376087",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MILTON, NILDA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00376087",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MILTON, NILDA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00376087",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KADRE, MANUEL MR.",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00376087",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KADRE, MANUEL MR.",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00376087",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DIAZ-OLIVER, REMEDIOS MRS.",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00376087",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CODINA, ARMANDO MR.",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00376087",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CODINA, ARMANDO MR.",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00376087",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CLEMENTI, CHRISTOPHER M. MR.",
+          "donor_type": "individual",
+          "industry": "Media & Entertainment",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00376087",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CLEMENTI, CHRISTOPHER M. MR.",
+          "donor_type": "individual",
+          "industry": "Media & Entertainment",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00376087",
+          "data_source": "fec"
+        }
+      ],
+      "govtrack_id": 400108,
+      "bioguide_id": "D000600",
+      "voting_record": [
+        {
+          "bill_id": "hr8469-119",
+          "bill_title": "H.R. 8469: Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+          "bill_summary": "This bill passed in the House on May 15, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [
+            "climate",
+            "foreign_policy"
+          ],
+          "vote_date": "2026-05-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h175",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr8469-119",
+          "bill_title": "H.R. 8469: Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+          "bill_summary": "This bill passed in the House on May 15, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [
+            "climate",
+            "foreign_policy"
+          ],
+          "vote_date": "2026-05-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h174",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr8365-119",
+          "bill_title": "H.R. 8365: Monitor Accountability Act",
+          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h173",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr8365-119",
+          "bill_title": "H.R. 8365: Monitor Accountability Act",
+          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-05-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h172",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr5625-119",
+          "bill_title": "H.R. 5625: Cashless Bail Reporting Act",
+          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h171",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hconres75-119",
+          "bill_title": "H.Con.Res. 75: Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove the United States Armed Forces from hostilities against the Islamic Republic of Iran.",
+          "bill_summary": "This resolution failed in the House on May 14, 2026.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-05-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h170",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6260-119",
+          "bill_title": "H.R. 6260: Keeping Violent Offenders Off Our Streets Act of 2025",
+          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h169",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6260-119",
+          "bill_title": "H.R. 6260: Keeping Violent Offenders Off Our Streets Act of 2025",
+          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-05-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h168",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1259-119",
+          "bill_title": "H.Res. 1259: Expressing the sense of the House of Representatives that the President should prioritize securing the release of Pastor Jin Mingri, Pastor Gao Quanfu and his wife Pang Yu, Dr. Gulshan Abbas, and Jimmy Lai detained by the People’s Republic o",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h167",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1251-119",
+          "bill_title": "H.Res. 1251: Calling on elected officials and civil society leaders to counter antisemitism and educate the public on the contributions of the Jewish-American community.",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h166",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hconres96-119",
+          "bill_title": "H.Con.Res. 96: Expressing support for law enforcement officers.",
+          "bill_summary": "This resolution passed in the House on May 13, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h165",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1346-119",
+          "bill_title": "H.R. 1346: Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+          "bill_summary": "This bill passed in the House on May 13, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h164",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1346-119",
+          "bill_title": "H.R. 1346: Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+          "bill_summary": "This bill passed in the House on May 13, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h163",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1252-119",
+          "bill_title": "H.Res. 1252: Resolution memorializing law enforcement officers killed in the line of duty.",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h162",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1274-119",
+          "bill_title": "H.Res. 1274: Providing that section 11 of House Resolution 1224 shall have no force or effect.",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h161",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1274-119",
+          "bill_title": "H.Res. 1274: Providing that section 11 of House Resolution 1224 shall have no force or effect.",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h160",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1275-119",
+          "bill_title": "H.Res. 1275: Providing for consideration of the bill (H.R. 5625) to direct the Attorney General to make publicly available a list of each State and unit of local government that permits cashless bail, and for other purposes; providing for consideration o",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h159",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1275-119",
+          "bill_title": "H.Res. 1275: Providing for consideration of the bill (H.R. 5625) to direct the Attorney General to make publicly available a list of each State and unit of local government that permits cashless bail, and for other purposes; providing for consideration o",
+          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-13",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h158",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr2853-119",
+          "bill_title": "H.R. 2853: Combating Organized Retail Crime Act of 2025",
+          "bill_summary": "This bill passed in the House on May 12, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-12",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h157",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr2071-119",
+          "bill_title": "H.R. 2071: Save Our Shrimpers Act",
+          "bill_summary": "This bill passed in the House on May 12, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-05-12",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h156",
+          "significance": "major"
+        },
+        {
+          "bill_id": "s4465-119",
+          "bill_title": "S. 4465: A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
+          "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
+          "vote": "yea",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h155",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h154",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h153",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h152",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h151",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h150",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h149",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h148",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h147",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h146",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h145",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7567-119",
+          "bill_title": "H.R. 7567: Farm, Food, and National Security Act of 2026",
+          "bill_summary": "This bill passed in the House on April 30, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-30",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h144",
+          "significance": "major"
+        },
+        {
+          "bill_id": "sconres33-119",
+          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
+          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h143",
+          "significance": "major"
+        },
+        {
+          "bill_id": "s1318-119",
+          "bill_title": "S. 1318: Fallen Servicemembers Religious Heritage Restoration Act",
+          "bill_summary": "This bill was passed by Congress on April 29, 2026 and goes to the President next.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h142",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1224-119",
+          "bill_title": "H.Res. 1224: Providing for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes; providing for consideration ",
+          "bill_summary": "This simple resolution was agreed to on April 29, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [
+            "climate"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h141",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1224-119",
+          "bill_title": "H.Res. 1224: Providing for consideration of the bill (H.R. 7567) to provide for the reform and continuation of agricultural and other programs of the Department of Agriculture through fiscal year 2031, and for other purposes; providing for consideration ",
+          "bill_summary": "This simple resolution was agreed to on April 29, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [
+            "climate"
+          ],
+          "vote_date": "2026-04-29",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h140",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr227-119",
+          "bill_title": "H.R. 227: Clergy Act",
+          "bill_summary": "This bill passed in the House on April 27, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h139",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr7959-119",
+          "bill_title": "H.R. 7959: IRS Whistleblower Program Improvement Act",
+          "bill_summary": "This bill passed in the House on April 27, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h138",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5587-119",
+          "bill_title": "H.R. 5587: HEATS Act",
+          "bill_summary": "This bill passed in the House on April 23, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-23",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h137",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6387-119",
+          "bill_title": "H.R. 6387: FIRE Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h136",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6387-119",
+          "bill_title": "H.R. 6387: FIRE Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h135",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr4690-119",
+          "bill_title": "H.R. 4690: Reliable Federal Infrastructure Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h134",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr4690-119",
+          "bill_title": "H.R. 4690: Reliable Federal Infrastructure Act",
+          "bill_summary": "This bill passed in the House on April 22, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h133",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1182-119",
+          "bill_title": "H.Res. 1182: Expressing support for rural communities across the United States as stewards of the environment, major suppliers of United States energy resources, critical providers of food production and manufacturing capacity, and drivers of national ec",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h132",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1189-119",
+          "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h131",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1189-119",
+          "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
+          "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-04-22",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h130",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "s1020-119",
+          "bill_title": "S. 1020: A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+          "bill_summary": "This bill was enacted after being signed by the President on May 11, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h129",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr2493-119",
+          "bill_title": "H.R. 2493: Improving Care in Rural America Reauthorization Act of 2025",
+          "bill_summary": "This bill passed in the House on April 21, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h128",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5201-119",
+          "bill_title": "H.R. 5201: Kari’s Law Reporting Act",
+          "bill_summary": "This bill passed in the House on April 21, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-21",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h127",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr5200-119",
+          "bill_title": "H.R. 5200: Emergency Reporting Act",
+          "bill_summary": "This bill passed in the House on April 20, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-20",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h126",
+          "significance": "major"
+        }
+      ],
+      "top_stances": [
+        {
+          "stance_id": "mario-diaz-balart-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_oppose",
+          "summary": "Repeal the Affordable Care Act and replace with market-based solutions.",
+          "source_url": "http://mariodiazbalart.house.gov",
+          "confidence": 90,
+          "track_record_note": "Voted YEA on American Health Care Act in 2017, directly aligning with stance on ACA repeal."
+        },
+        {
+          "stance_id": "mario-diaz-balart-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Support free trade agreements and tax cuts for economic growth.",
+          "source_url": "http://mariodiazbalart.house.gov",
+          "confidence": 85,
+          "track_record_note": "Voted YEA on Tax Cuts and Jobs Act of 2017; rated 75% by National Foreign Trade Council for trade support."
+        },
+        {
+          "stance_id": "mario-diaz-balart-taxes",
+          "issue_slug": "taxes",
+          "stance": "strongly_oppose",
+          "summary": "Lower taxes and oppose income tax increases to promote growth.",
+          "source_url": "http://mariodiazbalart.house.gov",
+          "confidence": 90,
+          "track_record_note": "Voted YEA on Tax Cuts and Jobs Act of 2017, directly aligning with stated opposition to tax increases."
+        },
+        {
+          "stance_id": "mario-diaz-balart-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_support",
+          "summary": "Strong anti-Cuba stance, embargo support, America First foreign policy.",
+          "source_url": "http://mariodiazbalart.house.gov",
+          "confidence": 85,
+          "track_record_note": "Voted YEA on s4465-119 (FISA surveillance extension) and NAY on hconres75-119 (Iran war powers resolution), consistent with hawkish foreign policy positioning.",
+          "track_record_citations": [
+            "s4465-119",
+            "hconres75-119"
+          ]
+        },
+        {
+          "stance_id": "mario-diaz-balart-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Bipartisan solution with legal status pathway and stricter border enforcement.",
+          "source_url": "http://mariodiazbalart.house.gov",
+          "source_excerpt": "Cosponsored DIGNIDAD Act proposing pathway to legal status for up to 12 million illegal immigrants paired with stricter border enforcement; supported Trump's travel ban.",
+          "confidence": 80
+        },
+        {
+          "stance_id": "mario-diaz-balart-climate",
+          "issue_slug": "climate",
+          "stance": "oppose",
+          "summary": "Oppose federal greenhouse gas regulation due to economic concerns.",
+          "source_url": "http://mariodiazbalart.house.gov",
+          "source_excerpt": "Skeptical of global warming as basis for Congressional action, fearing economic harm.",
+          "confidence": 75
+        },
+        {
+          "stance_id": "mario-diaz-balart-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_oppose",
+          "summary": "Oppose gun-control legislation as ineffective for public safety.",
+          "source_url": "http://mariodiazbalart.house.gov",
+          "source_excerpt": "Stated after Parkland shooting that gun control would not be effective at stopping mass shootings.",
+          "confidence": 80
+        },
+        {
+          "stance_id": "mario-diaz-balart-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "oppose",
+          "summary": "Oppose mandatory minimum sentences for nonviolent drug offenders.",
+          "source_url": "http://mariodiazbalart.house.gov",
+          "source_excerpt": "Opposes mandatory minimum sentences for nonviolent drug offenders.",
+          "confidence": 75
+        },
+        {
+          "stance_id": "mario-diaz-balart-education",
+          "issue_slug": "education",
+          "stance": "oppose",
+          "summary": "Oppose federal education standards; support state autonomy.",
+          "source_url": "http://mariodiazbalart.house.gov",
+          "source_excerpt": "Opposes requiring states to adopt federal education standards.",
+          "confidence": 75
+        }
+      ],
+      "active": true,
+      "activated_at": "2026-05-17T18:37:15.330Z"
     }
   ],
   "race": {

@@ -231,7 +231,8 @@
           "data_source": "fec"
         }
       ],
-      "voting_record": []
+      "voting_record": [],
+      "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026."
     },
     {
       "name": "Jorge Antonio Malavet",
@@ -254,8 +255,138 @@
         "individual_contributions": 7929.09,
         "other_political_committee_contributions": 0
       },
-      "top_industries": [],
-      "top_donors": [],
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 4132.080000000001,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 1561.53,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 1020.5,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 260.25,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "MALAVET, JANET",
+          "donor_type": "individual",
+          "industry": "Government / Public Sector",
+          "amount_total": 1041.02,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00926733",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "RIVAS, NESTO",
+          "donor_type": "individual",
+          "industry": "Government / Public Sector",
+          "amount_total": 520.51,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00926733",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PLAZA, CHARLIE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 520.51,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00926733",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MORRELL, DONALD ROY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 520.51,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00926733",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MORRELL, DONALD ROY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00926733",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MASSACESSI, PEDRO",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00926733",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "WELCH, SHEILA MALAVET",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 260.25,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00926733",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "RIVERA, LUIS",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 260.25,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00926733",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MALAVET, RAMON",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 260.25,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00926733",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MALAVET, HECTOR",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 260.25,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00926733",
+          "data_source": "fec"
+        }
+      ],
       "voting_record": []
     },
     {
@@ -479,14 +610,14 @@
       "top_industries": [
         {
           "industry_name": "Retired / Self-Employed",
-          "amount": 10536.44,
+          "amount": 9936.44,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Other",
-          "amount": 2834.1,
+          "amount": 5684.1,
           "rank": 2,
           "cycle": 2026,
           "data_source": "fec+haiku"
@@ -566,9 +697,9 @@
           "data_source": "fec"
         },
         {
-          "donor_name": "WARLICK, MILES",
+          "donor_name": "STRATES, JAMES",
           "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
+          "industry": "Other",
           "amount_total": 1000,
           "cycle": 2026,
           "rank_in_candidate": 4,
@@ -576,7 +707,7 @@
           "data_source": "fec"
         },
         {
-          "donor_name": "ROCKER, WILLIAM",
+          "donor_name": "WARLICK, MILES",
           "donor_type": "individual",
           "industry": "Retired / Self-Employed",
           "amount_total": 1000,
@@ -586,7 +717,7 @@
           "data_source": "fec"
         },
         {
-          "donor_name": "LYFORD, LAURIE",
+          "donor_name": "ROCKER, WILLIAM",
           "donor_type": "individual",
           "industry": "Retired / Self-Employed",
           "amount_total": 1000,
@@ -596,7 +727,7 @@
           "data_source": "fec"
         },
         {
-          "donor_name": "KORCHMAR, MICHAEL",
+          "donor_name": "LYFORD, LAURIE",
           "donor_type": "individual",
           "industry": "Retired / Self-Employed",
           "amount_total": 1000,
@@ -606,19 +737,19 @@
           "data_source": "fec"
         },
         {
-          "donor_name": "SOUSA, CHRIS",
+          "donor_name": "KORCHMAR, MICHAEL",
           "donor_type": "individual",
-          "industry": "Construction",
-          "amount_total": 500,
+          "industry": "Other",
+          "amount_total": 1000,
           "cycle": 2026,
           "rank_in_candidate": 8,
           "fec_committee_id": "C00906735",
           "data_source": "fec"
         },
         {
-          "donor_name": "MULLINS, ERNEST",
+          "donor_name": "SOUSA, CHRIS",
           "donor_type": "individual",
-          "industry": "Legal",
+          "industry": "Construction",
           "amount_total": 500,
           "cycle": 2026,
           "rank_in_candidate": 9,
@@ -626,9 +757,9 @@
           "data_source": "fec"
         },
         {
-          "donor_name": "TYNER, LINDA",
+          "donor_name": "MULLINS, ERNEST",
           "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
+          "industry": "Legal",
           "amount_total": 500,
           "cycle": 2026,
           "rank_in_candidate": 10,

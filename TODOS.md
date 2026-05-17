@@ -2,11 +2,13 @@
 
 ## Data pipeline
 
-### Tier 2 House race ingestion
-- **Priority:** P2 (expansion, broader coverage)
-- **What:** Extend ingest to the ~12 contested FL House primaries beyond Tier 1: FL-09, 11, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26 (both R and D where contested).
-- **Why:** Plan §16.7. Tier 1 was the validation slice; Tier 2 is the scale-out. Pipeline runs unchanged — pure data work. Promoted above hand-authoring because the Tier 2 candidates have actual records (incumbents with voting history + donor data) so the ingest pipeline produces real content automatically.
-- **How:** Same per-race recipe documented in `scripts/README.md`. ~3-5 minutes wall-clock per race + ~30 minutes manual review. Budget ~$0.40 in Anthropic Haiku across all 12 races.
+### Tier 2 House race ingestion — finish the long tail
+- **Priority:** P3 (most challengers lack public info until closer to August primaries)
+- **What:** Bring up the remaining Tier 2 House races where ingest yielded insufficient data on 2026-05-17.
+- **Progress:** 2026-05-17 batch ingested all 22 Tier 2 fixtures (~$0.40 Haiku). Yield: 2 new incumbents activated (DWS in FL-25 D, Diaz-Balart in FL-26 R). 90 candidates total across the 22 fixtures — only 3 met the ≥3-stances synthesis threshold, and 1 of those was already active (Sabatini). Root cause: most non-incumbent FL House challengers have no Wikipedia page and no usable campaign-site issues page this early in the cycle. Same finding as hand-authoring (P4 below).
+- **What's still pending:** R-side challenger coverage in FL-09, 17, 20, 21, 22, 25, 26; nearly all D-side challenger fields.
+- **Why deprioritized:** Re-running the same pipeline today won't yield more — Wikipedia and campaign sites are the bottleneck, not the pipeline. Worth re-running closer to August once press coverage and campaign launches accumulate. Pair with the P4 hand-authoring sweep.
+- **How:** `/tmp/tier2-ingest.sh` recipe documented in `scripts/README.md`. Review docs from the 2026-05-17 batch live under `supabase/seed/review/race-fl-*-2026/` and can be re-used as starting points if data improves.
 
 ### Hand-author 7 remaining empty races
 - **Priority:** P4 (revisit closer to primary dates — August 18, 2026)
