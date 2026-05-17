@@ -8,6 +8,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://ballotmatch.org",
+  ),
   title: "Voter - Compare Your Candidates",
   description:
     "Compare candidates running in your district. See where they stand on the issues that matter most to you.",
