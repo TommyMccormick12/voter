@@ -2,6 +2,55 @@
 
 All notable changes to the voter project. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.9.0] - 2026-05-17
+
+Candidate profile photos. Every Congressional incumbent now has their
+official Bioguide portrait rendering on the scorecard, the candidate
+detail page, and the share card. Non-incumbents (and the 5 active
+candidates who lack Bioguide IDs, including Sabatini and the FL Sen D
+challengers) keep the party-colored gradient-initials fallback.
+**15 of 20 active candidates now show photos.**
+
+### Added
+
+- **`scripts/ingest/fetch_photos.ts`** + npm script `ingest:photos`.
+  For every candidate with a `bioguide_id`, GET-probes
+  `https://bioguide.congress.gov/photo/{ID}.jpg` (with a project
+  User-Agent — Bioguide returns 403 on requests without one and on
+  HEAD requests with default Node fetch headers), writes the URL to
+  the fixture if reachable. Idempotent. Run with `--all-fl` to sweep
+  every FL fixture or `--race-id` for one.
+- **`scripts/seed/seed_photos.ts`** + npm script `seed:photos`.
+  Surgically updates only the `photo_url` column on existing active
+  candidate rows. Does **not** touch `top_stances`, `voting_record`,
+  donors, industries, or statements — separate from `seed:candidates`
+  for exactly this reason (avoids regressing rows whose other columns
+  have drifted from the fixture).
+
+### Changed
+
+- **`src/components/CandidateScorecard.tsx`** + **`CandidateDetail.tsx`**
+  + **`src/app/share/page.tsx`** — render `next/image` with the
+  Bioguide URL when `candidate.photo_url` is set, with `object-cover`
+  inside a circular container and a thin white ring matching the
+  party theme border. Falls back to the existing gradient-initials
+  avatar when `photo_url` is null.
+- **`next.config.ts`** allowlists `bioguide.congress.gov/bioguide/photo/**`
+  under `images.remotePatterns`. (`unoptimized` is set on the
+  `<Image>` calls for now — Bioguide JPEGs are already small enough
+  that Next.js's optimizer adds latency without meaningful payload
+  savings.)
+
+### Operational notes
+
+- **15 production photo_urls** updated via `seed:photos` ahead of this
+  deploy. The DB column was already populated by the time the new UI
+  code lands — preview deploy verified the rendering before merge.
+- **Bioguide URL pattern note (2026-05-17):** Bioguide silently
+  changed from `/bioguide/photo/{FIRST_LETTER}/{ID}.jpg` to
+  `/photo/{ID}.jpg`. Old URLs still 301-redirect but new ingests
+  should use the direct form. Documented in `fetch_photos.ts`.
+
 ## [0.8.1] - 2026-05-17
 
 Tier 2 House race ingestion sweep. Ran the full ingest pipeline against

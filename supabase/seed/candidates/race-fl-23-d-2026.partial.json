@@ -1028,7 +1028,8 @@
         }
       ],
       "active": true,
-      "activated_at": "2026-05-11T00:56:33.523Z"
+      "activated_at": "2026-05-11T00:56:33.523Z",
+      "photo_url": "https://bioguide.congress.gov/photo/F000462.jpg"
     },
     {
       "name": "Oliver Adams Larkin",
@@ -2069,7 +2070,8 @@
         }
       ],
       "active": true,
-      "activated_at": "2026-05-11T00:56:35.586Z"
+      "activated_at": "2026-05-11T00:56:35.586Z",
+      "photo_url": "https://bioguide.congress.gov/photo/M001217.jpg"
     }
   ],
   "race_id": "race-fl-23-d-2026"

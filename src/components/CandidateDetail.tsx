@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import type {
   CandidateWithFullData,
   CandidatePosition,
@@ -66,12 +67,26 @@ export function CandidateDetail({ candidate }: Props) {
     <div className="max-w-7xl mx-auto px-4 lg:px-8 py-6 lg:py-8">
       {/* Hero */}
       <div className={`${theme.heroBg} rounded-2xl p-6 lg:p-8 mb-6 lg:mb-8 flex items-center gap-4 lg:gap-6`}>
-        <div
-          className={`w-20 h-20 lg:w-28 lg:h-28 rounded-full ${theme.avatarGradient} flex items-center justify-center text-white text-2xl lg:text-4xl font-bold flex-shrink-0 shadow-lg`}
-          aria-hidden="true"
-        >
-          {initials}
-        </div>
+        {candidate.photo_url ? (
+          <div className={`relative w-20 h-20 lg:w-28 lg:h-28 rounded-full overflow-hidden flex-shrink-0 shadow-lg ring-2 ring-white ${theme.border}`}>
+            <Image
+              src={candidate.photo_url}
+              alt={`${candidate.name} portrait`}
+              fill
+              sizes="(min-width: 1024px) 112px, 80px"
+              className="object-cover"
+              unoptimized
+              priority
+            />
+          </div>
+        ) : (
+          <div
+            className={`w-20 h-20 lg:w-28 lg:h-28 rounded-full ${theme.avatarGradient} flex items-center justify-center text-white text-2xl lg:text-4xl font-bold flex-shrink-0 shadow-lg`}
+            aria-hidden="true"
+          >
+            {initials}
+          </div>
+        )}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-2 flex-wrap">
             <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${theme.accent}`}>

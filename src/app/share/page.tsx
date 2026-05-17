@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { getRace } from '@/lib/data/races';
 import { getCandidatesForRace } from '@/lib/data/candidates';
@@ -123,12 +124,25 @@ export default async function SharePage({ searchParams }: SharePageProps) {
           className={`${theme.heroBg} border-2 ${theme.border} rounded-2xl p-6 mb-6`}
         >
           <div className="flex items-center gap-4 mb-4">
-            <div
-              className={`w-16 h-16 rounded-full ${theme.avatarGradient} flex items-center justify-center text-white text-xl font-bold flex-shrink-0`}
-              aria-hidden="true"
-            >
-              {getPartyInitials(candidate.name)}
-            </div>
+            {candidate.photo_url ? (
+              <div className={`relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-white ${theme.border}`}>
+                <Image
+                  src={candidate.photo_url}
+                  alt={`${candidate.name} portrait`}
+                  fill
+                  sizes="64px"
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
+            ) : (
+              <div
+                className={`w-16 h-16 rounded-full ${theme.avatarGradient} flex items-center justify-center text-white text-xl font-bold flex-shrink-0`}
+                aria-hidden="true"
+              >
+                {getPartyInitials(candidate.name)}
+              </div>
+            )}
             <div className="flex-1 min-w-0">
               <p
                 className={`text-xs font-bold ${theme.text} uppercase tracking-wide`}
