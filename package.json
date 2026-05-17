@@ -1,6 +1,6 @@
 {
   "name": "voter",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -31,6 +31,8 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.95.1",
     "@supabase/supabase-js": "^2.105.3",
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.38.0",
     "@use-gesture/react": "^10.3.1",
     "cheerio": "^1.2.0",
     "next": "16.2.4",

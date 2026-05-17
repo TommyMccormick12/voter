@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
   // pollute candidate_interactions and contaminate the B2B sentiment data.
   const sessionId = (await readCookie(COOKIE_NAMES.session)) ?? null;
   const ip = clientIpFromHeaders(request.headers);
-  const rate = checkRateLimits({
+  const rate = await checkRateLimits({
     sessionId,
     ip,
     sessionLimit: INTERACTION_LIMITS.session,

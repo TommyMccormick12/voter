@@ -2,6 +2,54 @@
 
 All notable changes to the voter project. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.8.0] - 2026-05-17
+
+Anti-spam hardening + distributed rate limits. Reports flagged from a
+single IP can no longer flood the admin queue with copy-paste text; the
+DB enforces dedup at insert time and the admin dashboard surfaces
+clustered submissions before they become a problem. Rate limits now
+share state across every Lambda instance via Upstash Redis, closing
+the cold-start multiplication gap from `/cso` Finding 2.
+
+### Added
+
+- **Upstash Redis backend** for `src/lib/rate-limit.ts` via
+  `@upstash/ratelimit` sliding-window. Shared state across every
+  Lambda invocation — no more per-instance counters that an attacker
+  could multiply by hitting concurrent cold starts. Falls back
+  silently to the in-memory token bucket when
+  `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` are absent
+  (local dev, CI, preview deploys without Upstash provisioned).
+- **`supabase/migrations/010_report_spam_dedup.sql`** — adds a
+  `description_hash` column to `candidate_reports`, backfills existing
+  rows with `sha256(lower(btrim(description)))`, and creates a partial
+  `UNIQUE (ip_hash, candidate_id, description_hash)` index. Same
+  `(ip, candidate, text)` triple submitted twice rejects at the DB
+  layer with Postgres error 23505.
+- **Suspicious IP clusters section** on `/admin` — shows the top 10
+  `ip_hash` prefixes (≥3 reports in 7d) with report count and distinct
+  candidates targeted. Catches the next-level-up spammer who rotates
+  description text but stays on one IP, beyond what the exact-text
+  unique index dedups at the row layer.
+
+### Changed
+
+- **`checkRateLimits` is now async.** The Upstash backend is a network
+  call; the in-memory fallback is wrapped in a resolved promise for
+  interface symmetry. All six API route callers (`/api/match`,
+  `/api/report`, `/api/interaction`, `/api/visit`, `/api/quick-poll`,
+  `/api/consent`) now `await` the result.
+- **`/api/report` computes `description_hash` with Web Crypto** before
+  the INSERT and catches Postgres `23505` unique violations — returns
+  `200 { ok: true, deduplicated: true }` silently rather than
+  surfacing the conflict, so a spammer can't probe the dedup boundary.
+
+### Fixed
+
+- **Vitest `vi.mock` hoisting warning** in `tests/session.test.ts`.
+  Removed the duplicate inner mock; the top-level mock already covers
+  dynamically-imported modules after `vi.resetModules()`.
+
 ## [0.7.1] - 2026-05-17
 
 Custom domain cutover. The site now lives at `ballotmatch.org` — shorter,

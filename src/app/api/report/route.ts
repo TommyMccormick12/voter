@@ -23,11 +23,24 @@ const ReportSchema = z.object({
   reporter_email: z.string().email().max(254).optional(),
 });
 
+// Normalization must match the SQL backfill in migration 010 exactly:
+// lower(btrim(description)). Same algorithm → same hash → dedup works.
+async function descriptionHash(description: string): Promise<string> {
+  const normalized = description.trim().toLowerCase();
+  const bytes = await crypto.subtle.digest(
+    'SHA-256',
+    new TextEncoder().encode(normalized),
+  );
+  return Array.from(new Uint8Array(bytes), (b) =>
+    b.toString(16).padStart(2, '0'),
+  ).join('');
+}
+
 export async function POST(request: NextRequest) {
   // Rate limit FIRST — spam protection for the admin queue.
   const sessionId = (await readCookie(COOKIE_NAMES.session)) ?? null;
   const ip = clientIpFromHeaders(request.headers);
-  const rate = checkRateLimits({
+  const rate = await checkRateLimits({
     sessionId,
     ip,
     sessionLimit: REPORT_LIMITS.session,
@@ -91,6 +104,7 @@ export async function POST(request: NextRequest) {
       cited_bill_id: parsed.data.cited_bill_id ?? null,
       category: parsed.data.category,
       description: parsed.data.description,
+      description_hash: await descriptionHash(parsed.data.description),
       reporter_email: parsed.data.reporter_email ?? null,
       ip_hash: hashIp(ip),
     })
@@ -98,6 +112,13 @@ export async function POST(request: NextRequest) {
     .single();
 
   if (error) {
+    // Postgres unique_violation on ux_reports_dedup (migration 010): same
+    // (ip_hash, candidate_id, description_hash) already submitted. Return
+    // 200 silently — the spammer doesn't learn that dedup fired, and a
+    // legit user re-clicking submit gets a successful-looking response.
+    if (error.code === '23505') {
+      return NextResponse.json({ ok: true, deduplicated: true });
+    }
     // Most likely cause: candidate_id doesn't exist (FK violation).
     // Treat as 400 — client sent a bad candidate reference.
     console.error('[api/report] insert error:', error.message);

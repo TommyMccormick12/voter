@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
   // engagement signal.
   const sessionId = (await readCookie(COOKIE_NAMES.session)) ?? null;
   const ip = clientIpFromHeaders(request.headers);
-  const rate = checkRateLimits({
+  const rate = await checkRateLimits({
     sessionId,
     ip,
     sessionLimit: VISIT_LIMITS.session,
