@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
   // touch the LLM regardless of payload validity.
   const sessionId = (await readCookie(COOKIE_NAMES.session)) ?? null;
   const ip = clientIpFromHeaders(request.headers);
-  const rate = checkRateLimits({
+  const rate = await checkRateLimits({
     sessionId,
     ip,
     sessionLimit: MATCH_LIMITS.session,

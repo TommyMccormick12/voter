@@ -1,13 +1,23 @@
-// In-memory rate limiter — token-bucket per identifier.
+// Rate limiter — sliding-window per identifier, backed by Upstash Redis
+// when configured, with an in-memory token-bucket fallback for local dev
+// and preview deploys that haven't provisioned Upstash yet.
 //
-// Caveat: counters are per Lambda instance. On Vercel serverless, an
-// attacker hitting cold-start instances can multiply their effective
-// budget by N (number of warm instances). This is still a 99% reduction
-// vs no limit at all. For real production traffic, swap the in-memory
-// store for Vercel KV or Upstash Redis (token bucket interface stays
-// identical — only the storage layer changes).
+// Why distributed: in-memory counters were per-Lambda. On Vercel's
+// serverless model, a cold-start instance multiplication let an attacker
+// hitting concurrent workers multiply their effective budget by N
+// (number of warm instances). Upstash is shared state across every
+// Lambda invocation — counters survive scale-out and cold starts.
 //
-// Used by /api/match to cap LLM cost amplification (see /cso Finding 2).
+// Setup: provision Upstash Redis from the Vercel Marketplace; it auto-
+// populates `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`.
+// Without those env vars, the limiter silently falls back to in-memory
+// (good for `npm run dev` and CI where Redis isn't worth the setup).
+//
+// Used by /api/match (LLM cost protection per /cso Finding 2) and the
+// four engagement-capture write APIs (/cso §19.2).
+
+import { Ratelimit } from '@upstash/ratelimit';
+import { Redis } from '@upstash/redis';
 
 interface Bucket {
   /** Tokens currently available */
@@ -34,12 +44,67 @@ export interface RateLimitResult {
   exceeded?: 'session' | 'ip';
 }
 
+// ─── Upstash path ──────────────────────────────────────────────────────
+
+const HAS_UPSTASH = Boolean(
+  process.env.UPSTASH_REDIS_REST_URL &&
+    process.env.UPSTASH_REDIS_REST_TOKEN,
+);
+
+// Singleton Redis client. Reused across every invocation in the same
+// Lambda; cheap to construct but no reason to repeat.
+const redis: Redis | null = HAS_UPSTASH ? Redis.fromEnv() : null;
+
+// One Ratelimit per (capacity, windowMs) tuple — cached so we don't
+// reconstruct on every request. Keyed by a string so distinct limits
+// with the same numbers share an instance (correct behavior, since they
+// share the same Redis namespace via the prefix).
+const limiterCache = new Map<string, Ratelimit>();
+
+function getLimiter(limit: Limit): Ratelimit {
+  if (!redis) {
+    throw new Error('getLimiter called without Upstash configured');
+  }
+  const key = `${limit.capacity}:${limit.windowMs}`;
+  let lim = limiterCache.get(key);
+  if (!lim) {
+    // Upstash duration literal is `${number} ms|s|m|h|d`. Type-cast the
+    // template since TS can't narrow a dynamic number to a numeric
+    // literal at compile time.
+    const window = `${limit.windowMs} ms` as `${number} ms`;
+    lim = new Ratelimit({
+      redis,
+      limiter: Ratelimit.slidingWindow(limit.capacity, window),
+      analytics: false,
+      prefix: '@voter/rl',
+    });
+    limiterCache.set(key, lim);
+  }
+  return lim;
+}
+
+async function checkBucketUpstash(
+  key: string,
+  limit: Limit,
+): Promise<RateLimitResult> {
+  const lim = getLimiter(limit);
+  const res = await lim.limit(key);
+  return {
+    allowed: res.success,
+    remaining: res.remaining,
+    retryAfterSeconds: res.success
+      ? 0
+      : Math.max(1, Math.ceil((res.reset - Date.now()) / 1000)),
+  };
+}
+
+// ─── In-memory fallback ────────────────────────────────────────────────
+
 const buckets = new Map<string, Bucket>();
 
-// Sweep stale buckets occasionally to avoid unbounded memory growth.
 let lastSweepAt = 0;
-const SWEEP_INTERVAL_MS = 5 * 60 * 1000; // every 5 minutes
-const STALE_BUCKET_MS = 2 * 60 * 60 * 1000; // 2 hours of inactivity
+const SWEEP_INTERVAL_MS = 5 * 60 * 1000;
+const STALE_BUCKET_MS = 2 * 60 * 60 * 1000;
 
 function maybeSweep(now: number): void {
   if (now - lastSweepAt < SWEEP_INTERVAL_MS) return;
@@ -51,16 +116,19 @@ function maybeSweep(now: number): void {
   lastSweepAt = now;
 }
 
-function checkBucket(key: string, limit: Limit, now: number): RateLimitResult {
+function checkBucketInMemory(
+  key: string,
+  limit: Limit,
+  now: number,
+): RateLimitResult {
   let bucket = buckets.get(key);
   if (!bucket) {
     bucket = { tokens: limit.capacity, lastRefillAt: now };
     buckets.set(key, bucket);
   }
 
-  // Refill: add tokens proportional to time elapsed since last refill.
   const elapsed = now - bucket.lastRefillAt;
-  const refillRate = limit.capacity / limit.windowMs; // tokens per ms
+  const refillRate = limit.capacity / limit.windowMs;
   const refilled = Math.floor(elapsed * refillRate);
   if (refilled > 0) {
     bucket.tokens = Math.min(limit.capacity, bucket.tokens + refilled);
@@ -76,7 +144,6 @@ function checkBucket(key: string, limit: Limit, now: number): RateLimitResult {
     };
   }
 
-  // Empty bucket — compute when next token will be available.
   const msPerToken = limit.windowMs / limit.capacity;
   const retryAfterMs = Math.ceil(msPerToken - elapsed);
   return {
@@ -86,37 +153,72 @@ function checkBucket(key: string, limit: Limit, now: number): RateLimitResult {
   };
 }
 
+// ─── Public API ────────────────────────────────────────────────────────
+
 /**
  * Rate-limit a request by both session and IP. Both limits must pass.
  *
  * Returns the first limit that fails (session checked first so legit users
  * with shared NAT addresses still get session-level fairness).
+ *
+ * Async because the Upstash backend is a network call. The in-memory
+ * fallback is also wrapped in a resolved Promise for interface symmetry.
  */
-export function checkRateLimits(opts: {
+export async function checkRateLimits(opts: {
   sessionId: string | null;
   ip: string | null;
   /** Per-session limit, e.g. {capacity: 10, windowMs: 3_600_000} for 10/hr */
   sessionLimit: Limit;
   /** Per-IP limit, e.g. {capacity: 30, windowMs: 3_600_000} for 30/hr */
   ipLimit: Limit;
-}): RateLimitResult {
+}): Promise<RateLimitResult> {
+  if (HAS_UPSTASH) {
+    if (opts.sessionId) {
+      const result = await checkBucketUpstash(
+        `s:${opts.sessionId}`,
+        opts.sessionLimit,
+      );
+      if (!result.allowed) return { ...result, exceeded: 'session' };
+    }
+    if (opts.ip) {
+      const result = await checkBucketUpstash(
+        `i:${opts.ip}`,
+        opts.ipLimit,
+      );
+      if (!result.allowed) return { ...result, exceeded: 'ip' };
+    }
+    return {
+      allowed: true,
+      remaining: opts.sessionLimit.capacity,
+      retryAfterSeconds: 0,
+    };
+  }
+
   const now = Date.now();
   maybeSweep(now);
 
   if (opts.sessionId) {
-    const result = checkBucket(`s:${opts.sessionId}`, opts.sessionLimit, now);
+    const result = checkBucketInMemory(
+      `s:${opts.sessionId}`,
+      opts.sessionLimit,
+      now,
+    );
     if (!result.allowed) return { ...result, exceeded: 'session' };
   }
 
   if (opts.ip) {
-    const result = checkBucket(`i:${opts.ip}`, opts.ipLimit, now);
+    const result = checkBucketInMemory(`i:${opts.ip}`, opts.ipLimit, now);
     if (!result.allowed) return { ...result, exceeded: 'ip' };
   }
 
-  return { allowed: true, remaining: opts.sessionLimit.capacity, retryAfterSeconds: 0 };
+  return {
+    allowed: true,
+    remaining: opts.sessionLimit.capacity,
+    retryAfterSeconds: 0,
+  };
 }
 
-/** Test helper — clears all in-memory buckets. */
+/** Test helper — clears all in-memory buckets. No-op when Upstash is configured. */
 export function __resetBucketsForTests(): void {
   buckets.clear();
   lastSweepAt = 0;

@@ -49,6 +49,14 @@ interface ReportRow {
   created_at: string;
   stance_id: string | null;
 }
+interface IpCluster {
+  /** First 12 chars of the hex ip_hash — enough to disambiguate, short enough to fit a column. */
+  ipHashShort: string;
+  /** Total reports from this ip_hash in the window. */
+  count: number;
+  /** Distinct candidate_ids targeted — proxy for "spray attack vs. one-issue legit user". */
+  distinctCandidates: number;
+}
 
 function svc() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -163,6 +171,44 @@ async function loadTopSaved(sb: ReturnType<typeof svc>): Promise<TopCandidate[]>
     .slice(0, 10);
 }
 
+// Surface clustered report submissions — same ip_hash hitting multiple
+// reports in 7d. With the migration 010 partial unique index, exact
+// duplicates are dedup'd at the DB layer; this view catches the next
+// step up, where a spammer rotates description text but stays on one
+// IP. Threshold of 3+ avoids surfacing legit "this whole candidate is
+// inaccurate" users who file a small handful of reports.
+async function loadSuspiciousIpClusters(
+  sb: ReturnType<typeof svc>,
+): Promise<IpCluster[]> {
+  const t7d = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+  const { data } = await sb
+    .from('candidate_reports')
+    .select('ip_hash, candidate_id')
+    .not('ip_hash', 'is', null)
+    .gte('created_at', t7d);
+
+  const byHash = new Map<string, { count: number; candidates: Set<string> }>();
+  for (const row of (data as Array<{ ip_hash: string; candidate_id: string }>) ?? []) {
+    let entry = byHash.get(row.ip_hash);
+    if (!entry) {
+      entry = { count: 0, candidates: new Set() };
+      byHash.set(row.ip_hash, entry);
+    }
+    entry.count++;
+    entry.candidates.add(row.candidate_id);
+  }
+
+  return Array.from(byHash.entries())
+    .filter(([, entry]) => entry.count >= 3)
+    .map(([ipHash, entry]) => ({
+      ipHashShort: ipHash.slice(0, 12),
+      count: entry.count,
+      distinctCandidates: entry.candidates.size,
+    }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 10);
+}
+
 async function loadOpenReports(sb: ReturnType<typeof svc>): Promise<ReportRow[]> {
   const { data } = await sb
     .from('candidate_reports')
@@ -175,11 +221,12 @@ async function loadOpenReports(sb: ReturnType<typeof svc>): Promise<ReportRow[]>
 
 export default async function AdminPage() {
   const sb = svc();
-  const [counts, topRaces, topSaved, reports] = await Promise.all([
+  const [counts, topRaces, topSaved, reports, ipClusters] = await Promise.all([
     loadCounts(sb),
     loadTopRaces(sb),
     loadTopSaved(sb),
     loadOpenReports(sb),
+    loadSuspiciousIpClusters(sb),
   ]);
 
   return (
@@ -277,6 +324,45 @@ export default async function AdminPage() {
           </div>
         </section>
       </div>
+
+      <section className="mb-10">
+        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">
+          Suspicious IP clusters (7d, ≥3 reports)
+        </h2>
+        {ipClusters.length === 0 ? (
+          <p className="text-sm text-gray-400">
+            No clustered submissions — nothing above the 3-report threshold.
+          </p>
+        ) : (
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-[10px] uppercase tracking-wider text-gray-400 border-b border-gray-200">
+                <th className="py-2 text-left font-bold">ip_hash (prefix)</th>
+                <th className="py-2 text-right font-bold">Reports</th>
+                <th className="py-2 text-right font-bold">Distinct candidates</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ipClusters.map((c) => (
+                <tr
+                  key={c.ipHashShort}
+                  className="border-b border-gray-100 last:border-0"
+                >
+                  <td className="py-1.5 font-mono text-xs text-gray-700">
+                    {c.ipHashShort}…
+                  </td>
+                  <td className="py-1.5 text-right font-semibold text-gray-900">
+                    {c.count}
+                  </td>
+                  <td className="py-1.5 text-right text-gray-700">
+                    {c.distinctCandidates}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </section>
 
       <section>
         <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">

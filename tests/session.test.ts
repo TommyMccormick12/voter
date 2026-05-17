@@ -67,19 +67,9 @@ describe('session', () => {
 
   describe('getSessionId', () => {
     it('returns null when no session token exists', async () => {
-      // Must test before any getOrCreateSession call populates the cache
-      // Re-import a fresh module to avoid cached state
+      // Re-import a fresh module so the cachedSessionId module-level
+      // variable resets; the top-level vi.mock above still applies.
       vi.resetModules();
-      vi.mock('@/lib/supabase', () => {
-        const chain = {
-          insert: vi.fn().mockReturnThis(),
-          select: vi.fn().mockReturnThis(),
-          update: vi.fn().mockReturnThis(),
-          eq: vi.fn().mockReturnThis(),
-          single: vi.fn().mockResolvedValue({ data: { id: 'mock-session-id' }, error: null }),
-        };
-        return { supabase: { from: vi.fn(() => chain) } };
-      });
       const { getSessionId: freshGetSessionId } = await import('@/lib/session');
       const id = await freshGetSessionId();
       expect(id).toBeNull();

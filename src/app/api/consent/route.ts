@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
   // makes a real subpoena harder to answer.
   const sessionForLimit = (await readCookie(COOKIE_NAMES.session)) ?? null;
   const ipForLimit = clientIpFromHeaders(request.headers);
-  const rate = checkRateLimits({
+  const rate = await checkRateLimits({
     sessionId: sessionForLimit,
     ip: ipForLimit,
     sessionLimit: CONSENT_LIMITS.session,

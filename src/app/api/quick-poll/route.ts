@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
   // issue-weight aggregations. Bot stuffing would poison the signal.
   const sessionId = (await readCookie(COOKIE_NAMES.session)) ?? null;
   const ip = clientIpFromHeaders(request.headers);
-  const rate = checkRateLimits({
+  const rate = await checkRateLimits({
     sessionId,
     ip,
     sessionLimit: POLL_LIMITS.session,
