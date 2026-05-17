@@ -2,6 +2,28 @@
 
 All notable changes to the voter project. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.7.1] - 2026-05-17
+
+Custom domain cutover. The site now lives at `ballotmatch.org` — shorter,
+easier to drop in a text message, doesn't read like a deploy URL. The old
+`voter-fawn.vercel.app` alias is retired and 404s. Share cards on Twitter,
+LinkedIn, and SMS now resolve their preview images against the stable
+domain instead of per-deploy hash URLs that 404 after the next deploy.
+
+### Changed
+
+- **Primary domain is now `ballotmatch.org`**. Apex is the canonical host;
+  `www.ballotmatch.org` 307-redirects to it. Old `voter-fawn.vercel.app`
+  alias removed from Vercel. Auto-deploy on push to main is unchanged.
+- **`src/app/layout.tsx` adds `metadataBase`** pointing at
+  `https://ballotmatch.org` (overridable via `NEXT_PUBLIC_SITE_URL` env
+  var for preview-scope overrides). Next.js previously fell back to
+  `VERCEL_URL` (the per-deploy hash) when resolving relative OG/Twitter
+  image URLs, which meant social platforms cached preview images at
+  URLs that 404 once a new deploy lands. Now they resolve against the
+  stable apex.
+- **README live link** updated to `ballotmatch.org`.
+
 ## [0.7.0] - 2026-05-11
 
 Tier 1 launch readiness. The match flow no longer degrades into nonsense

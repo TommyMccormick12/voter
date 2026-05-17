@@ -18,12 +18,6 @@
 
 ## Product polish
 
-### Custom domain
-- **Priority:** P4 (cosmetic; launch readiness)
-- **What:** Point a real domain at the Vercel project (currently on the auto-assigned `voter-fawn.vercel.app`).
-- **Why:** Shareable URLs read better with a real domain. Easier to put in Twitter/email/SMS.
-- **How:** Buy/repurpose a domain, add it in Vercel Project Settings → Domains, follow DNS instructions.
-
 ### Move rate limits to distributed store
 - **Priority:** P3 (latent — only bites under sustained load)
 - **What:** Swap `src/lib/rate-limit.ts` in-memory token buckets for Vercel KV or Upstash Redis.
@@ -39,6 +33,11 @@
 - **Acceptance:** Reports from the same IP hash on the same candidate with similar text either deduplicate or surface as a cluster in the admin queue.
 
 ## Completed
+
+### Custom domain
+- **Completed:** v0.7.1 (2026-05-17)
+- Pointed `ballotmatch.org` at the Vercel project. Old alias `voter-fawn.vercel.app` 308-redirects to the new primary domain.
+- Added `metadataBase` to `src/app/layout.tsx` so OG/Twitter image URLs resolve against the stable domain instead of per-deploy `VERCEL_URL`. Fallback: `NEXT_PUBLIC_SITE_URL` env var if set (for preview-scope override).
 
 ### Backfill Preview-scope Vercel env vars
 - **Completed:** v0.7.0 (2026-05-11)

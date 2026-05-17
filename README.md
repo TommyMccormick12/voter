@@ -21,7 +21,7 @@ Stack: Next.js 16 (App Router, Turbopack) · React 19 · Tailwind 4 · Supabase
   (match comparison only delivers signal at 3+).
 - **1,396 FL ZIPs** map to all 28 Congressional Districts via the HUD
   USPS_ZIP_CROSSWALK quarterly file.
-- Live at <https://voter-fawn.vercel.app> with auto-deploy on push to main.
+- Live at <https://ballotmatch.org> with auto-deploy on push to main.
 
 Differentiator vs ISideWith / Vote Smart: every stance carries a
 *track-record note* that surfaces gaps (or alignment) between stated
