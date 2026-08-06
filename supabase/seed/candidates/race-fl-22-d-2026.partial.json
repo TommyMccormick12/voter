@@ -2,19 +2,214 @@
   "race_id": "race-fl-22-d-2026",
   "candidates": [
     {
-      "name": "Ian Scott Blake",
+      "name": "Kaysia Earley",
       "party": "DEMOCRATIC PARTY",
       "primary_party": "D",
-      "slug": "ian-scott-blake",
+      "slug": "kaysia-earley",
       "incumbent": false,
       "state": "FL",
       "district": "22",
       "office": "U.S. House",
       "race_id": "race-fl-22-d-2026",
-      "fec_candidate_id": "H6FL22115",
+      "fec_candidate_id": "H6FL22222",
+      "doe_status": "Qualified",
+      "active": false,
       "top_industries": [],
       "top_donors": [],
       "voting_record": []
+    },
+    {
+      "name": "Pia Dandiya",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "pia-dandiya",
+      "incumbent": false,
+      "state": "FL",
+      "district": "22",
+      "office": "U.S. House",
+      "race_id": "race-fl-22-d-2026",
+      "fec_candidate_id": "H6FL21059",
+      "total_raised": 1575117.24,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1575117.24,
+        "disbursements": 403470.7,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 1364117.24,
+        "other_political_committee_contributions": 14000
+      },
+      "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 126000,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 87500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 70000,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 28000,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 14000,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Nonprofit / Civic",
+          "amount": 7000,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 7000,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 7000,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 3500,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "ZHAO, REN",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00906883",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "THIARA, PARVINDER",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00906883",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SPOLINI, MARTINA",
+          "donor_type": "individual",
+          "industry": "Nonprofit / Civic",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00906883",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SPOLINI, MARTINA",
+          "donor_type": "individual",
+          "industry": "Nonprofit / Civic",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00906883",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SPITZ, WARREN",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00906883",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SPITZ, WARREN",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00906883",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SINGH, KALPANA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00906883",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SHAH, RICKY",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00906883",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SETHI, SANGEETA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00906883",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SETHI, SANGEETA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00906883",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
     }
   ],
   "race": {

@@ -2,130 +2,6 @@
   "race_id": "race-fl-19-d-2026",
   "candidates": [
     {
-      "name": "Victor M. Arias",
-      "party": "DEMOCRATIC PARTY",
-      "primary_party": "D",
-      "slug": "victor-m-arias",
-      "incumbent": false,
-      "state": "FL",
-      "district": "19",
-      "office": "U.S. House",
-      "race_id": "race-fl-19-d-2026",
-      "fec_candidate_id": "H6FL19277",
-      "total_raised": 22813.19,
-      "fec_totals": {
-        "committee_id": "",
-        "cycle": 2026,
-        "receipts": 22813.19,
-        "disbursements": 4241.97,
-        "cash_on_hand_end_period": 0,
-        "individual_contributions": 2313.19,
-        "other_political_committee_contributions": 0
-      },
-      "bio": "Below is a partial list of Minor League Baseball players in the Toronto Blue Jays and rosters of their minor league affiliates.",
-      "top_industries": [
-        {
-          "industry_name": "Retired / Self-Employed",
-          "amount": 900,
-          "rank": 1,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Legal",
-          "amount": 500,
-          "rank": 2,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Healthcare & Pharma",
-          "amount": 250,
-          "rank": 3,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        }
-      ],
-      "top_donors": [
-        {
-          "donor_name": "ARIAS, ANGELETTE",
-          "donor_type": "individual",
-          "industry": "Legal",
-          "amount_total": 500,
-          "cycle": 2026,
-          "rank_in_candidate": 1,
-          "fec_committee_id": "C00934174",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "EDISON, KEITH",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 300,
-          "cycle": 2026,
-          "rank_in_candidate": 2,
-          "fec_committee_id": "C00934174",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "SEATTER, JANE",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 250,
-          "cycle": 2026,
-          "rank_in_candidate": 3,
-          "fec_committee_id": "C00934174",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "KOEPPEL, STEVE",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 250,
-          "cycle": 2026,
-          "rank_in_candidate": 4,
-          "fec_committee_id": "C00934174",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "DAVIS, DENISE",
-          "donor_type": "individual",
-          "industry": "Healthcare & Pharma",
-          "amount_total": 250,
-          "cycle": 2026,
-          "rank_in_candidate": 5,
-          "fec_committee_id": "C00934174",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "EDISON, KEITH",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 100,
-          "cycle": 2026,
-          "rank_in_candidate": 6,
-          "fec_committee_id": "C00934174",
-          "data_source": "fec"
-        }
-      ],
-      "voting_record": []
-    },
-    {
-      "name": "Jared Martin Kane",
-      "party": "DEMOCRATIC PARTY",
-      "primary_party": "D",
-      "slug": "jared-martin-kane",
-      "incumbent": false,
-      "state": "FL",
-      "district": "19",
-      "office": "U.S. House",
-      "race_id": "race-fl-19-d-2026",
-      "fec_candidate_id": "H6FL19202",
-      "top_industries": [],
-      "top_donors": [],
-      "voting_record": []
-    },
-    {
       "name": "Howard Sapp",
       "party": "DEMOCRATIC PARTY",
       "primary_party": "D",
@@ -279,7 +155,137 @@
           "data_source": "fec"
         }
       ],
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
+    },
+    {
+      "name": "Robert M. Neeld",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "robert-m-neeld",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-d-2026",
+      "fec_candidate_id": "H4FL14091",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
       "voting_record": []
+    },
+    {
+      "name": "Victor Arias",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "victor-m-arias",
+      "incumbent": false,
+      "state": "FL",
+      "district": "19",
+      "office": "U.S. House",
+      "race_id": "race-fl-19-d-2026",
+      "fec_candidate_id": "H6FL19277",
+      "total_raised": 22813.19,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 22813.19,
+        "disbursements": 4241.97,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 2313.19,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "Below is a partial list of Minor League Baseball players in the Toronto Blue Jays and rosters of their minor league affiliates.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 900,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 250,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "ARIAS, ANGELETTE",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00934174",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "EDISON, KEITH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 300,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00934174",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SEATTER, JANE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00934174",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KOEPPEL, STEVE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00934174",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "DAVIS, DENISE",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00934174",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "EDISON, KEITH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 100,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00934174",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
     }
   ],
   "race": {

@@ -1,0 +1,32 @@
+{
+  "race_id": "race-fl-08-r-2026",
+  "candidates": [
+    {
+      "name": "Mike Haridopolos",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "mike-haridopolos",
+      "incumbent": false,
+      "state": "FL",
+      "district": "08",
+      "office": "U.S. House",
+      "race_id": "race-fl-08-r-2026",
+      "fec_candidate_id": "H4FL08168",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-08-r-2026",
+    "state": "FL",
+    "district": "08",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R"
+  }
+}

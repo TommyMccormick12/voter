@@ -1,0 +1,66 @@
+{
+  "race_id": "race-fl-04-d-2026",
+  "candidates": [
+    {
+      "name": "Brit Robinson",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "brit-robinson",
+      "incumbent": false,
+      "state": "FL",
+      "district": "04",
+      "office": "U.S. House",
+      "race_id": "race-fl-04-d-2026",
+      "fec_candidate_id": "H6FL04204",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "LaShonda \"L.J.\" Holloway",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "lashonda-lj-holloway",
+      "incumbent": false,
+      "state": "FL",
+      "district": "04",
+      "office": "U.S. House",
+      "race_id": "race-fl-04-d-2026",
+      "fec_candidate_id": "H6FL05193",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Michael Kirwan",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "michael-kirwan",
+      "incumbent": false,
+      "state": "FL",
+      "district": "04",
+      "office": "U.S. House",
+      "race_id": "race-fl-04-d-2026",
+      "fec_candidate_id": "H6FL04220",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-04-d-2026",
+    "state": "FL",
+    "district": "04",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}

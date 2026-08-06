@@ -2,6 +2,156 @@
   "race_id": "race-fl-17-d-2026",
   "candidates": [
     {
+      "name": "Allen L. Spence",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "allen-l-jr-spence",
+      "incumbent": false,
+      "state": "FL",
+      "district": "17",
+      "office": "U.S. House",
+      "race_id": "race-fl-17-d-2026",
+      "fec_candidate_id": "H6FL17065",
+      "total_raised": 37660.91,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 37660.91,
+        "disbursements": 26986.16,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 20260.72,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 5708.65,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 550,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 250,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "GEER, DREN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TORRIERO, LORI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TORRIERO, LORI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TORRIERO, LORI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TORRIERO, LORI",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STOREY, FRANCES",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STOREY, FRANCES",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LONDONO, JORGE",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "COLUMBUS, MATTHEW",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ANARUMO, PAUL",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 250,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00905463",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
+    },
+    {
       "name": "Matthew Montavon",
       "party": "DEMOCRATIC PARTY",
       "primary_party": "D",
@@ -147,155 +297,9 @@
           "data_source": "fec"
         }
       ],
-      "voting_record": []
-    },
-    {
-      "name": "Allen L Jr Spence",
-      "party": "DEMOCRATIC PARTY",
-      "primary_party": "D",
-      "slug": "allen-l-jr-spence",
-      "incumbent": false,
-      "state": "FL",
-      "district": "17",
-      "office": "U.S. House",
-      "race_id": "race-fl-17-d-2026",
-      "fec_candidate_id": "H6FL17065",
-      "total_raised": 37660.91,
-      "fec_totals": {
-        "committee_id": "",
-        "cycle": 2026,
-        "receipts": 37660.91,
-        "disbursements": 26986.16,
-        "cash_on_hand_end_period": 0,
-        "individual_contributions": 20260.72,
-        "other_political_committee_contributions": 0
-      },
-      "top_industries": [
-        {
-          "industry_name": "Retired / Self-Employed",
-          "amount": 5708.65,
-          "rank": 1,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Finance & Banking",
-          "amount": 550,
-          "rank": 2,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Other",
-          "amount": 250,
-          "rank": 3,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        }
-      ],
-      "top_donors": [
-        {
-          "donor_name": "GEER, DREN",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 2000,
-          "cycle": 2026,
-          "rank_in_candidate": 1,
-          "fec_committee_id": "C00905463",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "TORRIERO, LORI",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 500,
-          "cycle": 2026,
-          "rank_in_candidate": 2,
-          "fec_committee_id": "C00905463",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "TORRIERO, LORI",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 500,
-          "cycle": 2026,
-          "rank_in_candidate": 3,
-          "fec_committee_id": "C00905463",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "TORRIERO, LORI",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 500,
-          "cycle": 2026,
-          "rank_in_candidate": 4,
-          "fec_committee_id": "C00905463",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "TORRIERO, LORI",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 500,
-          "cycle": 2026,
-          "rank_in_candidate": 5,
-          "fec_committee_id": "C00905463",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "STOREY, FRANCES",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 500,
-          "cycle": 2026,
-          "rank_in_candidate": 6,
-          "fec_committee_id": "C00905463",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "STOREY, FRANCES",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 500,
-          "cycle": 2026,
-          "rank_in_candidate": 7,
-          "fec_committee_id": "C00905463",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "LONDONO, JORGE",
-          "donor_type": "individual",
-          "industry": "Finance & Banking",
-          "amount_total": 250,
-          "cycle": 2026,
-          "rank_in_candidate": 8,
-          "fec_committee_id": "C00905463",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "COLUMBUS, MATTHEW",
-          "donor_type": "individual",
-          "industry": "Finance & Banking",
-          "amount_total": 250,
-          "cycle": 2026,
-          "rank_in_candidate": 9,
-          "fec_committee_id": "C00905463",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "ANARUMO, PAUL",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 250,
-          "cycle": 2026,
-          "rank_in_candidate": 10,
-          "fec_committee_id": "C00905463",
-          "data_source": "fec"
-        }
-      ],
-      "voting_record": []
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
     }
   ],
   "race": {

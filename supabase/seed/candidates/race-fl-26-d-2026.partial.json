@@ -1,28 +1,28 @@
 {
-  "race_id": "race-fl-18-d-2026",
+  "race_id": "race-fl-26-d-2026",
   "candidates": [
     {
-      "name": "Curtis Gibson",
+      "name": "Nicole Locklin",
       "party": "DEMOCRATIC PARTY",
       "primary_party": "D",
-      "slug": "curtis-gibson",
+      "slug": "nicole-locklin",
       "incumbent": false,
       "state": "FL",
-      "district": "18",
+      "district": "26",
       "office": "U.S. House",
-      "race_id": "race-fl-18-d-2026",
-      "fec_candidate_id": "H6FL18212",
+      "race_id": "race-fl-26-d-2026",
+      "fec_candidate_id": "H6FL26058",
+      "doe_status": "Qualified",
+      "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": [],
-      "doe_status": "Qualified",
-      "active": false
+      "voting_record": []
     }
   ],
   "race": {
-    "id": "race-fl-18-d-2026",
+    "id": "race-fl-26-d-2026",
     "state": "FL",
-    "district": "18",
+    "district": "26",
     "office": "U.S. House",
     "election_date": "2026-08-18",
     "cycle": 2026,

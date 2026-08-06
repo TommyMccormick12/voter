@@ -583,6 +583,19 @@
     "join_note": null
   },
   {
+    "doe_acct_num": null,
+    "doe_name": "Maxwell Alejandro Frost",
+    "office": "U.S. House",
+    "district": "10",
+    "party": "DEM",
+    "status": "Unopposed",
+    "unopposed": true,
+    "campaign_website": null,
+    "fec_candidate_id": "H2FL10259",
+    "join_note": null,
+    "spine_note": "Added by T03 (2026-08-06 roster rebuild) per spec A5. fetch_doe_roster.ts's own 2026-08-06 run log identifies this as the sole StatusCode=UNO (\"Unopposed\") row in the live federal extract: Maxwell Frost, FL-10, DEM. doe_acct_num could not be backfilled — a live re-run of the extended fetch_doe_roster.ts (now includes UNO alongside QUA) returned HTTP 403 in this sandbox (network egress blocked). fec_candidate_id H2FL10259 is corroborated by the pre-existing race-fl-10-d-2026.partial.json fixture, itself sourced from an earlier successful FEC join. Re-run fetch_doe_roster.ts from an environment with DOE network access to backfill doe_acct_num."
+  },
+  {
     "doe_acct_num": "89370",
     "doe_name": "Charles Gambaro",
     "office": "U.S. House",

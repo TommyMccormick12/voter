@@ -1,0 +1,32 @@
+{
+  "race_id": "race-fl-03-r-2026",
+  "candidates": [
+    {
+      "name": "Kat Cammack",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "kat-cammack",
+      "incumbent": false,
+      "state": "FL",
+      "district": "03",
+      "office": "U.S. House",
+      "race_id": "race-fl-03-r-2026",
+      "fec_candidate_id": "H0FL03175",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-03-r-2026",
+    "state": "FL",
+    "district": "03",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R"
+  }
+}

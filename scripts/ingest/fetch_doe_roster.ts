@@ -33,13 +33,15 @@
 // federal extract, not just Qualified/Did-Not-Qualify — DNQ (57), QUA
 // (195), UNO (1), WIT (30). UNO = "Unopposed" is a status DISTINCT from
 // QUA = "Qualified". The single UNO row is Maxwell Frost, FL-10 D — exactly
-// the spec's A5 "no-primary" example. Per this ticket's explicit
-// instruction ("the spine filter is status=Qualified"), spine-2026.json
-// includes StatusCode===QUA rows only; the UNO row is preserved in the raw
-// parse but NOT in the spine. This is flagged loudly in the script's final
-// summary because A5/T03/T06 need Frost's race to render, and a strict
-// QUA-only spine will not carry him. See the run summary block at the
-// bottom of main().
+// the spec's A5 "no-primary" example.
+//
+// 2026-08-06 update (T03 roster rebuild): the spine now INCLUDES UNO rows
+// alongside QUA rows, each tagged with `unopposed: true` on QUA rows this
+// is always `false`. Spec A5 needs Frost's race to render as an
+// informational "no primary" state rather than disappear, so excluding him
+// from the spine (the prior behavior) was wrong: T03/T06 both depend on
+// the spine carrying every candidate who has a real spot on the ballot,
+// contested or not. See the run summary block at the bottom of main().
 //
 // There is no campaign-website column in the DOE extract, and the FEC
 // /candidates/search response also carries no website field. campaign_website
@@ -98,6 +100,9 @@ interface SpineRow {
   district: string | null;
   party: string;
   status: string;
+  /** True for StatusCode=UNO ("Unopposed") rows — a real ballot spot with
+   * no primary contest (spec A5). False for StatusCode=QUA rows. */
+  unopposed: boolean;
   campaign_website: string | null;
   fec_candidate_id: string | null;
   join_note: string | null;
@@ -321,15 +326,25 @@ async function main() {
 
   reportSeven(allRows);
 
-  const qualified = federalRows.filter((r) => r.StatusCode === 'QUA');
-  console.log(`[doe] ${qualified.length} Qualified federal rows will form the spine`);
+  // T03 (2026-08-06): the spine includes both Qualified (QUA) and
+  // Unopposed (UNO) rows. QUA is a normal primary contestant; UNO is a
+  // real ballot spot with no primary (spec A5) — both need a spine entry
+  // so downstream fixture builds don't have to special-case a candidate
+  // who is missing from this file entirely. `unopposed` on each row tells
+  // callers which case they're in.
+  const qualified = federalRows.filter(
+    (r) => r.StatusCode === 'QUA' || r.StatusCode === 'UNO',
+  );
+  console.log(
+    `[doe] ${qualified.length} Qualified+Unopposed federal rows will form the spine`,
+  );
 
   const unopposed = federalRows.filter((r) => r.StatusCode === 'UNO');
   if (unopposed.length > 0) {
     console.log(
-      `[doe] WARNING: ${unopposed.length} row(s) have status "Unopposed" (UNO), distinct from ` +
-        `"Qualified" (QUA), and are EXCLUDED from spine-2026.json per this ticket's literal filter ` +
-        `(status=Qualified). Spec A5 needs these candidates to render a "no primary" race. Names: ` +
+      `[doe] ${unopposed.length} row(s) have status "Unopposed" (UNO), distinct from ` +
+        `"Qualified" (QUA), and are INCLUDED in spine-2026.json with unopposed:true. Spec A5 ` +
+        `renders these as a "no primary" informational race rather than hiding them. Names: ` +
         unopposed.map((r) => `${buildDoeName(r)} (${r.OfficeDesc} ${r.Juris1num}, ${r.PartyDesc})`).join(', '),
     );
   }
@@ -357,6 +372,7 @@ async function main() {
       district: row.OfficeCode === 'USR' ? padDistrictForFec(row.Juris1num) : null,
       party: row.PartyCode,
       status: row.StatusDesc,
+      unopposed: row.StatusCode === 'UNO',
       campaign_website: null,
       fec_candidate_id: fecCandidateId,
       join_note: joinNote,

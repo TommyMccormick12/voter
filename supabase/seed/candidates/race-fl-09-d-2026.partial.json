@@ -793,7 +793,10 @@
             "hconres75-119"
           ]
         }
-      ]
+      ],
+      "doe_status": "Qualified",
+      "active": false,
+      "incumbent_source": "carried from race-fl-09-d-2026.partial.json (race-fl-09-d-2026), same race pre- and post-rebuild; FEC id H6FL09179 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)"
     }
   ],
   "race": {

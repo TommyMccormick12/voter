@@ -1,0 +1,83 @@
+{
+  "race_id": "race-fl-02-d-2026",
+  "candidates": [
+    {
+      "name": "Amanda Marie Green",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "amanda-marie-green",
+      "incumbent": false,
+      "state": "FL",
+      "district": "02",
+      "office": "U.S. House",
+      "race_id": "race-fl-02-d-2026",
+      "fec_candidate_id": "H6FL02299",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Brice Barnes",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "brice-barnes",
+      "incumbent": false,
+      "state": "FL",
+      "district": "02",
+      "office": "U.S. House",
+      "race_id": "race-fl-02-d-2026",
+      "fec_candidate_id": "H6FL02398",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Nicholas Zateslo",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "nicholas-zateslo",
+      "incumbent": false,
+      "state": "FL",
+      "district": "02",
+      "office": "U.S. House",
+      "race_id": "race-fl-02-d-2026",
+      "fec_candidate_id": "H6FL02281",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Yen Bailey",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "yen-bailey",
+      "incumbent": false,
+      "state": "FL",
+      "district": "02",
+      "office": "U.S. House",
+      "race_id": "race-fl-02-d-2026",
+      "fec_candidate_id": "H4FL02138",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-02-d-2026",
+    "state": "FL",
+    "district": "02",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}

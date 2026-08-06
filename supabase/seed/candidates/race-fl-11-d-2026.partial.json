@@ -2,170 +2,41 @@
   "race_id": "race-fl-11-d-2026",
   "candidates": [
     {
-      "name": "Shawn Stefan Bettis",
+      "name": "Dan Williams",
       "party": "DEMOCRATIC PARTY",
       "primary_party": "D",
-      "slug": "shawn-stefan-bettis",
+      "slug": "dan-williams",
       "incumbent": false,
       "state": "FL",
       "district": "11",
       "office": "U.S. House",
       "race_id": "race-fl-11-d-2026",
-      "fec_candidate_id": "H6FL11274",
+      "fec_candidate_id": "H6FL11233",
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
+    },
+    {
+      "name": "James Pericola",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "james-pericola",
+      "incumbent": false,
+      "state": "FL",
+      "district": "11",
+      "office": "U.S. House",
+      "race_id": "race-fl-11-d-2026",
+      "fec_candidate_id": "H6FL11357",
+      "doe_status": "Qualified",
+      "active": false,
       "top_industries": [],
       "top_donors": [],
       "voting_record": []
     },
     {
-      "name": "Barbara Barbie Harden Hall",
-      "party": "DEMOCRATIC PARTY",
-      "primary_party": "D",
-      "slug": "barbara-barbie-harden-hall",
-      "incumbent": false,
-      "state": "FL",
-      "district": "11",
-      "office": "U.S. House",
-      "race_id": "race-fl-11-d-2026",
-      "fec_candidate_id": "H4FL11105",
-      "total_raised": 21305.41,
-      "fec_totals": {
-        "committee_id": "",
-        "cycle": 2026,
-        "receipts": 21305.41,
-        "disbursements": 20831.88,
-        "cash_on_hand_end_period": 0,
-        "individual_contributions": 16345.41,
-        "other_political_committee_contributions": 200
-      },
-      "top_industries": [
-        {
-          "industry_name": "Other",
-          "amount": 6392.300000000001,
-          "rank": 1,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Retired / Self-Employed",
-          "amount": 600,
-          "rank": 2,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Nonprofit / Civic",
-          "amount": 250,
-          "rank": 3,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        }
-      ],
-      "top_donors": [
-        {
-          "donor_name": "WATTERSON, SUSAN",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 1650,
-          "cycle": 2026,
-          "rank_in_candidate": 1,
-          "fec_committee_id": "C00863506",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "MCCARTY, MARK",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 500.11,
-          "cycle": 2026,
-          "rank_in_candidate": 2,
-          "fec_committee_id": "C00863506",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "COTTRELL, SUSAN",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 500,
-          "cycle": 2026,
-          "rank_in_candidate": 3,
-          "fec_committee_id": "C00863506",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "KELLER, MELISSA",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 500,
-          "cycle": 2026,
-          "rank_in_candidate": 4,
-          "fec_committee_id": "C00863506",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "FRENCH, CINDY",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 500,
-          "cycle": 2026,
-          "rank_in_candidate": 5,
-          "fec_committee_id": "C00863506",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "STUMBO, DALE",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 300,
-          "cycle": 2026,
-          "rank_in_candidate": 6,
-          "fec_committee_id": "C00863506",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "ANTLEY, LEONARD",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 300,
-          "cycle": 2026,
-          "rank_in_candidate": 7,
-          "fec_committee_id": "C00863506",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "GRIEGO, REGINA",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 250,
-          "cycle": 2026,
-          "rank_in_candidate": 8,
-          "fec_committee_id": "C00863506",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "PARKS, VALERIE",
-          "donor_type": "individual",
-          "industry": "Nonprofit / Civic",
-          "amount_total": 250,
-          "cycle": 2026,
-          "rank_in_candidate": 9,
-          "fec_committee_id": "C00863506",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "ANDERSEN, CRIS",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 210,
-          "cycle": 2026,
-          "rank_in_candidate": 10,
-          "fec_committee_id": "C00863506",
-          "data_source": "fec"
-        }
-      ],
-      "voting_record": []
-    },
-    {
-      "name": "Royal Mr. Webster",
+      "name": "Royal Webster",
       "party": "DEMOCRATIC PARTY",
       "primary_party": "D",
       "slug": "royal-mr-webster",
@@ -261,22 +132,9 @@
           ]
         }
       ],
-      "photo_url": "https://bioguide.congress.gov/photo/W000806.jpg"
-    },
-    {
-      "name": "Dan Williams",
-      "party": "DEMOCRATIC PARTY",
-      "primary_party": "D",
-      "slug": "dan-williams",
-      "incumbent": false,
-      "state": "FL",
-      "district": "11",
-      "office": "U.S. House",
-      "race_id": "race-fl-11-d-2026",
-      "fec_candidate_id": "H6FL11233",
-      "top_industries": [],
-      "top_donors": [],
-      "voting_record": []
+      "photo_url": "https://bioguide.congress.gov/photo/W000806.jpg",
+      "doe_status": "Qualified",
+      "active": false
     }
   ],
   "race": {
