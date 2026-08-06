@@ -1,11 +1,15 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { CandidateWithFullData, TopStance } from '@/types/database';
 import { getPartyTheme, getPartyInitials } from '@/lib/party-theme';
+import { resolvePartyKey } from '@/lib/tokens';
 import { trackInteraction } from '@/lib/interactions-client';
+import { SaveToggleButton } from './SaveToggleButton';
+import { Badge } from './ui/Badge';
+import { Card } from './ui/Card';
 
 interface Props {
   candidate: CandidateWithFullData;
@@ -27,7 +31,6 @@ export function CandidateScorecard({
 }: Props) {
   const theme = getPartyTheme(candidate.primary_party);
   const initials = getPartyInitials(candidate.name);
-  const [saved, setSaved] = useState(initialSaved);
 
   // Dwell time tracking — starts when card becomes active, fires on inactive/unmount
   const dwellStartRef = useRef<number | null>(null);
@@ -63,18 +66,6 @@ export function CandidateScorecard({
     };
   }, [isActive, candidate.id, raceId, viewOrder]);
 
-  const handleSave = () => {
-    const next = !saved;
-    setSaved(next);
-    onSaved?.(next);
-    void trackInteraction({
-      candidate_id: candidate.id,
-      race_id: raceId,
-      action: next ? 'saved' : 'unsaved',
-      view_order: viewOrder,
-    });
-  };
-
   const incumbencyLabel = candidate.incumbent ? 'Incumbent' : 'Challenger';
 
   const stances = (candidate.top_stances ?? []).slice(0, 3);
@@ -84,8 +75,12 @@ export function CandidateScorecard({
     : null;
 
   return (
-    <article
-      className={`bg-white rounded-2xl shadow-md border ${theme.border} overflow-hidden h-full flex flex-col`}
+    <Card
+      as="article"
+      padding="none"
+      border={false}
+      shadow="none"
+      className={`border ${theme.border} shadow-md overflow-hidden h-full flex flex-col`}
       data-candidate-id={candidate.id}
     >
       {/* Hero strip — party-themed */}
@@ -111,9 +106,9 @@ export function CandidateScorecard({
         )}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <span className={`text-[10px] font-semibold px-2.5 py-1 rounded-full ${theme.accent}`}>
+            <Badge tone="party" partyKey={resolvePartyKey(candidate.primary_party)}>
               {candidate.primary_party ?? 'I'}
-            </span>
+            </Badge>
             <span className="text-[10px] font-medium px-2.5 py-1 rounded-full bg-white/80 text-gray-700">
               {incumbencyLabel}
             </span>
@@ -155,17 +150,16 @@ export function CandidateScorecard({
 
       {/* CTAs — Save + Full record */}
       <div className="p-3 border-t border-gray-100 flex gap-2">
-        <button
-          onClick={handleSave}
-          className={`flex-1 text-sm font-medium min-h-[44px] py-2.5 rounded-lg transition ${
-            saved
-              ? `${theme.softBg} ${theme.text}`
-              : 'text-gray-600 hover:bg-gray-50'
-          }`}
-          aria-pressed={saved}
-        >
-          {saved ? '★ Saved' : '★ Save'}
-        </button>
+        <SaveToggleButton
+          candidateId={candidate.id}
+          raceId={raceId}
+          viewOrder={viewOrder}
+          initialSaved={initialSaved}
+          onSaved={onSaved}
+          className="flex-1 text-sm font-medium min-h-[44px] py-2.5 rounded-lg transition"
+          activeClassName={`${theme.softBg} ${theme.text}`}
+          inactiveClassName="text-gray-600 hover:bg-gray-50"
+        />
         <Link
           href={`/candidate/${candidate.slug}`}
           className={`flex-1 text-sm font-medium min-h-[44px] py-2.5 rounded-lg text-center ${theme.accent}`}
@@ -181,7 +175,7 @@ export function CandidateScorecard({
           Full record →
         </Link>
       </div>
-    </article>
+    </Card>
   );
 }
 

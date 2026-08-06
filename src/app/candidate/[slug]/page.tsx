@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { getCandidateBySlug } from '@/lib/data/candidates';
 import { getRace } from '@/lib/data/races';
 import { CandidateDetail } from '@/components/CandidateDetail';
+import { CandidateDetailActions } from '@/components/CandidateDetailActions';
+import { ErrorState } from '@/components/ui/ErrorState';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -40,22 +42,11 @@ export default async function CandidatePage({ params }: PageProps) {
         >
           ← Back to scorecards
         </Link>
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            className="text-sm text-gray-600 px-4 py-2 hover:bg-gray-100 rounded-lg"
-            aria-label="Save candidate"
-          >
-            ★ Save
-          </button>
-          <button
-            type="button"
-            className="text-sm text-gray-600 px-4 py-2 hover:bg-gray-100 rounded-lg"
-            aria-label="Share candidate"
-          >
-            Share
-          </button>
-        </div>
+        <CandidateDetailActions
+          candidateId={candidate.id}
+          candidateSlug={candidate.slug}
+          raceId={candidate.race_id}
+        />
       </div>
       <CandidateDetail candidate={candidate} />
     </>
@@ -70,27 +61,14 @@ export default async function CandidatePage({ params }: PageProps) {
  */
 function CandidateErrorState({ slug }: { slug: string }) {
   return (
-    <main className="max-w-2xl mx-auto px-4 py-16 text-center">
-      <h1 className="text-2xl font-bold text-gray-900 mb-3">
-        We couldn&apos;t load this candidate right now
-      </h1>
-      <p className="text-gray-500 mb-6">
-        Something went wrong on our end. Try again in a moment.
-      </p>
-      <div className="flex items-center justify-center gap-3">
-        <Link
-          href={`/candidate/${slug}`}
-          className="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700"
-        >
-          Try again
-        </Link>
-        <Link
-          href="/race-picker"
-          className="inline-block text-gray-600 font-medium px-6 py-3 rounded-lg hover:bg-gray-100"
-        >
+    <ErrorState
+      title="We couldn't load this candidate right now"
+      retryHref={`/candidate/${slug}`}
+      secondaryAction={
+        <Link href="/race-picker" className="text-gray-600 font-medium px-6 py-3 rounded-lg hover:bg-gray-100">
           All races
         </Link>
-      </div>
-    </main>
+      }
+    />
   );
 }

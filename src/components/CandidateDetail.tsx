@@ -8,12 +8,15 @@ import type {
   TopStance,
 } from '@/types/database';
 import { getPartyTheme, getPartyInitials } from '@/lib/party-theme';
+import { resolvePartyKey } from '@/lib/tokens';
 import { DonorProfile } from './DonorProfile';
 import { VotingRecordList } from './VotingRecordList';
 import { StatementTimeline } from './StatementTimeline';
 import { InconsistencyBadge, classifyTrackRecord } from './InconsistencyBadge';
 import { ReportInaccurateButton } from './ReportInaccurateButton';
 import { trackInteraction } from '@/lib/interactions-client';
+import { Badge } from './ui/Badge';
+import { EmptyState } from './ui/EmptyState';
 
 interface Props {
   candidate: CandidateWithFullData;
@@ -89,9 +92,9 @@ export function CandidateDetail({ candidate }: Props) {
         )}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-2 flex-wrap">
-            <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${theme.accent}`}>
+            <Badge tone="party" partyKey={resolvePartyKey(candidate.primary_party)}>
               {partyName}
-            </span>
+            </Badge>
             <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-white/80 text-gray-700">
               {candidate.incumbent ? 'Incumbent' : 'Challenger'}
             </span>
@@ -218,11 +221,7 @@ function StancesTab({
   accent: string;
 }) {
   if (stances.length === 0 && positions.length === 0) {
-    return (
-      <div className="rounded-xl border border-dashed border-gray-300 bg-gray-50 p-6 text-center">
-        <p className="text-sm text-gray-500">No stances curated yet for this candidate.</p>
-      </div>
-    );
+    return <EmptyState title="No stances curated yet for this candidate." />;
   }
 
   return (

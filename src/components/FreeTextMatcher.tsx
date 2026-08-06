@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Button } from './ui/Button';
 
 interface Props {
   initialValue?: string;
@@ -73,24 +74,23 @@ export function FreeTextMatcher({
         </p>
       )}
 
-      <button
+      <Button
         type="button"
         onClick={handleSubmit}
-        disabled={loading || tooShort}
-        className="w-full bg-blue-600 text-white text-base lg:text-lg font-medium py-3.5 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition flex items-center justify-center gap-2"
+        disabled={tooShort}
+        loading={loading}
+        fullWidth
+        size="lg"
       >
         {loading ? (
-          <>
-            <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" aria-hidden="true" />
-            <span>Matching...</span>
-          </>
+          'Matching...'
         ) : (
           <>
             <span>Find my match</span>
             <span className="text-blue-200 text-sm">· takes ~2s</span>
           </>
         )}
-      </button>
+      </Button>
     </div>
   );
 }

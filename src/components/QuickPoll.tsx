@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Button } from './ui/Button';
 
 export interface PollIssue {
   slug: string;
@@ -67,14 +68,15 @@ export function QuickPoll({ issues, initialWeights = {}, onChange, onSubmit }: P
         })}
       </div>
 
-      <button
+      <Button
         type="button"
         onClick={() => onSubmit?.(responses)}
         disabled={!canContinue}
-        className="w-full bg-blue-600 text-white text-base lg:text-lg font-medium py-3.5 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
+        fullWidth
+        size="lg"
       >
         Continue →
-      </button>
+      </Button>
 
       <p className="text-xs text-gray-400 text-center mt-3">
         {responses.length === 0
