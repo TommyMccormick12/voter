@@ -124,12 +124,20 @@ export async function POST(request: NextRequest) {
     if (error.code === '23505') {
       return NextResponse.json({ ok: true, deduplicated: true });
     }
-    // Most likely cause: candidate_id doesn't exist (FK violation).
-    // Treat as 400 — client sent a bad candidate reference.
     console.error('[api/report] insert error:', error.message);
+    // 23503 foreign_key_violation: the client referenced a candidate/stance
+    // that doesn't exist — their input, 400. Anything else (outage, RLS,
+    // schema drift) is our failure and must surface as 500, with no DB
+    // internals leaked to the client.
+    if (error.code === '23503') {
+      return NextResponse.json(
+        { ok: false, error: 'unknown_reference' },
+        { status: 400 },
+      );
+    }
     return NextResponse.json(
-      { ok: false, error: 'insert_failed', detail: error.message },
-      { status: 400 },
+      { ok: false, error: 'write_failed' },
+      { status: 500 },
     );
   }
 
