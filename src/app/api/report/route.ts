@@ -10,6 +10,7 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
 import { getServiceClient } from '@/lib/data/adapter-service';
+import { lookupSessionRowId } from '@/lib/app/session';
 import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
 import { clientIpFromHeaders, hashIp } from '@/lib/geo';
 import { checkRateLimits, REPORT_LIMITS } from '@/lib/rate-limit';
@@ -95,11 +96,15 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  // candidate_reports.session_id FKs sessions.id (uuid), not the raw cookie
+  // token — resolve it; an unknown token degrades to an anonymous report.
+  const sessionRowId = sessionId ? await lookupSessionRowId(sessionId) : null;
+
   const { data, error } = await sb
     .from('candidate_reports')
     .insert({
       candidate_id: parsed.data.candidate_id,
-      session_id: sessionId,
+      session_id: sessionRowId,
       stance_id: parsed.data.stance_id ?? null,
       cited_bill_id: parsed.data.cited_bill_id ?? null,
       category: parsed.data.category,
