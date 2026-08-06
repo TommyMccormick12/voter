@@ -36,11 +36,13 @@ function load(): Record<string, DistrictCrosswalkEntry[]> {
 }
 
 /**
- * Look up the district(s) a ZIP code overlaps, sorted by descending area
- * share. Returns null when the ZIP is not in the crosswalk — either it is
- * outside Florida, or it has no meaningful (>2%) overlap with any district
- * (see the NOISE_FLOOR constant in the build script). Callers should treat
- * null as the honest "not Florida" empty state, not an error.
+ * Look up the district(s) a ZIP code overlaps, sorted by descending
+ * population share (area share on the fallback — see
+ * `DistrictCrosswalkEntry.share_basis`). Returns null when the ZIP is not
+ * in the crosswalk — either it is outside Florida, or (on the area
+ * fallback) it has no meaningful land-area overlap with any district.
+ * Callers should treat null as the honest "not Florida" empty state, not
+ * an error.
  */
 export function lookupZipDistricts(
   zip: string,
