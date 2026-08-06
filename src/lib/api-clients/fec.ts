@@ -34,6 +34,22 @@ export interface FecCommitteeTotals {
   cash_on_hand_end_period: number;
   individual_contributions: number;
   other_political_committee_contributions: number;
+  /** Last date FEC's filings cover for this total, e.g. "2026-06-30".
+   * Render this next to every dollar figure (spec B3) — a total without
+   * its coverage window reads as more current than it is. Null only when
+   * FEC omits the field on the response row. */
+  coverage_end_date: string | null;
+}
+
+/** T11: totals are always pinned to one cycle, joined by candidate_id only.
+ * Never omit cycle/election_year; never retry with a different cycle if
+ * a candidate has no rows — that's how prior-cycle money leaked into 2026
+ * figures (DATA-AUDIT-2026-08-06 root cause 2). Senate races aggregate
+ * across the full 6-year cycle via election_full + election_year; House
+ * and President use the 2-year cycle directly. */
+export interface FecTotalsParams {
+  cycle: number;
+  office: 'H' | 'S' | 'P';
 }
 
 export async function searchCandidates(params: {
@@ -133,14 +149,33 @@ export async function getItemizedContributions(
   return data.results ?? [];
 }
 
+/**
+ * Fetch a candidate's FEC totals for exactly one cycle, joined by
+ * candidate_id only — never by name (T11 / spec B1.4, B3).
+ *
+ * Returns null when FEC has no rows for that cycle/office combination.
+ * That is a legitimate outcome ("no filings yet") and callers MUST NOT
+ * retry with a different cycle to paper over it — surface it explicitly
+ * (e.g. `{ no2026Filings: true }`) instead of silently keeping whatever
+ * total a previous run happened to store.
+ */
 export async function getCandidateTotals(
   candidateId: string,
-  cycle: number
+  { cycle, office }: FecTotalsParams
 ): Promise<FecCommitteeTotals | null> {
   const key = requireEnv('FEC_API_KEY');
-  const url = `${BASE}/candidate/${candidateId}/totals/?api_key=${key}&cycle=${cycle}&per_page=1`;
+  const qs = new URLSearchParams({ api_key: key, per_page: '1' });
+  if (office === 'S') {
+    // Senate: 6-year cycle aggregation. cycle is intentionally omitted —
+    // election_full + election_year is the pair FEC expects together.
+    qs.set('election_full', 'true');
+    qs.set('election_year', String(cycle));
+  } else {
+    qs.set('cycle', String(cycle));
+  }
+  const url = `${BASE}/candidate/${candidateId}/totals/?${qs.toString()}`;
   const data = await fetchCached<{ results?: Array<Record<string, unknown>> }>(url, {
-    cacheTag: `totals:${candidateId}:${cycle}`,
+    cacheTag: `totals:${candidateId}:${cycle}:${office}`,
   });
   const r = data.results?.[0];
   if (!r) return null;
@@ -154,5 +189,7 @@ export async function getCandidateTotals(
     other_political_committee_contributions: Number(
       r.other_political_committee_contributions ?? 0
     ),
+    coverage_end_date:
+      typeof r.coverage_end_date === 'string' ? r.coverage_end_date : null,
   };
 }

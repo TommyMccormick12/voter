@@ -14,17 +14,16 @@
 // candidates are all unsynthesized show up in race-picker as "Curating
 // — check back soon" via the existing empty-state UI.
 
-import { supabase } from '@/lib/supabase';
-import type {
-  Candidate,
-  CandidateWithFullData,
-  CandidatePosition,
-  CandidateDonor,
-  CandidateTopIndustry,
-  CandidateVote,
-  CandidateStatement,
-  TopStance,
-} from '@/types/database';
+import { getAnonClient } from './adapter-anon';
+import {
+  toCandidate,
+  toCandidatePosition,
+  toCandidateDonor,
+  toCandidateTopIndustry,
+  toCandidateVote,
+  toCandidateStatement,
+} from './boundary';
+import type { CandidateWithFullData } from '@/types/database';
 
 function assertConfigured(): void {
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
@@ -39,41 +38,6 @@ const CANDIDATE_BASE_COLUMNS =
   'id, name, slug, party, state, district, race_id, office, photo_url, bio, website, active, primary_party, incumbent, total_raised, top_stances';
 
 /**
- * Coerce a raw Supabase candidate row to the app's Candidate shape.
- * Guards against JSONB drift: top_stances must be an array of objects.
- * Returns `top_stances: []` when the column is null / malformed so the
- * UI renders an empty stance list instead of crashing.
- */
-function normalizeCandidate(row: Record<string, unknown>): Candidate {
-  const rawStances = row.top_stances;
-  let top_stances: TopStance[] = [];
-  if (Array.isArray(rawStances)) {
-    top_stances = rawStances.filter(
-      (s): s is TopStance =>
-        typeof s === 'object' && s !== null && 'issue_slug' in s && 'stance' in s
-    );
-  }
-  return {
-    id: String(row.id),
-    name: String(row.name),
-    slug: String(row.slug),
-    party: (row.party as string | null) ?? null,
-    state: String(row.state),
-    district: (row.district as string | null) ?? null,
-    race_id: (row.race_id as string | null) ?? null,
-    office: String(row.office),
-    photo_url: (row.photo_url as string | null) ?? null,
-    bio: (row.bio as string | null) ?? null,
-    website: (row.website as string | null) ?? null,
-    active: Boolean(row.active),
-    primary_party: (row.primary_party as string | null) ?? null,
-    incumbent: Boolean(row.incumbent),
-    total_raised: (row.total_raised as number | null) ?? null,
-    top_stances,
-  };
-}
-
-/**
  * Active candidates for one race, ordered by total_raised desc then name.
  * Carousel display only — child relations stay undefined. Use
  * getCandidateBySlug when you need donors/votes/statements/positions.
@@ -82,7 +46,7 @@ export async function getCandidatesForRace(
   raceId: string
 ): Promise<CandidateWithFullData[]> {
   assertConfigured();
-  const { data, error } = await supabase
+  const { data, error } = await getAnonClient()
     .from('candidates')
     .select(CANDIDATE_BASE_COLUMNS)
     .eq('race_id', raceId)
@@ -93,9 +57,7 @@ export async function getCandidatesForRace(
     console.error('[data/candidates.getCandidatesForRace] error:', error.message);
     return [];
   }
-  return ((data as Record<string, unknown>[]) ?? []).map((row) => ({
-    ...normalizeCandidate(row),
-  }));
+  return (data ?? []).map((row) => ({ ...toCandidate(row) }));
 }
 
 /**
@@ -106,7 +68,7 @@ export async function getCandidateBySlug(
   slug: string
 ): Promise<CandidateWithFullData | null> {
   assertConfigured();
-  const { data, error } = await supabase
+  const { data, error } = await getAnonClient()
     .from('candidates')
     .select(
       `${CANDIDATE_BASE_COLUMNS},
@@ -143,15 +105,22 @@ export async function getCandidateBySlug(
   if (!data) return null;
 
   const row = data as Record<string, unknown>;
-  const base = normalizeCandidate(row);
+  const base = toCandidate(row);
+  const positions = (row.candidate_positions as Record<string, unknown>[] | null) ?? [];
+  const donors = (row.candidate_donors as Record<string, unknown>[] | null) ?? [];
+  const topIndustries =
+    (row.candidate_top_industries as Record<string, unknown>[] | null) ?? [];
+  const votingRecord =
+    (row.candidate_voting_record as Record<string, unknown>[] | null) ?? [];
+  const statements = (row.candidate_statements as Record<string, unknown>[] | null) ?? [];
+
   return {
     ...base,
-    positions: (row.candidate_positions as CandidatePosition[] | null) ?? [],
-    donors: (row.candidate_donors as CandidateDonor[] | null) ?? [],
-    top_industries:
-      (row.candidate_top_industries as CandidateTopIndustry[] | null) ?? [],
-    voting_record: (row.candidate_voting_record as CandidateVote[] | null) ?? [],
-    statements: (row.candidate_statements as CandidateStatement[] | null) ?? [],
+    positions: positions.map(toCandidatePosition),
+    donors: donors.map(toCandidateDonor),
+    top_industries: topIndustries.map(toCandidateTopIndustry),
+    voting_record: votingRecord.map(toCandidateVote),
+    statements: statements.map(toCandidateStatement),
   };
 }
 
@@ -170,7 +139,7 @@ export async function getCandidateSamplesForRaces(raceIds: string[]): Promise<
 > {
   if (raceIds.length === 0) return {};
   assertConfigured();
-  const { data, error } = await supabase
+  const { data, error } = await getAnonClient()
     .from('candidates')
     .select('id, name, race_id')
     .in('race_id', raceIds)

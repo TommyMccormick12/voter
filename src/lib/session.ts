@@ -1,4 +1,4 @@
-import { supabase } from './supabase';
+import { getAnonClient } from './data/adapter-anon';
 
 const SESSION_KEY = 'voter_session_token';
 
@@ -19,7 +19,7 @@ export async function getOrCreateSession(): Promise<string> {
     token = generateToken();
     localStorage.setItem(SESSION_KEY, token);
 
-    const { data, error } = await supabase
+    const { data, error } = await getAnonClient()
       .from('sessions')
       .insert({ session_token: token })
       .select('id')
@@ -31,7 +31,7 @@ export async function getOrCreateSession(): Promise<string> {
       cachedSessionId = data.id;
     }
   } else {
-    const { data, error } = await supabase
+    const { data, error } = await getAnonClient()
       .from('sessions')
       .update({ last_active: new Date().toISOString() })
       .eq('session_token', token)
@@ -54,7 +54,7 @@ export async function getSessionId(): Promise<string | null> {
   const token = getSessionToken();
   if (!token) return null;
 
-  const { data, error } = await supabase
+  const { data, error } = await getAnonClient()
     .from('sessions')
     .select('id')
     .eq('session_token', token)
@@ -70,7 +70,7 @@ export async function getSessionId(): Promise<string | null> {
 }
 
 export async function setSessionLocation(token: string, zipCode: string) {
-  const { error } = await supabase
+  const { error } = await getAnonClient()
     .from('sessions')
     .update({ zip_code: zipCode })
     .eq('session_token', token);

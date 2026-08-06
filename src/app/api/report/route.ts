@@ -9,7 +9,7 @@
 
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
-import { createClient } from '@supabase/supabase-js';
+import { getServiceClient } from '@/lib/data/adapter-service';
 import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
 import { clientIpFromHeaders, hashIp } from '@/lib/geo';
 import { checkRateLimits, REPORT_LIMITS } from '@/lib/rate-limit';
@@ -85,15 +85,15 @@ export async function POST(request: NextRequest) {
   // the returned row may be null due to RLS).
   //
   // The service role key is server-only — never exposed to the client.
-  const serviceUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!serviceUrl || !serviceKey) {
+  let sb: ReturnType<typeof getServiceClient>;
+  try {
+    sb = getServiceClient();
+  } catch {
     return NextResponse.json(
       { ok: false, error: 'server_misconfigured' },
       { status: 500 },
     );
   }
-  const sb = createClient(serviceUrl, serviceKey);
 
   const { data, error } = await sb
     .from('candidate_reports')

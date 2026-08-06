@@ -2,16 +2,43 @@
 // FEC has the raw filings; OpenSecrets aggregates them with a delay.
 // If they disagree, FEC wins (it's the source of truth).
 //
+// Money attachment (T11 / spec B1.4, B3): candidate_id is an INPUT to this
+// script — every candidate must already carry `fec_candidate_id` (assigned
+// upstream by the DOE/FEC entity spine, T02) before money is fetched.
+// attachFecTotals() below never searches FEC by name and never attaches an
+// ID by matching name substrings. That substring-match path used to exist
+// here and is the confirmed root cause of two DATA-AUDIT-2026-08-06
+// findings: Joshua Weil appearing twice under two FEC IDs (one row $0, the
+// other $15.9M), and Angela Walls-Windhauser duplicated. It has been
+// removed entirely, not just tightened.
+//
+// Cycle pinning (T11 / spec B3): totals are fetched for exactly one cycle
+// (2026 House, or Senate's election_full/election_year=2026 window) and
+// never retried against another cycle. A candidate with no 2026 rows gets
+// an explicit `{ no2026Filings: true }` marker — this is how prior-cycle
+// money (Scott's trailing $1.46M, Grayson's stale $178K) leaked into 2026
+// figures previously: a failed pull silently left the last successful
+// pull's numbers in place instead of saying so.
+//
 // Usage:
 //   FEC_API_KEY=... npx tsx scripts/ingest/fetch_fec.ts \
 //     --race-id race-nj-07-r-2026 --state NJ --district 07 --cycle 2026
+//
+// Testing: attachFecTotals is exported and pure aside from the injected
+// FEC client call, so it's unit-testable with a mocked
+// `src/lib/api-clients/fec` module — no disk cache, no real network call.
+// main() only runs when this file is the process entry point (see the
+// import.meta.url guard at the bottom), so importing this module for tests
+// never triggers a CLI run or process.exit.
 
 import '../_env';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import {
   searchCandidates,
   getCandidateTotals,
+  type FecCommitteeTotals,
 } from '../../src/lib/api-clients/fec';
 import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';
 import { normalizeFecName } from '../../src/lib/api-clients/names';
@@ -49,6 +76,66 @@ function parseArgs(): Args {
   return { raceId, state, district, cycle, office, primaryParty };
 }
 
+/** Shape money attaches to. Only `fec_candidate_id` and `name` (for
+ * logging) are read; every other field passes through untouched. */
+export interface MoneyCandidate {
+  name?: string;
+  fec_candidate_id?: string;
+  total_raised?: number;
+  fec_totals?: FecCommitteeTotals | { no2026Filings: true };
+  [key: string]: unknown;
+}
+
+export interface AttachFecTotalsOptions {
+  cycle: number;
+  office: 'H' | 'S' | 'P';
+}
+
+/**
+ * Attach FEC totals to each candidate, joined by `fec_candidate_id` only.
+ * Mutates each candidate record in place:
+ *
+ *   - `fec_candidate_id` present, rows found for `cycle`/`office`  ->
+ *     `total_raised` + `fec_totals` (the latter carries
+ *     `coverage_end_date` — see FecCommitteeTotals).
+ *   - `fec_candidate_id` present, no rows for `cycle`/`office`      ->
+ *     `fec_totals = { no2026Filings: true }`; `total_raised` is
+ *     deleted rather than left holding a stale prior-run value.
+ *   - `fec_candidate_id` missing                                    ->
+ *     skipped with a warning. No name-based search or substring
+ *     attachment is attempted — that path has been removed (T11).
+ */
+export async function attachFecTotals(
+  candidates: MoneyCandidate[],
+  { cycle, office }: AttachFecTotalsOptions,
+): Promise<void> {
+  for (const c of candidates) {
+    const label = typeof c.name === 'string' && c.name ? c.name : '(unnamed candidate)';
+    const candidateId = typeof c.fec_candidate_id === 'string' && c.fec_candidate_id
+      ? c.fec_candidate_id
+      : undefined;
+
+    if (!candidateId) {
+      console.warn(
+        `[fec] ${label}: no fec_candidate_id on record; skipping money (no name-based lookup allowed)`,
+      );
+      continue;
+    }
+
+    const totals = await getCandidateTotals(candidateId, { cycle, office });
+    if (!totals) {
+      console.warn(`[fec] ${label}: no ${cycle} filings for ${candidateId} (office ${office})`);
+      c.fec_totals = { no2026Filings: true };
+      delete c.total_raised;
+      continue;
+    }
+
+    console.log(`[fec] ${label} (${candidateId}): $${totals.receipts.toLocaleString()} through ${totals.coverage_end_date ?? 'unknown'}`);
+    c.total_raised = totals.receipts;
+    c.fec_totals = totals;
+  }
+}
+
 async function main() {
   const { raceId, state, district, cycle, office, primaryParty } = parseArgs();
   const partialPath = join(CANDIDATE_FIXTURE_DIR, `${raceId}.partial.json`);
@@ -59,7 +146,7 @@ async function main() {
   let fixture: {
     race_id?: string;
     race?: Record<string, unknown>;
-    candidates?: Array<Record<string, unknown> & { name?: string }>;
+    candidates?: MoneyCandidate[];
   };
   if (existsSync(partialPath)) {
     fixture = JSON.parse(readFileSync(partialPath, 'utf8'));
@@ -92,18 +179,19 @@ async function main() {
     ...(fixture.race ?? {}), // preserve any prior overrides (e.g. from Ballotpedia)
   };
 
-  // Pull all FEC candidates registered for this race
-  const fecCandidates = await searchCandidates({ state, district, cycle, office });
-  console.log(`[fec] ${fecCandidates.length} candidates registered for ${state}-${district ?? 'sen'} ${cycle}`);
-
-  // Seed from FEC if the fixture has no candidates yet (Ballotpedia stub
-  // scenarios). Filter to primary party + active-through current cycle so
-  // we don't pull in stale prior-cycle filers.
+  // Roster bootstrap only — NOT part of the money flow. Only runs when the
+  // fixture has no candidates yet (Ballotpedia stub scenarios). Each
+  // candidate is built directly from one FEC search result (fc.candidate_id
+  // carried straight through), so this is not name matching: there is no
+  // step here that guesses which search result belongs to which candidate.
   if (candidates.length === 0) {
     if (!primaryParty) {
       console.error('[fec] fixture empty and no --primary-party flag; cannot infer who to seed. Aborting.');
       process.exit(1);
     }
+    const fecCandidates = await searchCandidates({ state, district, cycle, office });
+    console.log(`[fec] ${fecCandidates.length} candidates registered for ${state}-${district ?? 'sen'} ${cycle}`);
+
     const partyMap: Record<'D' | 'R', RegExp> = { D: /^DEM$|^DFL$/i, R: /^REP$/i };
     const filtered = fecCandidates.filter(
       (fc) =>
@@ -121,38 +209,28 @@ async function main() {
       district: district ?? null,
       office: office === 'H' ? 'U.S. House' : office === 'S' ? 'U.S. Senate' : 'President',
       race_id: raceId,
+      fec_candidate_id: fc.candidate_id,
     }));
     fixture.candidates = candidates;
     fixture.race_id = raceId;
     console.log(`[fec] seeded ${candidates.length} ${primaryParty} candidates from FEC filings`);
   }
 
-  for (const c of candidates) {
-    if (!c.name || typeof c.name !== 'string') continue;
-    const lower = c.name.toLowerCase();
-    const match = fecCandidates.find((fc) => {
-      const normalized = normalizeFecName(fc.name).toLowerCase();
-      return normalized.includes(lower) || lower.includes(normalized);
-    });
-    if (!match) {
-      console.log(`[fec] no FEC match for ${c.name}`);
-      continue;
-    }
-    console.log(`[fec] ${c.name} → ${match.candidate_id}`);
-    const totals = await getCandidateTotals(match.candidate_id, cycle);
-    c.fec_candidate_id = match.candidate_id;
-    if (totals) {
-      // Prefer FEC totals (source of truth) over OpenSecrets aggregation
-      c.total_raised = totals.receipts;
-      c.fec_totals = totals;
-    }
-  }
+  // Money — ID-only, cycle-pinned, no fallback. See attachFecTotals docs.
+  await attachFecTotals(candidates, { cycle, office });
 
   writeFileSync(partialPath, JSON.stringify(fixture, null, 2));
   console.log(`[fec] wrote ${partialPath}`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// Only run the CLI when this file is the process entry point. Importing
+// this module (e.g. from a test) must never parse argv or call
+// process.exit — that guard is what makes attachFecTotals importable and
+// unit-testable in isolation.
+const isMain = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isMain) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}

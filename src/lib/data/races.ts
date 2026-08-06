@@ -10,24 +10,30 @@
 // substitution was the bug class that hid the empty-DB state for weeks
 // during the FL ingest; we don't want that recurring.
 
-import { supabase } from '@/lib/supabase';
+import { getAnonClient } from './adapter-anon';
+import { toRace } from './boundary';
 import type { Race } from '@/types/database';
-import zipDistricts from '../../../supabase/seed/zip-districts.json';
+import zipDistricts from '../../../supabase/seed/zip-districts-2026.json';
 
-interface ZipDistrictEntry {
-  state: string;
-  district: string;
+// zip-districts-2026.json (T04, spec A3) maps each FL ZCTA to every
+// congressional district it overlaps, with `share` = the fraction of
+// the ZCTA's area/population in that district. Split ZIPs carry more
+// than one entry. Full split-ZIP resolution (prompt for street
+// address -> /api/district -> point-in-polygon) is T05/T06 — this
+// module stays on the majority-share district as a same-behavior
+// stopgap so getRacesForZip keeps returning a single district today.
+interface ZipDistrictShare {
+  district: number;
+  share: number;
 }
 
-const ZIP_LOOKUP = zipDistricts as Record<
-  string,
-  ZipDistrictEntry | null | { _note?: string }
->;
+const ZIP_LOOKUP = zipDistricts as Record<string, ZipDistrictShare[] | undefined>;
 
-function lookupZip(zip: string): ZipDistrictEntry | null {
-  const raw = ZIP_LOOKUP[zip];
-  if (!raw || !('state' in raw) || !('district' in raw)) return null;
-  return raw as ZipDistrictEntry;
+function lookupZip(zip: string): string | null {
+  const entries = ZIP_LOOKUP[zip];
+  if (!entries || entries.length === 0) return null;
+  const majority = entries.reduce((best, e) => (e.share > best.share ? e : best));
+  return String(majority.district).padStart(2, '0');
 }
 
 function assertConfigured(): void {
@@ -44,7 +50,7 @@ function assertConfigured(): void {
  */
 export async function getRace(raceId: string): Promise<Race | null> {
   assertConfigured();
-  const { data, error } = await supabase
+  const { data, error } = await getAnonClient()
     .from('races')
     .select(
       'id, state, district, office, election_date, cycle, election_type, primary_party'
@@ -55,7 +61,7 @@ export async function getRace(raceId: string): Promise<Race | null> {
     console.error('[data/races.getRace] error:', error.message);
     return null;
   }
-  return (data as Race | null) ?? null;
+  return data ? toRace(data) : null;
 }
 
 /**
@@ -67,7 +73,7 @@ export async function getRace(raceId: string): Promise<Race | null> {
 export async function getRacesByIds(ids: string[]): Promise<Race[]> {
   if (ids.length === 0) return [];
   assertConfigured();
-  const { data, error } = await supabase
+  const { data, error } = await getAnonClient()
     .from('races')
     .select(
       'id, state, district, office, election_date, cycle, election_type, primary_party'
@@ -78,7 +84,7 @@ export async function getRacesByIds(ids: string[]): Promise<Race[]> {
     return [];
   }
   const byId = new Map<string, Race>();
-  for (const row of (data ?? []) as Race[]) byId.set(row.id, row);
+  for (const row of data ?? []) byId.set(row.id, toRace(row));
   return ids.map((id) => byId.get(id)).filter((r): r is Race => r !== undefined);
 }
 
@@ -93,10 +99,9 @@ export async function getRacesByIds(ids: string[]): Promise<Race[]> {
  * not-yet-seeded) drop out of the result quietly via getRacesByIds.
  */
 export async function getRacesForZip(zip: string): Promise<Race[]> {
-  const lookup = lookupZip(zip);
-  if (!lookup || lookup.state !== 'FL') return [];
+  const districtId = lookupZip(zip);
+  if (!districtId) return [];
 
-  const districtId = lookup.district.padStart(2, '0');
   const candidateRaceIds = [
     `race-fl-${districtId}-r-2026`,
     `race-fl-${districtId}-d-2026`,

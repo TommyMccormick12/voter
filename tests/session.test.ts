@@ -1,8 +1,8 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { getOrCreateSession, getSessionId, setSessionLocation, getSessionToken } from '@/lib/session';
-import { supabase } from '@/lib/supabase';
+import { getAnonClient } from '@/lib/data/adapter-anon';
 
-vi.mock('@/lib/supabase', () => {
+vi.mock('@/lib/data/adapter-anon', () => {
   const mockChain = {
     insert: vi.fn().mockReturnThis(),
     select: vi.fn().mockReturnThis(),
@@ -10,10 +10,9 @@ vi.mock('@/lib/supabase', () => {
     eq: vi.fn().mockReturnThis(),
     single: vi.fn().mockResolvedValue({ data: { id: 'mock-session-id' }, error: null }),
   };
+  const client = { from: vi.fn(() => mockChain) };
   return {
-    supabase: {
-      from: vi.fn(() => mockChain),
-    },
+    getAnonClient: vi.fn(() => client),
     __mockChain: mockChain,
   };
 });
@@ -44,13 +43,13 @@ describe('session', () => {
 
     it('calls supabase insert for new sessions', async () => {
       await getOrCreateSession();
-      expect(supabase.from).toHaveBeenCalledWith('sessions');
+      expect(getAnonClient().from).toHaveBeenCalledWith('sessions');
     });
 
     it('calls supabase update for returning sessions', async () => {
       localStorage.setItem('voter_session_token', 'returning-token');
       await getOrCreateSession();
-      expect(supabase.from).toHaveBeenCalledWith('sessions');
+      expect(getAnonClient().from).toHaveBeenCalledWith('sessions');
     });
   });
 
@@ -85,7 +84,7 @@ describe('session', () => {
   describe('setSessionLocation', () => {
     it('calls supabase update with zip code', async () => {
       await setSessionLocation('test-token', '90210');
-      expect(supabase.from).toHaveBeenCalledWith('sessions');
+      expect(getAnonClient().from).toHaveBeenCalledWith('sessions');
     });
   });
 });

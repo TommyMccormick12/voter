@@ -28,6 +28,11 @@ export interface FetchOptions {
 let lastRequestAt = 0;
 const MIN_GAP_MS = 250;
 
+/** Mask secret-bearing query parameters before a URL reaches logs or errors. */
+export function redactUrl(url: string): string {
+  return url.replace(/([?&](?:api_key|apikey|key|token|access_token)=)[^&#]+/gi, '$1***');
+}
+
 /**
  * Throttled fetch with disk cache. Caches the response body keyed by
  * SHA-256 of (url + cacheTag). Cache invalidation: delete the file.
@@ -48,10 +53,12 @@ export async function fetchCached<T = unknown>(
   if (wait > 0) await sleep(wait);
   lastRequestAt = Date.now();
 
-  console.log(`[fetch] ${url}`);
+  console.log(`[fetch] ${redactUrl(url)}`);
   const res = await fetch(url, { headers: options.headers });
   if (!res.ok) {
-    throw new Error(`HTTP ${res.status} on ${url}: ${await res.text().catch(() => '')}`);
+    throw new Error(
+      `HTTP ${res.status} on ${redactUrl(url)}: ${await res.text().catch(() => '')}`
+    );
   }
 
   const ct = res.headers.get('content-type') ?? '';
@@ -162,7 +169,7 @@ export async function fetchBrowserCachedText(
   if (wait > 0) await sleep(wait);
   lastRequestAt = Date.now();
 
-  console.log(`[fetch:browser] ${url}`);
+  console.log(`[fetch:browser] ${redactUrl(url)}`);
   const ctx = await getBrowserContext();
   const page = await ctx.newPage();
   try {

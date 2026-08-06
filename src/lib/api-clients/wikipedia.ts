@@ -4,6 +4,16 @@
 // after OpenSecrets, FollowTheMoney, Ballotpedia, and ProPublica all
 // retired or gated their APIs.
 //
+// GATING CONTRACT (Spec B1.2 / Ticket T09): do not call
+// getWikipediaCandidate() directly from an ingest script. Call
+// resolveCandidacyQid() in ./wikidata first and only fetch a page when it
+// returns `gated: false`, using its `enwikiTitle` as the page title. This
+// fixed the wrong-person bug class (DATA-AUDIT-2026-08-06.md): the FL-11
+// "Daniel Webster" fixture carried the bio of the 1782-1852 statesman
+// because the old code picked the first Wikipedia page a name search hit.
+// scripts/ingest/fetch_platform.ts is the only caller and goes through the
+// gate.
+//
 // Docs: https://en.wikipedia.org/api/rest_v1/
 // Auth: none required, but send a polite User-Agent.
 // Rate limit: ~200 calls/sec from a single IP per Wikipedia's etiquette
