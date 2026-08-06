@@ -166,7 +166,11 @@ describe('POST /api/report', () => {
         category: 'factual_error',
       }),
     );
-    const insertedPayload = table.insert.mock.calls[0][0];
+    const insertedPayload = (table.insert.mock.calls as unknown[][])[0]?.[0] as Record<
+      string,
+      unknown
+    >;
+    expect(insertedPayload).toBeDefined();
     expect(insertedPayload.session_id).not.toBe('sess-token-abc');
   });
 
@@ -210,7 +214,11 @@ describe('POST /api/report', () => {
         ip_hash: 'hashed:1.2.3.4',
       }),
     );
-    const insertedPayload = table.insert.mock.calls[0][0];
+    const insertedPayload = (table.insert.mock.calls as unknown[][])[0]?.[0] as Record<
+      string,
+      unknown
+    >;
+    expect(insertedPayload).toBeDefined();
     expect(typeof insertedPayload.description_hash).toBe('string');
     expect(insertedPayload.description_hash).toHaveLength(64); // sha256 hex
   });
