@@ -36,6 +36,7 @@ export type DataSource =
   | 'propublica'
   | 'govtrack'
   | 'congress_gov'
+  | 'voteview'
   | 'campaign_site'
   | 'news'
   | 'followthemoney'

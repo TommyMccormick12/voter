@@ -1,28 +1,50 @@
 // Fetch congressional voting records for incumbent candidates only.
 // Non-incumbents have no record (use statements instead).
 //
-// Source: GovTrack API (keyless, replaced ProPublica which sunset in 2023).
-// See src/lib/api-clients/govtrack.ts for the client.
+// Source (T10 / spec B1.3 + B2, Decision 6): House via the Congress.gov
+// official API (src/lib/api-clients/congress-gov.ts), Senate via Voteview
+// CSV exports (src/lib/api-clients/voteview.ts). Both key votes by
+// bioguide ID. The GovTrack scrape client (govtrack.ts) and its
+// `matchRoleByName` name-matching fallback are deleted — that fallback is
+// the confirmed root cause of the Royal-Webster-vs-Daniel-Webster
+// misattribution in DATA-AUDIT-2026-08-06 (a challenger with no bioguide
+// inherited an incumbent's govtrack_id and voting record via a last-name
+// match). Matching here is ID-only: a candidate's `fec_candidate_id`
+// (assigned upstream by the DOE/FEC entity spine, T02/fetch_fec.ts) is
+// looked up in the congress-legislators crosswalk
+// (src/lib/api-clients/legislators.ts); either it resolves to exactly one
+// bioguide or the candidate has no voting record. No name is ever read.
 //
 // Usage:
-//   npx tsx scripts/ingest/fetch_votes.ts \
+//   CONGRESS_GOV_API_KEY=... npx tsx scripts/ingest/fetch_votes.ts \
 //     --race-id race-fl-10-r-2026 --state FL --chamber house
 //
-// Caching: every API response is cached to supabase/seed/raw/www.govtrack.us/
-// via fetchCached, so re-runs are free.
+// Caching: every API/CSV response is cached to supabase/seed/raw/ via
+// fetchCached/fetchCachedText, so re-runs are free.
 
 import '../_env';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import {
-  findMember,
-  getMemberVotes,
-  getVoteDetail,
-  normalizeVotePosition,
-  billIdFromRelated,
-} from '../../src/lib/api-clients/govtrack';
+  fetchLegislators,
+  buildFecToBioguideIndex,
+} from '../../src/lib/api-clients/legislators';
+import {
+  getMemberHouseVotes,
+  billIdFromHouseVote,
+  billUrlFromHouseVote,
+  normalizeVoteCast,
+  CURRENT_CONGRESS,
+  type MemberHouseVote,
+} from '../../src/lib/api-clients/congress-gov';
+import {
+  getMemberSenateVotes,
+  billIdFromRollCall,
+  normalizeCastCode,
+  type MemberSenateVote,
+} from '../../src/lib/api-clients/voteview';
 import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';
-import { stripTitles } from '../../src/lib/api-clients/names';
 
 const VOTES_PER_CANDIDATE = 50;
 
@@ -49,9 +71,8 @@ function parseArgs(): Args {
   return { raceId, state, chamber };
 }
 
-// Heuristic bill-title → issue slug mapping. Same regex set as the prior
-// ProPublica script; deliberately conservative — better to miss a tag
-// than to mis-tag, since these feed Haiku synthesis.
+// Heuristic bill-title → issue slug mapping. Deliberately conservative —
+// better to miss a tag than to mis-tag, since these feed Haiku synthesis.
 function inferIssues(billTitle: string, billSummary: string | null): string[] {
   const text = `${billTitle} ${billSummary ?? ''}`.toLowerCase();
   const issues: string[] = [];
@@ -73,73 +94,186 @@ function inferIssues(billTitle: string, billSummary: string | null): string[] {
   return issues;
 }
 
-async function main() {
-  const { raceId, state, chamber } = parseArgs();
-  const partialPath = join(CANDIDATE_FIXTURE_DIR, `${raceId}.partial.json`);
-  if (!existsSync(partialPath)) {
-    console.error(`Partial fixture missing: ${partialPath}. Run fetch_ballotpedia first.`);
-    process.exit(1);
-  }
-  const fixture = JSON.parse(readFileSync(partialPath, 'utf8'));
-  const candidates: Array<Record<string, unknown> & { name?: string }> =
-    fixture.candidates ?? [];
+// ============================================================
+// Fixture shapes
+// ============================================================
 
+export interface VoteRecordRow {
+  bill_id: string;
+  bill_title: string;
+  bill_summary: string | null;
+  vote: 'yea' | 'nay' | 'present' | 'absent' | 'no_vote';
+  issue_slugs: string[];
+  vote_date: string;
+  source: 'congress_gov' | 'voteview';
+  source_url: string | null;
+  significance: 'major' | 'procedural';
+}
+
+export interface VoteCandidate {
+  name?: string;
+  fec_candidate_id?: string;
+  bioguide_id?: string;
+  incumbent?: boolean;
+  voting_record?: VoteRecordRow[];
+  [key: string]: unknown;
+}
+
+// ============================================================
+// Loud-failure validation (spec B1 tail / B4): these two bug classes must
+// be impossible in written output, not just rare.
+// ============================================================
+
+/** Throws when any row has a missing/empty/literal-"undefined" bill_id.
+ * DATA-AUDIT-2026-08-06: 20 Senate voting entries had bill_id
+ * "vote-undefined" from an unguarded template-literal interpolation. */
+export function assertNoUndefinedBillIds(rows: VoteRecordRow[], label: string): void {
+  for (const row of rows) {
+    const id = row.bill_id;
+    if (!id || typeof id !== 'string' || /undefined/i.test(id)) {
+      throw new Error(
+        `[votes] ${label}: invalid bill_id "${String(id)}" on a voting_record row — refusing to write. ` +
+          `Every row must carry a real bill_id or a non-undefined fallback (housevote-*/senatevote-*).`,
+      );
+    }
+  }
+}
+
+/** Throws when the same bill_id appears twice for one candidate with
+ * different `vote` values. DATA-AUDIT-2026-08-06: 89 bill/candidate pairs
+ * showed both YEA and NAY on the same roll call — a single member cannot
+ * cast two positions on one vote. */
+export function assertNoYeaNayContradiction(rows: VoteRecordRow[], label: string): void {
+  const seen = new Map<string, string>();
+  for (const row of rows) {
+    const prior = seen.get(row.bill_id);
+    if (prior && prior !== row.vote) {
+      throw new Error(
+        `[votes] ${label}: contradictory positions on bill_id "${row.bill_id}" ` +
+          `(${prior} then ${row.vote}) — refusing to write.`,
+      );
+    }
+    seen.set(row.bill_id, row.vote);
+  }
+}
+
+function houseVotesToRows(votes: MemberHouseVote[]): VoteRecordRow[] {
+  return votes.map(({ vote, position }) => {
+    const billId =
+      billIdFromHouseVote(vote) ??
+      `housevote-${vote.congress}-${vote.sessionNumber}-${vote.rollCallNumber}`;
+    const title = vote.voteQuestion ?? `House roll call ${vote.rollCallNumber}`;
+    const summary = vote.result ?? null;
+    return {
+      bill_id: billId,
+      bill_title: title,
+      bill_summary: summary,
+      vote: normalizeVoteCast(position.voteCast),
+      issue_slugs: inferIssues(title, summary),
+      vote_date: vote.startDate.slice(0, 10),
+      source: 'congress_gov',
+      source_url: billUrlFromHouseVote(vote),
+      significance: vote.legislationType || vote.amendmentType ? 'major' : 'procedural',
+    };
+  });
+}
+
+function senateVotesToRows(votes: MemberSenateVote[]): VoteRecordRow[] {
+  return votes.map(({ rollCall, cast_code }) => {
+    const billId =
+      billIdFromRollCall(rollCall) ?? `senatevote-${rollCall.congress}-${rollCall.rollnumber}`;
+    const title = rollCall.vote_desc ?? rollCall.vote_question ?? `Senate roll call ${rollCall.rollnumber}`;
+    const summary = rollCall.vote_result ?? null;
+    return {
+      bill_id: billId,
+      bill_title: title,
+      bill_summary: summary,
+      vote: normalizeCastCode(cast_code),
+      issue_slugs: inferIssues(title, summary),
+      vote_date: rollCall.date,
+      source: 'voteview',
+      source_url: null,
+      significance: rollCall.bill_number ? 'major' : 'procedural',
+    };
+  });
+}
+
+export interface AttachVotingRecordsOptions {
+  chamber: 'house' | 'senate';
+  congress?: number;
+}
+
+/**
+ * Attach voting_record to each candidate, mutating in place. ID-only:
+ * `fec_candidate_id` is looked up in `fecToBioguide`; a miss means a
+ * non-incumbent challenger (no name-based fallback exists or is attempted).
+ * Exported + injectable (fecToBioguide is passed in, not fetched here) so
+ * this is unit-testable against mocked congress-gov/voteview clients with
+ * no network or fs access — see tests/fetch_votes.test.ts.
+ */
+export async function attachVotingRecords(
+  candidates: VoteCandidate[],
+  fecToBioguide: Map<string, string>,
+  { chamber, congress = CURRENT_CONGRESS }: AttachVotingRecordsOptions,
+): Promise<void> {
   for (const c of candidates) {
-    if (!c.name || typeof c.name !== 'string') continue;
-    // Strip FEC-embedded titles before sending to GovTrack. The display
-    // name in the fixture keeps everything; this is lookup-only.
-    const lookupName = stripTitles(c.name);
-    const match = await findMember(lookupName, state, chamber);
-    if (!match) {
-      console.log(`[votes] no member match for ${c.name} (challenger or wrong chamber)`);
+    const label = typeof c.name === 'string' && c.name ? c.name : '(unnamed candidate)';
+    const fecId = typeof c.fec_candidate_id === 'string' ? c.fec_candidate_id : undefined;
+    const bioguideId = fecId ? fecToBioguide.get(fecId) : undefined;
+
+    if (!bioguideId) {
+      console.log(
+        `[votes] ${label}: no bioguide match (challenger, or no fec_candidate_id yet) — no voting record`,
+      );
       c.incumbent = false;
       c.voting_record = [];
       continue;
     }
-    console.log(
-      `[votes] ${c.name} → govtrack=${match.govtrack_id} bioguide=${match.bioguide_id}`,
-    );
+
+    console.log(`[votes] ${label} -> bioguide=${bioguideId}`);
     c.incumbent = true;
-    c.govtrack_id = match.govtrack_id;
-    c.bioguide_id = match.bioguide_id;
+    c.bioguide_id = bioguideId;
 
-    const voteRows = await getMemberVotes(match.govtrack_id, VOTES_PER_CANDIDATE);
-    const enriched: Array<Record<string, unknown>> = [];
+    const rows =
+      chamber === 'house'
+        ? houseVotesToRows(await getMemberHouseVotes(bioguideId, congress, [2, 1], VOTES_PER_CANDIDATE))
+        : senateVotesToRows(await getMemberSenateVotes(bioguideId, congress, VOTES_PER_CANDIDATE));
 
-    for (const row of voteRows) {
-      const detail = await getVoteDetail(row.option.vote);
-      if (!detail) continue;
+    assertNoUndefinedBillIds(rows, label);
+    assertNoYeaNayContradiction(rows, label);
 
-      // Skip procedural votes with no bill attached — they're noise in the
-      // record and the synthesis step doesn't get useful signal from them.
-      const billId = billIdFromRelated(detail.related_bill);
-      if (!billId && detail.category === 'procedural') continue;
-
-      const title = detail.related_bill?.title ?? detail.question;
-      const summary = detail.related_bill?.current_status_description ?? null;
-
-      enriched.push({
-        bill_id: billId ?? `vote-${detail.id}`,
-        bill_title: title,
-        bill_summary: summary,
-        vote: normalizeVotePosition(row.option.value),
-        issue_slugs: inferIssues(title, summary),
-        vote_date: row.created.slice(0, 10), // ISO datetime → YYYY-MM-DD
-        source: 'govtrack',
-        source_url: detail.link,
-        significance: detail.category === 'procedural' ? 'procedural' : 'major',
-      });
-    }
-
-    c.voting_record = enriched;
-    console.log(`[votes] ${c.name}: ${enriched.length} votes captured`);
+    c.voting_record = rows;
+    console.log(`[votes] ${label}: ${rows.length} votes captured`);
   }
+}
+
+async function main() {
+  const { raceId, state, chamber } = parseArgs();
+  console.log(`[votes] ${raceId} (${state}, ${chamber}) — ID-only crosswalk, no name matching`);
+  const partialPath = join(CANDIDATE_FIXTURE_DIR, `${raceId}.partial.json`);
+  if (!existsSync(partialPath)) {
+    console.error(`Partial fixture missing: ${partialPath}. Run fetch_fec/fetch_ballotpedia first.`);
+    process.exit(1);
+  }
+  const fixture = JSON.parse(readFileSync(partialPath, 'utf8'));
+  const candidates: VoteCandidate[] = fixture.candidates ?? [];
+
+  const legislators = await fetchLegislators();
+  const fecToBioguide = buildFecToBioguideIndex(legislators);
+
+  await attachVotingRecords(candidates, fecToBioguide, { chamber });
 
   writeFileSync(partialPath, JSON.stringify(fixture, null, 2));
   console.log(`[votes] wrote ${partialPath}`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// Only run the CLI when this file is the process entry point — importing
+// attachVotingRecords/assertNo* from tests must never parse argv or call
+// process.exit.
+const isMain = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isMain) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
