@@ -1,5 +1,4 @@
 // Party-color theming utility — maps primary_party to Tailwind class strings.
-// Matches the visual design in public/mockup-mobile.html and public/mockup-desktop.html.
 //
 // Usage:
 //   const theme = getPartyTheme(candidate.primary_party);

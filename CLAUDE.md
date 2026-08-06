@@ -131,9 +131,8 @@ supabase/
   migrations/                 # 001 base, 004 primary pivot, 005 RLS, 006 issues seed,
                               # 007 text IDs, 008 races RLS, 009 candidate_reports
   seed/                       # candidates/*.partial.json fixtures, raw/ cache, review/ docs
-public/
-  mockup-mobile.html, mockup-desktop.html  # Design source of truth
-  voter-mockups.zip
+public/                       # static assets (mockup HTMLs retired 2026-08-06;
+                              # design source of truth is now code — see DECISIONS-2026-08-06.md #11)
 ```
 
 ## Commands
