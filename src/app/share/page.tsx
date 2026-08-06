@@ -26,13 +26,15 @@ export async function generateMetadata({
   const slug = params.c ?? '';
   const score = clampScore(params.s);
 
-  const race = raceId ? await getRace(raceId) : null;
+  const raceResult = raceId ? await getRace(raceId) : null;
+  const race = raceResult?.ok ? raceResult.data : null;
   // Cross-validate: candidate must belong to the named race.
   // A bare global lookup would let /share?race=race-nj-07&c=mark-warner render
   // a Democrat inside an NJ-07 (R) header. Filter to the race's roster instead.
+  const candidatesResult = raceId && slug ? await getCandidatesForRace(raceId) : null;
   const candidate =
-    raceId && slug
-      ? (await getCandidatesForRace(raceId)).find((c) => c.slug === slug) ?? null
+    slug && candidatesResult?.ok
+      ? candidatesResult.data.find((c) => c.slug === slug) ?? null
       : null;
 
   const ogParams = new URLSearchParams();
@@ -74,16 +76,20 @@ export default async function SharePage({ searchParams }: SharePageProps) {
   const slug = params.c ?? '';
   const score = clampScore(params.s);
 
-  const race = raceId ? await getRace(raceId) : null;
+  const raceResult = raceId ? await getRace(raceId) : null;
+  const race = raceResult?.ok ? raceResult.data : null;
   // Cross-validate: candidate must belong to the named race.
   // A bare global lookup would let /share?race=race-nj-07&c=mark-warner render
   // a Democrat inside an NJ-07 (R) header. Filter to the race's roster instead.
+  const candidatesResult = raceId && slug ? await getCandidatesForRace(raceId) : null;
   const candidate =
-    raceId && slug
-      ? (await getCandidatesForRace(raceId)).find((c) => c.slug === slug) ?? null
+    slug && candidatesResult?.ok
+      ? candidatesResult.data.find((c) => c.slug === slug) ?? null
       : null;
 
-  // No match in URL — show the generic invite.
+  // No match in URL, or the underlying read failed — show the generic
+  // invite either way; this page's core function (a shareable link
+  // preview) degrades safely to that rather than a hard error page.
   if (!race || !candidate) {
     return (
       <main className="min-h-screen flex items-center justify-center bg-white px-4">

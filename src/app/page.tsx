@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getOrCreateSession, setSessionLocation } from '@/lib/session';
 
 const ZIP_REGEX = /^\d{5}(-\d{4})?$/;
 
@@ -12,7 +11,11 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  async function handleSubmit(e: React.FormEvent) {
+  // Session identity comes solely from the middleware-issued voter_session
+  // httpOnly cookie (T21/Spec E1) — no client-side session bookkeeping
+  // needed here. The zip travels to /race-picker via the URL, which is
+  // also what makes that page shareable/bookmarkable/refresh-safe.
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const zip = zipCode.trim();
 
@@ -23,9 +26,6 @@ export default function Home() {
 
     setError('');
     setLoading(true);
-
-    const token = await getOrCreateSession();
-    await setSessionLocation(token, zip);
     router.push(`/race-picker?zip=${zip}`);
   }
 

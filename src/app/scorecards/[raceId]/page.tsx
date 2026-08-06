@@ -16,11 +16,20 @@ interface PageProps {
  */
 export default async function ScorecardsPage({ params }: PageProps) {
   const { raceId } = await params;
-  const race = await getRace(raceId);
+  const raceResult = await getRace(raceId);
 
+  if (!raceResult.ok) {
+    return <ScorecardsErrorState raceId={raceId} />;
+  }
+
+  const race = raceResult.data;
   if (!race) notFound();
 
-  const candidates = await getCandidatesForRace(raceId);
+  const candidatesResult = await getCandidatesForRace(raceId);
+  if (!candidatesResult.ok) {
+    return <ScorecardsErrorState raceId={raceId} />;
+  }
+  const candidates = candidatesResult.data;
   const theme = getPartyTheme(race.primary_party);
 
   const partyName =
@@ -105,6 +114,40 @@ export default async function ScorecardsPage({ params }: PageProps) {
             : `${candidates.length} candidates with policy data in this race. Explore their records above; match comparison opens when we have 3+ candidates.`}
         </p>
       ) : null}
+    </main>
+  );
+}
+
+/**
+ * Error state: the read itself failed (DB outage or config problem).
+ * The candidate-count empty state ("No candidates yet — being curated")
+ * already lives in ScorecardCarousel and covers the legitimate-empty
+ * case; this covers the distinct failure case. Retry re-navigates to
+ * this same URL, which re-runs the server-side data fetch.
+ */
+function ScorecardsErrorState({ raceId }: { raceId: string }) {
+  return (
+    <main className="max-w-2xl mx-auto px-4 py-16 text-center">
+      <h1 className="text-2xl font-bold text-gray-900 mb-3">
+        We couldn&apos;t load this race right now
+      </h1>
+      <p className="text-gray-500 mb-6">
+        Something went wrong on our end. Try again in a moment.
+      </p>
+      <div className="flex items-center justify-center gap-3">
+        <Link
+          href={`/scorecards/${raceId}`}
+          className="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700"
+        >
+          Try again
+        </Link>
+        <Link
+          href="/race-picker"
+          className="inline-block text-gray-600 font-medium px-6 py-3 rounded-lg hover:bg-gray-100"
+        >
+          All races
+        </Link>
+      </div>
     </main>
   );
 }

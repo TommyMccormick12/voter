@@ -8,12 +8,12 @@
 //
 // NOT server-only: reads NEXT_PUBLIC_SUPABASE_URL/ANON_KEY, which are
 // safe to ship to the browser (RLS is the real access boundary, not
-// key secrecy). Consumed by src/lib/data/* server helpers AND by the
-// legacy client-side src/lib/session.ts (localStorage session path,
-// still live-imported from src/app/page.tsx — spec E1/T21 removes it;
-// until then it needs a working anon client same as before this
-// ticket). The service-role adapter (adapter-service.ts) stays
-// server-only — that key must never reach the client.
+// key secrecy). Consumed by src/lib/data/* server helpers. The legacy
+// client-side src/lib/session.ts (localStorage session path) was
+// removed in T21/Spec E1 — the middleware voter_session httpOnly
+// cookie is the only session identity now. The service-role adapter
+// (adapter-service.ts) stays server-only — that key must never reach
+// the client.
 
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import type { Database } from '@/types/supabase';

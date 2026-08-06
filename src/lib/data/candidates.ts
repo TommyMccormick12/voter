@@ -13,6 +13,12 @@
 // Active filter (active = true) is applied on both paths. Races whose
 // candidates are all unsynthesized show up in race-picker as "Curating
 // — check back soon" via the existing empty-state UI.
+//
+// T16 (Spec C3): every export returns a DataResult<T> instead of
+// swallowing a Supabase error into `null` / `[]` / `{}`. `ok: true`
+// with an empty result is a legitimate empty state; `ok: false` is a
+// DB outage or config problem the caller must show as an honest error
+// state.
 
 import { getAnonClient } from './adapter-anon';
 import {
@@ -22,15 +28,19 @@ import {
   toCandidateTopIndustry,
   toCandidateVote,
   toCandidateStatement,
+  dataOk,
+  dataErr,
+  type DataResult,
+  type DataError,
 } from './boundary';
 import type { CandidateWithFullData } from '@/types/database';
 
-function assertConfigured(): void {
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
-    throw new Error(
-      'NEXT_PUBLIC_SUPABASE_URL is not set. Add it to .env.local (see .env.example).'
-    );
-  }
+function checkConfigured(): DataError | null {
+  if (process.env.NEXT_PUBLIC_SUPABASE_URL) return null;
+  return {
+    kind: 'config_error',
+    message: 'NEXT_PUBLIC_SUPABASE_URL is not set. Add it to .env.local (see .env.example).',
+  };
 }
 
 /** Columns shared by every candidate query. Keeps the SELECT list DRY. */
@@ -41,11 +51,14 @@ const CANDIDATE_BASE_COLUMNS =
  * Active candidates for one race, ordered by total_raised desc then name.
  * Carousel display only — child relations stay undefined. Use
  * getCandidateBySlug when you need donors/votes/statements/positions.
+ * `ok: true, data: []` means zero active candidates (render "Curating").
  */
 export async function getCandidatesForRace(
   raceId: string
-): Promise<CandidateWithFullData[]> {
-  assertConfigured();
+): Promise<DataResult<CandidateWithFullData[]>> {
+  const cfgErr = checkConfigured();
+  if (cfgErr) return dataErr(cfgErr);
+
   const { data, error } = await getAnonClient()
     .from('candidates')
     .select(CANDIDATE_BASE_COLUMNS)
@@ -55,19 +68,22 @@ export async function getCandidatesForRace(
     .order('name', { ascending: true });
   if (error) {
     console.error('[data/candidates.getCandidatesForRace] error:', error.message);
-    return [];
+    return dataErr({ kind: 'db_error', message: 'Could not load candidates for this race.' });
   }
-  return (data ?? []).map((row) => ({ ...toCandidate(row) }));
+  return dataOk((data ?? []).map((row) => ({ ...toCandidate(row) })));
 }
 
 /**
  * Full candidate detail by slug. ONE PostgREST round-trip with all 5
  * child relations embedded. voting_record capped at 50 most-recent rows.
+ * `data: null` means no active candidate matches the slug (404 pattern).
  */
 export async function getCandidateBySlug(
   slug: string
-): Promise<CandidateWithFullData | null> {
-  assertConfigured();
+): Promise<DataResult<CandidateWithFullData | null>> {
+  const cfgErr = checkConfigured();
+  if (cfgErr) return dataErr(cfgErr);
+
   const { data, error } = await getAnonClient()
     .from('candidates')
     .select(
@@ -100,9 +116,9 @@ export async function getCandidateBySlug(
 
   if (error) {
     console.error('[data/candidates.getCandidateBySlug] error:', error.message);
-    return null;
+    return dataErr({ kind: 'db_error', message: 'Could not load this candidate.' });
   }
-  if (!data) return null;
+  if (!data) return dataOk(null);
 
   const row = data as Record<string, unknown>;
   const base = toCandidate(row);
@@ -114,14 +130,14 @@ export async function getCandidateBySlug(
     (row.candidate_voting_record as Record<string, unknown>[] | null) ?? [];
   const statements = (row.candidate_statements as Record<string, unknown>[] | null) ?? [];
 
-  return {
+  return dataOk({
     ...base,
     positions: positions.map(toCandidatePosition),
     donors: donors.map(toCandidateDonor),
     top_industries: topIndustries.map(toCandidateTopIndustry),
     voting_record: votingRecord.map(toCandidateVote),
     statements: statements.map(toCandidateStatement),
-  };
+  });
 }
 
 /**
@@ -135,10 +151,13 @@ export async function getCandidateBySlug(
  * has zero active candidates it gets `{ count: 0, sample: [] }`.
  */
 export async function getCandidateSamplesForRaces(raceIds: string[]): Promise<
-  Record<string, { count: number; sample: Array<{ id: string; name: string }> }>
+  DataResult<Record<string, { count: number; sample: Array<{ id: string; name: string }> }>>
 > {
-  if (raceIds.length === 0) return {};
-  assertConfigured();
+  if (raceIds.length === 0) return dataOk({});
+
+  const cfgErr = checkConfigured();
+  if (cfgErr) return dataErr(cfgErr);
+
   const { data, error } = await getAnonClient()
     .from('candidates')
     .select('id, name, race_id')
@@ -151,7 +170,7 @@ export async function getCandidateSamplesForRaces(raceIds: string[]): Promise<
       '[data/candidates.getCandidateSamplesForRaces] error:',
       error.message
     );
-    return {};
+    return dataErr({ kind: 'db_error', message: 'Could not load candidate counts.' });
   }
   const out: Record<string, { count: number; sample: Array<{ id: string; name: string }> }> = {};
   for (const id of raceIds) out[id] = { count: 0, sample: [] };
@@ -165,5 +184,5 @@ export async function getCandidateSamplesForRaces(raceIds: string[]): Promise<
     slot.count += 1;
     if (slot.sample.length < 4) slot.sample.push({ id: row.id, name: row.name });
   }
-  return out;
+  return dataOk(out);
 }

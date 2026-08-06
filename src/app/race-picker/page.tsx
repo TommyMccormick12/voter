@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getRacesForZip } from '@/lib/data/races';
+import { getRacesForZip, isZipCovered } from '@/lib/data/races';
 import { getCandidateSamplesForRaces } from '@/lib/data/candidates';
 import { getPartyTheme } from '@/lib/party-theme';
 import { formatLocalDate, daysUntilLocalDate } from '@/lib/dates';
@@ -38,10 +38,22 @@ export default async function RacePickerPage({ searchParams }: PageProps) {
     );
   }
 
-  const races = await getRacesForZip(zip);
+  const racesResult = await getRacesForZip(zip);
+
+  if (!racesResult.ok) {
+    return <ErrorState zip={zip} />;
+  }
+
+  const races = racesResult.data;
   // Single batch query for all race candidate samples — keeps RaceCard
   // free of per-card fetches (the mock implementation hid an N+1 here).
-  const samples = await getCandidateSamplesForRaces(races.map((r) => r.id));
+  const samplesResult = await getCandidateSamplesForRaces(races.map((r) => r.id));
+
+  if (!samplesResult.ok) {
+    return <ErrorState zip={zip} />;
+  }
+
+  const samples = samplesResult.data;
   // Server component runs per request; "days until" is computed once here
   // and threaded down to RaceCard so the inner component stays pure.
   // eslint-disable-next-line react-hooks/purity -- server component, intentional per-request value
@@ -64,7 +76,11 @@ export default async function RacePickerPage({ searchParams }: PageProps) {
       </p>
 
       {races.length === 0 ? (
-        <EmptyState />
+        isZipCovered(zip) ? (
+          <CuratingEmptyState />
+        ) : (
+          <OutOfCoverageEmptyState />
+        )
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {races.map((race) => (
@@ -166,7 +182,12 @@ function RaceCard({
   );
 }
 
-function EmptyState() {
+/**
+ * Filtered-empty state: the zip is outside FL district coverage. This
+ * is a filter mismatch, not missing data — distinct from
+ * CuratingEmptyState below.
+ */
+function OutOfCoverageEmptyState() {
   return (
     <div className="rounded-2xl border-2 border-dashed border-gray-300 bg-gray-50 p-10 text-center">
       <p className="text-lg text-gray-700 font-medium mb-2">Florida only — for now</p>
@@ -181,5 +202,52 @@ function EmptyState() {
         Try a Florida zip →
       </Link>
     </div>
+  );
+}
+
+/**
+ * Empty-data state: the zip maps to an FL district, but no races are
+ * seeded for it yet. Distinct from OutOfCoverageEmptyState above.
+ */
+function CuratingEmptyState() {
+  return (
+    <div className="rounded-2xl border-2 border-dashed border-gray-300 bg-gray-50 p-10 text-center">
+      <p className="text-lg text-gray-700 font-medium mb-2">Curating — check back soon</p>
+      <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">
+        We don&apos;t have race data for your district loaded yet. We&apos;re
+        working through the Florida primary ballot district by district.
+      </p>
+      <Link
+        href="/"
+        className="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700"
+      >
+        Try another zip →
+      </Link>
+    </div>
+  );
+}
+
+/**
+ * Error state: the read itself failed (DB outage or config problem),
+ * distinct from a legitimate empty result. Retry re-navigates to this
+ * same URL, which re-runs the server-side data fetch.
+ */
+function ErrorState({ zip }: { zip: string }) {
+  return (
+    <main className="max-w-2xl mx-auto px-4 py-16 text-center">
+      <h1 className="text-2xl font-bold text-gray-900 mb-3">
+        We couldn&apos;t load races right now
+      </h1>
+      <p className="text-gray-500 mb-6">
+        Something went wrong on our end. Your zip code was fine — try again in
+        a moment.
+      </p>
+      <Link
+        href={`/race-picker?zip=${zip}`}
+        className="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700"
+      >
+        Try again
+      </Link>
+    </main>
   );
 }

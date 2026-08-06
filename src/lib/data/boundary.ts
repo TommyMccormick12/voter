@@ -55,6 +55,33 @@ import type {
 // back into a known-good, fully-typed application object instead of
 // letting a raw/partial row escape src/lib/data/.
 
+// Typed result wrapper for src/lib/data/* reads — T16 (Spec C3).
+//
+// races.ts and candidates.ts return one of these from every exported
+// read instead of swallowing a Supabase error into `null` / `[]`.
+// `ok: true` with an empty array or a `null` item is a legitimate
+// empty result (no active candidates yet, race not found). `ok: false`
+// means the read itself failed — env misconfiguration or a DB error —
+// and the caller must render an honest error state, not an empty one.
+// This is the distinction the "swallowed errors" bug class erased.
+
+export type DataErrorKind = 'config_error' | 'db_error';
+
+export interface DataError {
+  kind: DataErrorKind;
+  message: string;
+}
+
+export type DataResult<T> = { ok: true; data: T } | { ok: false; error: DataError };
+
+export function dataOk<T>(data: T): DataResult<T> {
+  return { ok: true, data };
+}
+
+export function dataErr<T>(error: DataError): DataResult<T> {
+  return { ok: false, error };
+}
+
 function str(v: unknown): string {
   return typeof v === 'string' ? v : String(v ?? '');
 }
