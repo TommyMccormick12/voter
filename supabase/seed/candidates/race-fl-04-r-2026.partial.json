@@ -6,7 +6,7 @@
       "party": "REPUBLICAN PARTY",
       "primary_party": "R",
       "slug": "aaron-bean",
-      "incumbent": false,
+      "incumbent": true,
       "state": "FL",
       "district": "04",
       "office": "U.S. House",
@@ -16,7 +16,8 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "incumbent_source": "T26 adversarial verification 2026-08-06: sitting member of this district, qualified in this primary (DOE + Ballotpedia/Wikipedia/news cross-check)"
     }
   ],
   "race": {

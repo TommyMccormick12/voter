@@ -578,3 +578,18 @@ These FEC ids/slugs existed in the pre-rebuild fixtures but do not appear anywhe
 | race-fl-18-r-2026.partial.json | H0FL18231 | Walter L Dr. Campbell |
 | race-fl-18-r-2026.partial.json | H0FL18231 | Walter L Dr. Campbell |
 | race-fl-sen-d-2026.partial.json | S6FL00707 | Dennis Gene Mr Stevens |
+
+---
+
+## Post-verification record (T26, 2026-08-06)
+
+Two blind adversarial verifiers (opus tier) attacked this rebuild against primary sources only.
+
+**Roster verifier — live DOE pull, all 57 races checked:**
+- CONFIRMED: 1:1 reconciliation of all 165 candidates / 57 races against the live DOE extract (elecID 20261103-GEN). Zero unqualified candidates present, zero qualified D/R candidates missing, zero district/party mismatches. Grayson FL-07 (H6FL08213), Wilson absent (DNQ + retirement), Frost FL-10 D unopposed, FL-11 R five-way field, both Senate primaries: all independently confirmed via news/FEC sources.
+- REFUTED (fixed 2026-08-06): nine sitting members in districts 01, 03, 04, 05, 06, 07, 08, 12, 14 carried `incumbent: false` (the rebuild only derived flags where prior fixtures existed, i.e. districts 09+). Fixed: Patronis, Cammack, Bean, Rutherford, Fine, Mills, Haridopolos, Bilirakis, Castor now `incumbent: true` with `incumbent_source` citing the verification. 23 incumbents total, uniqueness re-validated.
+- Judgment calls J1 (Grayson carryover) and J2 (Wilson absence) are therefore CONFIRMED. J3 semantics ("sitting member running in this primary" for renumbered districts: Frankel, Moskowitz, Wasserman Schultz) noted by the verifier as interpretation-dependent; retained deliberately — the flag means "sitting member on this primary ballot".
+
+**Geometry verifier — official shapefile + block-equivalency file:**
+- CONFIRMED: committed GeoJSON is geometrically identical to the official EOGPCRP2026 plan (0.00% symmetric difference on all 28 districts); 23/23 geocoded landmarks resolve to the officially assigned district, including five that changed districts under the new map; EOGPCRP2026 is in force for the Aug 18 primary (no court alteration as of 2026-08-06).
+- REFUTED (fix in progress): the ZIP crosswalk's 2% area noise floor dropped populated slivers (33955, 32826, 33849 wrongly single-district), and area-based shares invert 33142's resident-majority ordering. The crosswalk is being rebuilt population-weighted from the official block-equivalency + Census block data; acceptance tests lock the verifier's population figures.
