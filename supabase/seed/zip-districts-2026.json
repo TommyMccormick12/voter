@@ -1,0 +1,6892 @@
+{
+  "32003": [
+    {
+      "district": 4,
+      "share": 0.9995
+    }
+  ],
+  "32008": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32009": [
+    {
+      "district": 4,
+      "share": 0.9983
+    }
+  ],
+  "32011": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32013": [
+    {
+      "district": 3,
+      "share": 0.5928
+    },
+    {
+      "district": 2,
+      "share": 0.4072
+    }
+  ],
+  "32024": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32025": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32026": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32033": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32034": [
+    {
+      "district": 4,
+      "share": 0.9996
+    }
+  ],
+  "32038": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32040": [
+    {
+      "district": 3,
+      "share": 0.9991
+    }
+  ],
+  "32043": [
+    {
+      "district": 4,
+      "share": 0.9311
+    },
+    {
+      "district": 6,
+      "share": 0.0688
+    }
+  ],
+  "32044": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32046": [
+    {
+      "district": 4,
+      "share": 0.9967
+    }
+  ],
+  "32052": [
+    {
+      "district": 3,
+      "share": 0.9999
+    }
+  ],
+  "32053": [
+    {
+      "district": 3,
+      "share": 0.9995
+    }
+  ],
+  "32054": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32055": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32058": [
+    {
+      "district": 3,
+      "share": 0.9717
+    },
+    {
+      "district": 4,
+      "share": 0.0283
+    }
+  ],
+  "32059": [
+    {
+      "district": 2,
+      "share": 0.9994
+    }
+  ],
+  "32060": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32061": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32062": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32063": [
+    {
+      "district": 3,
+      "share": 0.9973
+    }
+  ],
+  "32064": [
+    {
+      "district": 3,
+      "share": 0.9994
+    }
+  ],
+  "32065": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32066": [
+    {
+      "district": 3,
+      "share": 0.9073
+    },
+    {
+      "district": 2,
+      "share": 0.0927
+    }
+  ],
+  "32068": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32071": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32072": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32073": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32079": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32080": [
+    {
+      "district": 5,
+      "share": 0.5549
+    },
+    {
+      "district": 6,
+      "share": 0.4451
+    }
+  ],
+  "32081": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32082": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32083": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32084": [
+    {
+      "district": 5,
+      "share": 0.9992
+    }
+  ],
+  "32086": [
+    {
+      "district": 6,
+      "share": 0.8923
+    },
+    {
+      "district": 5,
+      "share": 0.1077
+    }
+  ],
+  "32087": [
+    {
+      "district": 3,
+      "share": 0.9992
+    }
+  ],
+  "32091": [
+    {
+      "district": 3,
+      "share": 0.8322
+    },
+    {
+      "district": 4,
+      "share": 0.1678
+    }
+  ],
+  "32092": [
+    {
+      "district": 5,
+      "share": 0.9028
+    },
+    {
+      "district": 6,
+      "share": 0.0971
+    }
+  ],
+  "32094": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32095": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32096": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32097": [
+    {
+      "district": 4,
+      "share": 0.9991
+    }
+  ],
+  "32102": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32110": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32112": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32113": [
+    {
+      "district": 6,
+      "share": 0.7229
+    },
+    {
+      "district": 3,
+      "share": 0.2771
+    }
+  ],
+  "32114": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32117": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32118": [
+    {
+      "district": 6,
+      "share": 0.7555
+    },
+    {
+      "district": 7,
+      "share": 0.2445
+    }
+  ],
+  "32119": [
+    {
+      "district": 6,
+      "share": 0.9989
+    }
+  ],
+  "32124": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32127": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32128": [
+    {
+      "district": 7,
+      "share": 0.5209
+    },
+    {
+      "district": 6,
+      "share": 0.4791
+    }
+  ],
+  "32129": [
+    {
+      "district": 7,
+      "share": 0.9431
+    },
+    {
+      "district": 6,
+      "share": 0.0569
+    }
+  ],
+  "32130": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32131": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32132": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32133": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32134": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32136": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32137": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32139": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32140": [
+    {
+      "district": 6,
+      "share": 0.9018
+    },
+    {
+      "district": 4,
+      "share": 0.0982
+    }
+  ],
+  "32141": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32145": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32147": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32148": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32157": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32159": [
+    {
+      "district": 6,
+      "share": 0.859
+    },
+    {
+      "district": 11,
+      "share": 0.141
+    }
+  ],
+  "32162": [
+    {
+      "district": 11,
+      "share": 0.8496
+    },
+    {
+      "district": 6,
+      "share": 0.1504
+    }
+  ],
+  "32163": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "32164": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32168": [
+    {
+      "district": 7,
+      "share": 0.9043
+    },
+    {
+      "district": 6,
+      "share": 0.0957
+    }
+  ],
+  "32169": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32174": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32176": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32177": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32179": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32180": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32181": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32182": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32187": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32189": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32190": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32192": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32193": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32195": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32202": [
+    {
+      "district": 4,
+      "share": 0.9986
+    }
+  ],
+  "32203": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32204": [
+    {
+      "district": 4,
+      "share": 0.9992
+    }
+  ],
+  "32205": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32206": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32207": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32208": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32209": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32210": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32211": [
+    {
+      "district": 5,
+      "share": 0.9139
+    },
+    {
+      "district": 4,
+      "share": 0.0861
+    }
+  ],
+  "32212": [
+    {
+      "district": 4,
+      "share": 0.9998
+    }
+  ],
+  "32214": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32216": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32217": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32218": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32219": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32220": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32221": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32222": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32223": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32224": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32225": [
+    {
+      "district": 5,
+      "share": 0.8991
+    },
+    {
+      "district": 4,
+      "share": 0.1009
+    }
+  ],
+  "32226": [
+    {
+      "district": 4,
+      "share": 0.9999
+    }
+  ],
+  "32227": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32228": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32233": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32234": [
+    {
+      "district": 4,
+      "share": 0.7897
+    },
+    {
+      "district": 3,
+      "share": 0.2103
+    }
+  ],
+  "32244": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32246": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32250": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32254": [
+    {
+      "district": 4,
+      "share": 1
+    }
+  ],
+  "32256": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32257": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32258": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32259": [
+    {
+      "district": 5,
+      "share": 0.9999
+    }
+  ],
+  "32266": [
+    {
+      "district": 5,
+      "share": 1
+    }
+  ],
+  "32277": [
+    {
+      "district": 4,
+      "share": 0.714
+    },
+    {
+      "district": 5,
+      "share": 0.286
+    }
+  ],
+  "32301": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32303": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32304": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32305": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32306": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32307": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32308": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32309": [
+    {
+      "district": 2,
+      "share": 0.9999
+    }
+  ],
+  "32310": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32311": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32312": [
+    {
+      "district": 2,
+      "share": 0.9999
+    }
+  ],
+  "32313": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32317": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32320": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32321": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32322": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32323": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32324": [
+    {
+      "district": 2,
+      "share": 0.9988
+    }
+  ],
+  "32327": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32328": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32330": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32331": [
+    {
+      "district": 2,
+      "share": 0.9999
+    }
+  ],
+  "32332": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32333": [
+    {
+      "district": 2,
+      "share": 0.9996
+    }
+  ],
+  "32334": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32336": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32337": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32340": [
+    {
+      "district": 2,
+      "share": 0.9999
+    }
+  ],
+  "32343": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32344": [
+    {
+      "district": 2,
+      "share": 0.9998
+    }
+  ],
+  "32346": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32347": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32348": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32350": [
+    {
+      "district": 2,
+      "share": 0.9991
+    }
+  ],
+  "32351": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32352": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32355": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32356": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32358": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32359": [
+    {
+      "district": 3,
+      "share": 0.6113
+    },
+    {
+      "district": 2,
+      "share": 0.3887
+    }
+  ],
+  "32360": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32361": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32399": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32401": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32403": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32404": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32405": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32407": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32408": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32409": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32410": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32413": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32420": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32421": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32423": [
+    {
+      "district": 2,
+      "share": 0.9995
+    }
+  ],
+  "32424": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32425": [
+    {
+      "district": 2,
+      "share": 0.9998
+    }
+  ],
+  "32426": [
+    {
+      "district": 2,
+      "share": 0.9986
+    }
+  ],
+  "32427": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32428": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32430": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32431": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32432": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32433": [
+    {
+      "district": 1,
+      "share": 0.7649
+    },
+    {
+      "district": 2,
+      "share": 0.235
+    }
+  ],
+  "32435": [
+    {
+      "district": 2,
+      "share": 0.6076
+    },
+    {
+      "district": 1,
+      "share": 0.3924
+    }
+  ],
+  "32437": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32438": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32439": [
+    {
+      "district": 1,
+      "share": 0.5426
+    },
+    {
+      "district": 2,
+      "share": 0.4574
+    }
+  ],
+  "32440": [
+    {
+      "district": 2,
+      "share": 0.9993
+    }
+  ],
+  "32442": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32443": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32444": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32445": [
+    {
+      "district": 2,
+      "share": 0.9998
+    }
+  ],
+  "32446": [
+    {
+      "district": 2,
+      "share": 0.9996
+    }
+  ],
+  "32448": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32449": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32455": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32456": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32459": [
+    {
+      "district": 1,
+      "share": 0.5235
+    },
+    {
+      "district": 2,
+      "share": 0.4765
+    }
+  ],
+  "32460": [
+    {
+      "district": 2,
+      "share": 0.9992
+    }
+  ],
+  "32461": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32462": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32463": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32464": [
+    {
+      "district": 2,
+      "share": 0.9998
+    }
+  ],
+  "32465": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32466": [
+    {
+      "district": 2,
+      "share": 1
+    }
+  ],
+  "32501": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32502": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32503": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32504": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32505": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32506": [
+    {
+      "district": 1,
+      "share": 0.9995
+    }
+  ],
+  "32507": [
+    {
+      "district": 1,
+      "share": 0.9995
+    }
+  ],
+  "32508": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32509": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32511": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32512": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32514": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32526": [
+    {
+      "district": 1,
+      "share": 0.9946
+    }
+  ],
+  "32530": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32531": [
+    {
+      "district": 1,
+      "share": 0.9999
+    }
+  ],
+  "32533": [
+    {
+      "district": 1,
+      "share": 0.9984
+    }
+  ],
+  "32534": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32535": [
+    {
+      "district": 1,
+      "share": 0.9969
+    }
+  ],
+  "32536": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32539": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32541": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32542": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32544": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32547": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32548": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32550": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32561": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32563": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32564": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32565": [
+    {
+      "district": 1,
+      "share": 0.9999
+    }
+  ],
+  "32566": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32567": [
+    {
+      "district": 1,
+      "share": 0.9999
+    }
+  ],
+  "32568": [
+    {
+      "district": 1,
+      "share": 0.9981
+    }
+  ],
+  "32569": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32570": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32571": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32577": [
+    {
+      "district": 1,
+      "share": 0.9994
+    }
+  ],
+  "32578": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32579": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32580": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32583": [
+    {
+      "district": 1,
+      "share": 1
+    }
+  ],
+  "32601": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32603": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32605": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32606": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32607": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32608": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32609": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32610": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32612": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32615": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32616": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32617": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32618": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32619": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32621": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32622": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32625": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32626": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32628": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32631": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32634": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32639": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32640": [
+    {
+      "district": 3,
+      "share": 0.6272
+    },
+    {
+      "district": 6,
+      "share": 0.3728
+    }
+  ],
+  "32641": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32643": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32648": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32653": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32656": [
+    {
+      "district": 4,
+      "share": 0.9534
+    },
+    {
+      "district": 3,
+      "share": 0.0465
+    }
+  ],
+  "32658": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32664": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32666": [
+    {
+      "district": 6,
+      "share": 0.5973
+    },
+    {
+      "district": 3,
+      "share": 0.2606
+    },
+    {
+      "district": 4,
+      "share": 0.1421
+    }
+  ],
+  "32667": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32668": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32669": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32680": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32681": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32683": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32686": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32692": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32693": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32694": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32696": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32697": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "32701": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32702": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32703": [
+    {
+      "district": 10,
+      "share": 0.4912
+    },
+    {
+      "district": 11,
+      "share": 0.4169
+    },
+    {
+      "district": 7,
+      "share": 0.092
+    }
+  ],
+  "32707": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32708": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32709": [
+    {
+      "district": 8,
+      "share": 0.9998
+    }
+  ],
+  "32712": [
+    {
+      "district": 11,
+      "share": 0.9992
+    }
+  ],
+  "32713": [
+    {
+      "district": 7,
+      "share": 0.9991
+    }
+  ],
+  "32714": [
+    {
+      "district": 7,
+      "share": 0.9998
+    }
+  ],
+  "32720": [
+    {
+      "district": 6,
+      "share": 0.9925
+    }
+  ],
+  "32723": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32724": [
+    {
+      "district": 6,
+      "share": 0.8454
+    },
+    {
+      "district": 7,
+      "share": 0.1546
+    }
+  ],
+  "32725": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32726": [
+    {
+      "district": 6,
+      "share": 0.9833
+    }
+  ],
+  "32730": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32732": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32735": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32736": [
+    {
+      "district": 6,
+      "share": 0.9997
+    }
+  ],
+  "32738": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32744": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32746": [
+    {
+      "district": 7,
+      "share": 0.9997
+    }
+  ],
+  "32750": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32751": [
+    {
+      "district": 10,
+      "share": 0.7668
+    },
+    {
+      "district": 7,
+      "share": 0.2332
+    }
+  ],
+  "32754": [
+    {
+      "district": 8,
+      "share": 0.7836
+    },
+    {
+      "district": 7,
+      "share": 0.2164
+    }
+  ],
+  "32757": [
+    {
+      "district": 11,
+      "share": 0.5261
+    },
+    {
+      "district": 6,
+      "share": 0.4739
+    }
+  ],
+  "32759": [
+    {
+      "district": 7,
+      "share": 0.9999
+    }
+  ],
+  "32763": [
+    {
+      "district": 7,
+      "share": 0.8081
+    },
+    {
+      "district": 6,
+      "share": 0.1919
+    }
+  ],
+  "32764": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32765": [
+    {
+      "district": 7,
+      "share": 0.9999
+    }
+  ],
+  "32766": [
+    {
+      "district": 7,
+      "share": 0.9997
+    }
+  ],
+  "32767": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32768": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "32771": [
+    {
+      "district": 7,
+      "share": 0.9994
+    }
+  ],
+  "32773": [
+    {
+      "district": 7,
+      "share": 1
+    }
+  ],
+  "32775": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32776": [
+    {
+      "district": 6,
+      "share": 0.5058
+    },
+    {
+      "district": 11,
+      "share": 0.4937
+    }
+  ],
+  "32778": [
+    {
+      "district": 11,
+      "share": 0.9989
+    }
+  ],
+  "32779": [
+    {
+      "district": 7,
+      "share": 0.9994
+    }
+  ],
+  "32780": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32784": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "32789": [
+    {
+      "district": 10,
+      "share": 0.9998
+    }
+  ],
+  "32792": [
+    {
+      "district": 7,
+      "share": 0.5169
+    },
+    {
+      "district": 10,
+      "share": 0.4831
+    }
+  ],
+  "32796": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32798": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "32801": [
+    {
+      "district": 10,
+      "share": 1
+    }
+  ],
+  "32803": [
+    {
+      "district": 10,
+      "share": 1
+    }
+  ],
+  "32804": [
+    {
+      "district": 10,
+      "share": 1
+    }
+  ],
+  "32805": [
+    {
+      "district": 10,
+      "share": 1
+    }
+  ],
+  "32806": [
+    {
+      "district": 10,
+      "share": 0.9791
+    },
+    {
+      "district": 9,
+      "share": 0.0209
+    }
+  ],
+  "32807": [
+    {
+      "district": 10,
+      "share": 1
+    }
+  ],
+  "32808": [
+    {
+      "district": 10,
+      "share": 1
+    }
+  ],
+  "32809": [
+    {
+      "district": 10,
+      "share": 0.365
+    },
+    {
+      "district": 11,
+      "share": 0.3225
+    },
+    {
+      "district": 9,
+      "share": 0.3125
+    }
+  ],
+  "32810": [
+    {
+      "district": 10,
+      "share": 0.9987
+    }
+  ],
+  "32811": [
+    {
+      "district": 10,
+      "share": 1
+    }
+  ],
+  "32812": [
+    {
+      "district": 10,
+      "share": 0.5008
+    },
+    {
+      "district": 9,
+      "share": 0.4992
+    }
+  ],
+  "32814": [
+    {
+      "district": 10,
+      "share": 1
+    }
+  ],
+  "32816": [
+    {
+      "district": 8,
+      "share": 0.9959
+    }
+  ],
+  "32817": [
+    {
+      "district": 10,
+      "share": 0.8769
+    },
+    {
+      "district": 8,
+      "share": 0.1231
+    }
+  ],
+  "32818": [
+    {
+      "district": 10,
+      "share": 1
+    }
+  ],
+  "32819": [
+    {
+      "district": 11,
+      "share": 0.7518
+    },
+    {
+      "district": 10,
+      "share": 0.2482
+    }
+  ],
+  "32820": [
+    {
+      "district": 8,
+      "share": 0.9999
+    }
+  ],
+  "32821": [
+    {
+      "district": 11,
+      "share": 0.9998
+    }
+  ],
+  "32822": [
+    {
+      "district": 10,
+      "share": 0.6787
+    },
+    {
+      "district": 9,
+      "share": 0.3213
+    }
+  ],
+  "32824": [
+    {
+      "district": 9,
+      "share": 0.7817
+    },
+    {
+      "district": 11,
+      "share": 0.2183
+    }
+  ],
+  "32825": [
+    {
+      "district": 10,
+      "share": 0.6478
+    },
+    {
+      "district": 8,
+      "share": 0.3522
+    }
+  ],
+  "32826": [
+    {
+      "district": 8,
+      "share": 0.98
+    }
+  ],
+  "32827": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "32828": [
+    {
+      "district": 8,
+      "share": 0.9814
+    }
+  ],
+  "32829": [
+    {
+      "district": 8,
+      "share": 0.6383
+    },
+    {
+      "district": 10,
+      "share": 0.3607
+    }
+  ],
+  "32830": [
+    {
+      "district": 11,
+      "share": 0.9999
+    }
+  ],
+  "32831": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32832": [
+    {
+      "district": 9,
+      "share": 0.9996
+    }
+  ],
+  "32833": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32835": [
+    {
+      "district": 10,
+      "share": 0.825
+    },
+    {
+      "district": 11,
+      "share": 0.175
+    }
+  ],
+  "32836": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "32837": [
+    {
+      "district": 11,
+      "share": 0.9946
+    }
+  ],
+  "32839": [
+    {
+      "district": 10,
+      "share": 1
+    }
+  ],
+  "32899": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32901": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32903": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32904": [
+    {
+      "district": 8,
+      "share": 0.9999
+    }
+  ],
+  "32905": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32907": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32908": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32909": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32920": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32922": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32925": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32926": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32927": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32931": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32934": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32935": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32937": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32940": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32948": [
+    {
+      "district": 9,
+      "share": 0.7873
+    },
+    {
+      "district": 8,
+      "share": 0.2127
+    }
+  ],
+  "32949": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32950": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32951": [
+    {
+      "district": 8,
+      "share": 0.9998
+    }
+  ],
+  "32952": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32953": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32955": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32958": [
+    {
+      "district": 9,
+      "share": 0.9999
+    }
+  ],
+  "32959": [
+    {
+      "district": 8,
+      "share": 1
+    }
+  ],
+  "32960": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "32962": [
+    {
+      "district": 9,
+      "share": 0.9999
+    }
+  ],
+  "32963": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "32966": [
+    {
+      "district": 9,
+      "share": 0.9993
+    }
+  ],
+  "32967": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "32968": [
+    {
+      "district": 9,
+      "share": 0.9999
+    }
+  ],
+  "32970": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "32976": [
+    {
+      "district": 8,
+      "share": 0.9998
+    }
+  ],
+  "33001": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33004": [
+    {
+      "district": 25,
+      "share": 0.755
+    },
+    {
+      "district": 24,
+      "share": 0.245
+    }
+  ],
+  "33009": [
+    {
+      "district": 25,
+      "share": 0.5274
+    },
+    {
+      "district": 24,
+      "share": 0.4726
+    }
+  ],
+  "33010": [
+    {
+      "district": 26,
+      "share": 1
+    }
+  ],
+  "33012": [
+    {
+      "district": 26,
+      "share": 1
+    }
+  ],
+  "33013": [
+    {
+      "district": 26,
+      "share": 0.9981
+    }
+  ],
+  "33014": [
+    {
+      "district": 26,
+      "share": 0.7689
+    },
+    {
+      "district": 24,
+      "share": 0.2311
+    }
+  ],
+  "33015": [
+    {
+      "district": 26,
+      "share": 1
+    }
+  ],
+  "33016": [
+    {
+      "district": 26,
+      "share": 1
+    }
+  ],
+  "33018": [
+    {
+      "district": 26,
+      "share": 1
+    }
+  ],
+  "33019": [
+    {
+      "district": 25,
+      "share": 1
+    }
+  ],
+  "33020": [
+    {
+      "district": 24,
+      "share": 0.803
+    },
+    {
+      "district": 25,
+      "share": 0.197
+    }
+  ],
+  "33021": [
+    {
+      "district": 24,
+      "share": 0.6837
+    },
+    {
+      "district": 25,
+      "share": 0.3162
+    }
+  ],
+  "33022": [
+    {
+      "district": 24,
+      "share": 0.9997
+    }
+  ],
+  "33023": [
+    {
+      "district": 24,
+      "share": 1
+    }
+  ],
+  "33024": [
+    {
+      "district": 26,
+      "share": 0.5845
+    },
+    {
+      "district": 24,
+      "share": 0.4141
+    }
+  ],
+  "33025": [
+    {
+      "district": 26,
+      "share": 0.5437
+    },
+    {
+      "district": 24,
+      "share": 0.4563
+    }
+  ],
+  "33026": [
+    {
+      "district": 26,
+      "share": 0.9999
+    }
+  ],
+  "33027": [
+    {
+      "district": 26,
+      "share": 1
+    }
+  ],
+  "33028": [
+    {
+      "district": 26,
+      "share": 1
+    }
+  ],
+  "33029": [
+    {
+      "district": 26,
+      "share": 1
+    }
+  ],
+  "33030": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33031": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33032": [
+    {
+      "district": 28,
+      "share": 0.9742
+    },
+    {
+      "district": 27,
+      "share": 0.0258
+    }
+  ],
+  "33033": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33034": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33035": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33036": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33037": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33039": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33040": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33042": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33043": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33050": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33051": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33054": [
+    {
+      "district": 24,
+      "share": 1
+    }
+  ],
+  "33055": [
+    {
+      "district": 26,
+      "share": 0.5094
+    },
+    {
+      "district": 24,
+      "share": 0.4906
+    }
+  ],
+  "33056": [
+    {
+      "district": 24,
+      "share": 1
+    }
+  ],
+  "33060": [
+    {
+      "district": 25,
+      "share": 0.689
+    },
+    {
+      "district": 20,
+      "share": 0.311
+    }
+  ],
+  "33062": [
+    {
+      "district": 25,
+      "share": 1
+    }
+  ],
+  "33063": [
+    {
+      "district": 20,
+      "share": 1
+    }
+  ],
+  "33064": [
+    {
+      "district": 20,
+      "share": 0.5215
+    },
+    {
+      "district": 25,
+      "share": 0.4785
+    }
+  ],
+  "33065": [
+    {
+      "district": 22,
+      "share": 0.6575
+    },
+    {
+      "district": 20,
+      "share": 0.3425
+    }
+  ],
+  "33066": [
+    {
+      "district": 20,
+      "share": 1
+    }
+  ],
+  "33067": [
+    {
+      "district": 22,
+      "share": 0.9994
+    }
+  ],
+  "33068": [
+    {
+      "district": 20,
+      "share": 1
+    }
+  ],
+  "33069": [
+    {
+      "district": 20,
+      "share": 1
+    }
+  ],
+  "33070": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33071": [
+    {
+      "district": 20,
+      "share": 0.9898
+    }
+  ],
+  "33073": [
+    {
+      "district": 22,
+      "share": 0.8618
+    },
+    {
+      "district": 20,
+      "share": 0.1382
+    }
+  ],
+  "33076": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "33101": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33109": [
+    {
+      "district": 25,
+      "share": 0.6752
+    },
+    {
+      "district": 27,
+      "share": 0.3248
+    }
+  ],
+  "33122": [
+    {
+      "district": 26,
+      "share": 1
+    }
+  ],
+  "33125": [
+    {
+      "district": 27,
+      "share": 0.6474
+    },
+    {
+      "district": 24,
+      "share": 0.3526
+    }
+  ],
+  "33126": [
+    {
+      "district": 27,
+      "share": 0.7289
+    },
+    {
+      "district": 26,
+      "share": 0.2711
+    }
+  ],
+  "33127": [
+    {
+      "district": 24,
+      "share": 1
+    }
+  ],
+  "33128": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33129": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33130": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33131": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33132": [
+    {
+      "district": 27,
+      "share": 0.8556
+    },
+    {
+      "district": 24,
+      "share": 0.1444
+    }
+  ],
+  "33133": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33134": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33135": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33136": [
+    {
+      "district": 27,
+      "share": 0.5558
+    },
+    {
+      "district": 24,
+      "share": 0.4442
+    }
+  ],
+  "33137": [
+    {
+      "district": 24,
+      "share": 0.9999
+    }
+  ],
+  "33138": [
+    {
+      "district": 24,
+      "share": 1
+    }
+  ],
+  "33139": [
+    {
+      "district": 25,
+      "share": 0.8127
+    },
+    {
+      "district": 24,
+      "share": 0.1829
+    }
+  ],
+  "33140": [
+    {
+      "district": 25,
+      "share": 0.9997
+    }
+  ],
+  "33141": [
+    {
+      "district": 25,
+      "share": 0.9127
+    },
+    {
+      "district": 24,
+      "share": 0.0873
+    }
+  ],
+  "33142": [
+    {
+      "district": 26,
+      "share": 0.537
+    },
+    {
+      "district": 24,
+      "share": 0.4628
+    }
+  ],
+  "33143": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33144": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33145": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33146": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33147": [
+    {
+      "district": 24,
+      "share": 0.9828
+    }
+  ],
+  "33149": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33150": [
+    {
+      "district": 24,
+      "share": 1
+    }
+  ],
+  "33154": [
+    {
+      "district": 25,
+      "share": 0.9789
+    },
+    {
+      "district": 24,
+      "share": 0.0211
+    }
+  ],
+  "33155": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33156": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33157": [
+    {
+      "district": 27,
+      "share": 0.9308
+    },
+    {
+      "district": 28,
+      "share": 0.0692
+    }
+  ],
+  "33158": [
+    {
+      "district": 27,
+      "share": 1
+    }
+  ],
+  "33160": [
+    {
+      "district": 25,
+      "share": 0.9995
+    }
+  ],
+  "33161": [
+    {
+      "district": 24,
+      "share": 1
+    }
+  ],
+  "33162": [
+    {
+      "district": 24,
+      "share": 0.6069
+    },
+    {
+      "district": 25,
+      "share": 0.3931
+    }
+  ],
+  "33165": [
+    {
+      "district": 27,
+      "share": 0.7377
+    },
+    {
+      "district": 28,
+      "share": 0.2623
+    }
+  ],
+  "33166": [
+    {
+      "district": 26,
+      "share": 1
+    }
+  ],
+  "33167": [
+    {
+      "district": 24,
+      "share": 1
+    }
+  ],
+  "33168": [
+    {
+      "district": 24,
+      "share": 1
+    }
+  ],
+  "33169": [
+    {
+      "district": 24,
+      "share": 1
+    }
+  ],
+  "33170": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33172": [
+    {
+      "district": 26,
+      "share": 0.4862
+    },
+    {
+      "district": 28,
+      "share": 0.2818
+    },
+    {
+      "district": 27,
+      "share": 0.2321
+    }
+  ],
+  "33173": [
+    {
+      "district": 27,
+      "share": 0.9998
+    }
+  ],
+  "33174": [
+    {
+      "district": 27,
+      "share": 0.5916
+    },
+    {
+      "district": 28,
+      "share": 0.4084
+    }
+  ],
+  "33175": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33176": [
+    {
+      "district": 27,
+      "share": 0.9952
+    }
+  ],
+  "33177": [
+    {
+      "district": 28,
+      "share": 0.999
+    }
+  ],
+  "33178": [
+    {
+      "district": 26,
+      "share": 0.9999
+    }
+  ],
+  "33179": [
+    {
+      "district": 24,
+      "share": 0.6558
+    },
+    {
+      "district": 25,
+      "share": 0.3442
+    }
+  ],
+  "33180": [
+    {
+      "district": 25,
+      "share": 1
+    }
+  ],
+  "33181": [
+    {
+      "district": 25,
+      "share": 0.7337
+    },
+    {
+      "district": 24,
+      "share": 0.2663
+    }
+  ],
+  "33182": [
+    {
+      "district": 28,
+      "share": 0.5254
+    },
+    {
+      "district": 26,
+      "share": 0.4746
+    }
+  ],
+  "33183": [
+    {
+      "district": 28,
+      "share": 0.9937
+    }
+  ],
+  "33184": [
+    {
+      "district": 28,
+      "share": 0.9999
+    }
+  ],
+  "33185": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33186": [
+    {
+      "district": 28,
+      "share": 0.9989
+    }
+  ],
+  "33187": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33189": [
+    {
+      "district": 27,
+      "share": 0.915
+    },
+    {
+      "district": 28,
+      "share": 0.085
+    }
+  ],
+  "33190": [
+    {
+      "district": 27,
+      "share": 0.7277
+    },
+    {
+      "district": 28,
+      "share": 0.2723
+    }
+  ],
+  "33193": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33194": [
+    {
+      "district": 28,
+      "share": 0.9945
+    }
+  ],
+  "33196": [
+    {
+      "district": 28,
+      "share": 1
+    }
+  ],
+  "33301": [
+    {
+      "district": 25,
+      "share": 0.614
+    },
+    {
+      "district": 20,
+      "share": 0.386
+    }
+  ],
+  "33304": [
+    {
+      "district": 20,
+      "share": 0.6034
+    },
+    {
+      "district": 25,
+      "share": 0.3966
+    }
+  ],
+  "33305": [
+    {
+      "district": 20,
+      "share": 0.6342
+    },
+    {
+      "district": 25,
+      "share": 0.3658
+    }
+  ],
+  "33306": [
+    {
+      "district": 25,
+      "share": 0.6549
+    },
+    {
+      "district": 20,
+      "share": 0.3451
+    }
+  ],
+  "33308": [
+    {
+      "district": 25,
+      "share": 0.953
+    },
+    {
+      "district": 20,
+      "share": 0.047
+    }
+  ],
+  "33309": [
+    {
+      "district": 20,
+      "share": 1
+    }
+  ],
+  "33311": [
+    {
+      "district": 20,
+      "share": 1
+    }
+  ],
+  "33312": [
+    {
+      "district": 25,
+      "share": 0.7079
+    },
+    {
+      "district": 20,
+      "share": 0.2921
+    }
+  ],
+  "33313": [
+    {
+      "district": 20,
+      "share": 1
+    }
+  ],
+  "33314": [
+    {
+      "district": 22,
+      "share": 0.3749
+    },
+    {
+      "district": 25,
+      "share": 0.3212
+    },
+    {
+      "district": 26,
+      "share": 0.3038
+    }
+  ],
+  "33315": [
+    {
+      "district": 25,
+      "share": 0.8942
+    },
+    {
+      "district": 20,
+      "share": 0.1058
+    }
+  ],
+  "33316": [
+    {
+      "district": 25,
+      "share": 1
+    }
+  ],
+  "33317": [
+    {
+      "district": 20,
+      "share": 0.4874
+    },
+    {
+      "district": 22,
+      "share": 0.3973
+    },
+    {
+      "district": 25,
+      "share": 0.1154
+    }
+  ],
+  "33319": [
+    {
+      "district": 20,
+      "share": 1
+    }
+  ],
+  "33321": [
+    {
+      "district": 20,
+      "share": 0.9875
+    }
+  ],
+  "33322": [
+    {
+      "district": 20,
+      "share": 0.999
+    }
+  ],
+  "33323": [
+    {
+      "district": 22,
+      "share": 0.9999
+    }
+  ],
+  "33324": [
+    {
+      "district": 22,
+      "share": 0.7548
+    },
+    {
+      "district": 20,
+      "share": 0.2452
+    }
+  ],
+  "33325": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "33326": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "33327": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "33328": [
+    {
+      "district": 22,
+      "share": 0.5442
+    },
+    {
+      "district": 26,
+      "share": 0.4558
+    }
+  ],
+  "33330": [
+    {
+      "district": 26,
+      "share": 0.551
+    },
+    {
+      "district": 22,
+      "share": 0.449
+    }
+  ],
+  "33331": [
+    {
+      "district": 26,
+      "share": 0.576
+    },
+    {
+      "district": 22,
+      "share": 0.424
+    }
+  ],
+  "33332": [
+    {
+      "district": 26,
+      "share": 0.7516
+    },
+    {
+      "district": 22,
+      "share": 0.2484
+    }
+  ],
+  "33334": [
+    {
+      "district": 20,
+      "share": 0.9691
+    },
+    {
+      "district": 25,
+      "share": 0.0309
+    }
+  ],
+  "33351": [
+    {
+      "district": 20,
+      "share": 0.9884
+    }
+  ],
+  "33388": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "33401": [
+    {
+      "district": 23,
+      "share": 1
+    }
+  ],
+  "33403": [
+    {
+      "district": 21,
+      "share": 0.9942
+    }
+  ],
+  "33404": [
+    {
+      "district": 23,
+      "share": 0.6804
+    },
+    {
+      "district": 21,
+      "share": 0.3196
+    }
+  ],
+  "33405": [
+    {
+      "district": 23,
+      "share": 1
+    }
+  ],
+  "33406": [
+    {
+      "district": 23,
+      "share": 1
+    }
+  ],
+  "33407": [
+    {
+      "district": 23,
+      "share": 0.8215
+    },
+    {
+      "district": 21,
+      "share": 0.1785
+    }
+  ],
+  "33408": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "33409": [
+    {
+      "district": 23,
+      "share": 1
+    }
+  ],
+  "33410": [
+    {
+      "district": 21,
+      "share": 0.9978
+    }
+  ],
+  "33411": [
+    {
+      "district": 21,
+      "share": 0.5541
+    },
+    {
+      "district": 22,
+      "share": 0.4453
+    }
+  ],
+  "33412": [
+    {
+      "district": 21,
+      "share": 0.9999
+    }
+  ],
+  "33413": [
+    {
+      "district": 22,
+      "share": 0.5454
+    },
+    {
+      "district": 23,
+      "share": 0.3072
+    },
+    {
+      "district": 21,
+      "share": 0.1473
+    }
+  ],
+  "33414": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "33415": [
+    {
+      "district": 23,
+      "share": 0.9999
+    }
+  ],
+  "33417": [
+    {
+      "district": 23,
+      "share": 0.9995
+    }
+  ],
+  "33418": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "33426": [
+    {
+      "district": 23,
+      "share": 1
+    }
+  ],
+  "33428": [
+    {
+      "district": 22,
+      "share": 0.7719
+    },
+    {
+      "district": 25,
+      "share": 0.2281
+    }
+  ],
+  "33430": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "33431": [
+    {
+      "district": 25,
+      "share": 1
+    }
+  ],
+  "33432": [
+    {
+      "district": 25,
+      "share": 1
+    }
+  ],
+  "33433": [
+    {
+      "district": 25,
+      "share": 0.9999
+    }
+  ],
+  "33434": [
+    {
+      "district": 25,
+      "share": 1
+    }
+  ],
+  "33435": [
+    {
+      "district": 23,
+      "share": 1
+    }
+  ],
+  "33436": [
+    {
+      "district": 23,
+      "share": 1
+    }
+  ],
+  "33437": [
+    {
+      "district": 23,
+      "share": 1
+    }
+  ],
+  "33438": [
+    {
+      "district": 21,
+      "share": 0.6473
+    },
+    {
+      "district": 22,
+      "share": 0.3527
+    }
+  ],
+  "33440": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "33441": [
+    {
+      "district": 25,
+      "share": 0.5954
+    },
+    {
+      "district": 20,
+      "share": 0.4046
+    }
+  ],
+  "33442": [
+    {
+      "district": 25,
+      "share": 0.7725
+    },
+    {
+      "district": 20,
+      "share": 0.2191
+    }
+  ],
+  "33444": [
+    {
+      "district": 23,
+      "share": 0.7935
+    },
+    {
+      "district": 25,
+      "share": 0.2065
+    }
+  ],
+  "33445": [
+    {
+      "district": 23,
+      "share": 0.693
+    },
+    {
+      "district": 25,
+      "share": 0.307
+    }
+  ],
+  "33446": [
+    {
+      "district": 23,
+      "share": 0.482
+    },
+    {
+      "district": 25,
+      "share": 0.3056
+    },
+    {
+      "district": 22,
+      "share": 0.2124
+    }
+  ],
+  "33449": [
+    {
+      "district": 22,
+      "share": 0.9997
+    }
+  ],
+  "33455": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "33458": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "33460": [
+    {
+      "district": 23,
+      "share": 1
+    }
+  ],
+  "33461": [
+    {
+      "district": 23,
+      "share": 1
+    }
+  ],
+  "33462": [
+    {
+      "district": 23,
+      "share": 1
+    }
+  ],
+  "33463": [
+    {
+      "district": 23,
+      "share": 1
+    }
+  ],
+  "33467": [
+    {
+      "district": 23,
+      "share": 0.6544
+    },
+    {
+      "district": 22,
+      "share": 0.3456
+    }
+  ],
+  "33469": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "33470": [
+    {
+      "district": 22,
+      "share": 0.6138
+    },
+    {
+      "district": 21,
+      "share": 0.3862
+    }
+  ],
+  "33471": [
+    {
+      "district": 9,
+      "share": 0.9998
+    }
+  ],
+  "33472": [
+    {
+      "district": 23,
+      "share": 0.5873
+    },
+    {
+      "district": 22,
+      "share": 0.4127
+    }
+  ],
+  "33473": [
+    {
+      "district": 23,
+      "share": 0.8536
+    },
+    {
+      "district": 22,
+      "share": 0.1464
+    }
+  ],
+  "33476": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "33477": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "33478": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "33480": [
+    {
+      "district": 23,
+      "share": 0.9999
+    }
+  ],
+  "33483": [
+    {
+      "district": 25,
+      "share": 0.6868
+    },
+    {
+      "district": 23,
+      "share": 0.3132
+    }
+  ],
+  "33484": [
+    {
+      "district": 23,
+      "share": 0.9484
+    },
+    {
+      "district": 25,
+      "share": 0.0516
+    }
+  ],
+  "33486": [
+    {
+      "district": 25,
+      "share": 0.9988
+    }
+  ],
+  "33487": [
+    {
+      "district": 25,
+      "share": 1
+    }
+  ],
+  "33493": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "33496": [
+    {
+      "district": 25,
+      "share": 0.9985
+    }
+  ],
+  "33498": [
+    {
+      "district": 22,
+      "share": 0.9451
+    },
+    {
+      "district": 25,
+      "share": 0.0549
+    }
+  ],
+  "33503": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33510": [
+    {
+      "district": 14,
+      "share": 0.9952
+    }
+  ],
+  "33511": [
+    {
+      "district": 14,
+      "share": 0.9846
+    }
+  ],
+  "33513": [
+    {
+      "district": 11,
+      "share": 0.9994
+    }
+  ],
+  "33514": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "33521": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "33523": [
+    {
+      "district": 15,
+      "share": 0.656
+    },
+    {
+      "district": 12,
+      "share": 0.344
+    }
+  ],
+  "33525": [
+    {
+      "district": 15,
+      "share": 0.899
+    },
+    {
+      "district": 12,
+      "share": 0.101
+    }
+  ],
+  "33527": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33530": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33534": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33538": [
+    {
+      "district": 11,
+      "share": 0.9995
+    }
+  ],
+  "33540": [
+    {
+      "district": 15,
+      "share": 0.9999
+    }
+  ],
+  "33541": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "33542": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "33543": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "33544": [
+    {
+      "district": 12,
+      "share": 0.9924
+    }
+  ],
+  "33545": [
+    {
+      "district": 15,
+      "share": 0.9998
+    }
+  ],
+  "33547": [
+    {
+      "district": 14,
+      "share": 0.9751
+    },
+    {
+      "district": 16,
+      "share": 0.0234
+    }
+  ],
+  "33548": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "33549": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "33550": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33556": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "33558": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "33559": [
+    {
+      "district": 12,
+      "share": 0.8373
+    },
+    {
+      "district": 15,
+      "share": 0.1627
+    }
+  ],
+  "33563": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33565": [
+    {
+      "district": 15,
+      "share": 0.5792
+    },
+    {
+      "district": 14,
+      "share": 0.4208
+    }
+  ],
+  "33566": [
+    {
+      "district": 14,
+      "share": 0.9997
+    }
+  ],
+  "33567": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33569": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33570": [
+    {
+      "district": 14,
+      "share": 0.9999
+    }
+  ],
+  "33572": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33573": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33574": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "33576": [
+    {
+      "district": 15,
+      "share": 0.5417
+    },
+    {
+      "district": 12,
+      "share": 0.4583
+    }
+  ],
+  "33578": [
+    {
+      "district": 14,
+      "share": 0.9308
+    },
+    {
+      "district": 15,
+      "share": 0.0692
+    }
+  ],
+  "33579": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33584": [
+    {
+      "district": 14,
+      "share": 0.7711
+    },
+    {
+      "district": 15,
+      "share": 0.2289
+    }
+  ],
+  "33585": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "33592": [
+    {
+      "district": 15,
+      "share": 0.8285
+    },
+    {
+      "district": 14,
+      "share": 0.1715
+    }
+  ],
+  "33594": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33596": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33597": [
+    {
+      "district": 11,
+      "share": 0.5551
+    },
+    {
+      "district": 15,
+      "share": 0.4449
+    }
+  ],
+  "33598": [
+    {
+      "district": 14,
+      "share": 0.9248
+    },
+    {
+      "district": 16,
+      "share": 0.0752
+    }
+  ],
+  "33602": [
+    {
+      "district": 12,
+      "share": 0.603
+    },
+    {
+      "district": 14,
+      "share": 0.397
+    }
+  ],
+  "33603": [
+    {
+      "district": 12,
+      "share": 0.9999
+    }
+  ],
+  "33604": [
+    {
+      "district": 12,
+      "share": 0.8426
+    },
+    {
+      "district": 15,
+      "share": 0.1574
+    }
+  ],
+  "33605": [
+    {
+      "district": 14,
+      "share": 0.4742
+    },
+    {
+      "district": 15,
+      "share": 0.4439
+    },
+    {
+      "district": 12,
+      "share": 0.0819
+    }
+  ],
+  "33606": [
+    {
+      "district": 14,
+      "share": 0.8101
+    },
+    {
+      "district": 12,
+      "share": 0.1899
+    }
+  ],
+  "33607": [
+    {
+      "district": 14,
+      "share": 0.7611
+    },
+    {
+      "district": 12,
+      "share": 0.2389
+    }
+  ],
+  "33609": [
+    {
+      "district": 14,
+      "share": 0.9889
+    }
+  ],
+  "33610": [
+    {
+      "district": 15,
+      "share": 0.9296
+    },
+    {
+      "district": 14,
+      "share": 0.0702
+    }
+  ],
+  "33611": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33612": [
+    {
+      "district": 12,
+      "share": 0.8644
+    },
+    {
+      "district": 15,
+      "share": 0.1356
+    }
+  ],
+  "33613": [
+    {
+      "district": 12,
+      "share": 0.7601
+    },
+    {
+      "district": 15,
+      "share": 0.2399
+    }
+  ],
+  "33614": [
+    {
+      "district": 12,
+      "share": 0.7061
+    },
+    {
+      "district": 14,
+      "share": 0.2939
+    }
+  ],
+  "33615": [
+    {
+      "district": 14,
+      "share": 0.8916
+    },
+    {
+      "district": 12,
+      "share": 0.1084
+    }
+  ],
+  "33616": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33617": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "33618": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "33619": [
+    {
+      "district": 15,
+      "share": 0.5876
+    },
+    {
+      "district": 14,
+      "share": 0.4124
+    }
+  ],
+  "33620": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "33621": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33624": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "33625": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "33626": [
+    {
+      "district": 12,
+      "share": 0.9999
+    }
+  ],
+  "33629": [
+    {
+      "district": 14,
+      "share": 1
+    }
+  ],
+  "33634": [
+    {
+      "district": 14,
+      "share": 0.6766
+    },
+    {
+      "district": 12,
+      "share": 0.3234
+    }
+  ],
+  "33635": [
+    {
+      "district": 12,
+      "share": 0.6113
+    },
+    {
+      "district": 14,
+      "share": 0.3886
+    }
+  ],
+  "33637": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "33647": [
+    {
+      "district": 15,
+      "share": 0.9999
+    }
+  ],
+  "33701": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33702": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33703": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33704": [
+    {
+      "district": 13,
+      "share": 0.7879
+    },
+    {
+      "district": 16,
+      "share": 0.2121
+    }
+  ],
+  "33705": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33706": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33707": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33708": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33709": [
+    {
+      "district": 16,
+      "share": 0.5543
+    },
+    {
+      "district": 13,
+      "share": 0.4457
+    }
+  ],
+  "33710": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33711": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33712": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33713": [
+    {
+      "district": 16,
+      "share": 0.8742
+    },
+    {
+      "district": 13,
+      "share": 0.1258
+    }
+  ],
+  "33714": [
+    {
+      "district": 13,
+      "share": 0.8448
+    },
+    {
+      "district": 16,
+      "share": 0.1552
+    }
+  ],
+  "33715": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33716": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33744": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33755": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33756": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33759": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33760": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33761": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33762": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33763": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33764": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33765": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33767": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33770": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33771": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33772": [
+    {
+      "district": 13,
+      "share": 0.5255
+    },
+    {
+      "district": 16,
+      "share": 0.4745
+    }
+  ],
+  "33773": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33774": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33776": [
+    {
+      "district": 13,
+      "share": 0.9994
+    }
+  ],
+  "33777": [
+    {
+      "district": 13,
+      "share": 0.8063
+    },
+    {
+      "district": 16,
+      "share": 0.1937
+    }
+  ],
+  "33778": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33781": [
+    {
+      "district": 13,
+      "share": 0.9604
+    },
+    {
+      "district": 16,
+      "share": 0.0396
+    }
+  ],
+  "33782": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33785": [
+    {
+      "district": 13,
+      "share": 0.9999
+    }
+  ],
+  "33786": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "33801": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33803": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33805": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33809": [
+    {
+      "district": 18,
+      "share": 0.9983
+    }
+  ],
+  "33810": [
+    {
+      "district": 18,
+      "share": 0.7318
+    },
+    {
+      "district": 15,
+      "share": 0.2682
+    }
+  ],
+  "33811": [
+    {
+      "district": 18,
+      "share": 0.9999
+    }
+  ],
+  "33812": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33813": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33815": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33823": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33825": [
+    {
+      "district": 9,
+      "share": 0.9523
+    },
+    {
+      "district": 16,
+      "share": 0.0477
+    }
+  ],
+  "33827": [
+    {
+      "district": 18,
+      "share": 0.5761
+    },
+    {
+      "district": 9,
+      "share": 0.4239
+    }
+  ],
+  "33830": [
+    {
+      "district": 18,
+      "share": 0.9431
+    },
+    {
+      "district": 16,
+      "share": 0.0569
+    }
+  ],
+  "33834": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33835": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33837": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33838": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33839": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33840": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33841": [
+    {
+      "district": 16,
+      "share": 0.9323
+    },
+    {
+      "district": 18,
+      "share": 0.0677
+    }
+  ],
+  "33843": [
+    {
+      "district": 9,
+      "share": 0.7129
+    },
+    {
+      "district": 16,
+      "share": 0.2171
+    },
+    {
+      "district": 18,
+      "share": 0.0701
+    }
+  ],
+  "33844": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33847": [
+    {
+      "district": 16,
+      "share": 0.9672
+    },
+    {
+      "district": 18,
+      "share": 0.0328
+    }
+  ],
+  "33848": [
+    {
+      "district": 9,
+      "share": 0.7342
+    },
+    {
+      "district": 18,
+      "share": 0.2658
+    }
+  ],
+  "33849": [
+    {
+      "district": 18,
+      "share": 0.9832
+    }
+  ],
+  "33850": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33851": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33852": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "33853": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33854": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "33855": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "33856": [
+    {
+      "district": 18,
+      "share": 0.9909
+    }
+  ],
+  "33857": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "33858": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33859": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33860": [
+    {
+      "district": 16,
+      "share": 0.7523
+    },
+    {
+      "district": 18,
+      "share": 0.2369
+    }
+  ],
+  "33865": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33867": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "33868": [
+    {
+      "district": 18,
+      "share": 0.9995
+    }
+  ],
+  "33870": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "33872": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "33873": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "33875": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "33876": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "33877": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33880": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33881": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33884": [
+    {
+      "district": 18,
+      "share": 1
+    }
+  ],
+  "33890": [
+    {
+      "district": 16,
+      "share": 0.9998
+    }
+  ],
+  "33896": [
+    {
+      "district": 18,
+      "share": 0.9995
+    }
+  ],
+  "33897": [
+    {
+      "district": 18,
+      "share": 0.9999
+    }
+  ],
+  "33898": [
+    {
+      "district": 9,
+      "share": 0.5866
+    },
+    {
+      "district": 18,
+      "share": 0.4134
+    }
+  ],
+  "33901": [
+    {
+      "district": 17,
+      "share": 0.9947
+    }
+  ],
+  "33903": [
+    {
+      "district": 19,
+      "share": 0.7889
+    },
+    {
+      "district": 17,
+      "share": 0.2111
+    }
+  ],
+  "33904": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "33905": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "33907": [
+    {
+      "district": 19,
+      "share": 0.8334
+    },
+    {
+      "district": 17,
+      "share": 0.1666
+    }
+  ],
+  "33908": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "33909": [
+    {
+      "district": 19,
+      "share": 0.9997
+    }
+  ],
+  "33912": [
+    {
+      "district": 19,
+      "share": 0.9207
+    },
+    {
+      "district": 17,
+      "share": 0.0793
+    }
+  ],
+  "33913": [
+    {
+      "district": 19,
+      "share": 0.8513
+    },
+    {
+      "district": 17,
+      "share": 0.1487
+    }
+  ],
+  "33914": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "33916": [
+    {
+      "district": 17,
+      "share": 0.9998
+    }
+  ],
+  "33917": [
+    {
+      "district": 17,
+      "share": 0.9999
+    }
+  ],
+  "33919": [
+    {
+      "district": 19,
+      "share": 0.966
+    },
+    {
+      "district": 17,
+      "share": 0.034
+    }
+  ],
+  "33920": [
+    {
+      "district": 17,
+      "share": 0.9752
+    },
+    {
+      "district": 19,
+      "share": 0.0247
+    }
+  ],
+  "33921": [
+    {
+      "district": 19,
+      "share": 0.7152
+    },
+    {
+      "district": 17,
+      "share": 0.2848
+    }
+  ],
+  "33922": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "33924": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "33928": [
+    {
+      "district": 19,
+      "share": 0.9996
+    }
+  ],
+  "33930": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "33931": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "33935": [
+    {
+      "district": 22,
+      "share": 0.5833
+    },
+    {
+      "district": 9,
+      "share": 0.4166
+    }
+  ],
+  "33936": [
+    {
+      "district": 22,
+      "share": 0.6752
+    },
+    {
+      "district": 19,
+      "share": 0.3247
+    }
+  ],
+  "33944": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "33946": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "33947": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "33948": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "33950": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "33952": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "33953": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "33954": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "33955": [
+    {
+      "district": 17,
+      "share": 0.9843
+    }
+  ],
+  "33956": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "33957": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "33960": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "33965": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "33966": [
+    {
+      "district": 17,
+      "share": 0.5504
+    },
+    {
+      "district": 19,
+      "share": 0.4496
+    }
+  ],
+  "33967": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "33971": [
+    {
+      "district": 17,
+      "share": 0.6728
+    },
+    {
+      "district": 19,
+      "share": 0.3272
+    }
+  ],
+  "33972": [
+    {
+      "district": 19,
+      "share": 0.9999
+    }
+  ],
+  "33973": [
+    {
+      "district": 17,
+      "share": 0.9999
+    }
+  ],
+  "33974": [
+    {
+      "district": 19,
+      "share": 0.9998
+    }
+  ],
+  "33976": [
+    {
+      "district": 19,
+      "share": 0.9999
+    }
+  ],
+  "33980": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "33981": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "33982": [
+    {
+      "district": 17,
+      "share": 0.9997
+    }
+  ],
+  "33983": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "33990": [
+    {
+      "district": 19,
+      "share": 0.9999
+    }
+  ],
+  "33991": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "33993": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "34101": [
+    {
+      "district": 22,
+      "share": 0.6736
+    },
+    {
+      "district": 19,
+      "share": 0.3264
+    }
+  ],
+  "34102": [
+    {
+      "district": 19,
+      "share": 0.9969
+    }
+  ],
+  "34103": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "34104": [
+    {
+      "district": 19,
+      "share": 0.9997
+    }
+  ],
+  "34105": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "34108": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "34109": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "34110": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "34112": [
+    {
+      "district": 22,
+      "share": 0.7146
+    },
+    {
+      "district": 19,
+      "share": 0.2854
+    }
+  ],
+  "34113": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "34114": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "34116": [
+    {
+      "district": 19,
+      "share": 0.9997
+    }
+  ],
+  "34117": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "34119": [
+    {
+      "district": 19,
+      "share": 0.9997
+    }
+  ],
+  "34120": [
+    {
+      "district": 22,
+      "share": 0.9997
+    }
+  ],
+  "34134": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "34135": [
+    {
+      "district": 19,
+      "share": 1
+    }
+  ],
+  "34137": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "34138": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "34139": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "34140": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "34141": [
+    {
+      "district": 22,
+      "share": 0.7506
+    },
+    {
+      "district": 28,
+      "share": 0.2492
+    }
+  ],
+  "34142": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "34145": [
+    {
+      "district": 22,
+      "share": 1
+    }
+  ],
+  "34201": [
+    {
+      "district": 16,
+      "share": 0.9998
+    }
+  ],
+  "34202": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34203": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34205": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34207": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34208": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34209": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34210": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34211": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34212": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34215": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34216": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34217": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34219": [
+    {
+      "district": 16,
+      "share": 0.9998
+    }
+  ],
+  "34221": [
+    {
+      "district": 16,
+      "share": 0.9999
+    }
+  ],
+  "34222": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34223": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34224": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34228": [
+    {
+      "district": 16,
+      "share": 0.5263
+    },
+    {
+      "district": 17,
+      "share": 0.4737
+    }
+  ],
+  "34229": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34231": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34232": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34233": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34234": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34235": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34236": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34237": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34238": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34239": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34240": [
+    {
+      "district": 16,
+      "share": 0.9986
+    }
+  ],
+  "34241": [
+    {
+      "district": 16,
+      "share": 0.9938
+    }
+  ],
+  "34242": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34243": [
+    {
+      "district": 16,
+      "share": 0.8183
+    },
+    {
+      "district": 17,
+      "share": 0.1817
+    }
+  ],
+  "34250": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34251": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34266": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34267": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34268": [
+    {
+      "district": 16,
+      "share": 1
+    }
+  ],
+  "34269": [
+    {
+      "district": 16,
+      "share": 0.9997
+    }
+  ],
+  "34275": [
+    {
+      "district": 17,
+      "share": 0.5195
+    },
+    {
+      "district": 16,
+      "share": 0.4805
+    }
+  ],
+  "34285": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34286": [
+    {
+      "district": 16,
+      "share": 0.7007
+    },
+    {
+      "district": 17,
+      "share": 0.2993
+    }
+  ],
+  "34287": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34288": [
+    {
+      "district": 17,
+      "share": 0.806
+    },
+    {
+      "district": 16,
+      "share": 0.194
+    }
+  ],
+  "34289": [
+    {
+      "district": 16,
+      "share": 0.9997
+    }
+  ],
+  "34291": [
+    {
+      "district": 16,
+      "share": 0.7183
+    },
+    {
+      "district": 17,
+      "share": 0.2817
+    }
+  ],
+  "34292": [
+    {
+      "district": 17,
+      "share": 0.6502
+    },
+    {
+      "district": 16,
+      "share": 0.3498
+    }
+  ],
+  "34293": [
+    {
+      "district": 17,
+      "share": 1
+    }
+  ],
+  "34420": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "34428": [
+    {
+      "district": 15,
+      "share": 0.9997
+    }
+  ],
+  "34429": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34431": [
+    {
+      "district": 3,
+      "share": 0.9996
+    }
+  ],
+  "34432": [
+    {
+      "district": 3,
+      "share": 0.9994
+    }
+  ],
+  "34433": [
+    {
+      "district": 15,
+      "share": 0.9991
+    }
+  ],
+  "34434": [
+    {
+      "district": 15,
+      "share": 0.9986
+    }
+  ],
+  "34436": [
+    {
+      "district": 15,
+      "share": 0.9996
+    }
+  ],
+  "34442": [
+    {
+      "district": 15,
+      "share": 0.9996
+    }
+  ],
+  "34445": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34446": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34448": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34449": [
+    {
+      "district": 3,
+      "share": 0.9297
+    },
+    {
+      "district": 15,
+      "share": 0.0703
+    }
+  ],
+  "34450": [
+    {
+      "district": 15,
+      "share": 0.9995
+    }
+  ],
+  "34452": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34453": [
+    {
+      "district": 15,
+      "share": 0.9997
+    }
+  ],
+  "34461": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34465": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34470": [
+    {
+      "district": 3,
+      "share": 0.7323
+    },
+    {
+      "district": 6,
+      "share": 0.2677
+    }
+  ],
+  "34471": [
+    {
+      "district": 3,
+      "share": 0.9802
+    }
+  ],
+  "34472": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "34473": [
+    {
+      "district": 3,
+      "share": 0.9018
+    },
+    {
+      "district": 6,
+      "share": 0.0982
+    }
+  ],
+  "34474": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "34475": [
+    {
+      "district": 3,
+      "share": 0.7728
+    },
+    {
+      "district": 6,
+      "share": 0.2272
+    }
+  ],
+  "34476": [
+    {
+      "district": 3,
+      "share": 0.5969
+    },
+    {
+      "district": 6,
+      "share": 0.4031
+    }
+  ],
+  "34479": [
+    {
+      "district": 6,
+      "share": 0.9088
+    },
+    {
+      "district": 3,
+      "share": 0.0912
+    }
+  ],
+  "34480": [
+    {
+      "district": 6,
+      "share": 0.8695
+    },
+    {
+      "district": 3,
+      "share": 0.1305
+    }
+  ],
+  "34481": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "34482": [
+    {
+      "district": 3,
+      "share": 1
+    }
+  ],
+  "34484": [
+    {
+      "district": 11,
+      "share": 0.9995
+    }
+  ],
+  "34487": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34488": [
+    {
+      "district": 6,
+      "share": 1
+    }
+  ],
+  "34491": [
+    {
+      "district": 6,
+      "share": 0.9995
+    }
+  ],
+  "34498": [
+    {
+      "district": 3,
+      "share": 0.9977
+    }
+  ],
+  "34601": [
+    {
+      "district": 15,
+      "share": 0.9999
+    }
+  ],
+  "34602": [
+    {
+      "district": 15,
+      "share": 0.9998
+    }
+  ],
+  "34604": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34606": [
+    {
+      "district": 15,
+      "share": 0.9999
+    }
+  ],
+  "34607": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34608": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34609": [
+    {
+      "district": 15,
+      "share": 0.9999
+    }
+  ],
+  "34610": [
+    {
+      "district": 12,
+      "share": 0.9999
+    }
+  ],
+  "34613": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34614": [
+    {
+      "district": 15,
+      "share": 1
+    }
+  ],
+  "34637": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "34638": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "34639": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "34652": [
+    {
+      "district": 12,
+      "share": 0.9093
+    },
+    {
+      "district": 13,
+      "share": 0.0907
+    }
+  ],
+  "34653": [
+    {
+      "district": 12,
+      "share": 0.9463
+    },
+    {
+      "district": 13,
+      "share": 0.0537
+    }
+  ],
+  "34654": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "34655": [
+    {
+      "district": 12,
+      "share": 0.6778
+    },
+    {
+      "district": 13,
+      "share": 0.3222
+    }
+  ],
+  "34661": [
+    {
+      "district": 15,
+      "share": 0.9976
+    }
+  ],
+  "34667": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "34668": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "34669": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "34677": [
+    {
+      "district": 13,
+      "share": 0.9998
+    }
+  ],
+  "34679": [
+    {
+      "district": 12,
+      "share": 1
+    }
+  ],
+  "34681": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "34683": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "34684": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "34685": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "34688": [
+    {
+      "district": 13,
+      "share": 0.9992
+    }
+  ],
+  "34689": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "34690": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "34691": [
+    {
+      "district": 13,
+      "share": 0.9993
+    }
+  ],
+  "34695": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "34698": [
+    {
+      "district": 13,
+      "share": 1
+    }
+  ],
+  "34705": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34711": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34714": [
+    {
+      "district": 11,
+      "share": 0.9961
+    }
+  ],
+  "34715": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34729": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34731": [
+    {
+      "district": 11,
+      "share": 0.9062
+    },
+    {
+      "district": 6,
+      "share": 0.0938
+    }
+  ],
+  "34734": [
+    {
+      "district": 10,
+      "share": 0.7874
+    },
+    {
+      "district": 11,
+      "share": 0.2126
+    }
+  ],
+  "34736": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34737": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34739": [
+    {
+      "district": 9,
+      "share": 0.9998
+    }
+  ],
+  "34741": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "34743": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "34744": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "34746": [
+    {
+      "district": 9,
+      "share": 0.9998
+    }
+  ],
+  "34747": [
+    {
+      "district": 18,
+      "share": 0.9472
+    },
+    {
+      "district": 11,
+      "share": 0.0524
+    }
+  ],
+  "34748": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34753": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34756": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34758": [
+    {
+      "district": 18,
+      "share": 0.6838
+    },
+    {
+      "district": 9,
+      "share": 0.3162
+    }
+  ],
+  "34759": [
+    {
+      "district": 18,
+      "share": 0.808
+    },
+    {
+      "district": 9,
+      "share": 0.192
+    }
+  ],
+  "34760": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34761": [
+    {
+      "district": 10,
+      "share": 0.5958
+    },
+    {
+      "district": 11,
+      "share": 0.4042
+    }
+  ],
+  "34762": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34769": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "34771": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "34772": [
+    {
+      "district": 9,
+      "share": 1
+    }
+  ],
+  "34773": [
+    {
+      "district": 9,
+      "share": 0.9998
+    }
+  ],
+  "34785": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34786": [
+    {
+      "district": 11,
+      "share": 0.9905
+    }
+  ],
+  "34787": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34788": [
+    {
+      "district": 6,
+      "share": 0.5757
+    },
+    {
+      "district": 11,
+      "share": 0.4243
+    }
+  ],
+  "34797": [
+    {
+      "district": 11,
+      "share": 1
+    }
+  ],
+  "34945": [
+    {
+      "district": 21,
+      "share": 0.9999
+    }
+  ],
+  "34946": [
+    {
+      "district": 21,
+      "share": 0.9998
+    }
+  ],
+  "34947": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34949": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34950": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34951": [
+    {
+      "district": 21,
+      "share": 0.9994
+    }
+  ],
+  "34952": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34953": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34956": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34957": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34972": [
+    {
+      "district": 9,
+      "share": 0.9423
+    },
+    {
+      "district": 21,
+      "share": 0.0577
+    }
+  ],
+  "34974": [
+    {
+      "district": 9,
+      "share": 0.8448
+    },
+    {
+      "district": 21,
+      "share": 0.1552
+    }
+  ],
+  "34981": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34982": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34983": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34984": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34986": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34987": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34990": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34994": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34996": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ],
+  "34997": [
+    {
+      "district": 21,
+      "share": 1
+    }
+  ]
+}
