@@ -3,7 +3,8 @@
 # Voter — 2026 Federal Primary Match Tool
 
 A scorecard-and-LLM-match tool for the 2026 federal midterm primaries
-(House, Senate, Governor; May–September 2026). Voters enter a zip, browse
+(House and Senate; May–September 2026). Scope is federal-only — no
+Governor surface (Decision 8). Voters enter a zip, browse
 party-themed candidate scorecards, and get a personalized ranking via free-text
 input matched against synthesized candidate stances.
 
@@ -55,7 +56,12 @@ input matched against synthesized candidate stances.
 
 1. User lands on `/` → middleware issues `voter_session` cookie + captures utm_*.
 2. User enters zip → `/race-picker` lists matching FL primaries via the
-   HUD ZIP→CD crosswalk + Supabase race lookup. Non-FL ZIPs see an
+   2026 district map: the EOGPCRP2026 shapefile, a precomputed ZIP→district
+   crosswalk built by intersecting Census ZCTAs against it, and — for
+   split ZIPs that straddle a district line — a street address geocoded
+   with the free Census geocoder, then resolved by point-in-polygon
+   (turf.js) against the shapefile. The address itself is never stored or
+   logged, only the resolved district (see Spec A3). Non-FL ZIPs see an
    honest "Florida only for now" empty state.
 3. User picks a race → `/scorecards/[raceId]` renders the carousel.
    Single- and two-candidate races soft-disable the match CTA (match
@@ -64,8 +70,11 @@ input matched against synthesized candidate stances.
    POST to `/api/interaction` (gated on consent, rate-limited).
 5. CTA → `/match`: 5-issue QuickPoll (weighted 1–5) + free-text textarea.
 6. Submit → `/api/match` (Haiku + Zod-validated JSON, cached, rate-limited
-   10/hr/session + 30/hr/IP), ranked results stored in sessionStorage and
-   rendered at `/match/results`.
+   10/hr/session + 30/hr/IP), ranked results persisted to `llm_matches`
+   and rendered at `/match/results`, keyed by match id/params in the URL
+   or server state — never sessionStorage, so the page survives a refresh
+   or a deep link (Spec C4). Heuristic-fallback results (`source: 'mock'`)
+   are labeled "estimated match" in the UI.
 7. Share button → `/share?race=…&c=…&s=…` (party-themed share card +
    `/api/og` party-themed OG image).
 8. "Report inaccurate" button on `/candidate/[slug]` → `/api/report`
@@ -104,7 +113,8 @@ src/
     ConsentBanner.tsx, InconsistencyBadge.tsx, Nav.tsx
     ReportInaccurateButton.tsx  # Modal form for /api/report
   lib/
-    api-clients/              # FEC, GovTrack, Wikipedia, names (pipeline only)
+    api-clients/              # FEC, Congress.gov, Voteview, Wikidata/Wikipedia,
+                              # legislators crosswalk, names (pipeline only)
     llm/
       match.ts                # Live Haiku matcher + mock fallback
       curate.ts               # Offline stance synthesizer with citation validation
@@ -122,7 +132,7 @@ scripts/                      # Offline data pipeline (not in production runtime
   _env.ts                     # Dotenv loader that overrides inherited shell env
   ingest/                     # fetch_fec, fetch_platform (Wikipedia), fetch_campaign_site
                               # (Playwright), author_platform, classify_industries,
-                              # fetch_votes (GovTrack), fetch_statements,
+                              # fetch_votes (Congress.gov + Voteview), fetch_statements,
                               # fetch_news_statements (NewsAPI), import_hud_zip_cd
   synthesize/                 # Haiku stance synthesis + inconsistency flags
   review/                     # Per-candidate review docs + activate + preview_scorecard
@@ -157,27 +167,36 @@ server-only, no `NEXT_PUBLIC_` prefix), `SUPABASE_SERVICE_ROLE_KEY`
 never exposed to client).
 
 App runtime (optional): `ANTHROPIC_API_KEY` (live Haiku match — mock
-heuristic fallback otherwise), `MATCH_API_DISABLED` (kill switch).
+heuristic fallback otherwise), `MATCH_API_DISABLED` (kill switch),
+`NEXT_PUBLIC_SITE_URL` (canonical URL for metadata; defaults to
+`https://ballotmatch.org`), `UPSTASH_REDIS_REST_URL` /
+`UPSTASH_REDIS_REST_TOKEN` (distributed rate-limit store; falls back to
+in-memory when unset).
 
-Data pipeline only: `FOLLOWTHEMONEY_API_KEY` (donor industries — replaces
-the retired OpenSecrets API), `FEC_API_KEY` (fundraising totals),
-`NEWSAPI_KEY` (statement ingest). Voting records use GovTrack which is
-keyless (replaced ProPublica Congress, sunset 2023). See `.env.example`.
+Data pipeline only: `CONGRESS_GOV_API_KEY` (House roll-call votes —
+`src/lib/api-clients/congress-gov.ts`; Senate votes come from Voteview,
+which is keyless), `FEC_API_KEY` (fundraising totals), `NEWSAPI_KEY`
+(statement ingest). Donor industries are classified downstream by Haiku
+from FEC's itemized contributions — OpenSecrets and FollowTheMoney both
+retired their public APIs, so no env var is needed there. See
+`.env.example`.
 
 ## Skill routing
 
-When the user's request matches an available skill, invoke it via the Skill tool. When in doubt, invoke the skill.
+Invoke the skill that matches the work. This list is the real skill set —
+do not invoke a skill name that is not on this list.
 
-Key routing rules:
-- Product ideas/brainstorming → invoke /office-hours
-- Strategy/scope → invoke /plan-ceo-review
-- Architecture → invoke /plan-eng-review
-- Design system/plan review → invoke /design-consultation or /plan-design-review
-- Full review pipeline → invoke /autoplan
-- Bugs/errors → invoke /investigate
-- QA/testing site behavior → invoke /qa or /qa-only
-- Code review/diff check → invoke /review
-- Visual polish → invoke /design-review
-- Ship/deploy/PR → invoke /ship or /land-and-deploy
-- Save progress → invoke /context-save
-- Resume context → invoke /context-restore
+**Standards skills (project):**
+- `frontend-standards` — UI, components, design tokens, data states, forms, accessibility.
+- `backend-standards` — handlers, API contracts, validation, authorization, errors.
+- `data-and-release` — migrations, production-data protection, test selection, release gates.
+
+**Process skills (mattpocock-skills plugin):**
+- `to-spec` / `to-tickets` — turn an idea into a spec, then into tickets, before building.
+- `implement` / `tdd` — build a ticket. Use `tdd` for test-first work.
+- `code-review` — review a diff or branch against the standards skills above.
+- `diagnosing-bugs` — investigate a failure or a regression.
+- `triage` — sort and prioritize open bugs or issues.
+
+Check process-skill output against the matching standards skill before
+calling a task done.

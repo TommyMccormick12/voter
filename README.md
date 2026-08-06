@@ -1,7 +1,8 @@
 # voter
 
 A scorecard-and-LLM-match tool for the **2026 federal midterm primaries**
-(House, Senate, Governor — May–September 2026). Voters enter a ZIP, browse
+(House and Senate — May–September 2026, federal-only, no Governor
+surface). Voters enter a ZIP, browse
 party-themed candidate scorecards, and get a personalized ranking via free-text
 input matched against synthesized candidate stances.
 
@@ -11,9 +12,9 @@ Stack: Next.js 16 (App Router, Turbopack) · React 19 · Tailwind 4 · Supabase
 ## Current coverage
 
 - **Scope:** Florida primaries on **August 18, 2026** (Tier 1 + Tier 2 in progress).
-- **38 race rows** seeded covering Tier 1 House (FL-10/13/15/23/27/28 × R+D),
-  Senate R+D, Governor R+D, plus Tier 2 House (FL-11/16/17/18/19 × R+D and
-  more).
+- **Race rows** seeded covering Tier 1 House (FL-10/13/15/23/27/28 × R+D),
+  Senate R+D, plus Tier 2 House (FL-11/16/17/18/19 × R+D and more).
+  Federal-only — no Governor surface (Decision 8).
 - **18 active candidates** across 12 races with synthesized stances +
   voting records + donor industry classifications. Empty races render a
   "Curating — check back soon" state (honest, not broken). Single- and
