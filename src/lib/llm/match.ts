@@ -39,8 +39,17 @@ export interface MatchInput {
 export interface MatchResponse {
   ranked: MatchResult[];
   cache_hit: boolean;
-  source: 'haiku' | 'mock' | 'cache';
-  /** Tokens consumed (real LLM only). 0 for mock + cache. */
+  /**
+   * True origin of the ranking — 'mock' means the heuristic fallback,
+   * never Haiku. `cache_hit` is the separate "was this a repeat
+   * computation" signal. Collapsing a cached mock result's source to a
+   * generic 'cache' value (the pre-T15 behavior) would hide the
+   * required "estimated match" UI label on repeat/cached lookups — the
+   * standing constraint is that the heuristic fallback is ALWAYS
+   * labeled, cache hit or not.
+   */
+  source: 'haiku' | 'mock';
+  /** Tokens consumed (real LLM only). Undefined for mock. */
   input_tokens?: number;
   output_tokens?: number;
 }
@@ -84,6 +93,17 @@ const RankedSchema = z.object({
 const HAIKU_MODEL = 'claude-haiku-4-5';
 
 /**
+ * Model label persisted to llm_matches.model for the heuristic-fallback
+ * path (T15/C4). /admin's spend query treats any row's tokens as
+ * additive regardless of model string, so a mock row with null tokens
+ * just contributes $0 — the label exists so a human (or /match/results,
+ * via src/lib/app/match.ts) can tell which rows were "estimated match"
+ * without re-deriving it from null token counts.
+ */
+export const MOCK_MODEL_LABEL = 'heuristic-v1';
+export const HAIKU_MODEL_LABEL = HAIKU_MODEL;
+
+/**
  * Match a user's free-text + quick-poll preferences against a race's candidates.
  * Returns ranked candidates with match scores.
  */
@@ -95,7 +115,11 @@ export async function matchCandidates(input: MatchInput): Promise<MatchResponse>
   const cacheKey = hashFreeText(input.free_text, input.race_id);
   const cached = cache.get(cacheKey);
   if (cached) {
-    return { ...cached, cache_hit: true, source: 'cache' };
+    // Preserve the true source ('haiku' or 'mock') — only cache_hit
+    // changes. A cached mock result must still read as 'mock' so the
+    // caller's "estimated match" label fires on repeat visits, not just
+    // the first computation.
+    return { ...cached, cache_hit: true };
   }
 
   const apiKey = process.env.ANTHROPIC_API_KEY;

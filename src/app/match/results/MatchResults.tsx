@@ -1,97 +1,32 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { getPartyTheme, getPartyInitials } from '@/lib/party-theme';
 import { MatchScoreBadge } from '@/components/MatchScoreBadge';
-import type {
-  CandidateWithFullData,
-  MatchResult,
-  Race,
-} from '@/types/database';
+import type { CandidateWithFullData, MatchResult, Race } from '@/types/database';
+import type { StoredMatch } from '@/lib/app/match';
 
 interface Props {
   race: Race;
   candidates: CandidateWithFullData[];
-}
-
-interface StoredMatch {
-  ranked: MatchResult[];
-  free_text: string;
-  quick_poll: { issue_slug: string; weight: number }[];
-  meta: {
-    cache_hit: boolean;
-    source: string;
-    input_tokens?: number;
-    output_tokens?: number;
-  };
+  /** Server-fetched by id (T17, Spec C4) — never read from sessionStorage. */
+  match: StoredMatch;
 }
 
 /**
- * Reads the ranked match results from sessionStorage (set by /match flow)
- * and renders the top match (large card) + ranked list (sidebar on desktop).
- *
- * If sessionStorage is empty (e.g. user landed here directly), shows an
- * empty state with a CTA back to the match flow.
+ * Renders the top match (large card) + ranked list (sidebar on desktop)
+ * from a server-fetched match record (see src/app/match/results/page.tsx,
+ * which resolves `?m=<id>` via src/lib/app/match.ts#getMatchById). No
+ * client-side storage read — the page survives a refresh or a deep link
+ * to the same URL because the id is the only thing the URL needs to carry.
  */
-export function MatchResults({ race, candidates }: Props) {
+export function MatchResults({ race, candidates, match }: Props) {
   const router = useRouter();
-  const [state, setState] = useState<{ hydrated: boolean; match: StoredMatch | null }>({
-    hydrated: false,
-    match: null,
-  });
   const [shareLabel, setShareLabel] = useState<'idle' | 'copied' | 'error'>('idle');
 
-  useEffect(() => {
-    // Sync from a non-React source (sessionStorage). Single setState call
-    // covers both hydration flag + match payload. Rule exception is the
-    // documented React 19 pattern for browser-API hydration.
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- syncing from sessionStorage
-    setState(() => {
-      try {
-        const raw = sessionStorage.getItem(`match-results-${race.id}`);
-        return { hydrated: true, match: raw ? JSON.parse(raw) : null };
-      } catch (err) {
-        console.warn('[match-results] failed to read storage', err);
-        return { hydrated: true, match: null };
-      }
-    });
-  }, [race.id]);
-
-  const { hydrated, match } = state;
-
-  if (!hydrated) {
-    // First paint — show skeleton to avoid empty-flash before sessionStorage reads
-    return (
-      <main className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
-        <div className="animate-pulse space-y-4">
-          <div className="h-6 w-48 bg-gray-200 rounded" />
-          <div className="h-10 w-72 bg-gray-200 rounded" />
-          <div className="h-64 bg-gray-100 rounded-2xl" />
-        </div>
-      </main>
-    );
-  }
-
-  if (!match) {
-    return (
-      <main className="max-w-2xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold text-gray-900 mb-3">
-          No match results yet
-        </h1>
-        <p className="text-gray-500 mb-6">
-          Take the 2-step poll to find your closest alignment.
-        </p>
-        <Link
-          href={`/match?race=${race.id}`}
-          className="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700"
-        >
-          Start the match →
-        </Link>
-      </main>
-    );
-  }
+  const isEstimated = match.meta.source === 'mock';
 
   const candidateById = new Map(candidates.map((c) => [c.id, c]));
   const ranked = match.ranked
@@ -192,6 +127,24 @@ export function MatchResults({ race, candidates }: Props) {
         Based on your priorities and what you wrote
       </p>
 
+      {isEstimated && (
+        // Standing constraint (SPEC-2026-08-06.md): the heuristic fallback
+        // must be labeled "estimated match" VISIBLY, never only in a
+        // tooltip, and never presented as LLM output. This banner sits
+        // above the fold, before the ranking itself — not a footnote.
+        <div
+          role="status"
+          className="mb-6 lg:mb-8 rounded-xl border-2 border-amber-300 bg-amber-50 px-4 py-3 lg:px-5 lg:py-4"
+        >
+          <p className="text-sm font-bold text-amber-800">Estimated match</p>
+          <p className="text-sm text-amber-700 mt-0.5">
+            This ranking was computed with a local heuristic, not the AI matcher. It
+            reflects the issues you weighted against each candidate&apos;s public
+            stances — not an AI-generated judgment.
+          </p>
+        </div>
+      )}
+
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Top match — expanded */}
         <div className="lg:col-span-7">
@@ -288,11 +241,11 @@ export function MatchResults({ race, candidates }: Props) {
 
           <p className="text-xs text-gray-400 mt-6 leading-relaxed">
             Match scores based on Ballotpedia, ProPublica, and OpenSecrets data.
-            {match.meta.source === 'mock' && (
+            {isEstimated && (
               <>
                 <br />
                 <span className="text-amber-600">
-                  ⚠ Demo mode (no API key) — using local heuristic ranking.
+                  ⚠ Estimated match — local heuristic ranking, not the AI matcher.
                 </span>
               </>
             )}

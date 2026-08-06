@@ -4,6 +4,7 @@ import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
 import { parseConsent } from '@/lib/consent';
 import { clientIpFromHeaders } from '@/lib/geo';
 import { checkRateLimits, INTERACTION_LIMITS } from '@/lib/rate-limit';
+import { recordInteraction } from '@/lib/app/interactions';
 
 const InteractionSchema = z.object({
   candidate_id: z.string().min(1),
@@ -29,9 +30,9 @@ const InteractionSchema = z.object({
  * Records a user interaction with a candidate scorecard. Cheap, fire-and-forget.
  * Called by `trackInteraction` in src/lib/interactions-client.ts.
  *
- * TODO (Chunk 5/6): wire up to Supabase candidate_interactions table.
- * Currently a logging stub — preserves the contract so the client code works
- * before the database layer is wired up.
+ * Flow: this handler validates + gates, then hands off to the
+ * application module (src/lib/app/interactions.ts), which resolves the
+ * session row and writes candidate_interactions via the anon adapter.
  */
 export async function POST(request: NextRequest) {
   // Rate limit FIRST. Bots scripting carousel events would otherwise
@@ -72,17 +73,31 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  // No session cookie means nothing to key the row on — middleware sets
+  // voter_session on every request, so this only fires for a
+  // hand-crafted request that skipped it.
+  if (!sessionId) {
+    return NextResponse.json({ ok: false, error: 'no_session' }, { status: 401 });
+  }
+
   // Consent gate: explicit opt-out drops the row silently with 200.
   const consent = parseConsent(await readCookie(COOKIE_NAMES.consent));
   if (consent && !consent.analytics) {
     return NextResponse.json({ ok: true, dropped: 'consent' });
   }
 
-  // TODO (Chunk 6): insert into candidate_interactions table
-  if (process.env.NODE_ENV !== 'production') {
-    console.log(
-      `[interaction] candidate=${parsed.data.candidate_id} race=${parsed.data.race_id} action=${parsed.data.action} dwell=${parsed.data.dwell_ms ?? 'n/a'}ms`
-    );
+  const result = await recordInteraction({
+    sessionToken: sessionId,
+    candidateId: parsed.data.candidate_id,
+    raceId: parsed.data.race_id,
+    action: parsed.data.action,
+    viewOrder: parsed.data.view_order,
+    dwellMs: parsed.data.dwell_ms,
+  });
+
+  if (!result.ok) {
+    console.error('[api/interaction] write failed:', result.code, result.detail);
+    return NextResponse.json({ ok: false, error: result.code }, { status: result.status });
   }
 
   return NextResponse.json({ ok: true });

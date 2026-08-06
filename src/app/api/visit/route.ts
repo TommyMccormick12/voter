@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
 import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
 import { parseConsent } from '@/lib/consent';
-import { recordPageView, endVisit } from '@/lib/visit-tracker';
+import { recordPageView, endVisit } from '@/lib/app/visits';
 import { geoFromHeaders, hashUserAgent, clientIpFromHeaders } from '@/lib/geo';
 import { checkRateLimits, VISIT_LIMITS } from '@/lib/rate-limit';
 
@@ -27,7 +27,9 @@ const RequestSchema = z.union([StartSchema, EndSchema]);
  *  - start: {type:"start", path: "/scorecards/race-nj-07"} — page view
  *  - end: {type:"end"} — beforeunload / pagehide flush
  *
- * TODO (Chunk 6): persist to Supabase session_visits.
+ * Flow: this handler validates + gates, then hands off to the
+ * application module (src/lib/app/visits.ts), which resolves the
+ * session row and writes session_visits via the anon adapter.
  */
 export async function POST(request: NextRequest) {
   // Rate limit first — bot-driven visit floods would skew the session_visits
@@ -85,19 +87,27 @@ export async function POST(request: NextRequest) {
 
   const data = parsed.data;
   if ('type' in data && data.type === 'end') {
-    endVisit(sessionId);
+    const result = await endVisit(sessionId);
+    if (!result.ok) {
+      console.error('[api/visit] end write failed:', result.code, result.detail);
+      return NextResponse.json({ ok: false, error: result.code }, { status: result.status });
+    }
     return NextResponse.json({ ok: true });
   }
 
   // start — record a page view (opens visit if needed)
   const geo = geoFromHeaders(request.headers);
   const uaHash = hashUserAgent(request.headers.get('user-agent'));
-  recordPageView({
-    session_id: sessionId,
-    ip_country: geo.country,
-    ip_region: geo.region,
-    user_agent_hash: uaHash,
+  const result = await recordPageView({
+    sessionToken: sessionId,
+    ipCountry: geo.country,
+    ipRegion: geo.region,
+    userAgentHash: uaHash,
   });
+  if (!result.ok) {
+    console.error('[api/visit] start write failed:', result.code, result.detail);
+    return NextResponse.json({ ok: false, error: result.code }, { status: result.status });
+  }
 
   return NextResponse.json({ ok: true });
 }

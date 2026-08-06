@@ -4,6 +4,7 @@ import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
 import { parseConsent } from '@/lib/consent';
 import { clientIpFromHeaders } from '@/lib/geo';
 import { checkRateLimits, POLL_LIMITS } from '@/lib/rate-limit';
+import { recordQuickPoll } from '@/lib/app/quick-poll';
 
 const RequestSchema = z.object({
   race_id: z.string().min(1),
@@ -24,9 +25,11 @@ const RequestSchema = z.object({
  * Records issue-importance weights from the user's quick poll. Each (issue, weight)
  * tuple becomes a row in quick_poll_responses keyed by session_id and race_id.
  *
- * TODO (Chunk 5/6): wire to Supabase quick_poll_responses table, gate on
- * consent_analytics. This is the source data for the B2B district-level
- * issue-weight aggregation product.
+ * Flow: this handler validates + gates, then hands off to the
+ * application module (src/lib/app/quick-poll.ts), which resolves
+ * issue_slug -> issue_id and the session row, then writes
+ * quick_poll_responses via the anon adapter. Source data for the B2B
+ * district-level issue-weight aggregation product.
  */
 export async function POST(request: NextRequest) {
   // Rate limit first — quick-poll responses feed the B2B district-level
@@ -64,6 +67,13 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  // No session cookie means nothing to key the rows on — middleware sets
+  // voter_session on every request, so this only fires for a
+  // hand-crafted request that skipped it.
+  if (!sessionId) {
+    return NextResponse.json({ ok: false, error: 'no_session' }, { status: 401 });
+  }
+
   // Consent gate. Quick poll feeds the B2B sentiment data product, so it
   // requires consent_data_sale (Tier C) to actually persist. consent_analytics
   // (Tier B) lets us record it for funnel analytics only without selling it.
@@ -72,13 +82,19 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true, dropped: 'consent' });
   }
 
-  // TODO (Chunk 6): insert into quick_poll_responses with session_id from cookie.
-  // If consent.data_sale is true, mark rows as eligible for B2B aggregation.
-  if (process.env.NODE_ENV !== 'production') {
-    console.log(
-      `[quick-poll] race=${parsed.data.race_id} responses=${parsed.data.responses.length} sellable=${consent?.data_sale ?? 'unknown'}`
+  const result = await recordQuickPoll({
+    sessionToken: sessionId,
+    raceId: parsed.data.race_id,
+    responses: parsed.data.responses.map((r) => ({ issueSlug: r.issue_slug, weight: r.weight })),
+  });
+
+  if (!result.ok) {
+    console.error('[api/quick-poll] write failed:', result.code, result.detail ?? result.unknownSlugs);
+    return NextResponse.json(
+      { ok: false, error: result.code, unknown_issues: result.unknownSlugs },
+      { status: result.status },
     );
   }
 
-  return NextResponse.json({ ok: true, recorded: parsed.data.responses.length });
+  return NextResponse.json({ ok: true, recorded: result.recorded });
 }
