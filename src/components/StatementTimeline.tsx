@@ -78,6 +78,7 @@ function contextLabel(ctx: string): string {
     interview: 'Interview',
     speech: 'Speech',
     campaign_video: 'Campaign video',
+    news: 'News report',
   };
   return map[ctx] ?? ctx;
 }

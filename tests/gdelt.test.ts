@@ -4,14 +4,19 @@
 //   - the pinned wire shape (top-level `articles`, row keys url/title/
 //     seendate/domain/language/sourcecountry — confirmed live 2026-08-07,
 //     see the client's file header) and the seendate -> seenDate ISO
-//     conversion.
-//   - malformed-response loud failure: GDELT's rate limiter returns a
-//     plain-text body even with format=json, which fetchCached wraps as
-//     `{body, status, content_type}` — that shape must throw, not
-//     silently resolve to zero articles (same "loud failure" discipline
-//     as congress-gov.test.ts's missing-API-key tests).
-//   - domain-pin + timespan + maxrecords query construction.
-//   - the maxRecords ceiling and the 429-retry behavior.
+//     conversion, including the format-drift -> null fallback (finding 8,
+//     2026-08-07 review).
+//   - malformed-response loud failure: a non-empty non-JSON body (GDELT's
+//     rate-limit/error page) must throw, not silently resolve to zero
+//     articles — but a genuinely EMPTY body is a legitimate zero-result
+//     response and must NOT throw (finding 7).
+//   - domain-pin + timespan + maxrecords query construction, and that
+//     every request asks fetchCached for requireJson: true (finding 2).
+//   - the maxRecords ceiling and the retry behavior on both a real 429
+//     (FetchHttpError) and a poisoned-200 non-JSON body
+//     (NonJsonResponseError) — finding 2's "retries, never permanently
+//     poisoned" fix. See tests/base.test.ts for the companion coverage
+//     that a non-JSON 200 body is never written to the disk cache.
 //
 // fetchCached is mocked (same importActual pattern as congress-gov.test.ts
 // / wikidata.test.ts) so no real network call or disk cache write happens.
@@ -24,8 +29,9 @@ import {
   MAX_MAXRECORDS,
   MAX_GDELT_RETRY_ATTEMPTS,
   GDELT_RETRY_GAP_MS,
+  __resetGdeltThrottleForTests,
 } from '@/lib/api-clients/gdelt';
-import { fetchCached } from '@/lib/api-clients/base';
+import { fetchCached, FetchHttpError, NonJsonResponseError } from '@/lib/api-clients/base';
 
 vi.mock('@/lib/api-clients/base', async () => {
   const actual = await vi.importActual<typeof import('@/lib/api-clients/base')>(
@@ -41,6 +47,7 @@ const mockFetchCached = vi.mocked(fetchCached);
 
 beforeEach(() => {
   mockFetchCached.mockReset();
+  __resetGdeltThrottleForTests();
 });
 
 describe('wire shape (confirmed live 2026-08-07 via curl)', () => {
@@ -78,16 +85,41 @@ describe('wire shape (confirmed live 2026-08-07 via curl)', () => {
     const result = await searchArticles('nobody notable');
     expect(result).toEqual([]);
   });
+
+  it('finding 8: a seendate that does not match the expected format yields seenDate: null, never a sliced guess', async () => {
+    mockFetchCached.mockResolvedValueOnce({
+      articles: [
+        {
+          url: 'https://www.floridapolitics.com/archives/weird-date',
+          title: 'Some article',
+          seendate: 'not-a-real-timestamp',
+          domain: 'floridapolitics.com',
+          language: 'English',
+          sourcecountry: 'United States',
+        },
+      ],
+    });
+
+    const result = await searchArticles('"Some Candidate"');
+
+    expect(result[0].seenDate).toBeNull();
+  });
 });
 
 describe('parseArtlistResponse malformed-response loud failure', () => {
-  it('throws on the plain-text rate-limit body fetchCached wraps as {body,...}', () => {
+  it('throws on a NON-EMPTY plain-text rate-limit body fetchCached wraps as {body,...}', () => {
     const wrapped = {
       body: 'Please limit requests to one every 5 seconds or contact kalev.leetaru5@gmail.com for larger queries.',
       status: 429,
       content_type: 'text/html; charset=utf-8',
     };
     expect(() => parseArtlistResponse(wrapped)).toThrow(/non-JSON response from GDELT/);
+  });
+
+  it('finding 7: does NOT throw on an EMPTY {body: "", ...} wrapper — treats it as zero results', () => {
+    const wrapped = { body: '', status: 200, content_type: 'text/html; charset=utf-8' };
+    expect(() => parseArtlistResponse(wrapped)).not.toThrow();
+    expect(parseArtlistResponse(wrapped)).toEqual([]);
   });
 
   it('throws when `articles` is present but not an array (schema drift)', () => {
@@ -115,6 +147,14 @@ describe('query construction: domain pin + timespan + maxrecords', () => {
     expect(decoded).toContain('mode=artlist');
     expect(decoded).toContain('format=json');
     expect(decoded).toContain('timespan=6months'); // default
+  });
+
+  it('finding 2: every request asks fetchCached for requireJson so a poisoned 200 body is never cached', async () => {
+    mockFetchCached.mockResolvedValueOnce({ articles: [] });
+
+    await searchArticles('"Some Candidate"');
+
+    expect(mockFetchCached.mock.calls[0][1]).toMatchObject({ requireJson: true });
   });
 
   it('passes a caller-supplied domain list and timespan through verbatim', async () => {
@@ -147,7 +187,7 @@ describe('query construction: domain pin + timespan + maxrecords', () => {
   });
 });
 
-describe('429 retry behavior (GDELT\'s undocumented per-IP rate limit)', () => {
+describe('retry behavior (GDELT\'s undocumented per-IP rate limit)', () => {
   beforeEach(() => {
     vi.useFakeTimers();
   });
@@ -156,9 +196,24 @@ describe('429 retry behavior (GDELT\'s undocumented per-IP rate limit)', () => {
     vi.useRealTimers();
   });
 
-  it('retries after a 429 and succeeds within the attempt cap', async () => {
+  it('retries after a real 429 (FetchHttpError) and succeeds within the attempt cap', async () => {
     mockFetchCached
-      .mockRejectedValueOnce(new Error('HTTP 429 on https://api.gdeltproject.org/...: rate limited'))
+      .mockRejectedValueOnce(new FetchHttpError(429, 'HTTP 429 on https://api.gdeltproject.org/...: rate limited'))
+      .mockResolvedValueOnce({ articles: [] });
+
+    const promise = searchArticles('"Some Candidate"');
+    await vi.advanceTimersByTimeAsync(GDELT_RETRY_GAP_MS);
+    const result = await promise;
+
+    expect(result).toEqual([]);
+    expect(mockFetchCached).toHaveBeenCalledTimes(2);
+  });
+
+  it('finding 2: retries after a poisoned-200 NonJsonResponseError and succeeds, instead of a permanent failure', async () => {
+    mockFetchCached
+      .mockRejectedValueOnce(
+        new NonJsonResponseError(200, 'Non-JSON response (content-type "text/html") — refusing to cache'),
+      )
       .mockResolvedValueOnce({ articles: [] });
 
     const promise = searchArticles('"Some Candidate"');
@@ -170,7 +225,7 @@ describe('429 retry behavior (GDELT\'s undocumented per-IP rate limit)', () => {
   });
 
   it('gives up loudly after MAX_GDELT_RETRY_ATTEMPTS, never looping forever', async () => {
-    mockFetchCached.mockRejectedValue(new Error('HTTP 429 on https://api.gdeltproject.org/...: rate limited'));
+    mockFetchCached.mockRejectedValue(new FetchHttpError(429, 'HTTP 429 on https://api.gdeltproject.org/...: rate limited'));
 
     const promise = searchArticles('"Some Candidate"');
     // Swallow the eventual rejection so it isn't reported as unhandled
@@ -184,10 +239,19 @@ describe('429 retry behavior (GDELT\'s undocumented per-IP rate limit)', () => {
     expect(mockFetchCached).toHaveBeenCalledTimes(MAX_GDELT_RETRY_ATTEMPTS);
   });
 
-  it('does not retry a non-429 failure — fails on the first attempt', async () => {
-    mockFetchCached.mockRejectedValueOnce(new Error('HTTP 500 on https://api.gdeltproject.org/...: server error'));
+  it('does not retry a non-429 FetchHttpError — fails on the first attempt', async () => {
+    mockFetchCached.mockRejectedValueOnce(
+      new FetchHttpError(500, 'HTTP 500 on https://api.gdeltproject.org/...: server error'),
+    );
 
     await expect(searchArticles('"Some Candidate"')).rejects.toThrow(/HTTP 500/);
+    expect(mockFetchCached).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not retry a plain Error that is neither a 429 nor a non-JSON response', async () => {
+    mockFetchCached.mockRejectedValueOnce(new Error('ECONNRESET'));
+
+    await expect(searchArticles('"Some Candidate"')).rejects.toThrow(/ECONNRESET/);
     expect(mockFetchCached).toHaveBeenCalledTimes(1);
   });
 });

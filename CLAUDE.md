@@ -138,7 +138,7 @@ scripts/                      # Offline data pipeline (not in production runtime
   ingest/                     # fetch_fec, fetch_platform (Wikipedia), fetch_campaign_site
                               # (Playwright), author_platform, classify_industries,
                               # fetch_votes (Congress.gov + Voteview), fetch_statements,
-                              # fetch_news_statements (NewsAPI), import_hud_zip_cd
+                              # fetch_gdelt_statements (GDELT DOC 2.0), import_hud_zip_cd
   synthesize/                 # Haiku stance synthesis + inconsistency flags
   review/                     # Per-candidate review docs + activate + preview_scorecard
   seed/                       # Service-role Supabase upserts
@@ -180,11 +180,11 @@ in-memory when unset).
 
 Data pipeline only: `CONGRESS_GOV_API_KEY` (House roll-call votes —
 `src/lib/api-clients/congress-gov.ts`; Senate votes come from Voteview,
-which is keyless), `FEC_API_KEY` (fundraising totals), `NEWSAPI_KEY`
-(statement ingest). Donor industries are classified downstream by Haiku
-from FEC's itemized contributions — OpenSecrets and FollowTheMoney both
-retired their public APIs, so no env var is needed there. See
-`.env.example`.
+which is keyless), `FEC_API_KEY` (fundraising totals). The GDELT DOC 2.0
+statement ingest (`src/lib/api-clients/gdelt.ts`) is free and keyless — no
+env var. Donor industries are classified downstream by Haiku from FEC's
+itemized contributions — OpenSecrets and FollowTheMoney both retired
+their public APIs, so no env var is needed there. See `.env.example`.
 
 ## Skill routing
 

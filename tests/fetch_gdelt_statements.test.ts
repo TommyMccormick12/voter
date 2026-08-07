@@ -3,10 +3,17 @@
 //
 // Covers:
 //   - unambiguous full-name attach happy path.
-//   - ambiguous / last-name-only / no-match articles dropped, never
-//     attached (the attribution discipline the ticket is built around).
+//   - ambiguous / last-name-only / title-only / no-match articles
+//     dropped, never attached (the attribution discipline the ticket is
+//     built around — finding 3, 2026-08-07 review: a title-only match is
+//     NOT sufficient, the candidate's name must appear in the fetched
+//     BODY text).
 //   - article-fetch failure dropped — never falls back to the GDELT index
 //     snippet as a substitute statement.
+//   - finding 1 (2026-08-07 review): a failed SEARCH leaves a candidate's
+//     existing gdelt statements untouched (does not wipe them via the
+//     stale-data replacement), while a successful search with zero
+//     matches still safely replaces with an empty gdelt slice.
 //   - stale-data rule: a re-run replaces only this ingester's own prior
 //     rows (marked data_source: 'gdelt'), leaving other-source rows alone.
 //   - the exact row shape scripts/seed/seed_candidates.ts's stmtRows
@@ -102,10 +109,22 @@ describe('extractArticleText', () => {
     expect(text).not.toContain('trackPageview');
     expect(text).not.toContain('Home | About');
   });
+
+  it('finding 10: strips <form> content (cookie-consent/newsletter-signup boilerplate)', () => {
+    const html = `
+      <html><body>
+        <form class="newsletter-signup"><p>Sign up for our free daily newsletter!</p></form>
+        <article><p>${LONG_TEXT_ABOUT_LUNA}</p></article>
+      </body></html>
+    `;
+    const text = extractArticleText(html);
+    expect(text).toContain('Anna Paulina Luna');
+    expect(text).not.toContain('newsletter');
+  });
 });
 
 describe('attachGdeltStatements', () => {
-  it('attaches a statement built from FETCHED article text (not the GDELT title/snippet alone) on an unambiguous full-name match', async () => {
+  it('attaches a statement built from FETCHED article text (not the GDELT title/snippet alone) on an unambiguous full-name BODY match', async () => {
     const searchFn = vi.fn().mockResolvedValue([article()]);
     const fetchArticleText = vi.fn().mockResolvedValue(LONG_TEXT_ABOUT_LUNA);
     const candidates: GdeltCandidate[] = [{ name: 'Anna Paulina Luna' }];
@@ -140,7 +159,20 @@ describe('attachGdeltStatements', () => {
     );
   });
 
-  it('drops an article that names no candidate, with the drop counted rather than silently attached', async () => {
+  it('finding 3: a TITLE-only match with no candidate mention in the fetched BODY is dropped, never attached', async () => {
+    // Title clearly names the candidate, but the fetched body text is
+    // unrelated (e.g. a mismatched GDELT index entry, or boilerplate) —
+    // the body is what must be checked, not the title alone.
+    const searchFn = vi.fn().mockResolvedValue([article({ title: 'Anna Paulina Luna town hall recap' })]);
+    const fetchArticleText = vi.fn().mockResolvedValue(LONG_TEXT_NO_CANDIDATE_NAME);
+    const candidates: GdeltCandidate[] = [{ name: 'Anna Paulina Luna' }];
+
+    await attachGdeltStatements(candidates, searchFn, { fetchArticleText });
+
+    expect(candidates[0].statements).toEqual([]);
+  });
+
+  it('drops an article that names no candidate anywhere, with the drop counted rather than silently attached', async () => {
     const searchFn = vi.fn().mockResolvedValue([article({ title: 'County road repaving update' })]);
     const fetchArticleText = vi.fn().mockResolvedValue(LONG_TEXT_NO_CANDIDATE_NAME);
     const candidates: GdeltCandidate[] = [{ name: 'Anna Paulina Luna' }];
@@ -169,6 +201,59 @@ describe('attachGdeltStatements', () => {
 
     expect(candidates[0].statements).toEqual([]);
     expect(fetchArticleText).toHaveBeenCalledWith(article().url);
+  });
+
+  it('finding 8: a null seenDate (format drift) flows through as a null statement_date rather than crashing or faking a date', async () => {
+    const searchFn = vi.fn().mockResolvedValue([article({ seenDate: null })]);
+    const fetchArticleText = vi.fn().mockResolvedValue(LONG_TEXT_ABOUT_LUNA);
+    const candidates: GdeltCandidate[] = [{ name: 'Anna Paulina Luna' }];
+
+    await attachGdeltStatements(candidates, searchFn, { fetchArticleText });
+
+    expect(candidates[0].statements).toHaveLength(1);
+    expect(candidates[0].statements![0].statement_date).toBeNull();
+  });
+
+  it('finding 1: a failed SEARCH leaves the candidate\'s existing gdelt statements completely untouched (never wiped)', async () => {
+    const priorGdeltRow = {
+      statement_text: 'A previously attached GDELT statement.',
+      statement_date: '2026-01-01',
+      context: 'news',
+      issue_slugs: [],
+      source_url: 'https://www.floridapolitics.com/archives/prior-article',
+      source_quality: 65,
+      data_source: GDELT_DATA_SOURCE,
+    };
+    const candidates: GdeltCandidate[] = [
+      { name: 'Anna Paulina Luna', statements: [priorGdeltRow] },
+    ];
+    const searchFn = vi.fn().mockRejectedValue(new Error('HTTP 429 on api.gdeltproject.org: rate limited'));
+    const fetchArticleText = vi.fn();
+
+    await attachGdeltStatements(candidates, searchFn, { fetchArticleText });
+
+    expect(candidates[0].statements).toEqual([priorGdeltRow]);
+    expect(fetchArticleText).not.toHaveBeenCalled();
+  });
+
+  it('a SUCCESSFUL search with zero matching articles safely replaces prior gdelt rows with an empty slice (this is not finding 1 — the search itself succeeded)', async () => {
+    const priorGdeltRow = {
+      statement_text: 'A previously attached GDELT statement, now stale.',
+      statement_date: '2026-01-01',
+      context: 'news',
+      issue_slugs: [],
+      source_url: 'https://www.floridapolitics.com/archives/prior-article',
+      source_quality: 65,
+      data_source: GDELT_DATA_SOURCE,
+    };
+    const candidates: GdeltCandidate[] = [
+      { name: 'Anna Paulina Luna', statements: [priorGdeltRow] },
+    ];
+    const searchFn = vi.fn().mockResolvedValue([]); // confirmed zero results, not a failure
+
+    await attachGdeltStatements(candidates, searchFn, {});
+
+    expect(candidates[0].statements).toEqual([]);
   });
 
   it('replaces this ingester\'s own prior rows on re-run without duplicating, and leaves other-source rows untouched', async () => {

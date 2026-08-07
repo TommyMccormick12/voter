@@ -18,14 +18,23 @@
 // ISO-8601 — converted to a plain YYYY-MM-DD by seenDateToIso() below. This
 // is the same class of bug the Congress.gov client hit on 2026-08-07
 // (bioguideId vs bioguideID): pin the observed spelling, don't guess from
-// docs. GDELT's rate limiter also does not return JSON on a 429 — it
-// returns a plain-text "Please limit requests..." body even though we
-// pass format=json, which base.ts's fetchCached wraps as `{body, status,
-// content_type}` (its non-JSON fallback). parseArtlistResponse() below
-// treats that shape as a loud failure rather than silently returning zero
-// articles.
+// docs. GDELT's rate limiter also does not reliably return JSON on a
+// failure — it can serve a plain-text "Please limit requests..." body as
+// either HTTP 429 or, worse, HTTP 200 with a non-JSON content-type (the
+// latter would otherwise get disk-cached forever by fetchCached and
+// "succeed" with a poisoned body on every future run). fetchArtlistWithRetry
+// below asks fetchCached for `requireJson: true` specifically to turn that
+// second case into a retryable NonJsonResponseError instead of a cache
+// write; parseArtlistResponse() still validates the parsed shape as a
+// second layer of defense.
 
-import { fetchCached, fetchCachedText } from './base';
+import {
+  fetchCached,
+  fetchCachedText,
+  sleep,
+  FetchHttpError,
+  NonJsonResponseError,
+} from './base';
 
 const BASE = 'https://api.gdeltproject.org/api/v2/doc/doc';
 
@@ -54,15 +63,37 @@ export const MAX_MAXRECORDS = 250;
 export const DEFAULT_MAXRECORDS = 25;
 
 /** GDELT enforces an undocumented per-IP rate limit ("Please limit
- * requests to one every 5 seconds") returned as HTTP 429 with a
- * plain-text body. Retrying with a gap comfortably above 5s recovers from
- * transient bursts (e.g. two candidates queried back to back) without
- * looping forever. */
+ * requests to one every 5 seconds") returned as HTTP 429 or (see file
+ * header) HTTP 200 with a non-JSON body. Retrying with a gap comfortably
+ * above 5s recovers from transient bursts without looping forever. */
 export const MAX_GDELT_RETRY_ATTEMPTS = 3;
 export const GDELT_RETRY_GAP_MS = 5500;
 
-function sleep(ms: number): Promise<void> {
-  return new Promise((r) => setTimeout(r, ms));
+/**
+ * Proactive spacing between GDELT search requests, independent of the
+ * retry backoff above. base.ts's shared fetchCached throttle is only
+ * 250ms — nowhere near GDELT's ~1-per-5s per-IP limit — so back-to-back
+ * candidate searches in the same ingest run would predictably 429 without
+ * this. Applied before every attempt (not just the first), so it's a
+ * no-op whenever the previous attempt's own GDELT_RETRY_GAP_MS wait has
+ * already covered the gap.
+ */
+const GDELT_MIN_SEARCH_GAP_MS = 5000;
+let lastGdeltSearchAt = 0;
+
+async function throttleGdeltSearch(): Promise<void> {
+  const wait = Math.max(0, GDELT_MIN_SEARCH_GAP_MS - (Date.now() - lastGdeltSearchAt));
+  if (wait > 0) await sleep(wait);
+  lastGdeltSearchAt = Date.now();
+}
+
+/** Test-only: reset the proactive-throttle clock. Without this, a test
+ * file's first searchArticles() call after an earlier test in the same
+ * module instance would inherit a recent lastGdeltSearchAt and block for
+ * up to GDELT_MIN_SEARCH_GAP_MS of real time. Not part of the client's
+ * public contract — call from a test's beforeEach only. */
+export function __resetGdeltThrottleForTests(): void {
+  lastGdeltSearchAt = 0;
 }
 
 // ============================================================
@@ -91,16 +122,27 @@ interface RawGdeltArtlistResponse {
 export interface GdeltArticle {
   url: string;
   title: string;
-  /** YYYY-MM-DD, converted from GDELT's compact `seendate` stamp. */
-  seenDate: string;
+  /** YYYY-MM-DD, converted from GDELT's compact `seendate` stamp, or null
+   * when that stamp doesn't match the expected format (never a sliced,
+   * possibly-non-ISO guess — see seenDateToIso()). */
+  seenDate: string | null;
   domain: string;
   language: string;
   sourceCountry: string;
 }
 
-function seenDateToIso(seendate: string): string {
+/**
+ * Parse GDELT's compact UTC stamp ("20260615T104500Z") into a plain
+ * YYYY-MM-DD. Returns null (never a sliced guess) on a format drift —
+ * an unvalidated non-ISO string flowing into `statement_date` can abort
+ * the seed step AFTER its delete-then-insert has already run (see
+ * scripts/seed/seed_candidates.ts), which would deactivate a live
+ * candidate. null is a normal, already-handled value for statement_date
+ * throughout the pipeline (e.g. fetch_statements.ts's extractDate).
+ */
+function seenDateToIso(seendate: string): string | null {
   const m = /^(\d{4})(\d{2})(\d{2})T/.exec(seendate);
-  if (!m) return seendate.slice(0, 10); // defensive fallback, never throws on a format drift
+  if (!m) return null;
   return `${m[1]}-${m[2]}-${m[3]}`;
 }
 
@@ -117,40 +159,45 @@ function normalizeArticle(raw: RawGdeltArticle): GdeltArticle {
 
 /**
  * Validate + normalize a raw fetchCached() result into GdeltArticle[].
- * Throws (never silently returns []) when the payload isn't the expected
- * artlist shape — covers both GDELT's plain-text rate-limit body (wrapped
- * by fetchCached as `{body, status, content_type}` because its
- * content-type isn't application/json) and a genuine schema drift where
- * `articles` exists but isn't an array. A missing `articles` key with no
- * `body` wrapper is treated as a legitimate zero-result response.
+ * Throws (never silently returns []) when the payload is a non-empty
+ * non-JSON body (fetchCached's `{body, status, content_type}` fallback
+ * wrapper) or a genuine schema drift where `articles` isn't an array. An
+ * EMPTY body — `{body: ''}`, or no `articles` key at all — is a
+ * legitimate zero-result response, not a failure: throwing on it would
+ * (via the ingest script's stale-data replacement) wipe out every
+ * previously attached gdelt statement on a candidate that GDELT simply
+ * has nothing new to say about this run.
  */
 export function parseArtlistResponse(data: unknown): GdeltArticle[] {
-  if (data && typeof data === 'object') {
-    const obj = data as Record<string, unknown>;
-    if (typeof obj.body === 'string' && !('articles' in obj)) {
-      throw new Error(
-        `[gdelt] non-JSON response from GDELT (likely rate-limited or an error page): ` +
-          `${obj.body.slice(0, 200)}`,
-      );
-    }
-    if ('articles' in obj && obj.articles !== undefined && !Array.isArray(obj.articles)) {
-      throw new Error('[gdelt] malformed artlist response: "articles" is present but not an array');
-    }
+  // Single cast covering both shapes this can actually be: GDELT's real
+  // artlist response ({articles}) or fetchCached's non-JSON fallback
+  // wrapper ({body, status, content_type}).
+  const obj = (data && typeof data === 'object' ? data : {}) as Record<string, unknown> &
+    Partial<RawGdeltArtlistResponse> & { body?: unknown };
+
+  if (typeof obj.body === 'string' && obj.body.length > 0 && !('articles' in obj)) {
+    throw new Error(
+      `[gdelt] non-JSON response from GDELT (likely rate-limited or an error page): ${obj.body.slice(0, 200)}`,
+    );
   }
-  const articles = (data as RawGdeltArtlistResponse | undefined)?.articles;
-  return (articles ?? []).map(normalizeArticle);
+  if (obj.articles !== undefined && !Array.isArray(obj.articles)) {
+    throw new Error('[gdelt] malformed artlist response: "articles" is present but not an array');
+  }
+  return (obj.articles ?? []).map(normalizeArticle);
 }
 
 async function fetchArtlistWithRetry(url: string, cacheTag: string): Promise<unknown> {
   for (let attempt = 1; attempt <= MAX_GDELT_RETRY_ATTEMPTS; attempt++) {
+    await throttleGdeltSearch();
     try {
-      return await fetchCached(url, { cacheTag });
+      return await fetchCached(url, { cacheTag, requireJson: true });
     } catch (err) {
-      const msg = err instanceof Error ? err.message : String(err);
-      const isRateLimited = /HTTP 429/.test(msg);
-      if (!isRateLimited || attempt === MAX_GDELT_RETRY_ATTEMPTS) throw err;
+      const retryable =
+        (err instanceof FetchHttpError && err.status === 429) || err instanceof NonJsonResponseError;
+      if (!retryable || attempt === MAX_GDELT_RETRY_ATTEMPTS) throw err;
       console.warn(
-        `[gdelt] rate-limited (attempt ${attempt}/${MAX_GDELT_RETRY_ATTEMPTS}) — waiting ${GDELT_RETRY_GAP_MS}ms`,
+        `[gdelt] rate-limited or non-JSON response (attempt ${attempt}/${MAX_GDELT_RETRY_ATTEMPTS}) — ` +
+          `waiting ${GDELT_RETRY_GAP_MS}ms`,
       );
       await sleep(GDELT_RETRY_GAP_MS);
     }

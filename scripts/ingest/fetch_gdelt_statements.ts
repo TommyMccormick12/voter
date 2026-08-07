@@ -1,8 +1,8 @@
 // Fetch recent public statements about each candidate via GDELT DOC 2.0
 // (free, keyless full-text news search), domain-pinned to Florida outlets.
 //
-// Replaces the retired NewsAPI ingester slot (fetch_news_statements.ts,
-// kept for now — see scripts/README.md) as the tertiary stance source
+// Replaces the retired NewsAPI ingester (fetch_news_statements.ts —
+// deleted; nothing else imported it) as the tertiary stance source
 // (Decision 5, DECISIONS-2026-08-06.md: "GDELT news mining (replaces
 // NewsAPI)"). Complements fetch_statements.ts (campaign-site scrape) and
 // the inline candidate_statements rows populated by other ingesters.
@@ -15,12 +15,15 @@
 //      body text — a statement is never built from the GDELT snippet.
 //   2. Attaches ONLY when the candidate's FULL name (normalized the same
 //      way scripts/review/activation-gate.ts does for the DOE/FEC spine
-//      match) appears in the article title or the fetched body text.
-//      Partial or last-name-only matches never attach (see
-//      DATA-AUDIT-2026-08-06's Royal-Webster-vs-Daniel-Webster
-//      misattribution, which fetch_votes.ts's ID-only crosswalk exists to
-//      prevent on the votes side — this is the equivalent discipline for
-//      name-matched news text, where there is no ID to key on).
+//      match) appears in the fetched article BODY text — the GDELT title
+//      alone is not sufficient (2026-08-07 review: a title-only match let
+//      unrelated paywall/consent boilerplate that never actually mentions
+//      the candidate get attached as their "statement"). Partial or
+//      last-name-only matches never attach (see DATA-AUDIT-2026-08-06's
+//      Royal-Webster-vs-Daniel-Webster misattribution, which
+//      fetch_votes.ts's ID-only crosswalk exists to prevent on the votes
+//      side — this is the equivalent discipline for name-matched news
+//      text, where there is no ID to key on).
 //   3. Drops (with a console.log count) any article that names no
 //      candidate, or whose fetch fails — never falls back to attaching
 //      GDELT's index metadata as if it were a statement.
@@ -28,9 +31,12 @@
 // Stale-data rule: every run replaces ONLY the statements this ingester
 // previously attached (marked `data_source: 'gdelt'` in the fixture, a
 // fixture-only field — seed_candidates.ts's stmtRows mapping does not
-// forward it to the DB row, same as fetch_news_statements.ts's `'news'`
+// forward it to the DB row, same as the old NewsAPI ingester's `'news'`
 // marker). Statements from other ingesters (no data_source, or a
-// different one) are left untouched.
+// different one) are left untouched. A candidate whose SEARCH fails
+// (network error, exhausted GDELT retries, etc.) is skipped entirely —
+// see the try/catch in attachGdeltStatements — so a transient failure can
+// never wipe out that candidate's previously attached gdelt statements.
 //
 // Usage:
 //   npx tsx scripts/ingest/fetch_gdelt_statements.ts \
@@ -50,7 +56,8 @@ import {
 } from '../../src/lib/api-clients/gdelt';
 import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';
 import { normalizeIdentityName } from '../review/activation-gate';
-import { ISSUE_NAMES } from '../../src/lib/issues';
+import { inferIssueSlugs } from '../../src/lib/issue-keywords';
+import { HTML_NOISE_SELECTORS } from './_html';
 
 /** Fixture-only marker (never written to the DB — see file header). Used
  * both to tag rows this ingester writes and to find-and-replace them on
@@ -60,7 +67,8 @@ export const GDELT_DATA_SOURCE = 'gdelt';
 const DEFAULT_MAX_ARTICLES_PER_CANDIDATE = 8;
 const MIN_STATEMENT_TEXT_LEN = 20;
 const MAX_STATEMENT_TEXT_LEN = 500;
-const SOURCE_QUALITY = 65; // between fetch_statements.ts's 60 (unverified scrape) and fetch_news_statements.ts's 70 (Haiku-summarized)
+const SOURCE_QUALITY = 65; // between fetch_statements.ts's 60 (unverified scrape) and the old NewsAPI ingester's 70 (Haiku-summarized)
+const MAX_ISSUE_SLUGS = 3;
 
 interface Args {
   raceId: string;
@@ -82,40 +90,20 @@ function parseArgs(): Args {
   return { raceId, state };
 }
 
-// Heuristic keyword -> issue slug mapping, same conservative approach as
-// fetch_votes.ts's inferIssues: better to miss a tag than to mis-tag,
-// since these feed Haiku synthesis.
-const ISSUE_KEYWORDS: Array<[RegExp, keyof typeof ISSUE_NAMES]> = [
-  [/\btax(es|ation)?\b|\bjobs\b|\beconomy\b|\bwages?\b/i, 'economy'],
-  [/\bhealth\s?care\b|\bmedicare\b|\bmedicaid\b|\bobamacare\b|\bprescription\b/i, 'healthcare'],
-  [/\bimmigration\b|\bborder\b|\basylum\b|\bdeport/i, 'immigration'],
-  [/\bclimate\b|\bemissions?\b|\bclean energy\b|\bepa\b|\bfossil fuel/i, 'climate'],
-  [/\beducation\b|\bstudent loans?\b|\bschools?\b|\bteachers?\b/i, 'education'],
-  [/\bfirearms?\b|\bguns?\b|\bsecond amendment\b/i, 'guns'],
-  [/\bcriminal justice\b|\bprisons?\b|\bsentencing\b|\bpolice\b/i, 'criminal_justice'],
-  [/\bforeign policy\b|\bukraine\b|\bisrael\b|\bchina\b|\bnato\b|\bmilitary\b|\bdefense\b/i, 'foreign_policy'],
-  [/\bhousing\b|\brent\b|\bmortgage\b|\bhud\b/i, 'housing'],
-];
-
-function inferIssueSlugs(title: string, text: string): string[] {
-  const haystack = `${title} ${text}`;
-  const slugs: string[] = [];
-  for (const [re, slug] of ISSUE_KEYWORDS) {
-    if (slugs.length >= 3) break;
-    if (re.test(haystack)) slugs.push(slug);
-  }
-  return slugs;
-}
-
 /**
  * Extract body paragraph text from article HTML. Generic news outlets
  * (not bespoke campaign sites), so this deliberately just joins every
  * <p> — no article/press-release-specific selectors like
- * fetch_statements.ts uses for campaign sites.
+ * fetch_statements.ts uses for campaign sites. Shares HTML_NOISE_SELECTORS
+ * with fetch_campaign_site.ts's extractMainText so the two scrapers can't
+ * drift apart on what counts as page noise (script/style/nav/footer/
+ * header/aside/form — 'form' specifically strips cookie-consent and
+ * newsletter-signup boilerplate that would otherwise leak into the
+ * extracted text).
  */
 export function extractArticleText(html: string): string {
   const $ = cheerio.load(html);
-  $('script, style, nav, footer, header, aside').remove();
+  $(HTML_NOISE_SELECTORS).remove();
   const paragraphs = $('p')
     .map((_, el) => $(el).text().trim())
     .get()
@@ -140,21 +128,37 @@ export function nameAppearsIn(candidateName: string, haystack: string): boolean 
 }
 
 /**
- * Build a statement excerpt from fetched article text. Centers the
- * excerpt on the candidate's name when a raw (non-normalized) match is
- * findable; otherwise falls back to the start of the text — the
- * normalized nameAppearsIn() check has already confirmed the name is
- * genuinely present somewhere, just not necessarily at an index the raw
- * case-insensitive search can find (diacritics, curly quotes, etc.).
- * Returns null when there isn't enough text to form a real statement
+ * Case-insensitive, whitespace-flexible regex for a candidate's name,
+ * used only to find a natural center point for the excerpt below.
+ * Matching DISCIPLINE (whether to attach at all) is entirely
+ * nameAppearsIn()'s job; this regex intentionally does not re-implement
+ * nameAppearsIn's diacritic/punctuation normalization — it only needs to
+ * line up well enough, on the common case, that the excerpt doesn't open
+ * mid-sentence. Falls back to the start of the text when it can't find an
+ * exact-enough span (e.g. a diacritic in the name that this looser regex
+ * doesn't tolerate but the normalized nameAppearsIn() check did).
+ */
+function buildNameSpanRegex(candidateName: string): RegExp {
+  const words = candidateName
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  return new RegExp(words.join('\\s+'), 'i');
+}
+
+/**
+ * Build a statement excerpt from fetched article text, centered on the
+ * candidate's name when buildNameSpanRegex() can locate it. Returns null
+ * when there isn't enough text to form a real statement
  * (MIN_STATEMENT_TEXT_LEN) — callers must drop, never fall back to the
  * GDELT index snippet.
  */
 export function excerptAroundName(text: string, candidateName: string): string | null {
   const trimmed = text.replace(/\s+/g, ' ').trim();
   if (trimmed.length < MIN_STATEMENT_TEXT_LEN) return null;
-  const idx = trimmed.toLowerCase().indexOf(candidateName.toLowerCase());
-  const start = idx >= 0 ? Math.max(0, idx - 80) : 0;
+  const match = buildNameSpanRegex(candidateName).exec(trimmed);
+  const start = match ? Math.max(0, match.index - 80) : 0;
   const slice = trimmed.slice(start, start + MAX_STATEMENT_TEXT_LEN).trim();
   return slice.length >= MIN_STATEMENT_TEXT_LEN ? slice : null;
 }
@@ -207,6 +211,7 @@ export async function attachGdeltStatements(
   let totalAttached = 0;
   let totalDroppedNoMatch = 0;
   let totalDroppedFetchFailed = 0;
+  let totalSearchFailed = 0;
 
   for (const c of candidates) {
     const name = typeof c.name === 'string' ? c.name : '';
@@ -220,8 +225,19 @@ export async function attachGdeltStatements(
     try {
       articles = await searchFn(query, { domains, timespan, maxRecords: maxArticlesPerCandidate });
     } catch (err) {
-      console.warn(`[gdelt] ${name}: search failed —`, err instanceof Error ? err.message : err);
-      articles = [];
+      // A failed search is NOT a confirmed zero-article result. Treating
+      // it as zero and running the stale-data replacement below would
+      // delete every previously attached gdelt statement for this
+      // candidate on a transient failure, and the next seed run would
+      // propagate that deletion to production. Skip the candidate
+      // entirely — leave whatever statements it already has (from this
+      // ingester or any other) completely untouched.
+      totalSearchFailed++;
+      console.warn(
+        `[gdelt] ${name}: search failed — leaving existing statements untouched —`,
+        err instanceof Error ? err.message : err,
+      );
+      continue;
     }
 
     const attachedRows: Array<Record<string, unknown>> = [];
@@ -241,8 +257,9 @@ export async function attachGdeltStatements(
         continue;
       }
 
-      const matched = nameAppearsIn(name, article.title) || nameAppearsIn(name, text);
-      if (!matched) {
+      // Body match required — the GDELT title alone is not proof the
+      // article is about this candidate (see file header).
+      if (!nameAppearsIn(name, text)) {
         droppedNoMatch++;
         continue;
       }
@@ -259,16 +276,19 @@ export async function attachGdeltStatements(
 
       attachedRows.push({
         statement_text: excerpt,
-        statement_date: article.seenDate,
+        statement_date: article.seenDate, // may be null on a seendate format drift — see gdelt.ts's seenDateToIso
         context: 'news',
-        issue_slugs: inferIssueSlugs(article.title, text),
+        issue_slugs: inferIssueSlugs(`${article.title} ${text}`, MAX_ISSUE_SLUGS),
         source_url: article.url,
         source_quality: SOURCE_QUALITY,
         data_source: GDELT_DATA_SOURCE,
       });
     }
 
-    // Stale-data rule: replace only this ingester's own prior rows.
+    // Stale-data rule: replace only this ingester's own prior rows. Only
+    // reached when the search itself succeeded (even with zero articles,
+    // or every article dropped) — a confirmed empty result is safe to
+    // write as an empty gdelt slice.
     const existing = Array.isArray(c.statements) ? c.statements : [];
     const others = existing.filter(
       (s) => (s as Record<string, unknown>).data_source !== GDELT_DATA_SOURCE,
@@ -287,7 +307,8 @@ export async function attachGdeltStatements(
 
   console.log(
     `[gdelt] done: ${totalAttached} statements attached, ${totalDroppedNoMatch} dropped ` +
-      `(no unambiguous match), ${totalDroppedFetchFailed} dropped (article fetch failed)`,
+      `(no unambiguous match), ${totalDroppedFetchFailed} dropped (article fetch failed), ` +
+      `${totalSearchFailed} candidate(s) skipped (search failed, existing statements untouched)`,
   );
 }
 

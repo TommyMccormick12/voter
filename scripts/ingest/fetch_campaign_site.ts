@@ -33,6 +33,7 @@ import {
   closeBrowser,
 } from '../../src/lib/api-clients/base';
 import { extractPlatform } from '../../src/lib/llm/extract-platform';
+import { HTML_NOISE_SELECTORS } from './_html';
 
 interface Args {
   raceId: string;
@@ -79,7 +80,7 @@ const PLATFORM_PATHS = [
  */
 function extractMainText(html: string): string {
   const $ = load(html);
-  $('script, style, nav, footer, header, aside, form').remove();
+  $(HTML_NOISE_SELECTORS).remove();
   const candidates = [
     $('main').first(),
     $('article').first(),

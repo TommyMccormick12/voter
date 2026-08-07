@@ -23,10 +23,44 @@ export interface FetchOptions {
   cacheTag?: string;
   /** Headers to send */
   headers?: Record<string, string>;
+  /**
+   * When true, a non-empty response body served with a non-JSON
+   * content-type is treated as a failure (NonJsonResponseError, never
+   * written to the disk cache) instead of being wrapped in
+   * `{body,status,content_type}`. Some free APIs (e.g. GDELT) serve an
+   * error/rate-limit page with HTTP 200 and a text/html content-type —
+   * without this option, that page gets cached forever and every future
+   * call for the same query silently "succeeds" with the poisoned body.
+   * An EMPTY body still resolves normally (and is still cached) — that's
+   * a legitimate empty/zero-result response, not an error page.
+   */
+  requireJson?: boolean;
 }
 
 let lastRequestAt = 0;
 const MIN_GAP_MS = 250;
+
+/** Non-2xx HTTP response. Carries the real status code so callers can
+ * branch on it (e.g. retry on 429) without parsing the error message. */
+export class FetchHttpError extends Error {
+  readonly status: number;
+  constructor(status: number, message: string) {
+    super(message);
+    this.name = 'FetchHttpError';
+    this.status = status;
+  }
+}
+
+/** A 2xx response whose body isn't the JSON the caller required (see
+ * FetchOptions.requireJson) — thrown instead of cached. */
+export class NonJsonResponseError extends Error {
+  readonly status: number;
+  constructor(status: number, message: string) {
+    super(message);
+    this.name = 'NonJsonResponseError';
+    this.status = status;
+  }
+}
 
 /** Mask secret-bearing query parameters before a URL reaches logs or errors. */
 export function redactUrl(url: string): string {
@@ -56,7 +90,8 @@ export async function fetchCached<T = unknown>(
   console.log(`[fetch] ${redactUrl(url)}`);
   const res = await fetch(url, { headers: options.headers });
   if (!res.ok) {
-    throw new Error(
+    throw new FetchHttpError(
+      res.status,
       `HTTP ${res.status} on ${redactUrl(url)}: ${await res.text().catch(() => '')}`
     );
   }
@@ -66,8 +101,18 @@ export async function fetchCached<T = unknown>(
   if (ct.includes('application/json')) {
     body = await res.json();
   } else {
-    // Wrap text in {body, status} so the cache file is always valid JSON
-    body = { body: await res.text(), status: res.status, content_type: ct };
+    const text = await res.text();
+    if (options.requireJson && text.trim().length > 0) {
+      throw new NonJsonResponseError(
+        res.status,
+        `Non-JSON response (content-type "${ct}") on ${redactUrl(url)}, refusing to cache: ${text.slice(0, 200)}`
+      );
+    }
+    // Wrap text in {body, status} so the cache file is always valid JSON.
+    // Reached either when the caller didn't ask for requireJson, or the
+    // body is empty (a legitimate empty/zero-result response, not an
+    // error page) — both cases are safe to cache.
+    body = { body: text, status: res.status, content_type: ct };
   }
 
   mkdirSync(dirname(cachePath), { recursive: true });
@@ -214,7 +259,10 @@ function safeHost(url: string): string {
   }
 }
 
-function sleep(ms: number): Promise<void> {
+/** Exported so callers with their own stricter per-service throttle (e.g.
+ * gdelt.ts's proactive rate-limit spacing) reuse this instead of a private
+ * copy. */
+export function sleep(ms: number): Promise<void> {
   return new Promise((r) => setTimeout(r, ms));
 }
 
