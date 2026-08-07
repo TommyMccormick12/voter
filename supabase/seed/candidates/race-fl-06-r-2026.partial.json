@@ -71,21 +71,12 @@
       "race_id": "race-fl-06-r-2026",
       "fec_candidate_id": "H6FL06415",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
-      "total_raised": 1241449.83,
-      "fec_coverage_end_date": "2026-09-30",
       "fec_totals": {
-        "committee_id": "",
-        "cycle": 2026,
-        "receipts": 1241449.83,
-        "disbursements": 386621.83,
-        "cash_on_hand_end_period": 0,
-        "individual_contributions": 35984.64,
-        "other_political_committee_contributions": 0,
-        "coverage_end_date": "2026-09-30"
+        "no2026Filings": true
       },
       "top_stances": [
         {
@@ -100,8 +91,9 @@
           "stance_id": "dan-bilzerian-foreign_policy",
           "issue_slug": "foreign_policy",
           "stance": "strongly_oppose",
-          "summary": "Platform calls to \"end all foreign aid\" and opposes \"endless foreign wars,\" saying the U.S. should have \"strong national defense... not playing world police.\"",
+          "summary": "Platform calls to \"end all foreign aid,\" including money sent to \"Israel, Ukraine, or anywhere else,\" and on wars says \"Strong national defense, yes. Playing world police, no.\"",
           "source_url": "https://www.bilzerianforcongress.com/dans-plan/",
+          "source_excerpt": "Strong national defense, yes. Playing world police, no.",
           "confidence": 68
         },
         {
@@ -116,7 +108,7 @@
           "stance_id": "dan-bilzerian-taxes",
           "issue_slug": "taxes",
           "stance": "strongly_support",
-          "summary": "Platform proposes \"getting rid of the IRS\" and lowering taxes to make \"America affordable again\" for working families.",
+          "summary": "Platform proposes \"get rid of the IRS\" and lowering taxes to make \"America affordable again\" for working Americans.",
           "source_url": "https://www.bilzerianforcongress.com/dans-plan/",
           "confidence": 63
         },
@@ -127,8 +119,28 @@
           "summary": "Platform calls to \"dismantle the Fed\" and \"shrink the federal government down to size,\" citing federal overspending.",
           "source_url": "https://www.bilzerianforcongress.com/dans-plan/",
           "confidence": 58
+        },
+        {
+          "stance_id": "dan-bilzerian-civil_rights",
+          "issue_slug": "civil_rights",
+          "stance": "strongly_support",
+          "summary": "Platform section \"End Jewish Supremacy\" says the country is \"being run into the ground by Jewish Special Interests\" and calls to replace them with \"real outsiders\" in Washington within two years.",
+          "source_url": "https://www.bilzerianforcongress.com/dans-plan/",
+          "source_excerpt": "This country is being run into the ground by Jewish Special Interests. We have two years to shake the tree in Washington and put real outsiders in charge, or America is done.",
+          "confidence": 70
+        },
+        {
+          "stance_id": "dan-bilzerian-government_reform",
+          "issue_slug": "government_reform",
+          "stance": "strongly_support",
+          "summary": "Platform frames putting a foreign country before America as \"treason,\" requires dual citizens in Congress to disclose it and bars related votes, and backs prosecuting officials who break promises.",
+          "source_url": "https://www.bilzerianforcongress.com/dans-plan/",
+          "source_excerpt": "Any politician who puts a foreign country before America is committing treason.",
+          "confidence": 58
         }
-      ]
+      ],
+      "activated_at": "2026-08-07T21:31:37.226Z",
+      "verified_at": "2026-08-07T21:31:37.226Z"
     },
     {
       "name": "Manuel P. Asensio",
