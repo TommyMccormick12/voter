@@ -22,19 +22,11 @@ FEC_API_KEY=...
 SUPABASE_SERVICE_ROLE_KEY=eyJ...
 ```
 
-**Optional env (specific ingesters):**
-
-```bash
-# NewsAPI.org — public statements ingester (npm run ingest:news).
-# Free 100 req/day, 1-month rolling archive. Skipped silently when unset.
-# https://newsapi.org/register
-NEWSAPI_KEY=
-```
-
 **Keyless services used by the pipeline:**
 - **Wikipedia** — bio + "Political positions" extraction (primary platform source)
 - **Congress.gov** — House roll-call votes (bioguide-joined; requires `CONGRESS_GOV_API_KEY`)
 - **Voteview** — Senate roll-call votes (bioguide-joined CSVs, keyless; replaced the GovTrack scrape path — Decision 6)
+- **GDELT DOC 2.0** — public-statements news mining (npm run ingest:gdelt), domain-pinned to FL outlets. Free and keyless — no env var. Replaced NewsAPI (Decision 5); see step 5 below.
 - **HUD ZIP→CD crosswalk** — national ZIP coverage (quarterly XLSX, free signup)
 - **Ballotpedia** — kept as fallback, but 2026 federal coverage is too thin to rely on
 
@@ -75,8 +67,10 @@ npm run ingest:industries -- --race-id "$RACE_ID" --cycle 2026
 #    (incumbents only — challengers skipped).
 npm run ingest:votes -- --race-id "$RACE_ID" --state FL --chamber house
 
-# 5. (optional) NewsAPI-driven statement ingester. Requires NEWSAPI_KEY.
-npm run ingest:news -- --race-id "$RACE_ID"
+# 5. (optional) GDELT-driven statement ingester — free, keyless news search
+#    domain-pinned to Florida outlets (floridapolitics.com first). Replaces
+#    the retired NewsAPI ingester (Decision 5).
+npm run ingest:gdelt -- --race-id "$RACE_ID" --state FL
 
 # 6. Synthesize top_stances with Haiku
 npm run synth:stances -- --race-id "$RACE_ID"
