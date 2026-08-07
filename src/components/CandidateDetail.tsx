@@ -9,6 +9,7 @@ import type {
 } from '@/types/database';
 import { getPartyTheme, getPartyInitials } from '@/lib/party-theme';
 import { resolvePartyKey } from '@/lib/tokens';
+import { issueLabel } from '@/lib/issues';
 import { DonorProfile } from './DonorProfile';
 import { VotingRecordList } from './VotingRecordList';
 import { StatementTimeline } from './StatementTimeline';
@@ -302,7 +303,6 @@ function StanceCard({
   stance: TopStance;
   accent: string;
 }) {
-  const stanceLabel = formatStance(stance.stance);
   const variant = stance.track_record_note
     ? classifyTrackRecord(stance.track_record_note)
     : null;
@@ -310,11 +310,18 @@ function StanceCard({
 
   return (
     <div className="border border-gray-200 rounded-xl p-5 bg-white">
+      {/* Topic label only. A support/oppose badge used to sit beside it, but
+          "IMMIGRATION · Support" reads as "supports immigration" when the
+          position is actually stricter enforcement, and "EDUCATION · Oppose"
+          read as anti-education for a candidate who founded a school. A stance
+          is the opinion the candidate holds — that opinion is the summary
+          below, which states the direction in words that cannot invert. The
+          `stance` field is retained as a matching signal (src/lib/llm/match.ts),
+          not as a display label. */}
       <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
         <span className="text-xs font-bold text-gray-500 uppercase">
           {issueLabel(stance.issue_slug)}
         </span>
-        <StanceBadge stance={stance.stance} accent={accent} label={stanceLabel} />
       </div>
       <p className="text-gray-900 mb-3 leading-relaxed">{stance.summary}</p>
       {stance.source_excerpt && (
@@ -337,63 +344,6 @@ function StanceCard({
       )}
     </div>
   );
-}
-
-function StanceBadge({
-  stance,
-  accent,
-  label,
-}: {
-  stance: TopStance['stance'];
-  accent: string;
-  label: string;
-}) {
-  if (stance === 'strongly_support' || stance === 'support') {
-    return (
-      <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${accent}`}>
-        {label}
-      </span>
-    );
-  }
-  if (stance === 'strongly_oppose' || stance === 'oppose') {
-    return (
-      <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-orange-100 text-orange-700">
-        {label}
-      </span>
-    );
-  }
-  return (
-    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-700">
-      {label}
-    </span>
-  );
-}
-
-function formatStance(s: TopStance['stance']): string {
-  const map: Record<TopStance['stance'], string> = {
-    strongly_support: 'Strongly support',
-    support: 'Support',
-    neutral: 'Neutral',
-    oppose: 'Oppose',
-    strongly_oppose: 'Strongly oppose',
-  };
-  return map[s];
-}
-
-function issueLabel(slug: string): string {
-  const map: Record<string, string> = {
-    economy: 'Economy & Jobs',
-    healthcare: 'Healthcare',
-    immigration: 'Immigration',
-    climate: 'Climate & Energy',
-    education: 'Education',
-    guns: 'Gun Policy',
-    criminal_justice: 'Criminal Justice',
-    foreign_policy: 'Foreign Policy',
-    taxes: 'Taxes',
-    housing: 'Housing',
-  };
-  return map[slug] ?? slug;
 }
 
 function sourceLabelFromUrl(url: string): string {

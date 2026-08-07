@@ -7,6 +7,7 @@ import type { CandidateWithFullData, TopStance } from '@/types/database';
 import { getPartyTheme, getPartyInitials } from '@/lib/party-theme';
 import { resolvePartyKey } from '@/lib/tokens';
 import { trackInteraction } from '@/lib/interactions-client';
+import { issueLabelShort } from '@/lib/issues';
 import { SaveToggleButton } from './SaveToggleButton';
 import { Badge } from './ui/Badge';
 import { Card } from './ui/Card';
@@ -190,7 +191,7 @@ function StanceRow({
     <div className={`border-l-2 ${theme.stanceBorder} pl-2.5`}>
       <div className="flex items-center gap-2 mb-0.5">
         <span className="text-xs font-bold text-gray-500 uppercase">
-          {issueLabel(stance.issue_slug)}
+          {issueLabelShort(stance.issue_slug)}
         </span>
         <SourcePill url={stance.source_url} />
       </div>
@@ -229,21 +230,6 @@ function TrackRecordBadge({ note }: { note: string }) {
 }
 
 // ================== helpers ==================
-function issueLabel(slug: string): string {
-  const map: Record<string, string> = {
-    economy: 'Economy',
-    healthcare: 'Healthcare',
-    immigration: 'Immigration',
-    climate: 'Climate',
-    education: 'Education',
-    guns: 'Guns',
-    criminal_justice: 'Criminal Justice',
-    foreign_policy: 'Foreign Policy',
-    taxes: 'Taxes',
-    housing: 'Housing',
-  };
-  return map[slug] ?? slug;
-}
 
 function sourceLabelFromUrl(url: string): string {
   if (!url) return 'Source';

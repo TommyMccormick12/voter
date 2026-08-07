@@ -221,7 +221,18 @@ Rules:
 }
 
 function buildStancesBlock(candidates: CandidateWithFullData[]): string {
-  const lines: string[] = ['Candidates and their stances:'];
+  // The stance field is the strength with which the candidate holds the
+  // opinion in the summary, NOT agreement with the topic name (see the
+  // Stance type in src/types/database.ts). Say so explicitly: read naively,
+  // "immigration | support | tighter border enforcement" invites the model
+  // to score a pro-immigration user as aligned.
+  const lines: string[] = [
+    'Candidates and their stances.',
+    'Format: issue | stance_id | strength | summary.',
+    'IMPORTANT: "strength" is how firmly the candidate holds the position',
+    'described in the summary — it is NOT support for the issue topic itself.',
+    'Judge alignment from the summary text, using strength only as intensity.',
+  ];
   for (const c of candidates) {
     lines.push('');
     lines.push(`## ${c.name} (id: ${c.id}, party: ${c.primary_party ?? 'I'}, ${c.incumbent ? 'incumbent' : 'challenger'})`);
