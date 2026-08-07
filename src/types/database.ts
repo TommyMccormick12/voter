@@ -67,7 +67,8 @@ export type StatementContext =
   | 'press_release'
   | 'interview'
   | 'speech'
-  | 'campaign_video';
+  | 'campaign_video'
+  | 'news';
 
 // ============================================================
 // Core entities

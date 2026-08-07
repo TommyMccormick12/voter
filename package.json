@@ -22,7 +22,7 @@
     "ingest:zip-crosswalk-2026": "tsx scripts/ingest/build_zip_crosswalk.ts",
     "ingest:author": "tsx scripts/ingest/author_platform.ts",
     "ingest:campaign-site": "tsx scripts/ingest/fetch_campaign_site.ts",
-    "ingest:news": "tsx scripts/ingest/fetch_news_statements.ts",
+    "ingest:gdelt": "tsx scripts/ingest/fetch_gdelt_statements.ts",
     "ingest:photos": "tsx scripts/ingest/fetch_photos.ts",
     "synth:stances": "tsx scripts/synthesize/synthesize_stances.ts",
     "synth:flag": "tsx scripts/synthesize/flag_inconsistencies.ts",

@@ -45,6 +45,7 @@ import {
   type MemberSenateVote,
 } from '../../src/lib/api-clients/voteview';
 import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';
+import { inferIssueSlugs } from '../../src/lib/issue-keywords';
 
 const VOTES_PER_CANDIDATE = 50;
 
@@ -71,27 +72,11 @@ function parseArgs(): Args {
   return { raceId, state, chamber };
 }
 
-// Heuristic bill-title → issue slug mapping. Deliberately conservative —
-// better to miss a tag than to mis-tag, since these feed Haiku synthesis.
+// Bill-title → issue slug mapping. Shared with fetch_gdelt_statements.ts
+// via src/lib/issue-keywords.ts so the two ingesters can't drift apart on
+// which keywords map to which slug.
 function inferIssues(billTitle: string, billSummary: string | null): string[] {
-  const text = `${billTitle} ${billSummary ?? ''}`.toLowerCase();
-  const issues: string[] = [];
-  const map: Array<[RegExp, string]> = [
-    [/tax|jobs and economic|economy|wage/, 'economy'],
-    [/health|medicare|medicaid|aca|prescription/, 'healthcare'],
-    [/immigration|border|asylum|deport/, 'immigration'],
-    [/climate|emission|clean energy|epa|fossil/, 'climate'],
-    [/education|student loan|school|teacher/, 'education'],
-    [/firearm|gun|second amendment/, 'guns'],
-    [/criminal justice|prison|sentencing|police/, 'criminal_justice'],
-    [/foreign|ukraine|israel|china|nato|military|defense/, 'foreign_policy'],
-    [/tax cut|tcja/, 'taxes'],
-    [/housing|rent|mortgage|hud/, 'housing'],
-  ];
-  for (const [re, slug] of map) {
-    if (re.test(text)) issues.push(slug);
-  }
-  return issues;
+  return inferIssueSlugs(`${billTitle} ${billSummary ?? ''}`);
 }
 
 // ============================================================
