@@ -308,7 +308,7 @@ async function main() {
               <span class="text-[10px] font-bold uppercase ${voteColor} px-2 py-1 rounded">${esc(v.vote)}</span>
               <div class="flex-1 min-w-0">
                 <p class="text-sm text-gray-900"><code class="text-xs bg-gray-100 px-1 rounded mr-1">${esc(v.bill_id)}</code> ${esc((v.bill_title ?? '').slice(0, 100))}</p>
-                <p class="text-[11px] text-gray-500">${esc(v.vote_date)}${(v.issue_slugs ?? []).length > 0 ? ' · ' + v.issue_slugs.map((s: string) => `<span class="inline-block bg-gray-50 px-1.5 rounded">${esc(s)}</span>`).join(' ') : ''}</p>
+                <p class="text-[11px] text-gray-500">${esc(v.vote_date)}${(v.issue_slugs ?? []).length > 0 ? ' · ' + (v.issue_slugs ?? []).map((s: string) => `<span class="inline-block bg-gray-50 px-1.5 rounded">${esc(s)}</span>`).join(' ') : ''}</p>
               </div>
             </div>`;
           }).join('')}

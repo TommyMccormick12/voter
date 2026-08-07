@@ -53,8 +53,9 @@ async function main() {
     try {
       const html = await fetchCachedText(url, { cacheTag: `campaign:${url}` });
       const statements = extractStatements(html, url);
-      c.statements = statements.slice(0, MAX_STATEMENTS_PER_CANDIDATE);
-      console.log(`[statements] ${c.name}: ${c.statements?.length ?? 0} statements from ${url}`);
+      const kept = statements.slice(0, MAX_STATEMENTS_PER_CANDIDATE);
+      c.statements = kept;
+      console.log(`[statements] ${c.name}: ${kept.length} statements from ${url}`);
     } catch (err) {
       console.warn(`[statements] ${c.name} (${url}):`, err instanceof Error ? err.message : err);
       c.statements = [];
