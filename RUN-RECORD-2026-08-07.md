@@ -7,9 +7,9 @@ Companion to `HANDOFF-2026-08-07.md`. Covers GitHub issue #8 and tickets
 
 | | Start of day | End of day |
 |---|---|---|
-| Active candidates | 9 | 89 |
-| Races with any coverage | 9 of 57 | 54 of 57 |
-| Races marked `no_primary` | 1 | 13 |
+| Active candidates | 9 | 90 |
+| Races with any coverage | 9 of 57 | 55 of 57 |
+| Races marked `no_primary` | 1 | 14 |
 | Races with the match flow (3+ active) | 0 | 9 |
 | Money coverage date | stale (June) | 2026-07-29 pre-primary |
 
@@ -166,9 +166,8 @@ candidate's own `voting_record`.
   budget could also revisit the wave-4 shortfalls.
 - **Single-source risk.** Most challenger stances rest on one campaign
   URL; one page edit invalidates a whole card.
-- **Three races still have no coverage.** FL-01 R and FL-13 D are the
-  only genuinely contested ones. **DECIDED 2026-08-07: ship without
-  them.** Both failed verification for real reasons — Patronis's sources
+- **Two races still have no coverage: FL-01 R and FL-13 D.** Both are
+  genuinely contested. **DECIDED 2026-08-07: ship without them.** Both failed verification for real reasons — Patronis's sources
   were prior-cycle, and both FL-13 D drafts were refuted — and with 11
   days to the primary another authoring round was judged the wrong use of
   the remaining time. Nothing wrong ships; those races stay honestly
