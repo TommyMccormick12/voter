@@ -9,7 +9,7 @@
 // have no public SELECT policy. The service-role key is server-only;
 // it never leaks to the client because this is a server component.
 
-import { createClient } from '@supabase/supabase-js';
+import { getServiceClient } from '@/lib/data/adapter-service';
 
 export const dynamic = 'force-dynamic'; // always fresh — no static cache
 
@@ -59,11 +59,16 @@ interface IpCluster {
 }
 
 function svc() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) throw new Error('Supabase env vars missing');
-  return createClient(url, key, { auth: { persistSession: false } });
+  return getServiceClient();
 }
+
+/** Tables loadCounts() runs a plain `created_at`/timestamp-column count against. */
+type CountTable =
+  | 'sessions'
+  | 'session_visits'
+  | 'candidate_interactions'
+  | 'llm_matches'
+  | 'quick_poll_responses';
 
 async function loadCounts(sb: ReturnType<typeof svc>): Promise<Counts> {
   const now = new Date();
@@ -71,7 +76,11 @@ async function loadCounts(sb: ReturnType<typeof svc>): Promise<Counts> {
   const t7d = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000).toISOString();
   const t30d = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000).toISOString();
 
-  async function cnt(table: string, since: string, col = 'created_at'): Promise<number> {
+  async function cnt(
+    table: CountTable,
+    since: string,
+    col: 'created_at' | 'visit_started_at' = 'created_at'
+  ): Promise<number> {
     const { count } = await sb.from(table).select('*', { count: 'exact', head: true }).gte(col, since);
     return count ?? 0;
   }

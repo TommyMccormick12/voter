@@ -299,7 +299,7 @@ async function main() {
       ${votes.length > 0 ? `
       <section>
         <h3 class="text-lg font-bold text-gray-900 mb-1">Recent voting record · top 8 of ${votes.length}</h3>
-        <p class="text-xs text-gray-500 mb-3">Source: GovTrack (keyless, replaced sunset ProPublica Congress).</p>
+        <p class="text-xs text-gray-500 mb-3">Source: Congress.gov (House) / Voteview (Senate) — replaced the GovTrack scrape path.</p>
         <div class="space-y-2">
           ${votes.slice(0, 8).map((v: VoteRow) => {
             const voteColor = v.vote === 'yea' ? 'bg-emerald-100 text-emerald-800' : v.vote === 'nay' ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-700';
@@ -308,7 +308,7 @@ async function main() {
               <span class="text-[10px] font-bold uppercase ${voteColor} px-2 py-1 rounded">${esc(v.vote)}</span>
               <div class="flex-1 min-w-0">
                 <p class="text-sm text-gray-900"><code class="text-xs bg-gray-100 px-1 rounded mr-1">${esc(v.bill_id)}</code> ${esc((v.bill_title ?? '').slice(0, 100))}</p>
-                <p class="text-[11px] text-gray-500">${esc(v.vote_date)}${(v.issue_slugs ?? []).length > 0 ? ' · ' + v.issue_slugs.map((s: string) => `<span class="inline-block bg-gray-50 px-1.5 rounded">${esc(s)}</span>`).join(' ') : ''}</p>
+                <p class="text-[11px] text-gray-500">${esc(v.vote_date)}${(v.issue_slugs ?? []).length > 0 ? ' · ' + (v.issue_slugs ?? []).map((s: string) => `<span class="inline-block bg-gray-50 px-1.5 rounded">${esc(s)}</span>`).join(' ') : ''}</p>
               </div>
             </div>`;
           }).join('')}
@@ -342,7 +342,7 @@ async function main() {
         <tr class="border-b border-gray-100"><td class="py-2">top_stances (with confidence, track-record note, citations)</td><td>Haiku synthesis of platform + voting record</td><td class="text-right font-mono">${stances.length}</td></tr>
         <tr class="border-b border-gray-100"><td class="py-2">candidate_top_industries</td><td>FEC contributions → Haiku-classified buckets</td><td class="text-right font-mono">${industries.length}</td></tr>
         <tr class="border-b border-gray-100"><td class="py-2">candidate_donors (individual contributor names)</td><td>FEC Schedule A</td><td class="text-right font-mono">${(c.candidate_donors ?? []).length}</td></tr>
-        <tr class="border-b border-gray-100"><td class="py-2">candidate_voting_record (last 50 votes per query cap)</td><td>GovTrack member votes</td><td class="text-right font-mono">${votes.length}</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2">candidate_voting_record (last 50 votes per query cap)</td><td>Congress.gov (House) / Voteview (Senate) member votes</td><td class="text-right font-mono">${votes.length}</td></tr>
         <tr class="border-b border-gray-100"><td class="py-2">candidate_positions (per-issue stated platform)</td><td>Wikipedia/Ballotpedia/campaign-site → Haiku</td><td class="text-right font-mono">${(c.candidate_positions ?? []).length}</td></tr>
         <tr><td class="py-2">candidate_statements (press releases / news)</td><td>NewsAPI + campaign-site scraping (opt-in)</td><td class="text-right font-mono">${(c.candidate_statements ?? []).length}</td></tr>
       </tbody>

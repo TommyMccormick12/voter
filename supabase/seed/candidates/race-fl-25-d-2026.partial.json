@@ -2,144 +2,144 @@
   "race_id": "race-fl-25-d-2026",
   "candidates": [
     {
-      "name": "Debbie Wasserman Schultz",
+      "name": "Jared Moskowitz",
       "party": "DEMOCRATIC PARTY",
       "primary_party": "D",
-      "slug": "debbie-wasserman-schultz",
+      "slug": "jared-moskowitz",
       "incumbent": true,
       "state": "FL",
       "district": "25",
       "office": "U.S. House",
       "race_id": "race-fl-25-d-2026",
-      "fec_candidate_id": "H4FL20023",
-      "total_raised": 2502688.61,
+      "fec_candidate_id": "H2FL22171",
+      "total_raised": 1710590.3,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 2502688.61,
-        "disbursements": 1052517.34,
+        "receipts": 1710590.3,
+        "disbursements": 842813.43,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 1938353.11,
-        "other_political_committee_contributions": 534750
+        "individual_contributions": 1258774.14,
+        "other_political_committee_contributions": 323779.16
       },
-      "bio": "Deborah Wasserman Schultz (née Wasserman; /ˈwɑːsərmən/; born September 27, 1966) is an American politician serving as the U.S. representative for Florida's 25th congressional district, first elected to Congress in 2004. A member of the Democratic Party, she was the chair of the Democratic National Committee (DNC) from 2011 until her resignation in 2016.",
-      "campaign_website": "http://wassermanschultz.house.gov",
+      "bio": "Jared Evan Moskowitz (/ˈmɒskəwɪts/ MOSS-kə-wits; born December 18, 1980) is an American politician serving as the U.S. representative for Florida's 23rd congressional district since 2023. A member of the Democratic Party, he previously served on the Broward County Commission from 2022 to 2023 and as director of the Florida Division of Emergency Management from 2019 to 2021. Moskowitz also represented the Coral Springs-Parkland area in the Florida House of Representatives from 2012 to 2019.",
+      "campaign_website": "http://moskowitz.house.gov",
       "key_messages": [
-        "Wasserman Schultz is a proponent of gun control legislation and co-sponsored the STOP School Violence Act to strengthen school safety through training programs and security improvements.",
-        "Wasserman Schultz is a strong supporter of Israel, backing its military actions in Gaza and supporting financial aid to Israel, while also supporting the Iran Nuclear Deal.",
-        "Wasserman Schultz supports expanding hate crime protections and increasing penalties for identity theft, while advocating against making military veterans a separate category of hate crime victims.",
-        "Wasserman Schultz voted in favor of the Emergency Economic Stabilization Act in 2008 during the financial crisis, but opposed CFPB payday lending regulation delays."
+        "Moskowitz strongly supports Israel and opposes pro-Palestine activism, voting for aid to Israel and criticizing demonstrations he views as anti-Semitic while opposing the ICC arrest warrant for Netanyahu.",
+        "Moskowitz supports stricter immigration enforcement, joining Republicans and 45 other House Democrats in voting for the Laken Riley Act in 2025.",
+        "Moskowitz supports government efficiency and reorganizing federal agencies, being the only Democrat to join the Department of Government Efficiency (DOGE) caucus and proposing to reduce the size of the Department of Homeland Security.",
+        "Moskowitz voted to fund Israel aid by cutting the IRS budget rather than other means of funding."
       ],
       "campaign_themes": [
         {
-          "heading": "guns",
-          "text": "Wasserman Schultz is a proponent of gun control legislation and co-sponsored the STOP School Violence Act to strengthen school safety through training programs and security improvements."
-        },
-        {
           "heading": "foreign_policy",
-          "text": "Wasserman Schultz is a strong supporter of Israel, backing its military actions in Gaza and supporting financial aid to Israel, while also supporting the Iran Nuclear Deal."
+          "text": "Moskowitz strongly supports Israel and opposes pro-Palestine activism, voting for aid to Israel and criticizing demonstrations he views as anti-Semitic while opposing the ICC arrest warrant for Netanyahu."
         },
         {
-          "heading": "criminal_justice",
-          "text": "Wasserman Schultz supports expanding hate crime protections and increasing penalties for identity theft, while advocating against making military veterans a separate category of hate crime victims."
+          "heading": "immigration",
+          "text": "Moskowitz supports stricter immigration enforcement, joining Republicans and 45 other House Democrats in voting for the Laken Riley Act in 2025."
         },
         {
           "heading": "economy",
-          "text": "Wasserman Schultz voted in favor of the Emergency Economic Stabilization Act in 2008 during the financial crisis, but opposed CFPB payday lending regulation delays."
+          "text": "Moskowitz supports government efficiency and reorganizing federal agencies, being the only Democrat to join the Department of Government Efficiency (DOGE) caucus and proposing to reduce the size of the Department of Homeland Security."
+        },
+        {
+          "heading": "taxes",
+          "text": "Moskowitz voted to fund Israel aid by cutting the IRS budget rather than other means of funding."
         }
       ],
       "platform_excerpts": [
         {
-          "issue_slug": "guns",
-          "excerpt": "Wasserman Schultz is a proponent of gun control legislation... co-sponsored a bill to 'strengthen school safety and security'... would 'provide $50 million a year for a new federal grant program to train students, teachers and law enforcement on how to spot and report signs of gun violence'.",
-          "source": "wikipedia",
-          "source_url": "https://en.wikipedia.org/wiki/Debbie_Schultz"
-        },
-        {
           "issue_slug": "foreign_policy",
-          "excerpt": "Wasserman Schultz is a supporter of Israel... has continued to defend the state's military action in the Gaza Strip... In 2015, Rep. Wasserman Schultz announced her support for the Joint Comprehensive Plan of Action (JCPOA), commonly known as the Iran Nuclear Deal.",
+          "excerpt": "In November 2023, Moskowitz was one of 12 House Democrats to vote for a $14.3 billion aid package to Israel...He wrote on October 10 supporting strong retaliation by Israel after the October 7 attacks, 'This is the largest attack in Israel in 50 years, The response will be the largest response in 50 years.'",
           "source": "wikipedia",
-          "source_url": "https://en.wikipedia.org/wiki/Debbie_Schultz"
+          "source_url": "https://en.wikipedia.org/wiki/Jared_Moskowitz"
         },
         {
-          "issue_slug": "criminal_justice",
-          "excerpt": "Wasserman Schultz introduced the Stopping Tax Offenders and Prosecuting Identity Theft Act of 2013... would increase the penalties on identity thieves... She remarked that suggesting military members have 'systematically been the victims of hate crimes' is belittling to actual protected groups.",
+          "issue_slug": "immigration",
+          "excerpt": "In 2025, Moskowitz was one of 46 House Democrats who joined all Republicans to vote for the Laken Riley Act.",
           "source": "wikipedia",
-          "source_url": "https://en.wikipedia.org/wiki/Debbie_Schultz"
+          "source_url": "https://en.wikipedia.org/wiki/Jared_Moskowitz"
         },
         {
           "issue_slug": "economy",
-          "excerpt": "On September 29, 2008, Wasserman Schultz voted for the Emergency Economic Stabilization Act of 2008... She was among a dozen Florida representatives who cosponsored the legislation that would delay the CFPB's payday lending rules by two years... She has drawn criticism for trying to delay those regulations.",
+          "excerpt": "Moskowitz was the only Democrat to join the Department of Government Efficiency (DOGE) caucus in Congress. He proposed reorganizing the Department of Homeland Security (DHS) by potentially removing agencies such as the Federal Emergency Management Agency (FEMA) and the Secret Service from its jurisdiction. This proposal aims to reduce the size of the DHS.",
           "source": "wikipedia",
-          "source_url": "https://en.wikipedia.org/wiki/Debbie_Schultz"
+          "source_url": "https://en.wikipedia.org/wiki/Jared_Moskowitz"
+        },
+        {
+          "issue_slug": "taxes",
+          "excerpt": "Moskowitz was one of 12 House Democrats to vote for a $14.3 billion aid package to Israel that was funded by cutting the Internal Revenue Service (IRS) budget",
+          "source": "wikipedia",
+          "source_url": "https://en.wikipedia.org/wiki/Jared_Moskowitz"
         }
       ],
       "top_industries": [
         {
           "industry_name": "Retired / Self-Employed",
-          "amount": 108500,
+          "amount": 126000,
           "rank": 1,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
           "industry_name": "Finance & Banking",
-          "amount": 56000,
+          "amount": 49000,
           "rank": 2,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Legal",
-          "amount": 38500,
+          "industry_name": "Construction",
+          "amount": 31500,
           "rank": 3,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Real Estate",
+          "industry_name": "Legal",
           "amount": 31500,
           "rank": 4,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Other",
+          "industry_name": "Real Estate",
           "amount": 24500,
           "rank": 5,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Nonprofit / Civic",
-          "amount": 17500,
+          "industry_name": "Healthcare & Pharma",
+          "amount": 21000,
           "rank": 6,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Retail & Consumer Goods",
-          "amount": 14000,
+          "industry_name": "Technology",
+          "amount": 17500,
           "rank": 7,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Healthcare & Pharma",
-          "amount": 14000,
+          "industry_name": "Other",
+          "amount": 17500,
           "rank": 8,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Agriculture",
+          "industry_name": "Government / Public Sector",
           "amount": 14000,
           "rank": 9,
           "cycle": 2026,
           "data_source": "fec+haiku"
         },
         {
-          "industry_name": "Defense & Aerospace",
+          "industry_name": "Agriculture",
           "amount": 10500,
           "rank": 10,
           "cycle": 2026,
@@ -148,340 +148,114 @@
       ],
       "top_donors": [
         {
-          "donor_name": "YANOFSKY, NANCY",
+          "donor_name": "CARRIER, ALYSSA",
           "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
+          "industry": "Construction",
           "amount_total": 3500,
           "cycle": 2026,
           "rank_in_candidate": 1,
-          "fec_committee_id": "C00385773",
+          "fec_committee_id": "C00807628",
           "data_source": "fec"
         },
         {
-          "donor_name": "WAISMAN, SHAI",
+          "donor_name": "CARRIER, ALYSSA",
           "donor_type": "individual",
-          "industry": "Other",
+          "industry": "Construction",
           "amount_total": 3500,
           "cycle": 2026,
           "rank_in_candidate": 2,
-          "fec_committee_id": "C00385773",
+          "fec_committee_id": "C00807628",
           "data_source": "fec"
         },
         {
-          "donor_name": "WAISMAN, SHAI",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 3500,
-          "cycle": 2026,
-          "rank_in_candidate": 3,
-          "fec_committee_id": "C00385773",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "STONE, ELLIOT N",
-          "donor_type": "individual",
-          "industry": "Real Estate",
-          "amount_total": 3500,
-          "cycle": 2026,
-          "rank_in_candidate": 4,
-          "fec_committee_id": "C00385773",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "SICILIA, MICHAEL D",
-          "donor_type": "individual",
-          "industry": "Technology",
-          "amount_total": 3500,
-          "cycle": 2026,
-          "rank_in_candidate": 5,
-          "fec_committee_id": "C00385773",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "RUBIN, WILLIAM",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 3500,
-          "cycle": 2026,
-          "rank_in_candidate": 6,
-          "fec_committee_id": "C00385773",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "PESKIN, BIANCA",
+          "donor_name": "STERLING, DAVID",
           "donor_type": "individual",
           "industry": "Retired / Self-Employed",
           "amount_total": 3500,
           "cycle": 2026,
-          "rank_in_candidate": 7,
-          "fec_committee_id": "C00385773",
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00807628",
           "data_source": "fec"
         },
         {
-          "donor_name": "NEFF, JANA",
+          "donor_name": "ROGOFF, LISA",
           "donor_type": "individual",
-          "industry": "Defense & Aerospace",
+          "industry": "Retired / Self-Employed",
           "amount_total": 3500,
           "cycle": 2026,
-          "rank_in_candidate": 8,
-          "fec_committee_id": "C00385773",
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00807628",
           "data_source": "fec"
         },
         {
           "donor_name": "NEFF, BRIAN",
           "donor_type": "individual",
-          "industry": "Defense & Aerospace",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HIRSCHTICK, JON",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HIRSCHTICK, JON",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FRIEDMAN, BERNIE",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00807628",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FREEDLAND, MICHAEL",
+          "donor_type": "individual",
+          "industry": "Legal",
           "amount_total": 3500,
           "cycle": 2026,
           "rank_in_candidate": 9,
-          "fec_committee_id": "C00385773",
+          "fec_committee_id": "C00807628",
           "data_source": "fec"
         },
         {
-          "donor_name": "MIMS, TOM",
+          "donor_name": "FREEDLAND, MICHAEL",
           "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
+          "industry": "Legal",
           "amount_total": 3500,
           "cycle": 2026,
           "rank_in_candidate": 10,
-          "fec_committee_id": "C00385773",
+          "fec_committee_id": "C00807628",
           "data_source": "fec"
         }
       ],
-      "govtrack_id": 400623,
-      "bioguide_id": "W000797",
+      "govtrack_id": 456893,
+      "bioguide_id": "M001217",
       "voting_record": [
-        {
-          "bill_id": "hr8469-119",
-          "bill_title": "H.R. 8469: Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
-          "bill_summary": "This bill passed in the House on May 15, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
-          "issue_slugs": [
-            "climate",
-            "foreign_policy"
-          ],
-          "vote_date": "2026-05-15",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h175",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hr8469-119",
-          "bill_title": "H.R. 8469: Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
-          "bill_summary": "This bill passed in the House on May 15, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
-          "issue_slugs": [
-            "climate",
-            "foreign_policy"
-          ],
-          "vote_date": "2026-05-15",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h174",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hr8365-119",
-          "bill_title": "H.R. 8365: Monitor Accountability Act",
-          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-05-14",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h173",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hr8365-119",
-          "bill_title": "H.R. 8365: Monitor Accountability Act",
-          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-05-14",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h172",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "hr5625-119",
-          "bill_title": "H.R. 5625: Cashless Bail Reporting Act",
-          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-05-14",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h171",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hconres75-119",
-          "bill_title": "H.Con.Res. 75: Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove the United States Armed Forces from hostilities against the Islamic Republic of Iran.",
-          "bill_summary": "This resolution failed in the House on May 14, 2026.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-05-14",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h170",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hr6260-119",
-          "bill_title": "H.R. 6260: Keeping Violent Offenders Off Our Streets Act of 2025",
-          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-05-14",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h169",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hr6260-119",
-          "bill_title": "H.R. 6260: Keeping Violent Offenders Off Our Streets Act of 2025",
-          "bill_summary": "This bill passed in the House on May 14, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-05-14",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h168",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "hres1259-119",
-          "bill_title": "H.Res. 1259: Expressing the sense of the House of Representatives that the President should prioritize securing the release of Pastor Jin Mingri, Pastor Gao Quanfu and his wife Pang Yu, Dr. Gulshan Abbas, and Jimmy Lai detained by the People’s Republic o",
-          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-05-13",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h167",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hres1251-119",
-          "bill_title": "H.Res. 1251: Calling on elected officials and civil society leaders to counter antisemitism and educate the public on the contributions of the Jewish-American community.",
-          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-05-13",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h166",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hconres96-119",
-          "bill_title": "H.Con.Res. 96: Expressing support for law enforcement officers.",
-          "bill_summary": "This resolution passed in the House on May 13, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-05-13",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h165",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hr1346-119",
-          "bill_title": "H.R. 1346: Nationwide Consumer and Fuel Retailer Choice Act of 2025",
-          "bill_summary": "This bill passed in the House on May 13, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-05-13",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h164",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hr1346-119",
-          "bill_title": "H.R. 1346: Nationwide Consumer and Fuel Retailer Choice Act of 2025",
-          "bill_summary": "This bill passed in the House on May 13, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-05-13",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h163",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "hres1252-119",
-          "bill_title": "H.Res. 1252: Resolution memorializing law enforcement officers killed in the line of duty.",
-          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-05-13",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h162",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hres1274-119",
-          "bill_title": "H.Res. 1274: Providing that section 11 of House Resolution 1224 shall have no force or effect.",
-          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-05-13",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h161",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hres1274-119",
-          "bill_title": "H.Res. 1274: Providing that section 11 of House Resolution 1224 shall have no force or effect.",
-          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-05-13",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h160",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "hres1275-119",
-          "bill_title": "H.Res. 1275: Providing for consideration of the bill (H.R. 5625) to direct the Attorney General to make publicly available a list of each State and unit of local government that permits cashless bail, and for other purposes; providing for consideration o",
-          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-05-13",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h159",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hres1275-119",
-          "bill_title": "H.Res. 1275: Providing for consideration of the bill (H.R. 5625) to direct the Attorney General to make publicly available a list of each State and unit of local government that permits cashless bail, and for other purposes; providing for consideration o",
-          "bill_summary": "This simple resolution was agreed to on May 13, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-05-13",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h158",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "hr2853-119",
-          "bill_title": "H.R. 2853: Combating Organized Retail Crime Act of 2025",
-          "bill_summary": "This bill passed in the House on May 12, 2026 and goes to the Senate next for consideration.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-05-12",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h157",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hr2071-119",
-          "bill_title": "H.R. 2071: Save Our Shrimpers Act",
-          "bill_summary": "This bill passed in the House on May 12, 2026 and goes to the Senate next for consideration.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-05-12",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h156",
-          "significance": "major"
-        },
         {
           "bill_id": "s4465-119",
           "bill_title": "S. 4465: A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
           "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
-          "vote": "yea",
+          "vote": "absent",
           "issue_slugs": [
             "foreign_policy"
           ],
@@ -764,7 +538,7 @@
           "bill_id": "hres1189-119",
           "bill_title": "H.Res. 1189: Providing for consideration of the bill (H.R. 4690) to amend the Energy Conservation and Production Act to repeal certain Federal building energy efficiency performance standards, and for other purposes; providing for consideration of the re",
           "bill_summary": "This simple resolution was agreed to on April 22, 2026. That is the end of the legislative process for a simple resolution.",
-          "vote": "absent",
+          "vote": "nay",
           "issue_slugs": [],
           "vote_date": "2026-04-22",
           "source": "govtrack",
@@ -774,7 +548,7 @@
         {
           "bill_id": "s1020-119",
           "bill_title": "S. 1020: A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
-          "bill_summary": "This bill was enacted after being signed by the President on May 11, 2026.",
+          "bill_summary": "This bill was passed by Congress on April 21, 2026 and goes to the President next.",
           "vote": "yea",
           "issue_slugs": [],
           "vote_date": "2026-04-21",
@@ -814,54 +588,465 @@
           "source": "govtrack",
           "source_url": "https://www.govtrack.us/congress/votes/119-2026/h126",
           "significance": "major"
+        },
+        {
+          "bill_id": "hr1681-119",
+          "bill_title": "H.R. 1681: Expediting Federal Broadband Deployment Reviews Act",
+          "bill_summary": "This bill passed in the House on April 20, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-20",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h125",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1175-119",
+          "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+          "bill_summary": "This resolution failed in the House on April 17, 2026.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-17",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h124",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1175-119",
+          "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+          "bill_summary": "This resolution failed in the House on April 17, 2026.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-17",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h123",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1175-119",
+          "bill_title": "H.Res. 1175: Providing for consideration of the bill (H.R. 8035) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through October 20, 2027, and for other purposes.",
+          "bill_summary": "This resolution failed in the House on April 17, 2026.",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-04-17",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h122",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1156-119",
+          "bill_title": "H.Res. 1156: Expressing support for tax policies that support working families.",
+          "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [
+            "economy"
+          ],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h121",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1689-119",
+          "bill_title": "H.R. 1689: To require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h120",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres965-119",
+          "bill_title": "H.Res. 965: Providing for consideration of the bill (H.R. 1689) to require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+          "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h119",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6398-119",
+          "bill_title": "H.R. 6398: RED Tape Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h118",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6398-119",
+          "bill_title": "H.R. 6398: RED Tape Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h117",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr6409-119",
+          "bill_title": "H.R. 6409: FENCES Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h116",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr6409-119",
+          "bill_title": "H.R. 6409: FENCES Act",
+          "bill_summary": "This bill passed in the House on April 16, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h115",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hconres40-119",
+          "bill_title": "H.Con.Res. 40: Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+          "bill_summary": "This resolution failed in the House on April 16, 2026.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-16",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h114",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres965-119",
+          "bill_title": "H.Res. 965: Providing for consideration of the bill (H.R. 1689) to require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+          "bill_summary": "This simple resolution was agreed to on April 16, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h113",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hres1174-119",
+          "bill_title": "H.Res. 1174: Providing for consideration of the bill (H.R. 6387) to amend the Clean Air Act to require revisions to regulations governing the review and handling of air quality monitoring data influenced by exceptional events or actions to mitigate wildf",
+          "bill_summary": "This simple resolution was agreed to on April 15, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h112",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1174-119",
+          "bill_title": "H.Res. 1174: Providing for consideration of the bill (H.R. 6387) to amend the Clean Air Act to require revisions to regulations governing the review and handling of air quality monitoring data influenced by exceptional events or actions to mitigate wildf",
+          "bill_summary": "This simple resolution was agreed to on April 15, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-04-15",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h111",
+          "significance": "procedural"
+        },
+        {
+          "bill_id": "hr7613-119",
+          "bill_title": "H.R. 7613: ALERT Act",
+          "bill_summary": "This bill passed in the House on April 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h110",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hr1011-119",
+          "bill_title": "H.R. 1011: Emergency Conservation Program Improvement Act of 2025",
+          "bill_summary": "This bill passed in the House on April 14, 2026 and goes to the Senate next for consideration.",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-04-14",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h109",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1142-119",
+          "bill_title": "H.Res. 1142: Providing for disposition of the Senate amendment to the bill (H.R. 7147) making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
+          "bill_summary": "This simple resolution was agreed to on March 27, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-03-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h108",
+          "significance": "major"
+        },
+        {
+          "bill_id": "hres1142-119",
+          "bill_title": "H.Res. 1142: Providing for disposition of the Senate amendment to the bill (H.R. 7147) making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
+          "bill_summary": "This simple resolution was agreed to on March 27, 2026. That is the end of the legislative process for a simple resolution.",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-03-27",
+          "source": "govtrack",
+          "source_url": "https://www.govtrack.us/congress/votes/119-2026/h107",
+          "significance": "procedural"
         }
       ],
       "top_stances": [
         {
-          "stance_id": "debbie-wasserman-schultz-guns",
-          "issue_slug": "guns",
+          "stance_id": "jared-moskowitz-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_support",
+          "summary": "Strongly supports Israel, votes for aid to Israel, opposes pro-Palestine activism and ICC warrant for Netanyahu.",
+          "source_url": "http://moskowitz.house.gov",
+          "confidence": 95
+        },
+        {
+          "stance_id": "jared-moskowitz-immigration",
+          "issue_slug": "immigration",
           "stance": "support",
-          "summary": "Support gun control legislation and school safety measures through training and security improvements.",
-          "source_url": "http://wassermanschultz.house.gov",
-          "source_excerpt": "co-sponsored the STOP School Violence Act to strengthen school safety through training programs and security improvements",
+          "summary": "Supports stricter immigration enforcement; voted for Laken Riley Act with Republican support.",
+          "source_url": "http://moskowitz.house.gov",
+          "confidence": 90
+        },
+        {
+          "stance_id": "jared-moskowitz-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports government efficiency and federal agency reorganization; only Democrat in DOGE caucus.",
+          "source_url": "http://moskowitz.house.gov",
           "confidence": 85
         },
         {
-          "stance_id": "debbie-wasserman-schultz-foreign_policy",
-          "issue_slug": "foreign_policy",
-          "stance": "support",
-          "summary": "Strong supporter of Israel, its military actions, financial aid, and the Iran Nuclear Deal.",
-          "source_url": "http://wassermanschultz.house.gov",
-          "source_excerpt": "strong supporter of Israel, backing its military actions in Gaza and supporting financial aid to Israel, while also supporting the Iran Nuclear Deal",
-          "confidence": 80,
-          "track_record_note": "Voted YEA on s4465-119 (FISA Amendments Act extension) aligning with foreign policy engagement; voted YEA on hconres75-119 directing removal of armed forces from Iran hostilities",
-          "track_record_citations": [
-            "s4465-119",
-            "hconres75-119"
-          ]
-        },
-        {
-          "stance_id": "debbie-wasserman-schultz-criminal_justice",
-          "issue_slug": "criminal_justice",
-          "stance": "support",
-          "summary": "Expand hate crime protections and increase identity theft penalties; oppose separate military veteran hate crime category.",
-          "source_url": "http://wassermanschultz.house.gov",
-          "source_excerpt": "supports expanding hate crime protections and increasing penalties for identity theft, while advocating against making military veterans a separate category of hate crime victims",
-          "confidence": 75
-        },
-        {
-          "stance_id": "debbie-wasserman-schultz-economy",
-          "issue_slug": "economy",
-          "stance": "support",
-          "summary": "Support emergency economic interventions and consumer protection; oppose payday lending regulation delays.",
-          "source_url": "http://wassermanschultz.house.gov",
-          "source_excerpt": "voted in favor of the Emergency Economic Stabilization Act in 2008 during the financial crisis, but opposed CFPB payday lending regulation delays",
-          "confidence": 70
+          "stance_id": "jared-moskowitz-taxes",
+          "issue_slug": "taxes",
+          "stance": "oppose",
+          "summary": "Opposed funding Israel aid by cutting IRS budget; prefers alternative funding mechanisms.",
+          "source_url": "http://moskowitz.house.gov",
+          "confidence": 80
         }
       ],
       "active": true,
-      "activated_at": "2026-05-17T18:37:13.206Z",
-      "photo_url": "https://bioguide.congress.gov/photo/W000797.jpg"
+      "activated_at": "2026-08-07T14:06:32.380Z",
+      "photo_url": "https://bioguide.congress.gov/photo/M001217.jpg",
+      "doe_status": "Qualified",
+      "incumbent_source": "carried from race-fl-23-d-2026.partial.json (race-fl-23-d-2026 -> race-fl-25-d-2026); FEC id H2FL22171 confirmed by spine as the same person, now on the 2026 map's district 25; see DATA-AUDIT-2026-08-06.md root cause 1 for the redistricting move and sitting-member status",
+      "verified_at": "2026-08-07T14:06:32.380Z"
+    },
+    {
+      "name": "Oliver Adams Larkin",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "oliver-adams-larkin",
+      "incumbent": false,
+      "state": "FL",
+      "district": "25",
+      "office": "U.S. House",
+      "race_id": "race-fl-25-d-2026",
+      "fec_candidate_id": "H6FL23154",
+      "total_raised": 327736.48,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 327736.48,
+        "disbursements": 145012.77,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 323436.48,
+        "other_political_committee_contributions": 4100
+      },
+      "bio": "Oliver Waterman Larkin (August 17, 1896 – December 17, 1970) was an American art historian and educator.  He won the 1950 Pulitzer Prize for History for his book Art and Life in America.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 43536.11,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 8100,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 7343.69,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 7150,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 6640.91,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 3250,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 3050,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 3000,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "amount": 1066.67,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 650,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "ELIAS, GAIL",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 5000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ELIAS, EUGENE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 5000,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "STEELE, WARREN",
+          "donor_type": "individual",
+          "industry": "Legal",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MENASHA, BENJAMIN J",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MENASHA, BENJAMIN J",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LARKIN, PAUL A",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LARKIN, PAUL A",
+          "donor_type": "individual",
+          "industry": "Retail & Consumer Goods",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LARKIN, MARGOT A",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "LARKIN, MARGOT A",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HUIZENGA ALEXANDER, PAMELA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00908855",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
     }
   ],
   "race": {

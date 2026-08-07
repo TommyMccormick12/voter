@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { CandidateWithFullData } from '@/types/database';
 import { CandidateScorecard } from './CandidateScorecard';
+import { EmptyState } from './ui/EmptyState';
 
 interface Props {
   candidates: CandidateWithFullData[];
@@ -53,12 +54,10 @@ export function ScorecardCarousel({ candidates, raceId, layout = 'auto' }: Props
 
   if (candidates.length === 0) {
     return (
-      <div className="rounded-xl border border-dashed border-gray-300 bg-gray-50 p-8 text-center">
-        <p className="text-gray-500 text-lg mb-2">No candidates yet</p>
-        <p className="text-gray-400 text-sm">
-          Candidate data for this race is being curated.
-        </p>
-      </div>
+      <EmptyState
+        title="No candidates yet"
+        description="Candidate data for this race is being curated."
+      />
     );
   }
 

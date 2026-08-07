@@ -1,47 +1,6 @@
 {
-  "race": {
-    "id": "race-fl-13-r-2026",
-    "state": "FL",
-    "district": "13",
-    "office": "U.S. House",
-    "election_date": "2026-08-18",
-    "cycle": 2026,
-    "election_type": "primary",
-    "primary_party": "R",
-    "ballotpedia_race_slug": "U.S._House_Florida_District_13_election,_2026_(Republican_primary)"
-  },
+  "race_id": "race-fl-13-r-2026",
   "candidates": [
-    {
-      "name": "Amaro Lionheart",
-      "party": "REPUBLICAN PARTY",
-      "primary_party": "R",
-      "slug": "amaro-lionheart",
-      "incumbent": false,
-      "state": "FL",
-      "district": "13",
-      "office": "U.S. House",
-      "race_id": "race-fl-13-r-2026",
-      "fec_candidate_id": "H6FL14138",
-      "bio": "The 2022 Florida gubernatorial election was held on November 8, 2022, to elect the governor of Florida, alongside other state and local elections. Incumbent Republican Governor Ron DeSantis won re-election in a landslide, defeating the Democratic Party nominee, Charlie Crist, who served as governor of Florida from 2007 to 2011 as a Republican and later as an independent. No Democrat has been elected governor of Florida since 1994.",
-      "top_industries": [],
-      "top_donors": [],
-      "voting_record": []
-    },
-    {
-      "name": "Courtney Ms Offutt",
-      "party": "REPUBLICAN PARTY",
-      "primary_party": "R",
-      "slug": "courtney-ms-offutt",
-      "incumbent": false,
-      "state": "FL",
-      "district": "13",
-      "office": "U.S. House",
-      "race_id": "race-fl-13-r-2026",
-      "fec_candidate_id": "H6FL13320",
-      "top_industries": [],
-      "top_donors": [],
-      "voting_record": []
-    },
     {
       "name": "Anna Paulina Luna",
       "party": "REPUBLICAN PARTY",
@@ -811,10 +770,22 @@
           ]
         }
       ],
-      "active": true,
+      "active": false,
       "activated_at": "2026-05-11T00:56:28.613Z",
-      "photo_url": "https://bioguide.congress.gov/photo/L000596.jpg"
+      "photo_url": "https://bioguide.congress.gov/photo/L000596.jpg",
+      "doe_status": "Qualified",
+      "incumbent_source": "carried from race-fl-13-r-2026.partial.json (race-fl-13-r-2026), same race pre- and post-rebuild; FEC id H0FL13158 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)"
     }
   ],
-  "race_id": "race-fl-13-r-2026"
+  "race": {
+    "id": "race-fl-13-r-2026",
+    "state": "FL",
+    "district": "13",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R",
+    "ballotpedia_race_slug": "U.S._House_Florida_District_13_election,_2026_(Republican_primary)"
+  }
 }

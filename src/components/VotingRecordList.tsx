@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import type { CandidateVote } from '@/types/database';
+import type { CandidateVote, DataSource } from '@/types/database';
 import { formatLocalDate } from '@/lib/dates';
+import { Badge } from './ui/Badge';
+import { EmptyState } from './ui/EmptyState';
 
 interface Props {
   votes: CandidateVote[];
@@ -26,36 +28,23 @@ export function VotingRecordList({ votes, filterIssues, incumbent = false }: Pro
   if (votes.length === 0) {
     // Incumbent-with-zero-votes happens when a sitting member leaves the
     // seat mid-cycle (resignation, appointment, death). The FEC ballot
-    // still lists them but GovTrack returns no current-Congress votes.
-    // The default "challenger has no history" copy would be misleading.
+    // still lists them but the current-Congress feed (Congress.gov for the
+    // House, Voteview for the Senate) returns no rows. The default
+    // "challenger has no history" copy would be misleading.
     if (incumbent) {
       return (
-        <div className="rounded-xl border border-dashed border-amber-300 bg-amber-50 p-6 text-center">
-          <p className="text-sm font-medium text-amber-900 mb-1">
-            No recent votes on file
-          </p>
-          <p className="text-xs text-amber-800 max-w-md mx-auto">
-            This candidate appears on the FEC ballot but does not have a current-cycle congressional voting record — typically because they left office mid-cycle. Their prior tenure is on{' '}
-            <a
-              href="https://www.govtrack.us/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline font-medium"
-            >
-              GovTrack
-            </a>
-            .
-          </p>
-        </div>
+        <EmptyState
+          tone="warning"
+          title="No recent votes on file"
+          description="This candidate appears on the FEC ballot but does not have a current-cycle congressional voting record — typically because they left office mid-cycle."
+        />
       );
     }
     return (
-      <div className="rounded-xl border border-dashed border-gray-300 bg-gray-50 p-6 text-center">
-        <p className="text-sm text-gray-500 mb-1">No voting record</p>
-        <p className="text-xs text-gray-400">
-          Non-incumbent candidates have no congressional voting history.
-        </p>
-      </div>
+      <EmptyState
+        title="No voting record"
+        description="Non-incumbent candidates have no congressional voting history."
+      />
     );
   }
 
@@ -108,7 +97,7 @@ export function VotingRecordList({ votes, filterIssues, incumbent = false }: Pro
               </div>
               <VoteBadge vote={v.vote} />
             </div>
-            <div className="flex flex-wrap gap-2 mt-2">
+            <div className="flex flex-wrap items-center gap-2 mt-2">
               {v.issue_slugs.map((slug) => (
                 <span
                   key={slug}
@@ -117,16 +106,50 @@ export function VotingRecordList({ votes, filterIssues, incumbent = false }: Pro
                   {slug}
                 </span>
               ))}
+              <VoteSource source={v.source} sourceUrl={v.source_url} />
             </div>
           </div>
         ))}
       </div>
-
-      <p className="text-xs text-gray-400 mt-4 text-center">
-        Source: ProPublica Congress API
-      </p>
     </div>
   );
+}
+
+/**
+ * Per-row source attribution. Votes now come from Congress.gov (House) or
+ * Voteview (Senate) — never GovTrack (Spec B2, Decision 6). `source_url`
+ * may be null; render the label without a link rather than a dead/wrong
+ * one.
+ */
+function VoteSource({
+  source,
+  sourceUrl,
+}: {
+  source: DataSource | null;
+  sourceUrl: string | null;
+}) {
+  if (!source) return null;
+  const label = voteSourceLabel(source);
+  if (sourceUrl) {
+    return (
+      <a
+        href={sourceUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="ml-auto text-[11px] text-blue-600 font-medium hover:text-blue-700 underline-offset-2 hover:underline"
+      >
+        Source: {label} →
+      </a>
+    );
+  }
+  return <span className="ml-auto text-[11px] text-gray-400">Source: {label}</span>;
+}
+
+function voteSourceLabel(source: DataSource): string {
+  if (source === 'congress_gov') return 'Congress.gov';
+  if (source === 'voteview') return 'Voteview';
+  if (source === 'govtrack') return 'GovTrack'; // legacy rows pre-B2 migration
+  return 'Official record';
 }
 
 function FilterPill({
@@ -140,8 +163,10 @@ function FilterPill({
 }) {
   return (
     <button
+      type="button"
       onClick={onClick}
-      className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition ${
+      aria-pressed={active}
+      className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition min-h-[32px] ${
         active
           ? 'bg-blue-600 text-white'
           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -152,27 +177,27 @@ function FilterPill({
   );
 }
 
+const VOTE_TONE: Record<CandidateVote['vote'], 'success' | 'error' | 'warning' | 'neutral'> = {
+  yea: 'success',
+  nay: 'error',
+  present: 'warning',
+  absent: 'neutral',
+  no_vote: 'neutral',
+};
+
+const VOTE_LABEL: Record<CandidateVote['vote'], string> = {
+  yea: 'YEA',
+  nay: 'NAY',
+  present: 'PRESENT',
+  absent: 'ABSENT',
+  no_vote: '—',
+};
+
 function VoteBadge({ vote }: { vote: CandidateVote['vote'] }) {
-  const styles: Record<CandidateVote['vote'], string> = {
-    yea: 'bg-emerald-100 text-emerald-800',
-    nay: 'bg-red-100 text-red-800',
-    present: 'bg-yellow-100 text-yellow-800',
-    absent: 'bg-gray-100 text-gray-700',
-    no_vote: 'bg-gray-100 text-gray-500',
-  };
-  const labels: Record<CandidateVote['vote'], string> = {
-    yea: 'YEA',
-    nay: 'NAY',
-    present: 'PRESENT',
-    absent: 'ABSENT',
-    no_vote: '—',
-  };
   return (
-    <span
-      className={`${styles[vote]} px-2.5 py-1 rounded-full text-[11px] font-bold flex-shrink-0`}
-    >
-      {labels[vote]}
-    </span>
+    <Badge tone={VOTE_TONE[vote]} className="flex-shrink-0">
+      {VOTE_LABEL[vote]}
+    </Badge>
   );
 }
 

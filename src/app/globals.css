@@ -1,5 +1,56 @@
 @import "tailwindcss";
 
+/*
+ * Design tokens — mirrors src/lib/tokens.ts (Spec D1 / T18). Tailwind 4
+ * reads this file at build time and cannot import a TS module directly, so
+ * these values are a literal copy of tokens.ts, not a re-derivation.
+ * tests/tokens-sync.test.ts asserts the two never drift apart.
+ *
+ * Generates: bg-party-r-600, text-party-d-800, bg-status-success,
+ * rounded-card, rounded-control, rounded-pill, etc.
+ */
+@theme {
+  --color-party-r-50: #fef2f2;
+  --color-party-r-100: #fee2e2;
+  --color-party-r-200: #fecaca;
+  --color-party-r-300: #fca5a5;
+  --color-party-r-400: #f87171;
+  --color-party-r-500: #ef4444;
+  --color-party-r-600: #dc2626;
+  --color-party-r-700: #b91c1c;
+  --color-party-r-800: #991b1b;
+
+  --color-party-d-50: #eff6ff;
+  --color-party-d-100: #dbeafe;
+  --color-party-d-200: #bfdbfe;
+  --color-party-d-300: #93c5fd;
+  --color-party-d-400: #60a5fa;
+  --color-party-d-500: #3b82f6;
+  --color-party-d-600: #2563eb;
+  --color-party-d-700: #1d4ed8;
+  --color-party-d-800: #1e40af;
+
+  --color-party-i-50: #f5f3ff;
+  --color-party-i-100: #ede9fe;
+  --color-party-i-200: #ddd6fe;
+  --color-party-i-300: #c4b5fd;
+  --color-party-i-400: #a78bfa;
+  --color-party-i-500: #8b5cf6;
+  --color-party-i-600: #7c3aed;
+  --color-party-i-700: #6d28d9;
+  --color-party-i-800: #5b21b6;
+
+  --color-status-success: #059669;
+  --color-status-warning: #d97706;
+  --color-status-error: #dc2626;
+  --color-status-info: #2563eb;
+  --color-status-neutral: #6b7280;
+
+  --radius-card: 1rem;
+  --radius-control: 0.75rem;
+  --radius-pill: 9999px;
+}
+
 :root {
   --color-blue-600: #2563eb;
   --color-gray-900: #111827;

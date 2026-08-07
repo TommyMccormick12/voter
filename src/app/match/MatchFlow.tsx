@@ -13,10 +13,12 @@ interface Props {
 
 /**
  * Client wizard: Step 1 quick poll → Step 2 free text → POST /api/match
- * → push to /match/results with ranked results in URL state.
+ * → push to /match/results?m=<id>.
  *
- * The ranked results aren't kept in URL (too big); we use sessionStorage
- * to pass them to the next page. This avoids a re-fetch on /results.
+ * T17 (Spec C4): results travel by the persisted llm_matches row id, not
+ * sessionStorage — /match/results fetches the ranking server-side by id
+ * (+ session-ownership check), so a refresh or a deep link into the same
+ * URL always renders the same result instead of an empty state.
  */
 export function MatchFlow({ raceId, issues }: Props) {
   const router = useRouter();
@@ -59,20 +61,15 @@ export function MatchFlow({ raceId, issues }: Props) {
       }
 
       const data = await res.json();
+      if (!data.id) {
+        throw new Error('Match saved without an id — cannot open results.');
+      }
 
-      // Hand the ranked results to the results page via sessionStorage.
-      // Avoids passing a giant payload through the URL.
-      sessionStorage.setItem(
-        `match-results-${raceId}`,
-        JSON.stringify({
-          ranked: data.ranked,
-          free_text,
-          quick_poll: pollResponses,
-          meta: data.meta,
-        })
-      );
-
-      router.push(`/match/results?race=${raceId}`);
+      // h=free_text_hash lets /match/results get past a cross-session
+      // cache-hit 403 (Finding 2/3 — the cache lookup is global, no
+      // session filter) without exposing another owner's free_text.
+      const hashParam = data.free_text_hash ? `&h=${encodeURIComponent(data.free_text_hash)}` : '';
+      router.push(`/match/results?m=${data.id}${hashParam}`);
     } catch (err) {
       console.error('[match] failed', err);
       setError(

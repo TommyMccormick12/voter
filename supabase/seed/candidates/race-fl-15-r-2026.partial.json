@@ -1,31 +1,6 @@
 {
-  "race": {
-    "id": "race-fl-15-r-2026",
-    "state": "FL",
-    "district": "15",
-    "office": "U.S. House",
-    "election_date": "2026-08-18",
-    "cycle": 2026,
-    "election_type": "primary",
-    "primary_party": "R",
-    "ballotpedia_race_slug": "U.S._House_Florida_District_15_election,_2026_(Republican_primary)"
-  },
+  "race_id": "race-fl-15-r-2026",
   "candidates": [
-    {
-      "name": "Steven Douglas Ii Champion",
-      "party": "REPUBLICAN PARTY",
-      "primary_party": "R",
-      "slug": "steven-douglas-ii-champion",
-      "incumbent": false,
-      "state": "FL",
-      "district": "15",
-      "office": "U.S. House",
-      "race_id": "race-fl-15-r-2026",
-      "fec_candidate_id": "H6FL15226",
-      "top_industries": [],
-      "top_donors": [],
-      "voting_record": []
-    },
     {
       "name": "Laurel Lee",
       "party": "REPUBLICAN PARTY",
@@ -808,10 +783,22 @@
           ]
         }
       ],
-      "active": true,
+      "active": false,
       "activated_at": "2026-05-11T00:56:31.246Z",
-      "photo_url": "https://bioguide.congress.gov/photo/L000597.jpg"
+      "photo_url": "https://bioguide.congress.gov/photo/L000597.jpg",
+      "doe_status": "Qualified",
+      "incumbent_source": "carried from race-fl-15-r-2026.partial.json (race-fl-15-r-2026), same race pre- and post-rebuild; FEC id H2FL15241 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)"
     }
   ],
-  "race_id": "race-fl-15-r-2026"
+  "race": {
+    "id": "race-fl-15-r-2026",
+    "state": "FL",
+    "district": "15",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R",
+    "ballotpedia_race_slug": "U.S._House_Florida_District_15_election,_2026_(Republican_primary)"
+  }
 }

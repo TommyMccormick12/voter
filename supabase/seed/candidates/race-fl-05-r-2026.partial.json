@@ -1,0 +1,50 @@
+{
+  "race_id": "race-fl-05-r-2026",
+  "candidates": [
+    {
+      "name": "John H. Rutherford",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "john-h-rutherford",
+      "incumbent": true,
+      "state": "FL",
+      "district": "05",
+      "office": "U.S. House",
+      "race_id": "race-fl-05-r-2026",
+      "fec_candidate_id": "H6FL04105",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": [],
+      "incumbent_source": "T26 adversarial verification 2026-08-06: sitting member of this district, qualified in this primary (DOE + Ballotpedia/Wikipedia/news cross-check)"
+    },
+    {
+      "name": "Mark Kaye",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "mark-kaye",
+      "incumbent": false,
+      "state": "FL",
+      "district": "05",
+      "office": "U.S. House",
+      "race_id": "race-fl-05-r-2026",
+      "fec_candidate_id": "H6FL05201",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-05-r-2026",
+    "state": "FL",
+    "district": "05",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R"
+  }
+}

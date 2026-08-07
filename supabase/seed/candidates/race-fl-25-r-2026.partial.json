@@ -2,7 +2,7 @@
   "race_id": "race-fl-25-r-2026",
   "candidates": [
     {
-      "name": "Daniel John Franzese",
+      "name": "Dan Franzese",
       "party": "REPUBLICAN PARTY",
       "primary_party": "R",
       "slug": "daniel-john-franzese",
@@ -190,201 +190,12 @@
           "data_source": "fec"
         }
       ],
-      "voting_record": []
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
     },
     {
-      "name": "Raven Harrison",
-      "party": "REPUBLICAN PARTY",
-      "primary_party": "R",
-      "slug": "raven-harrison",
-      "incumbent": false,
-      "state": "FL",
-      "district": "25",
-      "office": "U.S. House",
-      "race_id": "race-fl-25-r-2026",
-      "fec_candidate_id": "H6FL23139",
-      "total_raised": 701238.51,
-      "fec_totals": {
-        "committee_id": "",
-        "cycle": 2026,
-        "receipts": 701238.51,
-        "disbursements": 525204.1,
-        "cash_on_hand_end_period": 0,
-        "individual_contributions": 151571.82,
-        "other_political_committee_contributions": 0
-      },
-      "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
-      "top_industries": [
-        {
-          "industry_name": "Retired / Self-Employed",
-          "amount": 21222.86,
-          "rank": 1,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Real Estate",
-          "amount": 6500,
-          "rank": 2,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Other",
-          "amount": 6250,
-          "rank": 3,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Healthcare & Pharma",
-          "amount": 2400,
-          "rank": 4,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Transportation",
-          "amount": 2000,
-          "rank": 5,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Finance & Banking",
-          "amount": 750,
-          "rank": 6,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Retail & Consumer Goods",
-          "amount": 250,
-          "rank": 7,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Technology",
-          "amount": 250,
-          "rank": 8,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Government / Public Sector",
-          "amount": 200,
-          "rank": 9,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        }
-      ],
-      "top_donors": [
-        {
-          "donor_name": "MARCLEY, MIKE",
-          "donor_type": "individual",
-          "industry": "Real Estate",
-          "amount_total": 3300,
-          "cycle": 2026,
-          "rank_in_candidate": 1,
-          "fec_committee_id": "C00896787",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "ZEBELEAN, JOHN",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 2000,
-          "cycle": 2026,
-          "rank_in_candidate": 2,
-          "fec_committee_id": "C00896787",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "GONZALEZ, JULIO",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 2000,
-          "cycle": 2026,
-          "rank_in_candidate": 3,
-          "fec_committee_id": "C00896787",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "ZEBELEAN, JOHN",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 1500,
-          "cycle": 2026,
-          "rank_in_candidate": 4,
-          "fec_committee_id": "C00896787",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "HALLAWAY, RASHID",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 1000,
-          "cycle": 2026,
-          "rank_in_candidate": 5,
-          "fec_committee_id": "C00896787",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "FOWLER, MARK",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 1000,
-          "cycle": 2026,
-          "rank_in_candidate": 6,
-          "fec_committee_id": "C00896787",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "GIBSON, RACHEL",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 1000,
-          "cycle": 2026,
-          "rank_in_candidate": 7,
-          "fec_committee_id": "C00896787",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "HUFF, EDE",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 1000,
-          "cycle": 2026,
-          "rank_in_candidate": 8,
-          "fec_committee_id": "C00896787",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "ROEHL, RICHARD L",
-          "donor_type": "individual",
-          "industry": "Transportation",
-          "amount_total": 1000,
-          "cycle": 2026,
-          "rank_in_candidate": 9,
-          "fec_committee_id": "C00896787",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "MARCLEY, MIKE",
-          "donor_type": "individual",
-          "industry": "Real Estate",
-          "amount_total": 1000,
-          "cycle": 2026,
-          "rank_in_candidate": 10,
-          "fec_committee_id": "C00896787",
-          "data_source": "fec"
-        }
-      ],
-      "voting_record": []
-    },
-    {
-      "name": "George R Moraitis",
+      "name": "George R. Moraitis",
       "party": "REPUBLICAN PARTY",
       "primary_party": "R",
       "slug": "george-r-moraitis",
@@ -579,10 +390,391 @@
           "data_source": "fec"
         }
       ],
-      "voting_record": []
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
     },
     {
-      "name": "Scott M. Singer",
+      "name": "Joseph \"Joe\" Kaufman",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "joe-kaufman",
+      "incumbent": false,
+      "state": "FL",
+      "district": "25",
+      "office": "U.S. House",
+      "race_id": "race-fl-25-r-2026",
+      "fec_candidate_id": "H2FL20043",
+      "total_raised": 482037.21,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 482037.21,
+        "disbursements": 74565.37,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 482037.21,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "Joseph or Joe Kaufman, Kauffman, Kauffmann, or Kaufmann could refer to:",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 89395,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 14000,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 14000,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 11500,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 7500,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Agriculture",
+          "amount": 3750,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 3500,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 500,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "DANIELS, GEORGE G",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 7000,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00501205",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KAUFMAN, EMILY MRS.",
+          "donor_type": "individual",
+          "industry": "Education",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00501205",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KAUFMAN, EMILY MRS.",
+          "donor_type": "individual",
+          "industry": "Education",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00501205",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TAYLOR, MARGARETTA J MISS",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00501205",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TAYLOR, MARGARETTA J MISS",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00501205",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KAUFMAN, EMILY",
+          "donor_type": "individual",
+          "industry": "Education",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00501205",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "KAUFMAN, EMILY",
+          "donor_type": "individual",
+          "industry": "Education",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00501205",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HANNA, WINONA MS",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00501205",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HANNA, WINONA MS",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00501205",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "BATMASIAN, JAMES",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00501205",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
+    },
+    {
+      "name": "Raven Harrison",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "raven-harrison",
+      "incumbent": false,
+      "state": "FL",
+      "district": "25",
+      "office": "U.S. House",
+      "race_id": "race-fl-25-r-2026",
+      "fec_candidate_id": "H6FL23139",
+      "total_raised": 701238.51,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 701238.51,
+        "disbursements": 525204.1,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 151571.82,
+        "other_political_committee_contributions": 0
+      },
+      "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 21222.86,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 6500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 6250,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 2400,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Transportation",
+          "amount": 2000,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 750,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Retail & Consumer Goods",
+          "amount": 250,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 250,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 200,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "MARCLEY, MIKE",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 3300,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00896787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ZEBELEAN, JOHN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00896787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "GONZALEZ, JULIO",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00896787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ZEBELEAN, JOHN",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00896787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HALLAWAY, RASHID",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00896787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "FOWLER, MARK",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00896787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "GIBSON, RACHEL",
+          "donor_type": "individual",
+          "industry": "Other",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00896787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HUFF, EDE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00896787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ROEHL, RICHARD L",
+          "donor_type": "individual",
+          "industry": "Transportation",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00896787",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MARCLEY, MIKE",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00896787",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
+    },
+    {
+      "name": "Scott Singer",
       "party": "REPUBLICAN PARTY",
       "primary_party": "R",
       "slug": "scott-m-singer",
@@ -776,141 +968,9 @@
           "data_source": "fec"
         }
       ],
-      "voting_record": []
-    },
-    {
-      "name": "Claudia Villatoro",
-      "party": "REPUBLICAN PARTY",
-      "primary_party": "R",
-      "slug": "claudia-villatoro",
-      "incumbent": false,
-      "state": "FL",
-      "district": "25",
-      "office": "U.S. House",
-      "race_id": "race-fl-25-r-2026",
-      "fec_candidate_id": "H6FL25043",
-      "total_raised": 803049.66,
-      "fec_totals": {
-        "committee_id": "",
-        "cycle": 2026,
-        "receipts": 803049.66,
-        "disbursements": 58418.05,
-        "cash_on_hand_end_period": 0,
-        "individual_contributions": 3049.66,
-        "other_political_committee_contributions": 0
-      },
-      "top_industries": [
-        {
-          "industry_name": "Other",
-          "amount": 639,
-          "rank": 1,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        }
-      ],
-      "top_donors": [
-        {
-          "donor_name": "CLAUDIA VILLATORO FOR CONGRESS",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 150,
-          "cycle": 2026,
-          "rank_in_candidate": 1,
-          "fec_committee_id": "C00916981",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "CLAUDIA VILLATORO FOR CONGRESS",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 100,
-          "cycle": 2026,
-          "rank_in_candidate": 2,
-          "fec_committee_id": "C00916981",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "CLAUDIA VILLATORO FOR CONGRESS",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 100,
-          "cycle": 2026,
-          "rank_in_candidate": 3,
-          "fec_committee_id": "C00916981",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "CLAUDIA VILLATORO FOR CONGRESS",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 100,
-          "cycle": 2026,
-          "rank_in_candidate": 4,
-          "fec_committee_id": "C00916981",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "CLAUDIA VILLATORO FOR CONGRESS",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 59,
-          "cycle": 2026,
-          "rank_in_candidate": 5,
-          "fec_committee_id": "C00916981",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "CLAUDIA VILLATORO FOR CONGRESS",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 50,
-          "cycle": 2026,
-          "rank_in_candidate": 6,
-          "fec_committee_id": "C00916981",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "CLAUDIA VILLATORO FOR CONGRESS",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 50,
-          "cycle": 2026,
-          "rank_in_candidate": 7,
-          "fec_committee_id": "C00916981",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "CLAUDIA VILLATORO FOR CONGRESS",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 25,
-          "cycle": 2026,
-          "rank_in_candidate": 8,
-          "fec_committee_id": "C00916981",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "CLAUDIA VILLATORO FOR CONGRESS",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 5,
-          "cycle": 2026,
-          "rank_in_candidate": 9,
-          "fec_committee_id": "C00916981",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "CLAUDIA VILLATORO FOR CONGRESS",
-          "donor_type": "individual",
-          "industry": "Other",
-          "amount_total": 0,
-          "cycle": 2026,
-          "rank_in_candidate": 10,
-          "fec_committee_id": "C00916981",
-          "data_source": "fec"
-        }
-      ],
-      "voting_record": []
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
     }
   ],
   "race": {

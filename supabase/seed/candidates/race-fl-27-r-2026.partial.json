@@ -1,192 +1,6 @@
 {
-  "race": {
-    "id": "race-fl-27-r-2026",
-    "state": "FL",
-    "district": "27",
-    "office": "U.S. House",
-    "election_date": "2026-08-18",
-    "cycle": 2026,
-    "election_type": "primary",
-    "primary_party": "R",
-    "ballotpedia_race_slug": "U.S._House_Florida_District_27_election,_2026_(Republican_primary)"
-  },
+  "race_id": "race-fl-27-r-2026",
   "candidates": [
-    {
-      "name": "Vincent Michael Arias",
-      "party": "REPUBLICAN PARTY",
-      "primary_party": "R",
-      "slug": "vincent-michael-arias",
-      "incumbent": false,
-      "state": "FL",
-      "district": "27",
-      "office": "U.S. House",
-      "race_id": "race-fl-27-r-2026",
-      "fec_candidate_id": "H4FL27028",
-      "total_raised": 127485.72,
-      "fec_totals": {
-        "committee_id": "",
-        "cycle": 2026,
-        "receipts": 127485.72,
-        "disbursements": 27580.48,
-        "cash_on_hand_end_period": 0,
-        "individual_contributions": 28485.72,
-        "other_political_committee_contributions": 0
-      },
-      "top_industries": [
-        {
-          "industry_name": "Retired / Self-Employed",
-          "amount": 16102.54,
-          "rank": 1,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Technology",
-          "amount": 5482.030000000001,
-          "rank": 2,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Real Estate",
-          "amount": 3500,
-          "rank": 3,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Construction",
-          "amount": 1250,
-          "rank": 4,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Finance & Banking",
-          "amount": 750,
-          "rank": 5,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Legal",
-          "amount": 500,
-          "rank": 6,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        },
-        {
-          "industry_name": "Nonprofit / Civic",
-          "amount": 250,
-          "rank": 7,
-          "cycle": 2026,
-          "data_source": "fec+haiku"
-        }
-      ],
-      "top_donors": [
-        {
-          "donor_name": "DESHE, DAVID",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 3500,
-          "cycle": 2026,
-          "rank_in_candidate": 1,
-          "fec_committee_id": "C00924324",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "ARIAS, EVE",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 3500,
-          "cycle": 2026,
-          "rank_in_candidate": 2,
-          "fec_committee_id": "C00924324",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "ARIAS, DAVID",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 3500,
-          "cycle": 2026,
-          "rank_in_candidate": 3,
-          "fec_committee_id": "C00924324",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "ARIAS, JEANNE",
-          "donor_type": "individual",
-          "industry": "Real Estate",
-          "amount_total": 2900,
-          "cycle": 2026,
-          "rank_in_candidate": 4,
-          "fec_committee_id": "C00924324",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "TOUZET, LYDIA",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 2082.03,
-          "cycle": 2026,
-          "rank_in_candidate": 5,
-          "fec_committee_id": "C00924324",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "CORTINAS, ENRIQUE MIGUEL",
-          "donor_type": "individual",
-          "industry": "Technology",
-          "amount_total": 2082.03,
-          "cycle": 2026,
-          "rank_in_candidate": 6,
-          "fec_committee_id": "C00924324",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "MORE, VIVIAN",
-          "donor_type": "individual",
-          "industry": "Technology",
-          "amount_total": 2000,
-          "cycle": 2026,
-          "rank_in_candidate": 7,
-          "fec_committee_id": "C00924324",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "CORTINAS, ENRIQUE MIGUEL",
-          "donor_type": "individual",
-          "industry": "Technology",
-          "amount_total": 1400,
-          "cycle": 2026,
-          "rank_in_candidate": 8,
-          "fec_committee_id": "C00924324",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "ZEQUEIRA, J. CARLOS",
-          "donor_type": "individual",
-          "industry": "Construction",
-          "amount_total": 1000,
-          "cycle": 2026,
-          "rank_in_candidate": 9,
-          "fec_committee_id": "C00924324",
-          "data_source": "fec"
-        },
-        {
-          "donor_name": "HANSEN, HEATHER",
-          "donor_type": "individual",
-          "industry": "Retired / Self-Employed",
-          "amount_total": 520.51,
-          "cycle": 2026,
-          "rank_in_candidate": 10,
-          "fec_committee_id": "C00924324",
-          "data_source": "fec"
-        }
-      ],
-      "voting_record": []
-    },
     {
       "name": "Maria Elvira Salazar",
       "party": "REPUBLICAN PARTY",
@@ -970,10 +784,200 @@
           ]
         }
       ],
-      "active": true,
+      "active": false,
       "activated_at": "2026-05-11T00:56:37.635Z",
-      "photo_url": "https://bioguide.congress.gov/photo/S000168.jpg"
+      "photo_url": "https://bioguide.congress.gov/photo/S000168.jpg",
+      "doe_status": "Qualified",
+      "incumbent_source": "carried from race-fl-27-r-2026.partial.json (race-fl-27-r-2026), same race pre- and post-rebuild; FEC id H8FL27185 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)"
+    },
+    {
+      "name": "V. Michael Arias",
+      "party": "REPUBLICAN PARTY",
+      "primary_party": "R",
+      "slug": "vincent-michael-arias",
+      "incumbent": false,
+      "state": "FL",
+      "district": "27",
+      "office": "U.S. House",
+      "race_id": "race-fl-27-r-2026",
+      "fec_candidate_id": "H4FL27028",
+      "total_raised": 127485.72,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 127485.72,
+        "disbursements": 27580.48,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 28485.72,
+        "other_political_committee_contributions": 0
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 16102.54,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 5482.030000000001,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 3500,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Construction",
+          "amount": 1250,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 750,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 500,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Nonprofit / Civic",
+          "amount": 250,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "DESHE, DAVID",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00924324",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ARIAS, EVE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00924324",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ARIAS, DAVID",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00924324",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ARIAS, JEANNE",
+          "donor_type": "individual",
+          "industry": "Real Estate",
+          "amount_total": 2900,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00924324",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "TOUZET, LYDIA",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 2082.03,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00924324",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CORTINAS, ENRIQUE MIGUEL",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 2082.03,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00924324",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MORE, VIVIAN",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 2000,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00924324",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "CORTINAS, ENRIQUE MIGUEL",
+          "donor_type": "individual",
+          "industry": "Technology",
+          "amount_total": 1400,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00924324",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "ZEQUEIRA, J. CARLOS",
+          "donor_type": "individual",
+          "industry": "Construction",
+          "amount_total": 1000,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00924324",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "HANSEN, HEATHER",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 520.51,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00924324",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
     }
   ],
-  "race_id": "race-fl-27-r-2026"
+  "race": {
+    "id": "race-fl-27-r-2026",
+    "state": "FL",
+    "district": "27",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "R",
+    "ballotpedia_race_slug": "U.S._House_Florida_District_27_election,_2026_(Republican_primary)"
+  }
 }

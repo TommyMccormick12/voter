@@ -1,0 +1,83 @@
+{
+  "race_id": "race-fl-03-d-2026",
+  "candidates": [
+    {
+      "name": "George Hubac",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "george-hubac",
+      "incumbent": false,
+      "state": "FL",
+      "district": "03",
+      "office": "U.S. House",
+      "race_id": "race-fl-03-d-2026",
+      "fec_candidate_id": "H6FL03131",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Seth Harp",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "seth-harp",
+      "incumbent": false,
+      "state": "FL",
+      "district": "03",
+      "office": "U.S. House",
+      "race_id": "race-fl-03-d-2026",
+      "fec_candidate_id": "H6FL03099",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Tom Wells",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "tom-wells",
+      "incumbent": false,
+      "state": "FL",
+      "district": "03",
+      "office": "U.S. House",
+      "race_id": "race-fl-03-d-2026",
+      "fec_candidate_id": "H8FL03020",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Troy Albers",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "troy-albers",
+      "incumbent": false,
+      "state": "FL",
+      "district": "03",
+      "office": "U.S. House",
+      "race_id": "race-fl-03-d-2026",
+      "fec_candidate_id": "H6FL03115",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-03-d-2026",
+    "state": "FL",
+    "district": "03",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}

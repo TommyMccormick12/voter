@@ -1,15 +1,5 @@
 {
-  "race": {
-    "id": "race-fl-10-d-2026",
-    "state": "FL",
-    "district": "10",
-    "office": "U.S. House",
-    "election_date": "2026-08-18",
-    "cycle": 2026,
-    "election_type": "primary",
-    "primary_party": "D",
-    "ballotpedia_race_slug": "U.S._House_Florida_District_10_election,_2026_(Democratic_primary)"
-  },
+  "race_id": "race-fl-10-d-2026",
   "candidates": [
     {
       "name": "Maxwell Alejandro Frost",
@@ -922,9 +912,25 @@
         }
       ],
       "active": true,
-      "activated_at": "2026-05-11T00:32:11.309Z",
-      "photo_url": "https://bioguide.congress.gov/photo/F000476.jpg"
+      "activated_at": "2026-08-07T14:06:26.647Z",
+      "photo_url": "https://bioguide.congress.gov/photo/F000476.jpg",
+      "doe_status": "Unopposed",
+      "incumbent_source": "carried from race-fl-10-d-2026.partial.json (race-fl-10-d-2026), same race pre- and post-rebuild; FEC id H2FL10259 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
+      "unopposed": true,
+      "verified_at": "2026-08-07T14:06:26.647Z"
     }
   ],
-  "race_id": "race-fl-10-d-2026"
+  "race": {
+    "id": "race-fl-10-d-2026",
+    "state": "FL",
+    "district": "10",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D",
+    "ballotpedia_race_slug": "U.S._House_Florida_District_10_election,_2026_(Democratic_primary)",
+    "no_primary": true,
+    "no_primary_note": "No primary — Maxwell Alejandro Frost qualified unopposed and advances"
+  }
 }

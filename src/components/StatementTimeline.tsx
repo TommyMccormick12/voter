@@ -1,5 +1,6 @@
 import type { CandidateStatement } from '@/types/database';
 import { formatLocalDate } from '@/lib/dates';
+import { EmptyState } from './ui/EmptyState';
 
 interface Props {
   statements: CandidateStatement[];
@@ -8,12 +9,10 @@ interface Props {
 export function StatementTimeline({ statements }: Props) {
   if (statements.length === 0) {
     return (
-      <div className="rounded-xl border border-dashed border-gray-300 bg-gray-50 p-6 text-center">
-        <p className="text-sm text-gray-500 mb-1">No public statements captured yet</p>
-        <p className="text-xs text-gray-400">
-          We pull from news, op-eds, debate transcripts, and campaign press releases.
-        </p>
-      </div>
+      <EmptyState
+        title="No public statements captured yet"
+        description="We pull from news, op-eds, debate transcripts, and campaign press releases."
+      />
     );
   }
 
@@ -24,9 +23,9 @@ export function StatementTimeline({ statements }: Props) {
   });
 
   return (
-    <div className="space-y-4">
+    <ol className="space-y-4 list-none" aria-label="Public statements, most recent first">
       {sorted.map((s) => (
-        <div
+        <li
           key={s.id}
           className="border border-gray-200 rounded-xl p-4 bg-white"
         >
@@ -63,9 +62,9 @@ export function StatementTimeline({ statements }: Props) {
               </a>
             )}
           </div>
-        </div>
+        </li>
       ))}
-    </div>
+    </ol>
   );
 }
 

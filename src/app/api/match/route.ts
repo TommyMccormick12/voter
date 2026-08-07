@@ -1,9 +1,10 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
-import { matchCandidates } from '@/lib/llm/match';
+import { runMatch } from '@/lib/app/match';
 import { getRace } from '@/lib/data/races';
 import { getCandidatesForRace } from '@/lib/data/candidates';
 import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
+import { parseConsent } from '@/lib/consent';
 import { clientIpFromHeaders } from '@/lib/geo';
 import { checkRateLimits, MATCH_LIMITS } from '@/lib/rate-limit';
 
@@ -24,12 +25,11 @@ const RequestSchema = z.object({
  * POST /api/match
  *
  * Takes user free-text + optional quick-poll weights, returns ranked
- * candidates for the race. Uses Anthropic Haiku 4.5 if ANTHROPIC_API_KEY
- * is set, otherwise a deterministic local mock ranking.
- *
- * TODO (Chunk 6):
- *  - Persist response to llm_matches table for cache + analytics
- *  - Gate on consent_analytics for free_text storage
+ * candidates for the race plus the persisted llm_matches row id (T17 —
+ * /match/results?m=<id> fetches by that id instead of sessionStorage).
+ * Uses Anthropic Haiku 4.5 if ANTHROPIC_API_KEY is set, otherwise a
+ * deterministic local mock ranking; both paths persist via
+ * src/lib/app/match.ts, which records which one produced the row.
  *
  * Cost control (per /cso Finding 2):
  *  - In-memory rate limit: 10/hr/session, 30/hr/IP (token bucket)
@@ -85,45 +85,66 @@ export async function POST(request: NextRequest) {
 
   const { free_text, race_id, quick_poll } = parsed.data;
 
-  const race = await getRace(race_id);
-  if (!race) {
+  // Consent gate (Finding 1): same read as the sibling /api/interaction
+  // and /api/quick-poll routes — absent consent (no cookie yet) counts
+  // as no consent. Matching still works without it; the flag only
+  // controls whether the persisted llm_matches row carries session_id /
+  // free_text (see src/lib/app/match.ts#runMatch).
+  const consent = parseConsent(await readCookie(COOKIE_NAMES.consent));
+  const hasAnalyticsConsent = consent?.analytics === true;
+
+  const raceResult = await getRace(race_id);
+  if (!raceResult.ok) {
+    console.error('[api/match] race read failed:', raceResult.error.message);
+    return NextResponse.json({ ok: false, error: 'race_read_failed' }, { status: 502 });
+  }
+  if (!raceResult.data) {
     return NextResponse.json(
       { ok: false, error: 'race_not_found' },
       { status: 404 }
     );
   }
 
-  const candidates = await getCandidatesForRace(race_id);
-  if (candidates.length === 0) {
+  const candidatesResult = await getCandidatesForRace(race_id);
+  if (!candidatesResult.ok) {
+    console.error('[api/match] candidates read failed:', candidatesResult.error.message);
+    return NextResponse.json({ ok: false, error: 'candidates_read_failed' }, { status: 502 });
+  }
+  if (candidatesResult.data.length === 0) {
     return NextResponse.json(
       { ok: false, error: 'no_candidates' },
       { status: 404 }
     );
   }
 
-  try {
-    const result = await matchCandidates({
-      free_text,
-      race_id,
-      candidates,
-      quick_poll,
-    });
+  const result = await runMatch({
+    sessionToken: sessionId,
+    raceId: race_id,
+    freeText: free_text,
+    quickPoll: quick_poll,
+    candidates: candidatesResult.data,
+    hasAnalyticsConsent,
+  });
 
-    return NextResponse.json({
-      ok: true,
-      ranked: result.ranked,
-      meta: {
-        cache_hit: result.cache_hit,
-        source: result.source,
-        input_tokens: result.input_tokens,
-        output_tokens: result.output_tokens,
-      },
-    });
-  } catch (err) {
-    console.error('[api/match] match failed', err);
-    return NextResponse.json(
-      { ok: false, error: 'match_failed' },
-      { status: 500 }
-    );
+  if (!result.ok) {
+    console.error('[api/match] match failed:', result.code, result.detail);
+    return NextResponse.json({ ok: false, error: result.code }, { status: result.status });
   }
+
+  return NextResponse.json({
+    ok: true,
+    id: result.id,
+    // Finding 3 transport: the results page's cache-hit lookup is global
+    // (no session filter), so a deep link needs proof-of-knowledge for a
+    // row this session doesn't own. free_text_hash lets it get past the
+    // 403 without exposing free_text (see getMatchById's case (c)).
+    free_text_hash: result.freeTextHash,
+    ranked: result.ranked,
+    meta: {
+      cache_hit: result.meta.cache_hit,
+      source: result.meta.source,
+      input_tokens: result.meta.input_tokens,
+      output_tokens: result.meta.output_tokens,
+    },
+  });
 }

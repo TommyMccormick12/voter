@@ -25,12 +25,22 @@ export async function GET(request: NextRequest) {
   }
 
   if (raceId) {
-    const race = await getRace(raceId);
-    if (!race) {
+    const raceResult = await getRace(raceId);
+    if (!raceResult.ok) {
+      return NextResponse.json({ ok: false, error: 'data_unavailable' }, { status: 503 });
+    }
+    if (!raceResult.data) {
       return NextResponse.json({ ok: false, error: 'race_not_found' }, { status: 404 });
     }
-    const candidates = await getCandidatesForRace(raceId);
-    return NextResponse.json({ ok: true, race, candidates });
+    const candidatesResult = await getCandidatesForRace(raceId);
+    if (!candidatesResult.ok) {
+      return NextResponse.json({ ok: false, error: 'data_unavailable' }, { status: 503 });
+    }
+    return NextResponse.json({
+      ok: true,
+      race: raceResult.data,
+      candidates: candidatesResult.data,
+    });
   }
 
   if (!zip || !/^\d{5}(-\d{4})?$/.test(zip)) {
@@ -40,11 +50,18 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const races = await getRacesForZip(zip);
-  const samples = await getCandidateSamplesForRaces(races.map((r) => r.id));
+  const racesResult = await getRacesForZip(zip);
+  if (!racesResult.ok) {
+    return NextResponse.json({ ok: false, error: 'data_unavailable' }, { status: 503 });
+  }
+  const races = racesResult.data;
+  const samplesResult = await getCandidateSamplesForRaces(races.map((r) => r.id));
+  if (!samplesResult.ok) {
+    return NextResponse.json({ ok: false, error: 'data_unavailable' }, { status: 503 });
+  }
   const racesWithCounts = races.map((r) => ({
     ...r,
-    candidate_count: samples[r.id]?.count ?? 0,
+    candidate_count: samplesResult.data[r.id]?.count ?? 0,
   }));
 
   return NextResponse.json({ ok: true, zip, races: racesWithCounts });

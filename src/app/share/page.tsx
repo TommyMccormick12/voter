@@ -4,6 +4,20 @@ import Link from 'next/link';
 import { getRace } from '@/lib/data/races';
 import { getCandidatesForRace } from '@/lib/data/candidates';
 import { getPartyTheme, getPartyInitials } from '@/lib/party-theme';
+import { Button } from '@/components/ui/Button';
+
+// Note: the "See full record" and "Find your own match" CTAs below stay
+// native <Link> elements, not the shared Button primitive. The first
+// carries the party-accent background (theme.accent) — Button's own
+// doc-comment warns a caller-supplied background class is "not reliably"
+// guaranteed to beat its variant class in the generated stylesheet, and
+// silently losing party coloring here would violate "do not restyle the
+// party identity" (this task's explicit constraint). The second uses a
+// bespoke dark CTA color that predates the token system; swapping it for
+// Button's blue `primary` variant would be an unrequested visual change,
+// not an accessibility or states fix. Only the plain, already-primary-
+// blue "Start now" CTA above was converted, since it matches Button's
+// default styling exactly.
 
 interface SharePageProps {
   searchParams: Promise<{ race?: string; c?: string; s?: string }>;
@@ -26,13 +40,15 @@ export async function generateMetadata({
   const slug = params.c ?? '';
   const score = clampScore(params.s);
 
-  const race = raceId ? await getRace(raceId) : null;
+  const raceResult = raceId ? await getRace(raceId) : null;
+  const race = raceResult?.ok ? raceResult.data : null;
   // Cross-validate: candidate must belong to the named race.
   // A bare global lookup would let /share?race=race-nj-07&c=mark-warner render
   // a Democrat inside an NJ-07 (R) header. Filter to the race's roster instead.
+  const candidatesResult = raceId && slug ? await getCandidatesForRace(raceId) : null;
   const candidate =
-    raceId && slug
-      ? (await getCandidatesForRace(raceId)).find((c) => c.slug === slug) ?? null
+    slug && candidatesResult?.ok
+      ? candidatesResult.data.find((c) => c.slug === slug) ?? null
       : null;
 
   const ogParams = new URLSearchParams();
@@ -74,16 +90,20 @@ export default async function SharePage({ searchParams }: SharePageProps) {
   const slug = params.c ?? '';
   const score = clampScore(params.s);
 
-  const race = raceId ? await getRace(raceId) : null;
+  const raceResult = raceId ? await getRace(raceId) : null;
+  const race = raceResult?.ok ? raceResult.data : null;
   // Cross-validate: candidate must belong to the named race.
   // A bare global lookup would let /share?race=race-nj-07&c=mark-warner render
   // a Democrat inside an NJ-07 (R) header. Filter to the race's roster instead.
+  const candidatesResult = raceId && slug ? await getCandidatesForRace(raceId) : null;
   const candidate =
-    raceId && slug
-      ? (await getCandidatesForRace(raceId)).find((c) => c.slug === slug) ?? null
+    slug && candidatesResult?.ok
+      ? candidatesResult.data.find((c) => c.slug === slug) ?? null
       : null;
 
-  // No match in URL — show the generic invite.
+  // No match in URL, or the underlying read failed — show the generic
+  // invite either way; this page's core function (a shareable link
+  // preview) degrades safely to that rather than a hard error page.
   if (!race || !candidate) {
     return (
       <main className="min-h-screen flex items-center justify-center bg-white px-4">
@@ -95,12 +115,9 @@ export default async function SharePage({ searchParams }: SharePageProps) {
             Compare 2026 primary candidates on stances, donors, and voting
             record — in 60 seconds.
           </p>
-          <Link
-            href="/"
-            className="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-blue-700 transition-colors"
-          >
+          <Button href="/" size="lg">
             Start now &rarr;
-          </Link>
+          </Button>
         </div>
       </main>
     );

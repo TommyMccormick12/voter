@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { readClientConsent } from '@/lib/consent-client';
+import { Button } from './ui/Button';
 
 type Mode = 'compact' | 'customize';
 
@@ -73,8 +74,14 @@ export function ConsentBanner() {
           mode === 'customize' ? 'h-[320px] lg:h-[240px]' : 'h-[150px] lg:h-[80px]'
         }`}
       />
+      {/* role="region" (not "dialog") — this banner is deliberately
+          non-modal (see the flow comment above): it does not trap focus
+          or respond to Escape, so it must not claim dialog semantics an
+          assistive-tech user would expect a dialog to fulfill. A labelled
+          landmark region is the correct role for a persistent, dismiss-
+          by-choice banner (frontend-standards accessibility rules). */}
       <div
-        role="dialog"
+        role="region"
         aria-labelledby="consent-banner-title"
         className="fixed inset-x-0 bottom-0 z-[100] border-t border-gray-200 bg-white shadow-2xl"
       >
@@ -144,30 +151,20 @@ function CompactView({
         </p>
       </div>
       <div className="flex flex-row gap-2 flex-shrink-0">
-        <button
-          type="button"
-          onClick={onCustomize}
-          disabled={submitting}
-          className="min-h-[44px] text-sm font-medium text-gray-700 px-3 lg:px-4 hover:bg-gray-100 rounded-lg disabled:opacity-50"
-        >
+        <Button variant="ghost" onClick={onCustomize} disabled={submitting}>
           Customize
-        </button>
-        <button
-          type="button"
-          onClick={onFunctionalOnly}
-          disabled={submitting}
-          className="hidden sm:inline-flex items-center min-h-[44px] text-sm font-medium text-gray-700 border border-gray-300 px-4 hover:bg-gray-50 rounded-lg disabled:opacity-50"
-        >
-          Functional only
-        </button>
-        <button
-          type="button"
-          onClick={onAcceptAll}
-          disabled={submitting}
-          className="flex-1 sm:flex-none min-h-[44px] text-sm font-semibold text-white bg-blue-600 px-4 lg:px-5 rounded-lg hover:bg-blue-700 disabled:opacity-50"
-        >
+        </Button>
+        {/* Wrapped, not `hidden` on the Button itself — Button's base class
+            always sets `inline-flex`, which would out-cascade an unprefixed
+            `hidden` on the same element unpredictably. */}
+        <div className="hidden sm:block">
+          <Button variant="secondary" onClick={onFunctionalOnly} disabled={submitting}>
+            Functional only
+          </Button>
+        </div>
+        <Button onClick={onAcceptAll} loading={submitting} className="flex-1 sm:flex-none">
           Accept all
-        </button>
+        </Button>
       </div>
     </div>
   );
@@ -233,14 +230,9 @@ function CustomizeView({
         />
       </div>
       <div className="flex justify-end">
-        <button
-          type="button"
-          onClick={onSave}
-          disabled={submitting}
-          className="text-sm font-semibold text-white bg-blue-600 px-5 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50"
-        >
+        <Button onClick={onSave} loading={submitting}>
           Save choices
-        </button>
+        </Button>
       </div>
     </div>
   );

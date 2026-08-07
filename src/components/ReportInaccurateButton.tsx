@@ -6,7 +6,11 @@
 // Pre-fills stance_id / cited_bill_id when the user clicked from a
 // specific stance card (Phase 2D-quat §19.4).
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { Button } from './ui/Button';
+import { Select } from './ui/Select';
+import { Textarea } from './ui/Textarea';
+import { TextInput } from './ui/TextInput';
 
 interface Props {
   candidateId: string;
@@ -42,16 +46,20 @@ export function ReportInaccurateButton({
   const [description, setDescription] = useState('');
   const [email, setEmail] = useState('');
   const [state, setState] = useState<SubmitState>({ kind: 'idle' });
+  // Validation failure (client-side, per-field) is tracked separately from
+  // server save failure (`state.kind === 'error'`) — frontend-standards:
+  // "separate validation failure from server save failure."
+  const [descriptionError, setDescriptionError] = useState<string | null>(null);
+  const descriptionRef = useRef<HTMLTextAreaElement>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (description.trim().length < 20) {
-      setState({
-        kind: 'error',
-        message: 'Description must be at least 20 characters.',
-      });
+      setDescriptionError('Description must be at least 20 characters.');
+      descriptionRef.current?.focus();
       return;
     }
+    setDescriptionError(null);
     setState({ kind: 'submitting' });
     try {
       const res = await fetch('/api/report', {
@@ -93,6 +101,7 @@ export function ReportInaccurateButton({
     setCategory('factual_error');
     setDescription('');
     setEmail('');
+    setDescriptionError(null);
     setState({ kind: 'idle' });
   }
 
@@ -132,13 +141,7 @@ export function ReportInaccurateButton({
                 <p className="text-[10px] font-mono text-gray-400 mb-6">
                   Reference: {state.reportId}
                 </p>
-                <button
-                  type="button"
-                  onClick={reset}
-                  className="bg-gray-900 text-white text-sm font-semibold px-6 py-2.5 rounded-lg hover:bg-gray-800"
-                >
-                  Done
-                </button>
+                <Button onClick={reset}>Done</Button>
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
@@ -151,74 +154,66 @@ export function ReportInaccurateButton({
                   {citedBillId ? <span className="text-gray-400"> · bill: {citedBillId}</span> : null}
                 </p>
 
-                <label className="block mb-4">
-                  <span className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
-                    What&apos;s wrong?
-                  </span>
-                  <select
-                    value={category}
-                    onChange={(e) => setCategory(e.target.value as Category)}
-                    className="mt-1 w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
-                  >
-                    {Object.entries(CATEGORY_LABELS).map(([k, v]) => (
-                      <option key={k} value={k}>{v}</option>
-                    ))}
-                  </select>
-                </label>
+                <Select
+                  id="report-category"
+                  label="What's wrong?"
+                  containerClassName="mb-4"
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value as Category)}
+                  options={Object.entries(CATEGORY_LABELS).map(([value, label]) => ({
+                    value,
+                    label,
+                  }))}
+                />
 
-                <label className="block mb-4">
-                  <span className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
-                    Details <span className="font-normal text-gray-400">(min 20 chars)</span>
-                  </span>
-                  <textarea
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    rows={4}
-                    minLength={20}
-                    maxLength={2000}
-                    placeholder="What's incorrect, and what's the correct info? Include a source link if you have one."
-                    className="mt-1 w-full border border-gray-300 rounded-lg px-3 py-2 text-sm resize-y"
-                    required
-                  />
-                  <span className="text-[10px] text-gray-400 mt-1 block">
-                    {description.length} / 2000
-                  </span>
-                </label>
+                <Textarea
+                  ref={descriptionRef}
+                  id="report-description"
+                  label="Details"
+                  hint="Min 20 characters. Include a source link if you have one."
+                  containerClassName="mb-1"
+                  value={description}
+                  onChange={(e) => {
+                    setDescription(e.target.value);
+                    if (descriptionError) setDescriptionError(null);
+                  }}
+                  rows={4}
+                  minLength={20}
+                  maxLength={2000}
+                  showCount
+                  placeholder="What's incorrect, and what's the correct info?"
+                  required
+                  error={descriptionError ?? undefined}
+                />
 
-                <label className="block mb-5">
-                  <span className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
-                    Email <span className="font-normal text-gray-400">(optional — leave blank to stay anonymous)</span>
-                  </span>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="you@example.com"
-                    className="mt-1 w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
-                  />
-                </label>
+                <TextInput
+                  id="report-email"
+                  label="Email"
+                  hint="Optional — leave blank to stay anonymous."
+                  containerClassName="mb-5 mt-4"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@example.com"
+                />
 
                 {state.kind === 'error' && (
-                  <p className="text-sm text-red-600 mb-4 border border-red-200 bg-red-50 rounded-lg px-3 py-2">
+                  <p role="alert" className="text-sm text-status-error mb-4 border border-red-200 bg-red-50 rounded-lg px-3 py-2">
                     {state.message}
                   </p>
                 )}
 
                 <div className="flex gap-3 justify-end">
-                  <button
-                    type="button"
-                    onClick={reset}
-                    className="text-sm font-medium text-gray-600 px-4 py-2.5 rounded-lg hover:bg-gray-100"
-                  >
+                  <Button type="button" variant="ghost" onClick={reset}>
                     Cancel
-                  </button>
-                  <button
+                  </Button>
+                  <Button
                     type="submit"
-                    disabled={state.kind === 'submitting' || description.trim().length < 20}
-                    className="bg-gray-900 text-white text-sm font-semibold px-6 py-2.5 rounded-lg hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed"
+                    loading={state.kind === 'submitting'}
+                    disabled={description.trim().length < 20}
                   >
                     {state.kind === 'submitting' ? 'Submitting…' : 'Submit report'}
-                  </button>
+                  </Button>
                 </div>
               </form>
             )}

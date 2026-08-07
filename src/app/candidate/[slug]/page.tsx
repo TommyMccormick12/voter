@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { getCandidateBySlug } from '@/lib/data/candidates';
 import { getRace } from '@/lib/data/races';
 import { CandidateDetail } from '@/components/CandidateDetail';
+import { CandidateDetailActions } from '@/components/CandidateDetailActions';
+import { ErrorState } from '@/components/ui/ErrorState';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -15,12 +17,21 @@ interface PageProps {
  */
 export default async function CandidatePage({ params }: PageProps) {
   const { slug } = await params;
-  const candidate = await getCandidateBySlug(slug);
+  const candidateResult = await getCandidateBySlug(slug);
 
+  if (!candidateResult.ok) {
+    return <CandidateErrorState slug={slug} />;
+  }
+
+  const candidate = candidateResult.data;
   if (!candidate) notFound();
 
-  // Find the race so we can show a back link
-  const race = candidate.race_id ? await getRace(candidate.race_id) : null;
+  // Find the race so we can show a back link. This is secondary
+  // content — if it fails, degrade to a generic back link rather than
+  // failing the whole page; the candidate record above is the primary
+  // content this route exists to show.
+  const raceResult = candidate.race_id ? await getRace(candidate.race_id) : null;
+  const race = raceResult?.ok ? raceResult.data : null;
 
   return (
     <>
@@ -31,24 +42,33 @@ export default async function CandidatePage({ params }: PageProps) {
         >
           ← Back to scorecards
         </Link>
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            className="text-sm text-gray-600 px-4 py-2 hover:bg-gray-100 rounded-lg"
-            aria-label="Save candidate"
-          >
-            ★ Save
-          </button>
-          <button
-            type="button"
-            className="text-sm text-gray-600 px-4 py-2 hover:bg-gray-100 rounded-lg"
-            aria-label="Share candidate"
-          >
-            Share
-          </button>
-        </div>
+        <CandidateDetailActions
+          candidateId={candidate.id}
+          candidateSlug={candidate.slug}
+          raceId={candidate.race_id}
+        />
       </div>
       <CandidateDetail candidate={candidate} />
     </>
+  );
+}
+
+/**
+ * Error state: the read itself failed (DB outage or config problem),
+ * distinct from "no such candidate" (which renders `notFound()`).
+ * Retry re-navigates to this same URL, which re-runs the server-side
+ * data fetch.
+ */
+function CandidateErrorState({ slug }: { slug: string }) {
+  return (
+    <ErrorState
+      title="We couldn't load this candidate right now"
+      retryHref={`/candidate/${slug}`}
+      secondaryAction={
+        <Link href="/race-picker" className="text-gray-600 font-medium px-6 py-3 rounded-lg hover:bg-gray-100">
+          All races
+        </Link>
+      }
+    />
   );
 }

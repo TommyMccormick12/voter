@@ -1,0 +1,9354 @@
+{
+  "32003": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 29142,
+      "share_basis": "population"
+    }
+  ],
+  "32008": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 5397,
+      "share_basis": "population"
+    }
+  ],
+  "32009": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 3213,
+      "share_basis": "population"
+    }
+  ],
+  "32011": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 15678,
+      "share_basis": "population"
+    }
+  ],
+  "32013": [
+    {
+      "district": 3,
+      "share": 0.8,
+      "pop": 4,
+      "share_basis": "population"
+    },
+    {
+      "district": 2,
+      "share": 0.2,
+      "pop": 1,
+      "share_basis": "population"
+    }
+  ],
+  "32024": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 20106,
+      "share_basis": "population"
+    }
+  ],
+  "32025": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 21886,
+      "share_basis": "population"
+    }
+  ],
+  "32026": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 1863,
+      "share_basis": "population"
+    }
+  ],
+  "32033": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 4789,
+      "share_basis": "population"
+    }
+  ],
+  "32034": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 38167,
+      "share_basis": "population"
+    }
+  ],
+  "32038": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 10141,
+      "share_basis": "population"
+    }
+  ],
+  "32040": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 7958,
+      "share_basis": "population"
+    }
+  ],
+  "32043": [
+    {
+      "district": 4,
+      "share": 0.9905,
+      "pop": 30081,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.0095,
+      "pop": 288,
+      "share_basis": "population"
+    }
+  ],
+  "32044": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 1629,
+      "share_basis": "population"
+    }
+  ],
+  "32046": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 9626,
+      "share_basis": "population"
+    }
+  ],
+  "32052": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 8462,
+      "share_basis": "population"
+    }
+  ],
+  "32053": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 3815,
+      "share_basis": "population"
+    }
+  ],
+  "32054": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 12789,
+      "share_basis": "population"
+    }
+  ],
+  "32055": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 16624,
+      "share_basis": "population"
+    }
+  ],
+  "32058": [
+    {
+      "district": 3,
+      "share": 0.9788,
+      "pop": 4293,
+      "share_basis": "population"
+    },
+    {
+      "district": 4,
+      "share": 0.0212,
+      "pop": 93,
+      "share_basis": "population"
+    }
+  ],
+  "32059": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 2594,
+      "share_basis": "population"
+    }
+  ],
+  "32060": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 22111,
+      "share_basis": "population"
+    }
+  ],
+  "32061": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 364,
+      "share_basis": "population"
+    }
+  ],
+  "32062": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 2547,
+      "share_basis": "population"
+    }
+  ],
+  "32063": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 14360,
+      "share_basis": "population"
+    }
+  ],
+  "32064": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 7495,
+      "share_basis": "population"
+    }
+  ],
+  "32065": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 40164,
+      "share_basis": "population"
+    }
+  ],
+  "32066": [
+    {
+      "district": 3,
+      "share": 0.7472,
+      "pop": 5114,
+      "share_basis": "population"
+    },
+    {
+      "district": 2,
+      "share": 0.2528,
+      "pop": 1730,
+      "share_basis": "population"
+    }
+  ],
+  "32068": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 57458,
+      "share_basis": "population"
+    }
+  ],
+  "32071": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 3854,
+      "share_basis": "population"
+    }
+  ],
+  "32072": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 176,
+      "share_basis": "population"
+    }
+  ],
+  "32073": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 43527,
+      "share_basis": "population"
+    }
+  ],
+  "32079": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 517,
+      "share_basis": "population"
+    }
+  ],
+  "32080": [
+    {
+      "district": 5,
+      "share": 0.6881,
+      "pop": 15062,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.3119,
+      "pop": 6827,
+      "share_basis": "population"
+    }
+  ],
+  "32081": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 24672,
+      "share_basis": "population"
+    }
+  ],
+  "32082": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 31861,
+      "share_basis": "population"
+    }
+  ],
+  "32083": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 2626,
+      "share_basis": "population"
+    }
+  ],
+  "32084": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 34526,
+      "share_basis": "population"
+    }
+  ],
+  "32086": [
+    {
+      "district": 6,
+      "share": 0.6854,
+      "pop": 21556,
+      "share_basis": "population"
+    },
+    {
+      "district": 5,
+      "share": 0.3146,
+      "pop": 9896,
+      "share_basis": "population"
+    }
+  ],
+  "32087": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 5507,
+      "share_basis": "population"
+    }
+  ],
+  "32091": [
+    {
+      "district": 3,
+      "share": 0.9757,
+      "pop": 17374,
+      "share_basis": "population"
+    },
+    {
+      "district": 4,
+      "share": 0.0243,
+      "pop": 432,
+      "share_basis": "population"
+    }
+  ],
+  "32092": [
+    {
+      "district": 5,
+      "share": 0.9916,
+      "pop": 43324,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.0084,
+      "pop": 367,
+      "share_basis": "population"
+    }
+  ],
+  "32094": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 2862,
+      "share_basis": "population"
+    }
+  ],
+  "32095": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 16607,
+      "share_basis": "population"
+    }
+  ],
+  "32096": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 2791,
+      "share_basis": "population"
+    }
+  ],
+  "32097": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 23564,
+      "share_basis": "population"
+    }
+  ],
+  "32102": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 2768,
+      "share_basis": "population"
+    }
+  ],
+  "32110": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 8776,
+      "share_basis": "population"
+    }
+  ],
+  "32112": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 7460,
+      "share_basis": "population"
+    }
+  ],
+  "32113": [
+    {
+      "district": 6,
+      "share": 0.5966,
+      "pop": 3816,
+      "share_basis": "population"
+    },
+    {
+      "district": 3,
+      "share": 0.4034,
+      "pop": 2580,
+      "share_basis": "population"
+    }
+  ],
+  "32114": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 34943,
+      "share_basis": "population"
+    }
+  ],
+  "32117": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 28223,
+      "share_basis": "population"
+    }
+  ],
+  "32118": [
+    {
+      "district": 6,
+      "share": 0.6744,
+      "pop": 12075,
+      "share_basis": "population"
+    },
+    {
+      "district": 7,
+      "share": 0.3256,
+      "pop": 5831,
+      "share_basis": "population"
+    }
+  ],
+  "32119": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 22498,
+      "share_basis": "population"
+    }
+  ],
+  "32124": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 8793,
+      "share_basis": "population"
+    }
+  ],
+  "32127": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 29999,
+      "share_basis": "population"
+    }
+  ],
+  "32128": [
+    {
+      "district": 7,
+      "share": 0.9968,
+      "pop": 20900,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.0032,
+      "pop": 68,
+      "share_basis": "population"
+    }
+  ],
+  "32129": [
+    {
+      "district": 7,
+      "share": 0.953,
+      "pop": 20579,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.047,
+      "pop": 1015,
+      "share_basis": "population"
+    }
+  ],
+  "32130": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 5485,
+      "share_basis": "population"
+    }
+  ],
+  "32131": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 4806,
+      "share_basis": "population"
+    }
+  ],
+  "32132": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 8189,
+      "share_basis": "population"
+    }
+  ],
+  "32133": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 310,
+      "share_basis": "population"
+    }
+  ],
+  "32134": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 7938,
+      "share_basis": "population"
+    }
+  ],
+  "32136": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 8432,
+      "share_basis": "population"
+    }
+  ],
+  "32137": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 46258,
+      "share_basis": "population"
+    }
+  ],
+  "32139": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 1399,
+      "share_basis": "population"
+    }
+  ],
+  "32140": [
+    {
+      "district": 6,
+      "share": 0.9764,
+      "pop": 1779,
+      "share_basis": "population"
+    },
+    {
+      "district": 4,
+      "share": 0.0236,
+      "pop": 43,
+      "share_basis": "population"
+    }
+  ],
+  "32141": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 17955,
+      "share_basis": "population"
+    }
+  ],
+  "32145": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 5608,
+      "share_basis": "population"
+    }
+  ],
+  "32147": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 1219,
+      "share_basis": "population"
+    }
+  ],
+  "32148": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 10979,
+      "share_basis": "population"
+    }
+  ],
+  "32157": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 506,
+      "share_basis": "population"
+    }
+  ],
+  "32159": [
+    {
+      "district": 6,
+      "share": 0.7246,
+      "pop": 22067,
+      "share_basis": "population"
+    },
+    {
+      "district": 11,
+      "share": 0.2754,
+      "pop": 8388,
+      "share_basis": "population"
+    }
+  ],
+  "32162": [
+    {
+      "district": 11,
+      "share": 0.8431,
+      "pop": 43760,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.1569,
+      "pop": 8145,
+      "share_basis": "population"
+    }
+  ],
+  "32163": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 29064,
+      "share_basis": "population"
+    }
+  ],
+  "32164": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 49412,
+      "share_basis": "population"
+    }
+  ],
+  "32168": [
+    {
+      "district": 7,
+      "share": 0.9956,
+      "pop": 29925,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.0044,
+      "pop": 133,
+      "share_basis": "population"
+    }
+  ],
+  "32169": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 10621,
+      "share_basis": "population"
+    }
+  ],
+  "32174": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 53097,
+      "share_basis": "population"
+    }
+  ],
+  "32176": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 14410,
+      "share_basis": "population"
+    }
+  ],
+  "32177": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 25380,
+      "share_basis": "population"
+    }
+  ],
+  "32179": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 9075,
+      "share_basis": "population"
+    }
+  ],
+  "32180": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 3834,
+      "share_basis": "population"
+    }
+  ],
+  "32181": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 2259,
+      "share_basis": "population"
+    }
+  ],
+  "32182": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 20,
+      "share_basis": "population"
+    }
+  ],
+  "32187": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 1667,
+      "share_basis": "population"
+    }
+  ],
+  "32189": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 5887,
+      "share_basis": "population"
+    }
+  ],
+  "32190": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 1115,
+      "share_basis": "population"
+    }
+  ],
+  "32192": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 94,
+      "share_basis": "population"
+    }
+  ],
+  "32193": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 983,
+      "share_basis": "population"
+    }
+  ],
+  "32195": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 3462,
+      "share_basis": "population"
+    }
+  ],
+  "32202": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 6544,
+      "share_basis": "population"
+    }
+  ],
+  "32203": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 4,
+      "share_basis": "population"
+    }
+  ],
+  "32204": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 8673,
+      "share_basis": "population"
+    }
+  ],
+  "32205": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 29605,
+      "share_basis": "population"
+    }
+  ],
+  "32206": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 18283,
+      "share_basis": "population"
+    }
+  ],
+  "32207": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 36207,
+      "share_basis": "population"
+    }
+  ],
+  "32208": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 33286,
+      "share_basis": "population"
+    }
+  ],
+  "32209": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 36656,
+      "share_basis": "population"
+    }
+  ],
+  "32210": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 66415,
+      "share_basis": "population"
+    }
+  ],
+  "32211": [
+    {
+      "district": 5,
+      "share": 0.9449,
+      "pop": 32287,
+      "share_basis": "population"
+    },
+    {
+      "district": 4,
+      "share": 0.0551,
+      "pop": 1881,
+      "share_basis": "population"
+    }
+  ],
+  "32212": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 1393,
+      "share_basis": "population"
+    }
+  ],
+  "32214": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 0,
+      "share_basis": "area"
+    }
+  ],
+  "32216": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 42847,
+      "share_basis": "population"
+    }
+  ],
+  "32217": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 20543,
+      "share_basis": "population"
+    }
+  ],
+  "32218": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 67040,
+      "share_basis": "population"
+    }
+  ],
+  "32219": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 14474,
+      "share_basis": "population"
+    }
+  ],
+  "32220": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 13037,
+      "share_basis": "population"
+    }
+  ],
+  "32221": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 30961,
+      "share_basis": "population"
+    }
+  ],
+  "32222": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 13564,
+      "share_basis": "population"
+    }
+  ],
+  "32223": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 25600,
+      "share_basis": "population"
+    }
+  ],
+  "32224": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 42395,
+      "share_basis": "population"
+    }
+  ],
+  "32225": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 57441,
+      "share_basis": "population"
+    }
+  ],
+  "32226": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 20306,
+      "share_basis": "population"
+    }
+  ],
+  "32227": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 3799,
+      "share_basis": "population"
+    }
+  ],
+  "32228": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 219,
+      "share_basis": "population"
+    }
+  ],
+  "32233": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 23980,
+      "share_basis": "population"
+    }
+  ],
+  "32234": [
+    {
+      "district": 4,
+      "share": 0.9657,
+      "pop": 7256,
+      "share_basis": "population"
+    },
+    {
+      "district": 3,
+      "share": 0.0343,
+      "pop": 258,
+      "share_basis": "population"
+    }
+  ],
+  "32244": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 63292,
+      "share_basis": "population"
+    }
+  ],
+  "32246": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 58105,
+      "share_basis": "population"
+    }
+  ],
+  "32250": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 30080,
+      "share_basis": "population"
+    }
+  ],
+  "32254": [
+    {
+      "district": 4,
+      "share": 1,
+      "pop": 14545,
+      "share_basis": "population"
+    }
+  ],
+  "32256": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 53611,
+      "share_basis": "population"
+    }
+  ],
+  "32257": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 41439,
+      "share_basis": "population"
+    }
+  ],
+  "32258": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 37859,
+      "share_basis": "population"
+    }
+  ],
+  "32259": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 62169,
+      "share_basis": "population"
+    }
+  ],
+  "32266": [
+    {
+      "district": 5,
+      "share": 1,
+      "pop": 7217,
+      "share_basis": "population"
+    }
+  ],
+  "32277": [
+    {
+      "district": 5,
+      "share": 0.5268,
+      "pop": 17475,
+      "share_basis": "population"
+    },
+    {
+      "district": 4,
+      "share": 0.4732,
+      "pop": 15699,
+      "share_basis": "population"
+    }
+  ],
+  "32301": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 29686,
+      "share_basis": "population"
+    }
+  ],
+  "32303": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 48644,
+      "share_basis": "population"
+    }
+  ],
+  "32304": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 50007,
+      "share_basis": "population"
+    }
+  ],
+  "32305": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 19199,
+      "share_basis": "population"
+    }
+  ],
+  "32306": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 1711,
+      "share_basis": "population"
+    }
+  ],
+  "32307": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 1207,
+      "share_basis": "population"
+    }
+  ],
+  "32308": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 23355,
+      "share_basis": "population"
+    }
+  ],
+  "32309": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 31189,
+      "share_basis": "population"
+    }
+  ],
+  "32310": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 17209,
+      "share_basis": "population"
+    }
+  ],
+  "32311": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 21218,
+      "share_basis": "population"
+    }
+  ],
+  "32312": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 34304,
+      "share_basis": "population"
+    }
+  ],
+  "32313": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 10,
+      "share_basis": "population"
+    }
+  ],
+  "32317": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 14459,
+      "share_basis": "population"
+    }
+  ],
+  "32320": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 3726,
+      "share_basis": "population"
+    }
+  ],
+  "32321": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 6254,
+      "share_basis": "population"
+    }
+  ],
+  "32322": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 4213,
+      "share_basis": "population"
+    }
+  ],
+  "32323": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 262,
+      "share_basis": "population"
+    }
+  ],
+  "32324": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 4554,
+      "share_basis": "population"
+    }
+  ],
+  "32327": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 30048,
+      "share_basis": "population"
+    }
+  ],
+  "32328": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 3721,
+      "share_basis": "population"
+    }
+  ],
+  "32330": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 541,
+      "share_basis": "population"
+    }
+  ],
+  "32331": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 4192,
+      "share_basis": "population"
+    }
+  ],
+  "32332": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 1411,
+      "share_basis": "population"
+    }
+  ],
+  "32333": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 11499,
+      "share_basis": "population"
+    }
+  ],
+  "32334": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 1616,
+      "share_basis": "population"
+    }
+  ],
+  "32336": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 1408,
+      "share_basis": "population"
+    }
+  ],
+  "32337": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 30,
+      "share_basis": "population"
+    }
+  ],
+  "32340": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 10744,
+      "share_basis": "population"
+    }
+  ],
+  "32343": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 3621,
+      "share_basis": "population"
+    }
+  ],
+  "32344": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 12705,
+      "share_basis": "population"
+    }
+  ],
+  "32346": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 1750,
+      "share_basis": "population"
+    }
+  ],
+  "32347": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 7805,
+      "share_basis": "population"
+    }
+  ],
+  "32348": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 11782,
+      "share_basis": "population"
+    }
+  ],
+  "32350": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 1365,
+      "share_basis": "population"
+    }
+  ],
+  "32351": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 16526,
+      "share_basis": "population"
+    }
+  ],
+  "32352": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 5674,
+      "share_basis": "population"
+    }
+  ],
+  "32355": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 284,
+      "share_basis": "population"
+    }
+  ],
+  "32356": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 117,
+      "share_basis": "population"
+    }
+  ],
+  "32358": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 2185,
+      "share_basis": "population"
+    }
+  ],
+  "32359": [
+    {
+      "district": 2,
+      "share": 0.7022,
+      "pop": 1290,
+      "share_basis": "population"
+    },
+    {
+      "district": 3,
+      "share": 0.2978,
+      "pop": 547,
+      "share_basis": "population"
+    }
+  ],
+  "32360": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 106,
+      "share_basis": "population"
+    }
+  ],
+  "32361": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 237,
+      "share_basis": "population"
+    }
+  ],
+  "32399": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 0,
+      "share_basis": "area"
+    }
+  ],
+  "32401": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 20487,
+      "share_basis": "population"
+    }
+  ],
+  "32403": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 141,
+      "share_basis": "population"
+    }
+  ],
+  "32404": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 38186,
+      "share_basis": "population"
+    }
+  ],
+  "32405": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 28158,
+      "share_basis": "population"
+    }
+  ],
+  "32407": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 14366,
+      "share_basis": "population"
+    }
+  ],
+  "32408": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 17479,
+      "share_basis": "population"
+    }
+  ],
+  "32409": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 10394,
+      "share_basis": "population"
+    }
+  ],
+  "32410": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 439,
+      "share_basis": "population"
+    }
+  ],
+  "32413": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 15217,
+      "share_basis": "population"
+    }
+  ],
+  "32420": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 2289,
+      "share_basis": "population"
+    }
+  ],
+  "32421": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 4214,
+      "share_basis": "population"
+    }
+  ],
+  "32423": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 1213,
+      "share_basis": "population"
+    }
+  ],
+  "32424": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 7145,
+      "share_basis": "population"
+    }
+  ],
+  "32425": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 14419,
+      "share_basis": "population"
+    }
+  ],
+  "32426": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 778,
+      "share_basis": "population"
+    }
+  ],
+  "32427": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 1293,
+      "share_basis": "population"
+    }
+  ],
+  "32428": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 17946,
+      "share_basis": "population"
+    }
+  ],
+  "32430": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 1095,
+      "share_basis": "population"
+    }
+  ],
+  "32431": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 4981,
+      "share_basis": "population"
+    }
+  ],
+  "32432": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 98,
+      "share_basis": "population"
+    }
+  ],
+  "32433": [
+    {
+      "district": 1,
+      "share": 0.534,
+      "pop": 9632,
+      "share_basis": "population"
+    },
+    {
+      "district": 2,
+      "share": 0.466,
+      "pop": 8404,
+      "share_basis": "population"
+    }
+  ],
+  "32435": [
+    {
+      "district": 2,
+      "share": 0.688,
+      "pop": 4771,
+      "share_basis": "population"
+    },
+    {
+      "district": 1,
+      "share": 0.312,
+      "pop": 2164,
+      "share_basis": "population"
+    }
+  ],
+  "32437": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 612,
+      "share_basis": "population"
+    }
+  ],
+  "32438": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 4363,
+      "share_basis": "population"
+    }
+  ],
+  "32439": [
+    {
+      "district": 1,
+      "share": 0.7895,
+      "pop": 10219,
+      "share_basis": "population"
+    },
+    {
+      "district": 2,
+      "share": 0.2105,
+      "pop": 2724,
+      "share_basis": "population"
+    }
+  ],
+  "32440": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 7581,
+      "share_basis": "population"
+    }
+  ],
+  "32442": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 3569,
+      "share_basis": "population"
+    }
+  ],
+  "32443": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 2975,
+      "share_basis": "population"
+    }
+  ],
+  "32444": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 19913,
+      "share_basis": "population"
+    }
+  ],
+  "32445": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 2468,
+      "share_basis": "population"
+    }
+  ],
+  "32446": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 9970,
+      "share_basis": "population"
+    }
+  ],
+  "32448": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 8084,
+      "share_basis": "population"
+    }
+  ],
+  "32449": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 567,
+      "share_basis": "population"
+    }
+  ],
+  "32455": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 4425,
+      "share_basis": "population"
+    }
+  ],
+  "32456": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 7439,
+      "share_basis": "population"
+    }
+  ],
+  "32459": [
+    {
+      "district": 1,
+      "share": 0.7283,
+      "pop": 14979,
+      "share_basis": "population"
+    },
+    {
+      "district": 2,
+      "share": 0.2717,
+      "pop": 5588,
+      "share_basis": "population"
+    }
+  ],
+  "32460": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 5409,
+      "share_basis": "population"
+    }
+  ],
+  "32461": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 2878,
+      "share_basis": "population"
+    }
+  ],
+  "32462": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 3473,
+      "share_basis": "population"
+    }
+  ],
+  "32463": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 166,
+      "share_basis": "population"
+    }
+  ],
+  "32464": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 3858,
+      "share_basis": "population"
+    }
+  ],
+  "32465": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 7251,
+      "share_basis": "population"
+    }
+  ],
+  "32466": [
+    {
+      "district": 2,
+      "share": 1,
+      "pop": 6195,
+      "share_basis": "population"
+    }
+  ],
+  "32501": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 10960,
+      "share_basis": "population"
+    }
+  ],
+  "32502": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 4277,
+      "share_basis": "population"
+    }
+  ],
+  "32503": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 33693,
+      "share_basis": "population"
+    }
+  ],
+  "32504": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 21791,
+      "share_basis": "population"
+    }
+  ],
+  "32505": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 28671,
+      "share_basis": "population"
+    }
+  ],
+  "32506": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 36017,
+      "share_basis": "population"
+    }
+  ],
+  "32507": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 31215,
+      "share_basis": "population"
+    }
+  ],
+  "32508": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 5528,
+      "share_basis": "population"
+    }
+  ],
+  "32509": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 561,
+      "share_basis": "population"
+    }
+  ],
+  "32511": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 1380,
+      "share_basis": "population"
+    }
+  ],
+  "32512": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 23,
+      "share_basis": "population"
+    }
+  ],
+  "32514": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 40844,
+      "share_basis": "population"
+    }
+  ],
+  "32526": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 43029,
+      "share_basis": "population"
+    }
+  ],
+  "32530": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 142,
+      "share_basis": "population"
+    }
+  ],
+  "32531": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 6532,
+      "share_basis": "population"
+    }
+  ],
+  "32533": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 30517,
+      "share_basis": "population"
+    }
+  ],
+  "32534": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 16006,
+      "share_basis": "population"
+    }
+  ],
+  "32535": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 6043,
+      "share_basis": "population"
+    }
+  ],
+  "32536": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 25807,
+      "share_basis": "population"
+    }
+  ],
+  "32539": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 31749,
+      "share_basis": "population"
+    }
+  ],
+  "32541": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 18419,
+      "share_basis": "population"
+    }
+  ],
+  "32542": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 3834,
+      "share_basis": "population"
+    }
+  ],
+  "32544": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 1509,
+      "share_basis": "population"
+    }
+  ],
+  "32547": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 35466,
+      "share_basis": "population"
+    }
+  ],
+  "32548": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 22399,
+      "share_basis": "population"
+    }
+  ],
+  "32550": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 7828,
+      "share_basis": "population"
+    }
+  ],
+  "32561": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 9241,
+      "share_basis": "population"
+    }
+  ],
+  "32563": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 27329,
+      "share_basis": "population"
+    }
+  ],
+  "32564": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 3159,
+      "share_basis": "population"
+    }
+  ],
+  "32565": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 6105,
+      "share_basis": "population"
+    }
+  ],
+  "32566": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 44434,
+      "share_basis": "population"
+    }
+  ],
+  "32567": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 4210,
+      "share_basis": "population"
+    }
+  ],
+  "32568": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 3093,
+      "share_basis": "population"
+    }
+  ],
+  "32569": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 12378,
+      "share_basis": "population"
+    }
+  ],
+  "32570": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 33144,
+      "share_basis": "population"
+    }
+  ],
+  "32571": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 38885,
+      "share_basis": "population"
+    }
+  ],
+  "32577": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 5316,
+      "share_basis": "population"
+    }
+  ],
+  "32578": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 35075,
+      "share_basis": "population"
+    }
+  ],
+  "32579": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 10444,
+      "share_basis": "population"
+    }
+  ],
+  "32580": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 4120,
+      "share_basis": "population"
+    }
+  ],
+  "32583": [
+    {
+      "district": 1,
+      "share": 1,
+      "pop": 31047,
+      "share_basis": "population"
+    }
+  ],
+  "32601": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 22039,
+      "share_basis": "population"
+    }
+  ],
+  "32603": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 7367,
+      "share_basis": "population"
+    }
+  ],
+  "32605": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 24326,
+      "share_basis": "population"
+    }
+  ],
+  "32606": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 24380,
+      "share_basis": "population"
+    }
+  ],
+  "32607": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 35420,
+      "share_basis": "population"
+    }
+  ],
+  "32608": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 55540,
+      "share_basis": "population"
+    }
+  ],
+  "32609": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 18322,
+      "share_basis": "population"
+    }
+  ],
+  "32610": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 19,
+      "share_basis": "population"
+    }
+  ],
+  "32612": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 6498,
+      "share_basis": "population"
+    }
+  ],
+  "32615": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 16524,
+      "share_basis": "population"
+    }
+  ],
+  "32616": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 178,
+      "share_basis": "population"
+    }
+  ],
+  "32617": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 4295,
+      "share_basis": "population"
+    }
+  ],
+  "32618": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 7183,
+      "share_basis": "population"
+    }
+  ],
+  "32619": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 5007,
+      "share_basis": "population"
+    }
+  ],
+  "32621": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 5396,
+      "share_basis": "population"
+    }
+  ],
+  "32622": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 1456,
+      "share_basis": "population"
+    }
+  ],
+  "32625": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 1620,
+      "share_basis": "population"
+    }
+  ],
+  "32626": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 8620,
+      "share_basis": "population"
+    }
+  ],
+  "32628": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 5343,
+      "share_basis": "population"
+    }
+  ],
+  "32631": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 311,
+      "share_basis": "population"
+    }
+  ],
+  "32634": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 29,
+      "share_basis": "population"
+    }
+  ],
+  "32639": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 325,
+      "share_basis": "population"
+    }
+  ],
+  "32640": [
+    {
+      "district": 6,
+      "share": 0.5574,
+      "pop": 5731,
+      "share_basis": "population"
+    },
+    {
+      "district": 3,
+      "share": 0.4426,
+      "pop": 4550,
+      "share_basis": "population"
+    }
+  ],
+  "32641": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 13872,
+      "share_basis": "population"
+    }
+  ],
+  "32643": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 12549,
+      "share_basis": "population"
+    }
+  ],
+  "32648": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 443,
+      "share_basis": "population"
+    }
+  ],
+  "32653": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 14397,
+      "share_basis": "population"
+    }
+  ],
+  "32656": [
+    {
+      "district": 4,
+      "share": 0.903,
+      "pop": 13262,
+      "share_basis": "population"
+    },
+    {
+      "district": 3,
+      "share": 0.097,
+      "pop": 1424,
+      "share_basis": "population"
+    }
+  ],
+  "32658": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 299,
+      "share_basis": "population"
+    }
+  ],
+  "32664": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 504,
+      "share_basis": "population"
+    }
+  ],
+  "32666": [
+    {
+      "district": 6,
+      "share": 0.4652,
+      "pop": 2773,
+      "share_basis": "population"
+    },
+    {
+      "district": 3,
+      "share": 0.31,
+      "pop": 1848,
+      "share_basis": "population"
+    },
+    {
+      "district": 4,
+      "share": 0.2248,
+      "pop": 1340,
+      "share_basis": "population"
+    }
+  ],
+  "32667": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 4117,
+      "share_basis": "population"
+    }
+  ],
+  "32668": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 5548,
+      "share_basis": "population"
+    }
+  ],
+  "32669": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 15890,
+      "share_basis": "population"
+    }
+  ],
+  "32680": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 10008,
+      "share_basis": "population"
+    }
+  ],
+  "32681": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 133,
+      "share_basis": "population"
+    }
+  ],
+  "32683": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 133,
+      "share_basis": "population"
+    }
+  ],
+  "32686": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 4339,
+      "share_basis": "population"
+    }
+  ],
+  "32692": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 197,
+      "share_basis": "population"
+    }
+  ],
+  "32693": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 12815,
+      "share_basis": "population"
+    }
+  ],
+  "32694": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 1962,
+      "share_basis": "population"
+    }
+  ],
+  "32696": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 12784,
+      "share_basis": "population"
+    }
+  ],
+  "32697": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 278,
+      "share_basis": "population"
+    }
+  ],
+  "32701": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 23265,
+      "share_basis": "population"
+    }
+  ],
+  "32702": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 3186,
+      "share_basis": "population"
+    }
+  ],
+  "32703": [
+    {
+      "district": 10,
+      "share": 0.5512,
+      "pop": 30209,
+      "share_basis": "population"
+    },
+    {
+      "district": 11,
+      "share": 0.2404,
+      "pop": 13176,
+      "share_basis": "population"
+    },
+    {
+      "district": 7,
+      "share": 0.2084,
+      "pop": 11420,
+      "share_basis": "population"
+    }
+  ],
+  "32707": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 37704,
+      "share_basis": "population"
+    }
+  ],
+  "32708": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 47045,
+      "share_basis": "population"
+    }
+  ],
+  "32709": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 2691,
+      "share_basis": "population"
+    }
+  ],
+  "32712": [
+    {
+      "district": 11,
+      "share": 0.9996,
+      "pop": 50067,
+      "share_basis": "population"
+    }
+  ],
+  "32713": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 22438,
+      "share_basis": "population"
+    }
+  ],
+  "32714": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 38049,
+      "share_basis": "population"
+    }
+  ],
+  "32720": [
+    {
+      "district": 6,
+      "share": 0.9933,
+      "pop": 33344,
+      "share_basis": "population"
+    },
+    {
+      "district": 7,
+      "share": 0.0067,
+      "pop": 224,
+      "share_basis": "population"
+    }
+  ],
+  "32723": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 7,
+      "share_basis": "population"
+    }
+  ],
+  "32724": [
+    {
+      "district": 6,
+      "share": 0.9983,
+      "pop": 40490,
+      "share_basis": "population"
+    },
+    {
+      "district": 7,
+      "share": 0.0017,
+      "pop": 69,
+      "share_basis": "population"
+    }
+  ],
+  "32725": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 50435,
+      "share_basis": "population"
+    }
+  ],
+  "32726": [
+    {
+      "district": 6,
+      "share": 0.9999,
+      "pop": 23010,
+      "share_basis": "population"
+    }
+  ],
+  "32730": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 5743,
+      "share_basis": "population"
+    }
+  ],
+  "32732": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 5596,
+      "share_basis": "population"
+    }
+  ],
+  "32735": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 5812,
+      "share_basis": "population"
+    }
+  ],
+  "32736": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 11412,
+      "share_basis": "population"
+    }
+  ],
+  "32738": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 47284,
+      "share_basis": "population"
+    }
+  ],
+  "32744": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 3789,
+      "share_basis": "population"
+    }
+  ],
+  "32746": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 45828,
+      "share_basis": "population"
+    }
+  ],
+  "32750": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 25261,
+      "share_basis": "population"
+    }
+  ],
+  "32751": [
+    {
+      "district": 10,
+      "share": 0.7239,
+      "pop": 16817,
+      "share_basis": "population"
+    },
+    {
+      "district": 7,
+      "share": 0.2761,
+      "pop": 6413,
+      "share_basis": "population"
+    }
+  ],
+  "32754": [
+    {
+      "district": 8,
+      "share": 0.949,
+      "pop": 11384,
+      "share_basis": "population"
+    },
+    {
+      "district": 7,
+      "share": 0.051,
+      "pop": 612,
+      "share_basis": "population"
+    }
+  ],
+  "32757": [
+    {
+      "district": 6,
+      "share": 0.7914,
+      "pop": 23992,
+      "share_basis": "population"
+    },
+    {
+      "district": 11,
+      "share": 0.2086,
+      "pop": 6323,
+      "share_basis": "population"
+    }
+  ],
+  "32759": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 2951,
+      "share_basis": "population"
+    }
+  ],
+  "32763": [
+    {
+      "district": 7,
+      "share": 0.9972,
+      "pop": 23326,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.0028,
+      "pop": 65,
+      "share_basis": "population"
+    }
+  ],
+  "32764": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 3238,
+      "share_basis": "population"
+    }
+  ],
+  "32765": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 65228,
+      "share_basis": "population"
+    }
+  ],
+  "32766": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 16541,
+      "share_basis": "population"
+    }
+  ],
+  "32767": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 2939,
+      "share_basis": "population"
+    }
+  ],
+  "32768": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 15,
+      "share_basis": "population"
+    }
+  ],
+  "32771": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 57178,
+      "share_basis": "population"
+    }
+  ],
+  "32773": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 33990,
+      "share_basis": "population"
+    }
+  ],
+  "32775": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 36,
+      "share_basis": "population"
+    }
+  ],
+  "32776": [
+    {
+      "district": 11,
+      "share": 0.5386,
+      "pop": 6709,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.4614,
+      "pop": 5747,
+      "share_basis": "population"
+    }
+  ],
+  "32778": [
+    {
+      "district": 11,
+      "share": 0.999,
+      "pop": 23969,
+      "share_basis": "population"
+    }
+  ],
+  "32779": [
+    {
+      "district": 7,
+      "share": 1,
+      "pop": 29321,
+      "share_basis": "population"
+    }
+  ],
+  "32780": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 39525,
+      "share_basis": "population"
+    }
+  ],
+  "32784": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 11212,
+      "share_basis": "population"
+    }
+  ],
+  "32789": [
+    {
+      "district": 10,
+      "share": 1,
+      "pop": 26399,
+      "share_basis": "population"
+    }
+  ],
+  "32792": [
+    {
+      "district": 10,
+      "share": 0.5675,
+      "pop": 29157,
+      "share_basis": "population"
+    },
+    {
+      "district": 7,
+      "share": 0.4325,
+      "pop": 22219,
+      "share_basis": "population"
+    }
+  ],
+  "32796": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 20818,
+      "share_basis": "population"
+    }
+  ],
+  "32798": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 2501,
+      "share_basis": "population"
+    }
+  ],
+  "32801": [
+    {
+      "district": 10,
+      "share": 1,
+      "pop": 17728,
+      "share_basis": "population"
+    }
+  ],
+  "32803": [
+    {
+      "district": 10,
+      "share": 1,
+      "pop": 21003,
+      "share_basis": "population"
+    }
+  ],
+  "32804": [
+    {
+      "district": 10,
+      "share": 1,
+      "pop": 19084,
+      "share_basis": "population"
+    }
+  ],
+  "32805": [
+    {
+      "district": 10,
+      "share": 1,
+      "pop": 23331,
+      "share_basis": "population"
+    }
+  ],
+  "32806": [
+    {
+      "district": 10,
+      "share": 1,
+      "pop": 26582,
+      "share_basis": "population"
+    }
+  ],
+  "32807": [
+    {
+      "district": 10,
+      "share": 1,
+      "pop": 34384,
+      "share_basis": "population"
+    }
+  ],
+  "32808": [
+    {
+      "district": 10,
+      "share": 1,
+      "pop": 52551,
+      "share_basis": "population"
+    }
+  ],
+  "32809": [
+    {
+      "district": 10,
+      "share": 0.4656,
+      "pop": 13725,
+      "share_basis": "population"
+    },
+    {
+      "district": 11,
+      "share": 0.3833,
+      "pop": 11298,
+      "share_basis": "population"
+    },
+    {
+      "district": 9,
+      "share": 0.1511,
+      "pop": 4455,
+      "share_basis": "population"
+    }
+  ],
+  "32810": [
+    {
+      "district": 10,
+      "share": 0.9985,
+      "pop": 35870,
+      "share_basis": "population"
+    },
+    {
+      "district": 7,
+      "share": 0.0015,
+      "pop": 55,
+      "share_basis": "population"
+    }
+  ],
+  "32811": [
+    {
+      "district": 10,
+      "share": 1,
+      "pop": 42274,
+      "share_basis": "population"
+    }
+  ],
+  "32812": [
+    {
+      "district": 10,
+      "share": 0.783,
+      "pop": 27081,
+      "share_basis": "population"
+    },
+    {
+      "district": 9,
+      "share": 0.217,
+      "pop": 7505,
+      "share_basis": "population"
+    }
+  ],
+  "32814": [
+    {
+      "district": 10,
+      "share": 1,
+      "pop": 9218,
+      "share_basis": "population"
+    }
+  ],
+  "32816": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 8246,
+      "share_basis": "population"
+    }
+  ],
+  "32817": [
+    {
+      "district": 10,
+      "share": 0.8109,
+      "pop": 32741,
+      "share_basis": "population"
+    },
+    {
+      "district": 8,
+      "share": 0.1891,
+      "pop": 7635,
+      "share_basis": "population"
+    }
+  ],
+  "32818": [
+    {
+      "district": 10,
+      "share": 1,
+      "pop": 48052,
+      "share_basis": "population"
+    }
+  ],
+  "32819": [
+    {
+      "district": 11,
+      "share": 0.7684,
+      "pop": 23711,
+      "share_basis": "population"
+    },
+    {
+      "district": 10,
+      "share": 0.2316,
+      "pop": 7146,
+      "share_basis": "population"
+    }
+  ],
+  "32820": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 10150,
+      "share_basis": "population"
+    }
+  ],
+  "32821": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 25999,
+      "share_basis": "population"
+    }
+  ],
+  "32822": [
+    {
+      "district": 10,
+      "share": 0.8588,
+      "pop": 55066,
+      "share_basis": "population"
+    },
+    {
+      "district": 9,
+      "share": 0.1412,
+      "pop": 9054,
+      "share_basis": "population"
+    }
+  ],
+  "32824": [
+    {
+      "district": 9,
+      "share": 0.8797,
+      "pop": 50504,
+      "share_basis": "population"
+    },
+    {
+      "district": 11,
+      "share": 0.1203,
+      "pop": 6908,
+      "share_basis": "population"
+    }
+  ],
+  "32825": [
+    {
+      "district": 10,
+      "share": 0.7095,
+      "pop": 43813,
+      "share_basis": "population"
+    },
+    {
+      "district": 8,
+      "share": 0.2905,
+      "pop": 17942,
+      "share_basis": "population"
+    }
+  ],
+  "32826": [
+    {
+      "district": 8,
+      "share": 0.9247,
+      "pop": 30575,
+      "share_basis": "population"
+    },
+    {
+      "district": 10,
+      "share": 0.0753,
+      "pop": 2490,
+      "share_basis": "population"
+    }
+  ],
+  "32827": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 19042,
+      "share_basis": "population"
+    }
+  ],
+  "32828": [
+    {
+      "district": 8,
+      "share": 0.9988,
+      "pop": 68348,
+      "share_basis": "population"
+    },
+    {
+      "district": 10,
+      "share": 0.0012,
+      "pop": 80,
+      "share_basis": "population"
+    }
+  ],
+  "32829": [
+    {
+      "district": 10,
+      "share": 0.8129,
+      "pop": 16769,
+      "share_basis": "population"
+    },
+    {
+      "district": 8,
+      "share": 0.1871,
+      "pop": 3860,
+      "share_basis": "population"
+    }
+  ],
+  "32830": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 55,
+      "share_basis": "population"
+    }
+  ],
+  "32831": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 2619,
+      "share_basis": "population"
+    }
+  ],
+  "32832": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 34882,
+      "share_basis": "population"
+    }
+  ],
+  "32833": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 10542,
+      "share_basis": "population"
+    }
+  ],
+  "32835": [
+    {
+      "district": 10,
+      "share": 0.9247,
+      "pop": 41962,
+      "share_basis": "population"
+    },
+    {
+      "district": 11,
+      "share": 0.0753,
+      "pop": 3418,
+      "share_basis": "population"
+    }
+  ],
+  "32836": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 23205,
+      "share_basis": "population"
+    }
+  ],
+  "32837": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 56813,
+      "share_basis": "population"
+    }
+  ],
+  "32839": [
+    {
+      "district": 10,
+      "share": 1,
+      "pop": 58641,
+      "share_basis": "population"
+    }
+  ],
+  "32899": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 0,
+      "share_basis": "area"
+    }
+  ],
+  "32901": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 26286,
+      "share_basis": "population"
+    }
+  ],
+  "32903": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 13880,
+      "share_basis": "population"
+    }
+  ],
+  "32904": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 35399,
+      "share_basis": "population"
+    }
+  ],
+  "32905": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 26064,
+      "share_basis": "population"
+    }
+  ],
+  "32907": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 44432,
+      "share_basis": "population"
+    }
+  ],
+  "32908": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 14420,
+      "share_basis": "population"
+    }
+  ],
+  "32909": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 36789,
+      "share_basis": "population"
+    }
+  ],
+  "32920": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 9984,
+      "share_basis": "population"
+    }
+  ],
+  "32922": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 15923,
+      "share_basis": "population"
+    }
+  ],
+  "32925": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 1308,
+      "share_basis": "population"
+    }
+  ],
+  "32926": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 22693,
+      "share_basis": "population"
+    }
+  ],
+  "32927": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 27996,
+      "share_basis": "population"
+    }
+  ],
+  "32931": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 13643,
+      "share_basis": "population"
+    }
+  ],
+  "32934": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 18355,
+      "share_basis": "population"
+    }
+  ],
+  "32935": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 41837,
+      "share_basis": "population"
+    }
+  ],
+  "32937": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 27306,
+      "share_basis": "population"
+    }
+  ],
+  "32940": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 44869,
+      "share_basis": "population"
+    }
+  ],
+  "32948": [
+    {
+      "district": 9,
+      "share": 0.9952,
+      "pop": 6577,
+      "share_basis": "population"
+    },
+    {
+      "district": 8,
+      "share": 0.0048,
+      "pop": 32,
+      "share_basis": "population"
+    }
+  ],
+  "32949": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 2538,
+      "share_basis": "population"
+    }
+  ],
+  "32950": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 4545,
+      "share_basis": "population"
+    }
+  ],
+  "32951": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 11525,
+      "share_basis": "population"
+    }
+  ],
+  "32952": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 20670,
+      "share_basis": "population"
+    }
+  ],
+  "32953": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 24430,
+      "share_basis": "population"
+    }
+  ],
+  "32955": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 40275,
+      "share_basis": "population"
+    }
+  ],
+  "32958": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 28619,
+      "share_basis": "population"
+    }
+  ],
+  "32959": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 32,
+      "share_basis": "population"
+    }
+  ],
+  "32960": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 21522,
+      "share_basis": "population"
+    }
+  ],
+  "32962": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 26011,
+      "share_basis": "population"
+    }
+  ],
+  "32963": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 16291,
+      "share_basis": "population"
+    }
+  ],
+  "32966": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 19724,
+      "share_basis": "population"
+    }
+  ],
+  "32967": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 25785,
+      "share_basis": "population"
+    }
+  ],
+  "32968": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 15006,
+      "share_basis": "population"
+    }
+  ],
+  "32970": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 253,
+      "share_basis": "population"
+    }
+  ],
+  "32976": [
+    {
+      "district": 8,
+      "share": 1,
+      "pop": 9618,
+      "share_basis": "population"
+    }
+  ],
+  "33001": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 411,
+      "share_basis": "population"
+    }
+  ],
+  "33004": [
+    {
+      "district": 25,
+      "share": 0.5567,
+      "pop": 8998,
+      "share_basis": "population"
+    },
+    {
+      "district": 24,
+      "share": 0.4433,
+      "pop": 7164,
+      "share_basis": "population"
+    }
+  ],
+  "33009": [
+    {
+      "district": 25,
+      "share": 0.6633,
+      "pop": 28721,
+      "share_basis": "population"
+    },
+    {
+      "district": 24,
+      "share": 0.3367,
+      "pop": 14580,
+      "share_basis": "population"
+    }
+  ],
+  "33010": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 43902,
+      "share_basis": "population"
+    }
+  ],
+  "33012": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 70260,
+      "share_basis": "population"
+    }
+  ],
+  "33013": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 31068,
+      "share_basis": "population"
+    }
+  ],
+  "33014": [
+    {
+      "district": 26,
+      "share": 0.9636,
+      "pop": 38795,
+      "share_basis": "population"
+    },
+    {
+      "district": 24,
+      "share": 0.0364,
+      "pop": 1466,
+      "share_basis": "population"
+    }
+  ],
+  "33015": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 65645,
+      "share_basis": "population"
+    }
+  ],
+  "33016": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 45714,
+      "share_basis": "population"
+    }
+  ],
+  "33018": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 54273,
+      "share_basis": "population"
+    }
+  ],
+  "33019": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 15497,
+      "share_basis": "population"
+    }
+  ],
+  "33020": [
+    {
+      "district": 24,
+      "share": 0.8,
+      "pop": 36033,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.2,
+      "pop": 9011,
+      "share_basis": "population"
+    }
+  ],
+  "33021": [
+    {
+      "district": 24,
+      "share": 0.7379,
+      "pop": 36962,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.2621,
+      "pop": 13129,
+      "share_basis": "population"
+    }
+  ],
+  "33022": [
+    {
+      "district": 24,
+      "share": 1,
+      "pop": 18,
+      "share_basis": "population"
+    }
+  ],
+  "33023": [
+    {
+      "district": 24,
+      "share": 1,
+      "pop": 66749,
+      "share_basis": "population"
+    }
+  ],
+  "33024": [
+    {
+      "district": 26,
+      "share": 0.6072,
+      "pop": 45446,
+      "share_basis": "population"
+    },
+    {
+      "district": 24,
+      "share": 0.3922,
+      "pop": 29352,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.0006,
+      "pop": 45,
+      "share_basis": "population"
+    }
+  ],
+  "33025": [
+    {
+      "district": 24,
+      "share": 0.5026,
+      "pop": 37924,
+      "share_basis": "population"
+    },
+    {
+      "district": 26,
+      "share": 0.4974,
+      "pop": 37531,
+      "share_basis": "population"
+    }
+  ],
+  "33026": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 30510,
+      "share_basis": "population"
+    }
+  ],
+  "33027": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 63726,
+      "share_basis": "population"
+    }
+  ],
+  "33028": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 28140,
+      "share_basis": "population"
+    }
+  ],
+  "33029": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 46202,
+      "share_basis": "population"
+    }
+  ],
+  "33030": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 36776,
+      "share_basis": "population"
+    }
+  ],
+  "33031": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 6560,
+      "share_basis": "population"
+    }
+  ],
+  "33032": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 58727,
+      "share_basis": "population"
+    }
+  ],
+  "33033": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 66871,
+      "share_basis": "population"
+    }
+  ],
+  "33034": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 22850,
+      "share_basis": "population"
+    }
+  ],
+  "33035": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 18065,
+      "share_basis": "population"
+    }
+  ],
+  "33036": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 3541,
+      "share_basis": "population"
+    }
+  ],
+  "33037": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 13875,
+      "share_basis": "population"
+    }
+  ],
+  "33039": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 0,
+      "share_basis": "area"
+    }
+  ],
+  "33040": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 35958,
+      "share_basis": "population"
+    }
+  ],
+  "33042": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 6841,
+      "share_basis": "population"
+    }
+  ],
+  "33043": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 4661,
+      "share_basis": "population"
+    }
+  ],
+  "33050": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 10479,
+      "share_basis": "population"
+    }
+  ],
+  "33051": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 790,
+      "share_basis": "population"
+    }
+  ],
+  "33054": [
+    {
+      "district": 24,
+      "share": 1,
+      "pop": 30352,
+      "share_basis": "population"
+    }
+  ],
+  "33055": [
+    {
+      "district": 24,
+      "share": 0.5168,
+      "pop": 22195,
+      "share_basis": "population"
+    },
+    {
+      "district": 26,
+      "share": 0.4832,
+      "pop": 20755,
+      "share_basis": "population"
+    }
+  ],
+  "33056": [
+    {
+      "district": 24,
+      "share": 1,
+      "pop": 36556,
+      "share_basis": "population"
+    }
+  ],
+  "33060": [
+    {
+      "district": 25,
+      "share": 0.5876,
+      "pop": 21031,
+      "share_basis": "population"
+    },
+    {
+      "district": 20,
+      "share": 0.4124,
+      "pop": 14762,
+      "share_basis": "population"
+    }
+  ],
+  "33062": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 25293,
+      "share_basis": "population"
+    }
+  ],
+  "33063": [
+    {
+      "district": 20,
+      "share": 1,
+      "pop": 56296,
+      "share_basis": "population"
+    }
+  ],
+  "33064": [
+    {
+      "district": 20,
+      "share": 0.5629,
+      "pop": 35139,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.4371,
+      "pop": 27290,
+      "share_basis": "population"
+    }
+  ],
+  "33065": [
+    {
+      "district": 22,
+      "share": 0.5872,
+      "pop": 35035,
+      "share_basis": "population"
+    },
+    {
+      "district": 20,
+      "share": 0.4128,
+      "pop": 24633,
+      "share_basis": "population"
+    }
+  ],
+  "33066": [
+    {
+      "district": 20,
+      "share": 1,
+      "pop": 16845,
+      "share_basis": "population"
+    }
+  ],
+  "33067": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 27564,
+      "share_basis": "population"
+    }
+  ],
+  "33068": [
+    {
+      "district": 20,
+      "share": 1,
+      "pop": 53137,
+      "share_basis": "population"
+    }
+  ],
+  "33069": [
+    {
+      "district": 20,
+      "share": 1,
+      "pop": 28817,
+      "share_basis": "population"
+    }
+  ],
+  "33070": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 6220,
+      "share_basis": "population"
+    }
+  ],
+  "33071": [
+    {
+      "district": 20,
+      "share": 1,
+      "pop": 40026,
+      "share_basis": "population"
+    }
+  ],
+  "33073": [
+    {
+      "district": 22,
+      "share": 0.9987,
+      "pop": 32810,
+      "share_basis": "population"
+    },
+    {
+      "district": 20,
+      "share": 0.0013,
+      "pop": 43,
+      "share_basis": "population"
+    }
+  ],
+  "33076": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 41826,
+      "share_basis": "population"
+    }
+  ],
+  "33101": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 7,
+      "share_basis": "population"
+    }
+  ],
+  "33109": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 684,
+      "share_basis": "population"
+    }
+  ],
+  "33122": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 2126,
+      "share_basis": "population"
+    }
+  ],
+  "33125": [
+    {
+      "district": 27,
+      "share": 0.6318,
+      "pop": 33805,
+      "share_basis": "population"
+    },
+    {
+      "district": 24,
+      "share": 0.3682,
+      "pop": 19702,
+      "share_basis": "population"
+    }
+  ],
+  "33126": [
+    {
+      "district": 27,
+      "share": 0.9993,
+      "pop": 48717,
+      "share_basis": "population"
+    },
+    {
+      "district": 26,
+      "share": 0.0007,
+      "pop": 34,
+      "share_basis": "population"
+    }
+  ],
+  "33127": [
+    {
+      "district": 24,
+      "share": 1,
+      "pop": 27692,
+      "share_basis": "population"
+    }
+  ],
+  "33128": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 8213,
+      "share_basis": "population"
+    }
+  ],
+  "33129": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 15218,
+      "share_basis": "population"
+    }
+  ],
+  "33130": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 35609,
+      "share_basis": "population"
+    }
+  ],
+  "33131": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 26213,
+      "share_basis": "population"
+    }
+  ],
+  "33132": [
+    {
+      "district": 24,
+      "share": 0.5463,
+      "pop": 9920,
+      "share_basis": "population"
+    },
+    {
+      "district": 27,
+      "share": 0.4537,
+      "pop": 8239,
+      "share_basis": "population"
+    }
+  ],
+  "33133": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 34141,
+      "share_basis": "population"
+    }
+  ],
+  "33134": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 38739,
+      "share_basis": "population"
+    }
+  ],
+  "33135": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 36232,
+      "share_basis": "population"
+    }
+  ],
+  "33136": [
+    {
+      "district": 27,
+      "share": 0.6432,
+      "pop": 9931,
+      "share_basis": "population"
+    },
+    {
+      "district": 24,
+      "share": 0.3568,
+      "pop": 5508,
+      "share_basis": "population"
+    }
+  ],
+  "33137": [
+    {
+      "district": 24,
+      "share": 1,
+      "pop": 25763,
+      "share_basis": "population"
+    }
+  ],
+  "33138": [
+    {
+      "district": 24,
+      "share": 1,
+      "pop": 27601,
+      "share_basis": "population"
+    }
+  ],
+  "33139": [
+    {
+      "district": 25,
+      "share": 0.9815,
+      "pop": 35616,
+      "share_basis": "population"
+    },
+    {
+      "district": 24,
+      "share": 0.0185,
+      "pop": 670,
+      "share_basis": "population"
+    }
+  ],
+  "33140": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 19315,
+      "share_basis": "population"
+    }
+  ],
+  "33141": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 35995,
+      "share_basis": "population"
+    }
+  ],
+  "33142": [
+    {
+      "district": 24,
+      "share": 0.9068,
+      "pop": 50258,
+      "share_basis": "population"
+    },
+    {
+      "district": 26,
+      "share": 0.0932,
+      "pop": 5167,
+      "share_basis": "population"
+    }
+  ],
+  "33143": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 34853,
+      "share_basis": "population"
+    }
+  ],
+  "33144": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 25814,
+      "share_basis": "population"
+    }
+  ],
+  "33145": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 29737,
+      "share_basis": "population"
+    }
+  ],
+  "33146": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 16468,
+      "share_basis": "population"
+    }
+  ],
+  "33147": [
+    {
+      "district": 24,
+      "share": 0.9999,
+      "pop": 48819,
+      "share_basis": "population"
+    }
+  ],
+  "33149": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 14847,
+      "share_basis": "population"
+    }
+  ],
+  "33150": [
+    {
+      "district": 24,
+      "share": 1,
+      "pop": 28703,
+      "share_basis": "population"
+    }
+  ],
+  "33154": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 14792,
+      "share_basis": "population"
+    }
+  ],
+  "33155": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 43695,
+      "share_basis": "population"
+    }
+  ],
+  "33156": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 34036,
+      "share_basis": "population"
+    }
+  ],
+  "33157": [
+    {
+      "district": 27,
+      "share": 0.8442,
+      "pop": 57466,
+      "share_basis": "population"
+    },
+    {
+      "district": 28,
+      "share": 0.1558,
+      "pop": 10603,
+      "share_basis": "population"
+    }
+  ],
+  "33158": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 6674,
+      "share_basis": "population"
+    }
+  ],
+  "33160": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 44085,
+      "share_basis": "population"
+    }
+  ],
+  "33161": [
+    {
+      "district": 24,
+      "share": 1,
+      "pop": 53015,
+      "share_basis": "population"
+    }
+  ],
+  "33162": [
+    {
+      "district": 24,
+      "share": 0.5475,
+      "pop": 24789,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.4525,
+      "pop": 20488,
+      "share_basis": "population"
+    }
+  ],
+  "33165": [
+    {
+      "district": 27,
+      "share": 0.7735,
+      "pop": 41823,
+      "share_basis": "population"
+    },
+    {
+      "district": 28,
+      "share": 0.2265,
+      "pop": 12247,
+      "share_basis": "population"
+    }
+  ],
+  "33166": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 26106,
+      "share_basis": "population"
+    }
+  ],
+  "33167": [
+    {
+      "district": 24,
+      "share": 1,
+      "pop": 19142,
+      "share_basis": "population"
+    }
+  ],
+  "33168": [
+    {
+      "district": 24,
+      "share": 1,
+      "pop": 24715,
+      "share_basis": "population"
+    }
+  ],
+  "33169": [
+    {
+      "district": 24,
+      "share": 1,
+      "pop": 42308,
+      "share_basis": "population"
+    }
+  ],
+  "33170": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 14908,
+      "share_basis": "population"
+    }
+  ],
+  "33172": [
+    {
+      "district": 27,
+      "share": 0.6639,
+      "pop": 29153,
+      "share_basis": "population"
+    },
+    {
+      "district": 28,
+      "share": 0.2767,
+      "pop": 12149,
+      "share_basis": "population"
+    },
+    {
+      "district": 26,
+      "share": 0.0594,
+      "pop": 2609,
+      "share_basis": "population"
+    }
+  ],
+  "33173": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 33648,
+      "share_basis": "population"
+    }
+  ],
+  "33174": [
+    {
+      "district": 27,
+      "share": 0.5443,
+      "pop": 17941,
+      "share_basis": "population"
+    },
+    {
+      "district": 28,
+      "share": 0.4557,
+      "pop": 15021,
+      "share_basis": "population"
+    }
+  ],
+  "33175": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 52950,
+      "share_basis": "population"
+    }
+  ],
+  "33176": [
+    {
+      "district": 27,
+      "share": 1,
+      "pop": 52370,
+      "share_basis": "population"
+    }
+  ],
+  "33177": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 56331,
+      "share_basis": "population"
+    }
+  ],
+  "33178": [
+    {
+      "district": 26,
+      "share": 1,
+      "pop": 65487,
+      "share_basis": "population"
+    }
+  ],
+  "33179": [
+    {
+      "district": 24,
+      "share": 0.6776,
+      "pop": 32586,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.3224,
+      "pop": 15502,
+      "share_basis": "population"
+    }
+  ],
+  "33180": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 35062,
+      "share_basis": "population"
+    }
+  ],
+  "33181": [
+    {
+      "district": 25,
+      "share": 0.5858,
+      "pop": 12276,
+      "share_basis": "population"
+    },
+    {
+      "district": 24,
+      "share": 0.4142,
+      "pop": 8679,
+      "share_basis": "population"
+    }
+  ],
+  "33182": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 13310,
+      "share_basis": "population"
+    }
+  ],
+  "33183": [
+    {
+      "district": 28,
+      "share": 0.9977,
+      "pop": 35807,
+      "share_basis": "population"
+    },
+    {
+      "district": 27,
+      "share": 0.0023,
+      "pop": 84,
+      "share_basis": "population"
+    }
+  ],
+  "33184": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 20913,
+      "share_basis": "population"
+    }
+  ],
+  "33185": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 28819,
+      "share_basis": "population"
+    }
+  ],
+  "33186": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 69866,
+      "share_basis": "population"
+    }
+  ],
+  "33187": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 19233,
+      "share_basis": "population"
+    }
+  ],
+  "33189": [
+    {
+      "district": 27,
+      "share": 0.8667,
+      "pop": 22187,
+      "share_basis": "population"
+    },
+    {
+      "district": 28,
+      "share": 0.1333,
+      "pop": 3411,
+      "share_basis": "population"
+    }
+  ],
+  "33190": [
+    {
+      "district": 27,
+      "share": 0.8853,
+      "pop": 13361,
+      "share_basis": "population"
+    },
+    {
+      "district": 28,
+      "share": 0.1147,
+      "pop": 1731,
+      "share_basis": "population"
+    }
+  ],
+  "33193": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 47619,
+      "share_basis": "population"
+    }
+  ],
+  "33194": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 8817,
+      "share_basis": "population"
+    }
+  ],
+  "33196": [
+    {
+      "district": 28,
+      "share": 1,
+      "pop": 52786,
+      "share_basis": "population"
+    }
+  ],
+  "33301": [
+    {
+      "district": 20,
+      "share": 0.6235,
+      "pop": 11914,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.3765,
+      "pop": 7195,
+      "share_basis": "population"
+    }
+  ],
+  "33304": [
+    {
+      "district": 20,
+      "share": 0.7286,
+      "pop": 14556,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.2714,
+      "pop": 5422,
+      "share_basis": "population"
+    }
+  ],
+  "33305": [
+    {
+      "district": 20,
+      "share": 0.6757,
+      "pop": 8138,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.3243,
+      "pop": 3906,
+      "share_basis": "population"
+    }
+  ],
+  "33306": [
+    {
+      "district": 25,
+      "share": 0.6999,
+      "pop": 2468,
+      "share_basis": "population"
+    },
+    {
+      "district": 20,
+      "share": 0.3001,
+      "pop": 1058,
+      "share_basis": "population"
+    }
+  ],
+  "33308": [
+    {
+      "district": 25,
+      "share": 0.9551,
+      "pop": 28195,
+      "share_basis": "population"
+    },
+    {
+      "district": 20,
+      "share": 0.0449,
+      "pop": 1324,
+      "share_basis": "population"
+    }
+  ],
+  "33309": [
+    {
+      "district": 20,
+      "share": 1,
+      "pop": 37642,
+      "share_basis": "population"
+    }
+  ],
+  "33311": [
+    {
+      "district": 20,
+      "share": 1,
+      "pop": 69413,
+      "share_basis": "population"
+    }
+  ],
+  "33312": [
+    {
+      "district": 25,
+      "share": 0.5583,
+      "pop": 28790,
+      "share_basis": "population"
+    },
+    {
+      "district": 20,
+      "share": 0.4417,
+      "pop": 22780,
+      "share_basis": "population"
+    }
+  ],
+  "33313": [
+    {
+      "district": 20,
+      "share": 1,
+      "pop": 63284,
+      "share_basis": "population"
+    }
+  ],
+  "33314": [
+    {
+      "district": 22,
+      "share": 0.6,
+      "pop": 18149,
+      "share_basis": "population"
+    },
+    {
+      "district": 26,
+      "share": 0.2127,
+      "pop": 6434,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.1873,
+      "pop": 5665,
+      "share_basis": "population"
+    }
+  ],
+  "33315": [
+    {
+      "district": 25,
+      "share": 0.7367,
+      "pop": 9986,
+      "share_basis": "population"
+    },
+    {
+      "district": 20,
+      "share": 0.2633,
+      "pop": 3569,
+      "share_basis": "population"
+    }
+  ],
+  "33316": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 12669,
+      "share_basis": "population"
+    }
+  ],
+  "33317": [
+    {
+      "district": 20,
+      "share": 0.5022,
+      "pop": 18877,
+      "share_basis": "population"
+    },
+    {
+      "district": 22,
+      "share": 0.2868,
+      "pop": 10782,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.211,
+      "pop": 7931,
+      "share_basis": "population"
+    }
+  ],
+  "33319": [
+    {
+      "district": 20,
+      "share": 1,
+      "pop": 51891,
+      "share_basis": "population"
+    }
+  ],
+  "33321": [
+    {
+      "district": 20,
+      "share": 1,
+      "pop": 51011,
+      "share_basis": "population"
+    }
+  ],
+  "33322": [
+    {
+      "district": 20,
+      "share": 1,
+      "pop": 41050,
+      "share_basis": "population"
+    }
+  ],
+  "33323": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 23149,
+      "share_basis": "population"
+    }
+  ],
+  "33324": [
+    {
+      "district": 22,
+      "share": 0.6456,
+      "pop": 30193,
+      "share_basis": "population"
+    },
+    {
+      "district": 20,
+      "share": 0.3544,
+      "pop": 16573,
+      "share_basis": "population"
+    }
+  ],
+  "33325": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 31556,
+      "share_basis": "population"
+    }
+  ],
+  "33326": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 33978,
+      "share_basis": "population"
+    }
+  ],
+  "33327": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 22174,
+      "share_basis": "population"
+    }
+  ],
+  "33328": [
+    {
+      "district": 26,
+      "share": 0.5249,
+      "pop": 15220,
+      "share_basis": "population"
+    },
+    {
+      "district": 22,
+      "share": 0.4751,
+      "pop": 13777,
+      "share_basis": "population"
+    }
+  ],
+  "33330": [
+    {
+      "district": 26,
+      "share": 0.6075,
+      "pop": 8954,
+      "share_basis": "population"
+    },
+    {
+      "district": 22,
+      "share": 0.3925,
+      "pop": 5784,
+      "share_basis": "population"
+    }
+  ],
+  "33331": [
+    {
+      "district": 22,
+      "share": 0.5348,
+      "pop": 12308,
+      "share_basis": "population"
+    },
+    {
+      "district": 26,
+      "share": 0.4652,
+      "pop": 10708,
+      "share_basis": "population"
+    }
+  ],
+  "33332": [
+    {
+      "district": 22,
+      "share": 0.5964,
+      "pop": 6510,
+      "share_basis": "population"
+    },
+    {
+      "district": 26,
+      "share": 0.4036,
+      "pop": 4405,
+      "share_basis": "population"
+    }
+  ],
+  "33334": [
+    {
+      "district": 20,
+      "share": 0.9847,
+      "pop": 29676,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.0153,
+      "pop": 462,
+      "share_basis": "population"
+    }
+  ],
+  "33351": [
+    {
+      "district": 20,
+      "share": 1,
+      "pop": 36913,
+      "share_basis": "population"
+    }
+  ],
+  "33388": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 0,
+      "share_basis": "area"
+    }
+  ],
+  "33401": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 31302,
+      "share_basis": "population"
+    }
+  ],
+  "33403": [
+    {
+      "district": 21,
+      "share": 0.9764,
+      "pop": 13454,
+      "share_basis": "population"
+    },
+    {
+      "district": 23,
+      "share": 0.0236,
+      "pop": 325,
+      "share_basis": "population"
+    }
+  ],
+  "33404": [
+    {
+      "district": 23,
+      "share": 0.7985,
+      "pop": 25446,
+      "share_basis": "population"
+    },
+    {
+      "district": 21,
+      "share": 0.2015,
+      "pop": 6423,
+      "share_basis": "population"
+    }
+  ],
+  "33405": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 19369,
+      "share_basis": "population"
+    }
+  ],
+  "33406": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 27663,
+      "share_basis": "population"
+    }
+  ],
+  "33407": [
+    {
+      "district": 23,
+      "share": 0.9994,
+      "pop": 34537,
+      "share_basis": "population"
+    }
+  ],
+  "33408": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 18965,
+      "share_basis": "population"
+    }
+  ],
+  "33409": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 33061,
+      "share_basis": "population"
+    }
+  ],
+  "33410": [
+    {
+      "district": 21,
+      "share": 0.9998,
+      "pop": 35940,
+      "share_basis": "population"
+    }
+  ],
+  "33411": [
+    {
+      "district": 21,
+      "share": 0.512,
+      "pop": 37994,
+      "share_basis": "population"
+    },
+    {
+      "district": 22,
+      "share": 0.488,
+      "pop": 36212,
+      "share_basis": "population"
+    }
+  ],
+  "33412": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 15872,
+      "share_basis": "population"
+    }
+  ],
+  "33413": [
+    {
+      "district": 23,
+      "share": 0.8491,
+      "pop": 14861,
+      "share_basis": "population"
+    },
+    {
+      "district": 21,
+      "share": 0.0951,
+      "pop": 1664,
+      "share_basis": "population"
+    },
+    {
+      "district": 22,
+      "share": 0.0559,
+      "pop": 978,
+      "share_basis": "population"
+    }
+  ],
+  "33414": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 59802,
+      "share_basis": "population"
+    }
+  ],
+  "33415": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 51251,
+      "share_basis": "population"
+    }
+  ],
+  "33417": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 34153,
+      "share_basis": "population"
+    }
+  ],
+  "33418": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 43383,
+      "share_basis": "population"
+    }
+  ],
+  "33426": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 25155,
+      "share_basis": "population"
+    }
+  ],
+  "33428": [
+    {
+      "district": 22,
+      "share": 0.582,
+      "pop": 24926,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.418,
+      "pop": 17902,
+      "share_basis": "population"
+    }
+  ],
+  "33430": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 20327,
+      "share_basis": "population"
+    }
+  ],
+  "33431": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 22047,
+      "share_basis": "population"
+    }
+  ],
+  "33432": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 22061,
+      "share_basis": "population"
+    }
+  ],
+  "33433": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 46302,
+      "share_basis": "population"
+    }
+  ],
+  "33434": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 21003,
+      "share_basis": "population"
+    }
+  ],
+  "33435": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 37318,
+      "share_basis": "population"
+    }
+  ],
+  "33436": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 45230,
+      "share_basis": "population"
+    }
+  ],
+  "33437": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 36889,
+      "share_basis": "population"
+    }
+  ],
+  "33438": [
+    {
+      "district": 22,
+      "share": 0.9336,
+      "pop": 492,
+      "share_basis": "population"
+    },
+    {
+      "district": 21,
+      "share": 0.0664,
+      "pop": 35,
+      "share_basis": "population"
+    }
+  ],
+  "33440": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 19402,
+      "share_basis": "population"
+    }
+  ],
+  "33441": [
+    {
+      "district": 25,
+      "share": 0.5394,
+      "pop": 15811,
+      "share_basis": "population"
+    },
+    {
+      "district": 20,
+      "share": 0.4606,
+      "pop": 13500,
+      "share_basis": "population"
+    }
+  ],
+  "33442": [
+    {
+      "district": 25,
+      "share": 0.8035,
+      "pop": 25986,
+      "share_basis": "population"
+    },
+    {
+      "district": 20,
+      "share": 0.1965,
+      "pop": 6354,
+      "share_basis": "population"
+    }
+  ],
+  "33444": [
+    {
+      "district": 23,
+      "share": 0.797,
+      "pop": 18069,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.203,
+      "pop": 4602,
+      "share_basis": "population"
+    }
+  ],
+  "33445": [
+    {
+      "district": 23,
+      "share": 0.7039,
+      "pop": 22710,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.2961,
+      "pop": 9555,
+      "share_basis": "population"
+    }
+  ],
+  "33446": [
+    {
+      "district": 23,
+      "share": 0.6595,
+      "pop": 19818,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.3252,
+      "pop": 9772,
+      "share_basis": "population"
+    },
+    {
+      "district": 22,
+      "share": 0.0153,
+      "pop": 461,
+      "share_basis": "population"
+    }
+  ],
+  "33449": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 9920,
+      "share_basis": "population"
+    }
+  ],
+  "33455": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 20799,
+      "share_basis": "population"
+    }
+  ],
+  "33458": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 55083,
+      "share_basis": "population"
+    }
+  ],
+  "33460": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 36409,
+      "share_basis": "population"
+    }
+  ],
+  "33461": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 47161,
+      "share_basis": "population"
+    }
+  ],
+  "33462": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 33982,
+      "share_basis": "population"
+    }
+  ],
+  "33463": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 64608,
+      "share_basis": "population"
+    }
+  ],
+  "33467": [
+    {
+      "district": 23,
+      "share": 0.7387,
+      "pop": 41227,
+      "share_basis": "population"
+    },
+    {
+      "district": 22,
+      "share": 0.2613,
+      "pop": 14586,
+      "share_basis": "population"
+    }
+  ],
+  "33469": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 15101,
+      "share_basis": "population"
+    }
+  ],
+  "33470": [
+    {
+      "district": 21,
+      "share": 0.5512,
+      "pop": 16705,
+      "share_basis": "population"
+    },
+    {
+      "district": 22,
+      "share": 0.4488,
+      "pop": 13603,
+      "share_basis": "population"
+    }
+  ],
+  "33471": [
+    {
+      "district": 9,
+      "share": 0.9964,
+      "pop": 6387,
+      "share_basis": "population"
+    }
+  ],
+  "33472": [
+    {
+      "district": 23,
+      "share": 0.9906,
+      "pop": 18716,
+      "share_basis": "population"
+    },
+    {
+      "district": 22,
+      "share": 0.0094,
+      "pop": 177,
+      "share_basis": "population"
+    }
+  ],
+  "33473": [
+    {
+      "district": 23,
+      "share": 0.9989,
+      "pop": 11045,
+      "share_basis": "population"
+    }
+  ],
+  "33476": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 7608,
+      "share_basis": "population"
+    }
+  ],
+  "33477": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 12683,
+      "share_basis": "population"
+    }
+  ],
+  "33478": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 14740,
+      "share_basis": "population"
+    }
+  ],
+  "33480": [
+    {
+      "district": 23,
+      "share": 1,
+      "pop": 10716,
+      "share_basis": "population"
+    }
+  ],
+  "33483": [
+    {
+      "district": 25,
+      "share": 0.813,
+      "pop": 10653,
+      "share_basis": "population"
+    },
+    {
+      "district": 23,
+      "share": 0.187,
+      "pop": 2450,
+      "share_basis": "population"
+    }
+  ],
+  "33484": [
+    {
+      "district": 23,
+      "share": 0.9774,
+      "pop": 25744,
+      "share_basis": "population"
+    },
+    {
+      "district": 25,
+      "share": 0.0226,
+      "pop": 596,
+      "share_basis": "population"
+    }
+  ],
+  "33486": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 22947,
+      "share_basis": "population"
+    }
+  ],
+  "33487": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 20644,
+      "share_basis": "population"
+    }
+  ],
+  "33493": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 5129,
+      "share_basis": "population"
+    }
+  ],
+  "33496": [
+    {
+      "district": 25,
+      "share": 1,
+      "pop": 23805,
+      "share_basis": "population"
+    }
+  ],
+  "33498": [
+    {
+      "district": 22,
+      "share": 0.9989,
+      "pop": 14986,
+      "share_basis": "population"
+    }
+  ],
+  "33503": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 131,
+      "share_basis": "population"
+    }
+  ],
+  "33510": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 30049,
+      "share_basis": "population"
+    }
+  ],
+  "33511": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 56627,
+      "share_basis": "population"
+    }
+  ],
+  "33513": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 12204,
+      "share_basis": "population"
+    }
+  ],
+  "33514": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 1783,
+      "share_basis": "population"
+    }
+  ],
+  "33521": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 578,
+      "share_basis": "population"
+    }
+  ],
+  "33523": [
+    {
+      "district": 15,
+      "share": 0.9451,
+      "pop": 17523,
+      "share_basis": "population"
+    },
+    {
+      "district": 12,
+      "share": 0.0549,
+      "pop": 1017,
+      "share_basis": "population"
+    }
+  ],
+  "33525": [
+    {
+      "district": 15,
+      "share": 0.9557,
+      "pop": 17795,
+      "share_basis": "population"
+    },
+    {
+      "district": 12,
+      "share": 0.0443,
+      "pop": 825,
+      "share_basis": "population"
+    }
+  ],
+  "33527": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 16259,
+      "share_basis": "population"
+    }
+  ],
+  "33530": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 56,
+      "share_basis": "population"
+    }
+  ],
+  "33534": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 17952,
+      "share_basis": "population"
+    }
+  ],
+  "33538": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 5096,
+      "share_basis": "population"
+    }
+  ],
+  "33540": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 9603,
+      "share_basis": "population"
+    }
+  ],
+  "33541": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 22692,
+      "share_basis": "population"
+    }
+  ],
+  "33542": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 22649,
+      "share_basis": "population"
+    }
+  ],
+  "33543": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 34953,
+      "share_basis": "population"
+    }
+  ],
+  "33544": [
+    {
+      "district": 12,
+      "share": 0.9985,
+      "pop": 27267,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.0015,
+      "pop": 42,
+      "share_basis": "population"
+    }
+  ],
+  "33545": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 21209,
+      "share_basis": "population"
+    }
+  ],
+  "33547": [
+    {
+      "district": 14,
+      "share": 0.9954,
+      "pop": 30794,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.0033,
+      "pop": 103,
+      "share_basis": "population"
+    },
+    {
+      "district": 18,
+      "share": 0.0012,
+      "pop": 38,
+      "share_basis": "population"
+    }
+  ],
+  "33548": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 7708,
+      "share_basis": "population"
+    }
+  ],
+  "33549": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 17816,
+      "share_basis": "population"
+    }
+  ],
+  "33550": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 14,
+      "share_basis": "population"
+    }
+  ],
+  "33556": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 30547,
+      "share_basis": "population"
+    }
+  ],
+  "33558": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 27324,
+      "share_basis": "population"
+    }
+  ],
+  "33559": [
+    {
+      "district": 12,
+      "share": 0.6831,
+      "pop": 11391,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.3169,
+      "pop": 5284,
+      "share_basis": "population"
+    }
+  ],
+  "33563": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 27344,
+      "share_basis": "population"
+    }
+  ],
+  "33565": [
+    {
+      "district": 14,
+      "share": 0.7345,
+      "pop": 12916,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.2655,
+      "pop": 4668,
+      "share_basis": "population"
+    }
+  ],
+  "33566": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 22759,
+      "share_basis": "population"
+    }
+  ],
+  "33567": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 12345,
+      "share_basis": "population"
+    }
+  ],
+  "33569": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 28065,
+      "share_basis": "population"
+    }
+  ],
+  "33570": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 33348,
+      "share_basis": "population"
+    }
+  ],
+  "33572": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 22395,
+      "share_basis": "population"
+    }
+  ],
+  "33573": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 30913,
+      "share_basis": "population"
+    }
+  ],
+  "33574": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 2261,
+      "share_basis": "population"
+    }
+  ],
+  "33576": [
+    {
+      "district": 12,
+      "share": 0.5657,
+      "pop": 2760,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.4343,
+      "pop": 2119,
+      "share_basis": "population"
+    }
+  ],
+  "33578": [
+    {
+      "district": 14,
+      "share": 0.8637,
+      "pop": 50831,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.1363,
+      "pop": 8023,
+      "share_basis": "population"
+    }
+  ],
+  "33579": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 44617,
+      "share_basis": "population"
+    }
+  ],
+  "33584": [
+    {
+      "district": 14,
+      "share": 0.8938,
+      "pop": 24583,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.1062,
+      "pop": 2920,
+      "share_basis": "population"
+    }
+  ],
+  "33585": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 1218,
+      "share_basis": "population"
+    }
+  ],
+  "33592": [
+    {
+      "district": 15,
+      "share": 0.6852,
+      "pop": 8144,
+      "share_basis": "population"
+    },
+    {
+      "district": 14,
+      "share": 0.3148,
+      "pop": 3741,
+      "share_basis": "population"
+    }
+  ],
+  "33594": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 35299,
+      "share_basis": "population"
+    }
+  ],
+  "33596": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 28140,
+      "share_basis": "population"
+    }
+  ],
+  "33597": [
+    {
+      "district": 11,
+      "share": 0.7945,
+      "pop": 6378,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.2055,
+      "pop": 1650,
+      "share_basis": "population"
+    }
+  ],
+  "33598": [
+    {
+      "district": 14,
+      "share": 0.989,
+      "pop": 24302,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.011,
+      "pop": 270,
+      "share_basis": "population"
+    }
+  ],
+  "33602": [
+    {
+      "district": 12,
+      "share": 0.5023,
+      "pop": 10013,
+      "share_basis": "population"
+    },
+    {
+      "district": 14,
+      "share": 0.4977,
+      "pop": 9923,
+      "share_basis": "population"
+    }
+  ],
+  "33603": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 19070,
+      "share_basis": "population"
+    }
+  ],
+  "33604": [
+    {
+      "district": 12,
+      "share": 0.9198,
+      "pop": 35936,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.0802,
+      "pop": 3135,
+      "share_basis": "population"
+    }
+  ],
+  "33605": [
+    {
+      "district": 15,
+      "share": 0.6709,
+      "pop": 12239,
+      "share_basis": "population"
+    },
+    {
+      "district": 12,
+      "share": 0.2185,
+      "pop": 3987,
+      "share_basis": "population"
+    },
+    {
+      "district": 14,
+      "share": 0.1106,
+      "pop": 2017,
+      "share_basis": "population"
+    }
+  ],
+  "33606": [
+    {
+      "district": 14,
+      "share": 0.6901,
+      "pop": 15369,
+      "share_basis": "population"
+    },
+    {
+      "district": 12,
+      "share": 0.3099,
+      "pop": 6902,
+      "share_basis": "population"
+    }
+  ],
+  "33607": [
+    {
+      "district": 14,
+      "share": 0.5706,
+      "pop": 14132,
+      "share_basis": "population"
+    },
+    {
+      "district": 12,
+      "share": 0.4294,
+      "pop": 10635,
+      "share_basis": "population"
+    }
+  ],
+  "33609": [
+    {
+      "district": 14,
+      "share": 0.9937,
+      "pop": 17789,
+      "share_basis": "population"
+    },
+    {
+      "district": 12,
+      "share": 0.0063,
+      "pop": 113,
+      "share_basis": "population"
+    }
+  ],
+  "33610": [
+    {
+      "district": 15,
+      "share": 0.894,
+      "pop": 40424,
+      "share_basis": "population"
+    },
+    {
+      "district": 14,
+      "share": 0.1058,
+      "pop": 4786,
+      "share_basis": "population"
+    }
+  ],
+  "33611": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 34101,
+      "share_basis": "population"
+    }
+  ],
+  "33612": [
+    {
+      "district": 12,
+      "share": 0.9745,
+      "pop": 48193,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.0255,
+      "pop": 1259,
+      "share_basis": "population"
+    }
+  ],
+  "33613": [
+    {
+      "district": 12,
+      "share": 0.6499,
+      "pop": 25215,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.3501,
+      "pop": 13586,
+      "share_basis": "population"
+    }
+  ],
+  "33614": [
+    {
+      "district": 12,
+      "share": 0.8997,
+      "pop": 42912,
+      "share_basis": "population"
+    },
+    {
+      "district": 14,
+      "share": 0.1003,
+      "pop": 4783,
+      "share_basis": "population"
+    }
+  ],
+  "33615": [
+    {
+      "district": 14,
+      "share": 0.8815,
+      "pop": 41814,
+      "share_basis": "population"
+    },
+    {
+      "district": 12,
+      "share": 0.1185,
+      "pop": 5620,
+      "share_basis": "population"
+    }
+  ],
+  "33616": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 14802,
+      "share_basis": "population"
+    }
+  ],
+  "33617": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 48267,
+      "share_basis": "population"
+    }
+  ],
+  "33618": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 26474,
+      "share_basis": "population"
+    }
+  ],
+  "33619": [
+    {
+      "district": 15,
+      "share": 0.828,
+      "pop": 33022,
+      "share_basis": "population"
+    },
+    {
+      "district": 14,
+      "share": 0.172,
+      "pop": 6859,
+      "share_basis": "population"
+    }
+  ],
+  "33620": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 5535,
+      "share_basis": "population"
+    }
+  ],
+  "33621": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 1878,
+      "share_basis": "population"
+    }
+  ],
+  "33624": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 38929,
+      "share_basis": "population"
+    }
+  ],
+  "33625": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 28704,
+      "share_basis": "population"
+    }
+  ],
+  "33626": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 31875,
+      "share_basis": "population"
+    }
+  ],
+  "33629": [
+    {
+      "district": 14,
+      "share": 1,
+      "pop": 26394,
+      "share_basis": "population"
+    }
+  ],
+  "33634": [
+    {
+      "district": 14,
+      "share": 0.8348,
+      "pop": 17919,
+      "share_basis": "population"
+    },
+    {
+      "district": 12,
+      "share": 0.1652,
+      "pop": 3546,
+      "share_basis": "population"
+    }
+  ],
+  "33635": [
+    {
+      "district": 12,
+      "share": 0.8327,
+      "pop": 15638,
+      "share_basis": "population"
+    },
+    {
+      "district": 14,
+      "share": 0.1673,
+      "pop": 3142,
+      "share_basis": "population"
+    }
+  ],
+  "33637": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 18070,
+      "share_basis": "population"
+    }
+  ],
+  "33647": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 69457,
+      "share_basis": "population"
+    }
+  ],
+  "33701": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 19137,
+      "share_basis": "population"
+    }
+  ],
+  "33702": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 29996,
+      "share_basis": "population"
+    }
+  ],
+  "33703": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 23948,
+      "share_basis": "population"
+    }
+  ],
+  "33704": [
+    {
+      "district": 13,
+      "share": 0.7175,
+      "pop": 11503,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.2825,
+      "pop": 4528,
+      "share_basis": "population"
+    }
+  ],
+  "33705": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 27915,
+      "share_basis": "population"
+    }
+  ],
+  "33706": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 15309,
+      "share_basis": "population"
+    }
+  ],
+  "33707": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 24646,
+      "share_basis": "population"
+    }
+  ],
+  "33708": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 16034,
+      "share_basis": "population"
+    }
+  ],
+  "33709": [
+    {
+      "district": 16,
+      "share": 0.5265,
+      "pop": 14228,
+      "share_basis": "population"
+    },
+    {
+      "district": 13,
+      "share": 0.4735,
+      "pop": 12798,
+      "share_basis": "population"
+    }
+  ],
+  "33710": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 33172,
+      "share_basis": "population"
+    }
+  ],
+  "33711": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 20121,
+      "share_basis": "population"
+    }
+  ],
+  "33712": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 26395,
+      "share_basis": "population"
+    }
+  ],
+  "33713": [
+    {
+      "district": 16,
+      "share": 0.8469,
+      "pop": 26527,
+      "share_basis": "population"
+    },
+    {
+      "district": 13,
+      "share": 0.1531,
+      "pop": 4794,
+      "share_basis": "population"
+    }
+  ],
+  "33714": [
+    {
+      "district": 13,
+      "share": 0.8353,
+      "pop": 16626,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.1647,
+      "pop": 3279,
+      "share_basis": "population"
+    }
+  ],
+  "33715": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 7876,
+      "share_basis": "population"
+    }
+  ],
+  "33716": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 18023,
+      "share_basis": "population"
+    }
+  ],
+  "33744": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 55,
+      "share_basis": "population"
+    }
+  ],
+  "33755": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 28360,
+      "share_basis": "population"
+    }
+  ],
+  "33756": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 31807,
+      "share_basis": "population"
+    }
+  ],
+  "33759": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 18316,
+      "share_basis": "population"
+    }
+  ],
+  "33760": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 19565,
+      "share_basis": "population"
+    }
+  ],
+  "33761": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 18761,
+      "share_basis": "population"
+    }
+  ],
+  "33762": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 5572,
+      "share_basis": "population"
+    }
+  ],
+  "33763": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 18981,
+      "share_basis": "population"
+    }
+  ],
+  "33764": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 27547,
+      "share_basis": "population"
+    }
+  ],
+  "33765": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 13844,
+      "share_basis": "population"
+    }
+  ],
+  "33767": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 8462,
+      "share_basis": "population"
+    }
+  ],
+  "33770": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 25475,
+      "share_basis": "population"
+    }
+  ],
+  "33771": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 29766,
+      "share_basis": "population"
+    }
+  ],
+  "33772": [
+    {
+      "district": 13,
+      "share": 0.5495,
+      "pop": 13254,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.4505,
+      "pop": 10867,
+      "share_basis": "population"
+    }
+  ],
+  "33773": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 17494,
+      "share_basis": "population"
+    }
+  ],
+  "33774": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 18145,
+      "share_basis": "population"
+    }
+  ],
+  "33776": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 12922,
+      "share_basis": "population"
+    }
+  ],
+  "33777": [
+    {
+      "district": 13,
+      "share": 0.8814,
+      "pop": 15683,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.1186,
+      "pop": 2110,
+      "share_basis": "population"
+    }
+  ],
+  "33778": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 15068,
+      "share_basis": "population"
+    }
+  ],
+  "33781": [
+    {
+      "district": 13,
+      "share": 0.9987,
+      "pop": 27314,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.0013,
+      "pop": 35,
+      "share_basis": "population"
+    }
+  ],
+  "33782": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 22198,
+      "share_basis": "population"
+    }
+  ],
+  "33785": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 4863,
+      "share_basis": "population"
+    }
+  ],
+  "33786": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 1706,
+      "share_basis": "population"
+    }
+  ],
+  "33801": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 36798,
+      "share_basis": "population"
+    }
+  ],
+  "33803": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 29082,
+      "share_basis": "population"
+    }
+  ],
+  "33805": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 26954,
+      "share_basis": "population"
+    }
+  ],
+  "33809": [
+    {
+      "district": 18,
+      "share": 0.9997,
+      "pop": 30621,
+      "share_basis": "population"
+    }
+  ],
+  "33810": [
+    {
+      "district": 18,
+      "share": 0.9908,
+      "pop": 51556,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.0092,
+      "pop": 481,
+      "share_basis": "population"
+    }
+  ],
+  "33811": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 24249,
+      "share_basis": "population"
+    }
+  ],
+  "33812": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 14907,
+      "share_basis": "population"
+    }
+  ],
+  "33813": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 36448,
+      "share_basis": "population"
+    }
+  ],
+  "33815": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 15681,
+      "share_basis": "population"
+    }
+  ],
+  "33823": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 33733,
+      "share_basis": "population"
+    }
+  ],
+  "33825": [
+    {
+      "district": 9,
+      "share": 0.9968,
+      "pop": 24864,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.0032,
+      "pop": 79,
+      "share_basis": "population"
+    }
+  ],
+  "33827": [
+    {
+      "district": 18,
+      "share": 0.947,
+      "pop": 2929,
+      "share_basis": "population"
+    },
+    {
+      "district": 9,
+      "share": 0.053,
+      "pop": 164,
+      "share_basis": "population"
+    }
+  ],
+  "33830": [
+    {
+      "district": 18,
+      "share": 0.9946,
+      "pop": 29764,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.0054,
+      "pop": 162,
+      "share_basis": "population"
+    }
+  ],
+  "33834": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 6584,
+      "share_basis": "population"
+    }
+  ],
+  "33835": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 69,
+      "share_basis": "population"
+    }
+  ],
+  "33837": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 36302,
+      "share_basis": "population"
+    }
+  ],
+  "33838": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 5243,
+      "share_basis": "population"
+    }
+  ],
+  "33839": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 3827,
+      "share_basis": "population"
+    }
+  ],
+  "33840": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 242,
+      "share_basis": "population"
+    }
+  ],
+  "33841": [
+    {
+      "district": 16,
+      "share": 0.9552,
+      "pop": 7106,
+      "share_basis": "population"
+    },
+    {
+      "district": 18,
+      "share": 0.0448,
+      "pop": 333,
+      "share_basis": "population"
+    }
+  ],
+  "33843": [
+    {
+      "district": 9,
+      "share": 0.6182,
+      "pop": 7334,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.3235,
+      "pop": 3838,
+      "share_basis": "population"
+    },
+    {
+      "district": 18,
+      "share": 0.0583,
+      "pop": 692,
+      "share_basis": "population"
+    }
+  ],
+  "33844": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 43329,
+      "share_basis": "population"
+    }
+  ],
+  "33847": [
+    {
+      "district": 16,
+      "share": 0.8261,
+      "pop": 247,
+      "share_basis": "population"
+    },
+    {
+      "district": 18,
+      "share": 0.1739,
+      "pop": 52,
+      "share_basis": "population"
+    }
+  ],
+  "33848": [
+    {
+      "district": 18,
+      "share": 0.6608,
+      "pop": 717,
+      "share_basis": "population"
+    },
+    {
+      "district": 9,
+      "share": 0.3392,
+      "pop": 368,
+      "share_basis": "population"
+    }
+  ],
+  "33849": [
+    {
+      "district": 18,
+      "share": 0.9212,
+      "pop": 655,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.0788,
+      "pop": 56,
+      "share_basis": "population"
+    }
+  ],
+  "33850": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 9119,
+      "share_basis": "population"
+    }
+  ],
+  "33851": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 991,
+      "share_basis": "population"
+    }
+  ],
+  "33852": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 21635,
+      "share_basis": "population"
+    }
+  ],
+  "33853": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 12404,
+      "share_basis": "population"
+    }
+  ],
+  "33854": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 520,
+      "share_basis": "population"
+    }
+  ],
+  "33855": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 92,
+      "share_basis": "population"
+    }
+  ],
+  "33856": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 488,
+      "share_basis": "population"
+    }
+  ],
+  "33857": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 1378,
+      "share_basis": "population"
+    }
+  ],
+  "33858": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 95,
+      "share_basis": "population"
+    }
+  ],
+  "33859": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 10866,
+      "share_basis": "population"
+    }
+  ],
+  "33860": [
+    {
+      "district": 18,
+      "share": 0.9318,
+      "pop": 23231,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.0669,
+      "pop": 1668,
+      "share_basis": "population"
+    },
+    {
+      "district": 14,
+      "share": 0.0013,
+      "pop": 33,
+      "share_basis": "population"
+    }
+  ],
+  "33865": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 801,
+      "share_basis": "population"
+    }
+  ],
+  "33867": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 126,
+      "share_basis": "population"
+    }
+  ],
+  "33868": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 12906,
+      "share_basis": "population"
+    }
+  ],
+  "33870": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 24238,
+      "share_basis": "population"
+    }
+  ],
+  "33872": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 13167,
+      "share_basis": "population"
+    }
+  ],
+  "33873": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 13455,
+      "share_basis": "population"
+    }
+  ],
+  "33875": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 11004,
+      "share_basis": "population"
+    }
+  ],
+  "33876": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 5239,
+      "share_basis": "population"
+    }
+  ],
+  "33877": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 590,
+      "share_basis": "population"
+    }
+  ],
+  "33880": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 42005,
+      "share_basis": "population"
+    }
+  ],
+  "33881": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 38369,
+      "share_basis": "population"
+    }
+  ],
+  "33884": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 34772,
+      "share_basis": "population"
+    }
+  ],
+  "33890": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 4718,
+      "share_basis": "population"
+    }
+  ],
+  "33896": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 19444,
+      "share_basis": "population"
+    }
+  ],
+  "33897": [
+    {
+      "district": 18,
+      "share": 1,
+      "pop": 25352,
+      "share_basis": "population"
+    }
+  ],
+  "33898": [
+    {
+      "district": 18,
+      "share": 0.8882,
+      "pop": 15962,
+      "share_basis": "population"
+    },
+    {
+      "district": 9,
+      "share": 0.1118,
+      "pop": 2009,
+      "share_basis": "population"
+    }
+  ],
+  "33901": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 22629,
+      "share_basis": "population"
+    }
+  ],
+  "33903": [
+    {
+      "district": 19,
+      "share": 0.8346,
+      "pop": 19441,
+      "share_basis": "population"
+    },
+    {
+      "district": 17,
+      "share": 0.1654,
+      "pop": 3853,
+      "share_basis": "population"
+    }
+  ],
+  "33904": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 32029,
+      "share_basis": "population"
+    }
+  ],
+  "33905": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 37692,
+      "share_basis": "population"
+    }
+  ],
+  "33907": [
+    {
+      "district": 19,
+      "share": 0.8014,
+      "pop": 20018,
+      "share_basis": "population"
+    },
+    {
+      "district": 17,
+      "share": 0.1986,
+      "pop": 4962,
+      "share_basis": "population"
+    }
+  ],
+  "33908": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 43110,
+      "share_basis": "population"
+    }
+  ],
+  "33909": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 33063,
+      "share_basis": "population"
+    }
+  ],
+  "33912": [
+    {
+      "district": 19,
+      "share": 0.8702,
+      "pop": 16661,
+      "share_basis": "population"
+    },
+    {
+      "district": 17,
+      "share": 0.1298,
+      "pop": 2485,
+      "share_basis": "population"
+    }
+  ],
+  "33913": [
+    {
+      "district": 17,
+      "share": 0.7833,
+      "pop": 22102,
+      "share_basis": "population"
+    },
+    {
+      "district": 19,
+      "share": 0.2167,
+      "pop": 6114,
+      "share_basis": "population"
+    }
+  ],
+  "33914": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 42222,
+      "share_basis": "population"
+    }
+  ],
+  "33916": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 25940,
+      "share_basis": "population"
+    }
+  ],
+  "33917": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 30702,
+      "share_basis": "population"
+    }
+  ],
+  "33919": [
+    {
+      "district": 19,
+      "share": 0.9368,
+      "pop": 28654,
+      "share_basis": "population"
+    },
+    {
+      "district": 17,
+      "share": 0.0632,
+      "pop": 1933,
+      "share_basis": "population"
+    }
+  ],
+  "33920": [
+    {
+      "district": 17,
+      "share": 0.9116,
+      "pop": 6196,
+      "share_basis": "population"
+    },
+    {
+      "district": 19,
+      "share": 0.0884,
+      "pop": 601,
+      "share_basis": "population"
+    }
+  ],
+  "33921": [
+    {
+      "district": 19,
+      "share": 0.7584,
+      "pop": 973,
+      "share_basis": "population"
+    },
+    {
+      "district": 17,
+      "share": 0.2416,
+      "pop": 310,
+      "share_basis": "population"
+    }
+  ],
+  "33922": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 4326,
+      "share_basis": "population"
+    }
+  ],
+  "33924": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 403,
+      "share_basis": "population"
+    }
+  ],
+  "33928": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 28955,
+      "share_basis": "population"
+    }
+  ],
+  "33930": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 799,
+      "share_basis": "population"
+    }
+  ],
+  "33931": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 9389,
+      "share_basis": "population"
+    }
+  ],
+  "33935": [
+    {
+      "district": 22,
+      "share": 0.8559,
+      "pop": 19444,
+      "share_basis": "population"
+    },
+    {
+      "district": 9,
+      "share": 0.1441,
+      "pop": 3274,
+      "share_basis": "population"
+    }
+  ],
+  "33936": [
+    {
+      "district": 19,
+      "share": 0.9914,
+      "pop": 23845,
+      "share_basis": "population"
+    },
+    {
+      "district": 22,
+      "share": 0.0086,
+      "pop": 206,
+      "share_basis": "population"
+    }
+  ],
+  "33944": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 208,
+      "share_basis": "population"
+    }
+  ],
+  "33946": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 2485,
+      "share_basis": "population"
+    }
+  ],
+  "33947": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 10462,
+      "share_basis": "population"
+    }
+  ],
+  "33948": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 17190,
+      "share_basis": "population"
+    }
+  ],
+  "33950": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 24984,
+      "share_basis": "population"
+    }
+  ],
+  "33952": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 32084,
+      "share_basis": "population"
+    }
+  ],
+  "33953": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 6882,
+      "share_basis": "population"
+    }
+  ],
+  "33954": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 11040,
+      "share_basis": "population"
+    }
+  ],
+  "33955": [
+    {
+      "district": 17,
+      "share": 0.8048,
+      "pop": 8105,
+      "share_basis": "population"
+    },
+    {
+      "district": 19,
+      "share": 0.1952,
+      "pop": 1966,
+      "share_basis": "population"
+    }
+  ],
+  "33956": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 3861,
+      "share_basis": "population"
+    }
+  ],
+  "33957": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 6382,
+      "share_basis": "population"
+    }
+  ],
+  "33960": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 839,
+      "share_basis": "population"
+    }
+  ],
+  "33965": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 3659,
+      "share_basis": "population"
+    }
+  ],
+  "33966": [
+    {
+      "district": 19,
+      "share": 0.5187,
+      "pop": 5833,
+      "share_basis": "population"
+    },
+    {
+      "district": 17,
+      "share": 0.4813,
+      "pop": 5412,
+      "share_basis": "population"
+    }
+  ],
+  "33967": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 28174,
+      "share_basis": "population"
+    }
+  ],
+  "33971": [
+    {
+      "district": 17,
+      "share": 0.6239,
+      "pop": 16429,
+      "share_basis": "population"
+    },
+    {
+      "district": 19,
+      "share": 0.3761,
+      "pop": 9904,
+      "share_basis": "population"
+    }
+  ],
+  "33972": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 14727,
+      "share_basis": "population"
+    }
+  ],
+  "33973": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 12728,
+      "share_basis": "population"
+    }
+  ],
+  "33974": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 17233,
+      "share_basis": "population"
+    }
+  ],
+  "33976": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 17017,
+      "share_basis": "population"
+    }
+  ],
+  "33980": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 11762,
+      "share_basis": "population"
+    }
+  ],
+  "33981": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 13574,
+      "share_basis": "population"
+    }
+  ],
+  "33982": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 12404,
+      "share_basis": "population"
+    }
+  ],
+  "33983": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 16124,
+      "share_basis": "population"
+    }
+  ],
+  "33990": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 32717,
+      "share_basis": "population"
+    }
+  ],
+  "33991": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 26381,
+      "share_basis": "population"
+    }
+  ],
+  "33993": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 29848,
+      "share_basis": "population"
+    }
+  ],
+  "34101": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 13,
+      "share_basis": "population"
+    }
+  ],
+  "34102": [
+    {
+      "district": 19,
+      "share": 0.9914,
+      "pop": 10406,
+      "share_basis": "population"
+    },
+    {
+      "district": 22,
+      "share": 0.0086,
+      "pop": 90,
+      "share_basis": "population"
+    }
+  ],
+  "34103": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 11822,
+      "share_basis": "population"
+    }
+  ],
+  "34104": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 25485,
+      "share_basis": "population"
+    }
+  ],
+  "34105": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 16491,
+      "share_basis": "population"
+    }
+  ],
+  "34108": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 16142,
+      "share_basis": "population"
+    }
+  ],
+  "34109": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 26102,
+      "share_basis": "population"
+    }
+  ],
+  "34110": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 24093,
+      "share_basis": "population"
+    }
+  ],
+  "34112": [
+    {
+      "district": 22,
+      "share": 0.8768,
+      "pop": 23346,
+      "share_basis": "population"
+    },
+    {
+      "district": 19,
+      "share": 0.1232,
+      "pop": 3279,
+      "share_basis": "population"
+    }
+  ],
+  "34113": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 23740,
+      "share_basis": "population"
+    }
+  ],
+  "34114": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 21343,
+      "share_basis": "population"
+    }
+  ],
+  "34116": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 31538,
+      "share_basis": "population"
+    }
+  ],
+  "34117": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 16408,
+      "share_basis": "population"
+    }
+  ],
+  "34119": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 34933,
+      "share_basis": "population"
+    }
+  ],
+  "34120": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 41026,
+      "share_basis": "population"
+    }
+  ],
+  "34134": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 15906,
+      "share_basis": "population"
+    }
+  ],
+  "34135": [
+    {
+      "district": 19,
+      "share": 1,
+      "pop": 45518,
+      "share_basis": "population"
+    }
+  ],
+  "34137": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 255,
+      "share_basis": "population"
+    }
+  ],
+  "34138": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 346,
+      "share_basis": "population"
+    }
+  ],
+  "34139": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 471,
+      "share_basis": "population"
+    }
+  ],
+  "34140": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 355,
+      "share_basis": "population"
+    }
+  ],
+  "34141": [
+    {
+      "district": 22,
+      "share": 0.6183,
+      "pop": 81,
+      "share_basis": "population"
+    },
+    {
+      "district": 28,
+      "share": 0.3817,
+      "pop": 50,
+      "share_basis": "population"
+    }
+  ],
+  "34142": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 31327,
+      "share_basis": "population"
+    }
+  ],
+  "34145": [
+    {
+      "district": 22,
+      "share": 1,
+      "pop": 15717,
+      "share_basis": "population"
+    }
+  ],
+  "34201": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 4156,
+      "share_basis": "population"
+    }
+  ],
+  "34202": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 26797,
+      "share_basis": "population"
+    }
+  ],
+  "34203": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 39853,
+      "share_basis": "population"
+    }
+  ],
+  "34205": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 33789,
+      "share_basis": "population"
+    }
+  ],
+  "34207": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 35281,
+      "share_basis": "population"
+    }
+  ],
+  "34208": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 38522,
+      "share_basis": "population"
+    }
+  ],
+  "34209": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 32940,
+      "share_basis": "population"
+    }
+  ],
+  "34210": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 16447,
+      "share_basis": "population"
+    }
+  ],
+  "34211": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 16845,
+      "share_basis": "population"
+    }
+  ],
+  "34212": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 24266,
+      "share_basis": "population"
+    }
+  ],
+  "34215": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 793,
+      "share_basis": "population"
+    }
+  ],
+  "34216": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 1061,
+      "share_basis": "population"
+    }
+  ],
+  "34217": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 3825,
+      "share_basis": "population"
+    }
+  ],
+  "34219": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 27212,
+      "share_basis": "population"
+    }
+  ],
+  "34221": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 48082,
+      "share_basis": "population"
+    }
+  ],
+  "34222": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 14097,
+      "share_basis": "population"
+    }
+  ],
+  "34223": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 19118,
+      "share_basis": "population"
+    }
+  ],
+  "34224": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 16379,
+      "share_basis": "population"
+    }
+  ],
+  "34228": [
+    {
+      "district": 17,
+      "share": 0.6341,
+      "pop": 4759,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.3659,
+      "pop": 2746,
+      "share_basis": "population"
+    }
+  ],
+  "34229": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 7780,
+      "share_basis": "population"
+    }
+  ],
+  "34231": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 31492,
+      "share_basis": "population"
+    }
+  ],
+  "34232": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 34671,
+      "share_basis": "population"
+    }
+  ],
+  "34233": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 18723,
+      "share_basis": "population"
+    }
+  ],
+  "34234": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 20858,
+      "share_basis": "population"
+    }
+  ],
+  "34235": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 14536,
+      "share_basis": "population"
+    }
+  ],
+  "34236": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 14083,
+      "share_basis": "population"
+    }
+  ],
+  "34237": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 16740,
+      "share_basis": "population"
+    }
+  ],
+  "34238": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 22050,
+      "share_basis": "population"
+    }
+  ],
+  "34239": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 15049,
+      "share_basis": "population"
+    }
+  ],
+  "34240": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 14428,
+      "share_basis": "population"
+    }
+  ],
+  "34241": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 14589,
+      "share_basis": "population"
+    }
+  ],
+  "34242": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 7417,
+      "share_basis": "population"
+    }
+  ],
+  "34243": [
+    {
+      "district": 16,
+      "share": 0.8393,
+      "pop": 25268,
+      "share_basis": "population"
+    },
+    {
+      "district": 17,
+      "share": 0.1607,
+      "pop": 4839,
+      "share_basis": "population"
+    }
+  ],
+  "34250": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 481,
+      "share_basis": "population"
+    }
+  ],
+  "34251": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 7061,
+      "share_basis": "population"
+    }
+  ],
+  "34266": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 28827,
+      "share_basis": "population"
+    }
+  ],
+  "34267": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 44,
+      "share_basis": "population"
+    }
+  ],
+  "34268": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 223,
+      "share_basis": "population"
+    }
+  ],
+  "34269": [
+    {
+      "district": 16,
+      "share": 0.9982,
+      "pop": 4908,
+      "share_basis": "population"
+    }
+  ],
+  "34275": [
+    {
+      "district": 17,
+      "share": 0.7982,
+      "pop": 16419,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.2018,
+      "pop": 4151,
+      "share_basis": "population"
+    }
+  ],
+  "34285": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 18971,
+      "share_basis": "population"
+    }
+  ],
+  "34286": [
+    {
+      "district": 17,
+      "share": 0.7818,
+      "pop": 17199,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.2182,
+      "pop": 4801,
+      "share_basis": "population"
+    }
+  ],
+  "34287": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 26277,
+      "share_basis": "population"
+    }
+  ],
+  "34288": [
+    {
+      "district": 17,
+      "share": 0.9998,
+      "pop": 14007,
+      "share_basis": "population"
+    }
+  ],
+  "34289": [
+    {
+      "district": 16,
+      "share": 1,
+      "pop": 3359,
+      "share_basis": "population"
+    }
+  ],
+  "34291": [
+    {
+      "district": 17,
+      "share": 0.7094,
+      "pop": 5911,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.2906,
+      "pop": 2421,
+      "share_basis": "population"
+    }
+  ],
+  "34292": [
+    {
+      "district": 17,
+      "share": 0.9644,
+      "pop": 16530,
+      "share_basis": "population"
+    },
+    {
+      "district": 16,
+      "share": 0.0356,
+      "pop": 611,
+      "share_basis": "population"
+    }
+  ],
+  "34293": [
+    {
+      "district": 17,
+      "share": 1,
+      "pop": 44935,
+      "share_basis": "population"
+    }
+  ],
+  "34420": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 17969,
+      "share_basis": "population"
+    }
+  ],
+  "34428": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 9583,
+      "share_basis": "population"
+    }
+  ],
+  "34429": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 8837,
+      "share_basis": "population"
+    }
+  ],
+  "34431": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 8589,
+      "share_basis": "population"
+    }
+  ],
+  "34432": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 13159,
+      "share_basis": "population"
+    }
+  ],
+  "34433": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 7719,
+      "share_basis": "population"
+    }
+  ],
+  "34434": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 9582,
+      "share_basis": "population"
+    }
+  ],
+  "34436": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 7901,
+      "share_basis": "population"
+    }
+  ],
+  "34442": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 16759,
+      "share_basis": "population"
+    }
+  ],
+  "34445": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 55,
+      "share_basis": "population"
+    }
+  ],
+  "34446": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 18431,
+      "share_basis": "population"
+    }
+  ],
+  "34448": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 10889,
+      "share_basis": "population"
+    }
+  ],
+  "34449": [
+    {
+      "district": 3,
+      "share": 0.8422,
+      "pop": 2881,
+      "share_basis": "population"
+    },
+    {
+      "district": 15,
+      "share": 0.1578,
+      "pop": 540,
+      "share_basis": "population"
+    }
+  ],
+  "34450": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 10788,
+      "share_basis": "population"
+    }
+  ],
+  "34452": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 12405,
+      "share_basis": "population"
+    }
+  ],
+  "34453": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 10964,
+      "share_basis": "population"
+    }
+  ],
+  "34461": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 11388,
+      "share_basis": "population"
+    }
+  ],
+  "34465": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 17960,
+      "share_basis": "population"
+    }
+  ],
+  "34470": [
+    {
+      "district": 3,
+      "share": 0.8936,
+      "pop": 18304,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.1064,
+      "pop": 2179,
+      "share_basis": "population"
+    }
+  ],
+  "34471": [
+    {
+      "district": 3,
+      "share": 0.9953,
+      "pop": 27501,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.0047,
+      "pop": 131,
+      "share_basis": "population"
+    }
+  ],
+  "34472": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 31701,
+      "share_basis": "population"
+    }
+  ],
+  "34473": [
+    {
+      "district": 3,
+      "share": 0.9693,
+      "pop": 20886,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.0307,
+      "pop": 662,
+      "share_basis": "population"
+    }
+  ],
+  "34474": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 17781,
+      "share_basis": "population"
+    }
+  ],
+  "34475": [
+    {
+      "district": 3,
+      "share": 0.8232,
+      "pop": 12167,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.1768,
+      "pop": 2613,
+      "share_basis": "population"
+    }
+  ],
+  "34476": [
+    {
+      "district": 3,
+      "share": 0.8272,
+      "pop": 21939,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.1728,
+      "pop": 4583,
+      "share_basis": "population"
+    }
+  ],
+  "34479": [
+    {
+      "district": 6,
+      "share": 0.7925,
+      "pop": 11196,
+      "share_basis": "population"
+    },
+    {
+      "district": 3,
+      "share": 0.2075,
+      "pop": 2931,
+      "share_basis": "population"
+    }
+  ],
+  "34480": [
+    {
+      "district": 6,
+      "share": 0.7107,
+      "pop": 15428,
+      "share_basis": "population"
+    },
+    {
+      "district": 3,
+      "share": 0.2893,
+      "pop": 6281,
+      "share_basis": "population"
+    }
+  ],
+  "34481": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 23097,
+      "share_basis": "population"
+    }
+  ],
+  "34482": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 23565,
+      "share_basis": "population"
+    }
+  ],
+  "34484": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 6050,
+      "share_basis": "population"
+    }
+  ],
+  "34487": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 8,
+      "share_basis": "population"
+    }
+  ],
+  "34488": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 11392,
+      "share_basis": "population"
+    }
+  ],
+  "34491": [
+    {
+      "district": 6,
+      "share": 1,
+      "pop": 31545,
+      "share_basis": "population"
+    }
+  ],
+  "34498": [
+    {
+      "district": 3,
+      "share": 1,
+      "pop": 588,
+      "share_basis": "population"
+    }
+  ],
+  "34601": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 23001,
+      "share_basis": "population"
+    }
+  ],
+  "34602": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 8735,
+      "share_basis": "population"
+    }
+  ],
+  "34604": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 12800,
+      "share_basis": "population"
+    }
+  ],
+  "34606": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 28548,
+      "share_basis": "population"
+    }
+  ],
+  "34607": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 8544,
+      "share_basis": "population"
+    }
+  ],
+  "34608": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 34363,
+      "share_basis": "population"
+    }
+  ],
+  "34609": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 43997,
+      "share_basis": "population"
+    }
+  ],
+  "34610": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 15400,
+      "share_basis": "population"
+    }
+  ],
+  "34613": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 18869,
+      "share_basis": "population"
+    }
+  ],
+  "34614": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 9221,
+      "share_basis": "population"
+    }
+  ],
+  "34637": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 9763,
+      "share_basis": "population"
+    }
+  ],
+  "34638": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 31746,
+      "share_basis": "population"
+    }
+  ],
+  "34639": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 28165,
+      "share_basis": "population"
+    }
+  ],
+  "34652": [
+    {
+      "district": 12,
+      "share": 0.8395,
+      "pop": 22413,
+      "share_basis": "population"
+    },
+    {
+      "district": 13,
+      "share": 0.1605,
+      "pop": 4284,
+      "share_basis": "population"
+    }
+  ],
+  "34653": [
+    {
+      "district": 12,
+      "share": 0.9863,
+      "pop": 32924,
+      "share_basis": "population"
+    },
+    {
+      "district": 13,
+      "share": 0.0137,
+      "pop": 457,
+      "share_basis": "population"
+    }
+  ],
+  "34654": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 23508,
+      "share_basis": "population"
+    }
+  ],
+  "34655": [
+    {
+      "district": 12,
+      "share": 0.565,
+      "pop": 25779,
+      "share_basis": "population"
+    },
+    {
+      "district": 13,
+      "share": 0.435,
+      "pop": 19849,
+      "share_basis": "population"
+    }
+  ],
+  "34661": [
+    {
+      "district": 15,
+      "share": 1,
+      "pop": 260,
+      "share_basis": "population"
+    }
+  ],
+  "34667": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 34910,
+      "share_basis": "population"
+    }
+  ],
+  "34668": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 48781,
+      "share_basis": "population"
+    }
+  ],
+  "34669": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 15089,
+      "share_basis": "population"
+    }
+  ],
+  "34677": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 22524,
+      "share_basis": "population"
+    }
+  ],
+  "34679": [
+    {
+      "district": 12,
+      "share": 1,
+      "pop": 273,
+      "share_basis": "population"
+    }
+  ],
+  "34681": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 1884,
+      "share_basis": "population"
+    }
+  ],
+  "34683": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 33453,
+      "share_basis": "population"
+    }
+  ],
+  "34684": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 27078,
+      "share_basis": "population"
+    }
+  ],
+  "34685": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 17680,
+      "share_basis": "population"
+    }
+  ],
+  "34688": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 8090,
+      "share_basis": "population"
+    }
+  ],
+  "34689": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 27436,
+      "share_basis": "population"
+    }
+  ],
+  "34690": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 14115,
+      "share_basis": "population"
+    }
+  ],
+  "34691": [
+    {
+      "district": 13,
+      "share": 0.9981,
+      "pop": 23643,
+      "share_basis": "population"
+    },
+    {
+      "district": 12,
+      "share": 0.0019,
+      "pop": 45,
+      "share_basis": "population"
+    }
+  ],
+  "34695": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 17927,
+      "share_basis": "population"
+    }
+  ],
+  "34698": [
+    {
+      "district": 13,
+      "share": 1,
+      "pop": 38010,
+      "share_basis": "population"
+    }
+  ],
+  "34705": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 2670,
+      "share_basis": "population"
+    }
+  ],
+  "34711": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 67980,
+      "share_basis": "population"
+    }
+  ],
+  "34714": [
+    {
+      "district": 11,
+      "share": 0.9656,
+      "pop": 24852,
+      "share_basis": "population"
+    },
+    {
+      "district": 18,
+      "share": 0.0344,
+      "pop": 885,
+      "share_basis": "population"
+    }
+  ],
+  "34715": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 22763,
+      "share_basis": "population"
+    }
+  ],
+  "34729": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 148,
+      "share_basis": "population"
+    }
+  ],
+  "34731": [
+    {
+      "district": 11,
+      "share": 0.974,
+      "pop": 11796,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.026,
+      "pop": 315,
+      "share_basis": "population"
+    }
+  ],
+  "34734": [
+    {
+      "district": 10,
+      "share": 0.8152,
+      "pop": 3396,
+      "share_basis": "population"
+    },
+    {
+      "district": 11,
+      "share": 0.1848,
+      "pop": 770,
+      "share_basis": "population"
+    }
+  ],
+  "34736": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 24679,
+      "share_basis": "population"
+    }
+  ],
+  "34737": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 3406,
+      "share_basis": "population"
+    }
+  ],
+  "34739": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 833,
+      "share_basis": "population"
+    }
+  ],
+  "34741": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 56454,
+      "share_basis": "population"
+    }
+  ],
+  "34743": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 38454,
+      "share_basis": "population"
+    }
+  ],
+  "34744": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 59232,
+      "share_basis": "population"
+    }
+  ],
+  "34746": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 56344,
+      "share_basis": "population"
+    }
+  ],
+  "34747": [
+    {
+      "district": 18,
+      "share": 0.9993,
+      "pop": 26542,
+      "share_basis": "population"
+    }
+  ],
+  "34748": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 45481,
+      "share_basis": "population"
+    }
+  ],
+  "34753": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 6657,
+      "share_basis": "population"
+    }
+  ],
+  "34756": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 3985,
+      "share_basis": "population"
+    }
+  ],
+  "34758": [
+    {
+      "district": 18,
+      "share": 0.678,
+      "pop": 29346,
+      "share_basis": "population"
+    },
+    {
+      "district": 9,
+      "share": 0.322,
+      "pop": 13936,
+      "share_basis": "population"
+    }
+  ],
+  "34759": [
+    {
+      "district": 18,
+      "share": 0.9913,
+      "pop": 41702,
+      "share_basis": "population"
+    },
+    {
+      "district": 9,
+      "share": 0.0087,
+      "pop": 365,
+      "share_basis": "population"
+    }
+  ],
+  "34760": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 986,
+      "share_basis": "population"
+    }
+  ],
+  "34761": [
+    {
+      "district": 10,
+      "share": 0.6913,
+      "pop": 33314,
+      "share_basis": "population"
+    },
+    {
+      "district": 11,
+      "share": 0.3087,
+      "pop": 14879,
+      "share_basis": "population"
+    }
+  ],
+  "34762": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 567,
+      "share_basis": "population"
+    }
+  ],
+  "34769": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 27594,
+      "share_basis": "population"
+    }
+  ],
+  "34771": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 26503,
+      "share_basis": "population"
+    }
+  ],
+  "34772": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 33499,
+      "share_basis": "population"
+    }
+  ],
+  "34773": [
+    {
+      "district": 9,
+      "share": 1,
+      "pop": 5186,
+      "share_basis": "population"
+    }
+  ],
+  "34785": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 18677,
+      "share_basis": "population"
+    }
+  ],
+  "34786": [
+    {
+      "district": 11,
+      "share": 0.9931,
+      "pop": 46233,
+      "share_basis": "population"
+    },
+    {
+      "district": 10,
+      "share": 0.0069,
+      "pop": 320,
+      "share_basis": "population"
+    }
+  ],
+  "34787": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 88636,
+      "share_basis": "population"
+    }
+  ],
+  "34788": [
+    {
+      "district": 11,
+      "share": 0.7194,
+      "pop": 13962,
+      "share_basis": "population"
+    },
+    {
+      "district": 6,
+      "share": 0.2806,
+      "pop": 5447,
+      "share_basis": "population"
+    }
+  ],
+  "34797": [
+    {
+      "district": 11,
+      "share": 1,
+      "pop": 1388,
+      "share_basis": "population"
+    }
+  ],
+  "34945": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 5831,
+      "share_basis": "population"
+    }
+  ],
+  "34946": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 6793,
+      "share_basis": "population"
+    }
+  ],
+  "34947": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 13933,
+      "share_basis": "population"
+    }
+  ],
+  "34949": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 8027,
+      "share_basis": "population"
+    }
+  ],
+  "34950": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 16582,
+      "share_basis": "population"
+    }
+  ],
+  "34951": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 15357,
+      "share_basis": "population"
+    }
+  ],
+  "34952": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 42630,
+      "share_basis": "population"
+    }
+  ],
+  "34953": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 77023,
+      "share_basis": "population"
+    }
+  ],
+  "34956": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 10322,
+      "share_basis": "population"
+    }
+  ],
+  "34957": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 22955,
+      "share_basis": "population"
+    }
+  ],
+  "34972": [
+    {
+      "district": 9,
+      "share": 0.9979,
+      "pop": 19473,
+      "share_basis": "population"
+    },
+    {
+      "district": 21,
+      "share": 0.0021,
+      "pop": 41,
+      "share_basis": "population"
+    }
+  ],
+  "34974": [
+    {
+      "district": 9,
+      "share": 0.982,
+      "pop": 23272,
+      "share_basis": "population"
+    },
+    {
+      "district": 21,
+      "share": 0.018,
+      "pop": 427,
+      "share_basis": "population"
+    }
+  ],
+  "34981": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 4494,
+      "share_basis": "population"
+    }
+  ],
+  "34982": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 27067,
+      "share_basis": "population"
+    }
+  ],
+  "34983": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 43654,
+      "share_basis": "population"
+    }
+  ],
+  "34984": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 16721,
+      "share_basis": "population"
+    }
+  ],
+  "34986": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 30027,
+      "share_basis": "population"
+    }
+  ],
+  "34987": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 14430,
+      "share_basis": "population"
+    }
+  ],
+  "34990": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 31160,
+      "share_basis": "population"
+    }
+  ],
+  "34994": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 17843,
+      "share_basis": "population"
+    }
+  ],
+  "34996": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 11042,
+      "share_basis": "population"
+    }
+  ],
+  "34997": [
+    {
+      "district": 21,
+      "share": 1,
+      "pop": 44000,
+      "share_basis": "population"
+    }
+  ]
+}

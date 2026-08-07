@@ -7,7 +7,6 @@ import { hashIp, hashUserAgent } from '@/lib/geo';
 
 describe('geo: privacy-preserving hashing', () => {
   const originalSecret = process.env.IP_HASH_SECRET;
-  const originalEnv = process.env.NODE_ENV;
 
   beforeEach(() => {
     process.env.IP_HASH_SECRET =
@@ -17,8 +16,7 @@ describe('geo: privacy-preserving hashing', () => {
   afterEach(() => {
     if (originalSecret === undefined) delete process.env.IP_HASH_SECRET;
     else process.env.IP_HASH_SECRET = originalSecret;
-    if (originalEnv === undefined) delete process.env.NODE_ENV;
-    else process.env.NODE_ENV = originalEnv;
+    vi.unstubAllEnvs();
   });
 
   it('hashIp returns null for null/undefined input', () => {
@@ -56,7 +54,7 @@ describe('geo: privacy-preserving hashing', () => {
   it('production refuses to hash with a missing secret (returns null)', () => {
     const errSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     delete process.env.IP_HASH_SECRET;
-    process.env.NODE_ENV = 'production';
+    vi.stubEnv('NODE_ENV', 'production');
     // Returns null — refuses to write reversible hashes when secret is missing.
     expect(hashIp('1.2.3.4')).toBeNull();
     expect(hashUserAgent('Mozilla/5.0 ...')).toBeNull();
@@ -66,7 +64,7 @@ describe('geo: privacy-preserving hashing', () => {
   it('production refuses to hash with a too-short secret', () => {
     const errSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     process.env.IP_HASH_SECRET = 'short';
-    process.env.NODE_ENV = 'production';
+    vi.stubEnv('NODE_ENV', 'production');
     expect(hashIp('1.2.3.4')).toBeNull();
     errSpy.mockRestore();
   });

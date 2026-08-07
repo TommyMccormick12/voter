@@ -36,6 +36,7 @@ export type DataSource =
   | 'propublica'
   | 'govtrack'
   | 'congress_gov'
+  | 'voteview'
   | 'campaign_site'
   | 'news'
   | 'followthemoney'
@@ -52,24 +53,6 @@ export type StatementContext =
   | 'speech'
   | 'campaign_video';
 
-export type EventType =
-  | 'view_candidate'
-  | 'view_comparison'
-  | 'rank_issues'
-  | 'ranking_completed'
-  | 'card_shared'
-  | 'share'
-  | 'return_visit'
-  | 'card_viewed'
-  | 'card_saved'
-  | 'card_unsaved'
-  | 'match_completed'
-  | 'view_donors'
-  | 'view_voting_record'
-  | 'view_statements'
-  | 'consent_granted'
-  | 'consent_revoked';
-
 // ============================================================
 // Core entities
 // ============================================================
@@ -83,6 +66,19 @@ export interface Race {
   cycle: number;
   election_type: ElectionType;
   primary_party: string | null;
+  /** True when a qualified candidate advances unopposed (Spec A5, T06).
+   * Not yet backed by a DB column — no migration or seed script writes
+   * this today, so every read returns `false` (boundary.ts reads it
+   * defensively; toRace() never fabricates a value). Wired through end
+   * to end now, mirroring the `fec_coverage_end_date` precedent on
+   * Candidate, so a future migration + seed_races.ts change lights it
+   * up without a UI change. See src/lib/data/races.ts header comment
+   * for the exact migration + seed requirement. */
+  no_primary: boolean;
+  /** Display copy for the no-primary state, e.g. "No primary — Maxwell
+   * Alejandro Frost qualified unopposed and advances." Same not-yet-
+   * backed-by-a-column caveat as `no_primary` above. */
+  no_primary_note: string | null;
 }
 
 export interface Candidate {
@@ -101,6 +97,14 @@ export interface Candidate {
   primary_party: string | null;
   incumbent: boolean;
   total_raised: number | null;
+  /** Last date FEC's filings cover for `total_raised` (Spec B3). Not yet
+   * backed by a DB column — no ingest pipeline or migration writes this
+   * field today, so every read returns `null` (boundary.ts reads it
+   * defensively; toCandidate() never fabricates a value). Wired through
+   * end to end now so a future migration + T11 ingest change makes it
+   * light up without a UI change. Render it in DonorProfile next to
+   * every dollar figure once it is non-null — never inferred or guessed. */
+  fec_coverage_end_date: string | null;
   top_stances: TopStance[];
 }
 
@@ -244,14 +248,6 @@ export interface ConsentState {
   recorded_at: string;
 }
 
-export interface IssueRanking {
-  id: string;
-  session_id: string;
-  issue_id: string;
-  rank: number;
-  created_at: string;
-}
-
 export interface CandidateInteraction {
   id: string;
   session_id: string;
@@ -282,26 +278,6 @@ export interface LlmMatch {
   input_tokens: number | null;
   output_tokens: number | null;
   ranked_candidates: MatchResult[];
-  created_at: string;
-}
-
-export interface CandidateComparison {
-  id: string;
-  session_id: string;
-  candidate_a_id: string;
-  candidate_b_id: string;
-  preferred_candidate_id: string | null;
-  race_id: string;
-  created_at: string;
-}
-
-export interface EngagementEvent {
-  id: string;
-  session_id: string;
-  event_type: EventType;
-  candidate_id: string | null;
-  issue_id: string | null;
-  metadata: Record<string, unknown>;
   created_at: string;
 }
 

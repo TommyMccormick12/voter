@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Inter } from "next/font/google";
 import { Nav } from "@/components/Nav";
 import { ConsentBanner } from "@/components/ConsentBanner";
+import VisitTracker from "@/components/VisitTracker";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -47,6 +48,7 @@ export default function RootLayout({
           </Link>
         </footer>
         <ConsentBanner />
+        <VisitTracker />
       </body>
     </html>
   );

@@ -33,7 +33,8 @@ NEWSAPI_KEY=
 
 **Keyless services used by the pipeline:**
 - **Wikipedia** — bio + "Political positions" extraction (primary platform source)
-- **GovTrack** — congressional voting records (replaced ProPublica, sunset 2023)
+- **Congress.gov** — House roll-call votes (bioguide-joined; requires `CONGRESS_GOV_API_KEY`)
+- **Voteview** — Senate roll-call votes (bioguide-joined CSVs, keyless; replaced the GovTrack scrape path — Decision 6)
 - **HUD ZIP→CD crosswalk** — national ZIP coverage (quarterly XLSX, free signup)
 - **Ballotpedia** — kept as fallback, but 2026 federal coverage is too thin to rely on
 
@@ -70,7 +71,8 @@ npm run ingest:author -- --race-id "$RACE_ID" \
 #    19 buckets). ~$0.007 per candidate. Replaces OpenSecrets.
 npm run ingest:industries -- --race-id "$RACE_ID" --cycle 2026
 
-# 4. Pull GovTrack voting record (incumbents only — challengers skipped).
+# 4. Pull voting record — Congress.gov for House, Voteview for Senate
+#    (incumbents only — challengers skipped).
 npm run ingest:votes -- --race-id "$RACE_ID" --state FL --chamber house
 
 # 5. (optional) NewsAPI-driven statement ingester. Requires NEWSAPI_KEY.
@@ -118,8 +120,8 @@ supabase/seed/
 │   └── race-nj-07-r-2026.partial.json    # Merged fixture (built up step by step)
 ├── raw/                                   # API response cache (gitignored)
 │   ├── ballotpedia.org/
-│   ├── api.followthemoney.org/
-│   ├── www.govtrack.us/
+│   ├── api.congress.gov/
+│   ├── voteview.com/
 │   ├── api.open.fec.gov/
 │   └── geocoding.geo.census.gov/
 ├── review/
@@ -144,7 +146,7 @@ If any of these fail, switch to a backup race (NY-17, MD-06, VA-07).
 ## Cost guardrails
 
 - **FEC**: 1000/hour. ~3-4 calls per candidate (search + committees + itemized contributions + totals).
-- **GovTrack**: no documented hard rate limit (keyless). ~2 calls per vote captured. Be polite — `fetchCached` throttles automatically.
+- **Congress.gov**: 5000/hour (keyed). Voteview: no documented hard rate limit (keyless CSVs). Be polite — `fetchCached` throttles automatically.
 - **Anthropic Haiku**: ~$0.001 per stance synthesis + ~$0.007 per industry classification. ~50 candidates ≈ $0.40 total.
 
 The `fetchCached` helper in `src/lib/api-clients/base.ts` writes every response to `supabase/seed/raw/`, so re-running the pipeline is free.

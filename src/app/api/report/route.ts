@@ -9,7 +9,8 @@
 
 import { NextResponse, type NextRequest } from 'next/server';
 import { z } from 'zod';
-import { createClient } from '@supabase/supabase-js';
+import { getServiceClient } from '@/lib/data/adapter-service';
+import { lookupSessionRowId } from '@/lib/app/session';
 import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
 import { clientIpFromHeaders, hashIp } from '@/lib/geo';
 import { checkRateLimits, REPORT_LIMITS } from '@/lib/rate-limit';
@@ -85,21 +86,25 @@ export async function POST(request: NextRequest) {
   // the returned row may be null due to RLS).
   //
   // The service role key is server-only — never exposed to the client.
-  const serviceUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!serviceUrl || !serviceKey) {
+  let sb: ReturnType<typeof getServiceClient>;
+  try {
+    sb = getServiceClient();
+  } catch {
     return NextResponse.json(
       { ok: false, error: 'server_misconfigured' },
       { status: 500 },
     );
   }
-  const sb = createClient(serviceUrl, serviceKey);
+
+  // candidate_reports.session_id FKs sessions.id (uuid), not the raw cookie
+  // token — resolve it; an unknown token degrades to an anonymous report.
+  const sessionRowId = sessionId ? await lookupSessionRowId(sessionId) : null;
 
   const { data, error } = await sb
     .from('candidate_reports')
     .insert({
       candidate_id: parsed.data.candidate_id,
-      session_id: sessionId,
+      session_id: sessionRowId,
       stance_id: parsed.data.stance_id ?? null,
       cited_bill_id: parsed.data.cited_bill_id ?? null,
       category: parsed.data.category,
@@ -119,12 +124,20 @@ export async function POST(request: NextRequest) {
     if (error.code === '23505') {
       return NextResponse.json({ ok: true, deduplicated: true });
     }
-    // Most likely cause: candidate_id doesn't exist (FK violation).
-    // Treat as 400 — client sent a bad candidate reference.
     console.error('[api/report] insert error:', error.message);
+    // 23503 foreign_key_violation: the client referenced a candidate/stance
+    // that doesn't exist — their input, 400. Anything else (outage, RLS,
+    // schema drift) is our failure and must surface as 500, with no DB
+    // internals leaked to the client.
+    if (error.code === '23503') {
+      return NextResponse.json(
+        { ok: false, error: 'unknown_reference' },
+        { status: 400 },
+      );
+    }
     return NextResponse.json(
-      { ok: false, error: 'insert_failed', detail: error.message },
-      { status: 400 },
+      { ok: false, error: 'write_failed' },
+      { status: 500 },
     );
   }
 

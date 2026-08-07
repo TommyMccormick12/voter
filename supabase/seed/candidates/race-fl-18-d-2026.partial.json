@@ -14,22 +14,9 @@
       "fec_candidate_id": "H6FL18212",
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
-    },
-    {
-      "name": "Tiffanie Shavon Luong",
-      "party": "DEMOCRATIC PARTY",
-      "primary_party": "D",
-      "slug": "tiffanie-shavon-luong",
-      "incumbent": false,
-      "state": "FL",
-      "district": "18",
-      "office": "U.S. House",
-      "race_id": "race-fl-18-d-2026",
-      "fec_candidate_id": "H6FL18220",
-      "top_industries": [],
-      "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
     }
   ],
   "race": {

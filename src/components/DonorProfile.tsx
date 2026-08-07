@@ -1,10 +1,18 @@
 import type { CandidateDonor, CandidateTopIndustry } from '@/types/database';
 import { getPartyTheme } from '@/lib/party-theme';
+import { formatLocalDate } from '@/lib/dates';
 
 interface Props {
   topIndustries: CandidateTopIndustry[];
   donors: CandidateDonor[];
   totalRaised: number | null;
+  /** FEC filing coverage window for `totalRaised` (Spec B3). Money now
+   * comes from FEC totals directly — OpenSecrets retired its public API
+   * (see AGENTS.md). Render this next to the dollar figure whenever the
+   * pipeline has populated it; a total without its coverage window reads
+   * as more current than it is. Renders nothing when null — never a
+   * guessed or fabricated date. */
+  coverageEndDate?: string | null;
   primaryParty: string | null;
 }
 
@@ -12,6 +20,7 @@ export function DonorProfile({
   topIndustries,
   donors,
   totalRaised,
+  coverageEndDate = null,
   primaryParty,
 }: Props) {
   const theme = getPartyTheme(primaryParty);
@@ -31,9 +40,12 @@ export function DonorProfile({
           <p className="text-3xl font-bold text-gray-900">
             ${(totalRaised / 1_000_000).toFixed(2)}M
           </p>
-          <p className="text-xs text-gray-600 mt-1">
-            Source: OpenSecrets · FEC filings
-          </p>
+          {coverageEndDate && (
+            <p className="text-sm text-gray-600 mt-0.5">
+              through {formatLocalDate(coverageEndDate)}
+            </p>
+          )}
+          <p className="text-xs text-gray-600 mt-1">Source: FEC filings</p>
         </div>
       )}
 

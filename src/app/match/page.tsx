@@ -38,8 +38,24 @@ export default async function MatchPage({ searchParams }: PageProps) {
     );
   }
 
-  const race = await getRace(raceId);
-  if (!race) {
+  const raceResult = await getRace(raceId);
+  if (!raceResult.ok) {
+    return (
+      <main className="max-w-2xl mx-auto px-4 py-16 text-center">
+        <h1 className="text-2xl font-bold text-gray-900 mb-3">Couldn&apos;t load this race</h1>
+        <p className="text-gray-500 mb-6">
+          Something went wrong loading race data. Try again in a moment.
+        </p>
+        <Link
+          href="/"
+          className="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700"
+        >
+          Go to homepage →
+        </Link>
+      </main>
+    );
+  }
+  if (!raceResult.data) {
     return (
       <main className="max-w-2xl mx-auto px-4 py-16 text-center">
         <h1 className="text-2xl font-bold text-gray-900 mb-3">Race not found</h1>

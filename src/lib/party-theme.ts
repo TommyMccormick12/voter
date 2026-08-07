@@ -1,12 +1,13 @@
 // Party-color theming utility — maps primary_party to Tailwind class strings.
-// Matches the visual design in public/mockup-mobile.html and public/mockup-desktop.html.
 //
 // Usage:
 //   const theme = getPartyTheme(candidate.primary_party);
 //   <div className={theme.heroBg}>...</div>
 //   <button className={theme.accent}>...</button>
 
-export type PartyKey = 'R' | 'D' | 'I';
+import { PARTY_PALETTE, PARTY_LABEL, resolvePartyKey, type PartyKey } from './tokens';
+
+export type { PartyKey };
 
 export interface PartyTheme {
   /** Hero strip gradient background */
@@ -41,8 +42,8 @@ const themes: Record<PartyKey, PartyTheme> = {
     avatarGradient: 'bg-gradient-to-br from-red-400 to-red-600',
     tabBorder: 'border-red-600 text-red-800',
     stanceBorder: 'border-red-500',
-    industryFill: '#dc2626',
-    label: 'Republican',
+    industryFill: PARTY_PALETTE.R[600],
+    label: PARTY_LABEL.R,
   },
   D: {
     heroBg: 'bg-gradient-to-br from-blue-50 to-blue-200',
@@ -53,8 +54,8 @@ const themes: Record<PartyKey, PartyTheme> = {
     avatarGradient: 'bg-gradient-to-br from-blue-400 to-blue-600',
     tabBorder: 'border-blue-600 text-blue-800',
     stanceBorder: 'border-blue-500',
-    industryFill: '#2563eb',
-    label: 'Democrat',
+    industryFill: PARTY_PALETTE.D[600],
+    label: PARTY_LABEL.D,
   },
   I: {
     heroBg: 'bg-gradient-to-br from-violet-50 to-violet-200',
@@ -65,19 +66,13 @@ const themes: Record<PartyKey, PartyTheme> = {
     avatarGradient: 'bg-gradient-to-br from-violet-400 to-violet-600',
     tabBorder: 'border-violet-600 text-violet-800',
     stanceBorder: 'border-violet-500',
-    industryFill: '#7c3aed',
-    label: 'Independent',
+    industryFill: PARTY_PALETTE.I[600],
+    label: PARTY_LABEL.I,
   },
 };
 
-const FALLBACK: PartyTheme = themes.I;
-
 export function getPartyTheme(primaryParty: string | null | undefined): PartyTheme {
-  if (!primaryParty) return FALLBACK;
-  const key = primaryParty.toUpperCase().charAt(0);
-  if (key === 'R') return themes.R;
-  if (key === 'D') return themes.D;
-  return FALLBACK;
+  return themes[resolvePartyKey(primaryParty)];
 }
 
 export function getPartyInitials(name: string): string {

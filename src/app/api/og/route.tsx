@@ -2,6 +2,8 @@ import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
 import { getRace } from '@/lib/data/races';
 import { getCandidatesForRace } from '@/lib/data/candidates';
+import { pickOgParty, ogInitials, clampOgScore } from '@/lib/og-helpers';
+import type { Race, CandidateWithFullData } from '@/types/database';
 
 // nodejs runtime: data/* helpers do a static JSON import of
 // zip-districts.json which Next handles fine on edge, but using nodejs
@@ -15,83 +17,27 @@ export const runtime = 'nodejs';
 //   - children that resolve to multiple nodes (e.g. `{n}.`) must use a template
 //     literal so it stays a single string child
 
-interface PartyPalette {
-  /** Hero strip gradient (left band) */
-  bandFrom: string;
-  bandTo: string;
-  /** Accent text color */
-  accent: string;
-  /** Avatar gradient */
-  avatarFrom: string;
-  avatarTo: string;
-  label: string;
-}
-
-const PARTIES: Record<'R' | 'D' | 'I', PartyPalette> = {
-  R: {
-    bandFrom: '#fef2f2',
-    bandTo: '#fecaca',
-    accent: '#991b1b',
-    avatarFrom: '#f87171',
-    avatarTo: '#dc2626',
-    label: 'Republican',
-  },
-  D: {
-    bandFrom: '#eff6ff',
-    bandTo: '#bfdbfe',
-    accent: '#1e40af',
-    avatarFrom: '#60a5fa',
-    avatarTo: '#2563eb',
-    label: 'Democrat',
-  },
-  I: {
-    bandFrom: '#f5f3ff',
-    bandTo: '#ddd6fe',
-    accent: '#5b21b6',
-    avatarFrom: '#a78bfa',
-    avatarTo: '#7c3aed',
-    label: 'Independent',
-  },
-};
-
-function pickParty(p: string | null | undefined): PartyPalette {
-  if (!p) return PARTIES.I;
-  const k = p.toUpperCase().charAt(0);
-  if (k === 'R') return PARTIES.R;
-  if (k === 'D') return PARTIES.D;
-  return PARTIES.I;
-}
-
-function partyInitials(name: string): string {
-  return name
-    .split(/\s+/)
-    .filter(Boolean)
-    .map((p) => p.charAt(0).toUpperCase())
-    .slice(0, 2)
-    .join('');
-}
-
-function clampScore(raw: string | null): number | null {
-  if (!raw) return null;
-  const n = Number.parseInt(raw, 10);
-  if (!Number.isFinite(n)) return null;
-  return Math.max(0, Math.min(100, n));
-}
-
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
   const raceId = searchParams.get('race');
   const slug = searchParams.get('c');
-  const score = clampScore(searchParams.get('s'));
+  const score = clampOgScore(searchParams.get('s'));
 
-  const race = raceId ? await getRace(raceId) : null;
+  // getRace / getCandidatesForRace return DataResult<T> (T16, Spec C3) —
+  // `ok: false` means the read itself failed (DB outage / config problem),
+  // never treated as "no such race/candidate". Both cases fall through to
+  // the same generic invite card below; a failed read must never render a
+  // fake-success candidate card.
+  const race: Race | null = raceId
+    ? await getRace(raceId).then((r) => (r.ok ? r.data : null))
+    : null;
   // Cross-validate candidate belongs to the named race (mirrors /share/page.tsx).
-  const candidate =
-    raceId && slug
-      ? (await getCandidatesForRace(raceId)).find((c) => c.slug === slug) ?? null
-      : null;
+  const candidates: CandidateWithFullData[] =
+    raceId && slug ? await getCandidatesForRace(raceId).then((r) => (r.ok ? r.data : [])) : [];
+  const candidate = slug ? candidates.find((c) => c.slug === slug) ?? null : null;
 
-  // Generic invite — no params, or unknown race/candidate
+  // Generic invite — no params, unknown race/candidate, or the underlying
+  // read failed (never a fake-success card on !ok).
   if (!race || !candidate) {
     return new ImageResponse(
       (
@@ -148,7 +94,7 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const palette = pickParty(candidate.primary_party);
+  const palette = pickOgParty(candidate.primary_party);
   const seat = race.district ? `${race.state}-${race.district}` : race.state;
   const partyTag =
     race.primary_party === 'R'
@@ -198,7 +144,7 @@ export async function GET(request: NextRequest) {
               marginBottom: '40px',
             }}
           >
-            {partyInitials(candidate.name)}
+            {ogInitials(candidate.name)}
           </div>
           <div
             style={{

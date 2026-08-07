@@ -1,0 +1,83 @@
+{
+  "race_id": "race-fl-06-d-2026",
+  "candidates": [
+    {
+      "name": "Eric Yonce",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "eric-yonce",
+      "incumbent": false,
+      "state": "FL",
+      "district": "06",
+      "office": "U.S. House",
+      "race_id": "race-fl-06-d-2026",
+      "fec_candidate_id": "H6FL06340",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Robert David Cooper",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "robert-david-cooper",
+      "incumbent": false,
+      "state": "FL",
+      "district": "06",
+      "office": "U.S. House",
+      "race_id": "race-fl-06-d-2026",
+      "fec_candidate_id": "H6FL06381",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Ronnie \"Ron\" Murchinson-Rivera",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "ronnie-ron-murchinson-rivera",
+      "incumbent": false,
+      "state": "FL",
+      "district": "06",
+      "office": "U.S. House",
+      "race_id": "race-fl-06-d-2026",
+      "fec_candidate_id": "H6FL06332",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Steve Morgan",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "steve-morgan",
+      "incumbent": false,
+      "state": "FL",
+      "district": "06",
+      "office": "U.S. House",
+      "race_id": "race-fl-06-d-2026",
+      "fec_candidate_id": "H6FL06407",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-06-d-2026",
+    "state": "FL",
+    "district": "06",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}

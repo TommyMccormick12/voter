@@ -1,0 +1,67 @@
+{
+  "race_id": "race-fl-07-d-2026",
+  "candidates": [
+    {
+      "name": "Alan Grayson",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "alan-mark-grayson",
+      "incumbent": false,
+      "state": "FL",
+      "district": "07",
+      "office": "U.S. House",
+      "race_id": "race-fl-07-d-2026",
+      "fec_candidate_id": "H6FL08213",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": [],
+      "carryover_note": "Identity-linked (not FEC-id-linked) to the pre-rebuild slug alan-mark-grayson (old race-fl-sen-d-2026, FEC id S2FL00581, active=false). DOE confirms Alan Grayson Qualified in FL-07 D under a different FEC filing (H6FL08213) -- a Senate-to-House office switch, so the FEC-id carryover rule does not fire automatically. Per SPEC A1 / the seven-deactivated-slugs directive, this record stays active=false and does not carry Senate-campaign stance/donor content into the House race. Judgment call -- see reconciliation report."
+    },
+    {
+      "name": "Bale Dalton",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "bale-dalton",
+      "incumbent": false,
+      "state": "FL",
+      "district": "07",
+      "office": "U.S. House",
+      "race_id": "race-fl-07-d-2026",
+      "fec_candidate_id": "H6FL07215",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    },
+    {
+      "name": "Marialana Kinter",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "marialana-kinter",
+      "incumbent": false,
+      "state": "FL",
+      "district": "07",
+      "office": "U.S. House",
+      "race_id": "race-fl-07-d-2026",
+      "fec_candidate_id": "H6FL07165",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-07-d-2026",
+    "state": "FL",
+    "district": "07",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}

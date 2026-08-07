@@ -1,0 +1,231 @@
+{
+  "race_id": "race-fl-12-d-2026",
+  "candidates": [
+    {
+      "name": "Darren McAuley",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "darren-mcauley",
+      "incumbent": false,
+      "state": "FL",
+      "district": "12",
+      "office": "U.S. House",
+      "race_id": "race-fl-12-d-2026",
+      "fec_candidate_id": "H6FL15192",
+      "total_raised": 532060.24,
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 532060.24,
+        "disbursements": 265534.39,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 457010.24,
+        "other_political_committee_contributions": 24050
+      },
+      "top_industries": [
+        {
+          "industry_name": "Retired / Self-Employed",
+          "amount": 75500,
+          "rank": 1,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Healthcare & Pharma",
+          "amount": 31500,
+          "rank": 2,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Finance & Banking",
+          "amount": 18043,
+          "rank": 3,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Government / Public Sector",
+          "amount": 9500,
+          "rank": 4,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Real Estate",
+          "amount": 7500,
+          "rank": 5,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Education",
+          "amount": 4000,
+          "rank": 6,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Oil & Gas",
+          "amount": 3500,
+          "rank": 7,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Other",
+          "amount": 3500,
+          "rank": 8,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Legal",
+          "amount": 2500,
+          "rank": 9,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        },
+        {
+          "industry_name": "Technology",
+          "amount": 1500,
+          "rank": 10,
+          "cycle": 2026,
+          "data_source": "fec+haiku"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor_name": "SUMMERFIELD, DOUG",
+          "donor_type": "individual",
+          "industry": "Healthcare & Pharma",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 1,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SIMON, DEBORAH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 2,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "SIMON, DEBORAH",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 3,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "RISSER, PHARES",
+          "donor_type": "individual",
+          "industry": "Oil & Gas",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 4,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "PETRY, JOHN",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 5,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MCNULTY, MOLLY",
+          "donor_type": "individual",
+          "industry": "Government / Public Sector",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 6,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MANDEL, SUE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 7,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MANDEL, SUE",
+          "donor_type": "individual",
+          "industry": "Retired / Self-Employed",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 8,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MANDEL, STEVE",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 9,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        },
+        {
+          "donor_name": "MANDEL, STEVE",
+          "donor_type": "individual",
+          "industry": "Finance & Banking",
+          "amount_total": 3500,
+          "cycle": 2026,
+          "rank_in_candidate": 10,
+          "fec_committee_id": "C00913277",
+          "data_source": "fec"
+        }
+      ],
+      "voting_record": [],
+      "doe_status": "Qualified",
+      "active": false
+    },
+    {
+      "name": "Kimberly Overman",
+      "party": "DEMOCRATIC PARTY",
+      "primary_party": "D",
+      "slug": "kimberly-overman",
+      "incumbent": false,
+      "state": "FL",
+      "district": "12",
+      "office": "U.S. House",
+      "race_id": "race-fl-12-d-2026",
+      "fec_candidate_id": "H6FL15200",
+      "doe_status": "Qualified",
+      "active": false,
+      "top_industries": [],
+      "top_donors": [],
+      "voting_record": []
+    }
+  ],
+  "race": {
+    "id": "race-fl-12-d-2026",
+    "state": "FL",
+    "district": "12",
+    "office": "U.S. House",
+    "election_date": "2026-08-18",
+    "cycle": 2026,
+    "election_type": "primary",
+    "primary_party": "D"
+  }
+}
