@@ -145,6 +145,24 @@ describe('attachFecTotals (T11: candidate_id-only, cycle-pinned money)', () => {
       expect(candidates[0].total_raised).toBeUndefined();
     });
 
+    it('clears stale money on the skip path too (an entity correction can remove an id)', async () => {
+      const candidates: MoneyCandidate[] = [
+        {
+          name: 'Lost His Id',
+          // No fec_candidate_id, but money stamped by a prior run under a
+          // since-corrected id — must not survive as if current.
+          total_raised: 250000,
+          fec_coverage_end_date: '2026-03-31',
+        },
+      ];
+
+      await attachFecTotals(candidates, { cycle: 2026, office: 'H' });
+
+      expect(mockedGetCandidateTotals).not.toHaveBeenCalled();
+      expect(candidates[0].total_raised).toBeUndefined();
+      expect(candidates[0].fec_coverage_end_date).toBeUndefined();
+    });
+
     it('only fetches candidates that already carry an ID; others are skipped independently', async () => {
       mockedGetCandidateTotals.mockResolvedValueOnce(totals());
       const candidates: MoneyCandidate[] = [

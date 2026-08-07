@@ -189,7 +189,13 @@ export async function getCandidateTotals(
     other_political_committee_contributions: Number(
       r.other_political_committee_contributions ?? 0
     ),
+    // openFEC returns a full ISO timestamp ("2026-06-30T00:00:00+00:00");
+    // normalize to the calendar date so downstream consumers (fixtures,
+    // candidates.fec_coverage_end_date, parseLocalDate in src/lib/dates.ts)
+    // never see a timestamp that would shift a day under UTC parsing.
     coverage_end_date:
-      typeof r.coverage_end_date === 'string' ? r.coverage_end_date : null,
+      typeof r.coverage_end_date === 'string'
+        ? r.coverage_end_date.slice(0, 10)
+        : null,
   };
 }

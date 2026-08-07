@@ -45,7 +45,13 @@ function checkConfigured(): DataError | null {
 
 /** Columns shared by every candidate query. Keeps the SELECT list DRY. */
 const CANDIDATE_BASE_COLUMNS =
-  'id, name, slug, party, state, district, race_id, office, photo_url, bio, website, active, primary_party, incumbent, total_raised, fec_coverage_end_date, top_stances';
+  // NOTE (two-phase apply order): fec_coverage_end_date exists in
+  // migration 014 but is NOT selected here yet. main auto-deploys, and
+  // selecting a column production does not have yet would fail every
+  // candidate query site-wide. Add it to this list only in a follow-up
+  // AFTER migration 014 is confirmed applied in production. Until then
+  // boundary.ts's defensive read returns null and the UI hides the date.
+  'id, name, slug, party, state, district, race_id, office, photo_url, bio, website, active, primary_party, incumbent, total_raised, top_stances';
 
 /**
  * Active candidates for one race, ordered by total_raised desc then name.

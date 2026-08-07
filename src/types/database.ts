@@ -100,9 +100,10 @@ export interface Candidate {
   /** Last date FEC's filings cover for `total_raised` (Spec B3). Backed
    * by candidates.fec_coverage_end_date (migration 014); stamped by
    * fetch_fec.ts from FEC totals coverage_end_date and persisted by
-   * seed_candidates.ts. NULL means unknown (e.g. rows seeded before the
-   * next money re-pull) and DonorProfile renders no coverage date —
-   * never inferred or guessed. */
+   * seed_candidates.ts. Reads stay null until the post-apply follow-up
+   * adds the column to CANDIDATE_BASE_COLUMNS (two-phase note in
+   * src/lib/data/candidates.ts). NULL means unknown and DonorProfile
+   * renders no coverage date — never inferred or guessed. */
   fec_coverage_end_date: string | null;
   top_stances: TopStance[];
 }

@@ -77,7 +77,8 @@ function parseArgs(): Args {
 }
 
 /** Shape money attaches to. Only `fec_candidate_id` and `name` (for
- * logging) are read; every other field passes through untouched. */
+ * logging) are read; fields other than the money trio (`total_raised`,
+ * `fec_coverage_end_date`, `fec_totals`) pass through untouched. */
 export interface MoneyCandidate {
   name?: string;
   fec_candidate_id?: string;
@@ -107,8 +108,10 @@ export interface AttachFecTotalsOptions {
  *     `fec_coverage_end_date` are deleted rather than left holding
  *     stale prior-run values.
  *   - `fec_candidate_id` missing                                    ->
- *     skipped with a warning. No name-based search or substring
- *     attachment is attempted — that path has been removed (T11).
+ *     skipped with a warning, and any prior-run `total_raised` /
+ *     `fec_coverage_end_date` is deleted (an entity correction can
+ *     remove an id; its money must not linger). No name-based search
+ *     or substring attachment is attempted — removed (T11).
  */
 export async function attachFecTotals(
   candidates: MoneyCandidate[],
@@ -124,6 +127,11 @@ export async function attachFecTotals(
       console.warn(
         `[fec] ${label}: no fec_candidate_id on record; skipping money (no name-based lookup allowed)`,
       );
+      // A record can lose its fec_candidate_id after an entity correction.
+      // Money stamped under the old id must not survive as if current —
+      // same stale-prior-run rule as the no-2026-filings branch below.
+      delete c.total_raised;
+      delete c.fec_coverage_end_date;
       continue;
     }
 

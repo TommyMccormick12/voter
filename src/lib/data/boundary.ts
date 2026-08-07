@@ -143,9 +143,10 @@ export function toCandidate(row: Record<string, unknown>): Candidate {
     primary_party: strOrNull(row.primary_party),
     incumbent: Boolean(row.incumbent),
     total_raised: numOrNull(row.total_raised),
-    // Backed by candidates.fec_coverage_end_date since migration 014;
-    // NULL means unknown (see the field's doc comment in
-    // src/types/database.ts).
+    // Column added by migration 014, but not selected by
+    // CANDIDATE_BASE_COLUMNS until the post-apply follow-up (see the
+    // two-phase note in src/lib/data/candidates.ts) — this defensive
+    // read returns null until then.
     fec_coverage_end_date: strOrNull(row.fec_coverage_end_date),
     top_stances: normalizeTopStances(row.top_stances),
   };

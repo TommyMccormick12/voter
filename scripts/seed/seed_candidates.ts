@@ -268,6 +268,23 @@ async function main() {
     // Slug is preserved as-is — it's already in Supabase as the stable
     // identifier and is used in /candidate/[slug] URLs; renaming it would
     // break any saved links / shares.
+    // Pre-flight the coverage date the same way seed-validation shape-checks
+    // vote_date: a malformed value must fail here, loudly, not as a Postgres
+    // date-cast error mid-upsert. NULL is the honest "unknown" the UI hides.
+    const rawCoverage = c.fec_coverage_end_date;
+    let fecCoverageEndDate: string | null = null;
+    if (
+      typeof rawCoverage === 'string' &&
+      /^\d{4}-\d{2}-\d{2}$/.test(rawCoverage) &&
+      !Number.isNaN(Date.parse(rawCoverage))
+    ) {
+      fecCoverageEndDate = rawCoverage;
+    } else if (rawCoverage != null) {
+      console.warn(
+        `[seed-candidates] ${slug}: invalid fec_coverage_end_date ${JSON.stringify(rawCoverage)} — seeding NULL (UI will show no coverage date)`
+      );
+    }
+
     const candidateRow = {
       id: (c.id as string | undefined) ?? `cand-${slug}`,
       slug,
@@ -286,7 +303,9 @@ async function main() {
       total_raised: (c.total_raised as number) ?? null,
       // Stamped by fetch_fec.ts from FEC totals coverage_end_date; NULL
       // means unknown and the UI renders no coverage date (migration 014).
-      fec_coverage_end_date: (c.fec_coverage_end_date as string) ?? null,
+      // REQUIRES migration 014 applied — an upsert against a DB without
+      // the column fails loudly with PGRST204 for every candidate.
+      fec_coverage_end_date: fecCoverageEndDate,
       top_stances: c.top_stances ?? [],
       verified_at: (c.verified_at as string) ?? null,
     };
