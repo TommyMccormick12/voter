@@ -63,7 +63,7 @@ describe('attachFecTotals (T11: candidate_id-only, cycle-pinned money)', () => {
     expect(candidates[0].fec_totals).toEqual(totals());
   });
 
-  it('carries coverage_end_date through into fec_totals', async () => {
+  it('carries coverage_end_date through into fec_totals and the top-level fec_coverage_end_date', async () => {
     mockedGetCandidateTotals.mockResolvedValueOnce(totals({ coverage_end_date: '2026-07-29' }));
     const candidates: MoneyCandidate[] = [
       { name: 'Cory Mills', fec_candidate_id: 'H2FL07094' },
@@ -72,6 +72,9 @@ describe('attachFecTotals (T11: candidate_id-only, cycle-pinned money)', () => {
     await attachFecTotals(candidates, { cycle: 2026, office: 'H' });
 
     expect(candidates[0].fec_totals).toMatchObject({ coverage_end_date: '2026-07-29' });
+    // Top-level copy is what seed_candidates.ts persists to
+    // candidates.fec_coverage_end_date (migration 014).
+    expect(candidates[0].fec_coverage_end_date).toBe('2026-07-29');
   });
 
   it('passes election_full-style Senate params through unchanged (office is forwarded, not re-derived)', async () => {
@@ -116,6 +119,7 @@ describe('attachFecTotals (T11: candidate_id-only, cycle-pinned money)', () => {
           // (DATA-AUDIT-2026-08-06: Scott's trailing $1.46M booked as
           // 2026 fundraising).
           total_raised: 1460000,
+          fec_coverage_end_date: '2024-12-31',
           fec_totals: { committee_id: 'C0OLD', cycle: 2024 } as never,
         },
       ];
@@ -123,6 +127,7 @@ describe('attachFecTotals (T11: candidate_id-only, cycle-pinned money)', () => {
       await attachFecTotals(candidates, { cycle: 2026, office: 'S' });
 
       expect(candidates[0].total_raised).toBeUndefined();
+      expect(candidates[0].fec_coverage_end_date).toBeUndefined();
       expect(candidates[0].fec_totals).toEqual({ no2026Filings: true });
     });
   });
@@ -138,6 +143,24 @@ describe('attachFecTotals (T11: candidate_id-only, cycle-pinned money)', () => {
       expect(mockedGetCandidateTotals).not.toHaveBeenCalled();
       expect(candidates[0].fec_totals).toBeUndefined();
       expect(candidates[0].total_raised).toBeUndefined();
+    });
+
+    it('clears stale money on the skip path too (an entity correction can remove an id)', async () => {
+      const candidates: MoneyCandidate[] = [
+        {
+          name: 'Lost His Id',
+          // No fec_candidate_id, but money stamped by a prior run under a
+          // since-corrected id — must not survive as if current.
+          total_raised: 250000,
+          fec_coverage_end_date: '2026-03-31',
+        },
+      ];
+
+      await attachFecTotals(candidates, { cycle: 2026, office: 'H' });
+
+      expect(mockedGetCandidateTotals).not.toHaveBeenCalled();
+      expect(candidates[0].total_raised).toBeUndefined();
+      expect(candidates[0].fec_coverage_end_date).toBeUndefined();
     });
 
     it('only fetches candidates that already carry an ID; others are skipped independently', async () => {

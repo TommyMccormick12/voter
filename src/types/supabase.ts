@@ -99,6 +99,7 @@ export interface Database {
           top_stances: Json | null;
           incumbent: boolean | null;
           total_raised: number | null;
+          fec_coverage_end_date: string | null;
         };
         Insert: {
           id: string;
@@ -118,6 +119,7 @@ export interface Database {
           top_stances?: Json | null;
           incumbent?: boolean | null;
           total_raised?: number | null;
+          fec_coverage_end_date?: string | null;
         };
         Update: {
           id?: string;
@@ -137,6 +139,7 @@ export interface Database {
           top_stances?: Json | null;
           incumbent?: boolean | null;
           total_raised?: number | null;
+          fec_coverage_end_date?: string | null;
         };
         Relationships: [];
       };
