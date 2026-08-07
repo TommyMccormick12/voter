@@ -18,10 +18,19 @@
 // applied by the boundary module (src/lib/data/boundary.ts), not by
 // this raw schema layer.
 //
-// Covers every table created/altered through migration 010, including
-// the three Phase 1 leftover tables (issue_rankings,
-// candidate_comparisons, engagement_events) that still exist in the DB
-// pending T25's staged drop.
+// Covers every table created/altered through migration 010, plus
+// candidates.fec_coverage_end_date from 014. KNOWN GAP: this file does
+// NOT yet describe candidates.verified_at (migration 011) or
+// races.no_primary / no_primary_note (013). Both columns are live and
+// read by the app through src/types/database.ts, so nothing is broken —
+// but add them here before anyone treats this file as complete.
+//
+// The three
+// Phase 1 leftover tables (issue_rankings, candidate_comparisons,
+// engagement_events) were described here until migration 012 dropped
+// them from the database on 2026-08-07; their entries were removed after
+// that drop ran, never before, so this file has never described a schema
+// state no environment actually had.
 
 import type { ElectionType, InteractionAction, ConsentType, Vote } from './database';
 
@@ -275,96 +284,6 @@ export interface Database {
         };
         Relationships: [];
       };
-      // ------------------------------------------------------------
-      // Phase 1 leftovers — still present in the DB, staged for
-      // removal by T25 (spec F2). Kept here so a query against them
-      // (e.g. a cleanup script) stays typed until that ticket lands.
-      // ------------------------------------------------------------
-      issue_rankings: {
-        Row: {
-          id: string;
-          session_id: string | null;
-          issue_id: string | null;
-          rank: number;
-          created_at: string | null;
-        };
-        Insert: {
-          id?: string;
-          session_id?: string | null;
-          issue_id?: string | null;
-          rank: number;
-          created_at?: string | null;
-        };
-        Update: {
-          id?: string;
-          session_id?: string | null;
-          issue_id?: string | null;
-          rank?: number;
-          created_at?: string | null;
-        };
-        Relationships: [];
-      };
-      candidate_comparisons: {
-        Row: {
-          id: string;
-          session_id: string | null;
-          candidate_a_id: string | null;
-          candidate_b_id: string | null;
-          preferred_candidate_id: string | null;
-          race_id: string | null;
-          created_at: string | null;
-        };
-        Insert: {
-          id?: string;
-          session_id?: string | null;
-          candidate_a_id?: string | null;
-          candidate_b_id?: string | null;
-          preferred_candidate_id?: string | null;
-          race_id?: string | null;
-          created_at?: string | null;
-        };
-        Update: {
-          id?: string;
-          session_id?: string | null;
-          candidate_a_id?: string | null;
-          candidate_b_id?: string | null;
-          preferred_candidate_id?: string | null;
-          race_id?: string | null;
-          created_at?: string | null;
-        };
-        Relationships: [];
-      };
-      engagement_events: {
-        Row: {
-          id: string;
-          session_id: string | null;
-          event_type: string;
-          candidate_id: string | null;
-          issue_id: string | null;
-          metadata: Json | null;
-          created_at: string | null;
-        };
-        Insert: {
-          id?: string;
-          session_id?: string | null;
-          event_type: string;
-          candidate_id?: string | null;
-          issue_id?: string | null;
-          metadata?: Json | null;
-          created_at?: string | null;
-        };
-        Update: {
-          id?: string;
-          session_id?: string | null;
-          event_type?: string;
-          candidate_id?: string | null;
-          issue_id?: string | null;
-          metadata?: Json | null;
-          created_at?: string | null;
-        };
-        Relationships: [];
-      };
-      // ------------------------------------------------------------
       baseline_rankings: {
         Row: {
           id: string;
