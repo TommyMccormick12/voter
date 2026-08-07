@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-12-d-2026",
       "fec_candidate_id": "H6FL15192",
-      "total_raised": 532060.24,
+      "total_raised": 728863.42,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 532060.24,
-        "disbursements": 265534.39,
+        "receipts": 728863.42,
+        "disbursements": 616531.52,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 457010.24,
-        "other_political_committee_contributions": 24050
+        "individual_contributions": 640313.42,
+        "other_political_committee_contributions": 37550,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -198,7 +199,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Kimberly Overman",
@@ -215,7 +217,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 186812.6,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 186812.6,
+        "disbursements": 181906.28,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 171959.3,
+        "other_political_committee_contributions": 852.26,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

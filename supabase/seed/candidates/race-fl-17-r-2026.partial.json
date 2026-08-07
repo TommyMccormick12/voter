@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-17-r-2026",
       "fec_candidate_id": "H8FL17053",
-      "total_raised": 959819.1,
+      "total_raised": 1337886.69,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 959819.1,
-        "disbursements": 546827.97,
+        "receipts": 1337886.69,
+        "disbursements": 845314.95,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 336431.85,
-        "other_political_committee_contributions": 424000
+        "individual_contributions": 479608,
+        "other_political_committee_contributions": 580500,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "William Gregory Steube (/ˈstuːbi/ STOO-bee; born May 19, 1978) is an American politician serving as the U.S. representative for Florida's 17th congressional district since 2019. His district is based in Sarasota. A member of the Republican Party, Steube served three terms in the Florida House of Representatives, representing the Sarasota-Manatee area from 2010 to 2016, as well as two years in the Florida Senate until 2018, representing Sarasota County and the western part of Charlotte County.",
       "campaign_website": "http://steube.house.gov",
@@ -834,7 +835,8 @@
       "photo_url": "https://bioguide.congress.gov/photo/S001214.jpg",
       "doe_status": "Qualified",
       "active": false,
-      "incumbent_source": "carried from race-fl-17-r-2026.partial.json (race-fl-17-r-2026), same race pre- and post-rebuild; FEC id H8FL17053 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)"
+      "incumbent_source": "carried from race-fl-17-r-2026.partial.json (race-fl-17-r-2026), same race pre- and post-rebuild; FEC id H8FL17053 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {

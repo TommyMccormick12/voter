@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 109090.95,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 109090.95,
+        "disbursements": 108565.52,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 61546.36,
+        "other_political_committee_contributions": 33909.46,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Charles Gambaro",
@@ -33,7 +45,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 351423.27,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 351423.27,
+        "disbursements": 347690.77,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 89295,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Dan Bilzerian",
@@ -50,7 +74,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 1241449.83,
+      "fec_coverage_end_date": "2026-09-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1241449.83,
+        "disbursements": 386621.83,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 35984.64,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-09-30"
+      }
     },
     {
       "name": "Manuel P. Asensio",
@@ -67,7 +103,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 50000,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 50000,
+        "disbursements": 10440,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 0,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     },
     {
       "name": "Randy Fine",
@@ -687,7 +735,19 @@
         }
       ],
       "incumbent_source": "T26 adversarial verification 2026-08-06: sitting member of this district, qualified in this primary (DOE + Ballotpedia/Wikipedia/news cross-check)",
-      "bioguide_id": "F000484"
+      "bioguide_id": "F000484",
+      "total_raised": 4286207.08,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 4286207.08,
+        "disbursements": 3095148.29,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 2485004.97,
+        "other_political_committee_contributions": 468360.19,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

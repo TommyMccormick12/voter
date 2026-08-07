@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-28-d-2026",
       "fec_candidate_id": "H4FL28042",
-      "total_raised": 406606.36,
+      "total_raised": 438286.2,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 406606.36,
+        "receipts": 438286.2,
         "disbursements": 76322.34,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 63225.51,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 94905.35,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "top_industries": [
         {
@@ -198,7 +199,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-06-30"
     }
   ],
   "race": {

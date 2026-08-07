@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 17257.23,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 17257.23,
+        "disbursements": 14162.74,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 50,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Seth Harp",
@@ -33,7 +45,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 37794.03,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 37794.03,
+        "disbursements": 34783.52,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 36364.11,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Tom Wells",
@@ -50,7 +74,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 11493.31,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 11493.31,
+        "disbursements": 11010.57,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 293.31,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     },
     {
       "name": "Troy Albers",
@@ -67,7 +103,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 1637,
+      "fec_coverage_end_date": "2026-03-31",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1637,
+        "disbursements": 1637,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 0,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-03-31"
+      }
     }
   ],
   "race": {

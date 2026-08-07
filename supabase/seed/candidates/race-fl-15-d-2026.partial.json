@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 22229.64,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 22229.64,
+        "disbursements": 17116.3,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 20729.64,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Robert People",
@@ -29,15 +41,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-15-d-2026",
       "fec_candidate_id": "H6FL15168",
-      "total_raised": 25458.9,
+      "total_raised": 38495.9,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 25458.9,
-        "disbursements": 24890.25,
+        "receipts": 38495.9,
+        "disbursements": 36570.01,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 15677.29,
-        "other_political_committee_contributions": 200
+        "individual_contributions": 18274.29,
+        "other_political_committee_contributions": 200,
+        "coverage_end_date": "2026-06-30"
       },
       "top_industries": [
         {
@@ -173,7 +186,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-06-30"
     }
   ],
   "race": {

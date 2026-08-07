@@ -16,7 +16,10 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_totals": {
+        "no2026Filings": true
+      }
     },
     {
       "name": "James Pericola",
@@ -33,7 +36,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 119754,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 119754,
+        "disbursements": 87522.93,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 54789,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Royal Webster",
@@ -46,15 +61,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-11-d-2026",
       "fec_candidate_id": "H6FL11241",
-      "total_raised": 4831.41,
+      "total_raised": 17716.69,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 4831.41,
-        "disbursements": 2501.77,
+        "receipts": 17716.69,
+        "disbursements": 16195.57,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 4055,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 14370,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -134,7 +150,8 @@
       ],
       "photo_url": "https://bioguide.congress.gov/photo/W000806.jpg",
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {

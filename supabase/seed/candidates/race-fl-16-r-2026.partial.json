@@ -12,21 +12,23 @@
       "office": "U.S. House",
       "race_id": "race-fl-16-r-2026",
       "fec_candidate_id": "H6FL16133",
-      "total_raised": 15057.57,
+      "total_raised": 49247.8,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 15057.57,
-        "disbursements": 1355.24,
+        "receipts": 49247.8,
+        "disbursements": 22464.51,
         "cash_on_hand_end_period": 0,
         "individual_contributions": 57.57,
-        "other_political_committee_contributions": 0
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Eddie Speir",
@@ -39,15 +41,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-16-r-2026",
       "fec_candidate_id": "H4FL16179",
-      "total_raised": 24106.18,
+      "total_raised": 42474.53,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 24106.18,
-        "disbursements": 6056.77,
+        "receipts": 42474.53,
+        "disbursements": 24666.97,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 24045.64,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 42413.99,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "top_industries": [
         {
@@ -169,7 +172,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-06-30"
     },
     {
       "name": "Sydney Gruters",
@@ -186,7 +190,19 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "total_raised": 1087682.55,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1087682.55,
+        "disbursements": 465301.38,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 941600.89,
+        "other_political_committee_contributions": 120500,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

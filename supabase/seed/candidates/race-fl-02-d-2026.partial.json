@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 312077.34,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 312077.34,
+        "disbursements": 202632.69,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 307043.94,
+        "other_political_committee_contributions": 3500,
+        "coverage_end_date": "2026-06-30"
+      }
     },
     {
       "name": "Brice Barnes",
@@ -33,7 +45,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 317996.26,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 317996.26,
+        "disbursements": 240836.76,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 102896.77,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Nicholas Zateslo",
@@ -50,7 +74,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 449913.09,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 449913.09,
+        "disbursements": 426108.34,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 302046.37,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Yen Bailey",
@@ -67,7 +103,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 177869.04,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 177869.04,
+        "disbursements": 141492.03,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 160994.44,
+        "other_political_committee_contributions": 1000,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

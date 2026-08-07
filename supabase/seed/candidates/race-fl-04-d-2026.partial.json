@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 29446.84,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 29446.84,
+        "disbursements": 24345.24,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 22518,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     },
     {
       "name": "LaShonda \"L.J.\" Holloway",
@@ -33,7 +45,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 27347.7,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 27347.7,
+        "disbursements": 14154.97,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 26859.7,
+        "other_political_committee_contributions": 488,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Michael Kirwan",
@@ -50,7 +74,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 719151.9,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 719151.9,
+        "disbursements": 427460.94,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 501224.04,
+        "other_political_committee_contributions": 7000,
+        "coverage_end_date": "2026-06-30"
+      }
     }
   ],
   "race": {

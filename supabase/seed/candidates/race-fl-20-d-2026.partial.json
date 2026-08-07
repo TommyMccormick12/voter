@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-20-d-2026",
       "fec_candidate_id": "H2FL20159",
-      "total_raised": 306515.89,
+      "total_raised": 394892.89,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 306515.89,
-        "disbursements": 12925.78,
+        "receipts": 394892.89,
+        "disbursements": 144765.58,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 234729.44,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 323106.44,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Sheila Cherfilus-McCormick\nDemocratic",
       "top_industries": [
@@ -199,7 +200,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Debbie Wasserman Schultz",
@@ -212,15 +214,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-20-d-2026",
       "fec_candidate_id": "H4FL20023",
-      "total_raised": 2502688.61,
+      "total_raised": 3300107.37,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 2502688.61,
-        "disbursements": 1052517.34,
+        "receipts": 3300107.37,
+        "disbursements": 2496042.8,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 1938353.11,
-        "other_political_committee_contributions": 534750
+        "individual_contributions": 2523634.51,
+        "other_political_committee_contributions": 728500,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Deborah Wasserman Schultz (née Wasserman; /ˈwɑːsərmən/; born September 27, 1966) is an American politician serving as the U.S. representative for Florida's 25th congressional district, first elected to Congress in 2004. A member of the Democratic Party, she was the chair of the Democratic National Committee (DNC) from 2011 until her resignation in 2016.",
       "campaign_website": "http://wassermanschultz.house.gov",
@@ -1100,7 +1103,8 @@
       "photo_url": "https://bioguide.congress.gov/photo/W000797.jpg",
       "doe_status": "Qualified",
       "incumbent_source": "carried from race-fl-25-d-2026.partial.json (race-fl-25-d-2026 -> race-fl-20-d-2026); FEC id H4FL20023 confirmed by spine as the same person, now on the 2026 map's district 20; see DATA-AUDIT-2026-08-06.md root cause 1 for the redistricting move and sitting-member status",
-      "verified_at": "2026-08-07T14:06:31.126Z"
+      "verified_at": "2026-08-07T14:06:31.126Z",
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Elijah Manley",
@@ -1113,15 +1117,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-20-d-2026",
       "fec_candidate_id": "H6FL20077",
-      "total_raised": 779838.52,
+      "total_raised": 1068383.87,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 779838.52,
-        "disbursements": 756970.81,
+        "receipts": 1068383.87,
+        "disbursements": 1034785.85,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 769504.35,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 1057931,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "The 2016 Green Party presidential primaries were a series of primaries, caucuses and state conventions in which voters elected delegates to represent a candidate for the Green Party's nominee for President of the United States at the 2016 Green National Convention. The primaries, held in numerous states on various dates from January to July 2016, featured elections publicly funded and held as an alternative ballot, concurrent with the Democratic and Republican primaries, and elections privately funded by the Green Party, held non-concurrently with the major party primaries. Over 400 delegates ",
       "top_industries": [
@@ -1300,7 +1305,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Luther \"UncleLuke\" Campbell",
@@ -1313,22 +1319,24 @@
       "office": "U.S. House",
       "race_id": "race-fl-20-d-2026",
       "fec_candidate_id": "H4FL20098",
-      "total_raised": 37128.18,
+      "total_raised": 147916.36,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 37128.18,
-        "disbursements": 11067.85,
+        "receipts": 147916.36,
+        "disbursements": 66195.1,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 29278.18,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 132216.36,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "bio": "Luther Roderick \"Luke\" Campbell (born December 22, 1960), also known by his stage name Uncle Luke (also known as Luke Skyywalker), is an American rapper, music promoter, record executive, actor, and former leader of the rap group 2 Live Crew. He is a pioneer in Florida hip hop and the creator of the Miami bass genre, known for his sexually crude call and response lyrics. He also starred in a short-lived show on VH1, Luke's Parental Advisory.",
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-06-30"
     },
     {
       "name": "Sheila Cherfilus-McCormick",
@@ -1341,15 +1349,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-20-d-2026",
       "fec_candidate_id": "H8FL20032",
-      "total_raised": 356386.81,
+      "total_raised": 382527.14,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 356386.81,
-        "disbursements": 352822.17,
+        "receipts": 382527.14,
+        "disbursements": 376410.2,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 267879.68,
-        "other_political_committee_contributions": 86000
+        "individual_contributions": 279020.01,
+        "other_political_committee_contributions": 91000,
+        "coverage_end_date": "2026-06-30"
       },
       "top_industries": [
         {
@@ -1528,7 +1537,8 @@
       "voting_record": [],
       "bio": "Sheila Cherfilus-McCormick (née Cherfilus; /ˈʃɜːrfɪləs/ SHUR-fill-əss; born January 25, 1979) is an American politician and businesswoman who served as the U.S. representative for Florida's 20th congressional district from 2022 until her resignation in 2026. She is a member of the Democratic Party.",
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-06-30"
     }
   ],
   "race": {

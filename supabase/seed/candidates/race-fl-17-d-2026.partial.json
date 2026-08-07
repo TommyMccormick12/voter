@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-17-d-2026",
       "fec_candidate_id": "H6FL17065",
-      "total_raised": 37660.91,
+      "total_raised": 63329.06,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 37660.91,
-        "disbursements": 26986.16,
+        "receipts": 63329.06,
+        "disbursements": 59546.82,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 20260.72,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 28089.3,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "top_industries": [
         {
@@ -149,7 +150,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-06-30"
     },
     {
       "name": "Matthew Montavon",
@@ -162,15 +164,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-17-d-2026",
       "fec_candidate_id": "H4FL17060",
-      "total_raised": 75408.83,
+      "total_raised": 96489.4,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 75408.83,
-        "disbursements": 35060.83,
+        "receipts": 96489.4,
+        "disbursements": 72590.19,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 42179.82,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 57909.91,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -299,7 +302,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {

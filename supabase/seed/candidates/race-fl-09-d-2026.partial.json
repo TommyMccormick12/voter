@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-09-d-2026",
       "fec_candidate_id": "H6FL09179",
-      "total_raised": 1241415.11,
+      "total_raised": 2157833.96,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 1241415.11,
-        "disbursements": 422928.05,
+        "receipts": 2157833.96,
+        "disbursements": 984597.84,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 353345.92,
-        "other_political_committee_contributions": 885500
+        "individual_contributions": 766381.72,
+        "other_political_committee_contributions": 1385550,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -832,7 +833,8 @@
       ],
       "doe_status": "Qualified",
       "active": false,
-      "incumbent_source": "carried from race-fl-09-d-2026.partial.json (race-fl-09-d-2026), same race pre- and post-rebuild; FEC id H6FL09179 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)"
+      "incumbent_source": "carried from race-fl-09-d-2026.partial.json (race-fl-09-d-2026), same race pre- and post-rebuild; FEC id H6FL09179 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {

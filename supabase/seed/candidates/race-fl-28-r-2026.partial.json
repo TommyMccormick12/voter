@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-28-r-2026",
       "fec_candidate_id": "H0FL26036",
-      "total_raised": 414710.14,
+      "total_raised": 601253.76,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 414710.14,
-        "disbursements": 346166.71,
+        "receipts": 601253.76,
+        "disbursements": 484408.8,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 136997.21,
-        "other_political_committee_contributions": 181500
+        "individual_contributions": 204816.38,
+        "other_political_committee_contributions": 276750,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -844,7 +845,8 @@
       "photo_url": "https://bioguide.congress.gov/photo/G000593.jpg",
       "doe_status": "Qualified",
       "incumbent_source": "carried from race-fl-28-r-2026.partial.json (race-fl-28-r-2026), same race pre- and post-rebuild; FEC id H0FL26036 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
-      "verified_at": "2026-08-07T14:06:34.908Z"
+      "verified_at": "2026-08-07T14:06:34.908Z",
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {

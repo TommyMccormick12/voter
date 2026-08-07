@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-26-r-2026",
       "fec_candidate_id": "H2FL25018",
-      "total_raised": 1517554.6,
+      "total_raised": 2060781.95,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 1517554.6,
-        "disbursements": 1099963.76,
+        "receipts": 2060781.95,
+        "disbursements": 1341398.99,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 878605.69,
-        "other_political_committee_contributions": 629650
+        "individual_contributions": 1206333.04,
+        "other_political_committee_contributions": 845150,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Mario Rafael Díaz-Balart y Caballero (/bəˈlɑːrt/ bə-LART; born September 25, 1961) is an American politician serving as the U.S. representative for Florida's 26th congressional district. A member of the Republican Party, he was elected in 2002, and his district includes much of northwestern Miami-Dade County, including Hialeah, and much of the northern portion of the Everglades.",
       "campaign_website": "http://mariodiazbalart.house.gov",
@@ -999,7 +1000,8 @@
       "photo_url": "https://bioguide.congress.gov/photo/D000600.jpg",
       "doe_status": "Qualified",
       "incumbent_source": "carried from race-fl-26-r-2026.partial.json (race-fl-26-r-2026), same race pre- and post-rebuild; FEC id H2FL25018 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
-      "verified_at": "2026-08-07T14:06:33.006Z"
+      "verified_at": "2026-08-07T14:06:33.006Z",
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {

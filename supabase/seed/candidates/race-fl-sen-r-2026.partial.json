@@ -12,15 +12,16 @@
       "office": "U.S. Senate",
       "race_id": "race-fl-sen-r-2026",
       "fec_candidate_id": "S6FL00640",
-      "total_raised": 8407063.8,
+      "total_raised": 11259073.98,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 8407063.8,
-        "disbursements": 1277671.65,
+        "receipts": 11259073.98,
+        "disbursements": 2776253.29,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 2748661.48,
-        "other_political_committee_contributions": 1504500
+        "individual_contributions": 4941622.24,
+        "other_political_committee_contributions": 2021000,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Ashley Brooke Moody (born March 28, 1975) is an American politician and attorney serving since 2025 as the junior United States senator from Florida. A member of the Republican Party, she served from 2019 to 2025 as the 38th attorney general of Florida.",
       "campaign_website": "http://moody.senate.gov",
@@ -875,7 +876,8 @@
       "photo_url": "https://bioguide.congress.gov/photo/M001244.jpg",
       "doe_status": "Qualified",
       "incumbent_source": "carried from race-fl-sen-r-2026.partial.json (race-fl-sen-r-2026), same race pre- and post-rebuild; FEC id S6FL00640 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
-      "verified_at": "2026-08-07T14:06:36.734Z"
+      "verified_at": "2026-08-07T14:06:36.734Z",
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Chris Gleason",
@@ -888,15 +890,16 @@
       "office": "U.S. Senate",
       "race_id": "race-fl-sen-r-2026",
       "fec_candidate_id": "S6FL00848",
-      "total_raised": 3429.73,
+      "total_raised": 19689.77,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 3429.73,
-        "disbursements": 129.73,
+        "receipts": 19689.77,
+        "disbursements": 18244.15,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 3429.73,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 16189.77,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "top_industries": [
         {
@@ -978,7 +981,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-06-30"
     },
     {
       "name": "Ernest \"Ernie\" Rivera",
@@ -995,7 +999,19 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "total_raised": 15972.71,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 15972.71,
+        "disbursements": 15003.16,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 5022.71,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Neelam Taneja Perry",

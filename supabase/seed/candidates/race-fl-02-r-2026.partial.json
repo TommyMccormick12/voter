@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 117948.08,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 117948.08,
+        "disbursements": 90723.8,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 117899.3,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Austin Rogers",
@@ -33,7 +45,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 1010276.95,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1010276.95,
+        "disbursements": 623247.92,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 628431.88,
+        "other_political_committee_contributions": 6500,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Evan Power",
@@ -50,7 +74,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 727092.62,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 727092.62,
+        "disbursements": 464183.3,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 549277.36,
+        "other_political_committee_contributions": 15750,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Jim Norton",
@@ -67,7 +103,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 411786.26,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 411786.26,
+        "disbursements": 400388.05,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 409786.26,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Keith Gross",
@@ -84,7 +132,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 12325574.55,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 12325574.55,
+        "disbursements": 11329071.41,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 98154.24,
+        "other_political_committee_contributions": 7000,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Lee Jones",
@@ -101,7 +161,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 9800,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 9800,
+        "disbursements": 26179.67,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 2800,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     },
     {
       "name": "Luke Murphy",
@@ -118,7 +190,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 280409.56,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 280409.56,
+        "disbursements": 124051.32,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 277409.56,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Nick Lewis",
@@ -135,7 +219,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 95001,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 95001,
+        "disbursements": 93031.38,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 1001,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     }
   ],
   "race": {

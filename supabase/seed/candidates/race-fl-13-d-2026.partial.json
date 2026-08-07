@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-13-d-2026",
       "fec_candidate_id": "H6FL13254",
-      "total_raised": 60546.36,
+      "total_raised": 106025.85,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 60546.36,
-        "disbursements": 27834.63,
+        "receipts": 106025.85,
+        "disbursements": 98333.08,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 59740.36,
-        "other_political_committee_contributions": 806
+        "individual_contributions": 105219.85,
+        "other_political_committee_contributions": 806,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Tim Robinson (born May 23, 1981) is an American comedian, actor, and screenwriter. He first became known as a writer and performer on Saturday Night Live (2012–2016) before gaining wider recognition as the co-creator, co-writer, and star of the comedy series Detroiters (2017–2018), I Think You Should Leave with Tim Robinson (2019–2023) and The Chair Company (2025). He also starred in the A24 comedy film Friendship (2024).",
       "top_industries": [
@@ -178,7 +179,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "John William Liccione",
@@ -195,7 +197,19 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "total_raised": 15278.53,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 15278.53,
+        "disbursements": 14852.53,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 2905,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Leela Gray",
@@ -208,22 +222,24 @@
       "office": "U.S. House",
       "race_id": "race-fl-13-d-2026",
       "fec_candidate_id": "H6FL13312",
-      "total_raised": 564999.77,
+      "total_raised": 1223069.43,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 564999.77,
-        "disbursements": 64764.82,
+        "receipts": 1223069.43,
+        "disbursements": 539773.96,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 534999.77,
-        "other_political_committee_contributions": 23000
+        "individual_contributions": 1144176.28,
+        "other_political_committee_contributions": 70500,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Leela Gray is a retired United States Army brigadier general and nonprofit and corporate governance leader. Following her military career, she has served in leadership and board roles in nonprofit and corporate organizations and has remained engaged in public and civic affairs.",
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {

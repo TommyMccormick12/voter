@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 95065,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 95065,
+        "disbursements": 69161.41,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 90065,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Kendrick Meek",
@@ -33,7 +45,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 657618.87,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 657618.87,
+        "disbursements": 542847.05,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 566608.87,
+        "other_political_committee_contributions": 87500,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Marshall L. Davis",
@@ -50,7 +74,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 13046.25,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 13046.25,
+        "disbursements": 14010.4,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 13046.25,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     },
     {
       "name": "Oliver G. Gilbert",
@@ -67,7 +103,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 812142.8,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 812142.8,
+        "disbursements": 583049.58,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 787142.8,
+        "other_political_committee_contributions": 25000,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Roderick Vereen",
@@ -98,22 +146,24 @@
       "office": "U.S. House",
       "race_id": "race-fl-24-d-2026",
       "fec_candidate_id": "H0FL17118",
-      "total_raised": 300000,
+      "total_raised": 631672,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 300000,
-        "disbursements": 184530.57,
+        "receipts": 631672,
+        "disbursements": 555845.63,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 0,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 185022,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "bio": "Rudolph Moise (born September 22, 1954) is the owner and medical director of Comprehensive Medical Aesthetics in Miami. Prior to becoming a physician, he served as a flight surgeon in the United States Air Force for more than 21 years, earning the rank of colonel, the highest position awarded to an American of Haitian descent at that time. Moise is running in 2026 to represent Florida's 20th congressional district.",
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-06-30"
     },
     {
       "name": "Shevrin \"Shev\" Jones",
@@ -130,7 +180,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 283694.58,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 283694.58,
+        "disbursements": 205082.94,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 253795.09,
+        "other_political_committee_contributions": 29500,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

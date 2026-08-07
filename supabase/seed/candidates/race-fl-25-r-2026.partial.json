@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-25-r-2026",
       "fec_candidate_id": "H2FL21108",
-      "total_raised": 438419.4,
+      "total_raised": 1488420.8,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 438419.4,
-        "disbursements": 64155.43,
+        "receipts": 1488420.8,
+        "disbursements": 1026705.31,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 166157.9,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 214215.32,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Daniel Franzese (born May 9, 1978) is an American actor best known for his roles in the films Bully and Mean Girls. Franzese is the creator of several live comedy shows, including the 2011 rock opera Jersey Shoresical: A Frickin' Rock Opera! and his one-man stand-up performance I've Never Really Made the Kind of Money to Become a Mess in 2013.",
       "top_industries": [
@@ -192,7 +193,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "George R. Moraitis",
@@ -205,15 +207,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-25-r-2026",
       "fec_candidate_id": "H6FL23147",
-      "total_raised": 698355.25,
+      "total_raised": 931848.95,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 698355.25,
-        "disbursements": 214429.86,
+        "receipts": 931848.95,
+        "disbursements": 660014.96,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 571408.45,
-        "other_political_committee_contributions": 10000
+        "individual_contributions": 803357.15,
+        "other_political_committee_contributions": 10000,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "George R. Moraitis Jr. (born October 29, 1970) is a Republican politician and a former member of the Florida House of Representatives, representing the 93rd District, which stretches from Boca Raton to Hollywood in eastern Broward County, from 2012 to 2018. Moraitis previously represented the 91st District from 2010 to 2012.",
       "top_industries": [
@@ -392,7 +395,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Joseph \"Joe\" Kaufman",
@@ -405,15 +409,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-25-r-2026",
       "fec_candidate_id": "H2FL20043",
-      "total_raised": 482037.21,
+      "total_raised": 631592.54,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 482037.21,
-        "disbursements": 74565.37,
+        "receipts": 631592.54,
+        "disbursements": 158934.71,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 482037.21,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 631592.54,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "bio": "Joseph or Joe Kaufman, Kauffman, Kauffmann, or Kaufmann could refer to:",
       "top_industries": [
@@ -578,7 +583,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-06-30"
     },
     {
       "name": "Raven Harrison",
@@ -591,15 +597,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-25-r-2026",
       "fec_candidate_id": "H6FL23139",
-      "total_raised": 701238.51,
+      "total_raised": 797235.43,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 701238.51,
-        "disbursements": 525204.1,
+        "receipts": 797235.43,
+        "disbursements": 722075.73,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 151571.82,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 247542.58,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
       "top_industries": [
@@ -771,7 +778,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Scott Singer",
@@ -784,15 +792,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-25-r-2026",
       "fec_candidate_id": "H6FL23188",
-      "total_raised": 1347715.25,
+      "total_raised": 2245960.14,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 1347715.25,
-        "disbursements": 116628.27,
+        "receipts": 2245960.14,
+        "disbursements": 1779740.69,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 914352.77,
-        "other_political_committee_contributions": 8500
+        "individual_contributions": 1480485.43,
+        "other_political_committee_contributions": 38000,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -970,7 +979,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {

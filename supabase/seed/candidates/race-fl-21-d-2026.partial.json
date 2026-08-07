@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-21-d-2026",
       "fec_candidate_id": "H6FL21034",
-      "total_raised": 32502.36,
+      "total_raised": 591221.59,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 32502.36,
-        "disbursements": 23351.42,
+        "receipts": 591221.59,
+        "disbursements": 406750.06,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 32502.36,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 591221.59,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "top_industries": [
         {
@@ -177,7 +178,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-06-30"
     },
     {
       "name": "James T. Martin",
@@ -190,15 +192,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-21-d-2026",
       "fec_candidate_id": "H6FL21075",
-      "total_raised": 306655.16,
+      "total_raised": 579319.2,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 306655.16,
-        "disbursements": 146272.04,
+        "receipts": 579319.2,
+        "disbursements": 391274.3,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 255654.16,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 428318.19,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -376,7 +379,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {

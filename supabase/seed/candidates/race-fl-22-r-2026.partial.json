@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 3797856.28,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 3797856.28,
+        "disbursements": 3096261.99,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 275038.92,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Casey Askar",
@@ -33,7 +45,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 2567760,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 2567760,
+        "disbursements": 1519363.96,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 57760,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "David Burck",
@@ -46,15 +70,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-22-r-2026",
       "fec_candidate_id": "H6FL22156",
-      "total_raised": 131000,
+      "total_raised": 253072.97,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 131000,
-        "disbursements": 20164.78,
+        "receipts": 253072.97,
+        "disbursements": 185965.41,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 131000,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 253072.97,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -232,7 +257,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Michael Carbonara",
@@ -245,15 +271,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-22-r-2026",
       "fec_candidate_id": "H6FL25035",
-      "total_raised": 2526427.75,
+      "total_raised": 6332572.73,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 2526427.75,
-        "disbursements": 1893254.99,
+        "receipts": 6332572.73,
+        "disbursements": 6295983.29,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 49131.95,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 54754.95,
+        "other_political_committee_contributions": 5000,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
       "top_industries": [
@@ -411,7 +438,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Michael Thompson",
@@ -428,7 +456,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 23613,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 23613,
+        "disbursements": 20645.74,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 23613,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Richard Evans",
@@ -463,7 +503,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 46150,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 46150,
+        "disbursements": 18282.72,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 31150,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

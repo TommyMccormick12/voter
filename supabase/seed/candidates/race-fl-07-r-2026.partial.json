@@ -619,7 +619,19 @@
         }
       ],
       "incumbent_source": "T26 adversarial verification 2026-08-06: sitting member of this district, qualified in this primary (DOE + Ballotpedia/Wikipedia/news cross-check)",
-      "bioguide_id": "M001216"
+      "bioguide_id": "M001216",
+      "total_raised": 880710.88,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 880710.88,
+        "disbursements": 853938.09,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 713362.55,
+        "other_political_committee_contributions": 46500,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Michael Don Johnson",
@@ -636,7 +648,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 60098.21,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 60098.21,
+        "disbursements": 61825.57,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 2520.96,
+        "other_political_committee_contributions": 482.35,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Ryan Elijah",
@@ -653,7 +677,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 355955.46,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 355955.46,
+        "disbursements": 169800.78,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 221855.46,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Sarah Ulrich",
@@ -670,7 +706,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 19059,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 19059,
+        "disbursements": 17665.46,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 8619,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

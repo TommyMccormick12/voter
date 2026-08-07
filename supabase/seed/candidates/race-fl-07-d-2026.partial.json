@@ -17,7 +17,19 @@
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
-      "carryover_note": "Identity-linked (not FEC-id-linked) to the pre-rebuild slug alan-mark-grayson (old race-fl-sen-d-2026, FEC id S2FL00581, active=false). DOE confirms Alan Grayson Qualified in FL-07 D under a different FEC filing (H6FL08213) -- a Senate-to-House office switch, so the FEC-id carryover rule does not fire automatically. Per SPEC A1 / the seven-deactivated-slugs directive, this record stays active=false and does not carry Senate-campaign stance/donor content into the House race. Judgment call -- see reconciliation report."
+      "carryover_note": "Identity-linked (not FEC-id-linked) to the pre-rebuild slug alan-mark-grayson (old race-fl-sen-d-2026, FEC id S2FL00581, active=false). DOE confirms Alan Grayson Qualified in FL-07 D under a different FEC filing (H6FL08213) -- a Senate-to-House office switch, so the FEC-id carryover rule does not fire automatically. Per SPEC A1 / the seven-deactivated-slugs directive, this record stays active=false and does not carry Senate-campaign stance/donor content into the House race. Judgment call -- see reconciliation report.",
+      "total_raised": 388153.35,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 388153.35,
+        "disbursements": 386772.28,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 59500.41,
+        "other_political_committee_contributions": 10000,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Bale Dalton",
@@ -34,7 +46,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 1201455.46,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1201455.46,
+        "disbursements": 438046.54,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 1044732.33,
+        "other_political_committee_contributions": 156600.01,
+        "coverage_end_date": "2026-06-30"
+      }
     },
     {
       "name": "Marialana Kinter",
@@ -51,7 +75,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 565078.09,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 565078.09,
+        "disbursements": 505224.85,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 564590.09,
+        "other_political_committee_contributions": 250,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

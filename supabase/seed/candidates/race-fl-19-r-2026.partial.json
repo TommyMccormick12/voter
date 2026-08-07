@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-19-r-2026",
       "fec_candidate_id": "H6FL19186",
-      "total_raised": 974858.77,
+      "total_raised": 1674013.1,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 974858.77,
-        "disbursements": 584741.16,
+        "receipts": 1674013.1,
+        "disbursements": 1571182.71,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 927288.59,
-        "other_political_committee_contributions": 4000
+        "individual_contributions": 1571546.96,
+        "other_political_committee_contributions": 17500,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -191,7 +192,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Chris Collins",
@@ -204,21 +206,23 @@
       "office": "U.S. House",
       "race_id": "race-fl-19-r-2026",
       "fec_candidate_id": "H6FL19228",
-      "total_raised": 910000,
+      "total_raised": 3410000,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 910000,
-        "disbursements": 604436.5,
+        "receipts": 3410000,
+        "disbursements": 2462419.55,
         "cash_on_hand_end_period": 0,
         "individual_contributions": 0,
-        "other_political_committee_contributions": 0
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Greg \"Tex\" Bukowski",
@@ -235,7 +239,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 20851.42,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 20851.42,
+        "disbursements": 11374.94,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 5831.42,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     },
     {
       "name": "Jim Oberweis",
@@ -248,15 +264,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-19-r-2026",
       "fec_candidate_id": "H6FL19129",
-      "total_raised": 4360995.58,
+      "total_raised": 5326139.86,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 4360995.58,
-        "disbursements": 1396396.85,
+        "receipts": 5326139.86,
+        "disbursements": 3081608.8,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 277186.2,
-        "other_political_committee_contributions": 4750
+        "individual_contributions": 312981.53,
+        "other_political_committee_contributions": 9750,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "James D. Oberweis (born June 10, 1946) is an American businessman, investment manager, and politician from the state of Illinois. The former owner of Oberweis Dairy in North Aurora near Chicago, he served as a member of the Illinois Senate, representing the 25th district from 2013 to 2021.",
       "top_industries": [
@@ -435,7 +452,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Jim Schwartzel",
@@ -448,15 +466,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-19-r-2026",
       "fec_candidate_id": "H6FL19137",
-      "total_raised": 1733843.46,
+      "total_raised": 2065485.29,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 1733843.46,
-        "disbursements": 258443.82,
+        "receipts": 2065485.29,
+        "disbursements": 1883585.84,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 719896.12,
-        "other_political_committee_contributions": 9500
+        "individual_contributions": 1000757.52,
+        "other_political_committee_contributions": 9500,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
       "top_industries": [
@@ -635,7 +654,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "John Strand",
@@ -648,15 +668,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-19-r-2026",
       "fec_candidate_id": "H6FL19194",
-      "total_raised": 82893.31,
+      "total_raised": 135297.14,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 82893.31,
-        "disbursements": 64978.81,
+        "receipts": 135297.14,
+        "disbursements": 131845.47,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 59913.46,
-        "other_political_committee_contributions": 3500
+        "individual_contributions": 109157.16,
+        "other_political_committee_contributions": 3500,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "John Gregory Strand is a contemporary American playwright. At times he has published under the name \"J.G. Strand\". Among his plays are Lincolnesque, Three Nights in Tehran, The Diaries, Otabenga, and The Originalist.\n Tom Walker is an adaption of The Devil and Tom Walker by Washington Irving. He has also written a number of English-language adaptions of plays written in French: among these are Lovers and Executioners (Antoine Jacob de Montfleury's La Femme Juge et Partie), for which he won the 1999 Charles MacArthur Award; The Miser (Molière); Lorenzaccio (Alfred de Musset); Hat! (Eugène Labic",
       "top_industries": [
@@ -814,7 +835,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Linda J. Sawyer",
@@ -833,7 +855,19 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "total_raised": 10550,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 10550,
+        "disbursements": 10498,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 0,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     },
     {
       "name": "Madison Cawthorn",
@@ -846,15 +880,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-19-r-2026",
       "fec_candidate_id": "H6FL19178",
-      "total_raised": 519541.69,
+      "total_raised": 874630.01,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 519541.69,
-        "disbursements": 286763.58,
+        "receipts": 874630.01,
+        "disbursements": 728435.88,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 19541.69,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 60708.46,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "David Madison Cawthorn (born August 1, 1995) is an American politician who served as the U.S. representative for North Carolina's 11th congressional district from 2021 to 2023. A member of the Republican Party, Cawthorn describes himself as a constitutional conservative.",
       "top_industries": [
@@ -1012,7 +1047,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Mike Pedersen",
@@ -1025,15 +1061,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-19-r-2026",
       "fec_candidate_id": "H6FL19145",
-      "total_raised": 56071,
+      "total_raised": 70548,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 56071,
-        "disbursements": 33367.14,
+        "receipts": 70548,
+        "disbursements": 58746.15,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 46071,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 60548,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "top_industries": [
         {
@@ -1190,7 +1227,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-06-30"
     },
     {
       "name": "Ola Hawatmeh",
@@ -1203,15 +1241,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-19-r-2026",
       "fec_candidate_id": "H6FL19160",
-      "total_raised": 379189.65,
+      "total_raised": 391537.22,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 379189.65,
-        "disbursements": 138652.34,
+        "receipts": 391537.22,
+        "disbursements": 291861.69,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 137314.66,
-        "other_political_committee_contributions": 4000
+        "individual_contributions": 143109.08,
+        "other_political_committee_contributions": 7500,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "The 2020 United States House of Representatives elections in New York were held on November 3, 2020, to elect the 27 U.S. representatives from the State of New York, one from each of the state's 27 congressional districts. The elections coincided with the 2020 U.S. presidential election, as well as other elections to the House of Representatives, elections to the United States Senate and various state and local elections. The primary election was held on June 23, 2020.",
       "top_industries": [
@@ -1390,7 +1429,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {
