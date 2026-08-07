@@ -55,6 +55,9 @@ async function main() {
         cycle: r.cycle,
         election_type: r.election_type ?? 'primary',
         primary_party: r.primary_party ?? null,
+        // Requires migration 013 (no-primary informational state, Spec A5).
+        no_primary: r.no_primary ?? false,
+        no_primary_note: r.no_primary_note ?? null,
       },
       { onConflict: 'id' }
     )

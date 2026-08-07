@@ -1,11 +1,26 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { getRace, getRacesByIds, getRacesForZip, isZipCovered } from '@/lib/data/races';
+import {
+  getRace,
+  getRacesByIds,
+  getRacesForZip,
+  getRacesForDistrict,
+  getRacesForDistricts,
+  getDistrictsForZip,
+  isZipCovered,
+} from '@/lib/data/races';
 import { getAnonClient } from '@/lib/data/adapter-anon';
 
 // T16 (Spec C3): races.ts must return a typed DataResult instead of
 // swallowing a Supabase error into `null` / `[]`. These tests pin down
 // that a DB outage (`ok: false`) is distinguishable from a legitimate
 // empty result (`ok: true, data: []` / `data: null`).
+//
+// T06 (Spec A3/A5): the crosswalk-backed contract. `getDistrictsForZip`
+// must classify a zip as single / split / out_of_coverage without ever
+// silently defaulting a split zip to its majority-share entry — that
+// was the exact bug this ticket replaces. `getRacesForDistrict` /
+// `getRacesForDistricts` must include the statewide Senate races and
+// must NOT include Governor (Spec A4 / Decision 8).
 
 vi.mock('@/lib/data/adapter-anon', () => ({
   getAnonClient: vi.fn(),
@@ -70,7 +85,7 @@ describe('data/races', () => {
       expect(result).toEqual({ ok: true, data: null });
     });
 
-    it('returns the mapped race on success', async () => {
+    it('returns the mapped race on success, defaulting no_primary to false (not yet a DB column)', async () => {
       const row = {
         id: 'race-fl-01-r-2026',
         state: 'FL',
@@ -85,7 +100,11 @@ describe('data/races', () => {
       mockedGetAnonClient.mockReturnValue({ from } as unknown as ReturnType<typeof getAnonClient>);
       const result = await getRace('race-fl-01-r-2026');
       expect(result.ok).toBe(true);
-      if (result.ok) expect(result.data?.id).toBe('race-fl-01-r-2026');
+      if (result.ok) {
+        expect(result.data?.id).toBe('race-fl-01-r-2026');
+        expect(result.data?.no_primary).toBe(false);
+        expect(result.data?.no_primary_note).toBeNull();
+      }
     });
   });
 
@@ -116,24 +135,125 @@ describe('data/races', () => {
     });
   });
 
-  describe('isZipCovered / getRacesForZip', () => {
-    it('isZipCovered is false for a zip outside FL district coverage', () => {
-      expect(isZipCovered('00000')).toBe(false);
+  describe('getDistrictsForZip / isZipCovered', () => {
+    it('classifies an out-of-coverage zip without touching the DB', () => {
+      expect(getDistrictsForZip('90210')).toEqual({ kind: 'out_of_coverage' });
+      expect(getDistrictsForZip('10001')).toEqual({ kind: 'out_of_coverage' });
+      expect(isZipCovered('90210')).toBe(false);
     });
 
-    it('getRacesForZip returns ok:true data:[] for an out-of-coverage zip without querying', async () => {
+    it('classifies a single-district zip (32502, Pensacola -> FL-01)', () => {
+      expect(getDistrictsForZip('32502')).toEqual({ kind: 'single', district: '01' });
+      expect(isZipCovered('32502')).toBe(true);
+    });
+
+    it('classifies a genuinely split zip (33142, Miami -> FL-24/FL-26) without picking a "winner"', () => {
+      const resolution = getDistrictsForZip('33142');
+      expect(resolution.kind).toBe('split');
+      if (resolution.kind === 'split') {
+        expect(resolution.districts).toEqual(expect.arrayContaining(['24', '26']));
+        expect(resolution.districts).toHaveLength(2);
+      }
+      expect(isZipCovered('33142')).toBe(true);
+    });
+
+    it('classifies the other audit split zip (32822, Orlando -> FL-09/FL-10)', () => {
+      const resolution = getDistrictsForZip('32822');
+      expect(resolution.kind).toBe('split');
+      if (resolution.kind === 'split') {
+        expect(resolution.districts).toEqual(expect.arrayContaining(['09', '10']));
+      }
+    });
+  });
+
+  describe('getRacesForDistrict', () => {
+    it('queries House R/D for the district plus statewide Senate R/D — no Governor ids', async () => {
+      const from = vi.fn(() => makeChain({ data: [], error: null }));
+      mockedGetAnonClient.mockReturnValue({ from } as unknown as ReturnType<typeof getAnonClient>);
+      const chain = makeChain({ data: [], error: null });
+      const inSpy = vi.fn((_column: string, _ids: string[]) => chain);
+      chain.in = inSpy;
+      from.mockReturnValue(chain);
+
+      const result = await getRacesForDistrict('10');
+      expect(result.ok).toBe(true);
+      expect(from).toHaveBeenCalledWith('races');
+      expect(inSpy).toHaveBeenCalledWith('id', [
+        'race-fl-10-r-2026',
+        'race-fl-10-d-2026',
+        'race-fl-sen-r-2026',
+        'race-fl-sen-d-2026',
+      ]);
+    });
+
+    it('never includes a race-fl-gov id (Spec A4 / Decision 8 — no Governor surface)', async () => {
+      const chain = makeChain({ data: [], error: null });
+      const inSpy = vi.fn((_column: string, _ids: string[]) => chain);
+      chain.in = inSpy;
+      const from = vi.fn(() => chain);
+      mockedGetAnonClient.mockReturnValue({ from } as unknown as ReturnType<typeof getAnonClient>);
+
+      await getRacesForDistrict('01');
+      const calledIds = inSpy.mock.calls[0]?.[1] as string[];
+      expect(calledIds.some((id) => id.includes('gov'))).toBe(false);
+    });
+  });
+
+  describe('getRacesForDistricts (explicit "show all N districts" fallback)', () => {
+    it('unions House races across districts and counts the statewide Senate race ids once', async () => {
+      const chain = makeChain({ data: [], error: null });
+      const inSpy = vi.fn((_column: string, _ids: string[]) => chain);
+      chain.in = inSpy;
+      const from = vi.fn(() => chain);
+      mockedGetAnonClient.mockReturnValue({ from } as unknown as ReturnType<typeof getAnonClient>);
+
+      await getRacesForDistricts(['24', '26']);
+      const calledIds = inSpy.mock.calls[0]?.[1] as string[];
+      expect(calledIds).toEqual(
+        expect.arrayContaining([
+          'race-fl-24-r-2026',
+          'race-fl-24-d-2026',
+          'race-fl-26-r-2026',
+          'race-fl-26-d-2026',
+          'race-fl-sen-r-2026',
+          'race-fl-sen-d-2026',
+        ])
+      );
+      // Senate ids appear exactly once each even though there are 2 districts.
+      expect(calledIds.filter((id) => id === 'race-fl-sen-r-2026')).toHaveLength(1);
+      expect(calledIds.filter((id) => id === 'race-fl-sen-d-2026')).toHaveLength(1);
+    });
+  });
+
+  describe('getRacesForZip', () => {
+    it('returns ok:true data:[] for an out-of-coverage zip without querying', async () => {
       const result = await getRacesForZip('00000');
       expect(result).toEqual({ ok: true, data: [] });
       expect(mockedGetAnonClient).not.toHaveBeenCalled();
     });
 
-    it('isZipCovered is true and getRacesForZip queries the district races for a covered zip', async () => {
-      expect(isZipCovered('32003')).toBe(true);
-      const from = vi.fn(() => makeChain({ data: [], error: null }));
+    it('resolves a single-district zip straight to its races', async () => {
+      const chain = makeChain({ data: [], error: null });
+      const inSpy = vi.fn((_column: string, _ids: string[]) => chain);
+      chain.in = inSpy;
+      const from = vi.fn(() => chain);
       mockedGetAnonClient.mockReturnValue({ from } as unknown as ReturnType<typeof getAnonClient>);
-      const result = await getRacesForZip('32003');
+
+      const result = await getRacesForZip('32502');
       expect(result.ok).toBe(true);
       expect(from).toHaveBeenCalledWith('races');
+      expect(inSpy).toHaveBeenCalledWith('id', [
+        'race-fl-01-r-2026',
+        'race-fl-01-d-2026',
+        'race-fl-sen-r-2026',
+        'race-fl-sen-d-2026',
+      ]);
+    });
+
+    it('never guesses a district for a split zip — returns ok:true data:[] without querying', async () => {
+      const result = await getRacesForZip('33142');
+      expect(result).toEqual({ ok: true, data: [] });
+      expect(mockedGetAnonClient).not.toHaveBeenCalled();
     });
   });
 });
