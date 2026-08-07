@@ -149,6 +149,15 @@ export async function listHouseVotes(
   return out;
 }
 
+/** Wire shape of one member row. The live API spells the key
+ * `bioguideID` (capital D — confirmed against real 2026-08-07 responses);
+ * `bioguideId` is kept as an alternate so a future API normalization to
+ * camelCase cannot silently zero out every member match again. */
+interface RawHouseVoteMemberRow extends Omit<HouseVoteMemberRow, 'bioguideId'> {
+  bioguideID?: string;
+  bioguideId?: string;
+}
+
 interface RawMemberVotesResponse {
   houseRollCallVoteMemberVotes?: {
     congress: number;
@@ -161,7 +170,7 @@ interface RawMemberVotesResponse {
     amendmentNumber?: string;
     voteQuestion?: string;
     result?: string;
-    results?: HouseVoteMemberRow[];
+    results?: RawHouseVoteMemberRow[];
   };
 }
 
@@ -188,7 +197,13 @@ export async function getHouseVoteMembers(
     amendmentNumber: detail.amendmentNumber,
     voteQuestion: detail.voteQuestion,
     result: detail.result,
-    members: detail.results ?? [],
+    // Normalize the wire key `bioguideID` to our camelCase `bioguideId`.
+    // Rows with neither spelling get '' — matches nothing, never
+    // `undefined === undefined`.
+    members: (detail.results ?? []).map(({ bioguideID, bioguideId, ...rest }) => ({
+      ...rest,
+      bioguideId: bioguideId ?? bioguideID ?? '',
+    })),
   };
 }
 

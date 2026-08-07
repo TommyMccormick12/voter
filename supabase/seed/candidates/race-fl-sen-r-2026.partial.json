@@ -202,592 +202,632 @@
       "bioguide_id": "M001244",
       "voting_record": [
         {
-          "bill_id": "sjres184-119",
-          "bill_title": "S.J.Res. 184: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on April 16, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-04-30",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s113",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sres690-119",
-          "bill_title": "S.Res. 690: An executive resolution authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar.",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on April 27, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "bill_id": "pn932-119",
+          "bill_title": "Erica Schwartz, of Florida, to be Director of the Centers for Disease Control and Prevention",
+          "bill_summary": "Cloture Motion Agreed to",
           "vote": "yea",
           "issue_slugs": [],
-          "vote_date": "2026-04-30",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s112",
-          "significance": "major"
+          "vote_date": "2026-08-05",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-878"
         },
         {
-          "bill_id": "sjres99-119",
-          "bill_title": "S.J.Res. 99: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by U.S. Citizenship and Immigration Services relating to “Removal of the Automatic Extension of Employment Autho",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on December 10, 2025. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
-          "vote": "nay",
-          "issue_slugs": [
-            "immigration"
-          ],
-          "vote_date": "2026-04-29",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s111",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sjres139-119",
-          "bill_title": "S.J.Res. 139: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to “Air Plan Disapproval; Colorado; Regional Haze Plan for the ",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 19, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-04-29",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s110",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "vote-undefined",
-          "bill_title": "On the Nomination PN730-14: Robert Cekada, of Florida, to be Director, Bureau of Alcohol, Tobacco, Firearms, and Explosives",
-          "bill_summary": null,
-          "vote": "yea",
-          "issue_slugs": [
-            "guns"
-          ],
-          "vote_date": "2026-04-29",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s109",
-          "significance": "major"
-        },
-        {
-          "bill_id": "sjres124-119",
-          "bill_title": "S.J.Res. 124: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Republic of Cuba that have not been authorized by Congress.",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 12, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "bill_id": "pn932-119",
+          "bill_title": "Erica Schwartz, of Florida, to be Director of the Centers for Disease Control and Prevention",
+          "bill_summary": "Nomination Confirmed",
           "vote": "yea",
           "issue_slugs": [],
-          "vote_date": "2026-04-28",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s108",
-          "significance": "procedural"
+          "vote_date": "2026-08-05",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-879"
         },
         {
-          "bill_id": "sres690-119",
-          "bill_title": "S.Res. 690: An executive resolution authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar.",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on April 27, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-04-28",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s107",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "vote-undefined",
-          "bill_title": "Motion to Invoke Cloture: Robert Cekada to be Director, Bureau of Alcohol, Tobacco, Firearms, and Explosives: Robert Cekada, of Florida, to be Director, Bureau of Alcohol, Tobacco, Firearms, and Explosives",
-          "bill_summary": null,
+          "bill_id": "pn73011-119",
+          "bill_title": "Francis Brooke, of Virginia, to be Deputy Secretary of the Treasury; and George McMaster, of South Carolina, to be an Assistant Secretary of the Treasury; and Erin Browne, of New York, to be an Under Secretary of the Treasury; and Sriprakash Kothari, of Massachusetts, to be an Assistant Secretary of the Treasury; and John Crews, of Virginia, to be a Member of the National Credit Union Administration Board for a term expiring August 2, 2031; and Christopher Phelan, of Minnesota, to be Chairman of the Council of Economic Advisers; and Christopher Nassar, of Oklahoma, to be United States Attorney for the Northern District of Oklahoma for the term of four years; and Kevin Lilly, of Texas, to be Assistant Secretary for Fish and Wildlife; and Mark Cruz, of Oregon, to be Director of the Indian Health Service, Department of Health and Human Services, for the term of four years; and Jules Hurst III, of Virginia, to be Under Secretary of Defense (Comptroller); and Roger Mason, of Virginia, to be Director of the National Reconnaissance Office; and Erich Hernandez-Baquero, of Florida, to be an Assistant Secretary of the Air Force; and Hal Duncan, of Texas, to be Deputy Director of the Office of Management and Budget; and Brien Lorenze, of Virginia, to be a Commissioner of the Consumer Product Safety Commission for a term of seven years from October 27, 2024; and David Cummins, of Virginia, to be Administrator of the Transportation Security Administration for a term of five years; and Karen Jean Hedlund, of New York, to be a Member of the Surface Transportation Board for a term expiring December 31, 2030; and Thomas B. Chapman, of Maryland, to be a Member of the National Transportation Safety Board for a term expiring December 31, 2028; and Karen Sessions, of Texas, to be a Commissioner of the Consumer Product Safety Commission for a term of seven years from October 27, 2025; and Edward Eppler, of Connecticut, to be Chief Financial Officer, Department of Transportation; and Katherine Bowles, of Alabama, to be an Assistant Secretary of State (Legislative Affairs); and Donald Blome, of Illinois, to be an Assistant Secretary of State (Near Eastern Affairs); and Brendan Hanrahan, of New York, to be an Assistant Secretary of State (European and Eurasian Affairs); and Juan Segura, of Virginia, to be a Member of the Board of Directors of the Inter-American Foundation for a term expiring September 20, 2032; and Juan Segura, of Virginia, to be a Member of the Board of Directors of the Inter-American Foundation for a term expiring September 20, 2026; and Juan Segura, of Virginia, to be an Assistant Secretary of State (Western Hemisphere Affairs); and Laurence Socha, of Illinois, to be Ambassador to the Republic of The Gambia; and Daniel Perez, of Florida, to be Ambassador to the Federative Republic of Brazil; and John Hurley, of California, to be Representative of the United States of America to the Organization for Economic Cooperation and Development, with the rank of Ambassador; and Joseph Burkhalter, of Georgia, to be Ambassador to the Republic of Moldova; and Stanley Brown, of Virginia, to be Ambassador to the Republic of Equatorial Guinea; and Christopher Anderson, of Wisconsin, to be Ambassador to the Kingdom of Cambodia; and Barbera Thornhill, of North Carolina, to be Director of the Office to Monitor and Combat Trafficking, with the rank of Ambassador at Large; and Rudolph Bauer, of South Carolina, to be Ambassador to Belize; and Stuart Gordon Nash, of the District of Columbia, to be an Associate Judge of the District of Columbia Court of Appeals for the term of fifteen years; and James Andrew Crowell IV, of the District of Columbia, to be an Associate Judge of the District of Columbia Court of Appeals for the term of fifteen years; and Charles Baldis, of Virginia, to be Special Counsel, Office of Special Counsel, for the term of five years; and Cameron Hamilton, of Virginia, to be Administrator of the Federal Emergency Management Agency, Department of Homeland Security; and John Barlow Timmer, of the District of Columbia, to be an Associate Judge of the Superior Court of the District of Columbia for the term of fifteen years; and Christine Michelle Macey, of the District of Columbia, to be an Associate Judge of the Superior Court of the District of Columbia for the term of fifteen years; and Craig Edward Leen, of the District of Columbia, to be an Associate Judge of the Superior Court of the District of Columbia for the term of fifteen years; and Michael Christopher DiLorenzo, of the District of Columbia, to be an Associate Judge of the Superior Court of the District of Columbia for the term of fifteen years, Craig S. Iscoe, retired; and James Woodruff, of Florida, to be Chairman of the Merit Systems Protection Board; and Brian Cavanaugh, of Maryland, to be Under Secretary for Management, Department of Homeland Security; and Bradford Pentony Wilson, of New Jersey, to be Archivist of the United States; and Sharon E. Goodie, of the District of Columbia, to be an Associate Judge of the Superior Court of the District of Columbia for the term of fifteen years; and Christopher Michael De Bono, of the District of Columbia, to be an Associate Judge of the Superior Court of the District of Columbia for the term of fifteen years; and Charlton Allen, of North Carolina, to be General Counsel of the Federal Labor Relations Authority for a term of five years; and Don Richard Berthiaume, Jr., of Virginia, to be Inspector General, Department of Justice; and Kaveh Farzad, of Maryland, to be an Assistant Secretary of Energy (International Affairs); and William Hague, of Washington, to be an Assistant Secretary of the Interior; and Brett Matsumoto, of Maryland, to be Commissioner of Labor Statistics, Department of Labor, for a term of four years; and David M. Prouty, of Maryland, to be a Member of the National Labor Relations Board for the term of five years expiring August 27, 2031; and James Macy, of Wisconsin, to be a Member of the National Labor Relations Board for the term of five years expiring August 27, 2030; and Michael McDonald, of the District of Columbia, to be Chairperson of the National Endowment for the Humanities for a term of four years; and Michael Vance, of Virginia, to be an Assistant Secretary of State (Intelligence and Research); and Sean Costello, of Alabama, to be United States Attorney for the Southern District of Alabama for the term of four years; and Glen Smith, of Iowa, to be Under Secretary of Agriculture for Rural Development; and Frank Garcia, of Virginia, to be a Member of the Board of Directors of the African Development Foundation for a term expiring September 22, 2031; and David Brat, of Virginia, to be Ambassador to the Commonwealth of Australia; and Eric Wendt, of California, to be Ambassador  to the Republic of Albania; and William Trachman, of Colorado, to be Ambassador to the United Republic of Tanzania; and Michael Kavoukjian, of Florida, to be Ambassador to the Kingdom of Norway; and Jason Holt, of Oklahoma, to be United States Marshal for the Northern District of Oklahoma for the term of four years; and Jack Chambers, of West Virginia, to be United States Marshal for the Southern District of West Virginia for the term of four years; and James Arnott, of Missouri, to be United States Marshal for the Western District of Missouri for the term of four years; and Timothy VerHey, of Michigan, to be United States Attorney for the Western District of Michigan for the term of four years; and Johnson TeeHee II, of Oklahoma, to be United States Marshal for the Eastern District of Oklahoma for the term of four years; and Kenneth Sorenson, of Hawaii, to be United States Attorney for the District of Hawaii for the term of four years; and Fleet White, of Virginia, to be an Assistant Secretary of State (Political-Military Affairs); and Preston Wells Griffith III, of Virginia, to be Representative of the United States of America to the International Atomic Energy Agency, with the rank of Ambassador; and Adam Cassady, of Virginia, to be Ambassador at Large for Cyberspace and Digital Policy; and Todd Steggerda, of Virginia, to be Representative of the United States of America to the Office of the United Nations and Other International Organizations in Geneva, with the rank of Ambassador; and John Breslow, of Arizona, to be Ambassador to the Republic of Cyprus",
+          "bill_summary": "Cloture Motion Agreed to",
           "vote": "yea",
           "issue_slugs": [
-            "guns"
-          ],
-          "vote_date": "2026-04-27",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s106",
-          "significance": "major"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "yea",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-23",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s105",
-          "significance": "major"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "yea",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-23",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s104",
-          "significance": "major"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "nay",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-23",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s103",
-          "significance": "major"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "nay",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-23",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s102",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "nay",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-23",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s101",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "nay",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-23",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s100",
-          "significance": "major"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "yea",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-23",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s99",
-          "significance": "major"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "nay",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-23",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s98",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "yea",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-23",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s97",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "yea",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-23",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s96",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "nay",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-22",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s95",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "nay",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-22",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s94",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "nay",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-22",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s93",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "yea",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-22",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s92",
-          "significance": "major"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "nay",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-22",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s91",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "nay",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-22",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s90",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "nay",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-22",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s89",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sjres114-119",
-          "bill_title": "S.J.Res. 114: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 5, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
-          "vote": "nay",
-          "issue_slugs": [],
-          "vote_date": "2026-04-22",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s88",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sconres33-119",
-          "bill_title": "S.Con.Res. 33: A concurrent resolution setting forth the congressional budget for the United States Government for fiscal year 2026 and setting forth the appropriate budgetary levels for fiscal years 2027 through 2035.",
-          "bill_summary": "This concurrent resolution was agreed to by both chambers of Congress on April 29, 2026. That is the end of the legislative process for concurrent resolutions. They do not have the force of law.",
-          "vote": "yea",
-          "issue_slugs": [
-            "housing"
-          ],
-          "vote_date": "2026-04-21",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s87",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "vote-undefined",
-          "bill_title": "On the Nomination PN787-1: Andrew B. Davis, of Texas, to be United States District Judge for the Western District of Texas",
-          "bill_summary": null,
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-04-20",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s86",
-          "significance": "major"
-        },
-        {
-          "bill_id": "vote-undefined",
-          "bill_title": "Motion to Invoke Cloture: Andrew B. Davis to be U.S. District Judge for the Western District of Texas: Andrew B. Davis, of Texas, to be United States District Judge for the Western District of Texas",
-          "bill_summary": null,
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-04-16",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s85",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hjres140-119",
-          "bill_title": "H.J.Res. 140: Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Lou",
-          "bill_summary": "This resolution was enacted after being signed by the President on April 27, 2026.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-04-16",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s84",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hjres140-119",
-          "bill_title": "H.J.Res. 140: Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Lou",
-          "bill_summary": "This resolution was enacted after being signed by the President on April 27, 2026.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-04-15",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s83",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "hjres140-119",
-          "bill_title": "H.J.Res. 140: Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Lou",
-          "bill_summary": "This resolution was enacted after being signed by the President on April 27, 2026.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-04-15",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s82",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sjres138-119",
-          "bill_title": "S.J.Res. 138: A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Israel of certain defense articles and services.",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 19, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
-          "vote": "nay",
-          "issue_slugs": [
+            "healthcare",
+            "climate",
             "foreign_policy"
           ],
-          "vote_date": "2026-04-15",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s81",
-          "significance": "procedural"
+          "vote_date": "2026-08-05",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-880"
         },
         {
-          "bill_id": "sjres32-119",
-          "bill_title": "S.J.Res. 32: A joint resolution providing for congressional disapproval of the proposed foreign military sale to the Government of Israel of certain defense articles and services.",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 10, 2025. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
-          "vote": "nay",
-          "issue_slugs": [
-            "foreign_policy"
-          ],
-          "vote_date": "2026-04-15",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s80",
-          "significance": "procedural"
-        },
-        {
-          "bill_id": "sjres123-119",
-          "bill_title": "S.J.Res. 123: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 10, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "bill_id": "sjres187-119",
+          "bill_title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Modification to the Start of the Submission Period for Perfluoroalkyl and Polyfluoroalkyl Substances (PFAS) Reporting and Recordkeeping Under TSCA 8(a)(7)\".",
+          "bill_summary": "Motion to Proceed Rejected",
           "vote": "nay",
           "issue_slugs": [],
-          "vote_date": "2026-04-15",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s79",
-          "significance": "procedural"
+          "vote_date": "2026-08-05",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-881"
         },
         {
-          "bill_id": "vote-undefined",
-          "bill_title": "On the Nomination PN787-5: Christopher R. Wolfe, of Texas, to be United States District Judge for the Western District of Texas",
-          "bill_summary": null,
+          "bill_id": "hr6500-119",
+          "bill_title": "A bill to extend duty-free treatment provided with respect to imports from certain countries in Africa under the African Growth and Opportunity Act, to extend customs user fees, and for other purposes.",
+          "bill_summary": "Cloture on the Motion to Proceed Agreed to",
           "vote": "yea",
           "issue_slugs": [],
-          "vote_date": "2026-04-14",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s78",
-          "significance": "major"
+          "vote_date": "2026-08-03",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-877"
         },
         {
-          "bill_id": "vote-undefined",
-          "bill_title": "Motion to Invoke Cloture: Christopher R. Wolfe to be U.S. District Judge for the Western District of Texas: Christopher R. Wolfe, of Texas, to be United States District Judge for the Western District of Texas",
-          "bill_summary": null,
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-04-14",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s77",
-          "significance": "major"
-        },
-        {
-          "bill_id": "vote-undefined",
-          "bill_title": "On the Nomination PN787-3: John Thomas Shepherd, of Arkansas, to be United States District Judge for the Western District of Arkansas",
-          "bill_summary": null,
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-04-14",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s76",
-          "significance": "major"
-        },
-        {
-          "bill_id": "vote-undefined",
-          "bill_title": "Motion to Invoke Cloture: John Thomas Shepherd to be U.S. District Judge for the Western District of Arkansas: John Thomas Shepherd, of Arkansas, to be United States District Judge for the Western District of Arkansas",
-          "bill_summary": null,
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-04-13",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s75",
-          "significance": "major"
-        },
-        {
-          "bill_id": "hr7147-119",
-          "bill_title": "H.R. 7147: Homeland Security and Further Additional Continuing Appropriations Act, 2026.",
-          "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-03-26",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s74",
-          "significance": "major"
-        },
-        {
-          "bill_id": "s1383-119",
-          "bill_title": "S. 1383: Safeguard American Voter Eligibility Act / SAVE America Act",
-          "bill_summary": "This bill was passed by Congress on February 11, 2026 and goes to the President next.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-03-26",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s73",
-          "significance": "major"
-        },
-        {
-          "bill_id": "sjres103-119",
-          "bill_title": "S.J.Res. 103: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Veterans Affairs relating to “Reproductive Health Services”.",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on January 27, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "bill_id": "sjres199-119",
+          "bill_title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Health and Human Services relating to \"Restoring Flexibility in the Child Care and Development Fund (CCDF)\".",
+          "bill_summary": "Motion to Proceed Rejected",
           "vote": "nay",
           "issue_slugs": [
             "healthcare",
             "climate"
           ],
-          "vote_date": "2026-03-25",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s72",
-          "significance": "procedural"
+          "vote_date": "2026-07-30",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-874"
         },
         {
-          "bill_id": "hr7147-119",
-          "bill_title": "H.R. 7147: Homeland Security and Further Additional Continuing Appropriations Act, 2026.",
-          "bill_summary": "This bill was enacted after being signed by the President on April 30, 2026.",
-          "vote": "yea",
-          "issue_slugs": [],
-          "vote_date": "2026-03-25",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s71",
-          "significance": "major"
-        },
-        {
-          "bill_id": "sjres107-119",
-          "bill_title": "S.J.Res. 107: A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to “Beginning of Construction Requirements for Purposes of the Termina",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on February 12, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "bill_id": "sjres181-119",
+          "bill_title": "A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+          "bill_summary": "Motion to Discharge Rejected",
           "vote": "nay",
           "issue_slugs": [],
-          "vote_date": "2026-03-25",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s70",
-          "significance": "procedural"
+          "vote_date": "2026-07-30",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-875"
         },
         {
-          "bill_id": "sjres116-119",
-          "bill_title": "S.J.Res. 116: A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
-          "bill_summary": "This resolution is in the first stage of the legislative process. It was introduced into Congress on March 5, 2026. It will typically be considered by committee next before it is possibly sent on to the House or Senate as a whole.",
+          "bill_id": "sres817-119",
+          "bill_title": "An executive resolution authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar.",
+          "bill_summary": "Resolution Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-30",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-876"
+        },
+        {
+          "bill_id": "hr5334-119",
+          "bill_title": "A bill to amend the Internal Revenue Code of 1986 to allow early childhood educators to take the educator expense deduction, and for other purposes.",
+          "bill_summary": "Motion to Proceed Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-29",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-872"
+        },
+        {
+          "bill_id": "sres817-119",
+          "bill_title": "An executive resolution authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar.",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-29",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-873"
+        },
+        {
+          "bill_id": "pn1092-119",
+          "bill_title": "Walter Clayton, of New York, to be Director of National Intelligence",
+          "bill_summary": "Nomination Confirmed",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-28",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-870"
+        },
+        {
+          "bill_id": "hr5334-119",
+          "bill_title": "A bill to amend the Internal Revenue Code of 1986 to allow early childhood educators to take the educator expense deduction, and for other purposes.",
+          "bill_summary": "Cloture on the Motion to Proceed Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-28",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-871"
+        },
+        {
+          "bill_id": "pn1092-119",
+          "bill_title": "Walter Clayton, of New York, to be Director of National Intelligence",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-27",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-869"
+        },
+        {
+          "bill_id": "sjres180-119",
+          "bill_title": "A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+          "bill_summary": "Motion to Discharge Rejected",
           "vote": "nay",
           "issue_slugs": [],
-          "vote_date": "2026-03-24",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s69",
-          "significance": "procedural"
+          "vote_date": "2026-07-23",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-866"
         },
         {
-          "bill_id": "s1383-119",
-          "bill_title": "S. 1383: Safeguard American Voter Eligibility Act / SAVE America Act",
-          "bill_summary": "This bill was passed by Congress on February 11, 2026 and goes to the President next.",
+          "bill_id": "pn9996-119",
+          "bill_title": "Daniel Mack Traynor, of North Dakota, to be United States Circuit Judge for the Eighth Circuit",
+          "bill_summary": "Nomination Confirmed",
           "vote": "yea",
           "issue_slugs": [],
-          "vote_date": "2026-03-24",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s68",
-          "significance": "procedural"
+          "vote_date": "2026-07-23",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-867"
         },
         {
-          "bill_id": "s1383-119",
-          "bill_title": "S. 1383: Safeguard American Voter Eligibility Act / SAVE America Act",
-          "bill_summary": "This bill was passed by Congress on February 11, 2026 and goes to the President next.",
+          "bill_id": "pn9995-119",
+          "bill_title": "Antonio M. Pozos, of Pennsylvania, to be United States District Judge for the Eastern District of Pennsylvania",
+          "bill_summary": "Nomination Confirmed",
           "vote": "yea",
           "issue_slugs": [],
-          "vote_date": "2026-03-24",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s67",
-          "significance": "procedural"
+          "vote_date": "2026-07-23",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-868"
         },
         {
-          "bill_id": "vote-undefined",
-          "bill_title": "On the Nomination PN786-9: Colin McDonald, of California, to be an Assistant Attorney General",
-          "bill_summary": null,
+          "bill_id": "pn9381-119",
+          "bill_title": "Benjamin M. Flowers, of Ohio, to be United States Circuit Judge for the Sixth Circuit",
+          "bill_summary": "Nomination Confirmed",
           "vote": "yea",
           "issue_slugs": [],
-          "vote_date": "2026-03-24",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s65",
-          "significance": "major"
+          "vote_date": "2026-07-22",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-861"
         },
         {
-          "bill_id": "vote-undefined",
-          "bill_title": "Motion to Invoke Cloture: Colin McDonald to be an Assistant Attorney General: Colin McDonald, of California, to be an Assistant Attorney General",
-          "bill_summary": null,
+          "bill_id": "pn9993-119",
+          "bill_title": "Michael C. Martin, of Michigan, to be United States District Judge for the Eastern District of Michigan",
+          "bill_summary": "Cloture Motion Agreed to",
           "vote": "yea",
           "issue_slugs": [],
-          "vote_date": "2026-03-23",
-          "source": "govtrack",
-          "source_url": "https://www.govtrack.us/congress/votes/119-2026/s64",
-          "significance": "major"
+          "vote_date": "2026-07-22",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-862"
+        },
+        {
+          "bill_id": "pn9993-119",
+          "bill_title": "Michael C. Martin, of Michigan, to be United States District Judge for the Eastern District of Michigan",
+          "bill_summary": "Nomination Confirmed",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-22",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-863"
+        },
+        {
+          "bill_id": "pn9995-119",
+          "bill_title": "Antonio M. Pozos, of Pennsylvania, to be United States District Judge for the Eastern District of Pennsylvania",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-22",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-864"
+        },
+        {
+          "bill_id": "pn9996-119",
+          "bill_title": "Daniel Mack Traynor, of North Dakota, to be United States Circuit Judge for the Eighth Circuit",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-22",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-865"
+        },
+        {
+          "bill_id": "pn8518-119",
+          "bill_title": "Kara Marie Westercamp, of Virginia, to be a Judge of the United States Court of International Trade",
+          "bill_summary": "Nomination Confirmed",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-21",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-860"
+        },
+        {
+          "bill_id": "pn9381-119",
+          "bill_title": "Benjamin M. Flowers, of Ohio, to be United States Circuit Judge for the Sixth Circuit",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-07-20",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-859"
+        },
+        {
+          "bill_id": "pn8518-119",
+          "bill_title": "Kara Marie Westercamp, of Virginia, to be a Judge of the United States Court of International Trade",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-16",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-857"
+        },
+        {
+          "bill_id": "sjres198-119",
+          "bill_title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare &#38; Medicaid Services of the Department of Health and Human Services relating to \"Medicare Program; Implementation of Prior Authorization for Select Services for the Wasteful and Inappropriate Services Reduction (WISeR) Model\".",
+          "bill_summary": "Motion to Proceed Rejected",
+          "vote": "nay",
+          "issue_slugs": [
+            "healthcare",
+            "climate"
+          ],
+          "vote_date": "2026-07-16",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-858"
+        },
+        {
+          "bill_id": "pn9304-119",
+          "bill_title": "Jeffrey T. Kuntz, of Florida, to be United States District Judge for the Southern District of Florida",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-15",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-855"
+        },
+        {
+          "bill_id": "pn9304-119",
+          "bill_title": "Jeffrey T. Kuntz, of Florida, to be United States District Judge for the Southern District of Florida",
+          "bill_summary": "Nomination Confirmed",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-15",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-856"
+        },
+        {
+          "bill_id": "pn9382-119",
+          "bill_title": "Matthew A. Schwartz, of New York, to be United States Circuit Judge for the Second Circuit",
+          "bill_summary": "Nomination Confirmed",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-14",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-853"
+        },
+        {
+          "bill_id": "s4784-119",
+          "bill_title": "An original bill to authorize appropriations for fiscal year 2027 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for other purposes.",
+          "bill_summary": "Cloture on the Motion to Proceed Rejected",
+          "vote": "yea",
+          "issue_slugs": [
+            "climate",
+            "foreign_policy"
+          ],
+          "vote_date": "2026-07-14",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-854"
+        },
+        {
+          "bill_id": "pn9303-119",
+          "bill_title": "Arthur Roberts Jones, of Texas, to be United States District Judge for the Southern District of Texas",
+          "bill_summary": "Nomination Confirmed",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-07-13",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-852"
+        },
+        {
+          "bill_id": "pn9307-119",
+          "bill_title": "John George Edward Marck, of Texas, to be United States District Judge for the Southern District of Texas",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-06-24",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-844"
+        },
+        {
+          "bill_id": "pn9307-119",
+          "bill_title": "John George Edward Marck, of Texas, to be United States District Judge for the Southern District of Texas",
+          "bill_summary": "Nomination Confirmed",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-06-24",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-845"
+        },
+        {
+          "bill_id": "pn9302-119",
+          "bill_title": "Michael J. Hendershot, of Ohio, to be United States District Judge for the Northern District of Ohio",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-06-24",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-846"
+        },
+        {
+          "bill_id": "pn9302-119",
+          "bill_title": "Michael J. Hendershot, of Ohio, to be United States District Judge for the Northern District of Ohio",
+          "bill_summary": "Nomination Confirmed",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-06-24",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-847"
+        },
+        {
+          "bill_id": "pn9303-119",
+          "bill_title": "Arthur Roberts Jones, of Texas, to be United States District Judge for the Southern District of Texas",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-06-24",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-848"
+        },
+        {
+          "bill_id": "sjres196-119",
+          "bill_title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+          "bill_summary": "Motion to Proceed Rejected",
+          "vote": "nay",
+          "issue_slugs": [
+            "climate",
+            "education"
+          ],
+          "vote_date": "2026-06-24",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-849"
+        },
+        {
+          "bill_id": "pn9382-119",
+          "bill_title": "Matthew A. Schwartz, of New York, to be United States Circuit Judge for the Second Circuit",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-06-24",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-850"
+        },
+        {
+          "bill_id": "sjres185-119",
+          "bill_title": "A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+          "bill_summary": "Motion to Proceed Rejected",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-06-24",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-851"
+        },
+        {
+          "bill_id": "pn8593-119",
+          "bill_title": "Darrell Owens, of Pennsylvania, to be U.S. Representative to the Organization for Security and Cooperation in Europe, with the rank of Ambassador",
+          "bill_summary": "Nomination Confirmed",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-06-23",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-842"
+        },
+        {
+          "bill_id": "hconres86-119",
+          "bill_title": "A concurrent resolution directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+          "bill_summary": "Concurrent Resolution Agreed to",
+          "vote": "nay",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-06-23",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-843"
+        },
+        {
+          "bill_id": "hr6644-119",
+          "bill_title": "A bill a bill to increase the supply of housing in America, and for other purposes.",
+          "bill_summary": "Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-06-22",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-841"
+        },
+        {
+          "bill_id": "hr6644-119",
+          "bill_title": "A bill a bill to increase the supply of housing in America, and for other purposes.",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-06-18",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-839"
+        },
+        {
+          "bill_id": "pn73033-119",
+          "bill_title": "George Holding, of North Carolina, to be United States Director of the European Bank for Reconstruction and Development",
+          "bill_summary": "Nomination Confirmed",
+          "vote": "absent",
+          "issue_slugs": [],
+          "vote_date": "2026-06-18",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-840"
+        },
+        {
+          "bill_id": "pn9018-119",
+          "bill_title": "Michelle Steel, of California, to be Ambassador to the Republic of Korea",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-06-17",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-835"
+        },
+        {
+          "bill_id": "pn9018-119",
+          "bill_title": "Michelle Steel, of California, to be Ambassador to the Republic of Korea",
+          "bill_summary": "Nomination Confirmed",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-06-17",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-836"
+        },
+        {
+          "bill_id": "pn73033-119",
+          "bill_title": "George Holding, of North Carolina, to be United States Director of the European Bank for Reconstruction and Development",
+          "bill_summary": "Cloture Motion Agreed to",
+          "vote": "yea",
+          "issue_slugs": [],
+          "vote_date": "2026-06-17",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-837"
+        },
+        {
+          "bill_id": "sres616-119",
+          "bill_title": "A resolution requesting information on Honduras's human rights practices pursuant to section 502B(c) of the Foreign Assistance Act of 1961.",
+          "bill_summary": "Motion to Discharge Rejected",
+          "vote": "nay",
+          "issue_slugs": [
+            "foreign_policy"
+          ],
+          "vote_date": "2026-06-17",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-838"
+        },
+        {
+          "bill_id": "sjres190-119",
+          "bill_title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Executive Office for Immigration Review relating to \"Appellate Procedures for the Board of Immigration Appeals\".",
+          "bill_summary": "Motion to Proceed Rejected",
+          "vote": "nay",
+          "issue_slugs": [
+            "immigration"
+          ],
+          "vote_date": "2026-06-16",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-832"
+        },
+        {
+          "bill_id": "sjres172-119",
+          "bill_title": "A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+          "bill_summary": "Motion to Discharge Rejected",
+          "vote": "nay",
+          "issue_slugs": [],
+          "vote_date": "2026-06-16",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-833"
+        },
+        {
+          "bill_id": "hr6644-119",
+          "bill_title": "A bill a bill to increase the supply of housing in America, and for other purposes.",
+          "bill_summary": "Motion to Proceed Agreed to",
+          "vote": "yea",
+          "issue_slugs": [
+            "housing"
+          ],
+          "vote_date": "2026-06-16",
+          "source": "voteview",
+          "source_url": null,
+          "significance": "major",
+          "roll_call_id": "senate-119-834"
         }
       ],
       "top_stances": [

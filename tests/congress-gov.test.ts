@@ -203,6 +203,97 @@ describe('listHouseVotes pagination (FIX: a session runs ~700 roll calls, well p
   });
 });
 
+describe('getHouseVoteMembers wire-key normalization (FIX 2026-08-07: the live API ' +
+  'spells the member key bioguideID, not bioguideId — the first live run matched ' +
+  'zero members and would have written empty voting records for every incumbent)', () => {
+  const original = process.env.CONGRESS_GOV_API_KEY;
+
+  beforeEach(() => {
+    process.env.CONGRESS_GOV_API_KEY = 'test-key';
+    mockFetchCached.mockReset();
+  });
+
+  afterEach(() => {
+    if (original === undefined) delete process.env.CONGRESS_GOV_API_KEY;
+    else process.env.CONGRESS_GOV_API_KEY = original;
+  });
+
+  function memberVotesResponse(results: Array<Record<string, unknown>>) {
+    return {
+      houseRollCallVoteMemberVotes: {
+        congress: 119,
+        sessionNumber: 2,
+        rollCallNumber: 173,
+        startDate: '2026-05-14',
+        legislationType: 'HR',
+        legislationNumber: '42',
+        voteQuestion: 'On Passage',
+        result: 'Passed',
+        results,
+      },
+    };
+  }
+
+  it('normalizes the wire key bioguideID to bioguideId', async () => {
+    mockFetchCached.mockResolvedValueOnce(
+      memberVotesResponse([
+        { bioguideID: 'P000622', firstName: 'Jimmy', lastName: 'Patronis', voteCast: 'Aye' },
+      ]),
+    );
+
+    const detail = await getHouseVoteMembers(119, 2, 173);
+
+    expect(detail?.members).toHaveLength(1);
+    expect(detail?.members[0].bioguideId).toBe('P000622');
+    expect(detail?.members[0].voteCast).toBe('Aye');
+  });
+
+  it('still accepts camelCase bioguideId if the API ever normalizes its spelling', async () => {
+    mockFetchCached.mockResolvedValueOnce(
+      memberVotesResponse([{ bioguideId: 'P000622', voteCast: 'Nay' }]),
+    );
+
+    const detail = await getHouseVoteMembers(119, 2, 173);
+
+    expect(detail?.members[0].bioguideId).toBe('P000622');
+  });
+
+  it('a row with neither spelling maps to an empty id, never undefined (undefined would match an undefined search key)', async () => {
+    mockFetchCached.mockResolvedValueOnce(
+      memberVotesResponse([{ voteCast: 'Aye' }]),
+    );
+
+    const detail = await getHouseVoteMembers(119, 2, 173);
+
+    expect(detail?.members[0].bioguideId).toBe('');
+  });
+
+  it('getMemberHouseVotes finds a member through the wire-shaped roster end to end', async () => {
+    mockFetchCached.mockImplementation(async (url: unknown) => {
+      const u = new URL(url as string);
+      if (u.pathname.endsWith('/members')) {
+        return memberVotesResponse([
+          { bioguideID: 'P000622', voteCast: 'Aye' },
+          { bioguideID: 'A000055', voteCast: 'Nay' },
+        ]);
+      }
+      // list page
+      return {
+        houseRollCallVotes: [
+          { congress: 119, sessionNumber: 2, rollCallNumber: 173, startDate: '2026-05-14' },
+        ],
+        pagination: { count: 1 },
+      };
+    });
+
+    const votes = await getMemberHouseVotes('P000622', 119, [2], 50);
+
+    expect(votes).toHaveLength(1);
+    expect(votes[0].position.bioguideId).toBe('P000622');
+    expect(votes[0].position.voteCast).toBe('Aye');
+  });
+});
+
 describe('billUrlFromHouseVote', () => {
   it('builds a congress.gov bill URL for a known type', () => {
     expect(
