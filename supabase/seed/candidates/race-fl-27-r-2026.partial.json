@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-27-r-2026",
       "fec_candidate_id": "H8FL27185",
-      "total_raised": 1373240.18,
+      "total_raised": 1999399.08,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 1373240.18,
-        "disbursements": 846727.53,
+        "receipts": 1999399.08,
+        "disbursements": 1150679.49,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 404646.52,
-        "other_political_committee_contributions": 421428.55
+        "individual_contributions": 550314.85,
+        "other_political_committee_contributions": 533178.55,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -805,35 +806,68 @@
           "stance_id": "maria-elvira-salazar-foreign_policy",
           "issue_slug": "foreign_policy",
           "stance": "support",
-          "summary": "Support extending FISA authorities for national security intelligence operations.",
-          "source_url": "",
-          "source_excerpt": "YEA on S. 4465: A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978",
+          "summary": "Supports hardline U.S. policy against Cuba, Venezuela, and Nicaragua's authoritarian regimes, including sanctions legislation (RENACER Act) and continued Cuba terror-list designation.",
+          "source_url": "https://mariaelvirasalazar.com/issues/fight_socialism/",
           "confidence": 85,
-          "track_record_note": "Voted YEA on s4465-119 extending FISA authorities.",
+          "track_record_note": "Voted YEA on hr8595-119 (FY2027 national security/State Department appropriations) and hr8800-119 (FY2027 NDAA defense authorization); voted NAY on hconres89-119, opposing a resolution to withdraw U.S. forces from Iran hostilities.",
           "track_record_citations": [
-            "s4465-119"
+            "hr8595-119",
+            "hr8800-119",
+            "hconres89-119"
           ]
         },
         {
-          "stance_id": "maria-elvira-salazar-healthcare",
-          "issue_slug": "healthcare",
+          "stance_id": "maria-elvira-salazar-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Lead sponsor of the bipartisan Dignity Act: funds border security and lets long-term undocumented immigrants without criminal records earn legal status through restitution, no path to citizenship.",
+          "source_url": "https://mariaelvirasalazar.com/dignity_act/",
+          "confidence": 92,
+          "track_record_note": null,
+          "track_record_citations": []
+        },
+        {
+          "stance_id": "maria-elvira-salazar-economy",
+          "issue_slug": "economy",
           "stance": "support",
-          "summary": "Support improving rural healthcare access and emergency reporting infrastructure.",
-          "source_url": "",
-          "confidence": 78,
-          "track_record_note": "Voted YEA on hr2493-119 (rural healthcare reauthorization), hr5201-119 (Kari's Law), and hr5200-119 (emergency reporting).",
+          "summary": "Supports pro-growth economic policy: tax relief, small-business advocacy, and job-fair programs to expand opportunity for South Florida families.",
+          "source_url": "https://mariaelvirasalazar.com/issues/",
+          "confidence": 75,
+          "track_record_note": "Voted YEA on hr6955-119 (Main Street Capital Access Act, bank-law changes to expand small-business capital access), hr9770-119 (FY2027 continuing appropriations), and hconres113-119 (FY2027 congressional budget resolution).",
           "track_record_citations": [
-            "hr2493-119",
-            "hr5201-119",
-            "hr5200-119"
+            "hr6955-119",
+            "hr9770-119",
+            "hconres113-119"
           ]
+        },
+        {
+          "stance_id": "maria-elvira-salazar-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Introduced the National Climate Adaptation and Resilience Strategy Act to strengthen hurricane, storm-surge, and flood resilience; backs Everglades and coral-reef restoration funding.",
+          "source_url": "https://mariaelvirasalazar.com/issues/environment/",
+          "confidence": 80,
+          "track_record_note": null,
+          "track_record_citations": []
+        },
+        {
+          "stance_id": "maria-elvira-salazar-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "support",
+          "summary": "Supports funding and legislation for local law enforcement, including violence-reduction grants targeting illegal firearms and the TAKE IT DOWN Act protecting victims of image-based abuse.",
+          "source_url": "https://mariaelvirasalazar.com/issues/public_safety/",
+          "confidence": 78,
+          "track_record_note": null,
+          "track_record_citations": []
         }
       ],
-      "active": false,
-      "activated_at": "2026-05-11T00:56:37.635Z",
+      "active": true,
+      "activated_at": "2026-08-07T18:17:34.423Z",
       "photo_url": "https://bioguide.congress.gov/photo/S000168.jpg",
       "doe_status": "Qualified",
-      "incumbent_source": "carried from race-fl-27-r-2026.partial.json (race-fl-27-r-2026), same race pre- and post-rebuild; FEC id H8FL27185 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)"
+      "incumbent_source": "carried from race-fl-27-r-2026.partial.json (race-fl-27-r-2026), same race pre- and post-rebuild; FEC id H8FL27185 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
+      "fec_coverage_end_date": "2026-07-29",
+      "verified_at": "2026-08-07T18:17:34.423Z"
     },
     {
       "name": "V. Michael Arias",
@@ -846,15 +880,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-27-r-2026",
       "fec_candidate_id": "H4FL27028",
-      "total_raised": 127485.72,
+      "total_raised": 183563.59,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 127485.72,
-        "disbursements": 27580.48,
+        "receipts": 183563.59,
+        "disbursements": 111069.93,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 28485.72,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 35563.59,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -1011,7 +1046,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {
