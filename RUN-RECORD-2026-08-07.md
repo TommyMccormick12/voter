@@ -67,10 +67,14 @@ independent blind refutation-first verifier → the activation gates
 
 ## Open decisions for Tommy
 
-1. **Bilzerian.** How should the product represent a candidate whose core
-   platform includes content outside the 10-issue taxonomy? Omitting it
-   sanitizes him; including it needs an editorial policy. He is inactive
-   until this is answered.
+1. **Bilzerian.** ANSWERED 2026-08-07: *show his platform including all
+   content.* Now 7 stances covering all 8 planks, plain and attributed,
+   quoting his own words — including the "End Jewish Supremacy" plank,
+   filed under `civil_rights` with the section named verbatim in the
+   summary. Two blind verification rounds against a standard that fails
+   BOTH sanitizing and editorializing: round 1 passed 5/7 (a spliced
+   quote and two merged claims were rewritten, not dropped — dropping
+   would have re-created the omission); round 2 passed 7/7. Live.
 2. **Define the stance axis.** ANSWERED 2026-08-07: *a stance is an
    opinion someone holds.* Implication to implement: the summary carries
    the opinion, and `stance` expresses how strongly the candidate holds
@@ -81,13 +85,17 @@ independent blind refutation-first verifier → the activation gates
    backwards). Once written into the standards, the ~dozen stances
    refuted *only* on label inversion become valid, including Speir
    (FL-16 R, 2/5).
-3. **Slug taxonomy gaps.** `climate` repeatedly absorbed water-quality and
-   Everglades material; `criminal_justice` absorbed public-safety
-   material. Candidates for new slugs: `environment`/`water`,
-   `public_safety`. Recommendation: NOT before Aug 18 — the ten topics
-   also drive the QuickPoll and the matching. Until then, make each
-   summary name its real subject so the card stays honest under a broad
-   bucket.
+3. **Slug taxonomy gaps.** ANSWERED 2026-08-07: *do not stick to ten
+   topics; add what accurately represents candidates.* Migration 015 adds
+   environment, public_safety, veterans, government_reform,
+   reproductive_rights, technology, civil_rights (17 total). The
+   QuickPoll still asks five (TOP_5_ISSUES), unchanged.
+   **Adding slugs does not re-file existing stances** — Tommy caught this.
+   A sweep of all 322 live stances across 79 active candidates flagged 9
+   and moved 7 (3 climate→environment, 4 criminal_justice→public_safety);
+   Salazar and Sapp were deliberately left on `climate` as defensible.
+   The audit script is reusable and MUST be re-run after any future
+   taxonomy change — this class of drift will recur every time.
 
 ## Backlog (non-blocking)
 
@@ -101,8 +109,18 @@ independent blind refutation-first verifier → the activation gates
   to the wrong row and display an inverted vote.
 - **`no_primary` note renders on race-picker but not the scorecard page.**
   Affects Frost (FL-10 D) and Franklin (FL-18 R).
-- **Two FEC anomalies unresolved:** Bilzerian (H6FL06415) and Schneider
-  (H2FL13139) carry a 2026-09-30 coverage date with no report on file.
+- ~~Two FEC anomalies unresolved~~ RESOLVED 2026-08-07, oppositely.
+  Tommy's note that Bilzerian was self-funding exposed that the original
+  "no report on file" finding queried `/candidate/{id}/filings` when F3
+  reports are filed by the COMMITTEE. His committee had filed two real
+  reports summing to exactly the disputed $1,241,449.83 — the money was
+  always real. The actual defect was the coverage date: the totals
+  endpoint returns the MAX coverage_end_date across filings including
+  periods that have not closed, and an empty October Quarterly advertised
+  his money as "through 2026-09-30". `normalizeCoverageEndDate` now drops
+  future dates loudly. Schneider resolves the other way — zero F3 reports
+  on either committee, money genuinely unsubstantiated; she is inactive.
+  **Lesson: check committee-level filings, not candidate-level.**
 - **FL-24 slug `kendrick-meek` conflates the candidate with his father**,
   former Rep. Kendrick Meek. The candidate is Kendrick Meek Jr.
 - **Recoverable refusals.** Several stances were refuted only because
@@ -128,3 +146,14 @@ independent blind refutation-first verifier → the activation gates
 - **The honest-refusal rule works.** Agents returned zero stances rather
   than padding for candidates with no findable content, including under
   explicit goal pressure.
+- **Check the right endpoint before concluding data is missing.** The
+  Bilzerian money call was wrong because candidate-level filings do not
+  include the committee's F3 reports.
+- **A cached page read is not evidence.** WebFetch caches 15 minutes per
+  URL, which briefly made a merged UI fix look unshipped; add a query
+  param to bust it. That same tool also paraphrases — it once made
+  verified verbatim summaries look sanitized. Query the DB for content
+  truth, and bust the cache for render truth.
+- **Expanding a taxonomy does not migrate the data already filed under
+  it.** Re-run `scratchpad/audit-slugs.js` (logic recorded in PR #21)
+  after any slug change.
