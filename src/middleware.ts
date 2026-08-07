@@ -29,7 +29,7 @@ function constantTimeEqual(a: string, b: string): boolean {
  *      cheap; analytics endpoints decide whether to actually USE the value
  *      based on consent_analytics.
  *
- * Skipped paths: Next.js internals, static assets, the public mockup HTML.
+ * Skipped paths: Next.js internals, static assets, the favicon.
  */
 export function middleware(request: NextRequest) {
   // /admin and /api/admin/* gate: HTTP Basic Auth using a single env var.
@@ -142,11 +142,11 @@ function safeHost(url: string): string | null {
 }
 
 /**
- * Skip Next.js internals, static files, mockup HTMLs, and the favicon.
+ * Skip Next.js internals, static files, and the favicon.
  * Match all other routes including pages and API routes.
  */
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon\\.ico|mockup.*\\.html|.*\\.zip).*)',
+    '/((?!_next/static|_next/image|favicon\\.ico).*)',
   ],
 };

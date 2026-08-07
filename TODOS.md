@@ -1,5 +1,13 @@
 # TODOS
 
+> **SUPERSEDED 2026-08-06 (evening):** The rework ran on branch
+> `rework/2026-08-06`. `SPEC-2026-08-06.md` and `TICKETS-2026-08-06.md` are
+> the current record; items below are historical input to that spec. Do not
+> execute items from this file. Still-open work lives in the tickets file
+> (reseed steps, migration 012 approval) and the stance-authoring follow-up.
+> The P4 hand-authoring item below also predates Decision 8 — no Governor
+> races exist; only federal races may be authored.
+
 > **2026-08-06 note:** The FL primary is August 18 — 12 days out. The two data-pipeline items below were deprioritized "until closer to August"; that window is now. Both are due alongside the rework items added from the 2026-08-06 repo review (see "Rework — 2026-08-06 repo review" section).
 >
 > **2026-08-06 data audit:** A 13-agent accuracy audit found the live dataset materially wrong about the August 18 ballot (23 of 24 verified findings CONFIRMED). Full evidence and code locations: `DATA-AUDIT-2026-08-06.md`. The section below supersedes normal priorities — P0 items outrank everything else in this file.

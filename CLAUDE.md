@@ -112,6 +112,8 @@ src/
     QuickPoll.tsx, FreeTextMatcher.tsx, MatchScoreBadge.tsx
     ConsentBanner.tsx, InconsistencyBadge.tsx, Nav.tsx
     ReportInaccurateButton.tsx  # Modal form for /api/report
+    VisitTracker.tsx            # Mounted in layout; feeds /api/visit
+    ui/                         # Shared primitives (Button, Card, Badge, states, inputs)
   lib/
     api-clients/              # FEC, Congress.gov, Voteview, Wikidata/Wikipedia,
                               # legislators crosswalk, names (pipeline only)
@@ -122,11 +124,14 @@ src/
       classify-industries.ts  # FEC contributions → 19-bucket industry tags
     cookies.ts (server-only), consent.ts (server),
     consent-client.ts (client), consent-shared.ts (constants)
-    session.ts, events.ts, supabase.ts, dates.ts, party-theme.ts,
-    geo.ts, analytics.ts, visit-tracker.ts,
-    interactions-client.ts, issues.ts,
+    tokens.ts (design tokens), party-theme.ts, og-helpers.ts,
+    dates.ts, geo.ts, issues.ts,
+    visit-tracker.ts (in-memory consent audit only),
+    interactions-client.ts, visits-client.ts,
     rate-limit.ts            # Token-bucket limiter for write APIs
-    data/races.ts, data/candidates.ts (server-side Supabase queries)
+    app/                     # Application modules (handler -> app -> adapter)
+    data/                    # adapter-anon, adapter-service, boundary, races, candidates
+    geo/                     # crosswalk, districts, census-geocode (2026 map)
   middleware.ts               # Issues voter_session, captures utm_*, gates /admin
 scripts/                      # Offline data pipeline (not in production runtime)
   _env.ts                     # Dotenv loader that overrides inherited shell env
