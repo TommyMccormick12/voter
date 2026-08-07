@@ -803,38 +803,65 @@
       ],
       "top_stances": [
         {
-          "stance_id": "darren-soto-criminal_justice",
-          "issue_slug": "criminal_justice",
+          "stance_id": "darren-soto-economy",
+          "issue_slug": "economy",
           "stance": "support",
-          "summary": "Support law enforcement and keeping violent offenders off streets through accountability measures.",
-          "source_url": "",
-          "confidence": 72,
-          "track_record_note": "Voted YEA on hr6260-119 (Keeping Violent Offenders Off Our Streets Act) and hconres96-119 (support for law enforcement), but voted NAY on hres1275-119 related to cashless bail consideration despite voting YEA on hr5625-119 (Cashless Bail Reporting Act), suggesting mixed positions on bail policy details.",
+          "summary": "Opposes tariffs raising grocery, gas, and health-care costs; supports infrastructure investment in roads, bridges, schools, and clean energy to create jobs.",
+          "source_url": "https://www.darrensoto.com/jobs-and-economy",
+          "confidence": 75,
+          "track_record_note": "Voted nay on hconres113-119, the FY2027 congressional budget resolution, on 2026-07-22, and voted yea on hr6955-119, the Main Street Capital Access Act easing community-bank regulation, on 2026-07-21.",
           "track_record_citations": [
-            "hr6260-119",
-            "hconres96-119",
-            "hres1275-119",
-            "hr5625-119"
+            "hconres113-119",
+            "hr6955-119"
           ]
         },
         {
-          "stance_id": "darren-soto-foreign_policy",
-          "issue_slug": "foreign_policy",
+          "stance_id": "darren-soto-healthcare",
+          "issue_slug": "healthcare",
           "stance": "support",
-          "summary": "Support foreign intelligence authorities and selective military interventions aligned with national security.",
-          "source_url": "",
-          "confidence": 65,
-          "track_record_note": "Voted YEA on s4465-119 (FISA Amendments Act extension) and hconres75-119 (War Powers Resolution removal from Iran hostilities), indicating support for surveillance tools and restraint on certain military commitments.",
+          "summary": "Supports defending and improving the Affordable Care Act, which he says brought over 2.7 million Floridians health insurance and cut the uninsured rate.",
+          "source_url": "https://www.darrensoto.com/healthcare",
+          "confidence": 78,
+          "track_record_note": "Voted yea on hr4541-119, reauthorizing federal breast and cervical cancer screening and early-detection programs, on 2026-07-20.",
           "track_record_citations": [
-            "s4465-119",
-            "hconres75-119"
+            "hr4541-119"
+          ]
+        },
+        {
+          "stance_id": "darren-soto-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Supports bipartisan comprehensive immigration reform combining border security with a pathway to citizenship or residency for Dreamers, TPS recipients, and farm workers.",
+          "source_url": "https://www.darrensoto.com/immigration-reform",
+          "confidence": 75
+        },
+        {
+          "stance_id": "darren-soto-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Supports federal regulations and renewable-energy investment to protect Florida's air, water, land, and climate from industrial pollution.",
+          "source_url": "https://www.darrensoto.com/environmental-protections",
+          "confidence": 72
+        },
+        {
+          "stance_id": "darren-soto-guns",
+          "issue_slug": "guns",
+          "stance": "support",
+          "summary": "Opposes shielding gun retailers from transaction-tracking merchant codes that flag firearms purchases to payment networks.",
+          "source_url": "https://www.congress.gov/119/bills/hr1181/BILLS-119hr1181eh.htm",
+          "confidence": 55,
+          "track_record_note": "Voted nay on hr1181-119 (Protecting Privacy in Purchases Act) on 2026-07-14, opposing the bill that bars payment-card networks from using firearm-specific merchant category codes.",
+          "track_record_citations": [
+            "hr1181-119"
           ]
         }
       ],
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "incumbent_source": "carried from race-fl-09-d-2026.partial.json (race-fl-09-d-2026), same race pre- and post-rebuild; FEC id H6FL09179 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
-      "fec_coverage_end_date": "2026-07-29"
+      "fec_coverage_end_date": "2026-07-29",
+      "activated_at": "2026-08-07T18:44:37.757Z",
+      "verified_at": "2026-08-07T18:44:37.757Z"
     }
   ],
   "race": {

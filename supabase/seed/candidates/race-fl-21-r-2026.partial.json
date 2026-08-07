@@ -805,36 +805,52 @@
         {
           "stance_id": "brian-mast-foreign_policy",
           "issue_slug": "foreign_policy",
-          "stance": "support",
-          "summary": "Support extending foreign intelligence surveillance authorities and opposing military withdrawal from Iran operations.",
-          "source_url": "",
-          "confidence": 72,
-          "track_record_note": "Voted YEA on S. 4465 extending FISA Amendments Act authorities (2026-04-30); voted NAY on H.Con.Res. 75 directing removal of US Armed Forces from Iran hostilities (2026-05-14), opposing withdrawal.",
+          "stance": "strongly_support",
+          "summary": "Strongly supports the US-Israel alliance and a hawkish Iran posture; voted against removing US forces from Iran hostilities and for national security/State Dept funding.",
+          "source_url": "https://mastforcongress.com/priorities/israel/",
+          "confidence": 88,
+          "track_record_note": "Voted nay on H.Con.Res. 89, which passed and directed removal of US Armed Forces from Iran hostilities (2026-07-23), opposing the withdrawal; voted yea on passage of H.R. 8595, the National Security and State Department Appropriations Act (2026-07-15).",
           "track_record_citations": [
-            "s4465-119",
-            "hconres75-119"
+            "hconres89-119",
+            "hr8595-119"
           ]
         },
         {
-          "stance_id": "brian-mast-criminal_justice",
-          "issue_slug": "criminal_justice",
-          "stance": "support",
-          "summary": "Support law enforcement and measures to combat violent crime and organized retail theft.",
-          "source_url": "",
-          "confidence": 68,
-          "track_record_note": "Voted YEA on H.R. 6260 Keeping Violent Offenders Off Our Streets Act (2026-05-14); voted YEA on H.R. 2853 Combating Organized Retail Crime Act (2026-05-12); voted YEA on H.Con.Res. 96 expressing support for law enforcement (2026-05-13).",
+          "stance_id": "brian-mast-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Frames gun ownership as a God-given right and opposes efforts to track firearm purchases; voted to bar special merchant codes for gun retailers.",
+          "source_url": "https://mastforcongress.com/priorities/second-amendment/",
+          "confidence": 85,
+          "track_record_note": "Voted yea on passage of H.R. 1181, the Protecting Privacy in Purchases Act, barring payment networks from using merchant codes that flag firearm retailers (passed 2026-07-14); voted nay on the motion to recommit.",
           "track_record_citations": [
-            "hr6260-119",
-            "hr2853-119",
-            "hconres96-119"
+            "hr1181-119"
           ]
+        },
+        {
+          "stance_id": "brian-mast-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Supports making the 2017 individual tax cuts permanent, cites the doubled child tax credit and ended ACA individual mandate tax, and backs a Balanced Budget Amendment.",
+          "source_url": "https://mastforcongress.com/priorities/tax/",
+          "confidence": 80
+        },
+        {
+          "stance_id": "brian-mast-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Supports securing the border and preventing visa overstays, and reforming legal immigration to remove arbitrary barriers for law-abiding immigrants.",
+          "source_url": "https://mastforcongress.com/priorities/america-first/",
+          "confidence": 72
         }
       ],
       "photo_url": "https://bioguide.congress.gov/photo/M001199.jpg",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "incumbent_source": "carried from race-fl-21-r-2026.partial.json (race-fl-21-r-2026), same race pre- and post-rebuild; FEC id H6FL18097 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
-      "fec_coverage_end_date": "2026-07-29"
+      "fec_coverage_end_date": "2026-07-29",
+      "activated_at": "2026-08-07T18:44:21.524Z",
+      "verified_at": "2026-08-07T18:44:21.524Z"
     }
   ],
   "race": {
