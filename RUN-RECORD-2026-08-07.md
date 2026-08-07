@@ -8,7 +8,7 @@ Companion to `HANDOFF-2026-08-07.md`. Covers GitHub issue #8 and tickets
 | | Start of day | End of day |
 |---|---|---|
 | Active candidates | 9 | 78 |
-| Races with any coverage | 9 of 57 | 48 of 57 |
+| Races with any coverage | 9 of 57 | 44 of 57 |
 | Races with the match flow (3+ active) | 0 | 9 |
 | Money coverage date | stale (June) | 2026-07-29 pre-primary |
 
@@ -71,18 +71,23 @@ independent blind refutation-first verifier → the activation gates
    platform includes content outside the 10-issue taxonomy? Omitting it
    sanitizes him; including it needs an editorial policy. He is inactive
    until this is answered.
-2. **Define the stance axis.** `stance` is used inconsistently across the
-   corpus: `taxes=strongly_oppose` means "lower taxes" on one live
-   candidate and `taxes=support` means the same thing on others. Multiple
-   verifiers independently refuted stances whose "Issue: Direction" chip
-   inverts for a label-scanning voter (`Immigration: Support` for a
-   restriction position, `Education: Oppose` for a school founder). This
-   blocked Speir (FL-16 R) at 2/5 on otherwise-sound content. **Write the
-   definition, then re-author against it.**
+2. **Define the stance axis.** ANSWERED 2026-08-07: *a stance is an
+   opinion someone holds.* Implication to implement: the summary carries
+   the opinion, and `stance` expresses how strongly the candidate holds
+   it — not whether they are "for or against" the topic name. The UI must
+   stop rendering direction as a bare chip beside the topic
+   (`Immigration: Support` for a restriction position reads backwards;
+   `Education: Oppose` for a candidate who founded a school reads
+   backwards). Once written into the standards, the ~dozen stances
+   refuted *only* on label inversion become valid, including Speir
+   (FL-16 R, 2/5).
 3. **Slug taxonomy gaps.** `climate` repeatedly absorbed water-quality and
    Everglades material; `criminal_justice` absorbed public-safety
    material. Candidates for new slugs: `environment`/`water`,
-   `public_safety`.
+   `public_safety`. Recommendation: NOT before Aug 18 — the ten topics
+   also drive the QuickPoll and the matching. Until then, make each
+   summary name its real subject so the card stays honest under a broad
+   bucket.
 
 ## Backlog (non-blocking)
 
@@ -106,6 +111,8 @@ independent blind refutation-first verifier → the activation gates
   budget could also revisit the wave-4 shortfalls.
 - **Single-source risk.** Most challenger stances rest on one campaign
   URL; one page edit invalidates a whole card.
+- **13 races still have no coverage**, mostly uncontested or
+  no-web-presence fields.
 - **Migration 012** still staged, unapplied, awaiting approval + backup.
 
 ## Method notes for the next session
