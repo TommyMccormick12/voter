@@ -1,5 +1,21 @@
 // Database types — kept in sync with supabase/migrations/*
 
+/**
+ * How strongly a candidate holds the opinion stated in the stance `summary`.
+ *
+ * DEFINITION (Tommy, 2026-08-07): **a stance is an opinion someone holds.**
+ * The opinion is the `summary` sentence. This field is its intensity — it is
+ * NOT the candidate's agreement or disagreement with the `issue_slug` topic
+ * name. "immigration + support" does not mean "supports immigration"; it
+ * means the candidate firmly holds the immigration position the summary
+ * describes, whatever direction that is.
+ *
+ * Because the field inverts when read against a bare topic label, it is not
+ * rendered as a chip beside the topic anywhere in the UI (that pairing
+ * produced "EDUCATION · Oppose" for a candidate who founded a school). It is
+ * retained as a matching signal only — see buildStancesBlock in
+ * src/lib/llm/match.ts, which passes it to the model alongside the summary.
+ */
 export type Stance = 'strongly_support' | 'support' | 'neutral' | 'oppose' | 'strongly_oppose';
 
 export type ElectionType = 'primary' | 'general' | 'runoff';

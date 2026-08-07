@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-16-d-2026",
       "fec_candidate_id": "H6FL16109",
-      "total_raised": 30086.99,
+      "total_raised": 47644.93,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 30086.99,
-        "disbursements": 22918.94,
+        "receipts": 47644.93,
+        "disbursements": 43650.29,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 25986.99,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 43344.93,
+        "other_political_committee_contributions": 200,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -142,7 +143,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Jan Schneider",
@@ -159,7 +161,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 55286.52,
+      "fec_coverage_end_date": "2026-09-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 55286.52,
+        "disbursements": 21767.74,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 18700,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-09-30"
+      }
     },
     {
       "name": "Jon Harris",
@@ -172,15 +186,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-16-d-2026",
       "fec_candidate_id": "H6FL16117",
-      "total_raised": 32769.08,
+      "total_raised": 80796.66,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 32769.08,
-        "disbursements": 10529.89,
+        "receipts": 80796.66,
+        "disbursements": 49041.33,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 6695,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 28722.58,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "bio": "Jonathan Daniel Harris (né Charasuchin; November 6, 1914 – November 3, 2002) was an American character actor whose career included more than 500 television and film appearances, as well as voiceovers. Two of his best-known roles were as the prudent accountant Bradford Webster in the television version of The Third Man and the fussy villain Dr. Zachary Smith of the 1960s science-fiction series Lost in Space. Near the end of his career, he provided voices for the animated features A Bug's Life and Toy Story 2.",
       "top_industries": [
@@ -256,7 +271,36 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "jonathan-harris-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Backs his 'Growth Economy Plan' to lower costs, grow good-paying jobs, and increase competition for working families in Florida's 16th District.",
+          "source_url": "https://www.jonharrisforcongress.com/ourplan",
+          "confidence": 68
+        },
+        {
+          "stance_id": "jonathan-harris-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Opposes cuts to Social Security benefits or a higher retirement age; backs raising the payroll tax cap so top earners pay their fair share.",
+          "source_url": "https://www.jonharrisforcongress.com/ourplan",
+          "confidence": 65
+        },
+        {
+          "stance_id": "jonathan-harris-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Supports federal investment in coastal resilience and water infrastructure to address red tide, coastal flooding, and water quality.",
+          "source_url": "https://www.jonharrisforcongress.com/ourplan",
+          "confidence": 65
+        }
+      ],
+      "activated_at": "2026-08-07T20:59:45.006Z",
+      "verified_at": "2026-08-07T20:59:45.006Z"
     },
     {
       "name": "Kelly Kirschner",
@@ -273,7 +317,55 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "total_raised": 296506.91,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 296506.91,
+        "disbursements": 215769.19,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 296004.91,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "kelly-kirschner-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Says working families face higher rent, insurance, gas, and grocery costs, and wants to lower those costs while curbing corporate and lobbyist influence in Congress.",
+          "source_url": "https://www.yourobserver.com/news/2026/may/03/sarasota-former-mayor-joins-congressional-race/",
+          "confidence": 72
+        },
+        {
+          "stance_id": "kelly-kirschner-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Backs a national catastrophic natural reinsurance fund to stabilize Florida property insurance rates, which he says have risen 78 percent.",
+          "source_url": "https://wslr.org/district-16-congressional-race-kelly-kirschner/",
+          "confidence": 68
+        },
+        {
+          "stance_id": "kelly-kirschner-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Supports immigration policy that holds employers accountable rather than targeting workers, citing immigrants' contributions to Social Security funding.",
+          "source_url": "https://wslr.org/district-16-congressional-race-kelly-kirschner/",
+          "confidence": 62
+        },
+        {
+          "stance_id": "kelly-kirschner-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "oppose",
+          "summary": "Argues domestic disaster-recovery funding should be prioritized over international and military spending abroad.",
+          "source_url": "https://wslr.org/district-16-congressional-race-kelly-kirschner/",
+          "confidence": 48
+        }
+      ],
+      "activated_at": "2026-08-07T19:22:09.362Z",
+      "verified_at": "2026-08-07T19:22:09.362Z"
     },
     {
       "name": "Tamika Lyles",
@@ -286,15 +378,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-16-d-2026",
       "fec_candidate_id": "H6FL16125",
-      "total_raised": 47778.78,
+      "total_raised": 121149.63,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 47778.78,
-        "disbursements": 1897.08,
+        "receipts": 121149.63,
+        "disbursements": 39943.28,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 47778.78,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 96149.63,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "top_industries": [
         {
@@ -472,7 +565,52 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "tamika-lyles-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Backs expanding Medicaid to close Florida's coverage gap, capping prescription drug costs, and protecting Medicare and VA healthcare for seniors and veterans.",
+          "source_url": "https://ballotpedia.org/Tamika_Lyles",
+          "confidence": 90
+        },
+        {
+          "stance_id": "tamika-lyles-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Supports fully funding public education, raising teacher pay to competitive levels, reducing class sizes, and adding counselors and support staff.",
+          "source_url": "https://ballotpedia.org/Tamika_Lyles",
+          "confidence": 90
+        },
+        {
+          "stance_id": "tamika-lyles-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Calls for a living wage and stronger worker protections, saying full-time work should provide economic security rather than just survival.",
+          "source_url": "https://ballotpedia.org/Tamika_Lyles",
+          "confidence": 88
+        },
+        {
+          "stance_id": "tamika-lyles-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Wants to protect renters from steep rent increases and expand affordable housing options, saying investors and speculators are pricing out working Floridians.",
+          "source_url": "https://www.tamikalyles.com/issues",
+          "confidence": 82
+        },
+        {
+          "stance_id": "tamika-lyles-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Treats climate impacts as a cost-of-living issue tied to rising insurance rates and supports federal investment in resilient infrastructure.",
+          "source_url": "https://www.tamikalyles.com/issues",
+          "confidence": 75
+        }
+      ],
+      "activated_at": "2026-08-07T19:22:10.381Z",
+      "verified_at": "2026-08-07T19:22:10.381Z"
     }
   ],
   "race": {

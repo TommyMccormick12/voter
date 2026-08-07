@@ -16,7 +16,19 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "total_raised": 12208.23,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 12208.23,
+        "disbursements": 10755.81,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 2460.33,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     }
   ],
   "race": {

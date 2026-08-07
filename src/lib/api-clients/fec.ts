@@ -159,9 +159,49 @@ export async function getItemizedContributions(
  * (e.g. `{ no2026Filings: true }`) instead of silently keeping whatever
  * total a previous run happened to store.
  */
+/**
+ * Normalize the totals endpoint's coverage_end_date to a calendar date, and
+ * DROP it when it lies in the future.
+ *
+ * Why the future check: `/candidate/{id}/totals` reports the maximum
+ * coverage_end_date across the candidate's filings, including reporting
+ * periods that have not closed yet. Dan Bilzerian (H6FL06415) is the worked
+ * example — his committee filed an empty October Quarterly (receipts 0,
+ * coverage through 2026-09-30) alongside two real reports, so on 2026-08-07
+ * the endpoint advertised his genuine $1,241,449.83 as "through 2026-09-30",
+ * a date that had not happened. Rendering that next to a dollar figure tells
+ * a voter the money is fresher than any filed report supports.
+ *
+ * Dropping to null is deliberate rather than clamping to today: the true
+ * value is the latest closed period WITH activity, which this endpoint does
+ * not expose (it needs /committee/{id}/filings). A missing coverage date
+ * renders as no claim at all, which is honest; an invented one is not.
+ *
+ * `now` is an explicit parameter so tests control the clock.
+ */
+export function normalizeCoverageEndDate(
+  raw: unknown,
+  now: Date = new Date()
+): string | null {
+  if (typeof raw !== 'string' || raw.length < 10) return null;
+  const date = raw.slice(0, 10);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return null;
+  const today = now.toISOString().slice(0, 10);
+  if (date > today) {
+    console.warn(
+      `[fec] coverage_end_date ${date} is in the future (today ${today}) — dropping it. ` +
+        `The totals endpoint reports the max coverage across filings, including periods ` +
+        `that have not closed; the real value is the latest CLOSED period with activity.`
+    );
+    return null;
+  }
+  return date;
+}
+
 export async function getCandidateTotals(
   candidateId: string,
-  { cycle, office }: FecTotalsParams
+  { cycle, office }: FecTotalsParams,
+  now: Date = new Date()
 ): Promise<FecCommitteeTotals | null> {
   const key = requireEnv('FEC_API_KEY');
   const qs = new URLSearchParams({ api_key: key, per_page: '1' });
@@ -193,9 +233,7 @@ export async function getCandidateTotals(
     // normalize to the calendar date so downstream consumers (fixtures,
     // candidates.fec_coverage_end_date, parseLocalDate in src/lib/dates.ts)
     // never see a timestamp that would shift a day under UTC parsing.
-    coverage_end_date:
-      typeof r.coverage_end_date === 'string'
-        ? r.coverage_end_date.slice(0, 10)
-        : null,
+    // A future date is dropped — see normalizeCoverageEndDate.
+    coverage_end_date: normalizeCoverageEndDate(r.coverage_end_date, now),
   };
 }

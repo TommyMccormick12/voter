@@ -13,10 +13,50 @@
       "race_id": "race-fl-02-d-2026",
       "fec_candidate_id": "H6FL02299",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 312077.34,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 312077.34,
+        "disbursements": 202632.69,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 307043.94,
+        "other_political_committee_contributions": 3500,
+        "coverage_end_date": "2026-06-30"
+      },
+      "top_stances": [
+        {
+          "stance_id": "amanda-marie-green-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Says she'll fight North Florida's affordability crisis by supporting farmers, lowering gas prices, and fighting corporate greed and unfair taxes.",
+          "source_url": "https://ballotpedia.org/Amanda_Green_(Florida)",
+          "confidence": 78
+        },
+        {
+          "stance_id": "amanda-marie-green-housing",
+          "issue_slug": "housing",
+          "stance": "strongly_support",
+          "summary": "Wants to lower housing costs and ban corporate ownership of single-family homes to ease North Florida's affordability crisis.",
+          "source_url": "https://ballotpedia.org/Amanda_Green_(Florida)",
+          "confidence": 80
+        },
+        {
+          "stance_id": "amanda-marie-green-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Backs expanding access to single-payer healthcare and protecting rural hospitals, saying no one should have to travel hours to see a doctor or deliver a baby.",
+          "source_url": "https://www.amgforcongress.com/top-priorities",
+          "confidence": 82
+        }
+      ],
+      "activated_at": "2026-08-07T21:01:36.875Z",
+      "verified_at": "2026-08-07T21:01:36.875Z"
     },
     {
       "name": "Brice Barnes",
@@ -30,10 +70,50 @@
       "race_id": "race-fl-02-d-2026",
       "fec_candidate_id": "H6FL02398",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 317996.26,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 317996.26,
+        "disbursements": 240836.76,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 102896.77,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "brice-barnes-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Would restore Medicaid coverage for about 133,000 Floridians, protect pre-existing condition protections, and hold insurers accountable to lower patient costs.",
+          "source_url": "https://bricebarnes.com/priorities/",
+          "confidence": 85
+        },
+        {
+          "stance_id": "brice-barnes-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Opposes price gouging by oil and grocery companies and chaotic tariffs; backs holding insurers accountable and investing in affordable energy to lower costs.",
+          "source_url": "https://bricebarnes.com/priorities/",
+          "confidence": 78
+        },
+        {
+          "stance_id": "brice-barnes-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Backs tax relief for the middle class and seniors, ending tax breaks for billionaires, closing corporate loopholes, and making mega-corporations pay a fair share.",
+          "source_url": "https://bricebarnes.com/priorities/",
+          "confidence": 80
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:00.498Z",
+      "verified_at": "2026-08-07T19:01:00.498Z"
     },
     {
       "name": "Nicholas Zateslo",
@@ -47,10 +127,58 @@
       "race_id": "race-fl-02-d-2026",
       "fec_candidate_id": "H6FL02281",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 449913.09,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 449913.09,
+        "disbursements": 426108.34,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 302046.37,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "nicholas-zateslo-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Wants to lower prescription drug costs and premiums through competition, protect Medicare and Social Security, and expand rural telehealth and mental health access.",
+          "source_url": "http://www.teamzforflorida.com/issues",
+          "confidence": 82
+        },
+        {
+          "stance_id": "nicholas-zateslo-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Backs promoting competition and stopping price gouging on groceries, gas, and insurance, plus support for manufacturing, agriculture, and small businesses.",
+          "source_url": "http://www.teamzforflorida.com/issues",
+          "confidence": 75
+        },
+        {
+          "stance_id": "nicholas-zateslo-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Supports expanding housing supply and keeping housing affordable for North Florida families and seniors.",
+          "source_url": "http://www.teamzforflorida.com/issues",
+          "confidence": 68
+        },
+        {
+          "stance_id": "nicholas-zateslo-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Backs strengthening public schools, supporting teachers, expanding apprenticeships and career/technical programs, and investing in higher education and research.",
+          "source_url": "http://www.teamzforflorida.com/issues",
+          "confidence": 78
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:01.550Z",
+      "verified_at": "2026-08-07T19:01:01.550Z"
     },
     {
       "name": "Yen Bailey",
@@ -67,7 +195,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 177869.04,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 177869.04,
+        "disbursements": 141492.03,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 160994.44,
+        "other_political_committee_contributions": 1000,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

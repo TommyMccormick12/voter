@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-15-r-2026",
       "fec_candidate_id": "H2FL15241",
-      "total_raised": 1900839.02,
+      "total_raised": 2346664.45,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 1900839.02,
-        "disbursements": 611953.88,
+        "receipts": 2346664.45,
+        "disbursements": 820753.35,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 367267.36,
-        "other_political_committee_contributions": 636500
+        "individual_contributions": 453553.47,
+        "other_political_committee_contributions": 852500,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Laurel Frances Lee (née Moore; born March 26, 1974) is an American attorney, former judge, and politician serving as the U.S. representative for Florida's 15th congressional district since 2023. A member of the Republican Party, she previously served as Florida's secretary of state from 2019 to 2022 and as a judge on Florida's Thirteenth Judicial Circuit from 2013 to 2019.",
       "campaign_website": "http://laurellee.house.gov",
@@ -806,33 +807,65 @@
         {
           "stance_id": "laurel-lee-foreign_policy",
           "issue_slug": "foreign_policy",
-          "stance": "support",
-          "summary": "Support extending FISA Title VII surveillance authorities for national security.",
-          "source_url": "http://laurellee.house.gov",
-          "confidence": 85,
-          "track_record_note": "voted YEA on s4465-119 extending FISA Amendments Act authorities",
+          "stance": "oppose",
+          "summary": "Voted against a resolution to force withdrawal of U.S. troops from Iran hostilities; voted for the FY2027 defense authorization and national-security appropriations bills.",
+          "source_url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/89",
+          "confidence": 78,
+          "track_record_note": "voted NAY on hconres89-119, which directing the President to remove U.S. Armed Forces from hostilities with Iran under the War Powers Resolution; also voted YEA on hr8800-119 (FY2027 National Defense Authorization Act) and hr8595-119 (National Security, Department of State, and Related Programs Appropriations Act, 2027)",
           "track_record_citations": [
-            "s4465-119"
+            "hconres89-119",
+            "hr8800-119",
+            "hr8595-119"
           ]
         },
         {
-          "stance_id": "laurel-lee-climate",
-          "issue_slug": "climate",
-          "stance": "oppose",
-          "summary": "Oppose federal building energy efficiency performance standards.",
-          "source_url": "http://laurellee.house.gov",
-          "confidence": 75,
-          "track_record_note": "voted YEA on hres1189-119 providing consideration for H.R. 4690 to repeal Federal building energy efficiency standards",
+          "stance_id": "laurel-lee-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Supports Second Amendment rights and opposes new restrictions on law-abiding gun owners.",
+          "source_url": "https://laurellee.house.gov/issues/second-amendment",
+          "confidence": 90,
+          "track_record_note": "voted YEA on hr1181-119 (Protecting Privacy in Purchases Act, barring payment card networks from flagging firearms retailers with distinct merchant codes) and NAY on the motion to recommit the same bill, consistent with her stated Second Amendment position",
           "track_record_citations": [
-            "hres1189-119"
+            "hr1181-119"
           ]
+        },
+        {
+          "stance_id": "laurel-lee-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports lower taxes and reduced regulation on small businesses.",
+          "source_url": "https://laurellee.house.gov/issues/economy",
+          "confidence": 82,
+          "track_record_note": "voted YEA on hr6955-119 (Main Street Capital Access Act, easing bank regulations for small and rural banks), matching her stated small-business deregulation focus",
+          "track_record_citations": [
+            "hr6955-119"
+          ]
+        },
+        {
+          "stance_id": "laurel-lee-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Supports expanded border wall funding, more Border Patrol agents, and anti-trafficking enforcement technology.",
+          "source_url": "https://votelaurel.com",
+          "confidence": 68
+        },
+        {
+          "stance_id": "laurel-lee-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "strongly_support",
+          "summary": "Supports full funding for law enforcement and opposes defunding the police.",
+          "source_url": "https://laurellee.house.gov/issues/law-enforcement-and-community-safety",
+          "confidence": 85
         }
       ],
-      "active": false,
-      "activated_at": "2026-05-11T00:56:31.246Z",
+      "active": true,
+      "activated_at": "2026-08-07T18:26:19.108Z",
       "photo_url": "https://bioguide.congress.gov/photo/L000597.jpg",
       "doe_status": "Qualified",
-      "incumbent_source": "carried from race-fl-15-r-2026.partial.json (race-fl-15-r-2026), same race pre- and post-rebuild; FEC id H2FL15241 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)"
+      "incumbent_source": "carried from race-fl-15-r-2026.partial.json (race-fl-15-r-2026), same race pre- and post-rebuild; FEC id H2FL15241 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
+      "fec_coverage_end_date": "2026-07-29",
+      "verified_at": "2026-08-07T18:26:19.108Z"
     }
   ],
   "race": {

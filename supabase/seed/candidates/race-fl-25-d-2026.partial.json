@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-25-d-2026",
       "fec_candidate_id": "H2FL22171",
-      "total_raised": 1710590.3,
+      "total_raised": 2998428.2,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 1710590.3,
-        "disbursements": 842813.43,
+        "receipts": 2998428.2,
+        "disbursements": 1465080.61,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 1258774.14,
-        "other_political_committee_contributions": 323779.16
+        "individual_contributions": 2264110.05,
+        "other_political_committee_contributions": 561392.15,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Jared Evan Moskowitz (/ˈmɒskəwɪts/ MOSS-kə-wits; born December 18, 1980) is an American politician serving as the U.S. representative for Florida's 23rd congressional district since 2023. A member of the Democratic Party, he previously served on the Broward County Commission from 2022 to 2023 and as director of the Florida Division of Emergency Management from 2019 to 2021. Moskowitz also represented the Coral Springs-Parkland area in the Florida House of Representatives from 2012 to 2019.",
       "campaign_website": "http://moskowitz.house.gov",
@@ -891,7 +892,8 @@
       "photo_url": "https://bioguide.congress.gov/photo/M001217.jpg",
       "doe_status": "Qualified",
       "incumbent_source": "carried from race-fl-23-d-2026.partial.json (race-fl-23-d-2026 -> race-fl-25-d-2026); FEC id H2FL22171 confirmed by spine as the same person, now on the 2026 map's district 25; see DATA-AUDIT-2026-08-06.md root cause 1 for the redistricting move and sitting-member status",
-      "verified_at": "2026-08-07T14:06:32.380Z"
+      "verified_at": "2026-08-07T14:06:32.380Z",
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Oliver Adams Larkin",
@@ -904,15 +906,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-25-d-2026",
       "fec_candidate_id": "H6FL23154",
-      "total_raised": 327736.48,
+      "total_raised": 689403.61,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 327736.48,
-        "disbursements": 145012.77,
+        "receipts": 689403.61,
+        "disbursements": 519661.86,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 323436.48,
-        "other_political_committee_contributions": 4100
+        "individual_contributions": 685058.18,
+        "other_political_committee_contributions": 4100,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Oliver Waterman Larkin (August 17, 1896 – December 17, 1970) was an American art historian and educator.  He won the 1950 Pulitzer Prize for History for his book Art and Life in America.",
       "top_industries": [
@@ -1091,7 +1094,36 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "oliver-adams-larkin-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Supports Medicare for All with no premiums, deductibles, or co-pays; covers vision, hearing, dental; caps prescription drug costs.",
+          "source_url": "https://ballotpedia.org/Oliver_Larkin",
+          "confidence": 95
+        },
+        {
+          "stance_id": "oliver-adams-larkin-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Supports raising the federal minimum wage to $25 an hour, indexed to inflation, with no exceptions for tipped, disabled, minor, or incarcerated workers.",
+          "source_url": "https://ballotpedia.org/Oliver_Larkin",
+          "confidence": 95
+        },
+        {
+          "stance_id": "oliver-adams-larkin-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Supports restoring higher top marginal tax rates on wealthy individuals and large corporations to fund public investment.",
+          "source_url": "https://ballotpedia.org/Oliver_Larkin",
+          "confidence": 85
+        }
+      ],
+      "activated_at": "2026-08-07T19:22:41.446Z",
+      "verified_at": "2026-08-07T19:22:41.446Z"
     }
   ],
   "race": {

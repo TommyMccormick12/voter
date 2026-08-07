@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 95065,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 95065,
+        "disbursements": 69161.41,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 90065,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Kendrick Meek",
@@ -30,10 +42,58 @@
       "race_id": "race-fl-24-d-2026",
       "fec_candidate_id": "H6FL24111",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 657618.87,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 657618.87,
+        "disbursements": 542847.05,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 566608.87,
+        "other_political_committee_contributions": 87500,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "kendrick-meek-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Backs restoring and expanding ACA subsidies, expanding Medicaid, lowering drug costs, and protecting Medicare and Social Security from cuts.",
+          "source_url": "https://kendrickmeekforcongress.com/issues",
+          "confidence": 80
+        },
+        {
+          "stance_id": "kendrick-meek-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Wants to build more affordable and workforce housing, expand down-payment assistance, and limit corporate real-estate investors buying up housing.",
+          "source_url": "https://kendrickmeekforcongress.com/issues",
+          "confidence": 75
+        },
+        {
+          "stance_id": "kendrick-meek-education",
+          "issue_slug": "education",
+          "stance": "strongly_support",
+          "summary": "Supports universal childcare and pre-K, higher teacher pay, and making community college and trade school affordable and eventually free.",
+          "source_url": "https://kendrickmeekforcongress.com/issues",
+          "confidence": 75
+        },
+        {
+          "stance_id": "kendrick-meek-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Supports comprehensive immigration reform that keeps families together and wants to end ICE raids on workplaces, schools, and communities.",
+          "source_url": "https://kendrickmeekforcongress.com/issues",
+          "confidence": 76
+        }
+      ],
+      "activated_at": "2026-08-07T19:28:51.426Z",
+      "verified_at": "2026-08-07T19:28:51.426Z"
     },
     {
       "name": "Marshall L. Davis",
@@ -50,7 +110,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 13046.25,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 13046.25,
+        "disbursements": 14010.4,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 13046.25,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     },
     {
       "name": "Oliver G. Gilbert",
@@ -64,10 +136,66 @@
       "race_id": "race-fl-24-d-2026",
       "fec_candidate_id": "H6FL24095",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 812142.8,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 812142.8,
+        "disbursements": 583049.58,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 787142.8,
+        "other_political_committee_contributions": 25000,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "oliver-g-gilbert-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Says healthcare is a right for every American and supports a pathway toward universal healthcare access.",
+          "source_url": "https://olivergilbert.vote/issues",
+          "confidence": 78
+        },
+        {
+          "stance_id": "oliver-g-gilbert-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Opposes current deportation policies and wants to end their funding, redirecting that money into community investment.",
+          "source_url": "https://olivergilbert.vote/issues",
+          "confidence": 75
+        },
+        {
+          "stance_id": "oliver-g-gilbert-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Says working families' tax burden should not match billionaires'; backs tax policy indexed to community earnings levels.",
+          "source_url": "https://olivergilbert.vote/issues",
+          "confidence": 70
+        },
+        {
+          "stance_id": "oliver-g-gilbert-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Backs job training in high-paying technical fields less exposed to AI displacement, plus support for small businesses and entrepreneurs.",
+          "source_url": "https://olivergilbert.vote/issues",
+          "confidence": 68
+        },
+        {
+          "stance_id": "oliver-g-gilbert-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Backs the HOME Act to lower monthly housing costs and help families build homeownership and generational wealth.",
+          "source_url": "https://olivergilbert.vote/issues",
+          "confidence": 68
+        }
+      ],
+      "activated_at": "2026-08-07T19:28:50.838Z",
+      "verified_at": "2026-08-07T19:28:50.838Z"
     },
     {
       "name": "Roderick Vereen",
@@ -98,22 +226,60 @@
       "office": "U.S. House",
       "race_id": "race-fl-24-d-2026",
       "fec_candidate_id": "H0FL17118",
-      "total_raised": 300000,
+      "total_raised": 631672,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 300000,
-        "disbursements": 184530.57,
+        "receipts": 631672,
+        "disbursements": 555845.63,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 0,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 185022,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "bio": "Rudolph Moise (born September 22, 1954) is the owner and medical director of Comprehensive Medical Aesthetics in Miami. Prior to becoming a physician, he served as a flight surgeon in the United States Air Force for more than 21 years, earning the rank of colonel, the highest position awarded to an American of Haitian descent at that time. Moise is running in 2026 to represent Florida's 20th congressional district.",
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "rudolph-dr-moise-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Calls health care a human right; backs a Medicare buy-in public option, drug price negotiation, restored ACA tax credits, and reversing Medicaid cuts.",
+          "source_url": "https://www.moiseforcongress.com/issues-long",
+          "confidence": 78
+        },
+        {
+          "stance_id": "rudolph-dr-moise-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Wants zoning reform, transit-oriented development, and more accessory dwelling units; opposes private-equity housing speculation and algorithm-driven rent hikes.",
+          "source_url": "https://www.moiseforcongress.com/issues-long",
+          "confidence": 75
+        },
+        {
+          "stance_id": "rudolph-dr-moise-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Backs restoring clean energy tax credits for solar, wind, and nuclear power, and wants AI data centers and crypto operations to generate or pay for their own power.",
+          "source_url": "https://www.moiseforcongress.com/issues-long",
+          "confidence": 74
+        },
+        {
+          "stance_id": "rudolph-dr-moise-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Backs stronger antitrust enforcement against monopolies, capped overdraft and credit-card late fees, easier subscription cancellation, and ending emergency tariff powers to lower costs.",
+          "source_url": "https://www.moiseforcongress.com/issues-long",
+          "confidence": 72
+        }
+      ],
+      "activated_at": "2026-08-07T20:58:11.822Z",
+      "verified_at": "2026-08-07T20:58:11.822Z"
     },
     {
       "name": "Shevrin \"Shev\" Jones",
@@ -130,7 +296,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 283694.58,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 283694.58,
+        "disbursements": 205082.94,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 253795.09,
+        "other_political_committee_contributions": 29500,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

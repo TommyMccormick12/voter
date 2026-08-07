@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-18-r-2026",
       "fec_candidate_id": "H0FL15104",
-      "total_raised": 634983.24,
+      "total_raised": 849999.59,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 634983.24,
-        "disbursements": 297386.91,
+        "receipts": 849999.59,
+        "disbursements": 371131.43,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 272129.21,
-        "other_political_committee_contributions": 281500
+        "individual_contributions": 366545.02,
+        "other_political_committee_contributions": 377500,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -788,35 +789,69 @@
       ],
       "top_stances": [
         {
-          "stance_id": "scott-mr-franklin-foreign_policy",
-          "issue_slug": "foreign_policy",
+          "stance_id": "scott-mr-franklin-economy",
+          "issue_slug": "economy",
           "stance": "support",
-          "summary": "Support extending FISA surveillance authorities for national security intelligence gathering.",
-          "source_url": "",
-          "confidence": 85,
-          "track_record_note": "voted YEA on s4465-119 extending FISA Amendments Act authorities",
+          "summary": "Supports cutting federal spending, reducing regulation, and passing budget and funding measures without expanding government size.",
+          "source_url": "https://franklin.house.gov/economy",
+          "confidence": 78,
+          "track_record_note": "voted YEA on hconres113-119 (FY2027 congressional budget resolution), YEA on hr9770-119 (continuing appropriations avoiding a shutdown), and YEA on hr6955-119 passage (Main Street Capital Access Act, easing bank capital/reporting rules), NAY on its motion to recommit",
           "track_record_citations": [
-            "s4465-119"
+            "hconres113-119",
+            "hr9770-119",
+            "hr6955-119"
           ]
+        },
+        {
+          "stance_id": "scott-mr-franklin-taxes",
+          "issue_slug": "taxes",
+          "stance": "strongly_support",
+          "summary": "Supports the 2025 tax law's cuts: a higher standard deduction, no tax on tips and overtime, and ending federal tax on Social Security for most seniors.",
+          "source_url": "https://franklin.house.gov/services/tax-relief-for-working-families-and-seniors.htm",
+          "confidence": 75
         },
         {
           "stance_id": "scott-mr-franklin-healthcare",
           "issue_slug": "healthcare",
           "stance": "support",
-          "summary": "Support rural healthcare infrastructure and rural medicine accessibility programs.",
-          "source_url": "",
-          "confidence": 75,
-          "track_record_note": "voted YEA on hr2493-119 reauthorizing rural healthcare improvement act",
+          "summary": "Supports market-based healthcare: expanded health savings accounts, wider telehealth access, and protecting Medicare drug-cost and plan choices for seniors.",
+          "source_url": "https://franklin.house.gov/issues/issue/?IssueID=74",
+          "confidence": 68
+        },
+        {
+          "stance_id": "scott-mr-franklin-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Strongly supports Second Amendment rights, opposes limits on law-abiding gun owners, and voted against tracking firearm purchases through special merchant codes.",
+          "source_url": "https://franklin.house.gov/issues/issue/?IssueID=14895",
+          "confidence": 80,
+          "track_record_note": "voted YEA on hr1181-119 passage (Protecting Privacy in Purchases Act, bars payment networks from using merchant codes that single out firearms retailers), NAY on its motion to recommit",
           "track_record_citations": [
-            "hr2493-119"
+            "hr1181-119"
+          ]
+        },
+        {
+          "stance_id": "scott-mr-franklin-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "support",
+          "summary": "Supports robust national defense and national security funding, and voted against forcing US troop withdrawal from Iran-related hostilities without new congressional authorization.",
+          "source_url": "https://franklin.house.gov/news/documentsingle.aspx?DocumentID=1921",
+          "confidence": 82,
+          "track_record_note": "voted YEA on hr8800-119 passage (FY2027 National Defense Authorization Act) and hr8595-119 passage (National Security, Dept. of State and related programs appropriations); NAY on both bills' motions to recommit; NAY on hconres89-119 (directs the President to remove US Armed Forces from hostilities with Iran)",
+          "track_record_citations": [
+            "hr8800-119",
+            "hr8595-119",
+            "hconres89-119"
           ]
         }
       ],
-      "active": false,
-      "activated_at": "2026-05-11T16:49:43.496Z",
+      "active": true,
+      "activated_at": "2026-08-07T18:15:36.812Z",
       "photo_url": "https://bioguide.congress.gov/photo/F000472.jpg",
       "doe_status": "Qualified",
-      "incumbent_source": "carried from race-fl-18-r-2026.partial.json (race-fl-18-r-2026), same race pre- and post-rebuild; FEC id H0FL15104 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)"
+      "incumbent_source": "carried from race-fl-18-r-2026.partial.json (race-fl-18-r-2026), same race pre- and post-rebuild; FEC id H0FL15104 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
+      "fec_coverage_end_date": "2026-07-29",
+      "verified_at": "2026-08-07T18:15:36.812Z"
     }
   ],
   "race": {

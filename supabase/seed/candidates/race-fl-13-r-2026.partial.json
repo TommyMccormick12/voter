@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-13-r-2026",
       "fec_candidate_id": "H0FL13158",
-      "total_raised": 2298615.43,
+      "total_raised": 3233311.85,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 2298615.43,
-        "disbursements": 1054588.53,
+        "receipts": 3233311.85,
+        "disbursements": 1890603.08,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 1061841.37,
-        "other_political_committee_contributions": 75500
+        "individual_contributions": 1905637.35,
+        "other_political_committee_contributions": 103000,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -802,24 +803,55 @@
       ],
       "top_stances": [
         {
-          "stance_id": "anna-paulina-luna-climate",
-          "issue_slug": "climate",
+          "stance_id": "anna-paulina-luna-immigration",
+          "issue_slug": "immigration",
           "stance": "oppose",
-          "summary": "Support repealing federal building energy efficiency standards and expanding energy infrastructure.",
-          "source_url": "",
-          "confidence": 72,
-          "track_record_note": "Voted YEA on hres1189-119 for consideration of H.R. 4690 to repeal Federal building energy efficiency performance standards; voted YEA on hres1224-119 for consideration of agricultural programs bill with climate components.",
+          "summary": "Opposes 'open borders' policy; describes porous borders as a humanitarian crisis and calls for stronger border security enforcement.",
+          "source_url": "https://www.voteannapaulina.com/meet-anna",
+          "confidence": 62
+        },
+        {
+          "stance_id": "anna-paulina-luna-guns",
+          "issue_slug": "guns",
+          "stance": "support",
+          "summary": "Supports shielding firearms retailers from special merchant-category-code tracking of gun purchases.",
+          "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/1181",
+          "confidence": 78,
+          "track_record_note": "Voted YEA on hr1181-119 (Protecting Privacy in Purchases Act), which bars payment-card networks from using merchant category codes that single out firearms retailers.",
           "track_record_citations": [
-            "hres1189-119",
-            "hres1224-119"
+            "hr1181-119"
+          ]
+        },
+        {
+          "stance_id": "anna-paulina-luna-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Supports codifying Trump's most-favored-nation policy to lower prescription drug prices; co-introduced the Global Fairness in Drug Pricing Act.",
+          "source_url": "https://www.foxnews.com/politics/ro-khanna-finds-common-ground-trump-prescription-drug-prices",
+          "confidence": 68
+        },
+        {
+          "stance_id": "anna-paulina-luna-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "oppose",
+          "summary": "Opposes congressional limits on military engagement abroad; voted against forcing troop withdrawal from Iran hostilities and for FY2027 national-security funding.",
+          "source_url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/89",
+          "confidence": 62,
+          "track_record_note": "Voted NAY on hconres89-119 (would have directed troop withdrawal from Iran hostilities) and YEA on hr8595-119 (FY2027 national security/State Dept appropriations), but voted NAY on hr8800-119 final passage of the FY2027 defense authorization act despite voting YEA on many floor amendments to that same bill.",
+          "track_record_citations": [
+            "hconres89-119",
+            "hr8595-119",
+            "hr8800-119"
           ]
         }
       ],
-      "active": false,
-      "activated_at": "2026-05-11T00:56:28.613Z",
+      "active": true,
+      "activated_at": "2026-08-07T18:16:56.217Z",
       "photo_url": "https://bioguide.congress.gov/photo/L000596.jpg",
       "doe_status": "Qualified",
-      "incumbent_source": "carried from race-fl-13-r-2026.partial.json (race-fl-13-r-2026), same race pre- and post-rebuild; FEC id H0FL13158 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)"
+      "incumbent_source": "carried from race-fl-13-r-2026.partial.json (race-fl-13-r-2026), same race pre- and post-rebuild; FEC id H0FL13158 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
+      "fec_coverage_end_date": "2026-07-29",
+      "verified_at": "2026-08-07T18:16:56.217Z"
     }
   ],
   "race": {

@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 220095,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 220095,
+        "disbursements": 116110.71,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 199595,
+        "other_political_committee_contributions": 20500,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Ergin \"Batman\" Tek",
@@ -33,7 +45,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 41571.76,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 41571.76,
+        "disbursements": 40413.17,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 1121.76,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Gavriel E. Soriano",
@@ -50,7 +74,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 1657.84,
+      "fec_coverage_end_date": "2026-03-31",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1657.84,
+        "disbursements": 1632.89,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 0,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-03-31"
+      }
     },
     {
       "name": "John Peters",
@@ -67,7 +103,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 200797.44,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 200797.44,
+        "disbursements": 199151.52,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 10372.41,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Kevin M. Steele",
@@ -84,7 +132,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 2588951.8,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 2588951.8,
+        "disbursements": 2106349.35,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 80915,
+        "other_political_committee_contributions": 2500,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Michael Marcel",
@@ -101,7 +161,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 19200,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 19200,
+        "disbursements": 15157.6,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 19200,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Mike Beltran",
@@ -115,10 +187,58 @@
       "race_id": "race-fl-14-r-2026",
       "fec_candidate_id": "H6FL14237",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 2116747.45,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 2116747.45,
+        "disbursements": 176883.83,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 102724.89,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "mike-beltran-taxes",
+          "issue_slug": "taxes",
+          "stance": "strongly_support",
+          "summary": "Strongly supports tax cuts, backing 'no tax on tips, no tax on overtime,' plus relief for seniors on Social Security.",
+          "source_url": "https://beltranforcongress.com/platform",
+          "confidence": 87
+        },
+        {
+          "stance_id": "mike-beltran-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports cutting regulations and expanding American energy production to fight inflation and lower costs, opposing what he calls 'Bidenomics.'",
+          "source_url": "https://beltranforcongress.com/platform",
+          "confidence": 85
+        },
+        {
+          "stance_id": "mike-beltran-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Supports school choice, which he says he championed in the state legislature, and says parents should decide their children's education.",
+          "source_url": "https://beltranforcongress.com/platform",
+          "confidence": 85
+        },
+        {
+          "stance_id": "mike-beltran-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Strongly supports gun rights, citing a 'perfect pro-gun record' and opposing red flag laws and magazine bans.",
+          "source_url": "https://beltranforcongress.com/platform",
+          "confidence": 88
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:11.492Z",
+      "verified_at": "2026-08-07T19:01:11.492Z"
     },
     {
       "name": "Robert \"Rocky\" Rochford",
@@ -135,7 +255,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 264661,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 264661,
+        "disbursements": 102774.66,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 114661,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     }
   ],
   "race": {

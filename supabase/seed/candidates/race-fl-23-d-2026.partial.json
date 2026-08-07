@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-23-d-2026",
       "fec_candidate_id": "H2FL14053",
-      "total_raised": 1855772.41,
+      "total_raised": 2276253.73,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 1855772.41,
-        "disbursements": 678246.06,
+        "receipts": 2276253.73,
+        "disbursements": 1351533.6,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 1365142.07,
-        "other_political_committee_contributions": 408750
+        "individual_contributions": 1659575.46,
+        "other_political_committee_contributions": 525250,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Lois Jane Frankel (/ˈfræŋkəl/ FRANG-kəl; born May 16, 1948) is an American politician and lawyer who has been the United States representative for Florida's 22nd congressional district since 2023, having previously served it from 2013 to 2017. As a member of the Democratic Party, she represented the 21st congressional district from 2017 to 2023, was a 7-term member of the Florida House of Representatives, and was mayor of West Palm Beach for two terms.",
       "campaign_website": "http://frankel.house.gov",
@@ -870,7 +871,8 @@
       "photo_url": "https://bioguide.congress.gov/photo/F000462.jpg",
       "doe_status": "Qualified",
       "incumbent_source": "carried from race-fl-23-d-2026.partial.json (race-fl-23-d-2026), same race pre- and post-rebuild; FEC id H2FL14053 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
-      "verified_at": "2026-08-07T14:06:31.755Z"
+      "verified_at": "2026-08-07T14:06:31.755Z",
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Mark Piper",
@@ -887,7 +889,10 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "fec_totals": {
+        "no2026Filings": true
+      }
     },
     {
       "name": "Victoria Doyle",
@@ -900,15 +905,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-23-d-2026",
       "fec_candidate_id": "H6FL22107",
-      "total_raised": 168017.57,
+      "total_raised": 483604.55,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 168017.57,
-        "disbursements": 163520.85,
+        "receipts": 483604.55,
+        "disbursements": 445158.24,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 71790.66,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 157200.09,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -1086,7 +1092,44 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "victoria-jane-boker-doyle-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Blames corporate greed, not just inflation, for high housing, gas, and grocery costs; backs anti-price-fixing enforcement, anti-monopoly action, and fair wages with paid family leave.",
+          "source_url": "https://doyleforcongress.org/priorities",
+          "confidence": 85
+        },
+        {
+          "stance_id": "victoria-jane-boker-doyle-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Says everyone in America should have healthcare access regardless of income, citing medical bankruptcy despite the U.S. having the world's highest health spending.",
+          "source_url": "https://doyleforcongress.org/priorities",
+          "confidence": 88
+        },
+        {
+          "stance_id": "victoria-jane-boker-doyle-housing",
+          "issue_slug": "housing",
+          "stance": "strongly_support",
+          "summary": "Proposes a federal reinsurance program to dramatically lower Florida homeowners' insurance rates amid the state's property-insurance affordability crisis.",
+          "source_url": "https://doyleforcongress.org/priorities",
+          "confidence": 85
+        },
+        {
+          "stance_id": "victoria-jane-boker-doyle-immigration",
+          "issue_slug": "immigration",
+          "stance": "neutral",
+          "summary": "Backs border enforcement and deporting violent criminals while also protecting Dreamers and immigrant workers, calling for fair, well-vetted immigration reform.",
+          "source_url": "https://doyleforcongress.org/priorities",
+          "confidence": 70
+        }
+      ],
+      "activated_at": "2026-08-07T19:21:20.668Z",
+      "verified_at": "2026-08-07T19:21:20.668Z"
     }
   ],
   "race": {

@@ -12,22 +12,52 @@
       "office": "U.S. House",
       "race_id": "race-fl-27-d-2026",
       "fec_candidate_id": "H6FL27098",
-      "total_raised": 312002.51,
+      "total_raised": 616733.36,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 312002.51,
-        "disbursements": 12526.67,
+        "receipts": 616733.36,
+        "disbursements": 171193.4,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 305002.51,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 609733.36,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "bio": "Eliott J. Rodriguez (born June 6, 1956) is a Cuban-American television journalist who has received three Emmy Awards and four Edward R. Murrow Awards.",
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "eliott-rodriguez-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Wants to build more workforce housing and ease the housing and insurance cost pressures that pushed his own daughters out of South Florida.",
+          "source_url": "https://eliottrodriguez.com/",
+          "confidence": 65
+        },
+        {
+          "stance_id": "eliott-rodriguez-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Calls affordability the top economic issue for working families amid rising grocery, insurance, and borrowing costs, and vows to fix structural cost drivers in South Florida.",
+          "source_url": "https://eliottrodriguez.com/",
+          "confidence": 55
+        },
+        {
+          "stance_id": "eliott-rodriguez-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Names defending Social Security and Medicare as one of his core campaign priorities.",
+          "source_url": "https://eliottrodriguez.com/",
+          "confidence": 40
+        }
+      ],
+      "activated_at": "2026-08-07T19:24:12.817Z",
+      "verified_at": "2026-08-07T19:24:12.817Z"
     },
     {
       "name": "Robin Peguero",
@@ -40,15 +70,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-27-d-2026",
       "fec_candidate_id": "H6FL27072",
-      "total_raised": 821895.71,
+      "total_raised": 1061496.09,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 821895.71,
-        "disbursements": 358623.6,
+        "receipts": 1061496.09,
+        "disbursements": 923104.29,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 802295.49,
-        "other_political_committee_contributions": 18600
+        "individual_contributions": 1029395.87,
+        "other_political_committee_contributions": 31100,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -226,7 +257,36 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "robin-peguero-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Vows to defend the ACA and pre-existing condition protections, add a public option for people who dislike employer coverage, and negotiate down drug prices to end price gouging.",
+          "source_url": "https://pegueroformiami.com/issues/",
+          "confidence": 82
+        },
+        {
+          "stance_id": "robin-peguero-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Calls Miami climate impacts urgent and pledges green infrastructure investment to protect homes and businesses, create jobs, and expand clean energy.",
+          "source_url": "https://pegueroformiami.com/issues/",
+          "confidence": 68
+        },
+        {
+          "stance_id": "robin-peguero-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Supports universal pre-K, financial literacy education, and more financial aid funding for community colleges and trade schools.",
+          "source_url": "https://pegueroformiami.com/issues/",
+          "confidence": 72
+        }
+      ],
+      "activated_at": "2026-08-07T19:24:12.220Z",
+      "verified_at": "2026-08-07T19:24:12.220Z"
     }
   ],
   "race": {

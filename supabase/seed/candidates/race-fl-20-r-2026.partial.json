@@ -13,10 +13,58 @@
       "race_id": "race-fl-20-r-2026",
       "fec_candidate_id": "H6FL20143",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 63848.58,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 63848.58,
+        "disbursements": 23225.78,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 63848.58,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "brent-andersen-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Pledges to cut small-business regulations, expand access to startup capital, and grow apprenticeship and vocational workforce programs to expand economic opportunity.",
+          "source_url": "https://brentandersenfl.com/issues/",
+          "confidence": 82
+        },
+        {
+          "stance_id": "brent-andersen-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Platform pledges to cut federal regulations that raise housing costs and expand homeownership pathways for working families, seniors, and young families.",
+          "source_url": "https://brentandersenfl.com/issues/",
+          "confidence": 82
+        },
+        {
+          "stance_id": "brent-andersen-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "support",
+          "summary": "Pledges full funding for law enforcement and stronger school security, while also holding violent offenders accountable and addressing crime's root causes through community prevention.",
+          "source_url": "https://brentandersenfl.com/issues/",
+          "confidence": 80
+        },
+        {
+          "stance_id": "brent-andersen-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Lists securing the border among his core campaign commitments; cites strong borders and public safety as recurring policy priorities.",
+          "source_url": "https://ballotpedia.org/Brent_Andersen",
+          "confidence": 60
+        }
+      ],
+      "activated_at": "2026-08-07T19:23:19.990Z",
+      "verified_at": "2026-08-07T19:23:19.990Z"
     },
     {
       "name": "Carla Spalding",
@@ -51,7 +99,19 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "total_raised": 11002.3,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 11002.3,
+        "disbursements": 10897.65,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 602.3,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     },
     {
       "name": "Rod Joseph",
@@ -64,15 +124,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-20-r-2026",
       "fec_candidate_id": "H6FL20069",
-      "total_raised": 58157.58,
+      "total_raised": 98824.74,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 58157.58,
-        "disbursements": 60432.86,
+        "receipts": 98824.74,
+        "disbursements": 82642.35,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 58157.58,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 98824.74,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -250,7 +311,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {

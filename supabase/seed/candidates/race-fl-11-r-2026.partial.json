@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 303575.26,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 303575.26,
+        "disbursements": 282069.05,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 291575.26,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Ivette Palomo",
@@ -33,7 +45,10 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_totals": {
+        "no2026Filings": true
+      }
     },
     {
       "name": "Joe Strada",
@@ -50,7 +65,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 5248640,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 5248640,
+        "disbursements": 2999736.61,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 248640,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Nizam Razack",
@@ -67,7 +94,47 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "total_raised": 932552,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 932552,
+        "disbursements": 768563.78,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 187552,
+        "other_political_committee_contributions": 5000,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "nizam-md-jd-razack-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Supports lowering healthcare costs via price transparency, competition, and patient freedom, with less government bureaucracy in medical decisions.",
+          "source_url": "https://www.razackforcongress.com/issues",
+          "confidence": 65
+        },
+        {
+          "stance_id": "nizam-md-jd-razack-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "support",
+          "summary": "Supports ending 'endless wars' and nation-building abroad, favoring an America First approach based on strength and deterrence over global policing.",
+          "source_url": "https://www.razackforcongress.com/issues",
+          "confidence": 65
+        },
+        {
+          "stance_id": "nizam-md-jd-razack-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports fiscal discipline to address the national debt, calling for cuts to waste, fraud, abuse, and reckless federal spending.",
+          "source_url": "https://www.razackforcongress.com/issues",
+          "confidence": 65
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:08.442Z",
+      "verified_at": "2026-08-07T19:01:08.442Z"
     },
     {
       "name": "Tim Wilkins",
@@ -84,7 +151,19 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "total_raised": 329214.58,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 329214.58,
+        "disbursements": 204668.38,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 82687.65,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

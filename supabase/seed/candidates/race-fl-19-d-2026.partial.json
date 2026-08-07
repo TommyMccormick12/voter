@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-19-d-2026",
       "fec_candidate_id": "H6FL19111",
-      "total_raised": 32473.39,
+      "total_raised": 52432.19,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 32473.39,
-        "disbursements": 35205.17,
+        "receipts": 52432.19,
+        "disbursements": 53114.52,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 32273.39,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 36580.39,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
       },
       "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
       "top_industries": [
@@ -157,7 +158,52 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "howard-sapp-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Wants to lower the cost of living for working families and grow the economy through small businesses, workforce development, and clean energy jobs.",
+          "source_url": "https://ballotpedia.org/Howard_Sapp",
+          "confidence": 85
+        },
+        {
+          "stance_id": "howard-sapp-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Supports Medicare for All; says he would fix the ACA in the interim, then work toward universal healthcare coverage for everyone.",
+          "source_url": "https://ballotpedia.org/Howard_Sapp",
+          "confidence": 88
+        },
+        {
+          "stance_id": "howard-sapp-climate",
+          "issue_slug": "climate",
+          "stance": "strongly_support",
+          "summary": "Supports restoring the Everglades, protecting coastlines, holding polluters accountable, and building storm-resilient infrastructure in Southwest Florida.",
+          "source_url": "https://ballotpedia.org/Howard_Sapp",
+          "confidence": 88
+        },
+        {
+          "stance_id": "howard-sapp-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Supports expanding affordable housing to give Southwest Florida families housing stability.",
+          "source_url": "https://ballotpedia.org/Howard_Sapp",
+          "confidence": 85
+        },
+        {
+          "stance_id": "howard-sapp-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Says every person deserves access to quality public education, alongside affordable healthcare and job opportunity.",
+          "source_url": "https://ballotpedia.org/Howard_Sapp",
+          "confidence": 65
+        }
+      ],
+      "activated_at": "2026-08-07T19:21:18.699Z",
+      "verified_at": "2026-08-07T19:21:18.699Z"
     },
     {
       "name": "Robert M. Neeld",
@@ -174,7 +220,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 15000,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 15000,
+        "disbursements": 10954.75,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 0,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Victor Arias",
@@ -187,15 +245,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-19-d-2026",
       "fec_candidate_id": "H6FL19277",
-      "total_raised": 22813.19,
+      "total_raised": 45356.15,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 22813.19,
-        "disbursements": 4241.97,
+        "receipts": 45356.15,
+        "disbursements": 26153.55,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 2313.19,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 14856.15,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Below is a partial list of Minor League Baseball players in the Toronto Blue Jays and rosters of their minor league affiliates.",
       "top_industries": [
@@ -285,7 +344,36 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "victor-m-arias-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Wants to diversify Southwest Florida's economy and create jobs by incentivizing businesses, citing rising gas, grocery, utility, and insurance costs.",
+          "source_url": "https://ballotpedia.org/Victor_Arias",
+          "confidence": 80
+        },
+        {
+          "stance_id": "victor-m-arias-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Supports protecting Southwest Florida's water quality through Everglades restoration, red tide research funding, and Lake Okeechobee discharge reforms.",
+          "source_url": "https://ballotpedia.org/Victor_Arias",
+          "confidence": 85
+        },
+        {
+          "stance_id": "victor-m-arias-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Supports a humane, dignified immigration process and fair legal access to citizenship pathways, while stressing that immigration law should be followed.",
+          "source_url": "https://ballotpedia.org/Victor_Arias",
+          "confidence": 75
+        }
+      ],
+      "activated_at": "2026-08-07T19:21:19.678Z",
+      "verified_at": "2026-08-07T19:21:19.678Z"
     }
   ],
   "race": {

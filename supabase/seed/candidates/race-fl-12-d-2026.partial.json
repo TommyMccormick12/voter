@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-12-d-2026",
       "fec_candidate_id": "H6FL15192",
-      "total_raised": 532060.24,
+      "total_raised": 728863.42,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 532060.24,
-        "disbursements": 265534.39,
+        "receipts": 728863.42,
+        "disbursements": 616531.52,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 457010.24,
-        "other_political_committee_contributions": 24050
+        "individual_contributions": 640313.42,
+        "other_political_committee_contributions": 37550,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -198,7 +199,36 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "darren-mcauley-housing",
+          "issue_slug": "housing",
+          "stance": "strongly_support",
+          "summary": "Calls Florida's housing costs a crisis, citing sky-high insurance and utility bills, and wants to stop corporate practices that block young families from buying homes.",
+          "source_url": "https://ballotpedia.org/Darren_McAuley",
+          "confidence": 85
+        },
+        {
+          "stance_id": "darren-mcauley-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "As a physician, wants to expand and lower the cost of healthcare access, including Medicaid, Medicare, ACA coverage, and employer-based plans.",
+          "source_url": "https://ballotpedia.org/Darren_McAuley",
+          "confidence": 90
+        },
+        {
+          "stance_id": "darren-mcauley-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports stronger worker protections, saying corporate profit motives too often override fair wages and safe workplaces.",
+          "source_url": "https://ballotpedia.org/Darren_McAuley",
+          "confidence": 80
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:09.467Z",
+      "verified_at": "2026-08-07T19:01:09.467Z"
     },
     {
       "name": "Kimberly Overman",
@@ -212,10 +242,50 @@
       "race_id": "race-fl-12-d-2026",
       "fec_candidate_id": "H6FL15200",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 186812.6,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 186812.6,
+        "disbursements": 181906.28,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 171959.3,
+        "other_political_committee_contributions": 852.26,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "kimberly-overman-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Wants to lower costs of healthcare and prescription drugs, protect access to women's healthcare, and strengthen Social Security and Medicare.",
+          "source_url": "https://ballotpedia.org/Kimberly_Overman",
+          "confidence": 90
+        },
+        {
+          "stance_id": "kimberly-overman-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Lists lowering housing costs, alongside healthcare and insurance costs, as a top priority for families in FL-12.",
+          "source_url": "https://ballotpedia.org/Kimberly_Overman",
+          "confidence": 75
+        },
+        {
+          "stance_id": "kimberly-overman-immigration",
+          "issue_slug": "immigration",
+          "stance": "neutral",
+          "summary": "Calls current immigration policy 'broken' and calls for balanced, practical reforms that uphold the rule of law while strengthening the economy and keeping communities safe.",
+          "source_url": "https://ballotpedia.org/Kimberly_Overman",
+          "confidence": 65
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:10.449Z",
+      "verified_at": "2026-08-07T19:01:10.449Z"
     }
   ],
   "race": {

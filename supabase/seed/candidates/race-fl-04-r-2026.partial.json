@@ -619,7 +619,19 @@
         }
       ],
       "incumbent_source": "T26 adversarial verification 2026-08-06: sitting member of this district, qualified in this primary (DOE + Ballotpedia/Wikipedia/news cross-check)",
-      "bioguide_id": "B001314"
+      "bioguide_id": "B001314",
+      "total_raised": 2163375.8,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 2163375.8,
+        "disbursements": 1005546.53,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 907518.83,
+        "other_political_committee_contributions": 1149650.01,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

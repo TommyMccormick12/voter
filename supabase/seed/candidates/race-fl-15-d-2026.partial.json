@@ -13,10 +13,58 @@
       "race_id": "race-fl-15-d-2026",
       "fec_candidate_id": "H6FL12199",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 22229.64,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 22229.64,
+        "disbursements": 17116.3,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 20729.64,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "christopher-irizarry-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Backs a $15/hour federal minimum wage, strong labor unions, paid family leave, fully funded childcare, and strengthening Social Security by ending its income cap.",
+          "source_url": "https://chrisforchange.com/issues-1",
+          "confidence": 85
+        },
+        {
+          "stance_id": "christopher-irizarry-education",
+          "issue_slug": "education",
+          "stance": "strongly_support",
+          "summary": "Wants to restore full Department of Education funding, raise teacher salaries, and offer tuition-free community college and trade school plus student loan forgiveness.",
+          "source_url": "https://chrisforchange.com/issues-1",
+          "confidence": 88
+        },
+        {
+          "stance_id": "christopher-irizarry-climate",
+          "issue_slug": "climate",
+          "stance": "strongly_support",
+          "summary": "Backs full funding for the EPA and NOAA, clean energy jobs, defending the Clean Water Act and Everglades restoration, and a moratorium on hyperscale AI data centers.",
+          "source_url": "https://chrisforchange.com/issues-1",
+          "confidence": 85
+        },
+        {
+          "stance_id": "christopher-irizarry-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Lists affordable housing programs as part of his economic agenda for working families, alongside minimum wage, paid leave, and childcare support.",
+          "source_url": "https://chrisforchange.com/issues-1",
+          "confidence": 60
+        }
+      ],
+      "activated_at": "2026-08-07T19:21:37.512Z",
+      "verified_at": "2026-08-07T19:21:37.512Z"
     },
     {
       "name": "Robert People",
@@ -29,15 +77,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-15-d-2026",
       "fec_candidate_id": "H6FL15168",
-      "total_raised": 25458.9,
+      "total_raised": 38495.9,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 25458.9,
-        "disbursements": 24890.25,
+        "receipts": 38495.9,
+        "disbursements": 36570.01,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 15677.29,
-        "other_political_committee_contributions": 200
+        "individual_contributions": 18274.29,
+        "other_political_committee_contributions": 200,
+        "coverage_end_date": "2026-06-30"
       },
       "top_industries": [
         {
@@ -173,7 +222,36 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "robert-people-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Calls health care 'a human right' and backs Medicare for All, so people do not have to choose between paying bills and life-saving medication; opposes pharmaceutical price gouging.",
+          "source_url": "https://www.peopleforcongress.com/general-7",
+          "confidence": 90
+        },
+        {
+          "stance_id": "robert-people-education",
+          "issue_slug": "education",
+          "stance": "strongly_support",
+          "summary": "Proposes free school breakfast and lunch for all children, a child tax credit covering school meals, and state minimum teacher salaries tied to the local cost of living.",
+          "source_url": "https://www.peopleforcongress.com/general-7",
+          "confidence": 88
+        },
+        {
+          "stance_id": "robert-people-climate",
+          "issue_slug": "climate",
+          "stance": "strongly_support",
+          "summary": "Opposes fossil fuel industry benefits continued under the Trump administration; backs clean energy investment, lower utility costs, and restoring EPA standards and FEMA programs.",
+          "source_url": "https://www.peopleforcongress.com/general-7",
+          "confidence": 82
+        }
+      ],
+      "activated_at": "2026-08-07T19:21:38.623Z",
+      "verified_at": "2026-08-07T19:21:38.623Z"
     }
   ],
   "race": {

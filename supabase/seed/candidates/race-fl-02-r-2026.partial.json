@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 117948.08,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 117948.08,
+        "disbursements": 90723.8,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 117899.3,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Austin Rogers",
@@ -30,10 +42,58 @@
       "race_id": "race-fl-02-r-2026",
       "fec_candidate_id": "H6FL02331",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 1010276.95,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1010276.95,
+        "disbursements": 623247.92,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 628431.88,
+        "other_political_committee_contributions": 6500,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "austin-rogers-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports trade policies that prioritize American jobs over foreign competition, and policies aimed at lowering costs for families.",
+          "source_url": "https://rogersforflorida.com/issues",
+          "confidence": 62
+        },
+        {
+          "stance_id": "austin-rogers-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Supports codifying strong border security policies into law, working with President Trump and Republican leaders.",
+          "source_url": "https://rogersforflorida.com/issues",
+          "confidence": 72
+        },
+        {
+          "stance_id": "austin-rogers-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "A strong and unwavering defender of the Second Amendment; opposes gun-control measures and supports hunting and fishing traditions.",
+          "source_url": "https://rogersforflorida.com/issues",
+          "confidence": 80
+        },
+        {
+          "stance_id": "austin-rogers-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_support",
+          "summary": "Supports continued U.S. support for Israel amid threats from Iran, Hamas, and other hostile actors; opposes antisemitism.",
+          "source_url": "https://rogersforflorida.com/issues",
+          "confidence": 75
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:03.444Z",
+      "verified_at": "2026-08-07T19:01:03.444Z"
     },
     {
       "name": "Evan Power",
@@ -50,7 +110,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 727092.62,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 727092.62,
+        "disbursements": 464183.3,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 549277.36,
+        "other_political_committee_contributions": 15750,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Jim Norton",
@@ -67,7 +139,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 411786.26,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 411786.26,
+        "disbursements": 400388.05,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 409786.26,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Keith Gross",
@@ -81,10 +165,58 @@
       "race_id": "race-fl-02-r-2026",
       "fec_candidate_id": "H4FL01247",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 12325574.55,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 12325574.55,
+        "disbursements": 11329071.41,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 98154.24,
+        "other_political_committee_contributions": 7000,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "keith-gross-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Pledges to audit federal spending immediately, citing a 'massive wasteful spending problem' in Washington rather than a revenue shortfall.",
+          "source_url": "https://keithgross.com/issues",
+          "confidence": 70
+        },
+        {
+          "stance_id": "keith-gross-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Pledges to work with the Trump administration to stop illegal border crossings and the flow of drugs and crime, backing strict border enforcement.",
+          "source_url": "https://keithgross.com/issues",
+          "confidence": 78
+        },
+        {
+          "stance_id": "keith-gross-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_oppose",
+          "summary": "Opposes further U.S. funding for Ukraine, pledging to 'never send a penny' of taxpayer money to the war effort.",
+          "source_url": "https://keithgross.com/issues",
+          "confidence": 82
+        },
+        {
+          "stance_id": "keith-gross-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Commits to defending Second Amendment rights against Democratic efforts to restrict access to firearms.",
+          "source_url": "https://keithgross.com/issues",
+          "confidence": 65
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:02.497Z",
+      "verified_at": "2026-08-07T19:01:02.497Z"
     },
     {
       "name": "Lee Jones",
@@ -101,7 +233,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 9800,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 9800,
+        "disbursements": 26179.67,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 2800,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     },
     {
       "name": "Luke Murphy",
@@ -118,7 +262,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 280409.56,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 280409.56,
+        "disbursements": 124051.32,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 277409.56,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Nick Lewis",
@@ -135,7 +291,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 95001,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 95001,
+        "disbursements": 93031.38,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 1001,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-06-30"
+      }
     }
   ],
   "race": {

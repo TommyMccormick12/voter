@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 84387.05,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 84387.05,
+        "disbursements": 73529.75,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 33391.15,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Jimmy Patronis",
@@ -636,7 +648,19 @@
         }
       ],
       "incumbent_source": "T26 adversarial verification 2026-08-06: sitting member of this district, qualified in this primary (DOE + Ballotpedia/Wikipedia/news cross-check)",
-      "bioguide_id": "P000622"
+      "bioguide_id": "P000622",
+      "total_raised": 3789738.36,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 3789738.36,
+        "disbursements": 2854436.51,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 3084611.95,
+        "other_political_committee_contributions": 583300,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "John Frankman",
@@ -653,7 +677,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 110805.31,
+      "fec_coverage_end_date": "2026-06-30",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 110805.31,
+        "disbursements": 54867.65,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 38389.31,
+        "other_political_committee_contributions": 20500,
+        "coverage_end_date": "2026-06-30"
+      }
     }
   ],
   "race": {

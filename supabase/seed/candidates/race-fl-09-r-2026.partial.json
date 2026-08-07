@@ -16,7 +16,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 386672.75,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 386672.75,
+        "disbursements": 274397.84,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 354793.98,
+        "other_political_committee_contributions": 28000,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Dan Green",
@@ -33,7 +45,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 1298516,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 1298516,
+        "disbursements": 935272.55,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 150016,
+        "other_political_committee_contributions": 8500,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Jorge Martinez",
@@ -50,7 +74,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 854897.76,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 854897.76,
+        "disbursements": 564749.25,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 290170.8,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Justin Story",
@@ -63,15 +99,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-09-r-2026",
       "fec_candidate_id": "H6FL09252",
-      "total_raised": 42170.25,
+      "total_raised": 92584.78,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 42170.25,
-        "disbursements": 37052.96,
+        "receipts": 92584.78,
+        "disbursements": 55167.57,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 20984.83,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 66194.83,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -235,7 +272,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Marcus Carter",
@@ -248,15 +286,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-09-r-2026",
       "fec_candidate_id": "H4FL09190",
-      "total_raised": 14949.98,
+      "total_raised": 22475.05,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 14949.98,
-        "disbursements": 14234.07,
+        "receipts": 22475.05,
+        "disbursements": 21950.91,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 13370.13,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 19247.53,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -378,7 +417,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Steve Rance",
@@ -391,15 +431,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-09-r-2026",
       "fec_candidate_id": "H6FL10185",
-      "total_raised": 93551.76,
+      "total_raised": 152756.89,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 93551.76,
-        "disbursements": 55881.89,
+        "receipts": 152756.89,
+        "disbursements": 144979.69,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 28902.18,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 52308.18,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -577,7 +618,8 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false
+      "active": false,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Thomas E. Chalifoux",
@@ -590,15 +632,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-09-r-2026",
       "fec_candidate_id": "H4FL09182",
-      "total_raised": 2299375.99,
+      "total_raised": 3139737.1,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 2299375.99,
-        "disbursements": 760544.08,
+        "receipts": 3139737.1,
+        "disbursements": 1776688.94,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 11675,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 78660.08,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "top_industries": [
         {
@@ -671,7 +714,36 @@
       "voting_record": [],
       "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
       "doe_status": "Qualified",
-      "active": false
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "thomas-e-colonel-jr-chalifoux-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Pledges to end waste and fraud in federal spending, saying Washington should be held accountable the way his own business is when money disappears.",
+          "source_url": "https://ballotpedia.org/Thomas_Chalifoux",
+          "confidence": 75
+        },
+        {
+          "stance_id": "thomas-e-colonel-jr-chalifoux-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Says housing, insurance, and everyday costs have risen and Washington has made it worse; as a professional builder, pledges to fix housing affordability.",
+          "source_url": "https://ballotpedia.org/Thomas_Chalifoux",
+          "confidence": 65
+        },
+        {
+          "stance_id": "thomas-e-colonel-jr-chalifoux-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Champions the skilled trades (electricians, plumbers, welders, health techs) as an honorable, well-paying path equal to college, citing his own start in construction.",
+          "source_url": "https://ballotpedia.org/Thomas_Chalifoux",
+          "confidence": 72
+        }
+      ],
+      "activated_at": "2026-08-07T19:03:59.574Z",
+      "verified_at": "2026-08-07T19:03:59.574Z"
     }
   ],
   "race": {

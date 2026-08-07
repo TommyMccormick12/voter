@@ -12,15 +12,16 @@
       "office": "U.S. Senate",
       "race_id": "race-fl-sen-d-2026",
       "fec_candidate_id": "S6FL00855",
-      "total_raised": 8188391.6,
+      "total_raised": 14595387.39,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 8188391.6,
-        "disbursements": 1748269.11,
+        "receipts": 14595387.39,
+        "disbursements": 7288082.36,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 8021891.6,
-        "other_political_committee_contributions": 166050
+        "individual_contributions": 14297915.95,
+        "other_political_committee_contributions": 215050,
+        "coverage_end_date": "2026-06-30"
       },
       "bio": "Alex Vindman is a former U.S. Army officer with over 21 years of service who was wounded in Iraq and awarded a Purple Heart. He previously served as a National Security professional on the National Security Council, where he became known for his testimony during the first Trump impeachment hearings. He is running for U.S. Senate in Florida as a Democrat on a 'Florida First Agenda'.",
       "campaign_website": "http://alexvindman.com",
@@ -292,7 +293,8 @@
       "active": true,
       "activated_at": "2026-08-07T14:06:35.512Z",
       "doe_status": "Qualified",
-      "verified_at": "2026-08-07T14:06:35.512Z"
+      "verified_at": "2026-08-07T14:06:35.512Z",
+      "fec_coverage_end_date": "2026-06-30"
     },
     {
       "name": "Angie Nixon",
@@ -305,15 +307,16 @@
       "office": "U.S. Senate",
       "race_id": "race-fl-sen-d-2026",
       "fec_candidate_id": "S6FL00830",
-      "total_raised": 293583.92,
+      "total_raised": 974844.71,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 293583.92,
-        "disbursements": 20957.37,
+        "receipts": 974844.71,
+        "disbursements": 709866.35,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 293583.92,
-        "other_political_committee_contributions": 0
+        "individual_contributions": 974844.71,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "Angela Nixon (born February 27, 1984) is an American politician who has served as a Democratic member in the Florida House of Representatives since 2020. She is a candidate in the 2026 United States Senate special election in Florida.",
       "campaign_website": "https://angienixon.com/",
@@ -619,7 +622,8 @@
       "active": true,
       "activated_at": "2026-08-07T14:06:36.112Z",
       "doe_status": "Qualified",
-      "verified_at": "2026-08-07T14:06:36.112Z"
+      "verified_at": "2026-08-07T14:06:36.112Z",
+      "fec_coverage_end_date": "2026-07-29"
     }
   ],
   "race": {

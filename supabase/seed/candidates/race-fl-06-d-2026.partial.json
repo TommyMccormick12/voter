@@ -13,10 +13,50 @@
       "race_id": "race-fl-06-d-2026",
       "fec_candidate_id": "H6FL06340",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 323491.85,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 323491.85,
+        "disbursements": 289177.96,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 322741.85,
+        "other_political_committee_contributions": 250,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "eric-yonce-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Supports environmental protection and responsible development to preserve Florida's natural resources, waterways, and green spaces.",
+          "source_url": "https://ballotpedia.org/Eric_Yonce",
+          "confidence": 80
+        },
+        {
+          "stance_id": "eric-yonce-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Supports reforms to lower healthcare costs and insurance burdens, calling rising costs a growing strain on families and businesses.",
+          "source_url": "https://ballotpedia.org/Eric_Yonce",
+          "confidence": 80
+        },
+        {
+          "stance_id": "eric-yonce-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports policies to keep housing, energy, and everyday costs affordable and to support local small businesses amid rising cost of living.",
+          "source_url": "https://ballotpedia.org/Eric_Yonce",
+          "confidence": 80
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:05.425Z",
+      "verified_at": "2026-08-07T19:01:05.425Z"
     },
     {
       "name": "Robert David Cooper",
@@ -33,7 +73,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 68204.84,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 68204.84,
+        "disbursements": 64510.07,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 44204.84,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Ronnie \"Ron\" Murchinson-Rivera",
@@ -50,7 +102,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 176593.8,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 176593.8,
+        "disbursements": 158410.46,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 174493.8,
+        "other_political_committee_contributions": 100,
+        "coverage_end_date": "2026-07-29"
+      }
     },
     {
       "name": "Steve Morgan",
@@ -67,7 +131,19 @@
       "active": false,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 8250,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 8250,
+        "disbursements": 15200.1,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 3240,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      }
     }
   ],
   "race": {

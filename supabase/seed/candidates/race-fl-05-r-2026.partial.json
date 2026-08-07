@@ -13,7 +13,7 @@
       "race_id": "race-fl-05-r-2026",
       "fec_candidate_id": "H6FL04105",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [
@@ -619,7 +619,55 @@
         }
       ],
       "incumbent_source": "T26 adversarial verification 2026-08-06: sitting member of this district, qualified in this primary (DOE + Ballotpedia/Wikipedia/news cross-check)",
-      "bioguide_id": "R000609"
+      "bioguide_id": "R000609",
+      "total_raised": 726726.61,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 726726.61,
+        "disbursements": 635666.02,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 273968.27,
+        "other_political_committee_contributions": 452500,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "john-h-rutherford-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Says he works to cut government red tape on small businesses and backed tax cuts for families and small businesses.",
+          "source_url": "https://johnrutherfordforcongress.com/priorities",
+          "confidence": 72
+        },
+        {
+          "stance_id": "john-h-rutherford-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Says he fought to lower treatment and premium costs, protect coverage for pre-existing conditions, and lower prescription drug prices.",
+          "source_url": "https://johnrutherfordforcongress.com/priorities",
+          "confidence": 70
+        },
+        {
+          "stance_id": "john-h-rutherford-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Voted to fund construction of the border wall and says he backs strict enforcement of immigration law to secure the border.",
+          "source_url": "https://johnrutherfordforcongress.com/priorities",
+          "confidence": 75
+        },
+        {
+          "stance_id": "john-h-rutherford-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Says he backed banning offshore oil drilling off Florida's coast to protect the state's beaches and waterways.",
+          "source_url": "https://johnrutherfordforcongress.com/priorities",
+          "confidence": 72
+        }
+      ],
+      "activated_at": "2026-08-07T19:02:07.440Z",
+      "verified_at": "2026-08-07T19:02:07.440Z"
     },
     {
       "name": "Mark Kaye",
@@ -633,10 +681,58 @@
       "race_id": "race-fl-05-r-2026",
       "fec_candidate_id": "H6FL05201",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
-      "voting_record": []
+      "voting_record": [],
+      "total_raised": 31455.62,
+      "fec_coverage_end_date": "2026-07-29",
+      "fec_totals": {
+        "committee_id": "",
+        "cycle": 2026,
+        "receipts": 31455.62,
+        "disbursements": 27037.78,
+        "cash_on_hand_end_period": 0,
+        "individual_contributions": 30459.52,
+        "other_political_committee_contributions": 0,
+        "coverage_end_date": "2026-07-29"
+      },
+      "top_stances": [
+        {
+          "stance_id": "mark-kaye-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Supports cutting federal taxes and eliminating what he calls a 'weaponized' IRS so people keep more of what they earn.",
+          "source_url": "https://markkayeforcongress.com/",
+          "confidence": 78
+        },
+        {
+          "stance_id": "mark-kaye-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports cutting federal spending, eliminating waste, and shrinking the size of the federal government.",
+          "source_url": "https://markkayeforcongress.com/",
+          "confidence": 78
+        },
+        {
+          "stance_id": "mark-kaye-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Supports strict enforcement of immigration law and a secure border, saying this protects American jobs and lowers crime.",
+          "source_url": "https://markkayeforcongress.com/",
+          "confidence": 78
+        },
+        {
+          "stance_id": "mark-kaye-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Supports parental rights in raising and educating children and backs expanding school choice.",
+          "source_url": "https://markkayeforcongress.com/",
+          "confidence": 76
+        }
+      ],
+      "activated_at": "2026-08-07T19:02:08.411Z",
+      "verified_at": "2026-08-07T19:02:08.411Z"
     }
   ],
   "race": {

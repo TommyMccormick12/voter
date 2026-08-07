@@ -12,15 +12,16 @@
       "office": "U.S. House",
       "race_id": "race-fl-17-r-2026",
       "fec_candidate_id": "H8FL17053",
-      "total_raised": 959819.1,
+      "total_raised": 1337886.69,
       "fec_totals": {
         "committee_id": "",
         "cycle": 2026,
-        "receipts": 959819.1,
-        "disbursements": 546827.97,
+        "receipts": 1337886.69,
+        "disbursements": 845314.95,
         "cash_on_hand_end_period": 0,
-        "individual_contributions": 336431.85,
-        "other_political_committee_contributions": 424000
+        "individual_contributions": 479608,
+        "other_political_committee_contributions": 580500,
+        "coverage_end_date": "2026-07-29"
       },
       "bio": "William Gregory Steube (/ˈstuːbi/ STOO-bee; born May 19, 1978) is an American politician serving as the U.S. representative for Florida's 17th congressional district since 2019. His district is based in Sarasota. A member of the Republican Party, Steube served three terms in the Florida House of Representatives, representing the Sarasota-Manatee area from 2010 to 2016, as well as two years in the Florida Senate until 2018, representing Sarasota County and the western part of Charlotte County.",
       "campaign_website": "http://steube.house.gov",
@@ -804,37 +805,50 @@
       ],
       "top_stances": [
         {
-          "stance_id": "greg-steube-criminal_justice",
-          "issue_slug": "criminal_justice",
+          "stance_id": "greg-steube-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Support strict ICE enforcement; introduced impeachment articles against a federal judge for releasing a convicted plane hijacker from ICE custody.",
+          "source_url": "https://steube.house.gov/issues/border-immigration/",
+          "confidence": 75
+        },
+        {
+          "stance_id": "greg-steube-healthcare",
+          "issue_slug": "healthcare",
           "stance": "support",
-          "summary": "Support law enforcement and measures to combat organized retail crime and violent offenders.",
-          "source_url": "http://steube.house.gov",
-          "confidence": 75,
-          "track_record_note": "Voted YEA on hr6260-119 (Keeping Violent Offenders Off Our Streets Act) and hr2853-119 (Combating Organized Retail Crime Act); voted YEA on hconres96-119 expressing support for law enforcement officers.",
-          "track_record_citations": [
-            "hr6260-119",
-            "hr2853-119",
-            "hconres96-119"
-          ]
+          "summary": "Support market-based healthcare options for low-income Americans; co-introduced the ACCESS Act with Rep. Kat Cammack to expand affordable care choices.",
+          "source_url": "https://steube.house.gov/issues/healthcare/",
+          "confidence": 65
+        },
+        {
+          "stance_id": "greg-steube-taxes",
+          "issue_slug": "taxes",
+          "stance": "strongly_support",
+          "summary": "Support tax relief for disaster victims; authored the Federal Disaster Tax Relief Act (H.R. 5863), signed into law, letting Florida hurricane victims deduct losses without itemizing.",
+          "source_url": "https://steube.house.gov/taxrelief/",
+          "confidence": 85
         },
         {
           "stance_id": "greg-steube-foreign_policy",
           "issue_slug": "foreign_policy",
           "stance": "support",
-          "summary": "Support military construction and defense appropriations; oppose unilateral withdrawal from military operations.",
-          "source_url": "http://steube.house.gov",
-          "confidence": 72,
-          "track_record_note": "Voted YEA on hr8469-119 (military construction and VA appropriations); voted NAY on hconres75-119 (directive to remove Armed Forces from Iran hostilities).",
+          "summary": "Support funding for national defense and international security; voted yea on the FY2027 defense authorization act and State Department appropriations bill.",
+          "source_url": "https://steube.house.gov/issues/military-foreign-affairs/",
+          "confidence": 75,
+          "track_record_note": "Voted YEA on hr8800-119 (National Defense Authorization Act for Fiscal Year 2027, on passage) and hr8595-119 (FY2027 national security/State Department appropriations, on passage); both bills' subject matter verified directly on congress.gov.",
           "track_record_citations": [
-            "hr8469-119",
-            "hconres75-119"
+            "hr8800-119",
+            "hr8595-119"
           ]
         }
       ],
       "photo_url": "https://bioguide.congress.gov/photo/S001214.jpg",
       "doe_status": "Qualified",
-      "active": false,
-      "incumbent_source": "carried from race-fl-17-r-2026.partial.json (race-fl-17-r-2026), same race pre- and post-rebuild; FEC id H8FL17053 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)"
+      "active": true,
+      "incumbent_source": "carried from race-fl-17-r-2026.partial.json (race-fl-17-r-2026), same race pre- and post-rebuild; FEC id H8FL17053 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
+      "fec_coverage_end_date": "2026-07-29",
+      "activated_at": "2026-08-07T18:45:26.357Z",
+      "verified_at": "2026-08-07T18:45:26.357Z"
     }
   ],
   "race": {
