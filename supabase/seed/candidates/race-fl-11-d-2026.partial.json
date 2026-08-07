@@ -33,7 +33,7 @@
       "race_id": "race-fl-11-d-2026",
       "fec_candidate_id": "H6FL11357",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -48,7 +48,35 @@
         "individual_contributions": 54789,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "james-pericola-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Supports expanding access to affordable, high-quality healthcare by protecting the Affordable Care Act.",
+          "source_url": "https://www.jamespericola.com/#issues",
+          "confidence": 85
+        },
+        {
+          "stance_id": "james-pericola-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Supports eliminating income taxes for people earning under $100,000 a year and cutting taxes for middle-class families.",
+          "source_url": "https://www.jamespericola.com/#issues",
+          "confidence": 85
+        },
+        {
+          "stance_id": "james-pericola-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Supports securing federal funding to address the housing crisis and lower property insurance costs.",
+          "source_url": "https://www.jamespericola.com/#issues",
+          "confidence": 85
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:06.432Z",
+      "verified_at": "2026-08-07T19:01:06.432Z"
     },
     {
       "name": "Royal Webster",
@@ -135,23 +163,44 @@
       "voting_record": [],
       "top_stances": [
         {
-          "stance_id": "royal-mr-webster-foreign_policy",
-          "issue_slug": "foreign_policy",
+          "stance_id": "royal-mr-webster-economy",
+          "issue_slug": "economy",
           "stance": "support",
-          "summary": "Support extending Foreign Intelligence Surveillance Act authorities for national security.",
-          "source_url": "",
-          "source_excerpt": "YEA on S. 4465 to extend FISA title VII authorities",
-          "confidence": 85,
-          "track_record_note": "voted YEA on s4465-119 aligning with stance on foreign intelligence surveillance extension",
-          "track_record_citations": [
-            "s4465-119"
-          ]
+          "summary": "Backs the RISE Act, a hybrid universal basic income with a sliding-scale, work-rewarding benefit, plus fair wages, to counter rising costs for working families.",
+          "source_url": "https://ballotpedia.org/Royal_Webster",
+          "confidence": 88
+        },
+        {
+          "stance_id": "royal-mr-webster-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Supports increasing affordable housing to address rising housing costs for working families in Florida's 11th District.",
+          "source_url": "https://ballotpedia.org/Royal_Webster",
+          "confidence": 88
+        },
+        {
+          "stance_id": "royal-mr-webster-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Supports strengthening public education and workforce training; developed the Literacy 2040 initiative to raise national reading proficiency.",
+          "source_url": "https://ballotpedia.org/Royal_Webster",
+          "confidence": 88
+        },
+        {
+          "stance_id": "royal-mr-webster-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Supports lowering healthcare and prescription drug costs, and fully funding the VA to improve veterans' access to healthcare and mental health services.",
+          "source_url": "https://ballotpedia.org/Royal_Webster",
+          "confidence": 88
         }
       ],
       "photo_url": "https://bioguide.congress.gov/photo/W000806.jpg",
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "activated_at": "2026-08-07T19:01:07.422Z",
+      "verified_at": "2026-08-07T19:01:07.422Z"
     }
   ],
   "race": {

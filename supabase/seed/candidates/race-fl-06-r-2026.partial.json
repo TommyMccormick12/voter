@@ -86,7 +86,49 @@
         "individual_contributions": 35984.64,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-09-30"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "dan-bilzerian-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Platform calls to \"secure the damn border and deport every single person who came here illegally.\"",
+          "source_url": "https://www.bilzerianforcongress.com/dans-plan/",
+          "confidence": 68
+        },
+        {
+          "stance_id": "dan-bilzerian-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_oppose",
+          "summary": "Platform calls to \"end all foreign aid\" and opposes \"endless foreign wars,\" saying the U.S. should have \"strong national defense... not playing world police.\"",
+          "source_url": "https://www.bilzerianforcongress.com/dans-plan/",
+          "confidence": 68
+        },
+        {
+          "stance_id": "dan-bilzerian-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Platform states he wants to \"kill the ATF,\" the federal firearms regulator, as part of eliminating federal agencies.",
+          "source_url": "https://www.bilzerianforcongress.com/dans-plan/",
+          "confidence": 52
+        },
+        {
+          "stance_id": "dan-bilzerian-taxes",
+          "issue_slug": "taxes",
+          "stance": "strongly_support",
+          "summary": "Platform proposes \"getting rid of the IRS\" and lowering taxes to make \"America affordable again\" for working families.",
+          "source_url": "https://www.bilzerianforcongress.com/dans-plan/",
+          "confidence": 63
+        },
+        {
+          "stance_id": "dan-bilzerian-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Platform calls to \"dismantle the Fed\" and \"shrink the federal government down to size,\" citing federal overspending.",
+          "source_url": "https://www.bilzerianforcongress.com/dans-plan/",
+          "confidence": 58
+        }
+      ]
     },
     {
       "name": "Manuel P. Asensio",
@@ -129,7 +171,7 @@
       "race_id": "race-fl-06-r-2026",
       "fec_candidate_id": "H6FL06258",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [
@@ -747,7 +789,43 @@
         "individual_contributions": 2485004.97,
         "other_political_committee_contributions": 468360.19,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "randy-fine-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Campaigns on securing the border and \"clamping down on illegal immigration\" as a top congressional priority.",
+          "source_url": "https://www.voterandyfine.com/about",
+          "confidence": 60
+        },
+        {
+          "stance_id": "randy-fine-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Campaign site cites an NRA A rating for his Second Amendment record and campaigns on defending the right to bear arms.",
+          "source_url": "https://www.voterandyfine.com/about",
+          "confidence": 62
+        },
+        {
+          "stance_id": "randy-fine-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "support",
+          "summary": "Campaigns on \"backing the blue,\" pledging resources for law enforcement and first responders.",
+          "source_url": "https://www.voterandyfine.com",
+          "confidence": 55
+        },
+        {
+          "stance_id": "randy-fine-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Pledges to \"cut job-killing regulations\" and strengthen the economy, building on a platform of boosting job creation.",
+          "source_url": "https://www.voterandyfine.com/about",
+          "confidence": 58
+        }
+      ],
+      "activated_at": "2026-08-07T19:09:00.965Z",
+      "verified_at": "2026-08-07T19:09:00.965Z"
     }
   ],
   "race": {

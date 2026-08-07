@@ -714,8 +714,36 @@
       "voting_record": [],
       "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "thomas-e-colonel-jr-chalifoux-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Pledges to end waste and fraud in federal spending, saying Washington should be held accountable the way his own business is when money disappears.",
+          "source_url": "https://ballotpedia.org/Thomas_Chalifoux",
+          "confidence": 75
+        },
+        {
+          "stance_id": "thomas-e-colonel-jr-chalifoux-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Says housing, insurance, and everyday costs have risen and Washington has made it worse; as a professional builder, pledges to fix housing affordability.",
+          "source_url": "https://ballotpedia.org/Thomas_Chalifoux",
+          "confidence": 65
+        },
+        {
+          "stance_id": "thomas-e-colonel-jr-chalifoux-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Champions the skilled trades (electricians, plumbers, welders, health techs) as an honorable, well-paying path equal to college, citing his own start in construction.",
+          "source_url": "https://ballotpedia.org/Thomas_Chalifoux",
+          "confidence": 72
+        }
+      ],
+      "activated_at": "2026-08-07T19:03:59.574Z",
+      "verified_at": "2026-08-07T19:03:59.574Z"
     }
   ],
   "race": {

@@ -187,7 +187,7 @@
       "race_id": "race-fl-14-r-2026",
       "fec_candidate_id": "H6FL14237",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -202,7 +202,43 @@
         "individual_contributions": 102724.89,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "mike-beltran-taxes",
+          "issue_slug": "taxes",
+          "stance": "strongly_support",
+          "summary": "Strongly supports tax cuts, backing 'no tax on tips, no tax on overtime,' plus relief for seniors on Social Security.",
+          "source_url": "https://beltranforcongress.com/platform",
+          "confidence": 87
+        },
+        {
+          "stance_id": "mike-beltran-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports cutting regulations and expanding American energy production to fight inflation and lower costs, opposing what he calls 'Bidenomics.'",
+          "source_url": "https://beltranforcongress.com/platform",
+          "confidence": 85
+        },
+        {
+          "stance_id": "mike-beltran-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Supports school choice, which he says he championed in the state legislature, and says parents should decide their children's education.",
+          "source_url": "https://beltranforcongress.com/platform",
+          "confidence": 85
+        },
+        {
+          "stance_id": "mike-beltran-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Strongly supports gun rights, citing a 'perfect pro-gun record' and opposing red flag laws and magazine bans.",
+          "source_url": "https://beltranforcongress.com/platform",
+          "confidence": 88
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:11.492Z",
+      "verified_at": "2026-08-07T19:01:11.492Z"
     },
     {
       "name": "Robert \"Rocky\" Rochford",

@@ -13,7 +13,7 @@
       "race_id": "race-fl-06-d-2026",
       "fec_candidate_id": "H6FL06340",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -28,7 +28,35 @@
         "individual_contributions": 322741.85,
         "other_political_committee_contributions": 250,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "eric-yonce-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Supports environmental protection and responsible development to preserve Florida's natural resources, waterways, and green spaces.",
+          "source_url": "https://ballotpedia.org/Eric_Yonce",
+          "confidence": 80
+        },
+        {
+          "stance_id": "eric-yonce-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Supports reforms to lower healthcare costs and insurance burdens, calling rising costs a growing strain on families and businesses.",
+          "source_url": "https://ballotpedia.org/Eric_Yonce",
+          "confidence": 80
+        },
+        {
+          "stance_id": "eric-yonce-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports policies to keep housing, energy, and everyday costs affordable and to support local small businesses amid rising cost of living.",
+          "source_url": "https://ballotpedia.org/Eric_Yonce",
+          "confidence": 80
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:05.425Z",
+      "verified_at": "2026-08-07T19:01:05.425Z"
     },
     {
       "name": "Robert David Cooper",

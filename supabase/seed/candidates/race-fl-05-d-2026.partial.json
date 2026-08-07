@@ -42,7 +42,7 @@
       "race_id": "race-fl-05-d-2026",
       "fec_candidate_id": "H6FL05235",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -57,7 +57,35 @@
         "individual_contributions": 22518.78,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "mark-heggestad-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Says healthcare is vital to Jacksonville's economy and calls for expanding coverage, lowering costs, and ensuring quality care.",
+          "source_url": "https://ballotpedia.org/Mark_Heggestad",
+          "confidence": 70
+        },
+        {
+          "stance_id": "mark-heggestad-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Opposes offshore drilling and supports promoting renewable energy as part of protecting Florida's environment.",
+          "source_url": "https://ballotpedia.org/Mark_Heggestad",
+          "confidence": 75
+        },
+        {
+          "stance_id": "mark-heggestad-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Calls education foundational and pledges to invest in schools, support teachers, and ensure high-quality learning.",
+          "source_url": "https://ballotpedia.org/Mark_Heggestad",
+          "confidence": 55
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:48.228Z",
+      "verified_at": "2026-08-07T19:01:48.228Z"
     },
     {
       "name": "Rachel Grage",
@@ -71,7 +99,7 @@
       "race_id": "race-fl-05-d-2026",
       "fec_candidate_id": "H6FL05250",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -86,7 +114,43 @@
         "individual_contributions": 270924.53,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "rachel-grage-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Draws on her healthcare background to pledge lower insurance costs, expanded coverage, affordable premiums, and continued federal cost-sharing subsidies.",
+          "source_url": "https://rachelgrage.com/",
+          "confidence": 75
+        },
+        {
+          "stance_id": "rachel-grage-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Platform pledges to stabilize home insurance costs and protect Medicare and Social Security's long-term solvency for seniors and future generations.",
+          "source_url": "https://rachelgrage.com/",
+          "confidence": 60
+        },
+        {
+          "stance_id": "rachel-grage-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Supports securing the border through efficient enforcement while maintaining a fair, humane immigration system that respects due process.",
+          "source_url": "https://rachelgrage.com/",
+          "confidence": 70
+        },
+        {
+          "stance_id": "rachel-grage-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Pledges to defend Florida's coastal ecosystems, expand conservation funding, and invest in disaster resilience.",
+          "source_url": "https://rachelgrage.com/",
+          "confidence": 65
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:47.178Z",
+      "verified_at": "2026-08-07T19:01:47.178Z"
     }
   ],
   "race": {

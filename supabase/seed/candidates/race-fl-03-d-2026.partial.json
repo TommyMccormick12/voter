@@ -13,7 +13,7 @@
       "race_id": "race-fl-03-d-2026",
       "fec_candidate_id": "H6FL03131",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -28,7 +28,43 @@
         "individual_contributions": 50,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "george-hubac-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Wants to restore recently-cut ACA subsidies and SNAP benefits, require 100% federal Medicaid funding, and build a long-term universal basic income floor.",
+          "source_url": "https://hubacforcongress.com/economy/",
+          "confidence": 80
+        },
+        {
+          "stance_id": "george-hubac-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Would expand mobile clinics, credential private doctors into the VA network to cut out insurers, negotiate drug prices at the lowest federal rate paid.",
+          "source_url": "https://hubacforcongress.com/healthcare/",
+          "confidence": 85
+        },
+        {
+          "stance_id": "george-hubac-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Proposes a Florida co-op factory building hurricane-rated, expandable modular homes on standard mortgages, with ownership modeled on Publix or a credit union.",
+          "source_url": "https://hubacforcongress.com/housing/",
+          "confidence": 85
+        },
+        {
+          "stance_id": "george-hubac-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Wants to restore the 30% solar tax credit, add home battery storage, and make data centers fund their own grid upgrades to cut reliance on imported gas.",
+          "source_url": "https://hubacforcongress.com/energy/",
+          "confidence": 75
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:50.081Z",
+      "verified_at": "2026-08-07T19:01:50.081Z"
     },
     {
       "name": "Seth Harp",
@@ -42,7 +78,7 @@
       "race_id": "race-fl-03-d-2026",
       "fec_candidate_id": "H6FL03099",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -57,7 +93,43 @@
         "individual_contributions": 36364.11,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "seth-harp-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Wants to guarantee affordable health care for every American, prevent medical bankruptcy, and double the behavioral health workforce to cut wait times.",
+          "source_url": "https://www.sethharpforcongress.com/issues",
+          "confidence": 85
+        },
+        {
+          "stance_id": "seth-harp-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Supports raising the corporate tax rate to the Reagan-era 26% and closing stock-compensation loopholes to fund social programs.",
+          "source_url": "https://www.sethharpforcongress.com/issues",
+          "confidence": 85
+        },
+        {
+          "stance_id": "seth-harp-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Backs a new tax on corporate home purchases plus incentives for affordable construction, saying homes should be lived in, not traded as assets.",
+          "source_url": "https://www.sethharpforcongress.com/issues",
+          "confidence": 85
+        },
+        {
+          "stance_id": "seth-harp-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Would cap federal student loan interest at 3.1% and provide universal free school lunch for public school students.",
+          "source_url": "https://www.sethharpforcongress.com/issues",
+          "confidence": 85
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:49.157Z",
+      "verified_at": "2026-08-07T19:01:49.157Z"
     },
     {
       "name": "Tom Wells",

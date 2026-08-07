@@ -42,7 +42,7 @@
       "race_id": "race-fl-02-r-2026",
       "fec_candidate_id": "H6FL02331",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -57,7 +57,43 @@
         "individual_contributions": 628431.88,
         "other_political_committee_contributions": 6500,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "austin-rogers-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports trade policies that prioritize American jobs over foreign competition, and policies aimed at lowering costs for families.",
+          "source_url": "https://rogersforflorida.com/issues",
+          "confidence": 62
+        },
+        {
+          "stance_id": "austin-rogers-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Supports codifying strong border security policies into law, working with President Trump and Republican leaders.",
+          "source_url": "https://rogersforflorida.com/issues",
+          "confidence": 72
+        },
+        {
+          "stance_id": "austin-rogers-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "A strong and unwavering defender of the Second Amendment; opposes gun-control measures and supports hunting and fishing traditions.",
+          "source_url": "https://rogersforflorida.com/issues",
+          "confidence": 80
+        },
+        {
+          "stance_id": "austin-rogers-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_support",
+          "summary": "Supports continued U.S. support for Israel amid threats from Iran, Hamas, and other hostile actors; opposes antisemitism.",
+          "source_url": "https://rogersforflorida.com/issues",
+          "confidence": 75
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:03.444Z",
+      "verified_at": "2026-08-07T19:01:03.444Z"
     },
     {
       "name": "Evan Power",
@@ -129,7 +165,7 @@
       "race_id": "race-fl-02-r-2026",
       "fec_candidate_id": "H4FL01247",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -144,7 +180,43 @@
         "individual_contributions": 98154.24,
         "other_political_committee_contributions": 7000,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "keith-gross-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Pledges to audit federal spending immediately, citing a 'massive wasteful spending problem' in Washington rather than a revenue shortfall.",
+          "source_url": "https://keithgross.com/issues",
+          "confidence": 70
+        },
+        {
+          "stance_id": "keith-gross-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Pledges to work with the Trump administration to stop illegal border crossings and the flow of drugs and crime, backing strict border enforcement.",
+          "source_url": "https://keithgross.com/issues",
+          "confidence": 78
+        },
+        {
+          "stance_id": "keith-gross-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_oppose",
+          "summary": "Opposes further U.S. funding for Ukraine, pledging to 'never send a penny' of taxpayer money to the war effort.",
+          "source_url": "https://keithgross.com/issues",
+          "confidence": 82
+        },
+        {
+          "stance_id": "keith-gross-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Commits to defending Second Amendment rights against Democratic efforts to restrict access to firearms.",
+          "source_url": "https://keithgross.com/issues",
+          "confidence": 65
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:02.497Z",
+      "verified_at": "2026-08-07T19:01:02.497Z"
     },
     {
       "name": "Lee Jones",

@@ -94,7 +94,7 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "total_raised": 932552,
       "fec_coverage_end_date": "2026-07-29",
       "fec_totals": {
@@ -106,7 +106,35 @@
         "individual_contributions": 187552,
         "other_political_committee_contributions": 5000,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "nizam-md-jd-razack-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Supports lowering healthcare costs via price transparency, competition, and patient freedom, with less government bureaucracy in medical decisions.",
+          "source_url": "https://www.razackforcongress.com/issues",
+          "confidence": 65
+        },
+        {
+          "stance_id": "nizam-md-jd-razack-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "support",
+          "summary": "Supports ending 'endless wars' and nation-building abroad, favoring an America First approach based on strength and deterrence over global policing.",
+          "source_url": "https://www.razackforcongress.com/issues",
+          "confidence": 65
+        },
+        {
+          "stance_id": "nizam-md-jd-razack-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports fiscal discipline to address the national debt, calling for cuts to waste, fraud, abuse, and reckless federal spending.",
+          "source_url": "https://www.razackforcongress.com/issues",
+          "confidence": 65
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:08.442Z",
+      "verified_at": "2026-08-07T19:01:08.442Z"
     },
     {
       "name": "Tim Wilkins",

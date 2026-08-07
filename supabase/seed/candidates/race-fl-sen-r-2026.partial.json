@@ -981,8 +981,44 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-06-30"
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "christopher-gleason-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Backs cutting two regulations for every new one, opening federal land to expand U.S. energy production, and opposing spending bills he says fuel inflation.",
+          "source_url": "https://voteforgleason.com/issues-economy.html",
+          "confidence": 80
+        },
+        {
+          "stance_id": "christopher-gleason-taxes",
+          "issue_slug": "taxes",
+          "stance": "strongly_support",
+          "summary": "Proposes eliminating the federal income tax and replacing it with a national sales tax that exempts food, clothing, and medicine.",
+          "source_url": "https://voteforgleason.com/issues-economy.html",
+          "confidence": 80
+        },
+        {
+          "stance_id": "christopher-gleason-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Backs finishing the border wall, ending catch-and-release with mandatory detention, fully funding Border Patrol, and designating cartels as terrorist organizations.",
+          "source_url": "https://voteforgleason.com/issues-border.html",
+          "confidence": 85
+        },
+        {
+          "stance_id": "christopher-gleason-housing",
+          "issue_slug": "housing",
+          "stance": "strongly_support",
+          "summary": "Wants to codify federal limits on institutional investors buying single-family homes, tax bulk purchases, and cut regulations that add to new-home costs.",
+          "source_url": "https://voteforgleason.com/issues-housing.html",
+          "confidence": 82
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:12.466Z",
+      "verified_at": "2026-08-07T19:01:12.466Z"
     },
     {
       "name": "Ernest \"Ernie\" Rivera",

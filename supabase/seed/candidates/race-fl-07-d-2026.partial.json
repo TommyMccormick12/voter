@@ -43,7 +43,7 @@
       "race_id": "race-fl-07-d-2026",
       "fec_candidate_id": "H6FL07215",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -58,7 +58,43 @@
         "individual_contributions": 1044732.33,
         "other_political_committee_contributions": 156600.01,
         "coverage_end_date": "2026-06-30"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "bale-dalton-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Opposes Medicaid/Medicare cuts and rising premiums; backs negotiating drug prices and building on the ACA to lower premiums, deductibles, and surprise bills.",
+          "source_url": "https://ballotpedia.org/Bale_Dalton",
+          "confidence": 78
+        },
+        {
+          "stance_id": "bale-dalton-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Prioritizes affordability: reversing recent health-premium hikes and tariffs, and adding oversight of insurance and utility companies raising costs on Floridians.",
+          "source_url": "https://ballotpedia.org/Bale_Dalton",
+          "confidence": 75
+        },
+        {
+          "stance_id": "bale-dalton-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Supports tax relief for middle-class working families and opposes tax breaks skewed toward billionaires and corporations.",
+          "source_url": "https://baledalton.com/priorities/",
+          "confidence": 60
+        },
+        {
+          "stance_id": "bale-dalton-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Supports building more affordable housing at all income levels and would ban Wall Street speculators from buying up single-family homes.",
+          "source_url": "https://baledalton.com/priorities/",
+          "confidence": 68
+        }
+      ],
+      "activated_at": "2026-08-07T19:02:05.429Z",
+      "verified_at": "2026-08-07T19:02:05.429Z"
     },
     {
       "name": "Marialana Kinter",
@@ -72,7 +108,7 @@
       "race_id": "race-fl-07-d-2026",
       "fec_candidate_id": "H6FL07165",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -87,7 +123,35 @@
         "individual_contributions": 564590.09,
         "other_political_committee_contributions": 250,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "marialana-kinter-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Backs Medicare for All, universal childcare, and affordable healthcare as core campaign priorities.",
+          "source_url": "https://www.kinterforcongress.com",
+          "confidence": 68
+        },
+        {
+          "stance_id": "marialana-kinter-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Pledges to lower costs for working families, including housing costs, and to stabilize Florida's home insurance market.",
+          "source_url": "https://www.kinterforcongress.com",
+          "confidence": 62
+        },
+        {
+          "stance_id": "marialana-kinter-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Calls for fully funding public education and trade/vocational programs.",
+          "source_url": "https://www.kinterforcongress.com",
+          "confidence": 58
+        }
+      ],
+      "activated_at": "2026-08-07T19:02:06.488Z",
+      "verified_at": "2026-08-07T19:02:06.488Z"
     }
   ],
   "race": {

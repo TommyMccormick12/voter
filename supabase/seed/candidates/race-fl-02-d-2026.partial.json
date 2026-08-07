@@ -42,7 +42,7 @@
       "race_id": "race-fl-02-d-2026",
       "fec_candidate_id": "H6FL02398",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -57,7 +57,35 @@
         "individual_contributions": 102896.77,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "brice-barnes-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Would restore Medicaid coverage for about 133,000 Floridians, protect pre-existing condition protections, and hold insurers accountable to lower patient costs.",
+          "source_url": "https://bricebarnes.com/priorities/",
+          "confidence": 85
+        },
+        {
+          "stance_id": "brice-barnes-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Opposes price gouging by oil and grocery companies and chaotic tariffs; backs holding insurers accountable and investing in affordable energy to lower costs.",
+          "source_url": "https://bricebarnes.com/priorities/",
+          "confidence": 78
+        },
+        {
+          "stance_id": "brice-barnes-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Backs tax relief for the middle class and seniors, ending tax breaks for billionaires, closing corporate loopholes, and making mega-corporations pay a fair share.",
+          "source_url": "https://bricebarnes.com/priorities/",
+          "confidence": 80
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:00.498Z",
+      "verified_at": "2026-08-07T19:01:00.498Z"
     },
     {
       "name": "Nicholas Zateslo",
@@ -71,7 +99,7 @@
       "race_id": "race-fl-02-d-2026",
       "fec_candidate_id": "H6FL02281",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -86,7 +114,43 @@
         "individual_contributions": 302046.37,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "nicholas-zateslo-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Wants to lower prescription drug costs and premiums through competition, protect Medicare and Social Security, and expand rural telehealth and mental health access.",
+          "source_url": "http://www.teamzforflorida.com/issues",
+          "confidence": 82
+        },
+        {
+          "stance_id": "nicholas-zateslo-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Backs promoting competition and stopping price gouging on groceries, gas, and insurance, plus support for manufacturing, agriculture, and small businesses.",
+          "source_url": "http://www.teamzforflorida.com/issues",
+          "confidence": 75
+        },
+        {
+          "stance_id": "nicholas-zateslo-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Supports expanding housing supply and keeping housing affordable for North Florida families and seniors.",
+          "source_url": "http://www.teamzforflorida.com/issues",
+          "confidence": 68
+        },
+        {
+          "stance_id": "nicholas-zateslo-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Backs strengthening public schools, supporting teachers, expanding apprenticeships and career/technical programs, and investing in higher education and research.",
+          "source_url": "http://www.teamzforflorida.com/issues",
+          "confidence": 78
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:01.550Z",
+      "verified_at": "2026-08-07T19:01:01.550Z"
     },
     {
       "name": "Yen Bailey",

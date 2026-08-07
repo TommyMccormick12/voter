@@ -13,7 +13,7 @@
       "race_id": "race-fl-04-d-2026",
       "fec_candidate_id": "H6FL04204",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -28,7 +28,43 @@
         "individual_contributions": 22518,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-06-30"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "brit-robinson-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Backs expanding Medicare for All to provide free universal healthcare, including dental, hearing, and vision coverage.",
+          "source_url": "https://www.brit4congress.com/vision",
+          "confidence": 90
+        },
+        {
+          "stance_id": "brit-robinson-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Supports raising the minimum wage to $30/hr by 2030, backing unions, and taxing the wealthy to fund social programs.",
+          "source_url": "https://www.brit4congress.com/vision",
+          "confidence": 90
+        },
+        {
+          "stance_id": "brit-robinson-education",
+          "issue_slug": "education",
+          "stance": "strongly_support",
+          "summary": "Supports free pre-K, public college, and trade programs, plus full public school funding and repealing school voucher tax credits.",
+          "source_url": "https://www.brit4congress.com/vision",
+          "confidence": 88
+        },
+        {
+          "stance_id": "brit-robinson-climate",
+          "issue_slug": "climate",
+          "stance": "strongly_support",
+          "summary": "Backs the Green New Deal to lower utility costs, reduce fossil fuel reliance, and strengthen pollution standards.",
+          "source_url": "https://www.brit4congress.com/vision",
+          "confidence": 88
+        }
+      ],
+      "activated_at": "2026-08-07T19:01:04.409Z",
+      "verified_at": "2026-08-07T19:01:04.409Z"
     },
     {
       "name": "LaShonda \"L.J.\" Holloway",
