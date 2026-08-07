@@ -7,8 +7,9 @@ Companion to `HANDOFF-2026-08-07.md`. Covers GitHub issue #8 and tickets
 
 | | Start of day | End of day |
 |---|---|---|
-| Active candidates | 9 | 78 |
-| Races with any coverage | 9 of 57 | 44 of 57 |
+| Active candidates | 9 | 89 |
+| Races with any coverage | 9 of 57 | 54 of 57 |
+| Races marked `no_primary` | 1 | 13 |
 | Races with the match flow (3+ active) | 0 | 9 |
 | Money coverage date | stale (June) | 2026-07-29 pre-primary |
 
@@ -16,7 +17,7 @@ Every activated candidate passed the Decision 12 gate: agent-authored
 stances from sources actually read → mechanical validation → an
 independent blind refutation-first verifier → the activation gates
 (≥3 stances, DOE-spine candidacy for exactly that race, fresh
-`verified_at`). **~60 stances were refuted and never reached voters.**
+`verified_at`). **~70 stances were refuted and never reached voters.**
 
 ## What ran
 
@@ -37,6 +38,30 @@ independent blind refutation-first verifier → the activation gates
 5. **GDELT statement miner** built, reviewed, and repaired (PR #20).
 6. **Activation waves** — incumbents, then challengers by district block,
    then wave 4 (third candidates).
+7. **Wave 5 — the eleven unopposed races.** Each had exactly one
+   DOE-qualified candidate but showed voters "Curating" instead of who
+   advances. All eleven are now live and marked `no_primary`: Valimont,
+   Cammack, Bean, Jenkins, Haridopolos, Bilirakis, Castor, Gibson, Brown,
+   Locklin, Ehr. **12 stances refuted** — fabricated dollar figures, a
+   wrong statutory sunset, an unsourced NRA claim, a date off by a week,
+   two motion-to-recommit inversions, and a bill summary that disclosed
+   only one of the bill's two subjects.
+
+### The procedural-vote fix (wave 5)
+
+Three verifiers hit this independently, and it inverted **both ways**.
+Bean's NAY on a motion to recommit was written as voting *against* the
+veterans bill — but a nay lets the bill proceed. Castor's YEA on the
+*same* motion was written as *supporting* that bill — but a yea sends it
+back to committee. `isProceduralVote()` now flags those rows to the
+synthesis prompt with an explicit inversion warning, and discriminates a
+suspension-and-pass motion (substantive) from a motion to recommit
+(procedural). Six tests pin it.
+
+The validators were wrong too: they forbade `track_record` fields for
+every candidate, which is right for challengers and wrong for the sitting
+incumbents in this wave. They now validate citations against the
+candidate's own `voting_record`.
 
 ## Judgment calls
 
@@ -60,6 +85,18 @@ independent blind refutation-first verifier → the activation gates
   contain no tax content. Singer (FL-25 R) refused, **overturned** — his
   content was verbatim in the snapshot; the first verifier had lost
   Ballotpedia access session-wide.
+- **Ehr (FL-28 D) cited to an archive, not to his own site.**
+  `ehrforcongress.us` presents a certificate that fails name validation.
+  A verifier had read the site with certificate validation disabled and
+  reported a different priorities list than the one we sourced. Neither
+  the re-authoring agent nor the main loop could reproduce that through
+  any path that did not bypass the certificate; three legitimate reads
+  agreed with the original sourcing. **The bypass was refused** — a host
+  that cannot prove its identity is exactly the condition under which
+  another site's content gets published under a candidate's name. The six
+  original stances stand, and every citation points at a Wayback snapshot
+  of `/meet-phil/`, which also spares voters a browser security warning
+  when they click through to check a claim.
 - **Grayson (FL-07 D) shortfall.** His agent refused to source a House
   race from prior Senate-campaign material and declined to pad the card
   even though the prompt named the 3-candidate threshold as the goal.
@@ -129,9 +166,20 @@ independent blind refutation-first verifier → the activation gates
   budget could also revisit the wave-4 shortfalls.
 - **Single-source risk.** Most challenger stances rest on one campaign
   URL; one page edit invalidates a whole card.
-- **13 races still have no coverage**, mostly uncontested or
-  no-web-presence fields.
-- **Migration 012** still staged, unapplied, awaiting approval + backup.
+- **Three races still have no coverage.** FL-01 R and FL-13 D are the
+  only genuinely contested ones. **DECIDED 2026-08-07: ship without
+  them.** Both failed verification for real reasons — Patronis's sources
+  were prior-cycle, and both FL-13 D drafts were refuted — and with 11
+  days to the primary another authoring round was judged the wrong use of
+  the remaining time. Nothing wrong ships; those races stay honestly
+  blank.
+- **Migration 012** APPROVED 2026-08-07 and ready to run. The backup gate
+  resolved by inspection rather than by taking one: all three tables hold
+  zero rows and no foreign key references any of them, so the drop
+  destroys no data. Re-run the count queries in the migration header
+  before applying if time has passed. `src/types/supabase.ts` still
+  describes the three tables and must be trimmed **after** the drop runs,
+  never before.
 
 ## Method notes for the next session
 

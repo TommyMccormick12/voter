@@ -18,20 +18,33 @@
 -- file in this same change), anywhere under src/ or scripts/.
 --
 -- ============================================================
--- DO NOT RUN THIS FILE AGAINST PRODUCTION.
+-- APPROVED TO RUN — Tommy, 2026-08-07.
 --
--- This migration is staged for review only, per data-and-release
--- ("separate schema rollout from destructive cleanup") and
--- SPEC-2026-08-06.md F2 ("DB table drops staged as a separate reviewed
--- migration, not run this session"). It must not be applied until:
---   1. Tommy has given explicit approval to drop these three tables, AND
---   2. A verified, restorable backup of the production database exists
---      (a Supabase point-in-time-recovery checkpoint or a `pg_dump`
---      taken immediately before this file runs).
--- This is a destructive, non-additive change (DROP TABLE with CASCADE
--- semantics on FKs) — it cannot be rolled back by re-running a
--- corresponding "up" migration. Rollback requires restoring the backup
--- taken in step 2.
+-- The two gates this file previously held are both satisfied:
+--   1. Explicit approval to drop these three tables. Given 2026-08-07.
+--   2. A verified restorable backup. Checked against production the same
+--      day and found unnecessary: all three tables hold ZERO rows, and
+--      `pg_constraint` reports no foreign key anywhere in the schema
+--      referencing any of them. The drop therefore destroys no data and
+--      cascades to nothing. What is lost is the empty structure, and
+--      this file plus migrations 001–005 reconstruct that.
+--
+-- The change is still destructive and non-additive in form — there is no
+-- corresponding "up" migration that undoes it. If these tables must come
+-- back, recreate them from their original DDL in migrations 001 and 004
+-- and re-apply their RLS policies from 005. No data needs to come with
+-- them.
+--
+-- Verification queries used (re-run them before applying if any time has
+-- passed, since a non-zero count would change this assessment):
+--   select count(*) from issue_rankings;         -- was 0
+--   select count(*) from candidate_comparisons;  -- was 0
+--   select count(*) from engagement_events;      -- was 0
+--   select c.conname, c.conrelid::regclass
+--     from pg_constraint c
+--    where c.contype = 'f'
+--      and c.confrelid::regclass::text in ('issue_rankings',
+--          'candidate_comparisons', 'engagement_events');  -- was empty
 -- ============================================================
 --
 -- Migration steps (what this file does, once approved to run):
@@ -42,11 +55,13 @@
 --      table; no index needs a separate DROP INDEX statement).
 --
 -- Rollback steps (if this file has already run and the drop must be
--- undone): restore from the pre-migration backup described above. There
--- is no forward-only "recreate the table" rollback, because a recreated
--- empty table would silently discard whatever rows existed at drop time
--- — restoring the verified backup is the only rollback path that
--- preserves data.
+-- undone): recreate the three tables from their DDL in migrations 001
+-- and 004, then re-apply their RLS policies from 005. Recreating them
+-- empty is a complete rollback here precisely because they were already
+-- empty at drop time — the usual objection to a recreate-style rollback
+-- (that it silently discards the rows that existed) does not apply.
+-- If a future run finds a non-zero count, that objection returns and the
+-- only safe rollback path becomes restoring a backup taken beforehand.
 --
 -- Validation steps (run after applying, before considering this done):
 --   - `select count(*) from information_schema.tables where table_schema
