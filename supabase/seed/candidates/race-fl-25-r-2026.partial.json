@@ -999,8 +999,8 @@
           "confidence": 75
         },
         {
-          "stance_id": "scott-m-singer-criminal_justice",
-          "issue_slug": "criminal_justice",
+          "stance_id": "scott-m-singer-public_safety",
+          "issue_slug": "public_safety",
           "stance": "support",
           "summary": "Says that as Boca Raton mayor he cut crime 25% and 'backed the blue,' citing this as his record on public safety.",
           "source_url": "https://ballotpedia.org/Scott_Singer",

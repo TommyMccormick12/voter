@@ -13,7 +13,7 @@
       "race_id": "race-fl-01-d-2026",
       "fec_candidate_id": "H4FL01197",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -28,7 +28,51 @@
         "individual_contributions": 135927.44,
         "other_political_committee_contributions": 285.26,
         "coverage_end_date": "2026-06-30"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "gay-valimont-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Supports universal, affordable health coverage to lower Florida's uninsured rate, opposes cuts or privatization of Medicare and Social Security, and backs reinstating the $35 insulin price cap.",
+          "source_url": "https://gayforcongress.com/issues",
+          "confidence": 85
+        },
+        {
+          "stance_id": "gay-valimont-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Supports federal action to cut homeowners insurance rates by at least 25%, backs the bipartisan 21st Century ROAD to Housing Act, and wants to stop Wall Street investors from buying up homes.",
+          "source_url": "https://gayforcongress.com/issues",
+          "confidence": 85
+        },
+        {
+          "stance_id": "gay-valimont-veterans",
+          "issue_slug": "veterans",
+          "stance": "strongly_support",
+          "summary": "Wants a full-service VA hospital in Northwest Florida, increased VA funding to cut the claims backlog, expanded Tricare coverage, and more support for military families.",
+          "source_url": "https://gayforcongress.com/issues",
+          "confidence": 85
+        },
+        {
+          "stance_id": "gay-valimont-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Backs border security improvements, including technology and judicial upgrades, without abandoning due process, plus legal pathways to citizenship for Dreamers and refugees.",
+          "source_url": "https://gayforcongress.com/issues",
+          "confidence": 80
+        },
+        {
+          "stance_id": "gay-valimont-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Wants higher teacher pay to retain educators, protection of federal funding for schools near military bases, and continued federal school mental health grant programs.",
+          "source_url": "https://gayforcongress.com/issues",
+          "confidence": 80
+        }
+      ],
+      "activated_at": "2026-08-07T21:56:33.195Z",
+      "verified_at": "2026-08-07T21:56:33.195Z"
     }
   ],
   "race": {

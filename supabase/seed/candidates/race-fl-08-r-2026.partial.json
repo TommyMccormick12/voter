@@ -13,7 +13,7 @@
       "race_id": "race-fl-08-r-2026",
       "fec_candidate_id": "H4FL08168",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [
@@ -631,7 +631,83 @@
         "individual_contributions": 887515.74,
         "other_political_committee_contributions": 700750,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "mike-haridopolos-government_reform",
+          "issue_slug": "government_reform",
+          "stance": "support",
+          "summary": "Voted for H.R. 7008, which bars Members of Congress and their families from trading individual stocks and requires photo ID to vote in federal elections.",
+          "source_url": "https://www.congress.gov/119/bills/hr7008/BILLS-119hr7008eh.htm",
+          "confidence": 80,
+          "track_record_note": "On July 22, 2026, Haridopolos voted yea on H.R. 7008's passage, which bans congressional stock trading and requires voter photo ID, and voted nay on a motion to recommit the bill.",
+          "track_record_citations": [
+            "hr7008-119"
+          ]
+        },
+        {
+          "stance_id": "mike-haridopolos-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Voted for H.R. 6955, which eases federal banking rules for community and regional banks and adds new protections for banks under regulatory exam.",
+          "source_url": "https://www.congress.gov/119/bills/hr6955/BILLS-119hr6955eh.htm",
+          "confidence": 78,
+          "track_record_note": "On July 21, 2026, Haridopolos voted yea on H.R. 6955's passage, which reduces regulatory burdens on community and regional banks, and voted nay on a motion to recommit.",
+          "track_record_citations": [
+            "hr6955-119"
+          ]
+        },
+        {
+          "stance_id": "mike-haridopolos-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "support",
+          "summary": "Voted for the FY2027 State Department and foreign aid funding bill (H.R. 8595), which funds diplomacy, global health, and humanitarian aid.",
+          "source_url": "https://www.congress.gov/119/bills/hr8595/BILLS-119hr8595eh.htm",
+          "confidence": 75,
+          "track_record_note": "On July 15, 2026, Haridopolos voted yea on H.R. 8595's passage, the FY2027 State Department and foreign aid appropriations bill, and voted nay on a motion to recommit.",
+          "track_record_citations": [
+            "hr8595-119"
+          ]
+        },
+        {
+          "stance_id": "mike-haridopolos-guns",
+          "issue_slug": "guns",
+          "stance": "support",
+          "summary": "Voted for H.R. 1181, which bars payment networks from using special codes that flag firearms retailers, citing gun buyers' purchase privacy.",
+          "source_url": "https://www.congress.gov/119/bills/hr1181/BILLS-119hr1181eh.htm",
+          "confidence": 80,
+          "track_record_note": "On July 14, 2026, Haridopolos voted yea on H.R. 1181's passage, which bars firearms-specific merchant category codes, and voted nay on a motion to recommit.",
+          "track_record_citations": [
+            "hr1181-119"
+          ]
+        },
+        {
+          "stance_id": "mike-haridopolos-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Voted for H.R. 4541, which reauthorizes federal breast and cervical cancer screening and education programs through 2030.",
+          "source_url": "https://www.congress.gov/119/bills/hr4541/BILLS-119hr4541eh.htm",
+          "confidence": 65,
+          "track_record_note": "On July 20, 2026, Haridopolos voted yea to pass H.R. 4541 under suspension of the rules, as amended, reauthorizing federal breast and cervical cancer screening and education funding through 2030.",
+          "track_record_citations": [
+            "hr4541-119"
+          ]
+        },
+        {
+          "stance_id": "mike-haridopolos-public_safety",
+          "issue_slug": "public_safety",
+          "stance": "support",
+          "summary": "Voted for H.R. 3106, which directs DHS to run a preparedness drill for a terrorist attack on infrastructure during extreme cold.",
+          "source_url": "https://www.congress.gov/119/bills/hr3106/BILLS-119hr3106eh.htm",
+          "confidence": 65,
+          "track_record_note": "On July 13, 2026, Haridopolos voted yea to pass H.R. 3106 under suspension of the rules, directing DHS to run a cold-weather critical-infrastructure terrorism preparedness exercise.",
+          "track_record_citations": [
+            "hr3106-119"
+          ]
+        }
+      ],
+      "activated_at": "2026-08-07T21:58:33.256Z",
+      "verified_at": "2026-08-07T21:58:33.256Z"
     }
   ],
   "race": {

@@ -13,7 +13,7 @@
       "race_id": "race-fl-24-r-2026",
       "fec_candidate_id": "H6FL14203",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -28,7 +28,51 @@
         "individual_contributions": 7250,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-06-30"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "te-mayonna-brown-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Would redirect federal housing funds from rental subsidies toward helping low-income families buy their first home, arguing this builds equity instead of permanent renting.",
+          "source_url": "https://tebrownforflorida.com/issues/",
+          "confidence": 80
+        },
+        {
+          "stance_id": "te-mayonna-brown-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Supports funding students directly rather than school systems, letting parents choose public, charter, private, or homeschool options based on their child's needs.",
+          "source_url": "https://tebrownforflorida.com/issues/",
+          "confidence": 80
+        },
+        {
+          "stance_id": "te-mayonna-brown-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Supports enforcing immigration law and deporting undocumented immigrants, opposes amnesty, and would eliminate the H-1B visa program, calling it a wage-undercutting abuse of American workers.",
+          "source_url": "https://tebrownforflorida.com/issues/",
+          "confidence": 78
+        },
+        {
+          "stance_id": "te-mayonna-brown-veterans",
+          "issue_slug": "veterans",
+          "stance": "support",
+          "summary": "Pledges faster VA care, improved mental health support for veterans, and greater accountability at the VA, framed as replacing symbolic gestures with results.",
+          "source_url": "https://tebrownforflorida.com/issues/",
+          "confidence": 75
+        },
+        {
+          "stance_id": "te-mayonna-brown-guns",
+          "issue_slug": "guns",
+          "stance": "support",
+          "summary": "Platform states support for defending Second Amendment protections, grouped with religious liberty and parental rights under a 'traditional values' plank; no further detail given.",
+          "source_url": "https://tebrownforflorida.com/issues/",
+          "confidence": 55
+        }
+      ],
+      "activated_at": "2026-08-07T21:59:50.055Z",
+      "verified_at": "2026-08-07T21:59:50.055Z"
     }
   ],
   "race": {

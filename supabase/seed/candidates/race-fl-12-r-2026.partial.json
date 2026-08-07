@@ -13,7 +13,7 @@
       "race_id": "race-fl-12-r-2026",
       "fec_candidate_id": "H6FL09070",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [
@@ -631,7 +631,51 @@
         "individual_contributions": 658921.79,
         "other_political_committee_contributions": 828700.01,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "gus-michael-bilirakis-immigration",
+          "issue_slug": "immigration",
+          "stance": "oppose",
+          "summary": "Opposes amnesty/path to citizenship for illegal entrants and opposes sanctuary cities; open to DACA renewal only if paired with ending chain migration, the visa lottery, and stronger border security.",
+          "source_url": "https://bilirakis.house.gov/issues/immigration",
+          "confidence": 92
+        },
+        {
+          "stance_id": "gus-michael-bilirakis-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Supports free-market, cost-transparency health reforms, HSAs, and pre-existing-condition protections; calls Obamacare 'broken' and opposes government-run 'socialized medicine.'",
+          "source_url": "https://bilirakis.house.gov/issues/health-care",
+          "confidence": 90
+        },
+        {
+          "stance_id": "gus-michael-bilirakis-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "oppose",
+          "summary": "Voted against a resolution directing troop withdrawal from hostilities with Iran, consistent with his view that Iran is untrustworthy and destabilizing and should not get relief.",
+          "source_url": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/89",
+          "confidence": 88,
+          "track_record_note": "Voted nay on hconres89-119 (On Agreeing to the Resolution, 2026-07-23), H.Con.Res.89, which would have directed the President to remove U.S. forces from hostilities with Iran absent a war-powers declaration. This tracks his house.gov position that Iran is an untrustworthy, destabilizing actor undeserving of eased pressure.",
+          "track_record_citations": [
+            "hconres89-119"
+          ]
+        },
+        {
+          "stance_id": "gus-michael-bilirakis-guns",
+          "issue_slug": "guns",
+          "stance": "support",
+          "summary": "Voted for the Protecting Privacy in Purchases Act, which bars payment-card networks from using special merchant codes that single out firearms or sporting-goods retailers from general merchandisers.",
+          "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/1181",
+          "confidence": 76,
+          "track_record_note": "Voted yea on hr1181-119's passage (On Passage, 2026-07-14) and nay on the related motion to recommit that same day, supporting the bill's ban on firearms-specific merchant category codes.",
+          "track_record_citations": [
+            "hr1181-119"
+          ]
+        }
+      ],
+      "activated_at": "2026-08-07T22:02:26.712Z",
+      "verified_at": "2026-08-07T22:02:26.712Z"
     }
   ],
   "race": {

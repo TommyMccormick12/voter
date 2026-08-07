@@ -13,7 +13,7 @@
       "race_id": "race-fl-08-d-2026",
       "fec_candidate_id": "H6FL06399",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -28,7 +28,59 @@
         "individual_contributions": 702730.74,
         "other_political_committee_contributions": 8000,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "jennifer-jenkins-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Jenkins says she will work to stabilize Florida's property insurance market through bipartisan federal reinsurance and catastrophe backstops, including a multi-state catastrophe pool.",
+          "source_url": "https://jenkinsforfl.com/priorities/",
+          "confidence": 85
+        },
+        {
+          "stance_id": "jennifer-jenkins-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Jenkins supports expanding Medicaid, restoring and strengthening ACA subsidies to lower premiums, protecting coverage for pre-existing conditions, and investing in mental health care access.",
+          "source_url": "https://jenkinsforfl.com/priorities/",
+          "confidence": 85
+        },
+        {
+          "stance_id": "jennifer-jenkins-public_safety",
+          "issue_slug": "public_safety",
+          "stance": "support",
+          "summary": "Jenkins will fund and train first responders, support their mental health, back evidence-based strategies to cut violence and recidivism, and protect constitutional rights of citizens and immigrants.",
+          "source_url": "https://jenkinsforfl.com/priorities/",
+          "confidence": 85
+        },
+        {
+          "stance_id": "jennifer-jenkins-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Jenkins will protect the Dept. of Education and school civil-rights enforcement, fund IDEA fully, defend Section 504 for disabled students, expand Title I, and invest in teacher/student mental health.",
+          "source_url": "https://jenkinsforfl.com/priorities/",
+          "confidence": 85
+        },
+        {
+          "stance_id": "jennifer-jenkins-government_reform",
+          "issue_slug": "government_reform",
+          "stance": "support",
+          "summary": "As a Brevard County School Board member, Jenkins filed a lawsuit against the board over public records compliance, saying transparency and accountability in government matter.",
+          "source_url": "https://thespacecoastrocket.com/2026-candidate-questionnaire-jennifer-jenkins-u-s-congress-fl-district-8/",
+          "confidence": 72
+        },
+        {
+          "stance_id": "jennifer-jenkins-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Jenkins opposes tariffs that raise the cost of everyday goods and says she will fight for tax and cost-of-living policies that put working families first, not special interests.",
+          "source_url": "https://jenkinsforfl.com/priorities/",
+          "confidence": 85
+        }
+      ],
+      "activated_at": "2026-08-07T22:02:07.978Z",
+      "verified_at": "2026-08-07T22:02:07.978Z"
     }
   ],
   "race": {

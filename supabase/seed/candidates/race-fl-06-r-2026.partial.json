@@ -819,8 +819,8 @@
           "confidence": 62
         },
         {
-          "stance_id": "randy-fine-criminal_justice",
-          "issue_slug": "criminal_justice",
+          "stance_id": "randy-fine-public_safety",
+          "issue_slug": "public_safety",
           "stance": "support",
           "summary": "Campaigns on \"backing the blue,\" pledging resources for law enforcement and first responders.",
           "source_url": "https://www.voterandyfine.com",

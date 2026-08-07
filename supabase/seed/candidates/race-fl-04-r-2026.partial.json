@@ -13,7 +13,7 @@
       "race_id": "race-fl-04-r-2026",
       "fec_candidate_id": "H2FL04211",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [
@@ -631,7 +631,59 @@
         "individual_contributions": 907518.83,
         "other_political_committee_contributions": 1149650.01,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "aaron-bean-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Voted to reauthorize the EARLY Act, extending the young women's breast health education and awareness program through 2031.",
+          "source_url": "https://www.congress.gov/119/bills/hr4541/BILLS-119hr4541ih.htm",
+          "confidence": 75,
+          "track_record_note": "On July 20, 2026, Bean voted yea to suspend the rules and pass, as amended, the EARLY Act Reauthorization of 2025, which extends the Young Women's Breast Health Education and Awareness Requires Learning Young Act's funding authorization from 2026 to 2031.",
+          "track_record_citations": [
+            "hr4541-119"
+          ]
+        },
+        {
+          "stance_id": "aaron-bean-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Voted for the Main Street Capital Access Act, easing capital and exam requirements for community and rural banks and raising the enhanced-supervision asset threshold to $370 billion.",
+          "source_url": "https://www.congress.gov/119/bills/hr6955/BILLS-119hr6955ih.htm",
+          "confidence": 78,
+          "track_record_note": "On July 21, 2026, Bean voted yea on passage of the Main Street Capital Access Act, a banking-regulation bill that extends capital phase-in periods and streamlines applications for new community banks, raises the enhanced-supervision asset threshold from $250 billion to $370 billion, and creates an Office of Independent Examination Review. He also voted nay on the motion to recommit the same bill.",
+          "track_record_citations": [
+            "hr6955-119"
+          ]
+        },
+        {
+          "stance_id": "aaron-bean-government_reform",
+          "issue_slug": "government_reform",
+          "stance": "support",
+          "summary": "Voted for the Stop Insider Trading Act, barring members of Congress and their spouses and dependents from buying individual stocks and requiring advance notice before selling.",
+          "source_url": "https://www.congress.gov/119/bills/hr7008/BILLS-119hr7008ih.htm",
+          "confidence": 80,
+          "track_record_note": "On July 22, 2026, Bean voted yea on passage of the Stop Insider Trading Act, which bars members of Congress and their spouses and dependent children from purchasing individual stocks and requires 7-14 days' public notice before selling covered investments. He also voted nay on the motion to recommit the same bill.",
+          "track_record_citations": [
+            "hr7008-119"
+          ]
+        },
+        {
+          "stance_id": "aaron-bean-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "oppose",
+          "summary": "Voted against a resolution directing the President to withdraw U.S. forces from hostilities with Iran under the War Powers Resolution.",
+          "source_url": "https://www.congress.gov/119/bills/hconres89/BILLS-119hconres89ih.htm",
+          "confidence": 78,
+          "track_record_note": "On July 23, 2026, Bean voted nay on H. Con. Res. 89, which would have directed the President to remove U.S. Armed Forces from hostilities with Iran under the War Powers Resolution, while preserving carve-outs for defensive action, protection of allies and installations, and intelligence operations. The resolution passed the House despite his opposing vote.",
+          "track_record_citations": [
+            "hconres89-119"
+          ]
+        }
+      ],
+      "activated_at": "2026-08-07T21:59:48.829Z",
+      "verified_at": "2026-08-07T21:59:48.829Z"
     }
   ],
   "race": {

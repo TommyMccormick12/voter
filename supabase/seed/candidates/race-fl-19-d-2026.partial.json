@@ -356,8 +356,8 @@
           "confidence": 80
         },
         {
-          "stance_id": "victor-m-arias-climate",
-          "issue_slug": "climate",
+          "stance_id": "victor-m-arias-environment",
+          "issue_slug": "environment",
           "stance": "support",
           "summary": "Supports protecting Southwest Florida's water quality through Everglades restoration, red tide research funding, and Lake Okeechobee discharge reforms.",
           "source_url": "https://ballotpedia.org/Victor_Arias",
