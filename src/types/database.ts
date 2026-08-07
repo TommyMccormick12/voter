@@ -97,13 +97,12 @@ export interface Candidate {
   primary_party: string | null;
   incumbent: boolean;
   total_raised: number | null;
-  /** Last date FEC's filings cover for `total_raised` (Spec B3). Not yet
-   * backed by a DB column — no ingest pipeline or migration writes this
-   * field today, so every read returns `null` (boundary.ts reads it
-   * defensively; toCandidate() never fabricates a value). Wired through
-   * end to end now so a future migration + T11 ingest change makes it
-   * light up without a UI change. Render it in DonorProfile next to
-   * every dollar figure once it is non-null — never inferred or guessed. */
+  /** Last date FEC's filings cover for `total_raised` (Spec B3). Backed
+   * by candidates.fec_coverage_end_date (migration 014); stamped by
+   * fetch_fec.ts from FEC totals coverage_end_date and persisted by
+   * seed_candidates.ts. NULL means unknown (e.g. rows seeded before the
+   * next money re-pull) and DonorProfile renders no coverage date —
+   * never inferred or guessed. */
   fec_coverage_end_date: string | null;
   top_stances: TopStance[];
 }

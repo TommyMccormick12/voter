@@ -82,6 +82,10 @@ export interface MoneyCandidate {
   name?: string;
   fec_candidate_id?: string;
   total_raised?: number;
+  /** Top-level copy of fec_totals.coverage_end_date — the field
+   * seed_candidates.ts persists to candidates.fec_coverage_end_date
+   * (migration 014) and DonorProfile renders next to dollar figures. */
+  fec_coverage_end_date?: string | null;
   fec_totals?: FecCommitteeTotals | { no2026Filings: true };
   [key: string]: unknown;
 }
@@ -96,11 +100,12 @@ export interface AttachFecTotalsOptions {
  * Mutates each candidate record in place:
  *
  *   - `fec_candidate_id` present, rows found for `cycle`/`office`  ->
- *     `total_raised` + `fec_totals` (the latter carries
- *     `coverage_end_date` — see FecCommitteeTotals).
+ *     `total_raised` + `fec_coverage_end_date` + `fec_totals` (the
+ *     latter carries `coverage_end_date` — see FecCommitteeTotals).
  *   - `fec_candidate_id` present, no rows for `cycle`/`office`      ->
- *     `fec_totals = { no2026Filings: true }`; `total_raised` is
- *     deleted rather than left holding a stale prior-run value.
+ *     `fec_totals = { no2026Filings: true }`; `total_raised` and
+ *     `fec_coverage_end_date` are deleted rather than left holding
+ *     stale prior-run values.
  *   - `fec_candidate_id` missing                                    ->
  *     skipped with a warning. No name-based search or substring
  *     attachment is attempted — that path has been removed (T11).
@@ -127,11 +132,13 @@ export async function attachFecTotals(
       console.warn(`[fec] ${label}: no ${cycle} filings for ${candidateId} (office ${office})`);
       c.fec_totals = { no2026Filings: true };
       delete c.total_raised;
+      delete c.fec_coverage_end_date;
       continue;
     }
 
     console.log(`[fec] ${label} (${candidateId}): $${totals.receipts.toLocaleString()} through ${totals.coverage_end_date ?? 'unknown'}`);
     c.total_raised = totals.receipts;
+    c.fec_coverage_end_date = totals.coverage_end_date;
     c.fec_totals = totals;
   }
 }

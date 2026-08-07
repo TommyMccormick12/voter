@@ -45,7 +45,7 @@ function checkConfigured(): DataError | null {
 
 /** Columns shared by every candidate query. Keeps the SELECT list DRY. */
 const CANDIDATE_BASE_COLUMNS =
-  'id, name, slug, party, state, district, race_id, office, photo_url, bio, website, active, primary_party, incumbent, total_raised, top_stances';
+  'id, name, slug, party, state, district, race_id, office, photo_url, bio, website, active, primary_party, incumbent, total_raised, fec_coverage_end_date, top_stances';
 
 /**
  * Active candidates for one race, ordered by total_raised desc then name.

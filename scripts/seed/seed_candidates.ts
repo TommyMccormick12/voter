@@ -284,6 +284,9 @@ async function main() {
       active: true,
       incumbent: (c.incumbent as boolean) ?? false,
       total_raised: (c.total_raised as number) ?? null,
+      // Stamped by fetch_fec.ts from FEC totals coverage_end_date; NULL
+      // means unknown and the UI renders no coverage date (migration 014).
+      fec_coverage_end_date: (c.fec_coverage_end_date as string) ?? null,
       top_stances: c.top_stances ?? [],
       verified_at: (c.verified_at as string) ?? null,
     };

@@ -143,9 +143,9 @@ export function toCandidate(row: Record<string, unknown>): Candidate {
     primary_party: strOrNull(row.primary_party),
     incumbent: Boolean(row.incumbent),
     total_raised: numOrNull(row.total_raised),
-    // Defensive read, not a selected column yet (see the field's doc
-    // comment in src/types/database.ts) — safe no-op until a migration
-    // adds candidates.fec_coverage_end_date.
+    // Backed by candidates.fec_coverage_end_date since migration 014;
+    // NULL means unknown (see the field's doc comment in
+    // src/types/database.ts).
     fec_coverage_end_date: strOrNull(row.fec_coverage_end_date),
     top_stances: normalizeTopStances(row.top_stances),
   };
