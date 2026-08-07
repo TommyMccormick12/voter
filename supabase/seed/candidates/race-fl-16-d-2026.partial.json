@@ -291,8 +291,8 @@
           "confidence": 65
         },
         {
-          "stance_id": "jonathan-harris-climate",
-          "issue_slug": "climate",
+          "stance_id": "jonathan-harris-environment",
+          "issue_slug": "environment",
           "stance": "support",
           "summary": "Supports federal investment in coastal resilience and water infrastructure to address red tide, coastal flooding, and water quality.",
           "source_url": "https://www.jonharrisforcongress.com/ourplan",

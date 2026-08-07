@@ -1074,8 +1074,8 @@
           "confidence": 78
         },
         {
-          "stance_id": "vincent-michael-arias-criminal_justice",
-          "issue_slug": "criminal_justice",
+          "stance_id": "vincent-michael-arias-public_safety",
+          "issue_slug": "public_safety",
           "stance": "support",
           "summary": "As a former prosecutor, supports funding and resources for law enforcement and first responders while protecting constitutional rights.",
           "source_url": "https://vincentmichaelarias.com/priorities/",

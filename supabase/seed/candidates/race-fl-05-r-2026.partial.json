@@ -658,8 +658,8 @@
           "confidence": 75
         },
         {
-          "stance_id": "john-h-rutherford-climate",
-          "issue_slug": "climate",
+          "stance_id": "john-h-rutherford-environment",
+          "issue_slug": "environment",
           "stance": "support",
           "summary": "Says he backed banning offshore oil drilling off Florida's coast to protect the state's beaches and waterways.",
           "source_url": "https://johnrutherfordforcongress.com/priorities",
