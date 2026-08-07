@@ -681,7 +681,7 @@
       "race_id": "race-fl-07-r-2026",
       "fec_candidate_id": "H4FL07152",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -696,7 +696,35 @@
         "individual_contributions": 2520.96,
         "other_political_committee_contributions": 482.35,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "michael-don-johnson-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Cites 33 years cutting wasteful DoD spending; pledges to downsize government and cut federal spending and the national debt as a member of Congress.",
+          "source_url": "https://ballotpedia.org/Michael_Johnson_(Florida)",
+          "confidence": 60
+        },
+        {
+          "stance_id": "michael-don-johnson-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "support",
+          "summary": "Supports an America-first foreign policy: cutting aid to countries that don't support U.S. interests and relocating military bases to cut costs and boost security.",
+          "source_url": "https://ballotpedia.org/Michael_Johnson_(Florida)",
+          "confidence": 60
+        },
+        {
+          "stance_id": "michael-don-johnson-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Campaign platform calls to stop CRT and \"false history\" from being taught in schools and to give parents a voice at school board meetings.",
+          "source_url": "https://www.votemichaeldonjohnson.com/priorities",
+          "confidence": 55
+        }
+      ],
+      "activated_at": "2026-08-07T21:01:21.883Z",
+      "verified_at": "2026-08-07T21:01:21.883Z"
     },
     {
       "name": "Ryan Elijah",

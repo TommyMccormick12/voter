@@ -1035,7 +1035,7 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "total_raised": 15972.71,
       "fec_coverage_end_date": "2026-07-29",
       "fec_totals": {
@@ -1047,7 +1047,43 @@
         "individual_contributions": 5022.71,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "ernest-ernie-john-rev-dr-rivera-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Backs free enterprise and ending 'wasteful Washington spending,' and would leave the federal minimum wage entirely to the states rather than set one federally.",
+          "source_url": "https://www.ernie4senate.com/where-ernie-stands",
+          "confidence": 78
+        },
+        {
+          "stance_id": "ernest-ernie-john-rev-dr-rivera-taxes",
+          "issue_slug": "taxes",
+          "stance": "strongly_support",
+          "summary": "Wants the top marginal income tax rate, currently 37%, cut further as part of a lower-tax platform.",
+          "source_url": "https://www.ernie4senate.com/where-ernie-stands",
+          "confidence": 82
+        },
+        {
+          "stance_id": "ernest-ernie-john-rev-dr-rivera-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Supports an optional Medicare buy-in that lets people keep their current plan, 'most favored nation' drug pricing, and private VHA choice alongside mandated basic VHA services for veterans.",
+          "source_url": "https://www.ernie4senate.com/where-ernie-stands",
+          "confidence": 75
+        },
+        {
+          "stance_id": "ernest-ernie-john-rev-dr-rivera-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "support",
+          "summary": "Backs an 'America First' approach: cutting foreign aid to about 0.5% of spending, trimming military costs by removing waste, and continuing trade with China while challenging its unfair practices.",
+          "source_url": "https://www.ernie4senate.com/where-ernie-stands",
+          "confidence": 78
+        }
+      ],
+      "activated_at": "2026-08-07T20:59:59.661Z",
+      "verified_at": "2026-08-07T20:59:59.661Z"
     },
     {
       "name": "Neelam Taneja Perry",

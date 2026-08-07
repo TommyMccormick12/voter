@@ -242,8 +242,44 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-06-30"
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "rudolph-dr-moise-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Calls health care a human right; backs a Medicare buy-in public option, drug price negotiation, restored ACA tax credits, and reversing Medicaid cuts.",
+          "source_url": "https://www.moiseforcongress.com/issues-long",
+          "confidence": 78
+        },
+        {
+          "stance_id": "rudolph-dr-moise-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Wants zoning reform, transit-oriented development, and more accessory dwelling units; opposes private-equity housing speculation and algorithm-driven rent hikes.",
+          "source_url": "https://www.moiseforcongress.com/issues-long",
+          "confidence": 75
+        },
+        {
+          "stance_id": "rudolph-dr-moise-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Backs restoring clean energy tax credits for solar, wind, and nuclear power, and wants AI data centers and crypto operations to generate or pay for their own power.",
+          "source_url": "https://www.moiseforcongress.com/issues-long",
+          "confidence": 74
+        },
+        {
+          "stance_id": "rudolph-dr-moise-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Backs stronger antitrust enforcement against monopolies, capped overdraft and credit-card late fees, easier subscription cancellation, and ending emergency tariff powers to lower costs.",
+          "source_url": "https://www.moiseforcongress.com/issues-long",
+          "confidence": 72
+        }
+      ],
+      "activated_at": "2026-08-07T20:58:11.822Z",
+      "verified_at": "2026-08-07T20:58:11.822Z"
     },
     {
       "name": "Shevrin \"Shev\" Jones",

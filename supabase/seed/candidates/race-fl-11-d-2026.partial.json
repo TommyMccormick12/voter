@@ -16,10 +16,38 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "fec_totals": {
         "no2026Filings": true
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "dan-williams-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Supports healthcare coverage that stays with a person regardless of employer, rather than being tied to a job.",
+          "source_url": "https://danwilliamsforcongress.com/",
+          "confidence": 70
+        },
+        {
+          "stance_id": "dan-williams-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Supports ending government profit from interest on federal student loans to make higher education more affordable.",
+          "source_url": "https://danwilliamsforcongress.com/",
+          "confidence": 75
+        },
+        {
+          "stance_id": "dan-williams-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports balancing the federal budget by not spending more than the government brings in, to prioritize community needs.",
+          "source_url": "https://danwilliamsforcongress.com/",
+          "confidence": 70
+        }
+      ],
+      "activated_at": "2026-08-07T20:57:47.581Z",
+      "verified_at": "2026-08-07T20:57:47.581Z"
     },
     {
       "name": "James Pericola",

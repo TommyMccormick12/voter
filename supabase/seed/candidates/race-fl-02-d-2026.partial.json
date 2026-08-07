@@ -13,7 +13,7 @@
       "race_id": "race-fl-02-d-2026",
       "fec_candidate_id": "H6FL02299",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -28,7 +28,35 @@
         "individual_contributions": 307043.94,
         "other_political_committee_contributions": 3500,
         "coverage_end_date": "2026-06-30"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "amanda-marie-green-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Says she'll fight North Florida's affordability crisis by supporting farmers, lowering gas prices, and fighting corporate greed and unfair taxes.",
+          "source_url": "https://ballotpedia.org/Amanda_Green_(Florida)",
+          "confidence": 78
+        },
+        {
+          "stance_id": "amanda-marie-green-housing",
+          "issue_slug": "housing",
+          "stance": "strongly_support",
+          "summary": "Wants to lower housing costs and ban corporate ownership of single-family homes to ease North Florida's affordability crisis.",
+          "source_url": "https://ballotpedia.org/Amanda_Green_(Florida)",
+          "confidence": 80
+        },
+        {
+          "stance_id": "amanda-marie-green-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Backs expanding access to single-payer healthcare and protecting rural hospitals, saying no one should have to travel hours to see a doctor or deliver a baby.",
+          "source_url": "https://www.amgforcongress.com/top-priorities",
+          "confidence": 82
+        }
+      ],
+      "activated_at": "2026-08-07T21:01:36.875Z",
+      "verified_at": "2026-08-07T21:01:36.875Z"
     },
     {
       "name": "Brice Barnes",

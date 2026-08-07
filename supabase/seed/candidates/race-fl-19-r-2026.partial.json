@@ -734,8 +734,44 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "jim-schwartzel-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Pledges to finish the border wall, deport illegal immigrants, and enforce immigration law, saying illegal immigration burdens taxpayers and threatens American jobs and security.",
+          "source_url": "https://www.jimforcongress.com/issues",
+          "confidence": 85
+        },
+        {
+          "stance_id": "jim-schwartzel-taxes",
+          "issue_slug": "taxes",
+          "stance": "strongly_support",
+          "summary": "Vows to keep taxes low and cut burdensome regulations, opposing what he calls socialist spending policies that drive inflation and destroy opportunity.",
+          "source_url": "https://www.jimforcongress.com/issues",
+          "confidence": 80
+        },
+        {
+          "stance_id": "jim-schwartzel-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Pledges to defend 'the right to keep and bear arms' and opposes government efforts to restrict constitutional liberties.",
+          "source_url": "https://www.jimforcongress.com/issues",
+          "confidence": 80
+        },
+        {
+          "stance_id": "jim-schwartzel-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Says parents—not bureaucrats—should have final say in children's education; opposes DEI mandates and gender ideology in curricula and opposes transgender athletes in women's sports.",
+          "source_url": "https://www.jimforcongress.com/issues",
+          "confidence": 75
+        }
+      ],
+      "activated_at": "2026-08-07T21:00:00.484Z",
+      "verified_at": "2026-08-07T21:00:00.484Z"
     },
     {
       "name": "John Strand",

@@ -13,7 +13,7 @@
       "race_id": "race-fl-05-d-2026",
       "fec_candidate_id": "H6FL05284",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -28,7 +28,43 @@
         "individual_contributions": 13065.73,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "alex-hazen-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Supports expanding affordable healthcare access and lowering the Medicare eligibility age, calling for Medicare for All and affordable care as a right, not a luxury.",
+          "source_url": "https://ballotpedia.org/Alexander_Hazen",
+          "confidence": 80
+        },
+        {
+          "stance_id": "alex-hazen-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Supports smart infill and mixed-use housing development on existing infrastructure to fight Florida's overdevelopment crisis and improve affordability.",
+          "source_url": "https://ballotpedia.org/Alexander_Hazen",
+          "confidence": 75
+        },
+        {
+          "stance_id": "alex-hazen-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Supports building out solar energy infrastructure in Florida as part of a renewable-energy policy agenda.",
+          "source_url": "https://ballotpedia.org/Alexander_Hazen",
+          "confidence": 65
+        },
+        {
+          "stance_id": "alex-hazen-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports homeowner's and auto insurance reform to lower Florida's high premiums, naming affordability for working families as a top priority.",
+          "source_url": "https://ballotpedia.org/Alexander_Hazen",
+          "confidence": 70
+        }
+      ],
+      "activated_at": "2026-08-07T20:58:24.816Z",
+      "verified_at": "2026-08-07T20:58:24.816Z"
     },
     {
       "name": "Mark Heggestad",

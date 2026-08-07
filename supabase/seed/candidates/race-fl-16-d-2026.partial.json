@@ -271,8 +271,36 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-06-30"
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "jonathan-harris-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Backs his 'Growth Economy Plan' to lower costs, grow good-paying jobs, and increase competition for working families in Florida's 16th District.",
+          "source_url": "https://www.jonharrisforcongress.com/ourplan",
+          "confidence": 68
+        },
+        {
+          "stance_id": "jonathan-harris-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Opposes cuts to Social Security benefits or a higher retirement age; backs raising the payroll tax cap so top earners pay their fair share.",
+          "source_url": "https://www.jonharrisforcongress.com/ourplan",
+          "confidence": 65
+        },
+        {
+          "stance_id": "jonathan-harris-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Supports federal investment in coastal resilience and water infrastructure to address red tide, coastal flooding, and water quality.",
+          "source_url": "https://www.jonharrisforcongress.com/ourplan",
+          "confidence": 65
+        }
+      ],
+      "activated_at": "2026-08-07T20:59:45.006Z",
+      "verified_at": "2026-08-07T20:59:45.006Z"
     },
     {
       "name": "Kelly Kirschner",

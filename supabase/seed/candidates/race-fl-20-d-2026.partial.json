@@ -200,8 +200,44 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "dale-vc-mr-holness-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Backs a public option for universal health care, capped out-of-pocket drug costs for seniors, and restored federal funding for Planned Parenthood.",
+          "source_url": "https://www.holnessforcongress.com/vision",
+          "confidence": 82
+        },
+        {
+          "stance_id": "dale-vc-mr-holness-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Supports a path to citizenship for about 11 million undocumented immigrants, restored DACA/TPS protections, and family reunification programs.",
+          "source_url": "https://www.holnessforcongress.com/vision",
+          "confidence": 82
+        },
+        {
+          "stance_id": "dale-vc-mr-holness-education",
+          "issue_slug": "education",
+          "stance": "strongly_support",
+          "summary": "Supports free college for middle- and low-income families, federal loan forgiveness under $100,000 income, and higher educator pay.",
+          "source_url": "https://www.holnessforcongress.com/vision",
+          "confidence": 80
+        },
+        {
+          "stance_id": "dale-vc-mr-holness-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Backs expanding affordable housing supply and increasing funding for first-time homebuyer assistance.",
+          "source_url": "https://www.holnessforcongress.com/vision",
+          "confidence": 72
+        }
+      ],
+      "activated_at": "2026-08-07T20:59:08.331Z",
+      "verified_at": "2026-08-07T20:59:08.331Z"
     },
     {
       "name": "Debbie Wasserman Schultz",
