@@ -13,7 +13,7 @@
       "race_id": "race-fl-20-r-2026",
       "fec_candidate_id": "H6FL20143",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -28,7 +28,43 @@
         "individual_contributions": 63848.58,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "brent-andersen-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Pledges to cut small-business regulations, expand access to startup capital, and grow apprenticeship and vocational workforce programs to expand economic opportunity.",
+          "source_url": "https://brentandersenfl.com/issues/",
+          "confidence": 82
+        },
+        {
+          "stance_id": "brent-andersen-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Platform pledges to cut federal regulations that raise housing costs and expand homeownership pathways for working families, seniors, and young families.",
+          "source_url": "https://brentandersenfl.com/issues/",
+          "confidence": 82
+        },
+        {
+          "stance_id": "brent-andersen-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "support",
+          "summary": "Pledges full funding for law enforcement and stronger school security, while also holding violent offenders accountable and addressing crime's root causes through community prevention.",
+          "source_url": "https://brentandersenfl.com/issues/",
+          "confidence": 80
+        },
+        {
+          "stance_id": "brent-andersen-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Lists securing the border among his core campaign commitments; cites strong borders and public safety as recurring policy priorities.",
+          "source_url": "https://ballotpedia.org/Brent_Andersen",
+          "confidence": 60
+        }
+      ],
+      "activated_at": "2026-08-07T19:23:19.990Z",
+      "verified_at": "2026-08-07T19:23:19.990Z"
     },
     {
       "name": "Carla Spalding",

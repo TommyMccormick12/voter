@@ -221,8 +221,52 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "chris-collins-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Backs finishing the border wall, pledges to keep 'every illegal alien out,' and supports what he calls the largest border security and deportation operation in American history.",
+          "source_url": "https://collinsfl19.com/",
+          "confidence": 80
+        },
+        {
+          "stance_id": "chris-collins-taxes",
+          "issue_slug": "taxes",
+          "stance": "strongly_support",
+          "summary": "Vows to defend the Trump-era tax cuts and 'make sure Democrats never raise them back,' opposing what he calls liberal tax hikes and 'woke spending.'",
+          "source_url": "https://collinsfl19.com/",
+          "confidence": 80
+        },
+        {
+          "stance_id": "chris-collins-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_support",
+          "summary": "Pledges to 'lead with strength, not apology,' stand with Israel, and confront adversaries head-on, opposing what he calls 'Biden-era weakness and retreat.'",
+          "source_url": "https://collinsfl19.com/",
+          "confidence": 75
+        },
+        {
+          "stance_id": "chris-collins-guns",
+          "issue_slug": "guns",
+          "stance": "support",
+          "summary": "Says constitutional rights 'from the Second Amendment to religious liberty' are under constant attack from the left and pledges to defend them.",
+          "source_url": "https://collinsfl19.com/",
+          "confidence": 60
+        },
+        {
+          "stance_id": "chris-collins-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "support",
+          "summary": "Backs continuing the fight against cartels and fentanyl trafficking, campaigning on protecting families from 'deadly drugs and crime.'",
+          "source_url": "https://collinsfl19.com/",
+          "confidence": 75
+        }
+      ],
+      "activated_at": "2026-08-07T19:21:36.403Z",
+      "verified_at": "2026-08-07T19:21:36.403Z"
     },
     {
       "name": "Greg \"Tex\" Bukowski",
@@ -452,8 +496,44 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "james-mr-oberweis-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Calls for mandatory balanced federal budgets (except in war or recession) and says Congress should lose pay if no budget passes; cites his finance background to fight waste.",
+          "source_url": "https://votejimo.com/issues",
+          "confidence": 80
+        },
+        {
+          "stance_id": "james-mr-oberweis-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Backs stronger border security (barriers, tech, E-Verify) and opposes benefits for those here illegally, while supporting legal pathways like H-2A/H-2B visas for needed workers.",
+          "source_url": "https://votejimo.com/issues",
+          "confidence": 80
+        },
+        {
+          "stance_id": "james-mr-oberweis-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Backs school choice, letting parents pick schools beyond geographic boundaries, and wants more competition between public and private schools with less federal control.",
+          "source_url": "https://votejimo.com/issues",
+          "confidence": 75
+        },
+        {
+          "stance_id": "james-mr-oberweis-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Describes himself as a strong Second Amendment supporter and backs Constitutional Carry laws as a deterrent to street crime.",
+          "source_url": "https://votejimo.com/issues",
+          "confidence": 80
+        }
+      ],
+      "activated_at": "2026-08-07T19:21:35.304Z",
+      "verified_at": "2026-08-07T19:21:35.304Z"
     },
     {
       "name": "Jim Schwartzel",

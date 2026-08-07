@@ -13,7 +13,7 @@
       "race_id": "race-fl-22-d-2026",
       "fec_candidate_id": "H6FL22222",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -28,7 +28,51 @@
         "individual_contributions": 4457.25,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-06-30"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "kaysia-earley-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Wants to lower prescription drug costs, premiums, deductibles, and copays with greater pricing transparency, protect Social Security, and strengthen Medicare access.",
+          "source_url": "https://www.kaysiaearleyforcongress.com/platform",
+          "confidence": 88
+        },
+        {
+          "stance_id": "kaysia-earley-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Wants to cut wasteful government spending and support domestic energy production and American businesses to lower the cost of living.",
+          "source_url": "https://www.kaysiaearleyforcongress.com/platform",
+          "confidence": 85
+        },
+        {
+          "stance_id": "kaysia-earley-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Backs incentives to expand affordable housing options and new pathways for first-time homebuyers.",
+          "source_url": "https://www.kaysiaearleyforcongress.com/platform",
+          "confidence": 82
+        },
+        {
+          "stance_id": "kaysia-earley-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "support",
+          "summary": "Supports law enforcement and first responders, stronger school safety measures, and funding for safety prevention programs.",
+          "source_url": "https://www.kaysiaearleyforcongress.com/platform",
+          "confidence": 85
+        },
+        {
+          "stance_id": "kaysia-earley-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Supports tax relief for working families and small businesses to encourage local job creation.",
+          "source_url": "https://www.kaysiaearleyforcongress.com/platform",
+          "confidence": 82
+        }
+      ],
+      "activated_at": "2026-08-07T19:21:50.072Z",
+      "verified_at": "2026-08-07T19:21:50.072Z"
     },
     {
       "name": "Pia Dandiya",
@@ -222,8 +266,44 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "pia-dandiya-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Pledges to oppose cuts to Social Security and Medicare, reverse Medicaid cuts, and lower prescription drug and health care costs for families.",
+          "source_url": "https://piaforcongress.com/priorities",
+          "confidence": 90
+        },
+        {
+          "stance_id": "pia-dandiya-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Wants to lower housing, insurance, prescription drug, and childcare costs; end price-gouging and hidden fees; and eliminate tariffs she calls illegal and costly.",
+          "source_url": "https://piaforcongress.com/priorities",
+          "confidence": 88
+        },
+        {
+          "stance_id": "pia-dandiya-education",
+          "issue_slug": "education",
+          "stance": "strongly_support",
+          "summary": "Backs universal pre-K, full funding for public schools and teachers, and new job-training and apprenticeship pathways.",
+          "source_url": "https://piaforcongress.com/priorities",
+          "confidence": 88
+        },
+        {
+          "stance_id": "pia-dandiya-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Says the fairest way to keep Social Security and Medicare strong long-term is asking the wealthiest Americans to pay their fair share in taxes.",
+          "source_url": "https://piaforcongress.com/priorities",
+          "confidence": 82
+        }
+      ],
+      "activated_at": "2026-08-07T19:21:51.188Z",
+      "verified_at": "2026-08-07T19:21:51.188Z"
     }
   ],
   "race": {

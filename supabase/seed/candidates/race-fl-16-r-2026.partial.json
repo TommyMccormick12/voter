@@ -27,8 +27,44 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "edward-peter-dr-pope-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "support",
+          "summary": "Pledges to fully fund law enforcement and give officers the tools, training, and resources they need to keep communities safe.",
+          "source_url": "https://edpopeforcongress.com/#issues",
+          "confidence": 75
+        },
+        {
+          "stance_id": "edward-peter-dr-pope-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Wants to cut taxes and reduce red tape to support Main Street businesses and economic opportunity.",
+          "source_url": "https://edpopeforcongress.com/#issues",
+          "confidence": 75
+        },
+        {
+          "stance_id": "edward-peter-dr-pope-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Pledges to defend Social Security and Medicare and support affordable healthcare and prescription drugs for seniors.",
+          "source_url": "https://edpopeforcongress.com/#issues",
+          "confidence": 75
+        },
+        {
+          "stance_id": "edward-peter-dr-pope-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Says his priorities are lowering the cost of living, supporting job creation, and bringing fiscal discipline to Washington.",
+          "source_url": "https://ballotpedia.org/Ed_Pope_(Florida)",
+          "confidence": 70
+        }
+      ],
+      "activated_at": "2026-08-07T19:23:04.987Z",
+      "verified_at": "2026-08-07T19:23:04.987Z"
     },
     {
       "name": "Eddie Speir",
@@ -190,7 +226,7 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "total_raised": 1087682.55,
       "fec_coverage_end_date": "2026-07-29",
       "fec_totals": {
@@ -202,7 +238,51 @@
         "individual_contributions": 941600.89,
         "other_political_committee_contributions": 120500,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "sydney-gruters-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Pledges to cut taxes to help working families afford gas, groceries, and everyday essentials amid rising costs.",
+          "source_url": "https://www.grutersforcongress.com/",
+          "confidence": 70
+        },
+        {
+          "stance_id": "sydney-gruters-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Campaigns on fighting inflation with conservative solutions aimed at helping families keep more of what they earn.",
+          "source_url": "https://www.grutersforcongress.com/",
+          "confidence": 70
+        },
+        {
+          "stance_id": "sydney-gruters-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Backs working with President Trump and ICE on border security, aiming to stop violent criminals from entering the country illegally.",
+          "source_url": "https://www.grutersforcongress.com/",
+          "confidence": 75
+        },
+        {
+          "stance_id": "sydney-gruters-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Wants to curb overdevelopment in Southwest Florida to keep homeownership within reach for working families.",
+          "source_url": "https://www.grutersforcongress.com/",
+          "confidence": 75
+        },
+        {
+          "stance_id": "sydney-gruters-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Pledges to protect Social Security and Medicare so seniors and veterans can retire with security and peace of mind.",
+          "source_url": "https://www.grutersforcongress.com/",
+          "confidence": 70
+        }
+      ],
+      "activated_at": "2026-08-07T19:23:06.311Z",
+      "verified_at": "2026-08-07T19:23:06.311Z"
     }
   ],
   "race": {

@@ -1046,8 +1046,52 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "vincent-michael-arias-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Supports reducing home insurance costs, reforming regulations, and market-based solutions to increase housing supply for South Florida families.",
+          "source_url": "https://vincentmichaelarias.com/priorities/",
+          "confidence": 80
+        },
+        {
+          "stance_id": "vincent-michael-arias-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Supports lowering prescription drug costs, protecting Medicare, and market-based reforms to expand choice while keeping care affordable and accessible.",
+          "source_url": "https://vincentmichaelarias.com/priorities/",
+          "confidence": 78
+        },
+        {
+          "stance_id": "vincent-michael-arias-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports pro-growth, pro-worker policies: reducing regulations, lowering taxes, and helping small businesses grow and create local jobs.",
+          "source_url": "https://vincentmichaelarias.com/priorities/",
+          "confidence": 78
+        },
+        {
+          "stance_id": "vincent-michael-arias-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "support",
+          "summary": "As a former prosecutor, supports funding and resources for law enforcement and first responders while protecting constitutional rights.",
+          "source_url": "https://vincentmichaelarias.com/priorities/",
+          "confidence": 75
+        },
+        {
+          "stance_id": "vincent-michael-arias-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Supports comprehensive immigration reform that secures the border, upholds the rule of law, and creates a legal, orderly, compassionate process.",
+          "source_url": "https://vincentmichaelarias.com/priorities/",
+          "confidence": 65
+        }
+      ],
+      "activated_at": "2026-08-07T19:21:22.653Z",
+      "verified_at": "2026-08-07T19:21:22.653Z"
     }
   ],
   "race": {

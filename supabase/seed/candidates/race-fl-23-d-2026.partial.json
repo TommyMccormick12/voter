@@ -1092,8 +1092,44 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "victoria-jane-boker-doyle-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Blames corporate greed, not just inflation, for high housing, gas, and grocery costs; backs anti-price-fixing enforcement, anti-monopoly action, and fair wages with paid family leave.",
+          "source_url": "https://doyleforcongress.org/priorities",
+          "confidence": 85
+        },
+        {
+          "stance_id": "victoria-jane-boker-doyle-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Says everyone in America should have healthcare access regardless of income, citing medical bankruptcy despite the U.S. having the world's highest health spending.",
+          "source_url": "https://doyleforcongress.org/priorities",
+          "confidence": 88
+        },
+        {
+          "stance_id": "victoria-jane-boker-doyle-housing",
+          "issue_slug": "housing",
+          "stance": "strongly_support",
+          "summary": "Proposes a federal reinsurance program to dramatically lower Florida homeowners' insurance rates amid the state's property-insurance affordability crisis.",
+          "source_url": "https://doyleforcongress.org/priorities",
+          "confidence": 85
+        },
+        {
+          "stance_id": "victoria-jane-boker-doyle-immigration",
+          "issue_slug": "immigration",
+          "stance": "neutral",
+          "summary": "Backs border enforcement and deporting violent criminals while also protecting Dreamers and immigrant workers, calling for fair, well-vetted immigration reform.",
+          "source_url": "https://doyleforcongress.org/priorities",
+          "confidence": 70
+        }
+      ],
+      "activated_at": "2026-08-07T19:21:20.668Z",
+      "verified_at": "2026-08-07T19:21:20.668Z"
     }
   ],
   "race": {

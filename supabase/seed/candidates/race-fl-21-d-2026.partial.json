@@ -178,8 +178,36 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-06-30"
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "bernard-taylor-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Supports investing in small businesses, creating good jobs, and building an economy focused on stability for working families, not just the wealthy.",
+          "source_url": "https://ballotpedia.org/Bernard_Taylor",
+          "confidence": 70
+        },
+        {
+          "stance_id": "bernard-taylor-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Proposes a federal Workforce Pathways grant program funding K-12 career and technical education integrated with academics, built with local employers and community input under local control.",
+          "source_url": "https://www.bernardtaylorforcongress.org/_files/ugd/63a0ef_9c8fd6bc881944ac8fe7e59992b2f856.pdf",
+          "confidence": 80
+        },
+        {
+          "stance_id": "bernard-taylor-housing",
+          "issue_slug": "housing",
+          "stance": "strongly_support",
+          "summary": "Proposes capping corporate/hedge-fund home purchases in Florida at 25/year per county, a 5-year bulk-buy moratorium in unaffordable counties, plus down-payment aid and renter protections.",
+          "source_url": "https://www.bernardtaylorforcongress.org/_files/ugd/63a0ef_fee5705704834e969b6432e4ff3b792d.pdf",
+          "confidence": 88
+        }
+      ],
+      "activated_at": "2026-08-07T19:22:40.145Z",
+      "verified_at": "2026-08-07T19:22:40.145Z"
     },
     {
       "name": "James T. Martin",

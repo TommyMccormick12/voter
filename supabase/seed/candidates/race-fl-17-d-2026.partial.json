@@ -150,8 +150,52 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-06-30"
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "allen-l-jr-spence-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Opposes tariffs as a hidden tax on families and businesses; wants Congress, not the president, to control tariff policy and end them.",
+          "source_url": "https://ballotpedia.org/Allen_Spence",
+          "confidence": 88
+        },
+        {
+          "stance_id": "allen-l-jr-spence-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Proposes a $3,000 annual child tax credit paid monthly, closing 'fake charity' tax write-off loopholes, and directing billionaire wealth to working families.",
+          "source_url": "https://www.spence2026.com/about",
+          "confidence": 78
+        },
+        {
+          "stance_id": "allen-l-jr-spence-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Has a plan to reform Social Security and Medicare to protect current beneficiaries while ensuring the programs' long-term solvency.",
+          "source_url": "https://ballotpedia.org/Allen_Spence",
+          "confidence": 78
+        },
+        {
+          "stance_id": "allen-l-jr-spence-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Says federal agents including ICE must respect Fourth Amendment protections, cannot search homes without a judicial warrant, and must be held accountable for abuses.",
+          "source_url": "https://ballotpedia.org/Allen_Spence",
+          "confidence": 85
+        },
+        {
+          "stance_id": "allen-l-jr-spence-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Proposes funding safer, flood-resistant home construction and a national catastrophe risk-pooling program to address disaster and insurance costs.",
+          "source_url": "https://www.spence2026.com/about",
+          "confidence": 75
+        }
+      ],
+      "activated_at": "2026-08-07T19:22:22.829Z",
+      "verified_at": "2026-08-07T19:22:22.829Z"
     },
     {
       "name": "Matthew Montavon",
@@ -302,8 +346,52 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "matthew-montavon-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Wants to control inflation to lower costs of groceries and utilities, and address wealth concentrating among the top 10% while the middle class struggles.",
+          "source_url": "https://ballotpedia.org/Matthew_Montavon",
+          "confidence": 82
+        },
+        {
+          "stance_id": "matthew-montavon-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Supports protecting the ACA, Medicare, and Medicaid in the short term while working toward universal healthcare in the long term.",
+          "source_url": "https://ballotpedia.org/Matthew_Montavon",
+          "confidence": 85
+        },
+        {
+          "stance_id": "matthew-montavon-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Supports eliminating ICE in its current form, aligning enforcement with international human-rights standards, and a pathway to citizenship for Dreamers.",
+          "source_url": "https://ballotpedia.org/Matthew_Montavon",
+          "confidence": 88
+        },
+        {
+          "stance_id": "matthew-montavon-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Supports expanding affordable housing through federal construction funding, incentives for local development, and stronger renter-support programs.",
+          "source_url": "https://ballotpedia.org/Matthew_Montavon",
+          "confidence": 85
+        },
+        {
+          "stance_id": "matthew-montavon-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Supports combating climate change and protecting the environment, including expanding public services for the transition to renewable energy.",
+          "source_url": "https://ballotpedia.org/Matthew_Montavon",
+          "confidence": 75
+        }
+      ],
+      "activated_at": "2026-08-07T19:22:21.506Z",
+      "verified_at": "2026-08-07T19:22:21.506Z"
     }
   ],
   "race": {

@@ -979,8 +979,36 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "scott-m-singer-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Pledges to cut red tape for small businesses, increase oversight of federal spending, and grow high-paying jobs in the district.",
+          "source_url": "https://ballotpedia.org/Scott_Singer",
+          "confidence": 75
+        },
+        {
+          "stance_id": "scott-m-singer-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_support",
+          "summary": "Pledges to 'stand strongly with Israel' and supports barring universities that take foreign funding for programming from federal dollars.",
+          "source_url": "https://ballotpedia.org/Scott_Singer",
+          "confidence": 75
+        },
+        {
+          "stance_id": "scott-m-singer-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "support",
+          "summary": "Says that as Boca Raton mayor he cut crime 25% and 'backed the blue,' citing this as his record on public safety.",
+          "source_url": "https://ballotpedia.org/Scott_Singer",
+          "confidence": 60
+        }
+      ],
+      "activated_at": "2026-08-07T19:29:10.213Z",
+      "verified_at": "2026-08-07T19:29:10.213Z"
     }
   ],
   "race": {

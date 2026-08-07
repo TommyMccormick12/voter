@@ -289,7 +289,7 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "total_raised": 296506.91,
       "fec_coverage_end_date": "2026-07-29",
       "fec_totals": {
@@ -301,7 +301,43 @@
         "individual_contributions": 296004.91,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "kelly-kirschner-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Says working families face higher rent, insurance, gas, and grocery costs, and wants to lower those costs while curbing corporate and lobbyist influence in Congress.",
+          "source_url": "https://www.yourobserver.com/news/2026/may/03/sarasota-former-mayor-joins-congressional-race/",
+          "confidence": 72
+        },
+        {
+          "stance_id": "kelly-kirschner-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Backs a national catastrophic natural reinsurance fund to stabilize Florida property insurance rates, which he says have risen 78 percent.",
+          "source_url": "https://wslr.org/district-16-congressional-race-kelly-kirschner/",
+          "confidence": 68
+        },
+        {
+          "stance_id": "kelly-kirschner-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Supports immigration policy that holds employers accountable rather than targeting workers, citing immigrants' contributions to Social Security funding.",
+          "source_url": "https://wslr.org/district-16-congressional-race-kelly-kirschner/",
+          "confidence": 62
+        },
+        {
+          "stance_id": "kelly-kirschner-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "oppose",
+          "summary": "Argues domestic disaster-recovery funding should be prioritized over international and military spending abroad.",
+          "source_url": "https://wslr.org/district-16-congressional-race-kelly-kirschner/",
+          "confidence": 48
+        }
+      ],
+      "activated_at": "2026-08-07T19:22:09.362Z",
+      "verified_at": "2026-08-07T19:22:09.362Z"
     },
     {
       "name": "Tamika Lyles",
@@ -501,8 +537,52 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-06-30"
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "tamika-lyles-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Backs expanding Medicaid to close Florida's coverage gap, capping prescription drug costs, and protecting Medicare and VA healthcare for seniors and veterans.",
+          "source_url": "https://ballotpedia.org/Tamika_Lyles",
+          "confidence": 90
+        },
+        {
+          "stance_id": "tamika-lyles-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Supports fully funding public education, raising teacher pay to competitive levels, reducing class sizes, and adding counselors and support staff.",
+          "source_url": "https://ballotpedia.org/Tamika_Lyles",
+          "confidence": 90
+        },
+        {
+          "stance_id": "tamika-lyles-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Calls for a living wage and stronger worker protections, saying full-time work should provide economic security rather than just survival.",
+          "source_url": "https://ballotpedia.org/Tamika_Lyles",
+          "confidence": 88
+        },
+        {
+          "stance_id": "tamika-lyles-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Wants to protect renters from steep rent increases and expand affordable housing options, saying investors and speculators are pricing out working Floridians.",
+          "source_url": "https://www.tamikalyles.com/issues",
+          "confidence": 82
+        },
+        {
+          "stance_id": "tamika-lyles-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "Treats climate impacts as a cost-of-living issue tied to rising insurance rates and supports federal investment in resilient infrastructure.",
+          "source_url": "https://www.tamikalyles.com/issues",
+          "confidence": 75
+        }
+      ],
+      "activated_at": "2026-08-07T19:22:10.381Z",
+      "verified_at": "2026-08-07T19:22:10.381Z"
     }
   ],
   "race": {

@@ -438,8 +438,44 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "michael-carbonara-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Platform pledges to \"put jobs and growth first by slashing taxes, regulations and spending\" and to \"reduce the deficit and safeguard Social Security from cuts and retirement age changes.\"",
+          "source_url": "https://michaelcarbonara.com/issue/american-prosperity/",
+          "confidence": 65
+        },
+        {
+          "stance_id": "michael-carbonara-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Platform calls to \"tackle skyrocketing healthcare and drug costs by promoting efficiency, transparency and competition\" and to \"protect and promote patient choice.\"",
+          "source_url": "https://michaelcarbonara.com/issue/affordable-healthcare/",
+          "confidence": 60
+        },
+        {
+          "stance_id": "michael-carbonara-education",
+          "issue_slug": "education",
+          "stance": "strongly_support",
+          "summary": "Platform backs \"universal school choice\" and pledges to \"empower local control of schools and scale back federal bureaucracy.\"",
+          "source_url": "https://michaelcarbonara.com/issue/educational-freedom/",
+          "confidence": 62
+        },
+        {
+          "stance_id": "michael-carbonara-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Platform pledges to \"protect the 2nd amendment\" and to \"enforce the 4th amendment rights of gun owners\" against warrantless searches.",
+          "source_url": "https://michaelcarbonara.com/issue/constitutional-rights/",
+          "confidence": 65
+        }
+      ],
+      "activated_at": "2026-08-07T19:23:52.565Z",
+      "verified_at": "2026-08-07T19:23:52.565Z"
     },
     {
       "name": "Michael Thompson",

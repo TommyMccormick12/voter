@@ -42,7 +42,7 @@
       "race_id": "race-fl-24-d-2026",
       "fec_candidate_id": "H6FL24111",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -57,7 +57,43 @@
         "individual_contributions": 566608.87,
         "other_political_committee_contributions": 87500,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "kendrick-meek-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Backs restoring and expanding ACA subsidies, expanding Medicaid, lowering drug costs, and protecting Medicare and Social Security from cuts.",
+          "source_url": "https://kendrickmeekforcongress.com/issues",
+          "confidence": 80
+        },
+        {
+          "stance_id": "kendrick-meek-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Wants to build more affordable and workforce housing, expand down-payment assistance, and limit corporate real-estate investors buying up housing.",
+          "source_url": "https://kendrickmeekforcongress.com/issues",
+          "confidence": 75
+        },
+        {
+          "stance_id": "kendrick-meek-education",
+          "issue_slug": "education",
+          "stance": "strongly_support",
+          "summary": "Supports universal childcare and pre-K, higher teacher pay, and making community college and trade school affordable and eventually free.",
+          "source_url": "https://kendrickmeekforcongress.com/issues",
+          "confidence": 75
+        },
+        {
+          "stance_id": "kendrick-meek-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Supports comprehensive immigration reform that keeps families together and wants to end ICE raids on workplaces, schools, and communities.",
+          "source_url": "https://kendrickmeekforcongress.com/issues",
+          "confidence": 76
+        }
+      ],
+      "activated_at": "2026-08-07T19:28:51.426Z",
+      "verified_at": "2026-08-07T19:28:51.426Z"
     },
     {
       "name": "Marshall L. Davis",
@@ -100,7 +136,7 @@
       "race_id": "race-fl-24-d-2026",
       "fec_candidate_id": "H6FL24095",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -115,7 +151,51 @@
         "individual_contributions": 787142.8,
         "other_political_committee_contributions": 25000,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "oliver-g-gilbert-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Says healthcare is a right for every American and supports a pathway toward universal healthcare access.",
+          "source_url": "https://olivergilbert.vote/issues",
+          "confidence": 78
+        },
+        {
+          "stance_id": "oliver-g-gilbert-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Opposes current deportation policies and wants to end their funding, redirecting that money into community investment.",
+          "source_url": "https://olivergilbert.vote/issues",
+          "confidence": 75
+        },
+        {
+          "stance_id": "oliver-g-gilbert-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Says working families' tax burden should not match billionaires'; backs tax policy indexed to community earnings levels.",
+          "source_url": "https://olivergilbert.vote/issues",
+          "confidence": 70
+        },
+        {
+          "stance_id": "oliver-g-gilbert-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Backs job training in high-paying technical fields less exposed to AI displacement, plus support for small businesses and entrepreneurs.",
+          "source_url": "https://olivergilbert.vote/issues",
+          "confidence": 68
+        },
+        {
+          "stance_id": "oliver-g-gilbert-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Backs the HOME Act to lower monthly housing costs and help families build homeownership and generational wealth.",
+          "source_url": "https://olivergilbert.vote/issues",
+          "confidence": 68
+        }
+      ],
+      "activated_at": "2026-08-07T19:28:50.838Z",
+      "verified_at": "2026-08-07T19:28:50.838Z"
     },
     {
       "name": "Roderick Vereen",

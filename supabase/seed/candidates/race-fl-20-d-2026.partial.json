@@ -1305,8 +1305,44 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "elijah-manley-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Supports Medicaid expansion and Medicare for All to cut FL-20's 17.1% uninsured rate and remove insurance barriers to care.",
+          "source_url": "https://ballotpedia.org/Elijah_Manley",
+          "confidence": 90
+        },
+        {
+          "stance_id": "elijah-manley-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Backs smart-growth development and federal funding for sustainable, inclusive housing to address Florida's affordability crisis.",
+          "source_url": "https://ballotpedia.org/Elijah_Manley",
+          "confidence": 82
+        },
+        {
+          "stance_id": "elijah-manley-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Proposes a federal Jobs for All Guarantee for stable, fair-wage jobs, citing 13% district poverty and wide wealth inequality.",
+          "source_url": "https://ballotpedia.org/Elijah_Manley",
+          "confidence": 85
+        },
+        {
+          "stance_id": "elijah-manley-climate",
+          "issue_slug": "climate",
+          "stance": "strongly_support",
+          "summary": "Calls climate change one of the nation's gravest security threats and says South Florida is ground zero for sea-level rise, urging bold climate action now.",
+          "source_url": "https://ballotpedia.org/Elijah_Manley",
+          "confidence": 88
+        }
+      ],
+      "activated_at": "2026-08-07T19:21:21.665Z",
+      "verified_at": "2026-08-07T19:21:21.665Z"
     },
     {
       "name": "Luther \"UncleLuke\" Campbell",

@@ -199,8 +199,36 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "deborah-adeimy-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Says immigration should strengthen America, opposing illegal entry that strains welfare systems, hospitals, and schools, while welcoming those who 'join and give' legally.",
+          "source_url": "https://www.debadeimy4congress.com/issues",
+          "confidence": 65
+        },
+        {
+          "stance_id": "deborah-adeimy-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Favors tariffs over income tax and calls inflation 'taxation without legislation,' arguing Americans spend their own earnings better than government does.",
+          "source_url": "https://www.debadeimy4congress.com/issues",
+          "confidence": 65
+        },
+        {
+          "stance_id": "deborah-adeimy-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Supports pharmaceutical industry innovation and says affordable healthcare follows when insurance companies and drug manufacturers work together.",
+          "source_url": "https://www.debadeimy4congress.com/issues",
+          "confidence": 55
+        }
+      ],
+      "activated_at": "2026-08-07T19:22:37.514Z",
+      "verified_at": "2026-08-07T19:22:37.514Z"
     },
     {
       "name": "Paola Branda",
@@ -228,8 +256,52 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "paola-dr-branda-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Backs cutting wasteful government spending and lowering taxes, while protecting taxpayers, seniors, retirees, tipped and overtime workers, and small businesses.",
+          "source_url": "https://www.paolabrandaforcongress.com/issues",
+          "confidence": 65
+        },
+        {
+          "stance_id": "paola-dr-branda-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Platform pledges to lower healthcare and prescription drug costs and to protect Social Security and Medicare for seniors.",
+          "source_url": "https://www.paolabrandaforcongress.com/issues",
+          "confidence": 68
+        },
+        {
+          "stance_id": "paola-dr-branda-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Platform calls for securing the border, enforcing immigration law, and stopping fentanyl and human trafficking, while honoring legal immigration and families who follow the rules.",
+          "source_url": "https://www.paolabrandaforcongress.com/issues",
+          "confidence": 68
+        },
+        {
+          "stance_id": "paola-dr-branda-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Backs parental rights, school choice, and safe classrooms, with a platform emphasizing reading, math, civics, AI literacy, and skilled-trades apprenticeships.",
+          "source_url": "https://www.paolabrandaforcongress.com/issues",
+          "confidence": 65
+        },
+        {
+          "stance_id": "paola-dr-branda-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "support",
+          "summary": "Platform prioritizes fighting fentanyl and human/child trafficking, gangs, and cartels, and supporting law enforcement against violent crime.",
+          "source_url": "https://www.paolabrandaforcongress.com/issues",
+          "confidence": 65
+        }
+      ],
+      "activated_at": "2026-08-07T19:22:38.874Z",
+      "verified_at": "2026-08-07T19:22:38.874Z"
     }
   ],
   "race": {

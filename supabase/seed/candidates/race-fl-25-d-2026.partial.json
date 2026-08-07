@@ -1094,8 +1094,36 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-07-29"
+      "active": true,
+      "fec_coverage_end_date": "2026-07-29",
+      "top_stances": [
+        {
+          "stance_id": "oliver-adams-larkin-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Supports Medicare for All with no premiums, deductibles, or co-pays; covers vision, hearing, dental; caps prescription drug costs.",
+          "source_url": "https://ballotpedia.org/Oliver_Larkin",
+          "confidence": 95
+        },
+        {
+          "stance_id": "oliver-adams-larkin-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Supports raising the federal minimum wage to $25 an hour, indexed to inflation, with no exceptions for tipped, disabled, minor, or incarcerated workers.",
+          "source_url": "https://ballotpedia.org/Oliver_Larkin",
+          "confidence": 95
+        },
+        {
+          "stance_id": "oliver-adams-larkin-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Supports restoring higher top marginal tax rates on wealthy individuals and large corporations to fund public investment.",
+          "source_url": "https://ballotpedia.org/Oliver_Larkin",
+          "confidence": 85
+        }
+      ],
+      "activated_at": "2026-08-07T19:22:41.446Z",
+      "verified_at": "2026-08-07T19:22:41.446Z"
     }
   ],
   "race": {
