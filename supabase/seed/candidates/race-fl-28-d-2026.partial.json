@@ -199,8 +199,60 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
-      "fec_coverage_end_date": "2026-06-30"
+      "active": true,
+      "fec_coverage_end_date": "2026-06-30",
+      "top_stances": [
+        {
+          "stance_id": "phil-ehr-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Ehr's platform pledges to reduce Florida's rising cost of living and strengthen Medicare and Social Security.",
+          "source_url": "https://web.archive.org/web/20260306074916/https://ehrforcongress.us/meet-phil/",
+          "confidence": 90
+        },
+        {
+          "stance_id": "phil-ehr-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Ehr's platform calls for securing the border and reforming legal immigration.",
+          "source_url": "https://web.archive.org/web/20260306074916/https://ehrforcongress.us/meet-phil/",
+          "confidence": 90
+        },
+        {
+          "stance_id": "phil-ehr-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Ehr's platform calls for enacting responsible gun laws to stop what he calls a mass murder epidemic.",
+          "source_url": "https://web.archive.org/web/20260306074916/https://ehrforcongress.us/meet-phil/",
+          "confidence": 90
+        },
+        {
+          "stance_id": "phil-ehr-education",
+          "issue_slug": "education",
+          "stance": "strongly_support",
+          "summary": "Ehr's platform pledges to champion public education and labor unions in Florida.",
+          "source_url": "https://web.archive.org/web/20260306074916/https://ehrforcongress.us/meet-phil/",
+          "confidence": 90
+        },
+        {
+          "stance_id": "phil-ehr-reproductive_rights",
+          "issue_slug": "reproductive_rights",
+          "stance": "strongly_support",
+          "summary": "Ehr's platform pledges to restore women's reproductive rights by eliminating government overreach.",
+          "source_url": "https://web.archive.org/web/20260306074916/https://ehrforcongress.us/meet-phil/",
+          "confidence": 90
+        },
+        {
+          "stance_id": "phil-ehr-environment",
+          "issue_slug": "environment",
+          "stance": "strongly_support",
+          "summary": "Ehr's platform pledges to protect Florida's environment by building clean energy and water infrastructure.",
+          "source_url": "https://web.archive.org/web/20260306074916/https://ehrforcongress.us/meet-phil/",
+          "confidence": 90
+        }
+      ],
+      "activated_at": "2026-08-07T22:12:15.553Z",
+      "verified_at": "2026-08-07T22:12:15.553Z"
     }
   ],
   "race": {
