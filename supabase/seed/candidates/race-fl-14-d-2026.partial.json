@@ -13,7 +13,7 @@
       "race_id": "race-fl-14-d-2026",
       "fec_candidate_id": "H6FL11126",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [
@@ -631,7 +631,60 @@
         "individual_contributions": 1452820.1,
         "other_political_committee_contributions": 875950,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "kathy-castor-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Castor helped draft the Affordable Care Act and has worked against weakening patient protections, especially for pre-existing conditions, and to expand marketplace enrollment.",
+          "source_url": "https://castor.house.gov/issues/issue/?IssueID=2559",
+          "confidence": 85,
+          "track_record_note": "In the 119th Congress, Castor voted for H.R. 4541, reauthorizing the Young Women's Breast Health Education and Awareness Act, and for H.R. 8823, on provider accountability under FECA; both passed by motion to suspend the rules.",
+          "track_record_citations": [
+            "hr4541-119",
+            "hr8823-119"
+          ]
+        },
+        {
+          "stance_id": "kathy-castor-climate",
+          "issue_slug": "climate",
+          "stance": "strongly_support",
+          "summary": "As chair of the House Select Committee on the Climate Crisis, Castor unveiled a clean energy economy plan and says she is committed to renewable energy and energy efficiency investments.",
+          "source_url": "https://castor.house.gov/issues/issue/?IssueID=3584",
+          "confidence": 85
+        },
+        {
+          "stance_id": "kathy-castor-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Castor helped pass background-check legislation including closing the Charleston loophole, cosponsors reinstating the assault weapons ban, and serves on the Gun Violence Prevention Task Force.",
+          "source_url": "https://castor.house.gov/issues/issue/?IssueID=118662",
+          "confidence": 80,
+          "track_record_note": "In the 119th Congress, Castor voted against H.R. 1181, the Protecting Privacy in Purchases Act, which barred payment networks from using firearm-specific merchant category codes; the bill passed. She also voted yea on a motion to recommit the bill, which failed.",
+          "track_record_citations": [
+            "hr1181-119"
+          ]
+        },
+        {
+          "stance_id": "kathy-castor-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Castor says she has been a staunch advocate for immigration reform that provides a fair pathway to citizenship, benefiting immigrants and the broader U.S. economy.",
+          "source_url": "https://castor.house.gov/issues/issue/?IssueID=99507",
+          "confidence": 75
+        },
+        {
+          "stance_id": "kathy-castor-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Castor says she is committed to reining in rising housing costs and expanding access to quality, safe affordable housing.",
+          "source_url": "https://castor.house.gov/issues/issue/?IssueID=118663",
+          "confidence": 70
+        }
+      ],
+      "activated_at": "2026-08-07T22:00:36.324Z",
+      "verified_at": "2026-08-07T22:00:36.324Z"
     }
   ],
   "race": {

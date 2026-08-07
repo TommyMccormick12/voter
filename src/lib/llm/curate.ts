@@ -49,6 +49,28 @@ export interface CandidateRawData {
   top_industries: Array<{ industry_name: string; amount: number; rank: number }>;
 }
 
+/**
+ * True when a voting_record row's vote question is a PROCEDURAL motion rather
+ * than a vote on the bill's substance.
+ *
+ * Why this exists: three independent verifiers on 2026-08-07 caught stances
+ * built on motion-to-recommit votes, and the error ran BOTH ways — Bean's nay
+ * on an MTR was written up as "voted against the Take Care of America's
+ * Veterans Act" (a nay actually lets the bill proceed), while Castor's yea on
+ * the same MTR was written up as supporting a veterans bill (a yea sends it
+ * back). The term of art is the only thing carrying the inversion, and no
+ * voter scanning a card can be expected to parse it.
+ *
+ * The fixture already holds the signal: `bill_title` stores the vote question
+ * ("On Motion to Recommit"), not a bill name. This surfaces it to the model.
+ */
+export function isProceduralVote(voteQuestion: string | null | undefined): boolean {
+  if (!voteQuestion) return false;
+  return /motion to recommit|motion to table|previous question|motion to adjourn|ordering the previous question/i.test(
+    voteQuestion
+  );
+}
+
 const StanceSchema = z.object({
   issue_slug: z.string(),
   stance: z.enum([
@@ -190,11 +212,15 @@ function buildPrompt(c: CandidateRawData): string {
       ? c.campaign_themes.map((t) => `- [${t.heading}] ${t.text}`)
       : ['(none)']),
     '',
-    'VOTING RECORD (most recent first):',
+    'VOTING RECORD (most recent first).',
+    'NOTE: the quoted text is the VOTE QUESTION, not a bill title. Rows marked',
+    '[PROCEDURAL] are motions about handling the bill, not its substance —',
+    'their meaning INVERTS: a NAY on a motion to recommit generally supports',
+    'the underlying bill, and a YEA generally opposes it as written.',
     ...(c.voting_record.length > 0
       ? c.voting_record.slice(0, 30).map(
           (v) =>
-            `- bill_id="${v.bill_id}" | ${v.vote.toUpperCase()} on "${v.bill_title}" (${v.vote_date}) [issues: ${v.issue_slugs.join(',') || 'unknown'}]`
+            `- bill_id="${v.bill_id}"${isProceduralVote(v.bill_title) ? ' [PROCEDURAL]' : ''} | ${v.vote.toUpperCase()} on "${v.bill_title}" (${v.vote_date}) [issues: ${v.issue_slugs.join(',') || 'unknown'}]`
         )
       : ['(none — challenger or not yet in office)']),
     '',

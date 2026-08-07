@@ -13,7 +13,7 @@
       "race_id": "race-fl-03-r-2026",
       "fec_candidate_id": "H0FL03175",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [
@@ -631,7 +631,48 @@
         "individual_contributions": 890411.85,
         "other_political_committee_contributions": 727500,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "kat-cammack-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Cammack voted for the Main Street Capital Access Act, easing federal bank-formation rules and tailoring regulatory requirements to a bank's risk profile to expand access to capital.",
+          "source_url": "https://www.congress.gov/119/bills/hr6955/BILLS-119hr6955eh.htm",
+          "confidence": 70,
+          "track_record_note": "In July 2026, Cammack voted yea on passage of the Main Street Capital Access Act (H.R. 6955), which modifies federal banking regulations to promote new bank formation and tailors requirements to institution risk profiles.",
+          "track_record_citations": [
+            "hr6955-119"
+          ]
+        },
+        {
+          "stance_id": "kat-cammack-government_reform",
+          "issue_slug": "government_reform",
+          "stance": "support",
+          "summary": "Cammack voted for the Stop Insider Trading Act, barring members of Congress and their families from buying individual stocks and adding a federal photo-ID requirement to vote.",
+          "source_url": "https://www.congress.gov/119/bills/hr7008/BILLS-119hr7008eh.htm",
+          "confidence": 70,
+          "track_record_note": "In July 2026, Cammack voted yea on passage of the Stop Insider Trading Act (H.R. 7008), which bars members of Congress and their families from purchasing individual stocks and requires advance notice before selling covered investments, while also adding a photo-ID requirement for federal elections. She also voted yea on passage of the Value Over Cost Act (H.R. 1118), which lets federal procurement awards be based on best value rather than lowest cost.",
+          "track_record_citations": [
+            "hr7008-119",
+            "hr1118-119"
+          ]
+        },
+        {
+          "stance_id": "kat-cammack-public_safety",
+          "issue_slug": "public_safety",
+          "stance": "support",
+          "summary": "Cammack voted for legislation directing DHS to run a preparedness exercise for a terrorist attack on critical infrastructure during severe winter weather.",
+          "source_url": "https://www.congress.gov/119/bills/hr3106/BILLS-119hr3106eh.htm",
+          "confidence": 65,
+          "track_record_note": "In July 2026, Cammack voted yea on passage of the Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act (H.R. 3106), which directs DHS to conduct a preparedness exercise simulating a terrorist attack on critical infrastructure during severe winter weather.",
+          "track_record_citations": [
+            "hr3106-119"
+          ]
+        }
+      ],
+      "activated_at": "2026-08-07T21:58:32.652Z",
+      "verified_at": "2026-08-07T21:58:32.652Z"
     }
   ],
   "race": {

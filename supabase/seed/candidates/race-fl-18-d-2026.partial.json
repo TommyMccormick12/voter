@@ -16,7 +16,7 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "total_raised": 12208.23,
       "fec_coverage_end_date": "2026-06-30",
       "fec_totals": {
@@ -28,7 +28,51 @@
         "individual_contributions": 2460.33,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-06-30"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "curtis-gibson-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Pledges to champion policies protecting labor and lowering cost of living for working families, and to pursue economic development that grows small businesses and creates good jobs.",
+          "source_url": "https://ballotpedia.org/Curtis_Gibson",
+          "confidence": 80
+        },
+        {
+          "stance_id": "curtis-gibson-housing",
+          "issue_slug": "housing",
+          "stance": "support",
+          "summary": "Says FL homeowners are squeezed by rising property insurance costs; would push for a federal reinsurance backstop to stabilize the market and lower premiums.",
+          "source_url": "https://votecurtisgibson.com/issues",
+          "confidence": 85
+        },
+        {
+          "stance_id": "curtis-gibson-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Calls property taxes a growing burden on families, seniors, and homeowners; supports policies to protect them from being taxed out of their homes and communities.",
+          "source_url": "https://votecurtisgibson.com/issues",
+          "confidence": 85
+        },
+        {
+          "stance_id": "curtis-gibson-veterans",
+          "issue_slug": "veterans",
+          "stance": "support",
+          "summary": "Says veterans face long waits and red tape for care; would push to let them access timely local medical care, including covered local providers when the VA can't serve them close to home.",
+          "source_url": "https://votecurtisgibson.com/issues",
+          "confidence": 85
+        },
+        {
+          "stance_id": "curtis-gibson-government_reform",
+          "issue_slug": "government_reform",
+          "stance": "support",
+          "summary": "Pledges direct communication, monthly public updates, and local town halls (a 'Straight Talk Tour') to increase accountability and transparency with constituents.",
+          "source_url": "https://votecurtisgibson.com/issues",
+          "confidence": 85
+        }
+      ],
+      "activated_at": "2026-08-07T21:59:49.441Z",
+      "verified_at": "2026-08-07T21:59:49.441Z"
     }
   ],
   "race": {

@@ -13,7 +13,7 @@
       "race_id": "race-fl-26-d-2026",
       "fec_candidate_id": "H6FL26058",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -28,7 +28,59 @@
         "individual_contributions": 96763.05,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "top_stances": [
+        {
+          "stance_id": "nicole-locklin-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "strongly_support",
+          "summary": "Supports the fastest responsible path to universal coverage (Medicare for All, a public option, or Medicare buy-in), starting by defending the ACA and cutting drug and surprise-billing costs.",
+          "source_url": "https://www.locklinforcongress.com/issues-healthcare",
+          "confidence": 88
+        },
+        {
+          "stance_id": "nicole-locklin-immigration",
+          "issue_slug": "immigration",
+          "stance": "strongly_support",
+          "summary": "Calls for abolishing ICE and guaranteeing due process for detainees, citing conditions at the Alligator Alcatraz facility in FL-26, while saying genuine public-safety threats must be taken seriously.",
+          "source_url": "https://www.locklinforcongress.com/issues-immigration",
+          "confidence": 88
+        },
+        {
+          "stance_id": "nicole-locklin-government_reform",
+          "issue_slug": "government_reform",
+          "stance": "support",
+          "summary": "Would ban corporate PAC money and congressional stock trading, require donor transparency, pursue publicly financed elections, and hold officials accountable for knowingly false statements.",
+          "source_url": "https://www.locklinforcongress.com/corruption",
+          "confidence": 88
+        },
+        {
+          "stance_id": "nicole-locklin-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "strongly_support",
+          "summary": "Calls for full investigation and prosecution of all Epstein-case enablers, enforcement of federal trafficking law, ending non-prosecution deals, and no statute of limitations for child exploitation.",
+          "source_url": "https://www.locklinforcongress.com/issues-epstein-files",
+          "confidence": 85
+        },
+        {
+          "stance_id": "nicole-locklin-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Says one full-time job should cover living costs; backs insurer rate-hike justification, government drug-price negotiation, capped out-of-pocket costs, and enforcement against monopolistic pricing.",
+          "source_url": "https://www.locklinforcongress.com/issues-affordability",
+          "confidence": 87
+        },
+        {
+          "stance_id": "nicole-locklin-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "strongly_support",
+          "summary": "Says only Congress can declare war under Article I and the 1973 War Powers Resolution, calls the 2026 Minab school strike in Iran a war crime, and opposes the administration's Iran military action.",
+          "source_url": "https://www.locklinforcongress.com/issues-iran-war",
+          "confidence": 85
+        }
+      ],
+      "activated_at": "2026-08-07T21:56:33.815Z",
+      "verified_at": "2026-08-07T21:56:33.815Z"
     }
   ],
   "race": {
