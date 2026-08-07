@@ -75,9 +75,6 @@
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
-      "fec_totals": {
-        "no2026Filings": true
-      },
       "top_stances": [
         {
           "stance_id": "dan-bilzerian-immigration",
@@ -140,7 +137,9 @@
         }
       ],
       "activated_at": "2026-08-07T21:31:37.226Z",
-      "verified_at": "2026-08-07T21:31:37.226Z"
+      "verified_at": "2026-08-07T21:31:37.226Z",
+      "total_raised": 1241449.83,
+      "fec_coverage_end_date": "2026-07-29"
     },
     {
       "name": "Manuel P. Asensio",
