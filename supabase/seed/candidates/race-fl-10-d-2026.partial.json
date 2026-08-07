@@ -912,11 +912,12 @@
         }
       ],
       "active": true,
-      "activated_at": "2026-05-11T00:32:11.309Z",
+      "activated_at": "2026-08-07T14:06:26.647Z",
       "photo_url": "https://bioguide.congress.gov/photo/F000476.jpg",
       "doe_status": "Unopposed",
       "incumbent_source": "carried from race-fl-10-d-2026.partial.json (race-fl-10-d-2026), same race pre- and post-rebuild; FEC id H2FL10259 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
-      "unopposed": true
+      "unopposed": true,
+      "verified_at": "2026-08-07T14:06:26.647Z"
     }
   ],
   "race": {

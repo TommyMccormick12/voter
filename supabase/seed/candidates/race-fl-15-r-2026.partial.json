@@ -783,7 +783,7 @@
           ]
         }
       ],
-      "active": true,
+      "active": false,
       "activated_at": "2026-05-11T00:56:31.246Z",
       "photo_url": "https://bioguide.congress.gov/photo/L000597.jpg",
       "doe_status": "Qualified",

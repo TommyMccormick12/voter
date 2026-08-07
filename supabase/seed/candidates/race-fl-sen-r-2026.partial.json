@@ -831,10 +831,11 @@
         }
       ],
       "active": true,
-      "activated_at": "2026-05-11T01:02:16.726Z",
+      "activated_at": "2026-08-07T14:06:36.734Z",
       "photo_url": "https://bioguide.congress.gov/photo/M001244.jpg",
       "doe_status": "Qualified",
-      "incumbent_source": "carried from race-fl-sen-r-2026.partial.json (race-fl-sen-r-2026), same race pre- and post-rebuild; FEC id S6FL00640 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)"
+      "incumbent_source": "carried from race-fl-sen-r-2026.partial.json (race-fl-sen-r-2026), same race pre- and post-rebuild; FEC id S6FL00640 confirmed against spine; sitting-member flag originally derived from govtrack in the pre-rebuild fixture (unverified by this ticket)",
+      "verified_at": "2026-08-07T14:06:36.734Z"
     },
     {
       "name": "Chris Gleason",

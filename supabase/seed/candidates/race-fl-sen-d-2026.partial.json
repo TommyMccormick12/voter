@@ -290,8 +290,9 @@
         }
       ],
       "active": true,
-      "activated_at": "2026-05-11T22:53:29.091Z",
-      "doe_status": "Qualified"
+      "activated_at": "2026-08-07T14:06:35.512Z",
+      "doe_status": "Qualified",
+      "verified_at": "2026-08-07T14:06:35.512Z"
     },
     {
       "name": "Angie Nixon",
@@ -616,8 +617,9 @@
         }
       ],
       "active": true,
-      "activated_at": "2026-05-11T02:14:54.274Z",
-      "doe_status": "Qualified"
+      "activated_at": "2026-08-07T14:06:36.112Z",
+      "doe_status": "Qualified",
+      "verified_at": "2026-08-07T14:06:36.112Z"
     }
   ],
   "race": {

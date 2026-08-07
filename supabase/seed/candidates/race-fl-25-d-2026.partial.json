@@ -842,10 +842,11 @@
         }
       ],
       "active": true,
-      "activated_at": "2026-05-11T00:56:35.586Z",
+      "activated_at": "2026-08-07T14:06:32.380Z",
       "photo_url": "https://bioguide.congress.gov/photo/M001217.jpg",
       "doe_status": "Qualified",
-      "incumbent_source": "carried from race-fl-23-d-2026.partial.json (race-fl-23-d-2026 -> race-fl-25-d-2026); FEC id H2FL22171 confirmed by spine as the same person, now on the 2026 map's district 25; see DATA-AUDIT-2026-08-06.md root cause 1 for the redistricting move and sitting-member status"
+      "incumbent_source": "carried from race-fl-23-d-2026.partial.json (race-fl-23-d-2026 -> race-fl-25-d-2026); FEC id H2FL22171 confirmed by spine as the same person, now on the 2026 map's district 25; see DATA-AUDIT-2026-08-06.md root cause 1 for the redistricting move and sitting-member status",
+      "verified_at": "2026-08-07T14:06:32.380Z"
     },
     {
       "name": "Oliver Adams Larkin",

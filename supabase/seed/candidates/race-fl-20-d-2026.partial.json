@@ -1060,10 +1060,11 @@
         }
       ],
       "active": true,
-      "activated_at": "2026-05-17T18:37:13.206Z",
+      "activated_at": "2026-08-07T14:06:31.126Z",
       "photo_url": "https://bioguide.congress.gov/photo/W000797.jpg",
       "doe_status": "Qualified",
-      "incumbent_source": "carried from race-fl-25-d-2026.partial.json (race-fl-25-d-2026 -> race-fl-20-d-2026); FEC id H4FL20023 confirmed by spine as the same person, now on the 2026 map's district 20; see DATA-AUDIT-2026-08-06.md root cause 1 for the redistricting move and sitting-member status"
+      "incumbent_source": "carried from race-fl-25-d-2026.partial.json (race-fl-25-d-2026 -> race-fl-20-d-2026); FEC id H4FL20023 confirmed by spine as the same person, now on the 2026 map's district 20; see DATA-AUDIT-2026-08-06.md root cause 1 for the redistricting move and sitting-member status",
+      "verified_at": "2026-08-07T14:06:31.126Z"
     },
     {
       "name": "Elijah Manley",
