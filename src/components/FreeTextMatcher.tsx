@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Button } from './ui/Button';
+import { Textarea } from './ui/Textarea';
 
 interface Props {
   initialValue?: string;
@@ -26,6 +27,7 @@ export function FreeTextMatcher({
 }: Props) {
   const [text, setText] = useState(initialValue);
   const [error, setError] = useState('');
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const trimmed = text.trim();
   const tooShort = trimmed.length < MIN_LENGTH;
@@ -33,6 +35,9 @@ export function FreeTextMatcher({
   const handleSubmit = async () => {
     if (tooShort) {
       setError(`Tell us a bit more — at least ${MIN_LENGTH} characters.`);
+      // frontend-standards forms rule: move focus to the first invalid
+      // field after a failed submit.
+      textareaRef.current?.focus();
       return;
     }
     setError('');
@@ -41,11 +46,11 @@ export function FreeTextMatcher({
 
   return (
     <div>
-      <label htmlFor="match-textarea" className="sr-only">
-        Tell us in your own words
-      </label>
-      <textarea
+      <Textarea
+        ref={textareaRef}
         id="match-textarea"
+        label="Tell us in your own words"
+        containerClassName="mb-1"
         value={text}
         onChange={(e) => {
           setText(e.target.value);
@@ -55,29 +60,20 @@ export function FreeTextMatcher({
         maxLength={MAX_LENGTH}
         rows={6}
         disabled={loading}
-        aria-describedby={error ? 'match-error' : 'match-help'}
-        className="w-full border border-gray-300 rounded-xl p-4 lg:p-5 text-sm lg:text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 mb-2"
+        showCount
+        hint={error ? undefined : 'No personal info. Stays anonymous. Used only to find your match.'}
+        error={error}
       />
 
-      <div className="flex items-center justify-between text-xs text-gray-400 mb-3">
-        <span id="match-help">
-          No personal info. Stays anonymous. Used only to find your match.
-        </span>
-        <span aria-live="polite">
-          {trimmed.length}/{MAX_LENGTH}
-        </span>
-      </div>
-
-      {error && (
-        <p id="match-error" role="alert" className="text-red-500 text-sm mb-3">
-          {error}
-        </p>
-      )}
-
+      {/* Stays enabled below the minimum length (not `disabled={tooShort}`)
+          so handleSubmit's validation actually runs on click — a silently
+          disabled control gives no explanation; frontend-standards wants
+          a real validation error, associated to the field, with focus
+          moved there on a failed attempt. `loading` still disables it
+          during an in-flight submit (Button's own prop). */}
       <Button
         type="button"
         onClick={handleSubmit}
-        disabled={tooShort}
         loading={loading}
         fullWidth
         size="lg"

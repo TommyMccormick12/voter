@@ -23,9 +23,9 @@ export function StatementTimeline({ statements }: Props) {
   });
 
   return (
-    <div className="space-y-4">
+    <ol className="space-y-4 list-none" aria-label="Public statements, most recent first">
       {sorted.map((s) => (
-        <div
+        <li
           key={s.id}
           className="border border-gray-200 rounded-xl p-4 bg-white"
         >
@@ -62,9 +62,9 @@ export function StatementTimeline({ statements }: Props) {
               </a>
             )}
           </div>
-        </div>
+        </li>
       ))}
-    </div>
+    </ol>
   );
 }
 

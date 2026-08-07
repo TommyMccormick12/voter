@@ -253,6 +253,5 @@ function sourceLabelFromUrl(url: string): string {
   if (u.includes('propublica')) return 'ProPublica';
   if (u.includes('congress.gov')) return 'Congress.gov';
   if (u.includes('fec.gov')) return 'FEC';
-  if (u.includes('govtrack')) return 'GovTrack';
   return 'Campaign site';
 }

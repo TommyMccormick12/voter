@@ -1,17 +1,28 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export function Nav() {
+  const pathname = usePathname();
+  const onRacePicker = pathname?.startsWith('/race-picker') ?? false;
+
   return (
-    <nav className="w-full border-b border-gray-100 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+    <nav
+      aria-label="Primary"
+      className="w-full border-b border-gray-100 bg-white/80 backdrop-blur-sm sticky top-0 z-50"
+    >
       <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
         <Link
           href="/"
+          aria-current={pathname === '/' ? 'page' : undefined}
           className="text-lg font-bold text-gray-900 tracking-tight hover:text-blue-600 transition-colors inline-flex items-center min-h-[44px] px-2 -mx-2"
         >
           voter
         </Link>
         <Link
           href="/race-picker"
+          aria-current={onRacePicker ? 'page' : undefined}
           className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors inline-flex items-center min-h-[44px] px-3 rounded-md hover:bg-gray-50"
         >
           Find your primary

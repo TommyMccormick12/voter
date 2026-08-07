@@ -74,8 +74,14 @@ export function ConsentBanner() {
           mode === 'customize' ? 'h-[320px] lg:h-[240px]' : 'h-[150px] lg:h-[80px]'
         }`}
       />
+      {/* role="region" (not "dialog") — this banner is deliberately
+          non-modal (see the flow comment above): it does not trap focus
+          or respond to Escape, so it must not claim dialog semantics an
+          assistive-tech user would expect a dialog to fulfill. A labelled
+          landmark region is the correct role for a persistent, dismiss-
+          by-choice banner (frontend-standards accessibility rules). */}
       <div
-        role="dialog"
+        role="region"
         aria-labelledby="consent-banner-title"
         className="fixed inset-x-0 bottom-0 z-[100] border-t border-gray-200 bg-white shadow-2xl"
       >

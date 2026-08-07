@@ -108,6 +108,12 @@ export function toRace(row: Record<string, unknown>): Race {
     cycle: num(row.cycle),
     election_type: str(row.election_type) as ElectionType,
     primary_party: strOrNull(row.primary_party),
+    // Defensive read, not a selected column yet (Spec A5 / T06 — see
+    // src/lib/data/races.ts header comment). Safe no-op until a
+    // migration adds races.no_primary / races.no_primary_note and
+    // seed_races.ts writes them.
+    no_primary: Boolean(row.no_primary),
+    no_primary_note: strOrNull(row.no_primary_note),
   };
 }
 
@@ -137,6 +143,10 @@ export function toCandidate(row: Record<string, unknown>): Candidate {
     primary_party: strOrNull(row.primary_party),
     incumbent: Boolean(row.incumbent),
     total_raised: numOrNull(row.total_raised),
+    // Defensive read, not a selected column yet (see the field's doc
+    // comment in src/types/database.ts) — safe no-op until a migration
+    // adds candidates.fec_coverage_end_date.
+    fec_coverage_end_date: strOrNull(row.fec_coverage_end_date),
     top_stances: normalizeTopStances(row.top_stances),
   };
 }

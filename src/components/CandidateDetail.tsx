@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { forwardRef, useRef, useState, type KeyboardEvent } from 'react';
 import Image from 'next/image';
 import type {
   CandidateWithFullData,
@@ -24,10 +24,18 @@ interface Props {
 
 type Tab = 'stances' | 'donors' | 'voting' | 'statements';
 
+const TABS: Array<{ key: Tab; label: string }> = [
+  { key: 'stances', label: 'Stances' },
+  { key: 'donors', label: 'Donors' },
+  { key: 'voting', label: 'Voting' },
+  { key: 'statements', label: 'Statements' },
+];
+
 export function CandidateDetail({ candidate }: Props) {
   const theme = getPartyTheme(candidate.primary_party);
   const initials = getPartyInitials(candidate.name);
   const [tab, setTab] = useState<Tab>('stances');
+  const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   const raisedLabel = candidate.total_raised
     ? `$${(candidate.total_raised / 1_000_000).toFixed(2)}M`
@@ -64,6 +72,22 @@ export function CandidateDetail({ candidate }: Props) {
         race_id: candidate.race_id ?? '',
         action: 'viewed_statements',
       });
+  };
+
+  /** ARIA tablist keyboard support (WAI-ARIA APG "Tabs" pattern, automatic
+   * activation): Left/Right move and activate, Home/End jump to the
+   * first/last tab. Moves both the selected tab and DOM focus together so
+   * a keyboard user's focus always matches the visible panel. */
+  const handleTabKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    let nextIndex: number | null = null;
+    if (event.key === 'ArrowRight') nextIndex = (index + 1) % TABS.length;
+    else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + TABS.length) % TABS.length;
+    else if (event.key === 'Home') nextIndex = 0;
+    else if (event.key === 'End') nextIndex = TABS.length - 1;
+    if (nextIndex === null) return;
+    event.preventDefault();
+    handleTabChange(TABS[nextIndex].key);
+    tabRefs.current[nextIndex]?.focus();
   };
 
   return (
@@ -119,58 +143,85 @@ export function CandidateDetail({ candidate }: Props) {
         )}
       </div>
 
-      {/* Tabs */}
-      <div className="flex border-b border-gray-200 mb-6 overflow-x-auto sticky top-14 bg-white z-10">
-        <TabButton
-          label="Stances"
-          active={tab === 'stances'}
-          onClick={() => handleTabChange('stances')}
-          tabBorder={theme.tabBorder}
-        />
-        <TabButton
-          label="Donors"
-          active={tab === 'donors'}
-          onClick={() => handleTabChange('donors')}
-          tabBorder={theme.tabBorder}
-        />
-        <TabButton
-          label="Voting"
-          active={tab === 'voting'}
-          onClick={() => handleTabChange('voting')}
-          tabBorder={theme.tabBorder}
-        />
-        <TabButton
-          label="Statements"
-          active={tab === 'statements'}
-          onClick={() => handleTabChange('statements')}
-          tabBorder={theme.tabBorder}
-        />
+      {/* Tabs — WAI-ARIA APG "Tabs" pattern (automatic activation): one
+          tab stop for the group via roving tabIndex, Left/Right/Home/End
+          move and activate (handleTabKeyDown), Tab moves focus out to the
+          panel. */}
+      <div
+        role="tablist"
+        aria-label="Candidate record sections"
+        className="flex border-b border-gray-200 mb-6 overflow-x-auto sticky top-14 bg-white z-10"
+      >
+        {TABS.map(({ key, label }, index) => (
+          <TabButton
+            key={key}
+            ref={(el) => {
+              tabRefs.current[index] = el;
+            }}
+            id={`candidate-tab-${key}`}
+            panelId={`candidate-tabpanel-${key}`}
+            label={label}
+            active={tab === key}
+            onClick={() => handleTabChange(key)}
+            onKeyDown={(e) => handleTabKeyDown(e, index)}
+            tabBorder={theme.tabBorder}
+          />
+        ))}
       </div>
 
-      {/* Tab content */}
+      {/* Tab panels */}
       {tab === 'stances' && (
-        <StancesTab
-          stances={candidate.top_stances ?? []}
-          positions={candidate.positions ?? []}
-          accent={theme.accent}
-        />
+        <div
+          role="tabpanel"
+          id="candidate-tabpanel-stances"
+          aria-labelledby="candidate-tab-stances"
+          tabIndex={0}
+        >
+          <StancesTab
+            stances={candidate.top_stances ?? []}
+            positions={candidate.positions ?? []}
+            accent={theme.accent}
+          />
+        </div>
       )}
       {tab === 'donors' && (
-        <DonorProfile
-          topIndustries={candidate.top_industries ?? []}
-          donors={candidate.donors ?? []}
-          totalRaised={candidate.total_raised}
-          primaryParty={candidate.primary_party}
-        />
+        <div
+          role="tabpanel"
+          id="candidate-tabpanel-donors"
+          aria-labelledby="candidate-tab-donors"
+          tabIndex={0}
+        >
+          <DonorProfile
+            topIndustries={candidate.top_industries ?? []}
+            donors={candidate.donors ?? []}
+            totalRaised={candidate.total_raised}
+            coverageEndDate={candidate.fec_coverage_end_date}
+            primaryParty={candidate.primary_party}
+          />
+        </div>
       )}
       {tab === 'voting' && (
-        <VotingRecordList
-          votes={candidate.voting_record ?? []}
-          incumbent={candidate.incumbent}
-        />
+        <div
+          role="tabpanel"
+          id="candidate-tabpanel-voting"
+          aria-labelledby="candidate-tab-voting"
+          tabIndex={0}
+        >
+          <VotingRecordList
+            votes={candidate.voting_record ?? []}
+            incumbent={candidate.incumbent}
+          />
+        </div>
       )}
       {tab === 'statements' && (
-        <StatementTimeline statements={candidate.statements ?? []} />
+        <div
+          role="tabpanel"
+          id="candidate-tabpanel-statements"
+          aria-labelledby="candidate-tab-statements"
+          tabIndex={0}
+        >
+          <StatementTimeline statements={candidate.statements ?? []} />
+        </div>
       )}
 
       {/* Feedback footer — see something wrong? Tell us. */}
@@ -187,29 +238,37 @@ export function CandidateDetail({ candidate }: Props) {
   );
 }
 
-function TabButton({
-  label,
-  active,
-  onClick,
-  tabBorder,
-}: {
-  label: string;
-  active: boolean;
-  onClick: () => void;
-  tabBorder: string;
-}) {
+const TabButton = forwardRef<
+  HTMLButtonElement,
+  {
+    id: string;
+    panelId: string;
+    label: string;
+    active: boolean;
+    onClick: () => void;
+    onKeyDown: (event: KeyboardEvent<HTMLButtonElement>) => void;
+    tabBorder: string;
+  }
+>(function TabButton({ id, panelId, label, active, onClick, onKeyDown, tabBorder }, ref) {
   return (
     <button
+      ref={ref}
+      type="button"
+      id={id}
+      role="tab"
+      aria-selected={active}
+      aria-controls={panelId}
+      tabIndex={active ? 0 : -1}
       onClick={onClick}
+      onKeyDown={onKeyDown}
       className={`px-4 py-3 text-sm font-medium whitespace-nowrap transition border-b-2 ${
         active ? tabBorder : 'border-transparent text-gray-500 hover:text-gray-700'
       }`}
-      aria-current={active ? 'page' : undefined}
     >
       {label}
     </button>
   );
-}
+});
 
 function StancesTab({
   stances,
@@ -343,7 +402,6 @@ function sourceLabelFromUrl(url: string): string {
   if (u.includes('ballotpedia')) return 'Ballotpedia';
   if (u.includes('opensecrets')) return 'OpenSecrets';
   if (u.includes('propublica')) return 'ProPublica';
-  if (u.includes('govtrack')) return 'GovTrack';
   if (u.includes('congress.gov')) return 'Congress.gov';
   if (u.includes('fec.gov')) return 'FEC';
   return 'Campaign site';

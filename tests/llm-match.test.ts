@@ -48,6 +48,7 @@ const candidates: CandidateWithFullData[] = [
     primary_party: 'D',
     incumbent: false,
     total_raised: null,
+    fec_coverage_end_date: null,
     top_stances: [
       {
         stance_id: 'test-candidate-economy',

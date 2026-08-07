@@ -28,6 +28,8 @@ const race: Race = {
   cycle: 2026,
   election_type: 'primary',
   primary_party: 'R',
+  no_primary: false,
+  no_primary_note: null,
 };
 
 const candidates: CandidateWithFullData[] = [
@@ -47,6 +49,7 @@ const candidates: CandidateWithFullData[] = [
     primary_party: 'R',
     incumbent: false,
     total_raised: 100000,
+    fec_coverage_end_date: null,
     top_stances: [],
   },
 ];

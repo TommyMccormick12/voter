@@ -4,6 +4,20 @@ import Link from 'next/link';
 import { getRace } from '@/lib/data/races';
 import { getCandidatesForRace } from '@/lib/data/candidates';
 import { getPartyTheme, getPartyInitials } from '@/lib/party-theme';
+import { Button } from '@/components/ui/Button';
+
+// Note: the "See full record" and "Find your own match" CTAs below stay
+// native <Link> elements, not the shared Button primitive. The first
+// carries the party-accent background (theme.accent) — Button's own
+// doc-comment warns a caller-supplied background class is "not reliably"
+// guaranteed to beat its variant class in the generated stylesheet, and
+// silently losing party coloring here would violate "do not restyle the
+// party identity" (this task's explicit constraint). The second uses a
+// bespoke dark CTA color that predates the token system; swapping it for
+// Button's blue `primary` variant would be an unrequested visual change,
+// not an accessibility or states fix. Only the plain, already-primary-
+// blue "Start now" CTA above was converted, since it matches Button's
+// default styling exactly.
 
 interface SharePageProps {
   searchParams: Promise<{ race?: string; c?: string; s?: string }>;
@@ -101,12 +115,9 @@ export default async function SharePage({ searchParams }: SharePageProps) {
             Compare 2026 primary candidates on stances, donors, and voting
             record — in 60 seconds.
           </p>
-          <Link
-            href="/"
-            className="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-blue-700 transition-colors"
-          >
+          <Button href="/" size="lg">
             Start now &rarr;
-          </Link>
+          </Button>
         </div>
       </main>
     );

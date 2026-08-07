@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState, type KeyboardEvent } from 'react';
 import { Button } from './ui/Button';
 
 export interface PollIssue {
@@ -87,6 +87,16 @@ export function QuickPoll({ issues, initialWeights = {}, onChange, onSubmit }: P
   );
 }
 
+const STAR_VALUES = [1, 2, 3, 4, 5];
+
+/**
+ * Star rating row — a group of 5 toggle buttons (role="group", not
+ * "radiogroup": tapping the current value again clears it back to 0,
+ * which real ARIA radios cannot do, so "group" is the honest role).
+ * Roving tabIndex gives the group one Tab stop; Left/Right/Home/End move
+ * focus across the 5 stars (frontend-standards: "support arrow keys
+ * where the control requires them").
+ */
 function StarRow({
   weight,
   onSet,
@@ -96,15 +106,36 @@ function StarRow({
   onSet: (w: number) => void;
   issueName: string;
 }) {
+  const [focusedIndex, setFocusedIndex] = useState(weight > 0 ? weight - 1 : 0);
+  const starRefs = useRef<Array<HTMLButtonElement | null>>([]);
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    let nextIndex: number | null = null;
+    if (event.key === 'ArrowRight') nextIndex = Math.min(index + 1, STAR_VALUES.length - 1);
+    else if (event.key === 'ArrowLeft') nextIndex = Math.max(index - 1, 0);
+    else if (event.key === 'Home') nextIndex = 0;
+    else if (event.key === 'End') nextIndex = STAR_VALUES.length - 1;
+    if (nextIndex === null) return;
+    event.preventDefault();
+    setFocusedIndex(nextIndex);
+    starRefs.current[nextIndex]?.focus();
+  };
+
   return (
-    <div className="flex gap-1" role="radiogroup" aria-label={`Importance of ${issueName}`}>
-      {[1, 2, 3, 4, 5].map((n) => (
+    <div className="flex gap-1" role="group" aria-label={`Importance of ${issueName}`}>
+      {STAR_VALUES.map((n, index) => (
         <button
           key={n}
+          ref={(el) => {
+            starRefs.current[index] = el;
+          }}
           type="button"
           onClick={() => onSet(n)}
+          onKeyDown={(e) => handleKeyDown(e, index)}
+          onFocus={() => setFocusedIndex(index)}
           aria-label={`${n} star${n === 1 ? '' : 's'}`}
           aria-pressed={weight >= n}
+          tabIndex={focusedIndex === index ? 0 : -1}
           className={`text-2xl leading-none transition min-w-[44px] min-h-[44px] flex items-center justify-center -mx-0.5 ${
             weight >= n ? 'text-amber-400' : 'text-gray-300 hover:text-amber-200'
           }`}
