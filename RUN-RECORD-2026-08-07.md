@@ -158,8 +158,14 @@ candidate's own `voting_record`.
   future dates loudly. Schneider resolves the other way — zero F3 reports
   on either committee, money genuinely unsubstantiated; she is inactive.
   **Lesson: check committee-level filings, not candidate-level.**
-- **FL-24 slug `kendrick-meek` conflates the candidate with his father**,
-  former Rep. Kendrick Meek. The candidate is Kendrick Meek Jr.
+- ~~**FL-24 slug `kendrick-meek` conflates the candidate with his father**~~
+  CORRECTED 2026-08-07: the "Jr." could not be substantiated. The DOE
+  spine (acct 91981) and FEC (H6FL24111) both record him as plain
+  "Kendrick Meek". The FEC record is a first-time 2026 registrant on an
+  open seat, which fits either the former Representative running again or
+  a relative — it settles nothing. Renaming on this evidence would
+  introduce an error rather than fix one. Carried to
+  `HANDOFF-2026-08-08.md` as verify-first.
 - **Recoverable refusals.** Several stances were refuted only because
   Ballotpedia bot-blocks automated fetches; the archived snapshot can
   resolve them (Harris FL-16 D lost 2 that way). A fresh pass with search
