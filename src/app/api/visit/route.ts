@@ -79,9 +79,10 @@ export async function POST(request: NextRequest) {
   // Consent gate
   const consentRaw = await readCookie(COOKIE_NAMES.consent);
   const consent = parseConsent(consentRaw);
-  if (consent && !consent.analytics) {
-    // Explicit opt-out — silently drop with 200 (don't reveal whether opt-in
-    // would have logged anything, just succeed)
+  if (!consent?.analytics) {
+    // No consent recorded yet, or explicit opt-out — either way analytics
+    // consent is absent, so nothing may be persisted. Silently drop with 200
+    // (don't reveal whether opt-in would have logged anything).
     return NextResponse.json({ ok: true, dropped: 'consent' });
   }
 

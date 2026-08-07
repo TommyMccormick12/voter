@@ -130,17 +130,38 @@ export interface PurgeCounts {
   quickPollResponses: number;
   visits: number;
   matches: number;
+  sessions: number;
 }
 
 export type DeleteResult =
   | { ok: true; purged: PurgeCounts }
   | { ok: false; code: 'delete_failed'; status: 500; detail: string };
 
-/** DELETE path: remove every row across the four T15 tables for this session. */
+/**
+ * DELETE path: remove every row across the four T15 behavior tables for
+ * this session, then delete the `sessions` row itself.
+ *
+ * The four child deletes alone are not a full right-to-delete purge:
+ * the `sessions` row (session_token, zip, utm_*, referrer_domain,
+ * device_type) survives them, and `candidate_reports.session_id` stays
+ * linked to it. `sessions` is the identity row, so it is deleted last
+ * on the same service-role client — never the anon client, even though
+ * `sessions` has a public UPDATE policy (migration 002), because
+ * deleting the row that anchors this whole subsystem should not depend
+ * on an RLS policy staying permissive.
+ *
+ * Deleting `sessions` also cascades: candidate_interactions,
+ * quick_poll_responses, session_visits, and llm_matches all
+ * REFERENCES sessions(id) ON DELETE CASCADE (migration 004), and
+ * candidate_reports.session_id is ON DELETE SET NULL (migration 009),
+ * so the sessions delete alone would sever every link. The four child
+ * deletes still run first, explicitly, so the returned purge counts
+ * stay accurate per table instead of collapsing into one cascade count.
+ */
 export async function deleteSessionData(sessionToken: string): Promise<DeleteResult> {
   const sessionRowId = await lookupSessionRowId(sessionToken);
   if (!sessionRowId) {
-    return { ok: true, purged: { interactions: 0, quickPollResponses: 0, visits: 0, matches: 0 } };
+    return { ok: true, purged: { interactions: 0, quickPollResponses: 0, visits: 0, matches: 0, sessions: 0 } };
   }
 
   const sb = getServiceClient();
@@ -165,6 +186,12 @@ export async function deleteSessionData(sessionToken: string): Promise<DeleteRes
     }
   }
 
+  const sessionsRes = await sb.from('sessions').delete({ count: 'exact' }).eq('id', sessionRowId);
+  if (sessionsRes.error) {
+    console.error('[app/data-rights] session identity delete failed:', sessionsRes.error.message);
+    return { ok: false, code: 'delete_failed', status: 500, detail: sessionsRes.error.message };
+  }
+
   return {
     ok: true,
     purged: {
@@ -172,6 +199,7 @@ export async function deleteSessionData(sessionToken: string): Promise<DeleteRes
       quickPollResponses: pollRes.count ?? 0,
       visits: visitsRes.count ?? 0,
       matches: matchesRes.count ?? 0,
+      sessions: sessionsRes.count ?? 0,
     },
   };
 }

@@ -7,10 +7,20 @@
 //
 // session_visits has a public INSERT + SELECT policy (migration 005:
 // "Public insert visits" / "Public read visits", both WITH
-// CHECK/USING true) — anon client is correct, no service-role needed.
+// CHECK/USING true) — anon client is correct for those two. There is
+// NO UPDATE policy on session_visits anywhere in the migrations. An
+// anon-client UPDATE against this table therefore matches zero rows,
+// and PostgREST reports that as an ordinary success — pages_viewed and
+// visit_ended_at would silently never change. Adding an anon UPDATE
+// policy is not the fix: with no ownership check possible from the
+// shared anon key, it would let any client rewrite any visit row. The
+// correct scope is server-side service-role, which is safe here
+// because this module is server-only (`import 'server-only'` below)
+// and is only ever reached from the /api/visit route handler.
 
 import 'server-only';
 import { getAnonClient } from '@/lib/data/adapter-anon';
+import { getServiceClient } from '@/lib/data/adapter-service';
 import { resolveSessionRowId } from './session';
 import { mapWriteError } from './errors';
 
@@ -39,6 +49,28 @@ async function findOpenVisit(
     .limit(1)
     .maybeSingle();
   return { data: data ?? null, error };
+}
+
+/**
+ * Turn a service-role `.update(...).select('id')` result into a
+ * VisitResult, treating "no error, but zero rows matched" as a real
+ * failure rather than a silent success. With no UPDATE policy on
+ * session_visits, only the service-role client reaches this code path,
+ * so an empty result here means the row (or its id) was wrong — never
+ * an RLS mismatch — and callers should surface it as a write failure.
+ */
+function toUpdateResult(
+  data: { id: string }[] | null,
+  error: { message: string; code?: string } | null,
+): VisitResult {
+  if (error) {
+    const mapped = mapWriteError(error);
+    return { ok: false, code: mapped.code, status: mapped.status, detail: mapped.detail };
+  }
+  if (!data || data.length === 0) {
+    return { ok: false, code: 'write_failed', status: 500, detail: 'session_visits update matched no rows' };
+  }
+  return { ok: true };
 }
 
 export interface RecordPageViewInput {
@@ -74,21 +106,25 @@ export async function recordPageView(input: RecordPageViewInput): Promise<VisitR
       ? now.getTime() - new Date(open.visit_started_at).getTime() > STALE_VISIT_MS
       : true;
     if (!stale) {
-      const { error } = await sb
+      const { data, error } = await getServiceClient()
         .from('session_visits')
         .update({ pages_viewed: (open.pages_viewed ?? 0) + 1 })
-        .eq('id', open.id);
-      if (error) {
-        const mapped = mapWriteError(error);
-        return { ok: false, code: mapped.code, status: mapped.status, detail: mapped.detail };
-      }
-      return { ok: true };
+        .eq('id', open.id)
+        .select('id');
+      return toUpdateResult(data, error);
     }
-    // Close the stale visit before opening a new one.
-    await sb
+    // Close the stale visit before opening a new one. A failed or no-op
+    // close is a real failure (see toUpdateResult) — surface it instead
+    // of silently opening a second concurrent "open" visit row.
+    const { data: closeData, error: closeError } = await getServiceClient()
       .from('session_visits')
       .update({ visit_ended_at: now.toISOString() })
-      .eq('id', open.id);
+      .eq('id', open.id)
+      .select('id');
+    const closeResult = toUpdateResult(closeData, closeError);
+    if (!closeResult.ok) {
+      return closeResult;
+    }
   }
 
   const { error: insertErr } = await sb.from('session_visits').insert({
@@ -125,13 +161,10 @@ export async function endVisit(sessionToken: string): Promise<VisitResult> {
     return { ok: true };
   }
 
-  const { error } = await sb
+  const { data, error } = await getServiceClient()
     .from('session_visits')
     .update({ visit_ended_at: new Date().toISOString() })
-    .eq('id', open.id);
-  if (error) {
-    const mapped = mapWriteError(error);
-    return { ok: false, code: mapped.code, status: mapped.status, detail: mapped.detail };
-  }
-  return { ok: true };
+    .eq('id', open.id)
+    .select('id');
+  return toUpdateResult(data, error);
 }

@@ -154,16 +154,18 @@ describe('DELETE /api/data-rights', () => {
     expect(res.status).toBe(401);
   });
 
-  it('deletes from all four tables scoped to the session and clears cookies', async () => {
+  it('deletes from all four tables plus the sessions identity row, and clears cookies', async () => {
     const interactions = deleteTable(3);
     const poll = deleteTable(2);
     const visits = deleteTable(1);
     const matches = deleteTable(1);
+    const sessions = deleteTable(1);
     fromMock.mockImplementation((table: string) => {
       if (table === 'candidate_interactions') return interactions;
       if (table === 'quick_poll_responses') return poll;
       if (table === 'session_visits') return visits;
       if (table === 'llm_matches') return matches;
+      if (table === 'sessions') return sessions;
       throw new Error(`unexpected table ${table}`);
     });
 
@@ -176,11 +178,15 @@ describe('DELETE /api/data-rights', () => {
       quickPollResponses: 2,
       visits: 1,
       matches: 1,
+      sessions: 1,
       consent_events: 2,
     });
 
     expect(interactions.__eq).toHaveBeenCalledWith('session_id', 'sess-row-1');
     expect(matches.__eq).toHaveBeenCalledWith('session_id', 'sess-row-1');
+    // The sessions row is the identity row — deleted by its own id, not
+    // by a session_id foreign key (it has none of its own).
+    expect(sessions.__eq).toHaveBeenCalledWith('id', 'sess-row-1');
 
     expect(res.cookies.get('voter_session')?.value).toBe('');
   });
@@ -190,6 +196,28 @@ describe('DELETE /api/data-rights', () => {
     fromMock.mockImplementation((table: string) => {
       if (table === 'candidate_interactions') return interactions;
       return deleteTable(0);
+    });
+
+    const { DELETE } = await import('@/app/api/data-rights/route');
+    const res = await DELETE(deleteRequest({ confirm: true }));
+    expect(res.status).toBe(500);
+    const json = await res.json();
+    expect(json.ok).toBe(false);
+  });
+
+  it('surfaces a sessions-identity-delete failure as 500, even when all four child deletes succeed', async () => {
+    const interactions = deleteTable(3);
+    const poll = deleteTable(2);
+    const visits = deleteTable(1);
+    const matches = deleteTable(1);
+    const sessions = deleteTable(0, { message: 'connection reset' });
+    fromMock.mockImplementation((table: string) => {
+      if (table === 'candidate_interactions') return interactions;
+      if (table === 'quick_poll_responses') return poll;
+      if (table === 'session_visits') return visits;
+      if (table === 'llm_matches') return matches;
+      if (table === 'sessions') return sessions;
+      throw new Error(`unexpected table ${table}`);
     });
 
     const { DELETE } = await import('@/app/api/data-rights/route');

@@ -42,10 +42,18 @@ export interface RunMatchInput {
   freeText: string;
   quickPoll?: QuickPollWeight[];
   candidates: CandidateWithFullData[];
+  /**
+   * Gate from the caller's consent.analytics read (Finding 1). Matching
+   * itself must work with no consent — this flag only controls whether
+   * the persisted row carries session_id / free_text. Absent consent
+   * (no cookie yet) must arrive here as false, same as the sibling
+   * /api/interaction and /api/quick-poll routes.
+   */
+  hasAnalyticsConsent: boolean;
 }
 
 export type RunMatchResult =
-  | { ok: true; id: string; ranked: MatchResult[]; meta: MatchMeta }
+  | { ok: true; id: string; ranked: MatchResult[]; meta: MatchMeta; freeTextHash: string }
   | { ok: false; code: 'match_failed' | 'persist_failed'; status: number; detail?: string };
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -86,6 +94,7 @@ export async function runMatch(input: RunMatchInput): Promise<RunMatchResult> {
       ok: true,
       id: existing.id,
       ranked: existing.ranked_candidates as unknown as MatchResult[],
+      freeTextHash,
       meta: {
         cache_hit: true,
         source: sourceForModel(existing.model),
@@ -112,14 +121,29 @@ export async function runMatch(input: RunMatchInput): Promise<RunMatchResult> {
     };
   }
 
-  const sessionRowId = input.sessionToken ? await resolveSessionRowId(input.sessionToken) : null;
+  // Finding 1: matching works with no consent, but the persisted row must
+  // carry nothing identity-linked or sensitive when consent is absent —
+  // session_id stays null and free_text stays ''. free_text_hash (the
+  // cache key) and ranked_candidates always persist either way, so the
+  // row stays functional for results transport and admin spend stats.
+  // Skip resolveSessionRowId entirely without consent — no reason to
+  // create/touch a sessions row for a write that will end up null anyway.
+  const sessionRowId =
+    input.hasAnalyticsConsent && input.sessionToken
+      ? await resolveSessionRowId(input.sessionToken)
+      : null;
 
+  // Finding 3: ON CONFLICT DO NOTHING (ignoreDuplicates), never DO UPDATE.
+  // A concurrent identical request must never rewrite an existing row's
+  // session_id — that would transfer ownership and break the prior
+  // owner's saved link. When this upsert inserts nothing, select the
+  // survivor by the same natural key and use its id instead.
   const { data: inserted, error: insertErr } = await sb
     .from('llm_matches')
     .upsert(
       {
         session_id: sessionRowId,
-        free_text: input.freeText,
+        free_text: input.hasAnalyticsConsent ? input.freeText : '',
         free_text_hash: freeTextHash,
         race_id: input.raceId,
         model: modelForSource(result.source),
@@ -127,12 +151,12 @@ export async function runMatch(input: RunMatchInput): Promise<RunMatchResult> {
         output_tokens: result.output_tokens ?? null,
         ranked_candidates: result.ranked as unknown as Json,
       },
-      { onConflict: 'free_text_hash,race_id' },
+      { onConflict: 'free_text_hash,race_id', ignoreDuplicates: true },
     )
     .select('id')
-    .single();
+    .maybeSingle();
 
-  if (insertErr || !inserted) {
+  if (insertErr) {
     // The sanctioned "fake success" exception is ONLY the heuristic
     // ranking itself (labeled 'mock'). A genuine persistence failure
     // must surface as an error — /match/results needs the returned id
@@ -141,14 +165,40 @@ export async function runMatch(input: RunMatchInput): Promise<RunMatchResult> {
       ok: false,
       code: 'persist_failed',
       status: 500,
-      detail: insertErr?.message,
+      detail: insertErr.message,
     };
+  }
+
+  let matchId = inserted?.id ?? null;
+
+  if (!matchId) {
+    // ignoreDuplicates inserted nothing — a row for this
+    // (free_text_hash, race_id) already existed. Look up its id rather
+    // than trusting a locally-computed one; it may belong to a
+    // concurrent request that just won the race.
+    const { data: existingRow, error: selectErr } = await sb
+      .from('llm_matches')
+      .select('id')
+      .eq('free_text_hash', freeTextHash)
+      .eq('race_id', input.raceId)
+      .maybeSingle();
+
+    if (selectErr || !existingRow) {
+      return {
+        ok: false,
+        code: 'persist_failed',
+        status: 500,
+        detail: selectErr?.message ?? 'row missing after ignored-duplicate upsert',
+      };
+    }
+    matchId = existingRow.id;
   }
 
   return {
     ok: true,
-    id: inserted.id,
+    id: matchId,
     ranked: result.ranked,
+    freeTextHash,
     meta: {
       cache_hit: false,
       source: result.source,
@@ -172,21 +222,28 @@ export type GetMatchResult =
 
 /**
  * Server-side lookup for /match/results?m=<id> (T17 — replaces the
- * sessionStorage transport). Ownership check: if the row has a
- * session_id, it must match the requesting session's row id, or this
- * returns 'forbidden'. Rows with a null session_id (edge case — no
- * session cookie was available at persist time) are readable by anyone
- * holding the id, same as before.
+ * sessionStorage transport). The cache lookup in runMatch is global
+ * (keyed only on free_text_hash + race_id, no session filter — that's
+ * what lets it save a Haiku call across sessions), so a cache hit can
+ * return a row another session owns. Finding 2/3's allow rule handles
+ * that instead of 403ing a legitimate cache hit:
  *
- * A same-session refresh or deep link always passes: the cookie is
- * stable across reloads, so the resolved session row id matches. A
- * link shared with a different browser/session is rejected — separate
- * from /share, which deliberately publishes race+candidate+score
- * without free_text and needs no ownership check.
+ *   (a) row.session_id is null (no consent at persist time, Finding 1), or
+ *   (b) row.session_id matches the requester's own resolved session row, or
+ *   (c) the caller supplies `hash` equal to row.free_text_hash — proof
+ *       they know the exact input text (they could regenerate the same
+ *       ranking from scratch anyway, so this reveals nothing they
+ *       couldn't already get).
+ *
+ * free_text is a different question from access: even when (a) or (c)
+ * grants access to the row, this never returns another owner's
+ * free_text — only case (b), the requester's own session, does. Callers
+ * (the results page/component) get '' for free_text in cases (a)/(c).
  */
 export async function getMatchById(
   matchId: string,
   sessionToken: string | null,
+  hash?: string | null,
 ): Promise<GetMatchResult> {
   if (!UUID_RE.test(matchId)) {
     return { ok: false, code: 'not_found', status: 404 };
@@ -195,7 +252,9 @@ export async function getMatchById(
   const sb = getServiceClient();
   const { data, error } = await sb
     .from('llm_matches')
-    .select('id, race_id, session_id, free_text, model, input_tokens, output_tokens, ranked_candidates')
+    .select(
+      'id, race_id, session_id, free_text, free_text_hash, model, input_tokens, output_tokens, ranked_candidates',
+    )
     .eq('id', matchId)
     .maybeSingle();
 
@@ -207,11 +266,26 @@ export async function getMatchById(
     return { ok: false, code: 'not_found', status: 404 };
   }
 
-  if (data.session_id) {
+  let allowed = false;
+  let isOwner = false;
+
+  if (!data.session_id) {
+    // Case (a).
+    allowed = true;
+  } else {
     const sessionRowId = sessionToken ? await lookupSessionRowId(sessionToken) : null;
-    if (sessionRowId !== data.session_id) {
-      return { ok: false, code: 'forbidden', status: 403 };
+    if (sessionRowId === data.session_id) {
+      // Case (b).
+      allowed = true;
+      isOwner = true;
+    } else if (hash && hash === data.free_text_hash) {
+      // Case (c).
+      allowed = true;
     }
+  }
+
+  if (!allowed) {
+    return { ok: false, code: 'forbidden', status: 403 };
   }
 
   return {
@@ -219,7 +293,7 @@ export async function getMatchById(
     match: {
       id: data.id,
       raceId: data.race_id ?? '',
-      freeText: data.free_text,
+      freeText: isOwner ? data.free_text : '',
       ranked: data.ranked_candidates as unknown as MatchResult[],
       meta: {
         cache_hit: false,

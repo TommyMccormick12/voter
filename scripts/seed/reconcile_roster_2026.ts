@@ -85,6 +85,13 @@ async function main() {
   for (const f of fixtures) {
     for (const c of f.candidates) {
       if (c.active !== true) continue;
+      if (!confirm) {
+        // Report mode must not mutate: activate_candidate.ts writes
+        // active/activated_at/verified_at into the fixture on a gate pass,
+        // which would silently refresh the 14-day freshness stamp.
+        console.log(`[B] would gate ${f.race.id}/${c.slug}`);
+        continue;
+      }
       try {
         execFileSync(
           'npx',

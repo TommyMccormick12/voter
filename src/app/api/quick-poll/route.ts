@@ -78,7 +78,8 @@ export async function POST(request: NextRequest) {
   // requires consent_data_sale (Tier C) to actually persist. consent_analytics
   // (Tier B) lets us record it for funnel analytics only without selling it.
   const consent = parseConsent(await readCookie(COOKIE_NAMES.consent));
-  if (consent && !consent.analytics) {
+  // Absent consent (no cookie yet) counts as no consent — drop, don't persist.
+  if (!consent?.analytics) {
     return NextResponse.json({ ok: true, dropped: 'consent' });
   }
 

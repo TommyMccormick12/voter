@@ -4,6 +4,7 @@ import { runMatch } from '@/lib/app/match';
 import { getRace } from '@/lib/data/races';
 import { getCandidatesForRace } from '@/lib/data/candidates';
 import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
+import { parseConsent } from '@/lib/consent';
 import { clientIpFromHeaders } from '@/lib/geo';
 import { checkRateLimits, MATCH_LIMITS } from '@/lib/rate-limit';
 
@@ -84,6 +85,14 @@ export async function POST(request: NextRequest) {
 
   const { free_text, race_id, quick_poll } = parsed.data;
 
+  // Consent gate (Finding 1): same read as the sibling /api/interaction
+  // and /api/quick-poll routes — absent consent (no cookie yet) counts
+  // as no consent. Matching still works without it; the flag only
+  // controls whether the persisted llm_matches row carries session_id /
+  // free_text (see src/lib/app/match.ts#runMatch).
+  const consent = parseConsent(await readCookie(COOKIE_NAMES.consent));
+  const hasAnalyticsConsent = consent?.analytics === true;
+
   const raceResult = await getRace(race_id);
   if (!raceResult.ok) {
     console.error('[api/match] race read failed:', raceResult.error.message);
@@ -114,6 +123,7 @@ export async function POST(request: NextRequest) {
     freeText: free_text,
     quickPoll: quick_poll,
     candidates: candidatesResult.data,
+    hasAnalyticsConsent,
   });
 
   if (!result.ok) {
@@ -124,6 +134,11 @@ export async function POST(request: NextRequest) {
   return NextResponse.json({
     ok: true,
     id: result.id,
+    // Finding 3 transport: the results page's cache-hit lookup is global
+    // (no session filter), so a deep link needs proof-of-knowledge for a
+    // row this session doesn't own. free_text_hash lets it get past the
+    // 403 without exposing free_text (see getMatchById's case (c)).
+    free_text_hash: result.freeTextHash,
     ranked: result.ranked,
     meta: {
       cache_hit: result.meta.cache_hit,

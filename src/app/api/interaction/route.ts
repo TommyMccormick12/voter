@@ -80,9 +80,10 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: false, error: 'no_session' }, { status: 401 });
   }
 
-  // Consent gate: explicit opt-out drops the row silently with 200.
+  // Consent gate: absent consent (no cookie yet) and explicit opt-out both
+  // drop the row silently with 200 — persistence requires a recorded opt-in.
   const consent = parseConsent(await readCookie(COOKIE_NAMES.consent));
-  if (consent && !consent.analytics) {
+  if (!consent?.analytics) {
     return NextResponse.json({ ok: true, dropped: 'consent' });
   }
 

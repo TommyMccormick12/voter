@@ -81,9 +81,25 @@ describe('POST /api/quick-poll', () => {
     vi.clearAllMocks();
     readCookieMock.mockImplementation(async (name: string) => {
       if (name === 'voter_session') return 'sess-token-abc';
+      // Default: analytics consent granted. Absent consent now drops writes.
+      if (name === 'voter_consent')
+        return JSON.stringify({ analytics: true, data_sale: false, marketing: false, version: 1 });
       return undefined;
     });
     checkRateLimitsMock.mockResolvedValue({ allowed: true, remaining: 10, retryAfterSeconds: 0 });
+  });
+
+  it('drops the row silently (200) when no consent cookie exists yet', async () => {
+    readCookieMock.mockImplementation(async (name: string) => {
+      if (name === 'voter_session') return 'sess-token-abc';
+      return undefined;
+    });
+    const { POST } = await import('@/app/api/quick-poll/route');
+    const res = await POST(postRequest(validBody));
+    expect(res.status).toBe(200);
+    const json = await res.json();
+    expect(json).toEqual({ ok: true, dropped: 'consent' });
+    expect(fromMock).not.toHaveBeenCalled();
   });
 
   it('returns 429 when rate-limited, without touching the adapter', async () => {

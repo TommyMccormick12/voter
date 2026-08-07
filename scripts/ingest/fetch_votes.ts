@@ -108,6 +108,18 @@ export interface VoteRecordRow {
   source: 'congress_gov' | 'voteview';
   source_url: string | null;
   significance: 'major' | 'procedural';
+  /**
+   * Roll-call identity, distinct from `bill_id`: House =
+   * "house-{congress}-{session}-{rollCallNumber}", Senate =
+   * "senate-{congress}-{rollnumber}". Two rows can legitimately share one
+   * `bill_id` (e.g. a Nay on the Motion to Recommit, a Yea on Passage of
+   * the same bill) — this field is what identifies a single, unrepeatable
+   * roll call, so it's the correct key for the contradiction check below.
+   * Not written to the DB (seed_candidates.ts whitelists insert columns
+   * and does not include it); it exists only to make this fixture-stage
+   * check correct.
+   */
+  roll_call_id: string;
 }
 
 export interface VoteCandidate {
@@ -139,21 +151,27 @@ export function assertNoUndefinedBillIds(rows: VoteRecordRow[], label: string): 
   }
 }
 
-/** Throws when the same bill_id appears twice for one candidate with
- * different `vote` values. DATA-AUDIT-2026-08-06: 89 bill/candidate pairs
- * showed both YEA and NAY on the same roll call — a single member cannot
- * cast two positions on one vote. */
+/** Throws when the same roll call appears twice for one candidate with
+ * different `vote` values. DATA-AUDIT-2026-08-06 originally found 89
+ * bill/candidate pairs with both YEA and NAY recorded against one
+ * `bill_id` — but a single bill legitimately carries multiple distinct
+ * roll calls (e.g. a Nay on the Motion to Recommit, then a Yea on Passage
+ * of the same bill), so `bill_id` is the wrong key: it conflated those
+ * routine, legitimate cases with real contradictions and aborted the
+ * ingest on both. The check is keyed on `roll_call_id` instead — a single
+ * member casting two different positions on the SAME roll call is the
+ * only case that can never legitimately happen. */
 export function assertNoYeaNayContradiction(rows: VoteRecordRow[], label: string): void {
-  const seen = new Map<string, string>();
+  const seen = new Map<string, VoteRecordRow>();
   for (const row of rows) {
-    const prior = seen.get(row.bill_id);
-    if (prior && prior !== row.vote) {
+    const prior = seen.get(row.roll_call_id);
+    if (prior && prior.vote !== row.vote) {
       throw new Error(
-        `[votes] ${label}: contradictory positions on bill_id "${row.bill_id}" ` +
-          `(${prior} then ${row.vote}) — refusing to write.`,
+        `[votes] ${label}: contradictory positions on roll call "${row.roll_call_id}" ` +
+          `(bill_id "${row.bill_id}") (${prior.vote} then ${row.vote}) — refusing to write.`,
       );
     }
-    seen.set(row.bill_id, row.vote);
+    seen.set(row.roll_call_id, row);
   }
 }
 
@@ -174,6 +192,7 @@ function houseVotesToRows(votes: MemberHouseVote[]): VoteRecordRow[] {
       source: 'congress_gov',
       source_url: billUrlFromHouseVote(vote),
       significance: vote.legislationType || vote.amendmentType ? 'major' : 'procedural',
+      roll_call_id: `house-${vote.congress}-${vote.sessionNumber}-${vote.rollCallNumber}`,
     };
   });
 }
@@ -194,6 +213,7 @@ function senateVotesToRows(votes: MemberSenateVote[]): VoteRecordRow[] {
       source: 'voteview',
       source_url: null,
       significance: rollCall.bill_number ? 'major' : 'procedural',
+      roll_call_id: `senate-${rollCall.congress}-${rollCall.rollnumber}`,
     };
   });
 }

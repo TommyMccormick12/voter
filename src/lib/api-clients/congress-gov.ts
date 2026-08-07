@@ -79,16 +79,74 @@ export interface BillDetail {
 // Raw endpoints
 // ============================================================
 
+interface HouseVoteListResponse {
+  houseRollCallVotes?: HouseVoteListItem[];
+  /** Congress.gov's pagination envelope. `count` is the total row count
+   * across every page; `next` is a follow-up URL (present on every page
+   * but the last). Either signal is enough to detect more pages — we key
+   * off whichever one the response actually carries. */
+  pagination?: {
+    count?: number;
+    next?: string;
+  };
+}
+
+/** Defensive cap on pages fetched per (congress, session). A session runs
+ * ~700-900 roll calls at the 250-per-page limit, so ~4 pages in practice —
+ * 40 leaves generous headroom while still refusing to loop forever (or
+ * silently truncate) if the API ever changes its pagination shape. */
+export const MAX_HOUSE_VOTE_LIST_PAGES = 40;
+
+/**
+ * All House roll-call votes for a congress/session, following
+ * Congress.gov's pagination until it's exhausted (FIX for the "last 50
+ * votes are wrong" bug: the old single-page fetch silently dropped every
+ * roll call past the first 250 in a ~700-roll-call session). Each page is
+ * its own fetchCached call, so a re-run after a partial fetch only refetches
+ * the pages not already on disk.
+ */
 export async function listHouseVotes(
   congress: number,
   session: 1 | 2,
 ): Promise<HouseVoteListItem[]> {
   const key = apiKey();
-  const url = `${BASE}/house-vote/${congress}/${session}?api_key=${key}&format=json&limit=250`;
-  const data = await fetchCached<{ houseRollCallVotes?: HouseVoteListItem[] }>(url, {
-    cacheTag: `congressgov:house-vote-list:${congress}:${session}`,
-  });
-  return data.houseRollCallVotes ?? [];
+  const limit = 250;
+  const out: HouseVoteListItem[] = [];
+  let offset = 0;
+  let page = 0;
+
+  for (;;) {
+    if (page >= MAX_HOUSE_VOTE_LIST_PAGES) {
+      throw new Error(
+        `[congress-gov] listHouseVotes(${congress}, ${session}): hit the ` +
+          `${MAX_HOUSE_VOTE_LIST_PAGES}-page cap at offset=${offset} without reaching the end of ` +
+          `pagination — refusing to silently truncate the roll-call list. Raise ` +
+          `MAX_HOUSE_VOTE_LIST_PAGES if the API genuinely has this many pages.`,
+      );
+    }
+    page++;
+
+    const url = `${BASE}/house-vote/${congress}/${session}?api_key=${key}&format=json&limit=${limit}&offset=${offset}`;
+    const data = await fetchCached<HouseVoteListResponse>(url, {
+      cacheTag: `congressgov:house-vote-list:${congress}:${session}:${offset}`,
+    });
+    const items = data.houseRollCallVotes ?? [];
+    out.push(...items);
+
+    if (items.length === 0) break; // defensive: no data on this page, stop rather than loop forever
+
+    const count = data.pagination?.count;
+    const hasNext = Boolean(data.pagination?.next);
+    offset += limit;
+
+    if (typeof count === 'number') {
+      if (offset >= count) break;
+    } else if (!hasNext) {
+      break;
+    }
+  }
+
+  return out;
 }
 
 interface RawMemberVotesResponse {

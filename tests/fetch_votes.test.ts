@@ -46,9 +46,16 @@ vi.mock('@/lib/api-clients/voteview', async () => {
 const mockedGetMemberHouseVotes = vi.mocked(getMemberHouseVotes);
 const mockedGetMemberSenateVotes = vi.mocked(getMemberSenateVotes);
 
+// Default roll_call_id is derived from bill_id so tests that only override
+// bill_id/vote keep their old meaning (same bill_id -> same roll call,
+// matching every pre-existing test below). Tests that need to prove the
+// roll-call-identity fix — two distinct roll calls sharing one bill_id, or
+// two different bill_ids from the SAME roll call — pass roll_call_id
+// explicitly.
 function row(overrides: Partial<VoteRecordRow> = {}): VoteRecordRow {
+  const billId = overrides.bill_id ?? 'hr1-119';
   return {
-    bill_id: 'hr1-119',
+    bill_id: billId,
     bill_title: 'Test Act',
     bill_summary: null,
     vote: 'yea',
@@ -57,6 +64,7 @@ function row(overrides: Partial<VoteRecordRow> = {}): VoteRecordRow {
     source: 'congress_gov',
     source_url: null,
     significance: 'major',
+    roll_call_id: `house-119-2-${billId}`,
     ...overrides,
   };
 }
@@ -114,6 +122,24 @@ describe('assertNoYeaNayContradiction (DATA-AUDIT: 89 YEA+NAY pairs on one bill)
     expect(() => assertNoYeaNayContradiction(rows, 'Royal Webster')).toThrow(
       /Royal Webster[\s\S]*hr7567-119/,
     );
+  });
+
+  it('keys on roll_call_id, not bill_id: a Nay on the Motion to Recommit and a Yea on ' +
+    'Passage of the SAME bill (two distinct roll calls) is routine and does not throw', () => {
+    const rows = [
+      row({ bill_id: 'hr7567-119', roll_call_id: 'house-119-2-410', vote: 'nay' }), // MTR
+      row({ bill_id: 'hr7567-119', roll_call_id: 'house-119-2-411', vote: 'yea' }), // Passage
+    ];
+    expect(() => assertNoYeaNayContradiction(rows, 'X')).not.toThrow();
+  });
+
+  it('still throws for a genuine contradiction on the SAME roll call, even when bill_id ' +
+    'happens to differ (proves the key is roll_call_id, not bill_id)', () => {
+    const rows = [
+      row({ bill_id: 'hr7567-119', roll_call_id: 'house-119-2-410', vote: 'yea' }),
+      row({ bill_id: 'hr9999-119', roll_call_id: 'house-119-2-410', vote: 'nay' }),
+    ];
+    expect(() => assertNoYeaNayContradiction(rows, 'X')).toThrow(/contradictory positions/);
   });
 });
 
@@ -255,5 +281,54 @@ describe('attachVotingRecords (ID-only crosswalk, no name matching)', () => {
     await expect(
       attachVotingRecords(candidates, fecToBioguide, { chamber: 'house' }),
     ).rejects.toThrow(/contradictory positions/);
+  });
+
+  it('end to end: a Nay on the Motion to Recommit and a Yea on Passage of the same ' +
+    'bill (two distinct roll calls) both land in voting_record with no throw — the ' +
+    'fixture shape tolerates duplicate bill_id rows (no unique(candidate,bill_id) ' +
+    'constraint downstream in supabase/migrations/004_primary_pivot.sql, and ' +
+    'seed_candidates.ts keys DB rows by an auto-generated uuid, not bill_id)', async () => {
+    mockedGetMemberHouseVotes.mockResolvedValueOnce([
+      {
+        vote: {
+          congress: 119,
+          sessionNumber: 2,
+          rollCallNumber: 410,
+          startDate: '2026-03-01T00:00:00Z',
+          legislationType: 'HR',
+          legislationNumber: '7567',
+          voteQuestion: 'On Motion to Recommit',
+          result: 'Failed',
+          members: [],
+        },
+        position: { bioguideId: 'X000001', voteCast: 'No' },
+      },
+      {
+        vote: {
+          congress: 119,
+          sessionNumber: 2,
+          rollCallNumber: 411,
+          startDate: '2026-03-01T00:00:00Z',
+          legislationType: 'HR',
+          legislationNumber: '7567',
+          voteQuestion: 'On Passage',
+          result: 'Passed',
+          members: [],
+        },
+        position: { bioguideId: 'X000001', voteCast: 'Aye' },
+      },
+    ]);
+    const candidates: VoteCandidate[] = [{ name: 'MTR Then Passage', fec_candidate_id: 'H1TEST02' }];
+    const fecToBioguide = new Map<string, string>([['H1TEST02', 'X000001']]);
+
+    await expect(
+      attachVotingRecords(candidates, fecToBioguide, { chamber: 'house' }),
+    ).resolves.not.toThrow();
+
+    const rows = candidates[0].voting_record ?? [];
+    expect(rows).toHaveLength(2);
+    expect(rows.every((r) => r.bill_id === 'hr7567-119')).toBe(true);
+    expect(rows.map((r) => r.vote).sort()).toEqual(['nay', 'yea']);
+    expect(new Set(rows.map((r) => r.roll_call_id)).size).toBe(2);
   });
 });

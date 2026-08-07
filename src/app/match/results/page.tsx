@@ -6,7 +6,7 @@ import { getMatchById } from '@/lib/app/match';
 import { COOKIE_NAMES, readCookie } from '@/lib/cookies';
 
 interface PageProps {
-  searchParams: Promise<{ m?: string }>;
+  searchParams: Promise<{ m?: string; h?: string }>;
 }
 
 /**
@@ -16,11 +16,15 @@ interface PageProps {
  * deep link: the id is a stable URL param, and the ranking lives in the
  * database instead of the browser's per-tab storage.
  *
- * getMatchById enforces session ownership — a match row created under
- * a different session's cookie 404s/403s here rather than rendering.
+ * getMatchById enforces access (Finding 2): a match row owned by a
+ * different session 404s/403s here unless `h` (free_text_hash, from
+ * the /api/match response — see MatchFlow.tsx) proves this requester
+ * knows the exact input text. Either way, getMatchById already
+ * withholds free_text from a row this session doesn't own — this page
+ * only ever renders what it was handed.
  */
 export default async function MatchResultsPage({ searchParams }: PageProps) {
-  const { m: matchId } = await searchParams;
+  const { m: matchId, h: hash } = await searchParams;
 
   if (!matchId) {
     return (
@@ -32,7 +36,7 @@ export default async function MatchResultsPage({ searchParams }: PageProps) {
   }
 
   const sessionId = (await readCookie(COOKIE_NAMES.session)) ?? null;
-  const matchResult = await getMatchById(matchId, sessionId);
+  const matchResult = await getMatchById(matchId, sessionId, hash ?? null);
 
   if (!matchResult.ok) {
     if (matchResult.code === 'forbidden') {

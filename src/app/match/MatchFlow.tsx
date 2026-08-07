@@ -65,7 +65,11 @@ export function MatchFlow({ raceId, issues }: Props) {
         throw new Error('Match saved without an id — cannot open results.');
       }
 
-      router.push(`/match/results?m=${data.id}`);
+      // h=free_text_hash lets /match/results get past a cross-session
+      // cache-hit 403 (Finding 2/3 — the cache lookup is global, no
+      // session filter) without exposing another owner's free_text.
+      const hashParam = data.free_text_hash ? `&h=${encodeURIComponent(data.free_text_hash)}` : '';
+      router.push(`/match/results?m=${data.id}${hashParam}`);
     } catch (err) {
       console.error('[match] failed', err);
       setError(

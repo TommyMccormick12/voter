@@ -100,4 +100,17 @@ describe('<MatchResults> (T17 — server-fetched, no sessionStorage)', () => {
     render(<MatchResults race={race} candidates={candidates} match={makeMatch('haiku')} />);
     expect(screen.queryByText('Estimated match')).not.toBeInTheDocument();
   });
+
+  // Finding 2 (defense-in-depth): getMatchById already blanks free_text
+  // to '' for a row the requester doesn't own (cases a/c — see
+  // tests/api-match.test.ts#getMatchById). This locks the same rule at
+  // the render boundary — even if a future edit hands MatchResults a
+  // non-empty free_text from someone else's session, it must never
+  // reach the DOM.
+  it('never renders match.freeText — the page only ever shows race, ranked candidates, and source', () => {
+    const match = makeMatch('haiku');
+    match.freeText = 'ANOTHER SESSIONS SECRET FREE TEXT';
+    render(<MatchResults race={race} candidates={candidates} match={match} />);
+    expect(screen.queryByText(/ANOTHER SESSIONS SECRET FREE TEXT/)).not.toBeInTheDocument();
+  });
 });
