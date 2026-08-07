@@ -32,6 +32,11 @@ export const ISSUE_NAMES: Record<string, string> = {
   civil_rights: 'Civil Rights',
 };
 
+/** Every valid issue slug. Single source of truth for the prompts that ask a
+ * model to pick one (src/lib/llm/curate.ts) — a taxonomy addition that does
+ * not reach those prompts is invisible to the pipeline. */
+export const ISSUE_SLUGS = Object.keys(ISSUE_NAMES);
+
 /** Shorter labels for space-constrained surfaces (the carousel card). Only
  * slugs whose full label is too long need an entry; everything else falls
  * through to ISSUE_NAMES. */
