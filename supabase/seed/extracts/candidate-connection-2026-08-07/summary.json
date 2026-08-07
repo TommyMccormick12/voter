@@ -1,0 +1,14 @@
+{
+  "extracted_at": "2026-08-07",
+  "source": "Ballotpedia Candidate Connection public pages (manual pull, Decision 5)",
+  "priority_candidates": 79,
+  "extracted": 79,
+  "counts": {
+    "responded": 44,
+    "no_response": 35,
+    "page_not_found": 0
+  },
+  "missing_from_extraction": [],
+  "extra_not_in_priority_list": [],
+  "identity_unverified": []
+}
