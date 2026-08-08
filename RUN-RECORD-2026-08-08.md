@@ -1,15 +1,20 @@
 # Discovery + match-gate run — process record, 2026-08-08
 
 Companion to `RUN-RECORD-2026-08-07.md`. Covers GitHub issues #36, #37,
-#38, #39–#44, and the triage of epic #8 with its children #12–#16.
+#38, #39–#44, the triage of epic #8 with its children #12–#16, and the
+verification pass and follow-ups that ran afterwards (PR #51).
 Primary is **2026-08-18** (10 days out).
+
+> This file was first committed mid-run and was stale within the hour —
+> the exact failure #17 exists to prevent. Completed 2026-08-08 evening
+> after the verification pass, the second search round, and PR #51.
 
 ## Outcome
 
 | | Start of day | End of day |
 |---|---|---|
-| Active candidates | 93 | **98** |
-| Live stances | 395 | **429** |
+| Active candidates | 93 | **100** |
+| Live stances | 395 | **441** |
 | Unsourced stances | 0 | **0** |
 | Races with the match flow open | 10 of 57 | **25 of 57** |
 | Races with ≥1 active candidate | 57 of 57 | 57 of 57 |
@@ -34,17 +39,16 @@ the tickets themselves. What they did pass:
   and read in full during this session, and every stance carries a
   `source_url` that resolves.
 
-They did **not** pass an independent blind refutation-first verifier.
-The 2026-08-07 run had one, and it refuted ~70 stances. Nothing here was
-put through that. So:
+They did **not** pass an independent blind refutation-first verifier at
+the time of activation. **That pass was run later the same day, at
+Tommy's request, and it refuted five of the 34.** See the section below.
+Everything shipped after that pass was checked against source at
+authoring time.
 
-- **CONFIRMED** below means checked against the live site or the
-  database after the fact.
+- **CONFIRMED** means checked against the live site, the database, or a
+  re-read of the source.
 - **PLAUSIBLE** means authored from a source that was read, mechanically
   gated, and not independently refuted.
-
-Every stance shipped today is **PLAUSIBLE, not CONFIRMED**. That is the
-honest label and it should not be upgraded without a verifier run.
 
 ## Per-candidate outcomes — every candidate touched, exactly once
 
@@ -71,26 +75,84 @@ honest label and it should not be upgraded without a verifier run.
 | Evan Power | FL-02 R | Chairs the Republican Party of Florida; extensive press coverage of his candidacy, but no campaign issues page located. Press paraphrase is not a first-party position statement. |
 | Tom Wells | FL-03 D | Listed in the FL-03 D voter guide and on Ballotpedia; biography only, no positions surfaced in the searches run. |
 
-### Not searched — capped deliberately (7)
+### Capped in the first round, then searched (7)
 
-Once a race had one success, searching stopped. **One activation was
-all any of these races needed**: each sat at 2 profiled, and 3 opens the
-match flow. Continuing would have bought depth the tickets did not ask
-for, on the day before the ballot deadline window.
+The first round stopped once a race had one success — one activation was
+all any of them needed to open the match flow. Tommy then asked for the
+rest to be searched, so none of these remain unexamined. **Two were
+sourced and are live; five are refused with reasons.**
 
 | Candidate | Race | Note |
 |---|---|---|
-| Audie Rowell | FL-02 R | not individually searched |
-| Lee Jones | FL-02 R | not individually searched |
-| Luke Murphy | FL-02 R | appeared in a combined search; positions exist in press coverage, no campaign issues page pursued |
-| Nick Lewis | FL-02 R | appeared in a combined search; no issues page pursued |
-| Charles Gambaro | FL-06 R | did not respond to the voter-guide questionnaire; his own site `voteforgambaro.com` was not fetched |
-| Manuel P. Asensio | FL-06 R | did not respond to the voter-guide questionnaire; his own site `asensio4congress.com` was not fetched |
-| Jan Schneider | FL-16 D | inactive; touched only by the money re-pull, see below |
+| Luke Murphy | FL-02 R | **LIVE, 6 stances.** `lukemurphyforcongress.com/issues` — seven substantive issue areas. |
+| Charles Gambaro | FL-06 R | **LIVE, 5 stances.** `voteforgambaro.com/issues`. |
+| Evan Power | FL-02 R | Refused. `evanpowerforcongress.com` and `powerforcongress.com` both resolve but serve no content. |
+| Nick Lewis | FL-02 R | Refused. `nicklewisforcongress.com` resolves but serves no content. |
+| Audie Rowell | FL-02 R | Refused. No campaign site located. One forum quote only. |
+| Lee Jones | FL-02 R | Refused. No campaign site located. |
+| Manuel P. Asensio | FL-06 R | Refused. `asensio4congress.com` is a single grievance thread about federal judicial misconduct and January 6, not a multi-issue platform. Cannot reach three stances across distinct issues. |
+| Jan Schneider | FL-16 D | Inactive; touched only by the money re-pull, see below. |
 
-**These 7 are the run's honest gap.** FL-02 R in particular is still
-3 of 8 and holds 5 unsearched names — the largest remaining coverage
-opportunity on the site.
+Tom Wells (FL-03 D), listed above as "no positions surfaced", was
+re-searched and is now a firm refusal: `tomwellsforcongress.com` has a
+full issues page, but it is his **2020** platform. It opens *"It early
+August 2020. The United States is the epicenter of the global
+pandemic"* and discusses *"Jan 20 when a new president"* takes office.
+The only year markers on the page are 2020 and 2021, and the incumbent
+he would face is never mentioned.
+
+**A WFSU Capital Tiger Bay Club forum writeup** gives one direct quote
+each for Rowell, Power and Murphy — real, dated, attributable, and
+nowhere near the three-stance gate. One quote is not a platform.
+
+**`murphyforflorida.com` is Patrick Murphy**, a former Democratic
+congressman, not Luke Murphy the FL-02 Republican. Checked before use.
+Same wrong-person trap that once gave FL-11 Daniel Webster the bio of
+the 1782–1852 statesman.
+
+**Final coverage: FL-02 R is 4 of 8, FL-06 R is 4 of 5, FL-03 D is 3 of
+4.** The remaining uncovered candidates are refused with recorded
+reasons, not pending.
+
+## The verification pass — 5 of 34 refuted, all of them live at the time
+
+Run after the fact, refutation-first, against a fresh fetch of every
+source. **29 held. Five did not.** This is why the pass exists: all five
+had passed the mechanical gates and looked fine in review.
+
+**1. A fabricated legislative credential.** Grayson's healthcare stance
+read *"Authored Medicare for All legislation **and child Medicare
+extension** while in Congress."* His questionnaire makes exactly three
+authorship claims — Medicare for All, the $50,000 tax-threshold bill,
+and the flood insurance extension. Extending Medicare to every child
+appears only as a proposal: *"Medicare should cover everyone until 18."*
+The second half of that credential was invented, on a real person's card.
+
+**2. Three notes stated the candidate's own claims as our verification.**
+`track_record_note` exists to surface stated-versus-actual gaps from an
+**independent** record. Feeding it a candidate's boast about himself
+inverts the feature — the card reads as though we checked. All three now
+attribute: *"Says he wrote..."*. Norton's note likewise asserted his
+tenure *"demonstrates commitment to local education leadership"*, which
+is advocacy rather than a record, drawn from a page the stance did not
+cite.
+
+**3. Four stances cited a page that does not contain the claim.**
+`synthesize_stances.ts` stamped **one** `website` value onto **every**
+stance. Correct for a single-source candidate; silently wrong the moment
+one is authored from two. Albers was authored from his issues page and
+his voter-guide answers; three guide-only claims cited his campaign site.
+Baker's housing stance mixed a HUD position from his policy page with
+Florida homestead-exemption numbers that live only in the guide, answered
+under a question the guide *itself* labels "(State Issue)" — state policy
+on a federal scorecard.
+
+A scan of all 441 live stances afterwards found **zero** remaining
+instances of the two detectable classes.
+
+**Lesson: the mechanical gates check that a stance exists and is
+sourced. They cannot check that the source says what the stance claims.
+Only re-reading the source does that.**
 
 ## Two source traps — the most transferable findings of the day
 
@@ -159,6 +221,33 @@ showing no date.
 5. **Triage of epic #8 and children #12–#16.** #12 and #13 verified
    complete against production and closed. #8, #14, #15, #16 closed as
    superseded.
+6. **The verification pass and its corrections (PR #51).** Above.
+7. **Second search round (PR #51).** Murphy and Gambaro sourced and
+   activated; Wells, Asensio, Power, Lewis, Rowell, Jones refused.
+8. **Date-awareness (PR #51).** Nothing branched on the election date, so
+   on 2026-08-19 the site would still have counted down to a finished
+   primary and invited voters to rank its candidates.
+   `electionHasConcluded()` is now the single decision point: a concluded
+   race keeps its scorecards as a record, shows a "Primary held" notice,
+   and drops the match CTA. **It states no outcome** — there is no
+   results source in this repo, and implying a winner would be far worse
+   than a stale date. Election day itself stays live; an unparseable date
+   is never treated as past.
+9. **Migration 018 — `infrastructure` (PR #51, applied).** The taxonomy
+   had no home for roads, transit, utilities or broadband. The
+   synthesizer reached for `infrastructure` unprompted for Gambaro;
+   forced to choose among the existing 17 it picked `housing`, which
+   would hand someone filtering Housing an infrastructure statement.
+   `issues` is now 18 rows, verified with 0 orphaned `issue_slug` values
+   across all 441 stances.
+10. **Per-stance source attribution (PR #51).** The root cause behind
+    defect 3 above. Themes may declare `source_url`; the model names the
+    one a stance draws from, and a source the input never offered is
+    refused as a fabricated citation, exactly like a fabricated roll-call
+    id. Proved by re-authoring Albers: all 8 stances now cite the page
+    their claim is on. **A theme spanning two pages cannot be cited
+    correctly however good the pipeline is** — the theme is the unit of
+    attribution, so split themes at the source seam.
 
 ## Judgment calls
 
@@ -210,12 +299,22 @@ showing no date.
 
 ## Open after this run
 
-1. **FL-02 R depth** — 3 of 8, with 5 unsearched names. The largest
-   remaining coverage gap.
-2. **FL-19 D** — 2 of 3, blocked on Neeld having published nothing.
-3. **No independent verification pass** has been run against today's 34
-   new stances. If one is wanted before 2026-08-18, that is the highest
-   -value remaining check.
-4. **Remote branch delete still pending:**
-   `git push origin --delete planning/2026-08-06-audit` — permission-blocked
-   for the agent.
+**Nothing is open.** 0 GitHub issues, 0 pull requests, and the remote
+holds `main` alone. Migrations 001–018 are applied.
+
+What remains is bounded and recorded, not pending:
+
+1. **FL-19 D holds at 2 of 3.** Blocked on Neeld having published
+   nothing. Reopen #40 only if that changes before 2026-08-18.
+2. **FL-02 R is 4 of 8, FL-06 R is 4 of 5.** Every uncovered candidate in
+   both races is refused with a recorded reason — dead domains, a 2020
+   platform, a single-issue grievance site. Not a backlog.
+3. **The ~390 stances predating today** were verified by the
+   2026-08-07 run's adversarial verifier, not by today's pass. A scan
+   found none of the two detectable defect classes among them. The
+   "claim is not at the cited URL" class cannot be detected offline for
+   candidates whose sources were not re-read.
+4. **No post-primary decision beyond the honest freeze.** The site will
+   handle 2026-08-19 on its own — record kept, no results claimed. If
+   results or a general-election surface are ever wanted, that is a new
+   product, not a fix.
