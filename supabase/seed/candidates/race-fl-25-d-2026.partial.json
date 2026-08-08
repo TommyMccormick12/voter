@@ -254,7 +254,8 @@
       "voting_record": [
         {
           "bill_id": "hr8884-119",
-          "bill_title": "On Passage",
+          "bill_title": "Removing Barriers to Work for Disabled Americans Act",
+          "vote_question": "On Passage",
           "bill_summary": "Passed",
           "vote": "nay",
           "issue_slugs": [],
@@ -266,7 +267,8 @@
         },
         {
           "bill_id": "hconres89-119",
-          "bill_title": "On Agreeing to the Resolution",
+          "bill_title": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+          "vote_question": "On Agreeing to the Resolution",
           "bill_summary": "Passed",
           "vote": "yea",
           "issue_slugs": [],
@@ -278,7 +280,8 @@
         },
         {
           "bill_id": "hconres113-119",
-          "bill_title": "On Agreeing to the Resolution",
+          "bill_title": "Establishing the congressional budget for the United States Government for fiscal year 2027 and setting forth the appropriate budgetary levels for fiscal years 2028 through 2036.",
+          "vote_question": "On Agreeing to the Resolution",
           "bill_summary": "Passed",
           "vote": "nay",
           "issue_slugs": [],
@@ -290,7 +293,8 @@
         },
         {
           "bill_id": "hr7008-119",
-          "bill_title": "On Passage",
+          "bill_title": "Stop Insider Trading Act",
+          "vote_question": "On Passage",
           "bill_summary": "Passed",
           "vote": "yea",
           "issue_slugs": [],
@@ -302,7 +306,8 @@
         },
         {
           "bill_id": "hr7008-119",
-          "bill_title": "On Motion to Recommit",
+          "bill_title": "Stop Insider Trading Act",
+          "vote_question": "On Motion to Recommit",
           "bill_summary": "Failed",
           "vote": "yea",
           "issue_slugs": [],
@@ -314,10 +319,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Passage",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Passage",
           "bill_summary": "Passed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-22",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -326,10 +334,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Motion to Recommit",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Motion to Recommit",
           "bill_summary": "Failed",
           "vote": "yea",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-22",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -338,10 +349,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-22",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -350,10 +364,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Agreed to",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-22",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -362,10 +379,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-22",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -374,10 +394,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Agreed to",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-22",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -386,7 +409,8 @@
         },
         {
           "bill_id": "hr9770-119",
-          "bill_title": "On Passage",
+          "bill_title": "Making continuing appropriations for fiscal year 2027, and for other purposes.",
+          "vote_question": "On Passage",
           "bill_summary": "Passed",
           "vote": "nay",
           "issue_slugs": [],
@@ -398,7 +422,8 @@
         },
         {
           "bill_id": "hr6955-119",
-          "bill_title": "On Passage",
+          "bill_title": "Main Street Capital Access Act",
+          "vote_question": "On Passage",
           "bill_summary": "Passed",
           "vote": "yea",
           "issue_slugs": [],
@@ -410,7 +435,8 @@
         },
         {
           "bill_id": "hr6955-119",
-          "bill_title": "On Motion to Recommit",
+          "bill_title": "Main Street Capital Access Act",
+          "vote_question": "On Motion to Recommit",
           "bill_summary": "Failed",
           "vote": "yea",
           "issue_slugs": [],
@@ -422,10 +448,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -434,10 +463,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Agreed to",
           "vote": "absent",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -446,10 +478,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Agreed to",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -458,10 +493,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -470,10 +508,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Agreed to",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -482,10 +523,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -494,10 +538,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -506,10 +553,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -518,10 +568,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -530,10 +583,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Agreed to",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -542,10 +598,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -554,10 +613,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Agreed to",
           "vote": "yea",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -566,10 +628,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -578,10 +643,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -590,10 +658,13 @@
         },
         {
           "bill_id": "hr8800-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "National Defense Authorization Act for Fiscal Year 2027",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "foreign_policy"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
@@ -602,10 +673,15 @@
         },
         {
           "bill_id": "hres1438-119",
-          "bill_title": "On Agreeing to the Resolution",
+          "bill_title": "Providing for consideration of the bill (H.R. 8800) to authorize appropriations for fiscal year 2027 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for other purposes; providing for consideration of the bill (H.R. 8884) to amend title II of the Social Security Act to reauthorize demonstration authority for the disability insurance program; providing for consideration of the concurrent resolution (H. Con. Res. 113) establishing the congressional budget for the United States Government for fiscal year 2027 and setting forth the appropriate budgetary levels for fiscal years 2028 through 2036; providing for consideration of the bill (H.R. 7008) to amend chapter 131 of title 5 to require certain restrictions on stocks for Members of Congress and their spouses and dependents, and for other purposes; providing for consideration of the bill (H.R. 6955) to make improvements to the Federal banking laws, and for other purposes; providing for consideration of the bill (H.R. 9770) making continuing appropriations for fiscal year 2027, and for other purposes; and for other purposes.",
+          "vote_question": "On Agreeing to the Resolution",
           "bill_summary": "Passed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "climate",
+            "foreign_policy",
+            "housing"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-resolution/1438",
@@ -614,10 +690,15 @@
         },
         {
           "bill_id": "hres1438-119",
-          "bill_title": "On Ordering the Previous Question",
+          "bill_title": "Providing for consideration of the bill (H.R. 8800) to authorize appropriations for fiscal year 2027 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for other purposes; providing for consideration of the bill (H.R. 8884) to amend title II of the Social Security Act to reauthorize demonstration authority for the disability insurance program; providing for consideration of the concurrent resolution (H. Con. Res. 113) establishing the congressional budget for the United States Government for fiscal year 2027 and setting forth the appropriate budgetary levels for fiscal years 2028 through 2036; providing for consideration of the bill (H.R. 7008) to amend chapter 131 of title 5 to require certain restrictions on stocks for Members of Congress and their spouses and dependents, and for other purposes; providing for consideration of the bill (H.R. 6955) to make improvements to the Federal banking laws, and for other purposes; providing for consideration of the bill (H.R. 9770) making continuing appropriations for fiscal year 2027, and for other purposes; and for other purposes.",
+          "vote_question": "On Ordering the Previous Question",
           "bill_summary": "Passed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "climate",
+            "foreign_policy",
+            "housing"
+          ],
           "vote_date": "2026-07-21",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-resolution/1438",
@@ -626,7 +707,8 @@
         },
         {
           "bill_id": "hr1118-119",
-          "bill_title": "On Motion to Suspend the Rules and Pass, as Amended",
+          "bill_title": "Value Over Cost Act of 2026",
+          "vote_question": "On Motion to Suspend the Rules and Pass, as Amended",
           "bill_summary": "Passed",
           "vote": "yea",
           "issue_slugs": [],
@@ -638,7 +720,8 @@
         },
         {
           "bill_id": "hr8823-119",
-          "bill_title": "On Motion to Suspend the Rules and Pass, as Amended",
+          "bill_title": "Putting Patients First by Strengthening Provider Accountability in FECA Act",
+          "vote_question": "On Motion to Suspend the Rules and Pass, as Amended",
           "bill_summary": "Passed",
           "vote": "yea",
           "issue_slugs": [],
@@ -650,10 +733,14 @@
         },
         {
           "bill_id": "hr4541-119",
-          "bill_title": "On Motion to Suspend the Rules and Pass, as Amended",
+          "bill_title": "To reauthorize the Young Women’s Breast Health Education and Awareness Requires Learning Young Act of 2009.",
+          "vote_question": "On Motion to Suspend the Rules and Pass, as Amended",
           "bill_summary": "Passed",
           "vote": "yea",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "healthcare",
+            "education"
+          ],
           "vote_date": "2026-07-20",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
@@ -662,7 +749,8 @@
         },
         {
           "bill_id": "hr9237-119",
-          "bill_title": "On Motion to Recommit",
+          "bill_title": "Take Care of America’s Veterans Act",
+          "vote_question": "On Motion to Recommit",
           "bill_summary": "Failed",
           "vote": "yea",
           "issue_slugs": [],
@@ -674,10 +762,13 @@
         },
         {
           "bill_id": "hr5362-119",
-          "bill_title": "On Motion to Suspend the Rules and Pass",
+          "bill_title": "To name the Department of Veterans Affairs multispecialty clinic in Marietta, Georgia, as the \"Colonel Michael H. Boyce Department of Veterans Affairs Multispecialty Clinic\".",
+          "vote_question": "On Motion to Suspend the Rules and Pass",
           "bill_summary": "Passed",
           "vote": "yea",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "climate"
+          ],
           "vote_date": "2026-07-16",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/5362",
@@ -686,10 +777,13 @@
         },
         {
           "bill_id": "hr8595-119",
-          "bill_title": "On Passage",
+          "bill_title": "Making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes.",
+          "vote_question": "On Passage",
           "bill_summary": "Passed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "climate"
+          ],
           "vote_date": "2026-07-15",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8595",
@@ -698,10 +792,13 @@
         },
         {
           "bill_id": "hr8595-119",
-          "bill_title": "On Motion to Recommit",
+          "bill_title": "Making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes.",
+          "vote_question": "On Motion to Recommit",
           "bill_summary": "Failed",
           "vote": "yea",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "climate"
+          ],
           "vote_date": "2026-07-15",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8595",
@@ -710,10 +807,13 @@
         },
         {
           "bill_id": "hr8595-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "Making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes.",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "climate"
+          ],
           "vote_date": "2026-07-15",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8595",
@@ -722,10 +822,13 @@
         },
         {
           "bill_id": "hr8595-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "Making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes.",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "climate"
+          ],
           "vote_date": "2026-07-15",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8595",
@@ -734,10 +837,13 @@
         },
         {
           "bill_id": "hr8595-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "Making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes.",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "climate"
+          ],
           "vote_date": "2026-07-15",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8595",
@@ -746,10 +852,13 @@
         },
         {
           "bill_id": "hr8595-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "Making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes.",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "climate"
+          ],
           "vote_date": "2026-07-15",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8595",
@@ -758,10 +867,13 @@
         },
         {
           "bill_id": "hr8595-119",
-          "bill_title": "On Agreeing to the Amendment",
+          "bill_title": "Making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes.",
+          "vote_question": "On Agreeing to the Amendment",
           "bill_summary": "Failed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "climate"
+          ],
           "vote_date": "2026-07-15",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/8595",
@@ -770,7 +882,8 @@
         },
         {
           "bill_id": "hr1181-119",
-          "bill_title": "On Passage",
+          "bill_title": "Protecting Privacy in Purchases Act",
+          "vote_question": "On Passage",
           "bill_summary": "Passed",
           "vote": "nay",
           "issue_slugs": [],
@@ -782,7 +895,8 @@
         },
         {
           "bill_id": "hr1181-119",
-          "bill_title": "On Motion to Recommit",
+          "bill_title": "Protecting Privacy in Purchases Act",
+          "vote_question": "On Motion to Recommit",
           "bill_summary": "Failed",
           "vote": "yea",
           "issue_slugs": [],
@@ -794,7 +908,8 @@
         },
         {
           "bill_id": "hr139-119",
-          "bill_title": "On Passage",
+          "bill_title": "Sunshine Protection Act of 2025",
+          "vote_question": "On Passage",
           "bill_summary": "Passed",
           "vote": "yea",
           "issue_slugs": [],
@@ -806,10 +921,14 @@
         },
         {
           "bill_id": "hres1423-119",
-          "bill_title": "On Agreeing to the Resolution",
+          "bill_title": "Providing for consideration of the bill (H.R. 139) to make daylight savings time permanent, and for other purposes; providing for consideration of the bill (H.R. 8595) making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes; providing for consideration of the bill (H.R. 9237) to amend titles 10 and 38, United States Code, and other Federal laws, to improve benefits for veterans and the administration of the Department of Veterans Affairs; providing for consideration of the bill (H.R. 1181) to prohibit payment card networks and covered entities from requiring the use of or assigning merchant category codes that distinguish a firearms retailer from general-merchandise retailer or sporting-goods retailer, and for other purposes; and for other purposes.",
+          "vote_question": "On Agreeing to the Resolution",
           "bill_summary": "Passed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "climate",
+            "guns"
+          ],
           "vote_date": "2026-07-14",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-resolution/1423",
@@ -818,10 +937,14 @@
         },
         {
           "bill_id": "hres1423-119",
-          "bill_title": "On Ordering the Previous Question",
+          "bill_title": "Providing for consideration of the bill (H.R. 139) to make daylight savings time permanent, and for other purposes; providing for consideration of the bill (H.R. 8595) making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes; providing for consideration of the bill (H.R. 9237) to amend titles 10 and 38, United States Code, and other Federal laws, to improve benefits for veterans and the administration of the Department of Veterans Affairs; providing for consideration of the bill (H.R. 1181) to prohibit payment card networks and covered entities from requiring the use of or assigning merchant category codes that distinguish a firearms retailer from general-merchandise retailer or sporting-goods retailer, and for other purposes; and for other purposes.",
+          "vote_question": "On Ordering the Previous Question",
           "bill_summary": "Passed",
           "vote": "nay",
-          "issue_slugs": [],
+          "issue_slugs": [
+            "climate",
+            "guns"
+          ],
           "vote_date": "2026-07-14",
           "source": "congress_gov",
           "source_url": "https://www.congress.gov/bill/119th-congress/house-resolution/1423",
@@ -830,7 +953,8 @@
         },
         {
           "bill_id": "hr8897-119",
-          "bill_title": "On Motion to Suspend the Rules and Pass, as Amended",
+          "bill_title": "Improving Travel for American Families Act",
+          "vote_question": "On Motion to Suspend the Rules and Pass, as Amended",
           "bill_summary": "Passed",
           "vote": "yea",
           "issue_slugs": [],
@@ -842,7 +966,8 @@
         },
         {
           "bill_id": "hr3106-119",
-          "bill_title": "On Motion to Suspend the Rules and Pass",
+          "bill_title": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
+          "vote_question": "On Motion to Suspend the Rules and Pass",
           "bill_summary": "Passed",
           "vote": "yea",
           "issue_slugs": [],
