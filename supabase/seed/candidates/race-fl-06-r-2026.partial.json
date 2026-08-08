@@ -13,7 +13,7 @@
       "race_id": "race-fl-06-r-2026",
       "fec_candidate_id": "H6FL06324",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -28,7 +28,148 @@
         "individual_contributions": 61546.36,
         "other_political_committee_contributions": 33909.46,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "bio": "Aaron Baker is a Republican candidate for Florida's 6th Congressional District, based in Sorrento, Florida. He started and ran his own construction business, an experience he cites when discussing small-business policy and the Small Business Administration.",
+      "website": "https://aaron4fl6.com/policy",
+      "key_messages": [
+        "Cut federal spending and regulation to bring down energy, grocery and housing costs",
+        "Abolish the Department of Education and return school control to the states, while expanding vocational training and tuition-free community college",
+        "Take an all-of-the-above energy approach, with nuclear power as the long-term answer to rising utility costs",
+        "Tie Social Security and healthcare benefit increases to the 30-year government bond rate so seniors are not left guessing",
+        "Transfer HUD-managed homes to their residents and put an SBA office in every congressional district"
+      ],
+      "campaign_themes": [
+        {
+          "heading": "Economy, inflation and regulation",
+          "text": "Residents of Florida's 6th District are struggling with rising gas, food, and housing costs. Since 2020, energy costs have increased by $218 per month, grocery bills by $280 per month, and housing prices by $100,000, which he attributes to excessive regulation. Supports energy deregulation policies to reduce inflation and ease the burden of unnecessary regulations, arguing families could save $1,056 each month. Also argues continued deficit spending has caused inflation and that the federal government needs to stop spending money unnecessarily and concentrate on the needs of Americans first."
+        },
+        {
+          "heading": "Education",
+          "text": "Florida schools can lead the nation by returning control to the states and abolishing the Department of Education. Would work with local faith leaders to promote early learning programs and ensure all FL-6 schools achieve Gold Seal status, addressing federal needs during the transition to state control. After the transition, would advocate for fully funding Florida's education system, expanding vocational training in fields like medical technology, agriculture and computer hardware, and supporting tuition-free community college."
+        },
+        {
+          "heading": "Energy and utilities",
+          "text": "In the short to medium term the focus should be on existing technologies, clean coal and natural gas; in the long term, on nuclear energy. The federal government needs an infrastructure bill focused on reducing permitting time for small nuclear reactors and building the infrastructure to meet current demand. Overall takes an all-of-the-above approach, expanding domestic production while embracing renewables, nuclear power and critical mineral mining, with the goal of making energy affordable again."
+        },
+        {
+          "heading": "Environment",
+          "text": "Reasonable regulations are essential to protect clean air, water, beaches, and sea turtle nesting areas while supporting a growing population. In Florida specifically, the focus should be on expanding the Wildlife Corridor, protecting beaches, and improving drinking water. Would work with state and federal agencies to create a streamlined system where all relevant parties collaborate efficiently."
+        },
+        {
+          "heading": "Housing and property taxes",
+          "text": "Believes the homestead exemption should be raised to $250,000 for a primary residence, with a 3% cap on yearly increases for residences and a 5% cap for other properties in Florida, and that the $250,000 cap should be adjusted annually by CPI. Also supports transferring ownership of the more than one million HUD-managed homes to their residents, arguing federal management creates a cycle of dependency that limits community pride and ownership."
+        },
+        {
+          "heading": "Social Security and healthcare",
+          "text": "Social Security and healthcare benefits should increase at the same rate as the interest on 30-year government bonds, so American seniors do not have to wonder whether they will receive a benefit increase each year. Congress should also work with state leaders to attract more general practitioners to underserved areas and work across party lines on high insurance costs. Americans should not pay more for medications than Europeans, and the country needs infrastructure to manufacture them domestically. Substance abuse and mental health initiatives must remain a priority."
+        },
+        {
+          "heading": "Gun rights and gun safety",
+          "text": "The right to keep and bear arms should not be infringed, but the Bureau of Alcohol, Tobacco, and Firearms has become overly aggressive in its enforcement, where minor errors on applications can lead to denials or prosecution and risk the livelihoods of Federal Firearms Licensed dealers. The ATF should collaborate with dealers rather than oppose them. Proposes federal funding for state and local governments to offer free gun safety classes."
+        },
+        {
+          "heading": "Criminal justice and law enforcement",
+          "text": "Advocates for HR 9745, the Lifesaving Gear for Police Act, which provides state and local law enforcement with military surplus equipment, countering the limits of Executive Order 14074. Would propose amendments so law enforcement has the tools it needs, protect officers from overreach, and maintain local control over decisions such as body camera usage and response to behavioral crises, while also working toward criminal justice reform so all Americans feel safe."
+        },
+        {
+          "heading": "Small business and jobs",
+          "text": "Would advocate for Economic Development Zones in FL-6 to encourage local business growth and provide financial incentives for citizens to start businesses. Having navigated the Small Business Administration when starting his own construction business, proposes expanding SBA offices to every congressional district so new entrepreneurs have accessible support."
+        },
+        {
+          "heading": "Foreign policy",
+          "text": "The United States must reclaim its sovereignty as a global leader, free from foreign lobbies he says have hijacked American foreign policy and led to endless wars. Opposes expanding overseas military footprints, favoring non-aggression pacts and lease agreements only where they enhance U.S. security. On Ukraine, does not support further weapons or funds and argues a peace deal must be negotiated without U.S. escalation. Would continue supporting NATO's defensive role while holding members strictly accountable for their financial contributions. On Iran, favors ending proxy conflicts and fostering dialogue rather than regime change."
+        },
+        {
+          "heading": "Infrastructure",
+          "text": "Airport and traffic congestion directly affect communities and quality of life. St. Johns, Flagler and Marion counties are all seeking to upgrade facilities to accommodate growing air traffic. Would work with local leaders to secure the federal funding needed for those upgrades, and advocate increased federal investment to address flooding and beach erosion."
+        }
+      ],
+      "platform_source": "hand_authored",
+      "platform_authored_at": "2026-08-08T16:14:57.137Z",
+      "top_stances": [
+        {
+          "stance_id": "aaron-baker-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Cut federal spending and regulation to reduce inflation and lower energy, grocery, and housing costs for families.",
+          "source_url": "https://aaron4fl6.com/policy",
+          "confidence": 95
+        },
+        {
+          "stance_id": "aaron-baker-education",
+          "issue_slug": "education",
+          "stance": "strongly_support",
+          "summary": "Abolish Department of Education, return control to states, expand vocational training and tuition-free community college.",
+          "source_url": "https://aaron4fl6.com/policy",
+          "confidence": 95
+        },
+        {
+          "stance_id": "aaron-baker-environment",
+          "issue_slug": "environment",
+          "stance": "support",
+          "summary": "Protect air, water, beaches, and wildlife while supporting reasonable regulations and economic growth in Florida.",
+          "source_url": "https://aaron4fl6.com/policy",
+          "confidence": 85
+        },
+        {
+          "stance_id": "aaron-baker-housing",
+          "issue_slug": "housing",
+          "stance": "strongly_support",
+          "summary": "Raise homestead exemption to $250,000, cap property tax increases, transfer HUD homes to residents for ownership.",
+          "source_url": "https://aaron4fl6.com/policy",
+          "confidence": 90
+        },
+        {
+          "stance_id": "aaron-baker-healthcare",
+          "issue_slug": "healthcare",
+          "stance": "support",
+          "summary": "Tie Social Security and healthcare increases to 30-year bond rates, lower drug costs, expand rural practitioners.",
+          "source_url": "https://aaron4fl6.com/policy",
+          "confidence": 85
+        },
+        {
+          "stance_id": "aaron-baker-climate",
+          "issue_slug": "climate",
+          "stance": "support",
+          "summary": "All-of-the-above energy approach: nuclear long-term, natural gas near-term, renewables, and domestic production expansion.",
+          "source_url": "https://aaron4fl6.com/policy",
+          "confidence": 90
+        },
+        {
+          "stance_id": "aaron-baker-guns",
+          "issue_slug": "guns",
+          "stance": "strongly_support",
+          "summary": "Protect Second Amendment rights, reform ATF enforcement, provide federal funding for state gun safety classes.",
+          "source_url": "https://aaron4fl6.com/policy",
+          "confidence": 90
+        },
+        {
+          "stance_id": "aaron-baker-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "support",
+          "summary": "Support law enforcement with military surplus equipment, maintain local control over policing decisions, pursue criminal justice reform.",
+          "source_url": "https://aaron4fl6.com/policy",
+          "confidence": 85
+        },
+        {
+          "stance_id": "aaron-baker-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "oppose",
+          "summary": "Oppose overseas military expansion, reject further Ukraine aid, pursue non-aggression pacts, end Iran proxy conflicts.",
+          "source_url": "https://aaron4fl6.com/policy",
+          "confidence": 90
+        },
+        {
+          "stance_id": "aaron-baker-government_reform",
+          "issue_slug": "government_reform",
+          "stance": "strongly_support",
+          "summary": "Expand SBA offices nationwide, establish Economic Development Zones, streamline federal agencies for efficiency.",
+          "source_url": "https://aaron4fl6.com/policy",
+          "confidence": 85
+        }
+      ],
+      "activated_at": "2026-08-08T16:16:32.394Z",
+      "verified_at": "2026-08-08T16:16:32.394Z"
     },
     {
       "name": "Charles Gambaro",

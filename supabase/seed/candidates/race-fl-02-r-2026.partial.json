@@ -136,7 +136,7 @@
       "race_id": "race-fl-02-r-2026",
       "fec_candidate_id": "H6FL02356",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -151,7 +151,93 @@
         "individual_contributions": 409786.26,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "bio": "Jim Norton is a Republican candidate for Florida's 2nd Congressional District. A fourth-generation Gulf County resident, he was appointed Gulf County Superintendent of Schools by Governor Rick Scott in 2011 and has served in that role for 15 years. He previously worked in banking as a Senior Vice President and Senior Trust Officer, and holds a law degree from Faulkner University's Jones School of Law.",
+      "website": "https://nortonforflorida.com/issues/",
+      "key_messages": [
+        "Keep education decisions local, with parents, teachers and school boards rather than Washington",
+        "Balance the federal budget by cutting spending; Washington has a spending problem, not a revenue problem",
+        "Protect Medicare and Social Security benefits for current retirees while reforming the programs for long-term solvency",
+        "Hold the VA accountable so veterans get timely care, and keep investing in Panhandle military installations",
+        "Protect North Florida's waterways through local stewardship rather than federal mandates"
+      ],
+      "campaign_themes": [
+        {
+          "heading": "Education",
+          "text": "Education decisions are best made at the local level by parents, teachers, and school boards, not dictated by Washington. Supports parental rights, school choice, and curriculum transparency so families have a meaningful voice in their children's education. Would strengthen career and technical education programs aligned to real workforce needs, including trades, agriculture, and technology. Supports protecting classrooms from political agendas and keeping education focused on core subjects like reading, math, science, and civics, preparing students for college, the workforce, or military service."
+        },
+        {
+          "heading": "Fiscal responsibility and balanced budgets",
+          "text": "Washington has a spending problem, not a revenue problem. The federal government must live within its means, just like families and businesses. Reckless spending and trillion-dollar deficits threaten the economy, fuel inflation, and place an unacceptable burden on future generations. Will push for balanced budgets, reduced federal spending, and a return to responsible governance. Supports eliminating waste, fraud, and abuse across federal agencies and strict oversight of taxpayer dollars, alongside lower taxes, limited government, and pro-growth economic policies."
+        },
+        {
+          "heading": "Medicare and Social Security",
+          "text": "Medicare and Social Security are promises the federal government made to seniors who earned these benefits through a lifetime of hard work, and they must be honored. Opposes any effort to cut benefits for current retirees or those nearing retirement. Also recognizes the need for long-term sustainability and supports responsible reforms that strengthen the programs for future generations without undermining current beneficiaries, including rooting out fraud, improving efficiency, and keeping the programs solvent."
+        },
+        {
+          "heading": "Military and veterans",
+          "text": "The obligation to service members does not end when they take off the uniform. Will fight to make the Department of Veterans Affairs fully accountable, responsive and accessible, cutting through bureaucracy so veterans receive timely healthcare, benefits and support. Supports strengthening partnerships with installations such as Tyndall Air Force Base and Naval Support Activity in Panama City Beach, advocating continued military investment in the Panhandle, and easing the transition of service members into the civilian workforce through job training, credential recognition, and small business opportunities."
+        },
+        {
+          "heading": "Waterways, environment and quality of life",
+          "text": "Conservation and responsible stewardship go hand in hand with economic growth, and protecting waterways is not a partisan issue. Supports practical, locally driven solutions to protect water quality, prevent pollution, and maintain access to outdoor recreation, including working with state and local leaders to safeguard areas like the Choctawhatchee River and Apalachicola Bay. Opposes heavy-handed federal overreach that ignores local needs, favoring commonsense policies that balance conservation with property rights and responsible development."
+        }
+      ],
+      "platform_source": "hand_authored",
+      "platform_authored_at": "2026-08-08T16:14:55.506Z",
+      "top_stances": [
+        {
+          "stance_id": "jim-norton-education",
+          "issue_slug": "education",
+          "stance": "strongly_support",
+          "summary": "Education decisions belong at local level with parents, teachers, and school boards, not Washington. Supports school choice, curriculum transparency, and parental rights.",
+          "source_url": "https://nortonforflorida.com/issues/",
+          "confidence": 95,
+          "track_record_note": "15 years as Gulf County Superintendent of Schools demonstrates commitment to local education leadership and understanding of school governance."
+        },
+        {
+          "stance_id": "jim-norton-government_reform",
+          "issue_slug": "government_reform",
+          "stance": "strongly_support",
+          "summary": "Washington has a spending problem, not a revenue problem. Supports balanced budgets, cutting federal spending, and eliminating waste and fraud.",
+          "source_url": "https://nortonforflorida.com/issues/",
+          "confidence": 95
+        },
+        {
+          "stance_id": "jim-norton-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Supports lower taxes and pro-growth economic policies alongside fiscal responsibility and balanced federal budgets.",
+          "source_url": "https://nortonforflorida.com/issues/",
+          "confidence": 90
+        },
+        {
+          "stance_id": "jim-norton-veterans",
+          "issue_slug": "veterans",
+          "stance": "strongly_support",
+          "summary": "Demands VA accountability for timely veteran care and benefits. Supports continued military investment in Panhandle installations and veteran workforce transition.",
+          "source_url": "https://nortonforflorida.com/issues/",
+          "confidence": 95
+        },
+        {
+          "stance_id": "jim-norton-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Opposes reckless spending and trillion-dollar deficits that threaten the economy and fuel inflation. Advocates limited government and pro-growth policies.",
+          "source_url": "https://nortonforflorida.com/issues/",
+          "confidence": 90
+        },
+        {
+          "stance_id": "jim-norton-environment",
+          "issue_slug": "environment",
+          "stance": "support",
+          "summary": "Supports locally-driven waterway conservation and water quality protection while opposing federal overreach and balancing conservation with property rights.",
+          "source_url": "https://nortonforflorida.com/issues/",
+          "confidence": 85
+        }
+      ],
+      "activated_at": "2026-08-08T16:16:30.759Z",
+      "verified_at": "2026-08-08T16:16:30.759Z"
     },
     {
       "name": "Keith Gross",

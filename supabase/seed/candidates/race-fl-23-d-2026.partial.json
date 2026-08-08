@@ -1011,13 +1011,90 @@
       "race_id": "race-fl-23-d-2026",
       "fec_candidate_id": "H4FL23134",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
       "fec_totals": {
         "no2026Filings": true
-      }
+      },
+      "bio": "Mark Piper is a Democratic candidate for Florida's 23rd Congressional District. He is a business owner and employer, holds an MBA, and describes a master's-level grounding in applied mathematics and management. He calls his campaign Making Sure, and frames it around restoring fiscal responsibility in Washington.",
+      "website": "https://makingsure.net/",
+      "key_messages": [
+        "Cut the cost of living by restoring fiscal responsibility, with the national debt approaching $40 trillion",
+        "Oppose omnibus spending bills, which hide spending and function as a vote for inflation",
+        "Lead audits of scheduled spending authorizations and require large programs to reapply and justify their budgets",
+        "Champion term limits and stronger checks on concentrated power, including limits on emergency central-bank funding",
+        "Re-industrialize America through mining, manufacturing and marketing to create durable jobs"
+      ],
+      "campaign_themes": [
+        {
+          "heading": "Fiscal responsibility and the cost of living",
+          "text": "His stated mission is to protect everyday Americans from rising costs by restoring fiscal responsibility in Washington. With the national debt approaching $40 trillion, household budgets are already strained, and without action personal debt from credit cards, auto loans and subscriptions will force families into painful cuts. Argues Washington too often votes to increase the cost of living through unchecked appropriations, that voting yes on omnibus spending is voting for inflation, and that debt growing at 5% cannot be sustained by growth of 2%. Would fight to reduce unnecessary federal spending, audit wasteful programs, and prioritize policies that protect working families' purchasing power."
+        },
+        {
+          "heading": "Inflation as a regressive tax",
+          "text": "Describes inflation as functioning like a regressive tax: it erodes the value of every dollar, hits everyone, and hurts those with the least disposable income the most, which makes it one of the most intrusive and unfair burdens on working families. Traces inflation to creating money and credit beyond the rate of saving, and argues that when government reaches its limits it can devalue the currency, a choice that shows up as higher everyday prices for taxpayers."
+        },
+        {
+          "heading": "Spending reform in Congress",
+          "text": "Would introduce targeted amendments to appropriations bills to cut wasteful spending and reduce specific projects, agency budgets and overseas accounts. Would lead audits and rigorous reviews of regularly scheduled spending authorizations, and work on budget reconciliation to find responsible, durable savings. Would require USAID and other large programs to reapply and justify their budgets. Promotes alternatives to standard entitlement expansion: adjusting budgets for current Social Security and Medicare obligations and researching supplemental savings options such as Disaster Savings Accounts and HSAs. Supports a balanced budget amendment."
+        },
+        {
+          "heading": "Governance reform",
+          "text": "Says representatives must produce forward-looking ideas that deliver a real cost-of-living decrease rather than symbolic bills that clog the legislative calendar. Would end routine renaming of post offices, oppose omnibus bills that hide spending in favor of transparent legislation, and champion term limits and stronger checks on concentrated power, including 30-year limits on political careers, caps on congressional terms, and strict limits on emergency central-bank funding. Says his votes will be grounded in statistics, probability and empirical research rather than emotion."
+        },
+        {
+          "heading": "Economic renewal and re-industrialization",
+          "text": "Argues America must re-industrialize by expanding responsible mining, manufacturing and marketing to create real jobs and durable wealth. Says government interference through excessive spending, red tape, tariffs and misguided programs cripples output and diverts resources. Would combat financial illiteracy so Americans can protect retirement accounts and plan for the future, and stop socializing losses for large corporations and banks that distort markets and undermine fairness."
+        },
+        {
+          "heading": "Role of government",
+          "text": "Says government should return to basics: provide security, maintain a reliable currency, uphold an impartial court system, and enable free trade. Supports fewer regulations that stifle growth and raise costs, fewer taxes that reduce take-home pay, and stronger accountability to restore fiscal discipline and protect taxpayers, standing for individual rights, limited government, free market capitalism and the rule of law."
+        },
+        {
+          "heading": "Foreign commitments",
+          "text": "Argues that wars and open-ended foreign commitments, naming Iraq, Afghanistan and the current conflict, consume taxpayer resources that could instead be deployed at home to address homelessness and other urgent needs."
+        }
+      ],
+      "platform_source": "hand_authored",
+      "platform_authored_at": "2026-08-08T16:14:58.793Z",
+      "top_stances": [
+        {
+          "stance_id": "mark-piper-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Cut cost of living through fiscal responsibility, spending audits, and re-industrialization via mining and manufacturing.",
+          "source_url": "https://makingsure.net/",
+          "confidence": 95
+        },
+        {
+          "stance_id": "mark-piper-government_reform",
+          "issue_slug": "government_reform",
+          "stance": "strongly_support",
+          "summary": "Champion term limits, stronger checks on concentrated power, limit emergency central-bank funding, and oppose omnibus bills.",
+          "source_url": "https://makingsure.net/",
+          "confidence": 94
+        },
+        {
+          "stance_id": "mark-piper-taxes",
+          "issue_slug": "taxes",
+          "stance": "support",
+          "summary": "Oppose higher taxes; reduce unnecessary spending and restore fiscal discipline to lower cost of living.",
+          "source_url": "https://makingsure.net/",
+          "confidence": 90
+        },
+        {
+          "stance_id": "mark-piper-foreign_policy",
+          "issue_slug": "foreign_policy",
+          "stance": "oppose",
+          "summary": "Oppose open-ended foreign commitments including Iraq and Afghanistan; redirect resources to domestic needs.",
+          "source_url": "https://makingsure.net/",
+          "confidence": 88
+        }
+      ],
+      "activated_at": "2026-08-08T16:16:34.055Z",
+      "verified_at": "2026-08-08T16:16:34.055Z"
     },
     {
       "name": "Victoria Doyle",
