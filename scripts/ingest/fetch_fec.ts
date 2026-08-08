@@ -113,6 +113,55 @@ export interface AttachFecTotalsOptions {
  *     remove an id; its money must not linger). No name-based search
  *     or substring attachment is attempted — removed (T11).
  */
+/**
+ * Decide the coverage date to store, given what the endpoint just reported
+ * and what the fixture already held.
+ *
+ * `normalizeCoverageEndDate` drops a coverage date that lies in the future,
+ * because `/candidate/{id}/totals` reports the MAX coverage across a
+ * candidate's filings including periods that have not closed. That guard is
+ * right, but on its own it also erases a date we already knew.
+ *
+ * Dan Bilzerian is the worked example, twice over. His committee filed an
+ * empty October Quarterly (receipts 0, coverage through 2026-09-30) beside
+ * two real reports. An earlier pull, before that filing landed, recorded his
+ * genuine receipts as through 2026-07-29. The next pull saw only the future
+ * 2026-09-30, dropped it, and would have replaced a correct date with null —
+ * leaving DonorProfile rendering $1,241,449.83 with no date at all. An
+ * undated dollar figure is a worse claim than a dated one, and the earlier
+ * date was not stale: it was the last closed period, and it still is.
+ *
+ * The retention is deliberately narrow. It applies ONLY when receipts are
+ * byte-identical to what produced the stored date. Different receipts mean
+ * activity landed after that period closed, so pairing the new total with
+ * the old date would understate how fresh the money is — a quieter lie than
+ * showing no date. Anything else falls through to null.
+ *
+ * A stored date that is itself in the future is never retained; it fails the
+ * same check that rejected the incoming one.
+ */
+export function retainedCoverageEndDate(
+  fetched: string | null,
+  existing: string | null | undefined,
+  fetchedReceipts: number,
+  existingReceipts: number | undefined,
+  label = 'candidate',
+  now: Date = new Date(),
+): string | null {
+  if (fetched) return fetched;
+  if (typeof existing !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(existing)) return null;
+  if (existing > now.toISOString().slice(0, 10)) return null;
+  if (existingReceipts !== fetchedReceipts) return null;
+
+  console.warn(
+    `[fec] ${label}: the totals endpoint no longer reports a closed coverage date, ` +
+      `but receipts are unchanged at $${fetchedReceipts.toLocaleString()} — keeping the ` +
+      `known last closed period ${existing} rather than dropping the date from a figure ` +
+      `a voter still sees.`,
+  );
+  return existing;
+}
+
 export async function attachFecTotals(
   candidates: MoneyCandidate[],
   { cycle, office }: AttachFecTotalsOptions,
@@ -144,10 +193,17 @@ export async function attachFecTotals(
       continue;
     }
 
-    console.log(`[fec] ${label} (${candidateId}): $${totals.receipts.toLocaleString()} through ${totals.coverage_end_date ?? 'unknown'}`);
+    const coverageEnd = retainedCoverageEndDate(
+      totals.coverage_end_date,
+      c.fec_coverage_end_date,
+      totals.receipts,
+      c.total_raised,
+      label,
+    );
+    console.log(`[fec] ${label} (${candidateId}): $${totals.receipts.toLocaleString()} through ${coverageEnd ?? 'unknown'}`);
     c.total_raised = totals.receipts;
-    c.fec_coverage_end_date = totals.coverage_end_date;
-    c.fec_totals = totals;
+    c.fec_coverage_end_date = coverageEnd;
+    c.fec_totals = { ...totals, coverage_end_date: coverageEnd };
   }
 }
 
