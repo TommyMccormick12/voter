@@ -83,6 +83,8 @@
     "election_date": "2026-08-18",
     "cycle": 2026,
     "election_type": "primary",
-    "primary_party": "D"
+    "primary_party": "D",
+    "no_primary": true,
+    "no_primary_note": "No primary — Gay Valimont qualified unopposed and advances"
   }
 }

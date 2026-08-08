@@ -1002,6 +1002,8 @@
     "cycle": 2026,
     "election_type": "primary",
     "primary_party": "R",
-    "ballotpedia_race_slug": "U.S._House_Florida_District_15_election,_2026_(Republican_primary)"
+    "ballotpedia_race_slug": "U.S._House_Florida_District_15_election,_2026_(Republican_primary)",
+    "no_primary": true,
+    "no_primary_note": "No primary — Laurel Lee qualified unopposed and advances"
   }
 }
