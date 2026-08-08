@@ -88,6 +88,43 @@ describe('scorecard coverage disclosure', () => {
     expect(screen.getByText(/qualified unopposed and advances/i)).toBeInTheDocument();
   });
 
+  it('names the exact number of uncovered candidates when the ballot size is known', async () => {
+    // FL-19 R: 3 profiled, 10 on the ballot. Vague copy here wastes a fact
+    // we actually have.
+    await renderPage(race({ ballot_candidate_count: 10 }), [
+      candidate('a'),
+      candidate('b'),
+      candidate('c'),
+    ]);
+    expect(screen.getByText(/lists 7 other qualified candidates/i)).toBeInTheDocument();
+    expect(screen.getByText(/3 of 10 candidates/i)).toBeInTheDocument();
+  });
+
+  it('uses the singular when exactly one candidate is uncovered', async () => {
+    await renderPage(race({ ballot_candidate_count: 4 }), [
+      candidate('a'),
+      candidate('b'),
+      candidate('c'),
+    ]);
+    expect(screen.getByText(/lists 1 other qualified candidate\./i)).toBeInTheDocument();
+  });
+
+  it('drops the disclosure entirely once the whole ballot is covered', async () => {
+    await renderPage(race({ ballot_candidate_count: 3 }), [
+      candidate('a'),
+      candidate('b'),
+      candidate('c'),
+    ]);
+    expect(screen.queryByText(DISCLOSURE)).not.toBeInTheDocument();
+    expect(screen.queryByText(/other qualified candidate/i)).not.toBeInTheDocument();
+    expect(screen.getByText(/all 3 candidates/i)).toBeInTheDocument();
+  });
+
+  it('keeps the vaguer disclosure when the ballot size is unknown', async () => {
+    await renderPage(race({ ballot_candidate_count: null }), [candidate('a')]);
+    expect(screen.getByText(DISCLOSURE)).toBeInTheDocument();
+  });
+
   it('never states a bare candidate count that would imply a ballot size', async () => {
     await renderPage(race(), [candidate('a'), candidate('b'), candidate('c')]);
     // "3 with policy data" is honest; "3 candidates" claims the field.

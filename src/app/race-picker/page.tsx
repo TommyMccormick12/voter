@@ -6,6 +6,7 @@ import {
 } from '@/lib/data/races';
 import { getCandidateSamplesForRaces } from '@/lib/data/candidates';
 import { getPartyTheme } from '@/lib/party-theme';
+import { coverageCopy } from '@/lib/coverage';
 import { formatLocalDate, daysUntilLocalDate } from '@/lib/dates';
 import { Badge, Button, Card, EmptyState, ErrorState } from '@/components/ui';
 import { dataOk, type DataResult } from '@/lib/data/boundary';
@@ -266,13 +267,13 @@ function RaceCard({
         {!race.district && ` — ${race.state}`}
       </h2>
       <p className="text-sm text-gray-500 mb-5">
-        {/* "with policy data" is load-bearing, not filler. This count is the
-            profiled count, not the ballot count — the roster holds qualified
-            candidates we have not profiled yet. A bare "2 candidates" would
-            state a ballot size that is often wrong. */}
+        {/* Never a bare "N candidates" — that states a ballot size, and this
+            count is only what we profiled. coverageCopy gives the exact
+            "2 of 8" when migration 017 supplied the real total, and falls
+            back to the vaguer wording when it did not. */}
         {candidates.count === 0
           ? 'Candidate data being curated'
-          : `${candidates.count} candidate${candidates.count === 1 ? '' : 's'} with policy data`}
+          : coverageCopy(candidates.count, race.ballot_candidate_count).label}
       </p>
       <div className="flex items-center gap-3">
         {candidates.count > 0 && (

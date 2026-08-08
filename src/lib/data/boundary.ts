@@ -111,6 +111,9 @@ export function toRace(row: Record<string, unknown>): Race {
     // Migration 013 and seed_races.ts provide the no-primary state.
     no_primary: Boolean(row.no_primary),
     no_primary_note: strOrNull(row.no_primary_note),
+    // Migration 017. numOrNull keeps an absent column as null rather than
+    // 0 — a 0 here would tell a voter the ballot is empty.
+    ballot_candidate_count: numOrNull(row.ballot_candidate_count),
   };
 }
 
