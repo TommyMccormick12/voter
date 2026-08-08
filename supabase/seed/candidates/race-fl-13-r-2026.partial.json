@@ -988,6 +988,8 @@
     "cycle": 2026,
     "election_type": "primary",
     "primary_party": "R",
-    "ballotpedia_race_slug": "U.S._House_Florida_District_13_election,_2026_(Republican_primary)"
+    "ballotpedia_race_slug": "U.S._House_Florida_District_13_election,_2026_(Republican_primary)",
+    "no_primary": true,
+    "no_primary_note": "No primary — Anna Paulina Luna qualified unopposed and advances"
   }
 }
