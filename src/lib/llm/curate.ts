@@ -74,7 +74,22 @@ export function isProceduralVote(voteQuestion: string | null | undefined): boole
 }
 
 const StanceSchema = z.object({
-  issue_slug: z.string(),
+  // The prompt already lists the valid slugs, but a prompt is advice, not a
+  // constraint. Haiku returned `infrastructure` for Charles Gambaro on
+  // 2026-08-08 — not in the taxonomy, so `issueName()` fell through to its
+  // `?? slug` branch and the card would have rendered a bare lowercase
+  // "infrastructure" chip where every other card shows a curated label.
+  // Nothing caught it; a human reading the fixture did.
+  //
+  // Validating here rejects the response and retries, which is the whole
+  // point of having a schema between the model and a voter-facing fixture.
+  // ISSUE_SLUGS is derived from ISSUE_NAMES, so a taxonomy addition widens
+  // this automatically and cannot drift from what the prompt advertises.
+  issue_slug: z
+    .string()
+    .refine((slug) => ISSUE_SLUGS.includes(slug), {
+      message: `issue_slug must be one of: ${ISSUE_SLUGS.join(', ')}`,
+    }),
   stance: z.enum([
     'strongly_support',
     'support',
