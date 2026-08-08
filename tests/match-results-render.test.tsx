@@ -30,6 +30,7 @@ const race: Race = {
   primary_party: 'R',
   no_primary: false,
   no_primary_note: null,
+  ballot_candidate_count: null,
 };
 
 const candidates: CandidateWithFullData[] = [

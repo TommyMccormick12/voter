@@ -6,6 +6,7 @@ import { ScorecardCarousel } from '@/components/ScorecardCarousel';
 import { getPartyTheme } from '@/lib/party-theme';
 import { formatLocalDate } from '@/lib/dates';
 import { Badge } from '@/components/ui';
+import { coverageCopy } from '@/lib/coverage';
 
 interface PageProps {
   params: Promise<{ raceId: string }>;
@@ -42,6 +43,14 @@ export default async function ScorecardsPage({ params }: PageProps) {
 
   const dateLabel = formatLocalDate(race.election_date);
 
+  // One source for both the header label and the disclosure, so the two can
+  // never disagree about how much of the ballot this page is showing.
+  const coverage = coverageCopy(candidates.length, race.ballot_candidate_count);
+  const uncoveredCount =
+    race.ballot_candidate_count !== null && race.ballot_candidate_count >= candidates.length
+      ? race.ballot_candidate_count - candidates.length
+      : null;
+
   const officeLabel = `${race.office}${
     race.district ? ` — ${race.state}-${race.district}` : ` — ${race.state}`
   }`;
@@ -66,9 +75,9 @@ export default async function ScorecardsPage({ params }: PageProps) {
               <span className={`text-[10px] font-semibold px-2.5 py-0.5 rounded-full ${theme.accent}`}>
                 {partyName}
               </span>
-              {/* Profiled count, not ballot count — see the disclosure below. */}
+              {/* Profiled count, never a bare ballot count — see coverage.ts. */}
               <span>
-                {dateLabel} · {candidates.length} with policy data
+                {dateLabel} · {coverage.label}
               </span>
             </div>
           </div>
@@ -101,10 +110,13 @@ export default async function ScorecardsPage({ params }: PageProps) {
           a thin card set reads as the whole field, which misstates the
           ballot. A no_primary race is genuinely one candidate, so the badge
           above already tells that story and this would contradict it. */}
-      {!race.no_primary && (
+      {!race.no_primary && coverage.hasUncovered && (
         <p className="text-sm text-gray-500 mb-4">
-          Your ballot may list other qualified candidates. We add a candidate
-          here once we verify enough policy evidence to describe them fairly.
+          {uncoveredCount !== null
+            ? `Your ballot lists ${uncoveredCount} other qualified ${
+                uncoveredCount === 1 ? 'candidate' : 'candidates'
+              }. We add a candidate here once we verify enough policy evidence to describe them fairly.`
+            : 'Your ballot may list other qualified candidates. We add a candidate here once we verify enough policy evidence to describe them fairly.'}
         </p>
       )}
 

@@ -28,6 +28,31 @@ function parseArgs(): Args {
   return { raceId };
 }
 
+/**
+ * How many candidates are on this ballot, for the "showing N of M"
+ * denominator (migration 017).
+ *
+ * Reads the fixture's candidate list, which is the FL DOE qualified spine,
+ * and deliberately ignores `active`. The seeded rows hold only candidates
+ * that cleared the evidence gate, so counting those would restate coverage
+ * as the ballot — the exact defect this column exists to fix.
+ *
+ * Returns null rather than 0 when the fixture carries no candidate list.
+ * Null means "unknown" and the UI falls back to its softer disclosure; a 0
+ * would claim an empty ballot.
+ */
+export function ballotCandidateCount(fixture: {
+  race?: { ballot_candidate_count?: number | null };
+  candidates?: unknown[];
+}): number | null {
+  const explicit = fixture.race?.ballot_candidate_count;
+  if (typeof explicit === 'number' && Number.isFinite(explicit) && explicit >= 0) {
+    return Math.floor(explicit);
+  }
+  if (!Array.isArray(fixture.candidates)) return null;
+  return fixture.candidates.length;
+}
+
 async function main() {
   const { raceId } = parseArgs();
   const partialPath = join(CANDIDATE_FIXTURE_DIR, `${raceId}.partial.json`);
@@ -58,6 +83,17 @@ async function main() {
         // Requires migration 013 (no-primary informational state, Spec A5).
         no_primary: r.no_primary ?? false,
         no_primary_note: r.no_primary_note ?? null,
+        // Requires migration 017. The denominator for "showing N of M".
+        //
+        // Counted from the fixture's candidate list, which is the FL DOE
+        // qualified spine — NOT from the seeded rows, which only ever hold
+        // candidates that cleared the evidence gate. Counting seeded rows
+        // would reproduce the very bug this column exists to fix.
+        //
+        // An explicit ballot_candidate_count on the race object wins, so a
+        // race whose true ballot size differs from the fixture list can be
+        // corrected without editing the roster.
+        ballot_candidate_count: ballotCandidateCount(fixture),
       },
       { onConflict: 'id' }
     )

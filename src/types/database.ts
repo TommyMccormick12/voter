@@ -87,6 +87,12 @@ export interface Race {
   no_primary: boolean;
   /** Display copy for the no-primary state. */
   no_primary_note: string | null;
+  /**
+   * Qualified candidates on this ballot (migration 017) — the denominator
+   * for "showing N of M". Null means the ballot size is unknown, never that
+   * the ballot is empty; treat null as "fall back to the vaguer copy".
+   */
+  ballot_candidate_count: number | null;
 }
 
 export interface Candidate {
