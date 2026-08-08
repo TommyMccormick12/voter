@@ -15,7 +15,7 @@
 // Output discipline:
 //   - JSON-only (Zod-parsed, errors out on drift)
 //   - Every stance_id is a stable hash of (candidate_slug + issue_slug)
-//   - Every track_record_note must cite a bill_id or statement_id from
+//   - Every track_record_note must cite a roll_call_id or statement_id from
 //     the input data (validation rejects fabricated citations)
 
 import Anthropic from '@anthropic-ai/sdk';
@@ -35,6 +35,8 @@ export interface CandidateRawData {
   voting_record: Array<{
     bill_id: string;
     bill_title: string;
+    vote_question: string | null;
+    roll_call_id: string;
     bill_summary: string | null;
     vote: string;
     issue_slugs: string[];
@@ -61,8 +63,8 @@ export interface CandidateRawData {
  * back). The term of art is the only thing carrying the inversion, and no
  * voter scanning a card can be expected to parse it.
  *
- * The fixture already holds the signal: `bill_title` stores the vote question
- * ("On Motion to Recommit"), not a bill name. This surfaces it to the model.
+ * The fixture and database preserve this signal in `vote_question`. The
+ * voter-facing `bill_title` can therefore hold the actual bill title.
  */
 export function isProceduralVote(voteQuestion: string | null | undefined): boolean {
   if (!voteQuestion) return false;
@@ -112,7 +114,7 @@ export async function synthesizeStances(
   }
   const client = new Anthropic({ apiKey });
 
-  const validBillIds = new Set(candidate.voting_record.map((v) => v.bill_id));
+  const validRollCallIds = new Set(candidate.voting_record.map((v) => v.roll_call_id));
   const validStatementIds = new Set(
     candidate.statements.map((s) => s.id).filter((id): id is string => Boolean(id))
   );
@@ -124,7 +126,25 @@ export async function synthesizeStances(
     system: [
       {
         type: 'text',
-        text: `You are a non-partisan civic data analyst. Output VALID JSON ONLY, no preamble. Schema: {top_stances: [{issue_slug, stance, summary, source_excerpt?, confidence, track_record_note?, track_record_citations?}]}. Rules: (1) issue_slug MUST be one of: ${ISSUE_SLUGS.join(', ')}. Pick the slug that honestly fits the source material — do not file water-quality or Everglades content under climate, or policing and school-safety content under criminal_justice, when a truer slug exists. (2) stance is how strongly the candidate holds the opinion stated in your summary — it is NOT agreement with the issue_slug topic name. It MUST be exactly one of: strongly_support, support, neutral, oppose, strongly_oppose. (3) summary <=30 words, written in the candidate\'s own framing. (4) confidence 0-100 reflects how strongly the source data supports the stance. (5) track_record_note OPTIONAL and only included when there is a substantive observation tied to specific bills or statements (e.g. "voted YES on hr7567-119 aligning with stance" or "voted NAY on hres1189-119 despite supporting..."). NEVER include meta-comments like "no contradictions found", "no relevant voting record", "insufficient data to verify" — just omit the field entirely. If included, EVERY bill_id you reference in the note text (e.g. "H.Res. 1189", "S. 4465", "hr7567-119") MUST appear in track_record_citations as a valid input bill_id from the VOTING RECORD or input statement_id from STATEMENTS. Citations are a strict whitelist — fabricated citations will be rejected. (6) Use bill_id strings exactly as they appear in the input (e.g. "hres1189-119"), not freeform names. (7) Flag contradictions ("voted NAY despite supporting...") or alignment ("voted YES on H.R.X") in the note text. Never editorialize. Never claim positions not in the source.`,
+        text: [
+          'You are a non-partisan civic data analyst. Output valid JSON only. Do not add a preamble.',
+          'Schema: {top_stances: [{issue_slug, stance, summary, source_excerpt?, confidence, track_record_note?, track_record_citations?}]}.',
+          `The issue_slug must be one of: ${ISSUE_SLUGS.join(', ')}.`,
+          'Select the issue slug that best fits the source material.',
+          'The stance value shows how strongly the candidate holds the opinion in the summary.',
+          'It does not show agreement with the issue_slug name.',
+          'The stance value must be strongly_support, support, neutral, oppose, or strongly_oppose.',
+          'Write the summary in 30 words or fewer. Use the candidate\'s own framing.',
+          'Set confidence from 0 through 100. Use the strength of the source evidence.',
+          'Add track_record_note only for a substantive observation about a listed vote or statement.',
+          'Do not add meta-comments about missing records, missing contradictions, or insufficient data.',
+          'For a vote citation, use the exact roll_call_id from VOTING RECORD.',
+          'For a statement citation, use the exact statement_id from STATEMENTS.',
+          'Put each cited identifier in track_record_citations. The citation list is a strict whitelist.',
+          'Never use bill_id as a voting citation. One bill can have multiple opposed roll calls.',
+          'State vote alignment or contradiction in track_record_note. Do not editorialize.',
+          'Do not claim a position that the source does not contain.',
+        ].join(' '),
       },
     ],
     messages: [{ role: 'user', content: userPrompt }],
@@ -148,9 +168,9 @@ export async function synthesizeStances(
 
   // Validate citations + auto-repair missing ones.
   //
-  // Haiku reliably writes bill_ids INSIDE the note text but inconsistently
+  // Haiku reliably writes roll_call_ids INSIDE the note text but inconsistently
   // populates track_record_citations even when the prompt requires it.
-  // We solve this server-side: extract bill-id-like strings from the note
+  // We solve this server-side: extract roll-call IDs from the note
   // text, validate each against the input voting record, and rebuild the
   // citations array. Fabricated citations still throw (whitelist-only).
   const validatedStances: TopStance[] = parsed.top_stances.map((s) => {
@@ -159,19 +179,19 @@ export async function synthesizeStances(
     // Collect citations from both fields: what Haiku explicitly listed,
     // PLUS what it referenced inline in the note text.
     const explicit = s.track_record_citations ?? [];
-    const inlineFromNote = extractBillIdsFromText(s.track_record_note ?? '');
+    const inlineFromNote = extractRollCallIdsFromText(s.track_record_note ?? '');
     const allCandidates = new Set<string>([...explicit, ...inlineFromNote]);
 
     const validated: string[] = [];
     for (const cit of allCandidates) {
-      if (validBillIds.has(cit) || validStatementIds.has(cit)) {
+      if (validRollCallIds.has(cit) || validStatementIds.has(cit)) {
         validated.push(cit);
         continue;
       }
       // Treat unknown citations as fabrication only if Haiku put it in the
       // explicit list. Inline-from-note extractions that don't match a real
-      // bill_id are silently dropped (likely a parsing false positive on
-      // freeform text like "H.R. 7567" which won't match "hr7567-119").
+      // roll_call_id are silently dropped. This avoids false fabrication
+      // errors for free-form bill names in the note text.
       if (explicit.includes(cit)) {
         throw new Error(
           `Haiku cited unknown source "${cit}" for ${candidate.name} ${s.issue_slug}. Refusing fabricated citation.`,
@@ -213,14 +233,18 @@ function buildPrompt(c: CandidateRawData): string {
       : ['(none)']),
     '',
     'VOTING RECORD (most recent first).',
-    'NOTE: the quoted text is the VOTE QUESTION, not a bill title. Rows marked',
+    'Each row gives the bill title and the exact vote question. Rows marked',
     '[PROCEDURAL] are motions about handling the bill, not its substance —',
     'their meaning INVERTS: a NAY on a motion to recommit generally supports',
     'the underlying bill, and a YEA generally opposes it as written.',
     ...(c.voting_record.length > 0
       ? c.voting_record.slice(0, 30).map(
-          (v) =>
-            `- bill_id="${v.bill_id}"${isProceduralVote(v.bill_title) ? ' [PROCEDURAL]' : ''} | ${v.vote.toUpperCase()} on "${v.bill_title}" (${v.vote_date}) [issues: ${v.issue_slugs.join(',') || 'unknown'}]`
+          (v) => {
+            // Fixtures written before migration 016 stored the question in
+            // bill_title. Keep that fallback until every fixture is re-ingested.
+            const voteQuestion = v.vote_question ?? v.bill_title;
+            return `- roll_call_id="${v.roll_call_id}" | bill_id="${v.bill_id}"${isProceduralVote(voteQuestion) ? ' [PROCEDURAL]' : ''} | ${v.vote.toUpperCase()} on "${v.bill_title}" | question="${voteQuestion}" (${v.vote_date}) [issues: ${v.issue_slugs.join(',') || 'unknown'}]`;
+          }
         )
       : ['(none — challenger or not yet in office)']),
     '',
@@ -239,32 +263,21 @@ function buildPrompt(c: CandidateRawData): string {
           .map((i) => `- ${i.industry_name}: $${i.amount.toLocaleString()}`)
       : ['(none)']),
     '',
-    'TASK: Produce top_stances JSON. Cover the candidate\'s strongest stances on issues where the source data gives clear signal. Skip issues with no signal. If a voting record contradicts a stated message, set track_record_note flagging it and cite the bill_id. If a top donor industry conflicts with a stance, flag it in track_record_note (no citation needed for donor data). Output JSON only.',
+    'TASK: Produce top_stances JSON. Cover the candidate\'s strongest stances on issues where the source data gives clear signal. Skip issues with no signal. If a voting record contradicts a stated message, set track_record_note and cite the roll_call_id. If a top donor industry conflicts with a stance, flag it in track_record_note (no citation needed for donor data). Output JSON only.',
   ];
   return parts.filter(Boolean).join('\n');
 }
 
 /**
- * Pull out any bill_id-like strings from a free-form track_record_note.
- * Returns the canonical lowercase form (e.g. "hres1189-119"). Used to
- * auto-populate track_record_citations when Haiku references a bill in
- * the note text but forgets to add it to the citations array.
- *
- * Matches both canonical forms ("hres1189-119") and freeform mentions
- * ("H.Res. 1189", "S. 4465") — the latter get normalized to the canonical
- * form so they can be checked against validBillIds.
+ * Pull exact roll_call_id strings from a free-form track_record_note.
+ * This repairs a missing citations array when the note includes the ID.
  */
-function extractBillIdsFromText(text: string): string[] {
+function extractRollCallIdsFromText(text: string): string[] {
   if (!text) return [];
   const found = new Set<string>();
-  // Canonical form: typeNNN-congress (e.g. hres1189-119, hr7567-119, s4465-119)
-  for (const m of text.matchAll(/\b(hr|hres|hjres|hconres|s|sres|sjres|sconres)\d+-\d+\b/gi)) {
+  for (const m of text.matchAll(/\b(?:house-\d+-[12]-\d+|senate-\d+-\d+)\b/gi)) {
     found.add(m[0].toLowerCase());
   }
-  // Freeform: "H.Res. 1189", "H.R. 7567", "S. 4465" — congress unknown
-  // (caller validates against bill_ids, so freeform mentions without
-  // -<congress> won't match anything in validBillIds; that's intentional
-  // — only canonical form survives the whitelist check).
   return Array.from(found);
 }
 

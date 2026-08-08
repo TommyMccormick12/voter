@@ -132,6 +132,9 @@ function buildChildRows(
   ).map((v) => ({
     bill_id: v.bill_id,
     bill_title: v.bill_title,
+    // Legacy fixtures stored the question in bill_title. Keep that value
+    // when vote_question is absent so migration 016 never receives a blank.
+    vote_question: v.vote_question ?? v.bill_title,
     bill_summary: v.bill_summary ?? null,
     vote: v.vote,
     issue_slugs: v.issue_slugs ?? [],
@@ -139,6 +142,7 @@ function buildChildRows(
     source: v.source ?? 'govtrack',
     source_url: v.source_url ?? null,
     significance: v.significance ?? 'major',
+    roll_call_id: v.roll_call_id,
   }));
 
   const stmtRows = (

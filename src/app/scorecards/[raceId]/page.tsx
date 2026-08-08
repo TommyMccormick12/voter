@@ -5,6 +5,7 @@ import { getCandidatesForRace } from '@/lib/data/candidates';
 import { ScorecardCarousel } from '@/components/ScorecardCarousel';
 import { getPartyTheme } from '@/lib/party-theme';
 import { formatLocalDate } from '@/lib/dates';
+import { Badge } from '@/components/ui';
 
 interface PageProps {
   params: Promise<{ raceId: string }>;
@@ -81,6 +82,18 @@ export default async function ScorecardsPage({ params }: PageProps) {
           </Link>
         ) : null}
       </div>
+
+      {race.no_primary && (
+        <div className="flex items-start gap-3 rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 mb-6">
+          <Badge tone="info" className="flex-shrink-0">
+            No primary
+          </Badge>
+          <p className="text-sm text-blue-950">
+            {race.no_primary_note ??
+              'No primary — the qualified candidate advances unopposed.'}
+          </p>
+        </div>
+      )}
 
       <p className="text-sm text-gray-500 mb-4 hidden lg:block">
         Browse scorecards. Click any card for the full record.

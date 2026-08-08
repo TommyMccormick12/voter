@@ -32,6 +32,7 @@ import {
 } from '../../src/lib/api-clients/legislators';
 import {
   getMemberHouseVotes,
+  getBillDetail,
   billIdFromHouseVote,
   billUrlFromHouseVote,
   normalizeVoteCast,
@@ -86,6 +87,8 @@ function inferIssues(billTitle: string, billSummary: string | null): string[] {
 export interface VoteRecordRow {
   bill_id: string;
   bill_title: string;
+  /** The exact roll-call question, separate from the voter-facing bill title. */
+  vote_question: string | null;
   bill_summary: string | null;
   vote: 'yea' | 'nay' | 'present' | 'absent' | 'no_vote';
   issue_slugs: string[];
@@ -100,9 +103,9 @@ export interface VoteRecordRow {
    * `bill_id` (e.g. a Nay on the Motion to Recommit, a Yea on Passage of
    * the same bill) — this field is what identifies a single, unrepeatable
    * roll call, so it's the correct key for the contradiction check below.
-   * Not written to the DB (seed_candidates.ts whitelists insert columns
-   * and does not include it); it exists only to make this fixture-stage
-   * check correct.
+   * Migration 016 and seed_candidates.ts persist this value. Synthesis
+   * citations use it to select one exact vote when a bill has multiple
+   * roll calls.
    */
   roll_call_id: string;
 }
@@ -160,16 +163,38 @@ export function assertNoYeaNayContradiction(rows: VoteRecordRow[], label: string
   }
 }
 
-function houseVotesToRows(votes: MemberHouseVote[]): VoteRecordRow[] {
-  return votes.map(({ vote, position }) => {
+async function houseVotesToRows(votes: MemberHouseVote[]): Promise<VoteRecordRow[]> {
+  return Promise.all(votes.map(async ({ vote, position }) => {
     const billId =
       billIdFromHouseVote(vote) ??
       `housevote-${vote.congress}-${vote.sessionNumber}-${vote.rollCallNumber}`;
-    const title = vote.voteQuestion ?? `House roll call ${vote.rollCallNumber}`;
+    const voteQuestion = vote.voteQuestion ?? null;
+    const fallbackTitle = voteQuestion ?? `House roll call ${vote.rollCallNumber}`;
+    let title = fallbackTitle;
+
+    if (vote.legislationType && vote.legislationNumber) {
+      try {
+        const bill = await getBillDetail(
+          vote.congress,
+          vote.legislationType,
+          vote.legislationNumber,
+        );
+        if (bill?.title?.trim()) title = bill.title.trim();
+      } catch (error) {
+        // Enrichment must not remove a truthful vote label or abort an
+        // otherwise valid ingest. The original question stays as the title.
+        console.warn(
+          `[votes] Bill-title enrichment failed for ${billId}; using the vote question.`,
+          error,
+        );
+      }
+    }
+
     const summary = vote.result ?? null;
     return {
       bill_id: billId,
       bill_title: title,
+      vote_question: voteQuestion,
       bill_summary: summary,
       vote: normalizeVoteCast(position.voteCast),
       issue_slugs: inferIssues(title, summary),
@@ -179,7 +204,7 @@ function houseVotesToRows(votes: MemberHouseVote[]): VoteRecordRow[] {
       significance: vote.legislationType || vote.amendmentType ? 'major' : 'procedural',
       roll_call_id: `house-${vote.congress}-${vote.sessionNumber}-${vote.rollCallNumber}`,
     };
-  });
+  }));
 }
 
 function senateVotesToRows(votes: MemberSenateVote[]): VoteRecordRow[] {
@@ -191,6 +216,7 @@ function senateVotesToRows(votes: MemberSenateVote[]): VoteRecordRow[] {
     return {
       bill_id: billId,
       bill_title: title,
+      vote_question: rollCall.vote_question ?? null,
       bill_summary: summary,
       vote: normalizeCastCode(cast_code),
       issue_slugs: inferIssues(title, summary),
@@ -241,7 +267,9 @@ export async function attachVotingRecords(
 
     const rows =
       chamber === 'house'
-        ? houseVotesToRows(await getMemberHouseVotes(bioguideId, congress, [2, 1], VOTES_PER_CANDIDATE))
+        ? await houseVotesToRows(
+            await getMemberHouseVotes(bioguideId, congress, [2, 1], VOTES_PER_CANDIDATE),
+          )
         : senateVotesToRows(await getMemberSenateVotes(bioguideId, congress, VOTES_PER_CANDIDATE));
 
     assertNoUndefinedBillIds(rows, label);

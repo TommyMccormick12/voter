@@ -120,10 +120,8 @@ export async function getRace(raceId: string): Promise<DataResult<Race | null>> 
 
   const { data, error } = await getAnonClient()
     .from('races')
-    // '*' on purpose: no_primary/no_primary_note arrive with migration 013,
-    // and an explicit column list would request a nonexistent column before it
-    // is applied (breaking every query) or silently omit it after (shipping
-    // the A5 no-primary state dark). boundary.ts extracts fields defensively.
+    // '*' includes the no-primary fields from migration 013. boundary.ts
+    // extracts each application field defensively.
     .select('*')
     .eq('id', raceId)
     .maybeSingle();
@@ -149,10 +147,8 @@ export async function getRacesByIds(ids: string[]): Promise<DataResult<Race[]>> 
 
   const { data, error } = await getAnonClient()
     .from('races')
-    // '*' on purpose: no_primary/no_primary_note arrive with migration 013,
-    // and an explicit column list would request a nonexistent column before it
-    // is applied (breaking every query) or silently omit it after (shipping
-    // the A5 no-primary state dark). boundary.ts extracts fields defensively.
+    // '*' includes the no-primary fields from migration 013. boundary.ts
+    // extracts each application field defensively.
     .select('*')
     .in('id', ids);
   if (error) {

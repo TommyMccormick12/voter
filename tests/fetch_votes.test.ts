@@ -20,8 +20,9 @@ import {
   type VoteCandidate,
   type VoteRecordRow,
 } from '../scripts/ingest/fetch_votes';
-import { getMemberHouseVotes } from '@/lib/api-clients/congress-gov';
+import { getBillDetail, getMemberHouseVotes } from '@/lib/api-clients/congress-gov';
 import { getMemberSenateVotes } from '@/lib/api-clients/voteview';
+import { isProceduralVote } from '@/lib/llm/curate';
 
 vi.mock('@/lib/api-clients/congress-gov', async () => {
   const actual = await vi.importActual<typeof import('@/lib/api-clients/congress-gov')>(
@@ -30,6 +31,7 @@ vi.mock('@/lib/api-clients/congress-gov', async () => {
   return {
     ...actual,
     getMemberHouseVotes: vi.fn(),
+    getBillDetail: vi.fn(),
   };
 });
 
@@ -44,6 +46,7 @@ vi.mock('@/lib/api-clients/voteview', async () => {
 });
 
 const mockedGetMemberHouseVotes = vi.mocked(getMemberHouseVotes);
+const mockedGetBillDetail = vi.mocked(getBillDetail);
 const mockedGetMemberSenateVotes = vi.mocked(getMemberSenateVotes);
 
 // Default roll_call_id is derived from bill_id so tests that only override
@@ -57,6 +60,7 @@ function row(overrides: Partial<VoteRecordRow> = {}): VoteRecordRow {
   return {
     bill_id: billId,
     bill_title: 'Test Act',
+    vote_question: 'On Passage',
     bill_summary: null,
     vote: 'yea',
     issue_slugs: [],
@@ -146,6 +150,8 @@ describe('assertNoYeaNayContradiction (DATA-AUDIT: 89 YEA+NAY pairs on one bill)
 describe('attachVotingRecords (ID-only crosswalk, no name matching)', () => {
   beforeEach(() => {
     mockedGetMemberHouseVotes.mockReset();
+    mockedGetBillDetail.mockReset();
+    mockedGetBillDetail.mockResolvedValue(null);
     mockedGetMemberSenateVotes.mockReset();
   });
 
@@ -199,10 +205,95 @@ describe('attachVotingRecords (ID-only crosswalk, no name matching)', () => {
     expect(candidates[0].voting_record).toHaveLength(1);
     expect(candidates[0].voting_record?.[0]).toMatchObject({
       bill_id: 's4465-119',
+      bill_title: 'On Passage',
+      vote_question: 'On Passage',
+      roll_call_id: 'house-119-2-155',
       vote: 'yea',
       source: 'congress_gov',
     });
     expect(mockedGetMemberSenateVotes).not.toHaveBeenCalled();
+  });
+
+  it('enriches bill_title but keeps the procedural vote question for inversion checks', async () => {
+    mockedGetMemberHouseVotes.mockResolvedValueOnce([
+      {
+        vote: {
+          congress: 119,
+          sessionNumber: 2,
+          rollCallNumber: 410,
+          startDate: '2026-03-01T00:00:00Z',
+          legislationType: 'HR',
+          legislationNumber: '7567',
+          voteQuestion: 'On Motion to Recommit',
+          result: 'Failed',
+          members: [],
+        },
+        position: { bioguideId: 'X000001', voteCast: 'No' },
+      },
+    ]);
+    mockedGetBillDetail.mockResolvedValueOnce({
+      title: 'Take Care of Americas Veterans Act',
+      latestActionText: null,
+      latestActionDate: null,
+    });
+    const candidates: VoteCandidate[] = [
+      { name: 'Procedural Vote Test', fec_candidate_id: 'H1TEST02' },
+    ];
+
+    await attachVotingRecords(
+      candidates,
+      new Map([['H1TEST02', 'X000001']]),
+      { chamber: 'house' },
+    );
+
+    const enriched = candidates[0].voting_record?.[0];
+    expect(enriched).toMatchObject({
+      bill_title: 'Take Care of Americas Veterans Act',
+      vote_question: 'On Motion to Recommit',
+      roll_call_id: 'house-119-2-410',
+    });
+    expect(isProceduralVote(enriched?.vote_question)).toBe(true);
+  });
+
+  it('keeps the vote question as bill_title when enrichment fails', async () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
+    mockedGetMemberHouseVotes.mockResolvedValueOnce([
+      {
+        vote: {
+          congress: 119,
+          sessionNumber: 2,
+          rollCallNumber: 155,
+          startDate: '2026-04-30T00:00:00Z',
+          legislationType: 'S',
+          legislationNumber: '4465',
+          voteQuestion: 'On Passage',
+          members: [],
+        },
+        position: { bioguideId: 'W000806', voteCast: 'Aye' },
+      },
+    ]);
+    mockedGetBillDetail.mockRejectedValueOnce(new Error('Congress.gov unavailable'));
+    const candidates: VoteCandidate[] = [
+      { name: 'Fallback Test', fec_candidate_id: 'H0FL11999' },
+    ];
+
+    await expect(
+      attachVotingRecords(
+        candidates,
+        new Map([['H0FL11999', 'W000806']]),
+        { chamber: 'house' },
+      ),
+    ).resolves.not.toThrow();
+
+    expect(candidates[0].voting_record?.[0]).toMatchObject({
+      bill_title: 'On Passage',
+      vote_question: 'On Passage',
+    });
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('using the vote question'),
+      expect.any(Error),
+    );
+    warn.mockRestore();
   });
 
   it('routes to Voteview for chamber "senate" and never calls the House client', async () => {
@@ -230,6 +321,8 @@ describe('attachVotingRecords (ID-only crosswalk, no name matching)', () => {
     expect(mockedGetMemberHouseVotes).not.toHaveBeenCalled();
     expect(candidates[0].voting_record?.[0]).toMatchObject({
       bill_id: 's5-119',
+      vote_question: 'On the Cloture Motion',
+      roll_call_id: 'senate-119-1',
       vote: 'nay',
       source: 'voteview',
     });
