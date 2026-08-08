@@ -29,6 +29,13 @@ vi.mock('@/components/ScorecardCarousel', () => ({
 }));
 
 const DISCLOSURE = /your ballot may list other qualified candidates/i;
+const SOFT_MATCH_COPY = /match comparison opens/i;
+
+function matchLinks(raceId: string) {
+  return screen
+    .queryAllByRole('link', { name: /find my best match/i })
+    .filter((el) => el.getAttribute('href') === `/match?race=${raceId}`);
+}
 
 function race(overrides: Record<string, unknown> = {}) {
   return {
@@ -123,6 +130,62 @@ describe('scorecard coverage disclosure', () => {
   it('keeps the vaguer disclosure when the ballot size is unknown', async () => {
     await renderPage(race({ ballot_candidate_count: null }), [candidate('a')]);
     expect(screen.getByText(DISCLOSURE)).toBeInTheDocument();
+  });
+
+  // The match CTA gate. Presentational only — the match API rejects a race
+  // with zero candidates and nothing else — but the CTA is what a voter can
+  // actually find, so it decides whether the feature exists for them.
+  it('offers match on a fully covered two-candidate race, in both places', async () => {
+    // FL-Sen D. Two on the ballot, both profiled, and dark before this rule.
+    await renderPage(race({ id: 'race-fl-sen-d-2026', district: null, ballot_candidate_count: 2 }), [
+      candidate('a'),
+      candidate('b'),
+    ]);
+    expect(matchLinks('race-fl-sen-d-2026')).toHaveLength(2);
+    expect(screen.queryByText(SOFT_MATCH_COPY)).not.toBeInTheDocument();
+  });
+
+  it('leaves a 3+ race exactly as it was', async () => {
+    await renderPage(race({ ballot_candidate_count: 10 }), [
+      candidate('a'),
+      candidate('b'),
+      candidate('c'),
+    ]);
+    expect(matchLinks('race-fl-19-r-2026')).toHaveLength(2);
+    expect(screen.queryByText(SOFT_MATCH_COPY)).not.toBeInTheDocument();
+  });
+
+  it('withholds match from a partially covered two-candidate race', async () => {
+    // 2 profiled of 5. The three we cannot describe are exactly why ranking
+    // the two would mislead, so the soft copy stays.
+    await renderPage(race({ ballot_candidate_count: 5 }), [candidate('a'), candidate('b')]);
+    expect(matchLinks('race-fl-19-r-2026')).toHaveLength(0);
+    expect(screen.getByText(SOFT_MATCH_COPY)).toBeInTheDocument();
+  });
+
+  it('withholds match when the ballot size is unknown, never assuming full coverage', async () => {
+    await renderPage(race({ ballot_candidate_count: null }), [candidate('a'), candidate('b')]);
+    expect(matchLinks('race-fl-19-r-2026')).toHaveLength(0);
+    expect(screen.getByText(SOFT_MATCH_COPY)).toBeInTheDocument();
+  });
+
+  it('withholds match from a no_primary race, where there is nothing to rank', async () => {
+    await renderPage(
+      race({
+        id: 'race-fl-12-r-2026',
+        district: '12',
+        no_primary: true,
+        no_primary_note: 'No primary — Gus Michael Bilirakis qualified unopposed and advances',
+        ballot_candidate_count: 1,
+      }),
+      [candidate('a')],
+    );
+    expect(matchLinks('race-fl-12-r-2026')).toHaveLength(0);
+  });
+
+  it('never promises match "when we have 3+", which a covered two-way disproves', async () => {
+    await renderPage(race({ ballot_candidate_count: 5 }), [candidate('a'), candidate('b')]);
+    expect(screen.queryByText(/opens when we have 3\+/i)).not.toBeInTheDocument();
   });
 
   it('never states a bare candidate count that would imply a ballot size', async () => {

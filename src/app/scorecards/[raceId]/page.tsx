@@ -6,7 +6,7 @@ import { ScorecardCarousel } from '@/components/ScorecardCarousel';
 import { getPartyTheme } from '@/lib/party-theme';
 import { formatLocalDate } from '@/lib/dates';
 import { Badge } from '@/components/ui';
-import { coverageCopy } from '@/lib/coverage';
+import { coverageCopy, matchIsOpen } from '@/lib/coverage';
 
 interface PageProps {
   params: Promise<{ raceId: string }>;
@@ -46,6 +46,9 @@ export default async function ScorecardsPage({ params }: PageProps) {
   // One source for both the header label and the disclosure, so the two can
   // never disagree about how much of the ballot this page is showing.
   const coverage = coverageCopy(candidates.length, race.ballot_candidate_count);
+  // Same module as the coverage label on purpose: the CTA and the "N of M"
+  // line must never disagree about whether this race is fully covered.
+  const showMatch = matchIsOpen(candidates.length, race.ballot_candidate_count);
   const uncoveredCount =
     race.ballot_candidate_count !== null && race.ballot_candidate_count >= candidates.length
       ? race.ballot_candidate_count - candidates.length
@@ -82,7 +85,7 @@ export default async function ScorecardsPage({ params }: PageProps) {
             </div>
           </div>
         </div>
-        {candidates.length >= 3 ? (
+        {showMatch ? (
           <Link
             href={`/match?race=${race.id}`}
             className={`inline-flex items-center justify-center min-h-[44px] text-sm font-semibold px-5 rounded-lg text-center ${theme.accent}`}
@@ -130,10 +133,11 @@ export default async function ScorecardsPage({ params }: PageProps) {
         layout="auto"
       />
 
-      {/* Match flow only delivers value at 3+ candidates — below that, ranking
-          is trivial and the result is "you match X" with no real signal.
-          Show soft copy instead. */}
-      {candidates.length >= 3 ? (
+      {/* Match opens at 3+ profiled, or on a two-candidate ballot we cover
+          completely — see matchIsOpen in lib/coverage.ts. Below that, ranking
+          a fraction of the field is the misleading part, not the arithmetic,
+          so show soft copy instead. */}
+      {showMatch ? (
         <div className="mt-10 text-center">
           <p className="text-sm text-gray-500 mb-3">
             Want to know which one fits you best?
@@ -148,8 +152,8 @@ export default async function ScorecardsPage({ params }: PageProps) {
       ) : candidates.length > 0 ? (
         <p className="mt-10 text-center text-sm text-gray-500">
           {candidates.length === 1
-            ? '1 candidate with policy data in this race. Explore the full record above; match comparison opens when we have 3+ candidates.'
-            : `${candidates.length} candidates with policy data in this race. Explore their records above; match comparison opens when we have 3+ candidates.`}
+            ? '1 candidate with policy data in this race. Explore the full record above; match comparison opens once we cover more of the ballot.'
+            : `${candidates.length} candidates with policy data in this race. Explore their records above; match comparison opens once we cover more of the ballot.`}
         </p>
       ) : null}
     </main>
