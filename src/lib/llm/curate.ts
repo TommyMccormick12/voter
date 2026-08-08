@@ -31,7 +31,17 @@ export interface CandidateRawData {
   party: string;
   bio: string | null;
   key_messages: string[];
-  campaign_themes: Array<{ heading: string; text: string }>;
+  /**
+   * Platform themes. `source_url` names the page each theme was read from.
+   *
+   * It is optional because most candidates are authored from one source and
+   * do not need it. It exists because some are not: Troy Albers was authored
+   * from his campaign issues page AND his voter-guide answers, and every
+   * stance was stamped with the single campaign-site URL — so three claims
+   * that live only in the guide cited a page that does not contain them.
+   * A voter clicking through found nothing.
+   */
+  campaign_themes: Array<{ heading: string; text: string; source_url?: string }>;
   voting_record: Array<{
     bill_id: string;
     bill_title: string;
@@ -99,6 +109,10 @@ const StanceSchema = z.object({
   ]),
   summary: z.string().max(200),
   source_excerpt: z.string().optional(),
+  // The page this stance was drawn from. Validated against the declared
+  // theme sources below — a URL the input never offered is a fabricated
+  // citation, treated exactly like a fabricated roll-call id.
+  source_url: z.string().optional(),
   confidence: z.number().min(0).max(100),
   track_record_note: z.string().optional(),
   track_record_citations: z.array(z.string()).optional(),
@@ -133,6 +147,14 @@ export async function synthesizeStances(
   const validStatementIds = new Set(
     candidate.statements.map((s) => s.id).filter((id): id is string => Boolean(id))
   );
+  // A stance may cite any page one of its themes was read from, and nothing
+  // else. Same whitelist discipline as roll-call ids: the model may choose
+  // among the sources it was given, never invent one.
+  const declaredSources = new Set(
+    candidate.campaign_themes
+      .map((t) => t.source_url)
+      .filter((u): u is string => typeof u === 'string' && u !== ''),
+  );
 
   const userPrompt = buildPrompt(candidate);
   const response = await client.messages.create({
@@ -159,6 +181,14 @@ export async function synthesizeStances(
           'Never use bill_id as a voting citation. One bill can have multiple opposed roll calls.',
           'State vote alignment or contradiction in track_record_note. Do not editorialize.',
           'Do not claim a position that the source does not contain.',
+          ...(declaredSources.size > 0
+            ? [
+                'Some campaign themes name a source URL in parentheses.',
+                'Set source_url to the URL of the theme the stance draws from.',
+                'Copy that URL exactly. Use only a URL that appears in the input.',
+                'Omit source_url when no themed source supports the stance.',
+              ]
+            : []),
         ].join(' '),
       },
     ],
@@ -219,7 +249,20 @@ export async function synthesizeStances(
       issue_slug: s.issue_slug,
       stance: s.stance as Stance,
       summary: s.summary,
-      source_url: '', // Filled in by the seed step from raw data
+      // A source the input never offered is a fabricated citation. Refuse it
+      // rather than shipping a link a voter cannot check — the same rule the
+      // roll-call whitelist above enforces. An empty value falls through to
+      // the candidate-level website in synthesize_stances.ts, which is
+      // correct for the single-source candidates that are the common case.
+      source_url: (() => {
+        const chosen = s.source_url?.trim();
+        if (!chosen) return '';
+        if (declaredSources.has(chosen)) return chosen;
+        throw new Error(
+          `Haiku cited unknown source "${chosen}" for ${candidate.name} ${s.issue_slug}. ` +
+            `Declared sources: ${[...declaredSources].join(', ') || '(none)'}. Refusing fabricated citation.`,
+        );
+      })(),
       source_excerpt: s.source_excerpt,
       confidence: s.confidence,
       // Drop a note that only announces an absence — see isAbsenceOnlyNote.
@@ -247,7 +290,11 @@ function buildPrompt(c: CandidateRawData): string {
     '',
     'CAMPAIGN THEMES:',
     ...(c.campaign_themes.length > 0
-      ? c.campaign_themes.map((t) => `- [${t.heading}] ${t.text}`)
+      ? c.campaign_themes.map((t) =>
+          t.source_url
+            ? `- [${t.heading}] (source: ${t.source_url}) ${t.text}`
+            : `- [${t.heading}] ${t.text}`,
+        )
       : ['(none)']),
     '',
     'VOTING RECORD (most recent first).',

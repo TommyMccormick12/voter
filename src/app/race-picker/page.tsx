@@ -8,6 +8,7 @@ import { getCandidateSamplesForRaces } from '@/lib/data/candidates';
 import { getPartyTheme } from '@/lib/party-theme';
 import { coverageCopy } from '@/lib/coverage';
 import { formatLocalDate, daysUntilLocalDate } from '@/lib/dates';
+import { electionHasConcluded } from '@/lib/election-status';
 import { Badge, Button, Card, EmptyState, ErrorState } from '@/components/ui';
 import { dataOk, type DataResult } from '@/lib/data/boundary';
 import type { Race } from '@/types/database';
@@ -210,6 +211,9 @@ function RaceCard({
         : 'Primary';
 
   const daysUntil = daysUntilLocalDate(race.election_date, nowMs);
+  // daysUntil clamps at 0, so on its own it cannot distinguish "today" from
+  // "last month". A concluded race must say so rather than fall silent.
+  const concluded = electionHasConcluded(race.election_date, new Date(nowMs));
   const dateLabel = formatLocalDate(race.election_date, {
     month: 'long',
     day: 'numeric',
@@ -254,10 +258,14 @@ function RaceCard({
         </span>
         <div className="text-right">
           <p className="text-xs text-gray-400 font-medium">{dateLabel}</p>
-          {daysUntil > 0 && (
-            <p className={`text-xs font-bold ${theme.text}`}>
-              {daysUntil} {daysUntil === 1 ? 'day' : 'days'}
-            </p>
+          {concluded ? (
+            <p className="text-xs font-bold text-gray-500">Primary held</p>
+          ) : (
+            daysUntil > 0 && (
+              <p className={`text-xs font-bold ${theme.text}`}>
+                {daysUntil} {daysUntil === 1 ? 'day' : 'days'}
+              </p>
+            )
           )}
         </div>
       </div>

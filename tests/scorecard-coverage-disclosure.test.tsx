@@ -12,7 +12,7 @@
 // The counts rendered here are profiled counts, never ballot counts, so a
 // bare "N candidates" must not reappear on either surface.
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 
 const getRaceMock = vi.fn();
@@ -186,6 +186,62 @@ describe('scorecard coverage disclosure', () => {
   it('never promises match "when we have 3+", which a covered two-way disproves', async () => {
     await renderPage(race({ ballot_candidate_count: 5 }), [candidate('a'), candidate('b')]);
     expect(screen.queryByText(/opens when we have 3\+/i)).not.toBeInTheDocument();
+  });
+
+  // Once the vote has happened, ranking candidates is not a smaller version
+  // of the same feature — it is a false invitation. The cards stay as a
+  // record; the CTA does not.
+  describe('after the primary has been held', () => {
+    beforeEach(() => {
+      vi.useFakeTimers();
+      vi.setSystemTime(new Date(2026, 7, 25));
+    });
+    afterEach(() => {
+      vi.useRealTimers();
+    });
+
+    it('withdraws the match CTA from a race that would otherwise offer it', async () => {
+      await renderPage(race({ ballot_candidate_count: 3 }), [
+        candidate('a'),
+        candidate('b'),
+        candidate('c'),
+      ]);
+      expect(matchLinks('race-fl-19-r-2026')).toHaveLength(0);
+    });
+
+    it('says the primary was held, and says it without claiming a result', async () => {
+      await renderPage(race({ ballot_candidate_count: 3 }), [
+        candidate('a'),
+        candidate('b'),
+        candidate('c'),
+      ]);
+      expect(screen.getByText(/this primary was held on/i)).toBeInTheDocument();
+      expect(screen.getByText(/do not report results/i)).toBeInTheDocument();
+      expect(screen.queryByText(/(won|winner|advances|elected)/i)).not.toBeInTheDocument();
+    });
+
+    it('keeps the scorecards themselves, which are the record', async () => {
+      await renderPage(race({ ballot_candidate_count: 3 }), [candidate('a'), candidate('b')]);
+      expect(screen.getByTestId('carousel')).toBeInTheDocument();
+    });
+
+    it('drops the "opens once we cover more" copy, which can no longer come true', async () => {
+      await renderPage(race({ ballot_candidate_count: 8 }), [candidate('a')]);
+      expect(screen.queryByText(SOFT_MATCH_COPY)).not.toBeInTheDocument();
+    });
+  });
+
+  it('still offers match on election day itself, when people are voting', async () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date(2026, 7, 18, 19));
+    await renderPage(race({ ballot_candidate_count: 3 }), [
+      candidate('a'),
+      candidate('b'),
+      candidate('c'),
+    ]);
+    expect(matchLinks('race-fl-19-r-2026')).toHaveLength(2);
+    expect(screen.queryByText(/this primary was held on/i)).not.toBeInTheDocument();
+    vi.useRealTimers();
   });
 
   it('never states a bare candidate count that would imply a ballot size', async () => {

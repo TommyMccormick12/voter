@@ -12,11 +12,15 @@
   "campaign_themes": [
     {
       "heading": "Economy and small business",
-      "text": "A multifaceted plan for economic development in FL-06. Unify businesses, organizations, educational institutions, and government officials around a shared strategy that leverages the district's strengths. Go beyond tax breaks to streamline regulatory processes, making it easier for new businesses to start and existing ones to expand, and reduce unnecessary red tape for entrepreneurs and small businesses. On infrastructure: a growing economy requires robust roads and public transit, utilities, and emerging technologies, which create construction jobs in the short term and attract businesses and improve residents’ quality of life in the long run."
+      "text": "A multifaceted plan for economic development in FL-06. Unify businesses, organizations, educational institutions, and government officials around a shared strategy that leverages the district's strengths. Go beyond tax breaks to streamline regulatory processes, making it easier for new businesses to start and existing ones to expand, and reduce unnecessary red tape for entrepreneurs and small businesses."
     },
     {
       "heading": "Workforce and education",
       "text": "A district's economy is only as strong as its workforce. Advocate for fiscal policies that invest in education and job training programs so workers have the skills to meet the demands of growing industries, which in turn makes FL-06 more attractive to new businesses."
+    },
+    {
+      "heading": "Infrastructure",
+      "text": "A growing economy requires robust infrastructure including roads and public transit, utilities, and emerging technologies. Infrastructure investment creates construction jobs in the short term and attracts businesses and improves residents' quality of life in the long run."
     },
     {
       "heading": "National security and defense",

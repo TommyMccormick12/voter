@@ -21,8 +21,11 @@
 //     "bio": "...",                  (optional)
 //     "key_messages": ["...", "..."], (1-5 short platform bullets)
 //     "campaign_themes": [
-//       { "heading": "Economy", "text": "..." }
+//       { "heading": "Economy", "text": "...", "source_url": "https://..." }
 //     ],
+//     // source_url per theme is optional. Use it whenever the candidate was
+//     // authored from more than one page, or every stance ends up citing
+//     // whichever single page `website` names.
 //     "website": "https://..."       (optional — recorded as source for the synth prompt)
 //   }
 //
@@ -40,7 +43,13 @@ interface AuthoredPayload {
   slug: string;
   bio?: string | null;
   key_messages?: string[];
-  campaign_themes?: Array<{ heading: string; text: string }>;
+  /**
+   * `source_url` is optional per theme. Set it when a candidate was authored
+   * from more than one page — the synthesizer stamps each stance with the
+   * source of the theme it drew from, so a voter clicking through lands on
+   * the page that actually contains the claim.
+   */
+  campaign_themes?: Array<{ heading: string; text: string; source_url?: string }>;
   website?: string | null;
 }
 
