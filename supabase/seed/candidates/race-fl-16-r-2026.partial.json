@@ -256,10 +256,10 @@
           "stance_id": "jason-edward-speir-government_reform",
           "issue_slug": "government_reform",
           "stance": "strongly_support",
-          "summary": "Restore constitutionally limited government by reclaiming legislative authority from unelected bureaucracies and defunding CDC and NIH.",
+          "summary": "Restore constitutionally limited government by reclaiming legislative authority from unelected federal bureaucracies through Congress's power of the purse.",
           "source_url": "https://eddiespeirforcongress.com/",
           "confidence": 95,
-          "track_record_note": "No voting record available as candidate has not held office."
+          "track_record_note": "Core campaign platform emphasizing defunding CDC, NIH, and ending delegation of power to unelected agencies."
         },
         {
           "stance_id": "jason-edward-speir-economy",
@@ -267,8 +267,8 @@
           "stance": "strongly_support",
           "summary": "Fight reckless congressional spending to reduce national debt and inflation. Restrict H-1B visas and outsourcing to increase American wages.",
           "source_url": "https://eddiespeirforcongress.com/",
-          "confidence": 92,
-          "track_record_note": "No voting record available as candidate has not held office."
+          "confidence": 94,
+          "track_record_note": "Primary campaign message emphasizing fiscal discipline and labor protections against visa outsourcing."
         },
         {
           "stance_id": "jason-edward-speir-environment",
@@ -276,8 +276,8 @@
           "stance": "oppose",
           "summary": "Oppose AI data centers as harmful to Florida's environment, privacy, culture, and jobs.",
           "source_url": "https://eddiespeirforcongress.com/",
-          "confidence": 90,
-          "track_record_note": "No voting record available as candidate has not held office."
+          "confidence": 92,
+          "track_record_note": "Prominent campaign position against data center development in Florida district."
         },
         {
           "stance_id": "jason-edward-speir-housing",
@@ -285,17 +285,17 @@
           "stance": "oppose",
           "summary": "End dark money and pay-to-play politics fueling overdevelopment in Florida.",
           "source_url": "https://eddiespeirforcongress.com/",
-          "confidence": 85,
-          "track_record_note": "No voting record available as candidate has not held office."
+          "confidence": 90,
+          "track_record_note": "Primary campaign message addressing development concerns in Bradenton-area congressional district."
         },
         {
-          "stance_id": "jason-edward-speir-immigration",
-          "issue_slug": "immigration",
+          "stance_id": "jason-edward-speir-healthcare",
+          "issue_slug": "healthcare",
           "stance": "oppose",
-          "summary": "Restrict H-1B visa programs and outsourcing to protect American workers and wages.",
+          "summary": "Stop congressional delegation of power to unelected bureaucracies and pharmaceutical industry influence over public health policy.",
           "source_url": "https://eddiespeirforcongress.com/",
           "confidence": 88,
-          "track_record_note": "No voting record available as candidate has not held office."
+          "track_record_note": "Frames CDC and NIH as unelected bureaucracies requiring defunding to restore legislative authority."
         }
       ]
     },

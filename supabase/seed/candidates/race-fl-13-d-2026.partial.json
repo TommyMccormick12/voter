@@ -209,7 +209,56 @@
         "individual_contributions": 2905,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "bio": "John William Liccione is a Democratic candidate for Florida's 13th Congressional District. He is an engineer and cybersecurity executive who served in the U.S. Air Force from 1978 to 1984 and worked as a USAF/NSA intelligence analyst.",
+      "website": "https://johnforpinellas.com",
+      "key_messages": [
+        "Kids First - Above All Else: a declaration of war on child sex trafficking",
+        "Voting rights and election integrity defense, including the STOP THE MAP lawsuit against the current congressional gerrymander",
+        "Address the affordability emergency by putting money back on the kitchen table for families, students, seniors, and the working class"
+      ],
+      "campaign_themes": [
+        {
+          "heading": "Child sex trafficking",
+          "text": "Kids First - Above All Else. Calls for a Declaration of War on Child Sex Trafficking, with a stated strategy, plan of action, and milestones."
+        },
+        {
+          "heading": "Voting rights and redistricting",
+          "text": "Voting Rights and Election Integrity Defense. Backs what his campaign calls the STOP THE MAP lawsuit against the DeSantis Luna-Protection Racket Gerrymander."
+        },
+        {
+          "heading": "Affordability",
+          "text": "The Affordability Emergency. Focused on putting money back on the kitchen table fast for families, students, seniors, and the working class. His campaign lists the detailed strategy and milestones as coming soon."
+        }
+      ],
+      "platform_source": "hand_authored",
+      "platform_authored_at": "2026-08-08T05:20:59.254Z",
+      "top_stances": [
+        {
+          "stance_id": "john-william-liccione-criminal_justice",
+          "issue_slug": "criminal_justice",
+          "stance": "strongly_support",
+          "summary": "Declares war on child sex trafficking with stated strategy, plan of action, and milestones.",
+          "source_url": "https://johnforpinellas.com",
+          "confidence": 95
+        },
+        {
+          "stance_id": "john-william-liccione-government_reform",
+          "issue_slug": "government_reform",
+          "stance": "strongly_support",
+          "summary": "Defends voting rights and election integrity; opposes partisan gerrymandering through STOP THE MAP lawsuit.",
+          "source_url": "https://johnforpinellas.com",
+          "confidence": 90
+        },
+        {
+          "stance_id": "john-william-liccione-economy",
+          "issue_slug": "economy",
+          "stance": "support",
+          "summary": "Addresses affordability emergency by returning money to families, students, seniors, and working class.",
+          "source_url": "https://johnforpinellas.com",
+          "confidence": 85
+        }
+      ]
     },
     {
       "name": "Leela Gray",
