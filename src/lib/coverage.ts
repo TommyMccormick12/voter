@@ -13,6 +13,54 @@
  * cannot drift apart.
  */
 
+/**
+ * Is the ballot total trustworthy enough to state as fact?
+ *
+ * Null means unknown, never zero — that is the whole point of making
+ * `races.ballot_candidate_count` nullable in migration 017. A total smaller
+ * than the number of candidates already on screen is nonsense, so it is
+ * treated the same as unknown.
+ */
+function ballotTotalIsUsable(profiled: number, ballotTotal: number | null): ballotTotal is number {
+  return (
+    typeof ballotTotal === 'number' &&
+    Number.isFinite(ballotTotal) &&
+    ballotTotal > 0 &&
+    ballotTotal >= profiled
+  );
+}
+
+/** True only when every candidate on the ballot is profiled AND we know the ballot size. */
+export function isFullyCovered(profiled: number, ballotTotal: number | null): boolean {
+  return ballotTotalIsUsable(profiled, ballotTotal) && ballotTotal === profiled;
+}
+
+/**
+ * Should the scorecard offer the match flow?
+ *
+ * The 3+ threshold exists to stop the feature appearing on races we have
+ * barely covered, where ranking 1 of 8 candidates tells a voter nothing. It
+ * does not fit a race where coverage is complete: 10 contested races hold
+ * exactly two candidates and profile both, so they can never reach 3 and the
+ * feature stays dark forever — including the U.S. Senate Democratic primary,
+ * the highest-profile race on the site.
+ *
+ * So: 3+ profiled, or a two-candidate ballot we cover completely.
+ *
+ * A partially covered race is deliberately unchanged. 2 profiled of 5 keeps
+ * the soft copy, because the missing three are exactly why ranking the two
+ * would mislead. An unknown ballot size is partial coverage, never full —
+ * guessing there would put the CTA on a race we cannot vouch for.
+ *
+ * This gate is presentational. The match API rejects only a race with zero
+ * candidates, so it has never enforced 3+; a direct link already worked.
+ * This makes the CTA agree with what the product actually supports.
+ */
+export function matchIsOpen(profiled: number, ballotTotal: number | null): boolean {
+  if (profiled >= 3) return true;
+  return profiled === 2 && isFullyCovered(profiled, ballotTotal);
+}
+
 export interface CoverageCopy {
   /** Compact label for a card or a header meta line. */
   label: string;
@@ -31,13 +79,7 @@ export interface CoverageCopy {
  * form.
  */
 export function coverageCopy(profiled: number, ballotTotal: number | null): CoverageCopy {
-  const totalIsUsable =
-    typeof ballotTotal === 'number' &&
-    Number.isFinite(ballotTotal) &&
-    ballotTotal > 0 &&
-    ballotTotal >= profiled;
-
-  if (!totalIsUsable) {
+  if (!ballotTotalIsUsable(profiled, ballotTotal)) {
     return {
       label: `${profiled} with policy data`,
       // Unknown is not the same as none. Keep the soft disclosure showing so
@@ -46,7 +88,7 @@ export function coverageCopy(profiled: number, ballotTotal: number | null): Cove
     };
   }
 
-  const total = ballotTotal as number;
+  const total = ballotTotal;
   if (total === profiled) {
     // Full coverage. Saying "3 of 3" invites the reader to hunt for a
     // missing fourth, so state it plainly instead.
