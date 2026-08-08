@@ -62,12 +62,27 @@ export const MAX_MAXRECORDS = 250;
  * reviewable article count rather than flooding the attach step. */
 export const DEFAULT_MAXRECORDS = 25;
 
+/** Read a positive integer from the environment, else use the default.
+ * A missing, empty, non-numeric, or non-positive value takes the default,
+ * so a malformed override can never disable pacing and start a 429 storm. */
+function envInt(name: string, fallback: number): number {
+  const parsed = Number(process.env[name]);
+  return Number.isFinite(parsed) && parsed > 0 ? Math.floor(parsed) : fallback;
+}
+
 /** GDELT enforces an undocumented per-IP rate limit ("Please limit
  * requests to one every 5 seconds") returned as HTTP 429 or (see file
  * header) HTTP 200 with a non-JSON body. Retrying with a gap comfortably
- * above 5s recovers from transient bursts without looping forever. */
-export const MAX_GDELT_RETRY_ATTEMPTS = 3;
-export const GDELT_RETRY_GAP_MS = 5500;
+ * above 5s recovers from transient bursts without looping forever.
+ *
+ * The three pacing values below are env-overridable. The defaults are the
+ * interactive-run values and are unchanged. A large batch sweep (every
+ * candidate in every race) sustains far more requests than a single-race
+ * ingest, and GDELT tightens its limit under that load — such a run sets
+ * GDELT_MIN_SEARCH_GAP_MS / GDELT_RETRY_GAP_MS / GDELT_MAX_RETRY_ATTEMPTS
+ * higher rather than accepting a sweep where every candidate 429s. */
+export const MAX_GDELT_RETRY_ATTEMPTS = envInt('GDELT_MAX_RETRY_ATTEMPTS', 3);
+export const GDELT_RETRY_GAP_MS = envInt('GDELT_RETRY_GAP_MS', 5500);
 
 /**
  * Proactive spacing between GDELT search requests, independent of the
@@ -78,7 +93,7 @@ export const GDELT_RETRY_GAP_MS = 5500;
  * no-op whenever the previous attempt's own GDELT_RETRY_GAP_MS wait has
  * already covered the gap.
  */
-const GDELT_MIN_SEARCH_GAP_MS = 5000;
+const GDELT_MIN_SEARCH_GAP_MS = envInt('GDELT_MIN_SEARCH_GAP_MS', 5000);
 let lastGdeltSearchAt = 0;
 
 async function throttleGdeltSearch(): Promise<void> {
