@@ -66,9 +66,9 @@ export default async function ScorecardsPage({ params }: PageProps) {
               <span className={`text-[10px] font-semibold px-2.5 py-0.5 rounded-full ${theme.accent}`}>
                 {partyName}
               </span>
+              {/* Profiled count, not ballot count — see the disclosure below. */}
               <span>
-                {dateLabel} · {candidates.length} candidate
-                {candidates.length === 1 ? '' : 's'}
+                {dateLabel} · {candidates.length} with policy data
               </span>
             </div>
           </div>
@@ -93,6 +93,19 @@ export default async function ScorecardsPage({ params }: PageProps) {
               'No primary — the qualified candidate advances unopposed.'}
           </p>
         </div>
+      )}
+
+      {/* Coverage disclosure. The carousel shows only candidates that cleared
+          the evidence bar, so on a contested race it can show fewer people
+          than the ballot lists — FL-19 R profiles 3 of 10. Without this line
+          a thin card set reads as the whole field, which misstates the
+          ballot. A no_primary race is genuinely one candidate, so the badge
+          above already tells that story and this would contradict it. */}
+      {!race.no_primary && (
+        <p className="text-sm text-gray-500 mb-4">
+          Your ballot may list other qualified candidates. We add a candidate
+          here once we verify enough policy evidence to describe them fairly.
+        </p>
       )}
 
       <p className="text-sm text-gray-500 mb-4 hidden lg:block">
