@@ -115,7 +115,7 @@
           "stance_id": "aaron-baker-housing",
           "issue_slug": "housing",
           "stance": "strongly_support",
-          "summary": "Raise homestead exemption to $250,000, cap property tax increases, transfer HUD homes to residents for ownership.",
+          "summary": "Transfer ownership of HUD-managed homes to their residents, arguing federal management creates a cycle of dependency instead of ownership.",
           "source_url": "https://aaron4fl6.com/policy",
           "confidence": 90
         },
@@ -183,7 +183,7 @@
       "race_id": "race-fl-06-r-2026",
       "fec_candidate_id": "H6FL06357",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -198,7 +198,85 @@
         "individual_contributions": 89295,
         "other_political_committee_contributions": 0,
         "coverage_end_date": "2026-07-29"
-      }
+      },
+      "bio": "Charles \"Charlie\" Gambaro is a Republican candidate for Florida's 6th Congressional District. A resident of Palm Coast since 2006, he serves on the city council and is a U.S. Army veteran who previously worked with the Trump administration.",
+      "website": "https://voteforgambaro.com/issues",
+      "key_messages": [
+        "Streamline regulatory processes and cut red tape so new businesses can start and existing ones expand",
+        "Invest in education and job training so FL-06 workers meet the demands of growing industries",
+        "Invest in roads, transit, utilities, and emerging technologies to attract businesses and create jobs",
+        "Give service members the resources they need and strengthen cybersecurity against evolving threats",
+        "Secure the borders with policies that protect communities while respecting legal immigration"
+      ],
+      "campaign_themes": [
+        {
+          "heading": "Economy and small business",
+          "text": "A multifaceted plan for economic development in FL-06. Unify businesses, organizations, educational institutions, and government officials around a shared strategy that leverages the district's strengths. Go beyond tax breaks to streamline regulatory processes, making it easier for new businesses to start and existing ones to expand, and reduce unnecessary red tape for entrepreneurs and small businesses."
+        },
+        {
+          "heading": "Workforce and education",
+          "text": "A district's economy is only as strong as its workforce. Advocate for fiscal policies that invest in education and job training programs so workers have the skills to meet the demands of growing industries, which in turn makes FL-06 more attractive to new businesses."
+        },
+        {
+          "heading": "Infrastructure",
+          "text": "A growing economy requires robust infrastructure including roads and public transit, utilities, and emerging technologies. Infrastructure investment creates construction jobs in the short term and attracts businesses and improves residents' quality of life in the long run."
+        },
+        {
+          "heading": "National security and defense",
+          "text": "National security is the foundation of freedom. Florida is home to important military bases, ports, and a strategic coastline requiring vigilant protection. Priorities are supporting service members with the resources they need, enhancing cybersecurity to defend against evolving threats targeting government and businesses, securing the borders with smart, effective policies that protect communities while respecting legal immigration, and collaborating with allies to address global threats and promote peace."
+        },
+        {
+          "heading": "Governing approach",
+          "text": "Pledges to serve for the enduring good of the country and its people rather than personal or partisan gain, with a focus on the next generation rather than the next election. Commits to integrity and transparency over popular opinion, a long-term vision pursued with district support, and accountability that anticipates future challenges rather than the immediate political landscape."
+        }
+      ],
+      "platform_source": "hand_authored",
+      "platform_authored_at": "2026-08-08T17:37:25.701Z",
+      "top_stances": [
+        {
+          "stance_id": "charles-gambaro-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Streamline regulatory processes, cut red tape, and reduce bureaucracy to help new businesses start and existing ones expand.",
+          "source_url": "https://voteforgambaro.com/issues",
+          "confidence": 95
+        },
+        {
+          "stance_id": "charles-gambaro-education",
+          "issue_slug": "education",
+          "stance": "support",
+          "summary": "Invest in education and job training programs so workers have skills to meet demands of growing industries.",
+          "source_url": "https://voteforgambaro.com/issues",
+          "confidence": 90
+        },
+        {
+          "stance_id": "charles-gambaro-infrastructure",
+          "issue_slug": "infrastructure",
+          "stance": "support",
+          "summary": "Invest in roads, transit, utilities, and emerging technologies to attract businesses and create jobs.",
+          "source_url": "https://voteforgambaro.com/issues",
+          "confidence": 90
+        },
+        {
+          "stance_id": "charles-gambaro-veterans",
+          "issue_slug": "veterans",
+          "stance": "support",
+          "summary": "Give service members the resources they need and strengthen cybersecurity against evolving threats.",
+          "source_url": "https://voteforgambaro.com/issues",
+          "confidence": 85,
+          "track_record_note": "Candidate is a U.S. Army veteran. No voting record available as candidate is not yet in office."
+        },
+        {
+          "stance_id": "charles-gambaro-immigration",
+          "issue_slug": "immigration",
+          "stance": "support",
+          "summary": "Secure borders with smart policies that protect communities while respecting legal immigration.",
+          "source_url": "https://voteforgambaro.com/issues",
+          "confidence": 85
+        }
+      ],
+      "activated_at": "2026-08-08T17:37:39.364Z",
+      "verified_at": "2026-08-08T17:37:39.364Z"
     },
     {
       "name": "Dan Bilzerian",

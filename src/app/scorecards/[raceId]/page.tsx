@@ -7,6 +7,7 @@ import { getPartyTheme } from '@/lib/party-theme';
 import { formatLocalDate } from '@/lib/dates';
 import { Badge } from '@/components/ui';
 import { coverageCopy, matchIsOpen } from '@/lib/coverage';
+import { electionHasConcluded, concludedNotice } from '@/lib/election-status';
 
 interface PageProps {
   params: Promise<{ raceId: string }>;
@@ -49,6 +50,10 @@ export default async function ScorecardsPage({ params }: PageProps) {
   // Same module as the coverage label on purpose: the CTA and the "N of M"
   // line must never disagree about whether this race is fully covered.
   const showMatch = matchIsOpen(candidates.length, race.ballot_candidate_count);
+  // Ranking candidates in a contest that is over is not a smaller version of
+  // the same feature — it is a false invitation. The cards stay as a record.
+  const concluded = electionHasConcluded(race.election_date);
+  const offerMatch = showMatch && !concluded;
   const uncoveredCount =
     race.ballot_candidate_count !== null && race.ballot_candidate_count >= candidates.length
       ? race.ballot_candidate_count - candidates.length
@@ -85,7 +90,7 @@ export default async function ScorecardsPage({ params }: PageProps) {
             </div>
           </div>
         </div>
-        {showMatch ? (
+        {offerMatch ? (
           <Link
             href={`/match?race=${race.id}`}
             className={`inline-flex items-center justify-center min-h-[44px] text-sm font-semibold px-5 rounded-lg text-center ${theme.accent}`}
@@ -94,6 +99,15 @@ export default async function ScorecardsPage({ params }: PageProps) {
           </Link>
         ) : null}
       </div>
+
+      {concluded && (
+        <div className="flex items-start gap-3 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 mb-6">
+          <Badge tone="neutral" className="flex-shrink-0">
+            Primary held
+          </Badge>
+          <p className="text-sm text-gray-700">{concludedNotice(dateLabel)}</p>
+        </div>
+      )}
 
       {race.no_primary && (
         <div className="flex items-start gap-3 rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 mb-6">
@@ -137,7 +151,7 @@ export default async function ScorecardsPage({ params }: PageProps) {
           completely — see matchIsOpen in lib/coverage.ts. Below that, ranking
           a fraction of the field is the misleading part, not the arithmetic,
           so show soft copy instead. */}
-      {showMatch ? (
+      {offerMatch ? (
         <div className="mt-10 text-center">
           <p className="text-sm text-gray-500 mb-3">
             Want to know which one fits you best?
@@ -149,7 +163,7 @@ export default async function ScorecardsPage({ params }: PageProps) {
             Find my best match →
           </Link>
         </div>
-      ) : candidates.length > 0 ? (
+      ) : concluded ? null : candidates.length > 0 ? (
         <p className="mt-10 text-center text-sm text-gray-500">
           {candidates.length === 1
             ? '1 candidate with policy data in this race. Explore the full record above; match comparison opens once we cover more of the ballot.'

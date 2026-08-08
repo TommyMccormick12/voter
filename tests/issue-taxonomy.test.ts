@@ -1,6 +1,6 @@
 // The issue taxonomy lives in two places that must agree: ISSUE_NAMES in
 // src/lib/issues.ts (what the app renders and what stances are filed under)
-// and the `issues` table seeded by supabase/migrations/006 + 015 (what the
+// and the `issues` table seeded by supabase/migrations/006 + 015 + 018 (what the
 // QuickPoll validates submitted slugs against, via src/lib/app/quick-poll.ts).
 //
 // Drift between them is silent and user-visible: a slug present only in code
@@ -38,6 +38,11 @@ describe('issue taxonomy stays in sync between code and migrations', () => {
   const seeded = [
     ...seededIssues('006_seed_issues.sql'),
     ...seededIssues('015_expand_issue_taxonomy.sql'),
+    // 018 adds `infrastructure`. The synthesizer reached for it unprompted
+    // for a candidate whose platform leads with roads and utilities, and
+    // with no such slug the stance had to be dropped rather than filed in a
+    // bucket that would mislead — see the migration header.
+    ...seededIssues('018_infrastructure_issue.sql'),
   ];
 
   it('seeds every slug the app knows about, and no others', () => {

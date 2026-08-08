@@ -1,0 +1,34 @@
+{
+  "slug": "charles-gambaro",
+  "bio": "Charles \"Charlie\" Gambaro is a Republican candidate for Florida's 6th Congressional District. A resident of Palm Coast since 2006, he serves on the city council and is a U.S. Army veteran who previously worked with the Trump administration.",
+  "website": "https://voteforgambaro.com/issues",
+  "key_messages": [
+    "Streamline regulatory processes and cut red tape so new businesses can start and existing ones expand",
+    "Invest in education and job training so FL-06 workers meet the demands of growing industries",
+    "Invest in roads, transit, utilities, and emerging technologies to attract businesses and create jobs",
+    "Give service members the resources they need and strengthen cybersecurity against evolving threats",
+    "Secure the borders with policies that protect communities while respecting legal immigration"
+  ],
+  "campaign_themes": [
+    {
+      "heading": "Economy and small business",
+      "text": "A multifaceted plan for economic development in FL-06. Unify businesses, organizations, educational institutions, and government officials around a shared strategy that leverages the district's strengths. Go beyond tax breaks to streamline regulatory processes, making it easier for new businesses to start and existing ones to expand, and reduce unnecessary red tape for entrepreneurs and small businesses."
+    },
+    {
+      "heading": "Workforce and education",
+      "text": "A district's economy is only as strong as its workforce. Advocate for fiscal policies that invest in education and job training programs so workers have the skills to meet the demands of growing industries, which in turn makes FL-06 more attractive to new businesses."
+    },
+    {
+      "heading": "Infrastructure",
+      "text": "A growing economy requires robust infrastructure including roads and public transit, utilities, and emerging technologies. Infrastructure investment creates construction jobs in the short term and attracts businesses and improves residents' quality of life in the long run."
+    },
+    {
+      "heading": "National security and defense",
+      "text": "National security is the foundation of freedom. Florida is home to important military bases, ports, and a strategic coastline requiring vigilant protection. Priorities are supporting service members with the resources they need, enhancing cybersecurity to defend against evolving threats targeting government and businesses, securing the borders with smart, effective policies that protect communities while respecting legal immigration, and collaborating with allies to address global threats and promote peace."
+    },
+    {
+      "heading": "Governing approach",
+      "text": "Pledges to serve for the enduring good of the country and its people rather than personal or partisan gain, with a focus on the next generation rather than the next election. Commits to integrity and transparency over popular opinion, a long-term vision pursued with district support, and accountability that anticipates future challenges rather than the immediate political landscape."
+    }
+  ]
+}

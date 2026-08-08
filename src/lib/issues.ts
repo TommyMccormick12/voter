@@ -29,6 +29,7 @@ export const ISSUE_NAMES: Record<string, string> = {
   government_reform: 'Government Reform',
   reproductive_rights: 'Reproductive Rights',
   technology: 'Technology & AI',
+  infrastructure: 'Infrastructure',
   civil_rights: 'Civil Rights',
 };
 

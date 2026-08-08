@@ -1,0 +1,42 @@
+{
+  "slug": "luke-murphy",
+  "bio": "Luke Murphy is a Republican candidate for Florida's 2nd Congressional District, based in Havana, Florida. He is an Iraq War veteran and Purple Heart recipient, and a former member of the United States Army.",
+  "website": "https://lukemurphyforcongress.com/issues/",
+  "key_messages": [
+    "Create a Florida Veterans Caucus and cut the VA delays that slow veterans' access to benefits",
+    "Enact congressional term limits and ban career politicians from profiting off public service",
+    "Cut wasteful federal spending and reduce regulation to lower costs for Florida families",
+    "Prepare the next generation for AI's impact on jobs through workforce training and apprenticeships",
+    "Secure the border and enforce immigration law while supporting legal immigration"
+  ],
+  "campaign_themes": [
+    {
+      "heading": "Veterans",
+      "text": "Create a Florida Veterans Caucus focused on expanding access to healthcare, career opportunities, mental health services, and small business support for those who served. Ensure veterans receive faster access to benefits and reduce bureaucratic delays at the VA."
+    },
+    {
+      "heading": "Congressional reform",
+      "text": "Enact congressional term limits to bring fresh leadership and accountability to Washington. Ban career politicians from profiting off public service, and restore trust in government."
+    },
+    {
+      "heading": "Economy and affordability",
+      "text": "Cut wasteful spending and eliminate fraud, waste, and abuse across the federal government. Lower costs for hardworking families by reducing burdensome regulations and unleashing American energy and innovation. Support small businesses and protect Florida jobs from inflation and overregulation."
+    },
+    {
+      "heading": "Jobs and workforce training",
+      "text": "Prepare the next generation for advancements in AI and its inevitable impact on the job market. Expand workforce training, apprenticeships, and partnerships with colleges and technical schools."
+    },
+    {
+      "heading": "Immigration",
+      "text": "Continue to secure the border and enforce the nation's immigration laws. Support legal immigration while stopping the policies that reward illegal entry and overwhelm American communities."
+    },
+    {
+      "heading": "First responders and public safety",
+      "text": "Back law enforcement, firefighters, paramedics, and emergency personnel with the funding, equipment, training, and mental health resources they deserve. Protect the men and women who put their lives on the line to keep communities safe."
+    },
+    {
+      "heading": "Hurricane and storm recovery",
+      "text": "Fight to ensure the Florida Panhandle receives the federal support needed to fully recover from Hurricane Michael and other recent storms. Cut red tape so families, farmers, and small businesses can rebuild faster and stronger."
+    }
+  ]
+}

@@ -77,7 +77,11 @@ async function main() {
       bio: (c.bio as string) ?? null,
       key_messages: (c.key_messages as string[]) ?? [],
       campaign_themes:
-        (c.campaign_themes as Array<{ heading: string; text: string }>) ?? [],
+        (c.campaign_themes as Array<{
+          heading: string;
+          text: string;
+          source_url?: string;
+        }>) ?? [],
       voting_record:
         (c.voting_record as CandidateRawData['voting_record']) ?? [],
       statements: (c.statements as CandidateRawData['statements']) ?? [],
@@ -108,10 +112,22 @@ async function main() {
         (c.website as string) ??
         (c.ballotpedia_url as string) ??
         '';
+      // Per-stance source wins; the candidate-level website is the fallback.
+      // Before this, every stance was stamped with the single `website`
+      // value, so a candidate authored from two pages had three of seven
+      // stances citing a page that did not contain their claim.
       c.top_stances = result.top_stances.map((s) => ({
         ...s,
         source_url: s.source_url || website,
       }));
+      const stamped = (c.top_stances as Array<{ source_url: string }>).filter(
+        (s) => !s.source_url,
+      ).length;
+      if (stamped > 0) {
+        console.warn(
+          `[synthesize] ${c.name}: ${stamped} stance(s) have no source_url and no candidate website to fall back on`,
+        );
+      }
       totalInTokens += result.input_tokens;
       totalOutTokens += result.output_tokens;
       synthesized += 1;
