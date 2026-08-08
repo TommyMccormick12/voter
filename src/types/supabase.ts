@@ -18,12 +18,7 @@
 // applied by the boundary module (src/lib/data/boundary.ts), not by
 // this raw schema layer.
 //
-// Covers every table created/altered through migration 010, plus
-// candidates.fec_coverage_end_date from 014. KNOWN GAP: this file does
-// NOT yet describe candidates.verified_at (migration 011) or
-// races.no_primary / no_primary_note (013). Both columns are live and
-// read by the app through src/types/database.ts, so nothing is broken —
-// but add them here before anyone treats this file as complete.
+// Covers every table and column created or altered through migration 016.
 //
 // The three
 // Phase 1 leftover tables (issue_rankings, candidate_comparisons,
@@ -64,6 +59,8 @@ export interface Database {
           created_at: string | null;
           election_type: ElectionType;
           primary_party: string | null;
+          no_primary: boolean;
+          no_primary_note: string | null;
         };
         Insert: {
           id: string;
@@ -75,6 +72,8 @@ export interface Database {
           created_at?: string | null;
           election_type?: ElectionType;
           primary_party?: string | null;
+          no_primary?: boolean;
+          no_primary_note?: string | null;
         };
         Update: {
           id?: string;
@@ -86,6 +85,8 @@ export interface Database {
           created_at?: string | null;
           election_type?: ElectionType;
           primary_party?: string | null;
+          no_primary?: boolean;
+          no_primary_note?: string | null;
         };
         Relationships: [];
       };
@@ -109,6 +110,7 @@ export interface Database {
           incumbent: boolean | null;
           total_raised: number | null;
           fec_coverage_end_date: string | null;
+          verified_at: string | null;
         };
         Insert: {
           id: string;
@@ -129,6 +131,7 @@ export interface Database {
           incumbent?: boolean | null;
           total_raised?: number | null;
           fec_coverage_end_date?: string | null;
+          verified_at?: string | null;
         };
         Update: {
           id?: string;
@@ -149,6 +152,7 @@ export interface Database {
           incumbent?: boolean | null;
           total_raised?: number | null;
           fec_coverage_end_date?: string | null;
+          verified_at?: string | null;
         };
         Relationships: [];
       };
@@ -557,6 +561,8 @@ export interface Database {
           candidate_id: string | null;
           bill_id: string;
           bill_title: string;
+          vote_question: string | null;
+          roll_call_id: string | null;
           bill_summary: string | null;
           vote: Vote;
           issue_slugs: string[] | null;
@@ -570,6 +576,8 @@ export interface Database {
           candidate_id?: string | null;
           bill_id: string;
           bill_title: string;
+          vote_question?: string | null;
+          roll_call_id?: string | null;
           bill_summary?: string | null;
           vote: Vote;
           issue_slugs?: string[] | null;
@@ -583,6 +591,8 @@ export interface Database {
           candidate_id?: string | null;
           bill_id?: string;
           bill_title?: string;
+          vote_question?: string | null;
+          roll_call_id?: string | null;
           bill_summary?: string | null;
           vote?: Vote;
           issue_slugs?: string[] | null;

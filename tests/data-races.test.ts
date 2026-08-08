@@ -85,7 +85,7 @@ describe('data/races', () => {
       expect(result).toEqual({ ok: true, data: null });
     });
 
-    it('returns the mapped race on success, defaulting no_primary to false (not yet a DB column)', async () => {
+    it('returns the mapped race on success and defaults a missing no_primary value to false', async () => {
       const row = {
         id: 'race-fl-01-r-2026',
         state: 'FL',

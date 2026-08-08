@@ -6,9 +6,9 @@
 //   America's Veterans Act" (a nay actually lets the bill proceed), while
 //   Kathy Castor's YEA on the SAME motion was written as supporting a veterans
 //   bill (a yea sends it back to committee).
-// The fixture already carries the signal — `bill_title` stores the vote
-// QUESTION, not a bill name — so synthesis can be warned. These tests pin the
-// detection so the warning cannot silently stop firing.
+// Migration 016 preserves the question in `vote_question` while bill_title
+// stores the bill name. These tests pin the detection so the warning cannot
+// silently stop firing.
 
 import { describe, it, expect } from 'vitest';
 import { isProceduralVote } from '@/lib/llm/curate';

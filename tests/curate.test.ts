@@ -37,6 +37,18 @@ const candidate: CandidateRawData = {
     {
       bill_id: 'hr7567-119',
       bill_title: 'Test Appropriations Act',
+      vote_question: 'On Motion to Recommit',
+      roll_call_id: 'house-119-2-410',
+      bill_summary: null,
+      vote: 'nay',
+      issue_slugs: ['economy'],
+      vote_date: '2025-03-01',
+    },
+    {
+      bill_id: 'hr7567-119',
+      bill_title: 'Test Appropriations Act',
+      vote_question: 'On Passage',
+      roll_call_id: 'house-119-2-411',
       bill_summary: null,
       vote: 'yea',
       issue_slugs: ['economy'],
@@ -67,15 +79,16 @@ describe('synthesizeStances — citation validation', () => {
     process.env.ANTHROPIC_API_KEY = 'test-key';
   });
 
-  it('accepts a citation that references a real bill_id from the input', async () => {
+  it('uses roll_call_id to select one exact vote when a bill has opposed roll calls', async () => {
     messagesCreateMock.mockResolvedValue(
       haikuTextResponse(
         JSON.stringify({
           top_stances: [
             {
               ...validStance,
-              track_record_note: 'Voted YES on hr7567-119 aligning with stance.',
-              track_record_citations: ['hr7567-119'],
+              track_record_note:
+                'Voted NAY on the procedural motion (house-119-2-410).',
+              track_record_citations: ['house-119-2-410'],
             },
           ],
         }),
@@ -85,7 +98,13 @@ describe('synthesizeStances — citation validation', () => {
     const { synthesizeStances } = await import('@/lib/llm/curate');
     const result = await synthesizeStances(candidate);
     expect(result.top_stances).toHaveLength(1);
-    expect(result.top_stances[0].track_record_citations).toEqual(['hr7567-119']);
+    expect(result.top_stances[0].track_record_citations).toEqual(['house-119-2-410']);
+
+    const request = messagesCreateMock.mock.calls[0][0];
+    const prompt = request.messages[0].content as string;
+    expect(prompt).toContain('roll_call_id="house-119-2-410"');
+    expect(prompt).toContain('roll_call_id="house-119-2-411"');
+    expect(prompt).toContain('house-119-2-410" | bill_id="hr7567-119" [PROCEDURAL]');
   });
 
   it('accepts a citation that references a real statement_id from the input', async () => {
@@ -116,7 +135,28 @@ describe('synthesizeStances — citation validation', () => {
             {
               ...validStance,
               track_record_note: 'Voted YES on a bill that does not exist.',
-              track_record_citations: ['hr9999-119'], // not in voting_record or statements
+              track_record_citations: ['house-119-2-999'], // not in voting_record or statements
+            },
+          ],
+        }),
+      ),
+    );
+
+    const { synthesizeStances } = await import('@/lib/llm/curate');
+    await expect(synthesizeStances(candidate)).rejects.toThrow(
+      /Refusing fabricated citation/,
+    );
+  });
+
+  it('rejects a bill_id citation even when that bill exists in the input', async () => {
+    messagesCreateMock.mockResolvedValue(
+      haikuTextResponse(
+        JSON.stringify({
+          top_stances: [
+            {
+              ...validStance,
+              track_record_note: 'Voted on hr7567-119.',
+              track_record_citations: ['hr7567-119'],
             },
           ],
         }),
@@ -136,7 +176,7 @@ describe('synthesizeStances — citation validation', () => {
           top_stances: [
             {
               ...validStance,
-              track_record_note: 'Voted YES on hr7567-119 aligning with stance.',
+              track_record_note: 'Voted YES on passage (house-119-2-411).',
               // track_record_citations omitted entirely
             },
           ],
@@ -146,7 +186,7 @@ describe('synthesizeStances — citation validation', () => {
 
     const { synthesizeStances } = await import('@/lib/llm/curate');
     const result = await synthesizeStances(candidate);
-    expect(result.top_stances[0].track_record_citations).toEqual(['hr7567-119']);
+    expect(result.top_stances[0].track_record_citations).toEqual(['house-119-2-411']);
   });
 
   it('silently drops an inline-only mention that does not match a real bill_id (not a fabrication error)', async () => {

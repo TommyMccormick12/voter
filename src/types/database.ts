@@ -83,18 +83,9 @@ export interface Race {
   cycle: number;
   election_type: ElectionType;
   primary_party: string | null;
-  /** True when a qualified candidate advances unopposed (Spec A5, T06).
-   * Not yet backed by a DB column — no migration or seed script writes
-   * this today, so every read returns `false` (boundary.ts reads it
-   * defensively; toRace() never fabricates a value). Wired through end
-   * to end now, mirroring the `fec_coverage_end_date` precedent on
-   * Candidate, so a future migration + seed_races.ts change lights it
-   * up without a UI change. See src/lib/data/races.ts header comment
-   * for the exact migration + seed requirement. */
+  /** True when a qualified candidate advances unopposed (migration 013). */
   no_primary: boolean;
-  /** Display copy for the no-primary state, e.g. "No primary — Maxwell
-   * Alejandro Frost qualified unopposed and advances." Same not-yet-
-   * backed-by-a-column caveat as `no_primary` above. */
+  /** Display copy for the no-primary state. */
   no_primary_note: string | null;
 }
 
@@ -189,6 +180,8 @@ export interface CandidateVote {
   candidate_id: string;
   bill_id: string;
   bill_title: string;
+  vote_question: string | null;
+  roll_call_id: string | null;
   bill_summary: string | null;
   vote: Vote;
   issue_slugs: string[];

@@ -15,6 +15,8 @@ function makeVote(overrides: Partial<CandidateVote> = {}): CandidateVote {
     candidate_id: 'cand-1',
     bill_id: 'hr-1-119',
     bill_title: 'Test Bill',
+    vote_question: 'On Passage',
+    roll_call_id: 'house-119-2-1',
     bill_summary: null,
     vote: 'yea',
     issue_slugs: ['economy'],

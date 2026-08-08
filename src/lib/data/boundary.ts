@@ -108,10 +108,7 @@ export function toRace(row: Record<string, unknown>): Race {
     cycle: num(row.cycle),
     election_type: str(row.election_type) as ElectionType,
     primary_party: strOrNull(row.primary_party),
-    // Defensive read, not a selected column yet (Spec A5 / T06 — see
-    // src/lib/data/races.ts header comment). Safe no-op until a
-    // migration adds races.no_primary / races.no_primary_note and
-    // seed_races.ts writes them.
+    // Migration 013 and seed_races.ts provide the no-primary state.
     no_primary: Boolean(row.no_primary),
     no_primary_note: strOrNull(row.no_primary_note),
   };
@@ -202,6 +199,8 @@ export function toCandidateVote(row: Record<string, unknown>): CandidateVote {
     candidate_id: str(row.candidate_id),
     bill_id: str(row.bill_id),
     bill_title: str(row.bill_title),
+    vote_question: strOrNull(row.vote_question),
+    roll_call_id: strOrNull(row.roll_call_id),
     bill_summary: strOrNull(row.bill_summary),
     vote: str(row.vote) as CandidateVote['vote'],
     issue_slugs: strArray(row.issue_slugs),
