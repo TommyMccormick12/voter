@@ -266,9 +266,13 @@ function RaceCard({
         {!race.district && ` — ${race.state}`}
       </h2>
       <p className="text-sm text-gray-500 mb-5">
+        {/* "with policy data" is load-bearing, not filler. This count is the
+            profiled count, not the ballot count — the roster holds qualified
+            candidates we have not profiled yet. A bare "2 candidates" would
+            state a ballot size that is often wrong. */}
         {candidates.count === 0
           ? 'Candidate data being curated'
-          : `${candidates.count} candidate${candidates.count === 1 ? '' : 's'}`}
+          : `${candidates.count} candidate${candidates.count === 1 ? '' : 's'} with policy data`}
       </p>
       <div className="flex items-center gap-3">
         {candidates.count > 0 && (
