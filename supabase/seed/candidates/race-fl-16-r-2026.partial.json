@@ -209,7 +209,95 @@
       "voting_record": [],
       "doe_status": "Qualified",
       "active": false,
-      "fec_coverage_end_date": "2026-06-30"
+      "fec_coverage_end_date": "2026-06-30",
+      "bio": "Jason Edward \"Eddie\" Speir is a Republican candidate for Florida's 16th Congressional District. He founded Inspiration Academy, a private Christian school in Bradenton, in 2013, after a career in computer consulting. He challenged incumbent Vern Buchanan in the 2024 Republican primary and took 39% of the vote. The 2026 seat is open following Buchanan's retirement.",
+      "website": "https://eddiespeirforcongress.com/",
+      "key_messages": [
+        "End dark money and pay-to-play politics fueling overdevelopment",
+        "Fight reckless spending in Congress to reduce the national debt and inflation",
+        "Restrict H-1B visas and outsourcing to increase American wages",
+        "Oppose AI data centers as harmful to Florida's environment, privacy, culture, and jobs",
+        "Restore constitutionally limited government by reclaiming legislative authority from unelected bureaucracies"
+      ],
+      "campaign_themes": [
+        {
+          "heading": "Overdevelopment",
+          "text": "End Dark Money and Pay-to-Play Politics Fueling Overdevelopment."
+        },
+        {
+          "heading": "Economy and spending",
+          "text": "Will Fight Reckless Spending in Congress to Reduce The National Debt and Inflation. Restrict H-1B Visas and Outsourcing to Increase American Wages."
+        },
+        {
+          "heading": "AI data centers",
+          "text": "AI Data Centers Harm Florida's Environment, Privacy, Culture, and Jobs."
+        },
+        {
+          "heading": "Government reform",
+          "text": "Federal bureaucracies have sought their own survival rather than their public purpose. Congress should starve the cancer via Congress' power of the purse."
+        },
+        {
+          "heading": "Medical freedom",
+          "text": "Congress must stop delegating power to unelected bureaucracies and big pharma. By exercising legislative authority and defunding the CDC and NIH, we can reverse this course."
+        },
+        {
+          "heading": "Constitutional government",
+          "text": "Advocates constitutionally limited government and the restoration of legislative authority to Congress."
+        },
+        {
+          "heading": "America First",
+          "text": "Preferred Candidate of America First Party with Over 20,000 Members."
+        }
+      ],
+      "platform_source": "hand_authored",
+      "platform_authored_at": "2026-08-08T05:03:54.661Z",
+      "top_stances": [
+        {
+          "stance_id": "jason-edward-speir-government_reform",
+          "issue_slug": "government_reform",
+          "stance": "strongly_support",
+          "summary": "Restore constitutionally limited government by reclaiming legislative authority from unelected bureaucracies and defunding CDC and NIH.",
+          "source_url": "https://eddiespeirforcongress.com/",
+          "confidence": 95,
+          "track_record_note": "No voting record available as candidate has not held office."
+        },
+        {
+          "stance_id": "jason-edward-speir-economy",
+          "issue_slug": "economy",
+          "stance": "strongly_support",
+          "summary": "Fight reckless congressional spending to reduce national debt and inflation. Restrict H-1B visas and outsourcing to increase American wages.",
+          "source_url": "https://eddiespeirforcongress.com/",
+          "confidence": 92,
+          "track_record_note": "No voting record available as candidate has not held office."
+        },
+        {
+          "stance_id": "jason-edward-speir-environment",
+          "issue_slug": "environment",
+          "stance": "oppose",
+          "summary": "Oppose AI data centers as harmful to Florida's environment, privacy, culture, and jobs.",
+          "source_url": "https://eddiespeirforcongress.com/",
+          "confidence": 90,
+          "track_record_note": "No voting record available as candidate has not held office."
+        },
+        {
+          "stance_id": "jason-edward-speir-housing",
+          "issue_slug": "housing",
+          "stance": "oppose",
+          "summary": "End dark money and pay-to-play politics fueling overdevelopment in Florida.",
+          "source_url": "https://eddiespeirforcongress.com/",
+          "confidence": 85,
+          "track_record_note": "No voting record available as candidate has not held office."
+        },
+        {
+          "stance_id": "jason-edward-speir-immigration",
+          "issue_slug": "immigration",
+          "stance": "oppose",
+          "summary": "Restrict H-1B visa programs and outsourcing to protect American workers and wages.",
+          "source_url": "https://eddiespeirforcongress.com/",
+          "confidence": 88,
+          "track_record_note": "No voting record available as candidate has not held office."
+        }
+      ]
     },
     {
       "name": "Sydney Gruters",
