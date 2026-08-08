@@ -58,6 +58,7 @@ import { join } from 'node:path';
 import { CANDIDATE_FIXTURE_DIR } from '../../src/lib/api-clients/base';
 import { stripTitles } from '../../src/lib/api-clients/names';
 import { getAdminClient } from './supabase-admin';
+import { candidateWebsite } from './candidate-website';
 import {
   validateAllChildRows,
   isVerifiedFresh,
@@ -301,7 +302,7 @@ async function main() {
       office: fixture.race.office,
       photo_url: (c.photo_url as string) ?? null,
       bio: (c.bio as string) ?? null,
-      website: (c.campaign_website as string) ?? null,
+      website: candidateWebsite(c),
       active: true,
       incumbent: (c.incumbent as boolean) ?? false,
       total_raised: (c.total_raised as number) ?? null,
