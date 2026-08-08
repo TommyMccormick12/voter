@@ -84,7 +84,16 @@ async function main() {
     try {
       const result = await synthesizeStances(rawData);
       // Attach source_url from the candidate's website where available
-      const website = (c.campaign_website as string) ?? (c.ballotpedia_url as string) ?? '';
+      // `website` is in this list because author_platform.ts writes the
+      // hand-authored campaign URL to that field, not campaign_website.
+      // Without it, every candidate sourced through the authored path —
+      // the only route open to challengers with no Wikidata record — got
+      // stances a voter cannot click through and check.
+      const website =
+        (c.campaign_website as string) ??
+        (c.website as string) ??
+        (c.ballotpedia_url as string) ??
+        '';
       c.top_stances = result.top_stances.map((s) => ({
         ...s,
         source_url: s.source_url || website,

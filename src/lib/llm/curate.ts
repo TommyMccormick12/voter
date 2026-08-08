@@ -207,7 +207,10 @@ export async function synthesizeStances(
       source_url: '', // Filled in by the seed step from raw data
       source_excerpt: s.source_excerpt,
       confidence: s.confidence,
-      track_record_note: s.track_record_note,
+      // Drop a note that only announces an absence — see isAbsenceOnlyNote.
+      track_record_note: isAbsenceOnlyNote(s.track_record_note)
+        ? undefined
+        : s.track_record_note,
       track_record_citations: validated.length > 0 ? validated : s.track_record_citations,
     };
   });
@@ -279,6 +282,53 @@ function extractRollCallIdsFromText(text: string): string[] {
     found.add(m[0].toLowerCase());
   }
   return Array.from(found);
+}
+
+/**
+ * A track_record_note earns its place only when it says something about a
+ * specific vote or statement. The system prompt already forbids notes that
+ * merely announce an absence ("no relevant voting record", "insufficient
+ * data") and tells Haiku to omit the field instead. Haiku ignores that for
+ * challengers: every stance for a candidate who has never held office came
+ * back carrying "No voting record available as candidate has not held
+ * office."
+ *
+ * That is dead weight on a scorecard — repeated on every card, telling a
+ * voter nothing about the candidate. It also lands hardest on exactly the
+ * population we are trying to cover, since no challenger has a voting
+ * record. Prompt discipline alone has not held, so this drops such notes
+ * server-side, in the same spirit as the citation auto-repair above.
+ *
+ * Deliberately conservative: it fires only when the note is ENTIRELY an
+ * absence claim. A note that reports a real vote and then mentions a gap
+ * keeps its substance and is left alone.
+ */
+export function isAbsenceOnlyNote(note: string | null | undefined): boolean {
+  if (!note) return false;
+  const text = note.trim();
+  if (!text) return false;
+  // A note citing a specific roll call or statement is substantive by
+  // definition — never strip it, whatever else it says.
+  if (extractRollCallIdsFromText(text).length > 0) return false;
+
+  const ABSENCE_PATTERNS = [
+    /\bno\b[^.]{0,40}\b(?:voting\s+record|votes?\s+on\s+record|congressional\s+record)\b/i,
+    /\bno\b[^.]{0,30}\b(?:contradictions?|inconsistenc(?:y|ies)|discrepanc(?:y|ies))\b[^.]{0,20}\b(?:found|identified|noted)?\b/i,
+    /\binsufficient\s+(?:data|evidence|information)\b/i,
+    /\b(?:has\s+not|never|hasn't)\s+(?:held|served\s+in)\s+(?:public\s+)?office\b/i,
+    /\bnot\s+(?:an?\s+)?(?:incumbent|sitting)\b/i,
+    /\bunable\s+to\s+verify\b/i,
+    /\bno\s+(?:public\s+)?statements?\s+(?:available|found|on\s+record)\b/i,
+  ];
+
+  // Split into sentences and require EVERY one to be an absence claim.
+  // One substantive sentence is enough to keep the whole note.
+  const sentences = text
+    .split(/(?<=[.!?])\s+/)
+    .map((x) => x.trim())
+    .filter(Boolean);
+  if (sentences.length === 0) return false;
+  return sentences.every((sentence) => ABSENCE_PATTERNS.some((re) => re.test(sentence)));
 }
 
 function extractJson(text: string): unknown {
