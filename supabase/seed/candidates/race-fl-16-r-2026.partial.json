@@ -208,7 +208,7 @@
       ],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "fec_coverage_end_date": "2026-06-30",
       "bio": "Jason Edward \"Eddie\" Speir is a Republican candidate for Florida's 16th Congressional District. He founded Inspiration Academy, a private Christian school in Bradenton, in 2013, after a career in computer consulting. He challenged incumbent Vern Buchanan in the 2024 Republican primary and took 39% of the vote. The 2026 seat is open following Buchanan's retirement.",
       "website": "https://eddiespeirforcongress.com/",
@@ -297,7 +297,9 @@
           "confidence": 88,
           "track_record_note": "Frames CDC and NIH as unelected bureaucracies requiring defunding to restore legislative authority."
         }
-      ]
+      ],
+      "activated_at": "2026-08-08T14:53:39.889Z",
+      "verified_at": "2026-08-08T14:53:39.889Z"
     },
     {
       "name": "Sydney Gruters",

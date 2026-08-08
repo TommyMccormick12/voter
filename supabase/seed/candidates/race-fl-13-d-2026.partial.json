@@ -197,7 +197,7 @@
       "top_donors": [],
       "voting_record": [],
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "total_raised": 15278.53,
       "fec_coverage_end_date": "2026-07-29",
       "fec_totals": {
@@ -258,7 +258,9 @@
           "source_url": "https://johnforpinellas.com",
           "confidence": 85
         }
-      ]
+      ],
+      "activated_at": "2026-08-08T14:53:53.045Z",
+      "verified_at": "2026-08-08T14:53:53.045Z"
     },
     {
       "name": "Leela Gray",

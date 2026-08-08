@@ -827,7 +827,7 @@
       "race_id": "race-fl-01-r-2026",
       "fec_candidate_id": "H6FL01523",
       "doe_status": "Qualified",
-      "active": false,
+      "active": true,
       "top_industries": [],
       "top_donors": [],
       "voting_record": [],
@@ -970,7 +970,9 @@
           "source_url": "https://frankmanforflorida.com/issues",
           "confidence": 80
         }
-      ]
+      ],
+      "activated_at": "2026-08-08T14:53:53.758Z",
+      "verified_at": "2026-08-08T14:53:53.758Z"
     }
   ],
   "race": {
